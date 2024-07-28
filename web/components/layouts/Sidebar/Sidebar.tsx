@@ -1,6 +1,8 @@
 'use client';
 
+import { useSession } from 'next-auth/react';
 import Link from 'next/link';
+import { redirect } from 'next/navigation';
 
 const Sidebar = () => {
 	return (
