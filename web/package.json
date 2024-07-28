@@ -1,28 +1,52 @@
 {
-  "name": "web",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@nextui-org/react": "^2.4.6",
-    "framer-motion": "^11.3.12",
-    "next": "14.2.5",
-    "react": "^18",
-    "react-dom": "^18"
-  },
-  "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.5",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5"
-  }
+	"name": "web",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"mongodb:push": "dotenv -e .env.local -- npx prisma db push",
+		"mongodb:migrate": "dotenv -e .env.local -- npx prisma migrate deploy"
+	},
+	"dependencies": {
+		"@auth/prisma-adapter": "^2.4.2",
+		"@aws-sdk/client-s3": "^3.620.0",
+		"@aws-sdk/s3-presigned-post": "^3.620.0",
+		"@aws-sdk/signature-v4-crt": "^3.620.0",
+		"@nextui-org/react": "^2.4.6",
+		"@prisma/client": "^5.17.0",
+		"@tanstack/react-query": "^5.51.15",
+		"@tanstack/react-query-next-experimental": "^5.51.15",
+		"@types/animejs": "^3.1.12",
+		"animejs": "^3.2.2",
+		"aws-crt": "^1.21.3",
+		"aws-sdk": "^2.1664.0",
+		"axios": "^1.7.2",
+		"dotenv-cli": "^7.4.2",
+		"formik": "^2.4.6",
+		"framer-motion": "^11.3.12",
+		"next": "14.2.5",
+		"next-auth": "^4.24.7",
+		"next-themes": "^0.3.0",
+		"react": "^18",
+		"react-dom": "^18",
+		"react-icons": "^5.2.1",
+		"uuid": "^10.0.0",
+		"yup": "^1.4.0"
+	},
+	"devDependencies": {
+		"@types/node": "^20",
+		"@types/react": "^18",
+		"@types/react-dom": "^18",
+		"eslint": "^8",
+		"eslint-config-next": "14.2.5",
+		"postcss": "^8",
+		"tailwindcss": "^3.4.1",
+		"typescript": "^5"
+	},
+	"prisma": {
+		"schema": "database/schema.prisma"
+	}
 }
