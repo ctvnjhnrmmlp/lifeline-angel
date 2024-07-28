@@ -1,5 +1,13 @@
 export default function Home() {
 	return (
-		<main className='flex min-h-screen flex-col items-center justify-between p-24'></main>
+		<main className='flex flex-col justify-center pl-[10.3rem] py-4 pr-4 h-screen w-screen'>
+			<section className='overflow-y-scroll no-scrollbar backdrop-blur-2xl bg-foreground/5 rounded-2xl h-screen'>
+				<div className='w-full flex flex-col flex-wrap justify-between space-between px-4 py-6 gap-12'>
+					<div className='flex flex-col gap-4'>
+						<div className='rounded-xl'></div>
+					</div>
+				</div>
+			</section>
+		</main>
 	);
 }

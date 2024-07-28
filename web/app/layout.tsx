@@ -1,5 +1,7 @@
 import '../styles/globals.css';
 
+import Nav from '@/components/layouts/Nav/Nav';
+import Sidebar from '@/components/layouts/Sidebar/Sidebar';
 import FONTS from '@/configurations/fonts';
 import { metatags } from '@/configurations/metatags';
 import type { Metadata } from 'next';
@@ -15,7 +17,11 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={`${FONTS.alpha.className} no-scrollbar`}>
-				<Providers>{children}</Providers>
+				<Nav />
+				<Sidebar />
+				<Providers>
+					<div className='flex flex-row'>{children}</div>
+				</Providers>
 			</body>
 		</html>
 	);

@@ -4,7 +4,7 @@ import COLORS from './configurations/colors';
 
 const config: Config = {
 	content: [
-		'./(app|components|containers|layouts)/**/*.{js,ts,jsx,tsx,mdx}',
+		'./(app|components)/**/*.{js,ts,jsx,tsx,mdx}',
 		'./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
 	],
 	darkMode: 'class',
