@@ -6,6 +6,7 @@ import { redirect } from 'next/navigation';
 import { FaFacebookF, FaGoogle, FaInstagram } from 'react-icons/fa';
 
 export default function Page() {
+	const { data: session } = useSession();
 	const STRATEGIES = [
 		{
 			name: 'Google',
@@ -20,6 +21,10 @@ export default function Page() {
 			icon: FaInstagram,
 		},
 	];
+
+	if (session) {
+		return redirect('/');
+	}
 
 	return (
 		<main className='flex flex-col justify-center p-6 h-screen w-screen'>
@@ -36,6 +41,7 @@ export default function Page() {
 								<button
 									key={strategy.name}
 									className='py-2 px-6 sm:p-4 md:px-12 md:py-10 text-2xl sm:text-3xl md:text-5xl lg:text-6xl rounded-full text-center sm:flex-grow backdrop-blur-sm bg-background/5'
+									onClick={() => signIn(strategy.name.toLocaleLowerCase())}
 								>
 									<div>
 										<strategy.icon className='absolute left-12' />
