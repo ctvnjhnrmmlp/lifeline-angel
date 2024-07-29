@@ -64,27 +64,29 @@ const Sidebar = () => {
 						/>
 					</div>
 					{/* Messages Container */}
-					<div className='flex flex-col gap-2 h-[1rem] overflow-y-auto'>
-						{test.map((t) => (
-							<div
-								key={t}
-								className='backdrop-blur-2xl bg-foreground/8 rounded-xl'
-							>
-								<Link
-									href={`/conversation
-									/${t}`}
+					<div className='overflow-y-scroll no-scrollbar h-screen'>
+						<ScrollShadow className='flex flex-col gap-4 overflow-y-scroll no-scrollbar py-4 h-screen'>
+							{test.map((t) => (
+								<div
+									key={t}
+									className='backdrop-blur-2xl bg-foreground/8 rounded-xl'
 								>
-									<div className='rounded-xl cursor-pointer p-4'>
-										<p className='font-bold w-full text-xl text-foreground tracking-tight leading-none text-ellipsi text-balance'>
-											{t}
-										</p>
-										<p className='font-light w-full text-md text-foreground tracking-tight leading-none text-ellipsis text-balance'>
-											{t}
-										</p>
-									</div>
-								</Link>
-							</div>
-						))}
+									<Link
+										href={`/conversation
+									/${t}`}
+									>
+										<div className='rounded-xl cursor-pointer p-4'>
+											<p className='font-bold w-full text-xl text-foreground tracking-tight leading-none text-ellipsi text-balance'>
+												{t}
+											</p>
+											<p className='font-light w-full text-sm text-zinc-700 tracking-tight leading-none text-ellipsis text-balance'>
+												{t}
+											</p>
+										</div>
+									</Link>
+								</div>
+							))}
+						</ScrollShadow>
 					</div>
 				</div>
 			</div>
