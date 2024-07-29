@@ -2,6 +2,7 @@
 
 import { Avatar, Button, ScrollShadow } from '@nextui-org/react';
 import Link from 'next/link';
+import { FaPlus } from 'react-icons/fa6';
 import { ImPlus } from 'react-icons/im';
 import { TfiLayoutGrid3Alt } from 'react-icons/tfi';
 import { v4 as uuidv4 } from 'uuid';
@@ -34,8 +35,8 @@ const Sidebar = () => {
 
 	return (
 		<aside className='fixed flex flex-col justify-center p-4 z-10 h-screen'>
-			<div className='hidden lg:block overflow-y-scroll no-scrollbar backdrop-blur-2xl bg-foreground/5 rounded-2xl h-screen w-96'>
-				<div className='w-full flex flex-col flex-wrap justify-between space-between px-4 py-6 gap-12'>
+			<div className='hidden lg:block overflow-y-scroll no-scrollbar backdrop-blur-2xl bg-foreground/5 rounded-2xl h-96 w-96'>
+				<div className='flex flex-col flex-wrap justify-between space-between px-4 py-6 gap-4'>
 					{/* Header Container */}
 					<div className='flex justify-between items-center'>
 						<div>
@@ -54,19 +55,30 @@ const Sidebar = () => {
 							</button>
 						</div>
 					</div>
-					<div className='flex flex-col gap-2'>
-						{/* Messages Container */}
+					{/* Search Container */}
+					<div>
+						<input
+							type='text'
+							placeholder='Search conversation'
+							className='p-4 w-full rounded-xl placeholder:font-bold placeholder:text-foreground font-bold text-foreground text-xl'
+						/>
+					</div>
+					{/* Messages Container */}
+					<div className='flex flex-col gap-2 h-[1rem] overflow-y-auto'>
 						{test.map((t) => (
 							<div
 								key={t}
-								className='backdrop-blur-2xl bg-foreground/8 rounded-md'
+								className='backdrop-blur-2xl bg-foreground/8 rounded-xl'
 							>
-								<Link href={'/'}>
-									<div className='items-center rounded-xl cursor-pointer p-4'>
-										<p className='font-bold w-full text-xl text-foreground tracking-tight leading-none'>
+								<Link
+									href={`/conversation
+									/${t}`}
+								>
+									<div className='rounded-xl cursor-pointer p-4'>
+										<p className='font-bold w-full text-xl text-foreground tracking-tight leading-none text-ellipsi text-balance'>
 											{t}
 										</p>
-										<p className='font-light w-full text-md text-foreground tracking-tight leading-none'>
+										<p className='font-light w-full text-md text-foreground tracking-tight leading-none text-ellipsis text-balance'>
 											{t}
 										</p>
 									</div>
