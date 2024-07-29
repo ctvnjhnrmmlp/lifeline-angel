@@ -65,7 +65,7 @@ const Sidebar = () => {
 					</div>
 					{/* Messages Container */}
 					<div className='overflow-y-scroll no-scrollbar h-screen'>
-						<ScrollShadow className='flex flex-col gap-4 overflow-y-scroll no-scrollbar py-4 h-screen'>
+						<ScrollShadow className='flex flex-col gap-2 overflow-y-scroll no-scrollbar py-4 h-screen'>
 							{test.map((t) => (
 								<div
 									key={t}
