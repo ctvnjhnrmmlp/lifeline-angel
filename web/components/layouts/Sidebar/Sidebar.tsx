@@ -69,7 +69,7 @@ const Sidebar = () => {
 							{test.map((t) => (
 								<div
 									key={t}
-									className='backdrop-blur-2xl bg-foreground/8 rounded-xl'
+									className='backdrop-blur-2xl bg-foreground/5 rounded-xl'
 								>
 									<Link
 										href={`/conversation
