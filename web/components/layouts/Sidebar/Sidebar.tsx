@@ -1,8 +1,7 @@
 'use client';
 
-import { Avatar, Button, ScrollShadow } from '@nextui-org/react';
+import { Avatar, ScrollShadow } from '@nextui-org/react';
 import Link from 'next/link';
-import { FaPlus } from 'react-icons/fa6';
 import { ImPlus } from 'react-icons/im';
 import { TfiLayoutGrid3Alt } from 'react-icons/tfi';
 import { v4 as uuidv4 } from 'uuid';
