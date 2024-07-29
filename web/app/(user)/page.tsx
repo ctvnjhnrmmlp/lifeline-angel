@@ -6,9 +6,9 @@ import { redirect } from 'next/navigation';
 export default function Home() {
 	const { data: session } = useSession();
 
-	if (!session) {
-		return redirect('/signin');
-	}
+	// if (!session) {
+	// 	return redirect('/signin');
+	// }
 
 	return (
 		<main className='flex flex-col justify-center pl-[26rem] py-4 pr-4 h-screen w-screen'>

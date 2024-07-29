@@ -20,6 +20,7 @@
 		"@tanstack/react-query": "^5.51.15",
 		"@tanstack/react-query-next-experimental": "^5.51.15",
 		"@types/animejs": "^3.1.12",
+		"@types/uuid": "^10.0.0",
 		"animejs": "^3.2.2",
 		"aws-crt": "^1.21.3",
 		"aws-sdk": "^2.1664.0",

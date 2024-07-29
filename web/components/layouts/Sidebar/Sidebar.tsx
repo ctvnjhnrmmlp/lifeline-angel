@@ -1,32 +1,78 @@
 'use client';
 
-import { useSession } from 'next-auth/react';
+import { Avatar, Button, ScrollShadow } from '@nextui-org/react';
 import Link from 'next/link';
-import { redirect } from 'next/navigation';
+import { ImPlus } from 'react-icons/im';
+import { TfiLayoutGrid3Alt } from 'react-icons/tfi';
+import { v4 as uuidv4 } from 'uuid';
 
 const Sidebar = () => {
+	const test = [
+		uuidv4(),
+		uuidv4(),
+		uuidv4(),
+		uuidv4(),
+		uuidv4(),
+		uuidv4(),
+		uuidv4(),
+		uuidv4(),
+		uuidv4(),
+		uuidv4(),
+		uuidv4(),
+		uuidv4(),
+		uuidv4(),
+		uuidv4(),
+		uuidv4(),
+		uuidv4(),
+		uuidv4(),
+		uuidv4(),
+		uuidv4(),
+		uuidv4(),
+		uuidv4(),
+		uuidv4(),
+	];
+
 	return (
 		<aside className='fixed flex flex-col justify-center p-4 z-10 h-screen'>
 			<div className='hidden lg:block overflow-y-scroll no-scrollbar backdrop-blur-2xl bg-foreground/5 rounded-2xl h-screen w-96'>
 				<div className='w-full flex flex-col flex-wrap justify-between space-between px-4 py-6 gap-12'>
-					<div>
+					{/* Header Container */}
+					<div className='flex justify-between items-center'>
 						<div>
-							<p className='font-bold w-full text-xl text-foreground tracking-tight text-center'>
-								Mamba Mamba
-							</p>
+							<Avatar
+								size='lg'
+								radius='md'
+								src='https://i.pravatar.cc/150?u=a04258a2462d826712d'
+							/>
+						</div>
+						<div className='flex flex-grow justify-end gap-2'>
+							<button className='block rounded-full p-3 bg-foreground text-background text-2xl'>
+								<TfiLayoutGrid3Alt />
+							</button>
+							<button className='block rounded-full p-3 bg-foreground text-background text-2xl'>
+								<ImPlus />
+							</button>
 						</div>
 					</div>
-					<div className='flex flex-col gap-4 outline'>
-						{/*  */}
-						<div className='rounded-xl outline'>
-							<Link href={'/'}>
-								<div className='items-center rounded-xl cursor-pointer'>
-									<p className='font-bold w-full text-xl text-foreground tracking-tight text-center'>
-										Mamba Mamba
-									</p>
-								</div>
-							</Link>
-						</div>
+					<div className='flex flex-col gap-2'>
+						{/* Messages Container */}
+						{test.map((t) => (
+							<div
+								key={t}
+								className='backdrop-blur-2xl bg-foreground/8 rounded-md'
+							>
+								<Link href={'/'}>
+									<div className='items-center rounded-xl cursor-pointer p-4'>
+										<p className='font-bold w-full text-xl text-foreground tracking-tight leading-none'>
+											{t}
+										</p>
+										<p className='font-light w-full text-md text-foreground tracking-tight leading-none'>
+											{t}
+										</p>
+									</div>
+								</Link>
+							</div>
+						))}
 					</div>
 				</div>
 			</div>
