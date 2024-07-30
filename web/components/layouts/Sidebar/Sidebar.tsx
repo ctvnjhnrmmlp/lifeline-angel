@@ -10,6 +10,8 @@ import {
 	ScrollShadow,
 } from '@nextui-org/react';
 import Link from 'next/link';
+import { BiSolidRightArrow } from 'react-icons/bi';
+import { FaGear } from 'react-icons/fa6';
 import { ImPlus } from 'react-icons/im';
 import { TfiLayoutGrid3Alt } from 'react-icons/tfi';
 import { v4 as uuidv4 } from 'uuid';
@@ -40,6 +42,17 @@ const Sidebar = () => {
 		uuidv4(),
 	];
 
+	const settings = [
+		{
+			name: 'Preferences',
+			icon: FaGear,
+		},
+		{
+			name: 'Logout',
+			icon: BiSolidRightArrow,
+		},
+	];
+
 	return (
 		<aside className='fixed flex flex-col justify-center p-4 z-10 h-screen'>
 			<div className='hidden lg:block overflow-y-scroll no-scrollbar backdrop-blur-2xl bg-foreground/5 rounded-2xl h-screen w-96'>
@@ -47,26 +60,26 @@ const Sidebar = () => {
 					{/* Header Container */}
 					<div className='flex justify-between items-center'>
 						<div>
-							<Dropdown
-								className='bg-background'
-								classNames={
-									{
-										// base: 'bg-background',
-									}
-								}
-							>
+							<Dropdown className='backdrop-blur-2xl bg-foreground/5'>
 								<DropdownTrigger>
 									<Avatar
 										size='lg'
 										radius='md'
 										src='https://i.pravatar.cc/150?u=a04258a2462d826712d'
 									/>
-									{/* <button className='block rounded-full p-3 bg-foreground text-background text-2xl'>
-										<TfiLayoutGrid3Alt />
-									</button> */}
 								</DropdownTrigger>
 								<DropdownMenu aria-label='Static Actions'>
-									<DropdownItem key='new'>New file</DropdownItem>
+									{settings.map((setting) => (
+										<DropdownItem
+											key={setting.name}
+											className='font-bold text-xl'
+											startContent={<setting.icon />}
+										>
+											<span className='font-bold text-xl font-bold'>
+												{setting.name}
+											</span>
+										</DropdownItem>
+									))}
 								</DropdownMenu>
 							</Dropdown>
 						</div>
