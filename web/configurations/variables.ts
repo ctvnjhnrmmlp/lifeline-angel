@@ -8,8 +8,8 @@ const VARIABLES = {
 	info: 'Lifeline Angel',
 	icon: '',
 	image: '',
-	theme: '#000000',
-	robots: 'index, follow',
+	icon: 'self-logo.svg',
+	image: 'self-abstract.webp',
 };
 
 export default VARIABLES;

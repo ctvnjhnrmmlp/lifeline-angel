@@ -1,7 +1,6 @@
-import '../styles/globals.css';
-
 import FONTS from '@/configurations/fonts';
 import { metatags } from '@/configurations/metatags';
+import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import Providers from './providers';
 

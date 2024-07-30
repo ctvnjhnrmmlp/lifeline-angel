@@ -12,8 +12,8 @@
 	},
 	"dependencies": {
 		"@auth/prisma-adapter": "^2.4.2",
-		"@aws-sdk/client-s3": "^3.620.0",
-		"@aws-sdk/s3-presigned-post": "^3.620.0",
+		"@aws-sdk/client-s3": "^3.620.1",
+		"@aws-sdk/s3-presigned-post": "^3.620.1",
 		"@aws-sdk/signature-v4-crt": "^3.620.0",
 		"@nextui-org/react": "^2.4.6",
 		"@prisma/client": "^5.17.0",
@@ -27,8 +27,8 @@
 		"axios": "^1.7.2",
 		"dotenv-cli": "^7.4.2",
 		"formik": "^2.4.6",
-		"framer-motion": "^11.3.12",
-		"next": "14.2.5",
+		"framer-motion": "^11.3.19",
+		"next": "14.2.3",
 		"next-auth": "^4.24.7",
 		"next-themes": "^0.3.0",
 		"prisma": "^5.17.0",
@@ -39,7 +39,7 @@
 		"yup": "^1.4.0"
 	},
 	"devDependencies": {
-		"@types/node": "^20",
+		"@types/node": "^20.14.13",
 		"@types/react": "^18",
 		"@types/react-dom": "^18",
 		"eslint": "^8",
