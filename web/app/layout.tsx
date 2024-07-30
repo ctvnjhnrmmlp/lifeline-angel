@@ -12,7 +12,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang='en'>
+		<html lang='en' className='select-none'>
 			<body className={`${FONTS.alpha.className} no-scrollbar`}>
 				<Providers>{children}</Providers>
 			</body>

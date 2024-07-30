@@ -22,7 +22,7 @@ export default function Page() {
 					<div className='w-full flex flex-col flex-wrap justify-between space-between gap-12'>
 						<div className='flex items-center justify-between'>
 							<div>
-								<p className='font-bold text-4xl'>Michael Jackson</p>
+								<p className='font-bold text-4xl'>New message</p>
 							</div>
 							<div className='flex space-x-2'>
 								<button className='block rounded-full p-3 bg-foreground text-background text-2xl'>
@@ -35,9 +35,11 @@ export default function Page() {
 						</div>
 					</div>
 					{/* Messages */}
-					<div className='flex-grow w-full flex flex-col flex-wrap justify-between space-between gap-12'>
+					<div className='flex-grow w-full flex flex-col justify-center items-center'>
 						<div className='flex flex-col gap-4'>
-							<div className='rounded-xl'></div>
+							<div>
+								<p className='text-3xl font-bold'>Waddup cuh</p>
+							</div>
 						</div>
 					</div>
 					{/* Message */}
