@@ -1,6 +1,14 @@
 'use client';
 
-import { Avatar, ScrollShadow } from '@nextui-org/react';
+import {
+	Avatar,
+	Button,
+	Dropdown,
+	DropdownItem,
+	DropdownMenu,
+	DropdownTrigger,
+	ScrollShadow,
+} from '@nextui-org/react';
 import Link from 'next/link';
 import { ImPlus } from 'react-icons/im';
 import { TfiLayoutGrid3Alt } from 'react-icons/tfi';
@@ -39,16 +47,30 @@ const Sidebar = () => {
 					{/* Header Container */}
 					<div className='flex justify-between items-center'>
 						<div>
-							<Avatar
-								size='lg'
-								radius='md'
-								src='https://i.pravatar.cc/150?u=a04258a2462d826712d'
-							/>
+							<Dropdown
+								className='bg-background'
+								classNames={
+									{
+										// base: 'bg-background',
+									}
+								}
+							>
+								<DropdownTrigger>
+									<Avatar
+										size='lg'
+										radius='md'
+										src='https://i.pravatar.cc/150?u=a04258a2462d826712d'
+									/>
+									{/* <button className='block rounded-full p-3 bg-foreground text-background text-2xl'>
+										<TfiLayoutGrid3Alt />
+									</button> */}
+								</DropdownTrigger>
+								<DropdownMenu aria-label='Static Actions'>
+									<DropdownItem key='new'>New file</DropdownItem>
+								</DropdownMenu>
+							</Dropdown>
 						</div>
 						<div className='flex flex-grow justify-end gap-2'>
-							<button className='block rounded-full p-3 bg-foreground text-background text-2xl'>
-								<TfiLayoutGrid3Alt />
-							</button>
 							<Link href='/'>
 								<button className='block rounded-full p-3 bg-foreground text-background text-2xl'>
 									<ImPlus />
