@@ -69,7 +69,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 									key={t}
 									className='backdrop-blur-2xl bg-foreground/5 rounded-xl'
 								>
-									<div className='rounded-xl cursor-pointer p-4'>
+									<div className='cursor-pointer p-6'>
 										<p className='font-bold w-full text-xl text-foreground tracking-tight leading-none text-ellipsi text-balance'>
 											{t}
 										</p>
