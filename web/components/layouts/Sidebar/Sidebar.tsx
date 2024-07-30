@@ -49,9 +49,11 @@ const Sidebar = () => {
 							<button className='block rounded-full p-3 bg-foreground text-background text-2xl'>
 								<TfiLayoutGrid3Alt />
 							</button>
-							<button className='block rounded-full p-3 bg-foreground text-background text-2xl'>
-								<ImPlus />
-							</button>
+							<Link href='/'>
+								<button className='block rounded-full p-3 bg-foreground text-background text-2xl'>
+									<ImPlus />
+								</button>
+							</Link>
 						</div>
 					</div>
 					{/* Search Container */}
