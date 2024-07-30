@@ -22,7 +22,7 @@ export default function Page() {
 					<div className='w-full flex flex-col flex-wrap justify-between space-between gap-12'>
 						<div className='flex items-center justify-between'>
 							<div>
-								<p className='font-bold text-2xl'>Michael Jackson</p>
+								<p className='font-bold text-4xl'>Michael Jackson</p>
 							</div>
 							<div className='flex space-x-2'>
 								<button className='block rounded-full p-3 bg-foreground text-background text-2xl'>
@@ -40,7 +40,7 @@ export default function Page() {
 							<div className='rounded-xl'></div>
 						</div>
 					</div>
-					{/* Messages */}
+					{/* Message */}
 					<div className='w-full flex justify-between space-x-3'>
 						<div className='w-full'>
 							<input
