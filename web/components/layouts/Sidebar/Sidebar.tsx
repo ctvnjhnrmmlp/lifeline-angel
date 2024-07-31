@@ -2,7 +2,6 @@
 
 import {
 	Avatar,
-	Button,
 	Dropdown,
 	DropdownItem,
 	DropdownMenu,
@@ -13,8 +12,13 @@ import Link from 'next/link';
 import { BiSolidRightArrow } from 'react-icons/bi';
 import { FaGear } from 'react-icons/fa6';
 import { ImPlus } from 'react-icons/im';
-import { TfiLayoutGrid3Alt } from 'react-icons/tfi';
 import { v4 as uuidv4 } from 'uuid';
+import { FaShield } from 'react-icons/fa6';
+import { IoIosPaper, IoIosWarning } from 'react-icons/io';
+import { FaLifeRing } from 'react-icons/fa';
+import { FaQuestion } from 'react-icons/fa';
+import { IoMdDownload } from 'react-icons/io';
+import { FiPaperclip } from 'react-icons/fi';
 
 const Sidebar = () => {
 	const test = [
@@ -48,9 +52,38 @@ const Sidebar = () => {
 			icon: FaGear,
 		},
 		{
+			name: 'Privacy',
+			icon: FaShield,
+		},
+		{
+			name: 'Terms',
+			icon: IoIosPaper,
+		},
+		{
+			name: 'Conditions',
+			icon: FiPaperclip,
+		},
+		{
+			name: 'Safety',
+			icon: FaLifeRing,
+		},
+		{
+			name: 'Help',
+			icon: FaQuestion,
+		},
+		{
+			name: 'Report',
+			icon: IoIosWarning,
+		},
+		{
+			name: 'Install',
+			icon: IoMdDownload,
+		},
+		{
 			name: 'Logout',
 			icon: BiSolidRightArrow,
 		},
+
 	];
 
 	return (
