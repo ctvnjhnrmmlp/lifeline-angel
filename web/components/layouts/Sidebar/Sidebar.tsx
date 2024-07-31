@@ -122,7 +122,6 @@ const Sidebar = () => {
 											Logout
 										</span>
 									</DropdownItem>
-
 								</DropdownMenu>
 							</Dropdown>
 						</div>
