@@ -19,7 +19,7 @@ import { FaLifeRing } from 'react-icons/fa';
 import { FaQuestion } from 'react-icons/fa';
 import { IoMdDownload } from 'react-icons/io';
 import { FiPaperclip } from 'react-icons/fi';
-import { signOut } from 'next-auth';
+import { signOut } from 'next-auth/react';
 
 const Sidebar = () => {
 	const test = [
