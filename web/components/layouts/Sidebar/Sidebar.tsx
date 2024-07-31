@@ -19,6 +19,7 @@ import { FaLifeRing } from 'react-icons/fa';
 import { FaQuestion } from 'react-icons/fa';
 import { IoMdDownload } from 'react-icons/io';
 import { FiPaperclip } from 'react-icons/fi';
+import { logout } from 'next-auth';
 
 const Sidebar = () => {
 	const test = [
@@ -75,15 +76,6 @@ const Sidebar = () => {
 			name: 'Report',
 			icon: IoIosWarning,
 		},
-		{
-			name: 'Install',
-			icon: IoMdDownload,
-		},
-		{
-			name: 'Logout',
-			icon: BiSolidRightArrow,
-		},
-
 	];
 
 	return (
@@ -93,7 +85,7 @@ const Sidebar = () => {
 					{/* Header Container */}
 					<div className='flex justify-between items-center'>
 						<div>
-							<Dropdown className='backdrop-blur-2xl bg-foreground/5'>
+							<Dropdown className='backdrop-blur-2xl bg-foreground/1'>
 								<DropdownTrigger>
 									<Avatar
 										size='lg'
@@ -113,6 +105,24 @@ const Sidebar = () => {
 											</span>
 										</DropdownItem>
 									))}
+									<DropdownItem
+										className='font-bold text-xl'
+										startContent={<IoMdDownload />}
+									>
+										<span className='font-bold text-xl font-bold'>
+											Install
+										</span>
+									</DropdownItem>
+									<DropdownItem
+										className='font-bold text-xl'
+										startContent={<BiSolidRightArrow />}
+										onPress={() => logout()}
+									>
+										<span className='font-bold text-xl font-bold'>
+											Logout
+										</span>
+									</DropdownItem>
+
 								</DropdownMenu>
 							</Dropdown>
 						</div>
