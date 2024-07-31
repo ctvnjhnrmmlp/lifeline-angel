@@ -106,6 +106,7 @@ const Sidebar = () => {
 										</DropdownItem>
 									))}
 									<DropdownItem
+										key='Install'
 										className='font-bold text-xl'
 										startContent={<IoMdDownload />}
 									>
@@ -114,6 +115,7 @@ const Sidebar = () => {
 										</span>
 									</DropdownItem>
 									<DropdownItem
+										key='Logout'
 										className='font-bold text-xl'
 										startContent={<BiSolidRightArrow />}
 										onPress={() => logout()}
