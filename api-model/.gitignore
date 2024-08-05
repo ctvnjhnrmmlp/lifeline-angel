@@ -1,0 +1,59 @@
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+env/
+venv/
+.venv/
+
+# FastAPI/Uvicorn logs
+*.log
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Python-specific packaging
+*.egg
+*.egg-info/
+dist/
+build/
+*.tar.gz
+*.zip
+
+# Ignore IDE specific files
+.vscode/
+.idea/
+
+# Environment variables
+.env
+
+# Model files
+*.h5
+*.keras
+
+# Pickle files
+*.pkl
+
+# NLTK data
+corpora/
+tokenizers/
+
+# Data files
+intents.json
+words.pkl
+classes.pkl
+
+# Ignore image files
+*.jpg
+*.jpeg
+*.png
+
+# Ignore matplotlib cache
+.matplotlib/
