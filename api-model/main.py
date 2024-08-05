@@ -9,14 +9,8 @@ import matplotlib.pyplot as plt
 import nltk
 import numpy as np
 import uvicorn
-from fastapi import (
-    FastAPI,
-    File,
-    HTTPException,
-    UploadFile,
-    WebSocket,
-    WebSocketDisconnect,
-)
+from fastapi import (FastAPI, File, HTTPException, UploadFile, WebSocket,
+                     WebSocketDisconnect)
 from nltk.stem import WordNetLemmatizer
 from pydantic import BaseModel
 from tensorflow.keras.models import load_model
@@ -31,7 +25,7 @@ with open("./text-model/intents.json") as file:
     intents = json.load(file)
 
 # Load words, classes, and model
-with open("./text-model/words.pkl", "rb") as file:
+wjith open("./text-model/words.pkl", "rb") as file:
     words = pickle.load(file)
 
 with open("./text-model/classes.pkl", "rb") as file:
@@ -94,14 +88,14 @@ class ChatResponse(BaseModel):
     response: str
 
 
-@app.post("/chat", response_model=ChatResponse)
+@app.post("/api/talk", response_model=ChatResponse)
 async def chat_endpoint(request: ChatRequest):
     ints = predict_class(request.message)
     response = get_response(ints, intents)
     return ChatResponse(response=response)
 
 
-@app.post("/classify_image")
+@app.post("/api/classify")
 async def classify_image(file: UploadFile = File(...)):
     contents = await file.read()
     np_img = np.frombuffer(contents, np.uint8)
@@ -119,7 +113,7 @@ async def classify_image(file: UploadFile = File(...)):
     return {"prediction": class_names[index]}
 
 
-@app.websocket("/ws/chat")
+@app.websocket("/api/ws/talk")
 async def websocket_chat(websocket: WebSocket):
     await websocket.accept()
     try:
@@ -132,7 +126,7 @@ async def websocket_chat(websocket: WebSocket):
         print("Client disconnected")
 
 
-@app.websocket("/ws/classify_image")
+@app.websocket("/api/ws/classify")
 async def websocket_classify_image(websocket: WebSocket):
     await websocket.accept()
     try:
