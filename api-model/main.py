@@ -25,7 +25,7 @@ with open("./text-model/intents.json") as file:
     intents = json.load(file)
 
 # Load words, classes, and model
-wjith open("./text-model/words.pkl", "rb") as file:
+with open("./text-model/words.pkl", "rb") as file:
     words = pickle.load(file)
 
 with open("./text-model/classes.pkl", "rb") as file:
