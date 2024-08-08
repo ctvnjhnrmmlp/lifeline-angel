@@ -1,6 +1,6 @@
 import client from './client';
 
-export const createConversation = async () => {
+export const addConversation = async () => {
 	try {
 	} catch (error) {}
 };
@@ -8,3 +8,5 @@ export const createConversation = async () => {
 export const getConversation = async () => {};
 
 export const deleteConversaton = async () => {};
+
+export const updateConveration = async () => {};

@@ -1,7 +1,7 @@
 'use client';
 
 import {
-	createConversation,
+	addConversation,
 	deleteConversaton,
 	getConversation,
 } from '@/services/lifeline-angel/conversation';
