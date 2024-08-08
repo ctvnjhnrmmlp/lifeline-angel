@@ -45,15 +45,5 @@ build/
 corpora/
 tokenizers/
 
-# Data files
-intents.json
-words.pkl
-classes.pkl
-
-# Ignore image files
-*.jpg
-*.jpeg
-*.png
-
 # Ignore matplotlib cache
 .matplotlib/
