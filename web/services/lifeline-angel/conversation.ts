@@ -7,6 +7,6 @@ export const addConversation = async () => {
 
 export const getConversation = async () => {};
 
-export const deleteConversaton = async () => {};
+export const deleteConversation = async () => {};
 
-export const updateConveration = async () => {};
+export const updateConversation = async () => {};

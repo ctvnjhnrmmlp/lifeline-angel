@@ -2,11 +2,12 @@
 
 import {
 	addConversation,
-	deleteConversaton,
+	deleteConversation,
 	getConversation,
+	updateConversation,
 } from '@/services/lifeline-angel/conversation';
 import SETTINGS from '@/sources/settings';
-import ConversationStore from '@/stores/lifeline-angel/conversation';
+import useConversationStore from '@/stores/lifeline-angel/conversation';
 import {
 	Avatar,
 	Dropdown,
@@ -15,13 +16,74 @@ import {
 	DropdownTrigger,
 	ScrollShadow,
 } from '@nextui-org/react';
+import { useQuery } from '@tanstack/react-query';
 import { signOut } from 'next-auth/react';
 import Link from 'next/link';
+import React from 'react';
 import { BiSolidRightArrow } from 'react-icons/bi';
 import { ImPlus } from 'react-icons/im';
 import { IoMdDownload } from 'react-icons/io';
 
 const Sidebar = () => {
+	const { conversations, setConversation } = useConversationStore();
+
+	const {
+		data: conversation,
+		error: conversationError,
+		status: conversationStatus,
+		fetchStatus: conversationFetchStatus,
+		refetch: refetchGetConversation,
+	} = useQuery({
+		queryKey: ['getConversation'],
+		queryFn: async () => await getConversation(),
+		refetchOnWindowFocus: false,
+	});
+
+	const {
+		// data: conversation,
+		// error: conversationError,
+		// status: conversationStatus,
+		// fetchStatus: conversationFetchStatus,
+		refetch: refetchAddConversation,
+	} = useQuery({
+		enabled: false,
+		queryKey: ['addConversation'],
+		queryFn: async () => await addConversation(),
+		refetchOnWindowFocus: false,
+	});
+
+	const {
+		// data: conversation,
+		// error: conversationError,
+		// status: conversationStatus,
+		// fetchStatus: conversationFetchStatus,
+		refetch: refetchUpdateConversation,
+	} = useQuery({
+		enabled: false,
+		queryKey: ['updateConversation'],
+		queryFn: async () => await updateConversation(),
+		refetchOnWindowFocus: false,
+	});
+
+	const {
+		// data: conversation,
+		// error: conversationError,
+		// status: conversationStatus,
+		// fetchStatus: conversationFetchStatus,
+		refetch: refetchDeleteConversation,
+	} = useQuery({
+		enabled: false,
+		queryKey: ['deleteConversation'],
+		queryFn: async () => await deleteConversation(),
+		refetchOnWindowFocus: false,
+	});
+
+	React.useEffect(() => {
+		if (conversation) {
+			setConversation(conversation);
+		}
+	}, [conversation, setConversation]);
+
 	return (
 		<aside className='fixed flex flex-col justify-center p-4 z-10 h-screen'>
 			<div className='hidden lg:block overflow-y-scroll no-scrollbar backdrop-blur-2xl bg-foreground/5 rounded-2xl h-screen w-96'>
@@ -86,21 +148,21 @@ const Sidebar = () => {
 					{/* Messages Container */}
 					<div className='overflow-y-scroll no-scrollbar h-screen'>
 						<ScrollShadow className='flex flex-col gap-2 overflow-y-scroll no-scrollbar py-4 h-screen'>
-							{/* {test.map((t) => (
+							{/* {conversations.map((conv) => (
 								<div
-									key={t}
+									key={conv}
 									className='backdrop-blur-2xl bg-foreground/5 rounded-xl'
 								>
 									<Link
 										href={`/conversation
-									/${t}`}
+									/${conv}`}
 									>
 										<div className='rounded-xl cursor-pointer p-4'>
 											<p className='font-bold w-full text-xl text-foreground tracking-tight leading-none text-ellipsi text-balance'>
-												{t}
+												{conv}
 											</p>
 											<p className='font-light w-full text-sm text-zinc-700 tracking-tight leading-none text-ellipsis text-balance'>
-												{t}
+												{conv}
 											</p>
 										</div>
 									</Link>
