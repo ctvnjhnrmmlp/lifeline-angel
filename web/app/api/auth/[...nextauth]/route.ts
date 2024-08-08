@@ -30,15 +30,17 @@ const handler = NextAuth({
 		async signIn({ profile }) {
 			if (profile) {
 				try {
-					let user;
-
-					user = await Prisma.user.findUnique({
+					let user = await Prisma.user.findUnique({
 						where: {
 							email: profile.email,
 						},
 					});
 
-					return true;
+					if (user) {
+						return user;
+					}
+
+					throw new Error();
 				} catch (error) {
 					console.log(error);
 					return false;
@@ -51,3 +53,64 @@ const handler = NextAuth({
 });
 
 export { handler as GET, handler as POST };
+
+// import { signIn } from '@/services/bittok/auth';
+// import NextAuth from 'next-auth';
+// import GoogleProvider from 'next-auth/providers/google';
+
+// const handler = NextAuth({
+// 	providers: [
+// 		GoogleProvider({
+// 			clientId: `${process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID}`,
+// 			clientSecret: `${process.env.NEXT_PUBLIC_GOOGLE_CLIENT_SECRET}`,
+// 			httpOptions: {
+// 				timeout: 40000,
+// 			},
+// 			authorization: {
+// 				params: {
+// 					prompt: 'consent',
+// 					access_type: 'offline',
+// 					response_type: 'code',
+// 				},
+// 			},
+// 		}),
+// 	],
+// 	callbacks: {
+// 		async jwt({ token, account, user }) {
+// 			if (account) {
+// 				const response = await signIn(account);
+
+// 				token = Object.assign({}, token, {
+// 					id_token: account.id_token,
+// 				});
+// 				token = Object.assign({}, token, {
+// 					myToken: response.authToken,
+// 				});
+// 				token = Object.assign({}, token, {
+// 					user: response.user,
+// 				});
+// 			}
+
+// 			return token;
+// 		},
+// 		async session({ session, token }) {
+// 			if (session) {
+// 				session = Object.assign({}, session, {
+// 					id_token: token.id_token,
+// 				});
+// 				session = Object.assign({}, session, {
+// 					authToken: token.myToken,
+// 				});
+// 				session = Object.assign({}, session, {
+// 					user: {
+// 						...token.user,
+// 					},
+// 				});
+// 			}
+
+// 			return session;
+// 		},
+// 	},
+// });
+
+// export { handler as GET, handler as POST };

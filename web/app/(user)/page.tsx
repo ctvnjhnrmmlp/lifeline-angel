@@ -1,18 +1,25 @@
 'use client';
 
+import {
+	Button,
+	Modal,
+	ModalBody,
+	ModalContent,
+	ModalFooter,
+	ModalHeader,
+	useDisclosure,
+} from '@nextui-org/react';
 import { useSession } from 'next-auth/react';
 import { redirect } from 'next/navigation';
 import { BsGrid1X2Fill } from 'react-icons/bs';
-import { FaCamera } from 'react-icons/fa';
-
-import { FaLocationArrow, FaMicrophone } from 'react-icons/fa';
+import { FaCamera, FaLocationArrow, FaMicrophone } from 'react-icons/fa';
 
 export default function Page() {
 	const { data: session } = useSession();
 
-	// if (!session) {
-	// 	return redirect('/signin');
-	// }
+	if (!session) {
+		return redirect('/signin');
+	}
 
 	return (
 		<main className='flex flex-col justify-center pl-[26rem] py-4 pr-4 h-screen w-screen'>
@@ -59,7 +66,7 @@ export default function Page() {
 								<FaLocationArrow />
 							</button>
 						</div>
-					</div>
+					</div>{' '}
 				</div>
 			</section>
 		</main>
