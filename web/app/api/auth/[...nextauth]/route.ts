@@ -15,14 +15,15 @@ const handler = NextAuth({
 	callbacks: {
 		async session({ session }) {
 			if (session.user) {
-				const userSession = await Prisma.user.findUnique({
+				const user = await Prisma.user.findUnique({
 					where: {
 						// @ts-ignore
 						email: session.user.email,
 					},
 				});
+
 				// @ts-ignore
-				session.user.email = userSession.email;
+				session.user = user;
 			}
 
 			return session;
@@ -30,14 +31,14 @@ const handler = NextAuth({
 		async signIn({ profile }) {
 			if (profile) {
 				try {
-					let user = await Prisma.user.findUnique({
+					const user = await Prisma.user.findUnique({
 						where: {
 							email: profile.email,
 						},
 					});
 
 					if (user) {
-						return user;
+						return true;
 					}
 
 					throw new Error();

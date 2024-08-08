@@ -21,6 +21,8 @@ export default function Page() {
 		return redirect('/signin');
 	}
 
+	console.log(session.user);
+
 	return (
 		<main className='flex flex-col justify-center pl-[26rem] py-4 pr-4 h-screen w-screen'>
 			<section className='overflow-y-scroll no-scrollbar backdrop-blur-2xl bg-foreground/5 rounded-2xl h-screen'>
