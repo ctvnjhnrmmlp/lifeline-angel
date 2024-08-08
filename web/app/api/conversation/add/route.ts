@@ -19,11 +19,26 @@ export async function POST(req: Request) {
 		const conversation = await Prisma.conversation.create({
 			data: {
 				title: '',
+				userId: user.id,
 			},
 		});
 
+		// await Prisma.user.update({
+		// 	where: {
+		// 		id: user.id,
+		// 	},
+		// 	data: {
+		// 		conversation: {
+		// 			connect: {
+		// 				id: conversation.id,
+		// 			},
+		// 		},
+		// 	},
+		// });
+
 		return Response.json({ message: 'Success', conversation });
 	} catch (error) {
+		console.log(error);
 		return new Response('Internal Server Error', {
 			status: 500,
 		});

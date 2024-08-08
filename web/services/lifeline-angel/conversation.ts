@@ -4,9 +4,11 @@ export const addConversation = async (email: string) => {
 	try {
 		const response = await client.post('/api/conversation/add', {
 			headers: {
-				'X-User-Email': email,
+				'x-user-email': email,
 			},
 		});
+
+		console.log(response);
 
 		if (response.status === 200) {
 			return response;
@@ -37,7 +39,7 @@ export const updateConversation = async (
 			},
 			{
 				headers: {
-					'X-User-Email': email,
+					'x-user-email': email,
 				},
 			}
 		);

@@ -15,7 +15,7 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
-  conversations Conversation[]
+  conversations Conversation[] @relation("UserConversation")
   createdAt     DateTime       @default(now())
   updatedAt     DateTime       @updatedAt
 
@@ -69,10 +69,9 @@ model VerificationRequest {
 model Conversation {
   id        String    @id @default(cuid()) @map("_id")
   title     String
+  messages  Message[] @relation("MessageConversation")
+  user      User      @relation("UserConversation", fields: [userId], references: [id])
   userId    String
-  messageId String
-  user      User      @relation(fields: [userId], references: [id])
-  messages  Message[]
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
 }
@@ -80,8 +79,8 @@ model Conversation {
 model Message {
   id             String       @id @default(cuid()) @map("_id")
   content        String
+  conversation   Conversation @relation("MessageConversation", fields: [conversationId], references: [id])
   conversationId String
-  conversation   Conversation @relation(fields: [conversationId], references: [id])
   createdAt      DateTime     @default(now())
   updatedAt      DateTime     @updatedAt
 }

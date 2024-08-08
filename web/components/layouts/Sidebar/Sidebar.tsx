@@ -17,7 +17,7 @@ import {
 	ScrollShadow,
 } from '@nextui-org/react';
 import { useQuery } from '@tanstack/react-query';
-import { signOut } from 'next-auth/react';
+import { signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
 import React from 'react';
 import { BiSolidRightArrow } from 'react-icons/bi';
@@ -26,6 +26,7 @@ import { IoMdDownload } from 'react-icons/io';
 
 const Sidebar = () => {
 	const { conversations, setConversation } = useConversationStore();
+	const { data: session } = useSession();
 
 	const {
 		data: conversation,
@@ -48,7 +49,7 @@ const Sidebar = () => {
 	} = useQuery({
 		enabled: false,
 		queryKey: ['addConversation'],
-		queryFn: async () => await addConversation(),
+		queryFn: async () => await addConversation(session?.user.email),
 		refetchOnWindowFocus: false,
 	});
 
@@ -61,7 +62,7 @@ const Sidebar = () => {
 	} = useQuery({
 		enabled: false,
 		queryKey: ['updateConversation'],
-		queryFn: async () => await updateConversation(),
+		queryFn: async () => await updateConversation(session?.user.email, '', ''),
 		refetchOnWindowFocus: false,
 	});
 
@@ -78,11 +79,11 @@ const Sidebar = () => {
 		refetchOnWindowFocus: false,
 	});
 
-	React.useEffect(() => {
-		if (conversation) {
-			setConversation(conversation);
-		}
-	}, [conversation, setConversation]);
+	// React.useEffect(() => {
+	// 	if (conversation) {
+	// 		setConversation(conversation);
+	// 	}
+	// }, [conversation, setConversation]);
 
 	return (
 		<aside className='fixed flex flex-col justify-center p-4 z-10 h-screen'>
@@ -131,7 +132,12 @@ const Sidebar = () => {
 						</div>
 						<div className='flex flex-grow justify-end gap-2'>
 							<Link href='/'>
-								<button className='block rounded-full p-3 bg-foreground text-background text-2xl'>
+								<button
+									className='block rounded-full p-3 bg-foreground text-background text-2xl'
+									onClick={() => {
+										refetchAddConversation();
+									}}
+								>
 									<ImPlus />
 								</button>
 							</Link>
