@@ -68,34 +68,9 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 			await deleteConversation(session?.user.email, params.slug[0]),
 		onSuccess: () =>
 			queryClient.invalidateQueries({
-				queryKey: ['getConversation', 'getConversations'],
+				queryKey: ['getConversations', 'getConversation'],
 			}),
 	});
-
-	// const test = [
-	// 	uuidv4(),
-	// 	uuidv4(),
-	// 	uuidv4(),
-	// 	uuidv4(),
-	// 	uuidv4(),
-	// 	uuidv4(),
-	// 	uuidv4(),
-	// 	uuidv4(),
-	// 	uuidv4(),
-	// 	uuidv4(),
-	// 	uuidv4(),
-	// 	uuidv4(),
-	// 	uuidv4(),
-	// 	uuidv4(),
-	// 	uuidv4(),
-	// 	uuidv4(),
-	// 	uuidv4(),
-	// 	uuidv4(),
-	// 	uuidv4(),
-	// 	uuidv4(),
-	// 	uuidv4(),
-	// 	uuidv4(),
-	// ];
 
 	return (
 		<main className='flex flex-col justify-center pl-[26rem] py-4 pr-4 h-screen w-screen'>
