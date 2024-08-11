@@ -6,7 +6,6 @@ import {
 	updateConversation,
 } from '@/services/lifeline-angel/conversation';
 import {
-	Button,
 	Modal,
 	ModalBody,
 	ModalContent,
@@ -18,7 +17,6 @@ import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { useSession } from 'next-auth/react';
 import { BsGrid1X2Fill } from 'react-icons/bs';
 import { FaCamera } from 'react-icons/fa';
-import { v4 as uuidv4 } from 'uuid';
 
 import { ScrollShadow } from '@nextui-org/react';
 import { redirect, useRouter } from 'next/navigation';
