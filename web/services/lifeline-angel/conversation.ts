@@ -24,9 +24,7 @@ export const getConversation = async (email: string, id: string) => {
 	try {
 		const response = await client.post(
 			'/api/conversation/get/id',
-			{
-				id,
-			},
+			{ id },
 			{
 				headers: {
 					'Content-Type': 'application/json',
@@ -36,7 +34,7 @@ export const getConversation = async (email: string, id: string) => {
 		);
 
 		if (response.status === 200) {
-			return response.data.conversations;
+			return response.data.conversation;
 		}
 
 		throw new Error();
@@ -66,29 +64,52 @@ export const addConversation = async (email: string) => {
 	}
 };
 
-export const deleteConversation = async () => {};
-
 export const updateConversation = async (
 	email: string,
-	conversationId: string,
+	id: string,
 	title: string
 ) => {
 	try {
 		const response = await client.post(
 			'/api/conversation/update',
 			{
-				conversationId,
+				id,
 				title,
 			},
 			{
 				headers: {
-					'x-user-email': email,
+					'Content-Type': 'application/json',
+					'X-User-Email': email,
 				},
 			}
 		);
 
 		if (response.status === 200) {
-			return response;
+			return true;
+		}
+
+		throw new Error();
+	} catch (error) {
+		console.error(error);
+		return false;
+	}
+};
+
+export const deleteConversation = async (email: string, id: string) => {
+	try {
+		const response = await client.post(
+			'/api/conversation/delete',
+			{ id },
+			{
+				headers: {
+					'Content-Type': 'application/json',
+					'X-User-Email': email,
+				},
+			}
+		);
+
+		if (response.status === 200) {
+			return true;
 		}
 
 		throw new Error();

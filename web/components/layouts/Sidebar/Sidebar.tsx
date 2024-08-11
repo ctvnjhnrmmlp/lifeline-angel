@@ -32,7 +32,7 @@ const Sidebar = () => {
 		error: conversationsError,
 		status: conversationsStatus,
 		fetchStatus: conversationsFetchStatus,
-		refetch: refetchGetConversations,
+		refetch: refetchConversations,
 	} = useQuery({
 		queryKey: ['getConversations'],
 		queryFn: async () => await getConversations(session?.user.email),
@@ -43,23 +43,6 @@ const Sidebar = () => {
 		onSuccess: () =>
 			queryClient.invalidateQueries({ queryKey: ['getConversations'] }),
 	});
-
-	const updateConversationMutation = useMutation({
-		mutationFn: async () =>
-			await updateConversation(session?.user.email, '', ''),
-		onSuccess: () =>
-			queryClient.invalidateQueries({ queryKey: ['getConversations'] }),
-	});
-
-	const deleteConversationMutation = useMutation({
-		mutationFn: async () => await deleteConversation(),
-		onSuccess: () =>
-			queryClient.invalidateQueries({ queryKey: ['getConversations'] }),
-	});
-
-	if (conversationsStatus == 'success') {
-		console.log(conversations);
-	}
 
 	return (
 		<aside className='fixed flex flex-col justify-center p-4 z-10 h-screen'>
@@ -132,26 +115,24 @@ const Sidebar = () => {
 					{/* Messages Container */}
 					<div className='overflow-y-scroll no-scrollbar h-screen'>
 						<ScrollShadow className='flex flex-col gap-2 overflow-y-scroll no-scrollbar py-4 h-screen'>
-							{conversations?.map((conv) => (
-								<div
-									key={conv.id}
-									className='backdrop-blur-2xl bg-foreground/5 rounded-xl'
-								>
-									<Link
-										href={`/conversation
-									/${conv.id}`}
+							{conversations &&
+								conversations.map((conv) => (
+									<div
+										key={conv.id}
+										className='backdrop-blur-2xl bg-foreground/5 rounded-xl'
 									>
-										<div className='rounded-xl cursor-pointer p-4'>
-											<p className='font-bold w-full text-xl text-foreground tracking-tight leading-none text-ellipsi text-balance'>
-												{conv.id}
-											</p>
-											<p className='font-light w-full text-sm text-zinc-700 tracking-tight leading-none text-ellipsis text-balance'>
-												{conv.updatedAt}
-											</p>
-										</div>
-									</Link>
-								</div>
-							))}
+										<Link href={`/conversation/${conv.id}`}>
+											<div className='rounded-xl cursor-pointer p-4'>
+												<p className='font-bold w-full text-xl text-foreground tracking-tight leading-none text-ellipsi text-balance'>
+													{conv.id}
+												</p>
+												<p className='font-light w-full text-sm text-zinc-700 tracking-tight leading-none text-ellipsis text-balance'>
+													{conv.updatedAt}
+												</p>
+											</div>
+										</Link>
+									</div>
+								))}
 						</ScrollShadow>
 					</div>
 				</div>
