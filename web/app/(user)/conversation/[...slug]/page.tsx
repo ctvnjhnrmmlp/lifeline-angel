@@ -6,6 +6,11 @@ import {
 	updateConversation,
 } from '@/services/lifeline-angel/conversation';
 import {
+	addMessage,
+	deleteMessage,
+	getMessages,
+} from '@/services/lifeline-angel/message';
+import {
 	Modal,
 	ModalBody,
 	ModalContent,
@@ -54,11 +59,22 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 			await getConversation(session?.user.email, params.slug[0]),
 	});
 
+	const {
+		data: messages,
+		error: messagesError,
+		status: messagesStatus,
+		fetchStatus: messagesFetchStatus,
+		refetch: refetchMessages,
+	} = useQuery({
+		queryKey: ['getMessages'],
+		queryFn: async () => await getMessages(session?.user.email),
+	});
+
 	const updateConversationMutation = useMutation({
 		mutationFn: async () =>
 			await updateConversation(session?.user.email, params.slug[0], ''),
 		onSuccess: () =>
-			queryClient.invalidateQueries({ queryKey: ['getConversation'] }),
+			queryClient.invalidateQueries({ queryKey: ['getConversations'] }),
 	});
 
 	const deleteConversationMutation = useMutation({
@@ -68,6 +84,18 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 			queryClient.invalidateQueries({
 				queryKey: ['getConversations'],
 			}),
+	});
+
+	const addMessageMutation = useMutation({
+		mutationFn: async () => await addMessage(session?.user.email, ''),
+		onSuccess: () =>
+			queryClient.invalidateQueries({ queryKey: ['getMessages'] }),
+	});
+
+	const deleteMessageMutation = useMutation({
+		mutationFn: async () => await deleteMessage(session?.user.email, ''),
+		onSuccess: () =>
+			queryClient.invalidateQueries({ queryKey: ['getMessages'] }),
 	});
 
 	return (
