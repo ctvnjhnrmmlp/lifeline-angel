@@ -37,11 +37,7 @@ const handler = NextAuth({
 						},
 					});
 
-					if (user) {
-						return true;
-					}
-
-					throw new Error();
+					return true;
 				} catch (error) {
 					console.log(error);
 					return false;

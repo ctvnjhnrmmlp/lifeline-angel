@@ -8,7 +8,13 @@ import { useRouter } from 'next/navigation';
 import React from 'react';
 
 export default function Providers({ children }: { children: React.ReactNode }) {
-	const queryClient = new QueryClient();
+	const queryClient = new QueryClient({
+		defaultOptions: {
+			queries: {
+				refetchOnWindowFocus: false,
+			},
+		},
+	});
 	const router = useRouter();
 
 	return (

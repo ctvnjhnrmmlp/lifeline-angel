@@ -1,14 +1,59 @@
 import client from './client';
 
+export const getConversations = async (email: string) => {
+	try {
+		const response = await client.get('/api/conversation/get', {
+			headers: {
+				'Content-Type': 'application/json',
+				'X-User-Email': email,
+			},
+		});
+
+		if (response.status === 200) {
+			return response.data.conversations;
+		}
+
+		throw new Error();
+	} catch (error) {
+		console.error(error);
+		return false;
+	}
+};
+
+export const getConversation = async (email: string, id: string) => {
+	try {
+		const response = await client.post(
+			'/api/conversation/get/id',
+			{
+				id,
+			},
+			{
+				headers: {
+					'Content-Type': 'application/json',
+					'X-User-Email': email,
+				},
+			}
+		);
+
+		if (response.status === 200) {
+			return response.data.conversations;
+		}
+
+		throw new Error();
+	} catch (error) {
+		console.error(error);
+		return false;
+	}
+};
+
 export const addConversation = async (email: string) => {
 	try {
 		const response = await client.post('/api/conversation/add', {
 			headers: {
-				'x-user-email': email,
+				'Content-Type': 'application/json',
+				'X-User-Email': email,
 			},
 		});
-
-		console.log(response);
 
 		if (response.status === 200) {
 			return response;
@@ -20,8 +65,6 @@ export const addConversation = async (email: string) => {
 		return false;
 	}
 };
-
-export const getConversation = async () => {};
 
 export const deleteConversation = async () => {};
 
