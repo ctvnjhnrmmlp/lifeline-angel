@@ -27,9 +27,9 @@ import { FaLocationArrow, FaMicrophone } from 'react-icons/fa';
 export default function Page({ params }: { params: { slug: string[] } }) {
 	const { data: session } = useSession();
 
-	// if (!session) {
-	// 	return redirect('/signin');
-	// }
+	if (!session) {
+		return redirect('/signin');
+	}
 
 	const {
 		isOpen: isOpenCamera,
@@ -71,10 +71,6 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 				queryKey: ['getConversations'],
 			}),
 	});
-
-	// if (conversationFetchStatus) {
-	// 	console.log(conversation);
-	// }
 
 	return (
 		<main className='flex flex-col justify-center pl-[26rem] py-4 pr-4 h-screen w-screen'>
