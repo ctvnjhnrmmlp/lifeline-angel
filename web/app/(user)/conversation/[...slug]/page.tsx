@@ -68,9 +68,13 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 			await deleteConversation(session?.user.email, params.slug[0]),
 		onSuccess: () =>
 			queryClient.invalidateQueries({
-				queryKey: ['getConversations', 'getConversation'],
+				queryKey: ['getConversations'],
 			}),
 	});
+
+	// if (conversationFetchStatus) {
+	// 	console.log(conversation);
+	// }
 
 	return (
 		<main className='flex flex-col justify-center pl-[26rem] py-4 pr-4 h-screen w-screen'>
