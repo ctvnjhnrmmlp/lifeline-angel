@@ -8,7 +8,7 @@ export async function POST(req: Request) {
 
 		const user = await Prisma.user.findUnique({
 			where: {
-				email: email,
+				email: email!,
 			},
 		});
 
@@ -18,13 +18,19 @@ export async function POST(req: Request) {
 			});
 		}
 
+		const messages = await Prisma.message.deleteMany({
+			where: {
+				conversationId: id,
+			},
+		});
+
 		const conversation = await Prisma.conversation.delete({
 			where: {
 				id: id,
 			},
 		});
 
-		return Response.json({ message: 'Success', conversation });
+		return Response.json({ message: 'Success' });
 	} catch (error) {
 		console.log(error);
 		return new Response('Internal Server Error', {
