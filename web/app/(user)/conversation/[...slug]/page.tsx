@@ -25,6 +25,7 @@ import { FaCamera } from 'react-icons/fa';
 
 import { ScrollShadow } from '@nextui-org/react';
 import { redirect, useRouter } from 'next/navigation';
+import React from 'react';
 import { FaLocationArrow, FaMicrophone } from 'react-icons/fa';
 
 export default function Page({ params }: { params: { slug: string[] } }) {
@@ -46,6 +47,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 	} = useDisclosure();
 	const queryClient = useQueryClient();
 	const router = useRouter();
+	const [message, setMessage] = React.useState('');
 
 	const {
 		data: conversation,
@@ -67,7 +69,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 		refetch: refetchMessages,
 	} = useQuery({
 		queryKey: ['getMessages'],
-		queryFn: async () => await getMessages(session?.user.email),
+		queryFn: async () => await getMessages(session?.user.email, params.slug[0]),
 	});
 
 	const updateConversationMutation = useMutation({
@@ -87,7 +89,8 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 	});
 
 	const addMessageMutation = useMutation({
-		mutationFn: async () => await addMessage(session?.user.email, ''),
+		mutationFn: async (msg: string) =>
+			await addMessage(session?.user.email, params.slug[0], msg),
 		onSuccess: () =>
 			queryClient.invalidateQueries({ queryKey: ['getMessages'] }),
 	});
@@ -97,6 +100,10 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 		onSuccess: () =>
 			queryClient.invalidateQueries({ queryKey: ['getMessages'] }),
 	});
+
+	if (messagesStatus && messages) {
+		console.log(messages);
+	}
 
 	return (
 		<main className='flex flex-col justify-center pl-[26rem] py-4 pr-4 h-screen w-screen'>
@@ -127,18 +134,19 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 					{/* Messages */}
 					<div className='overflow-y-scroll no-scrollbar h-screen my-4'>
 						<ScrollShadow className='flex flex-col gap-2 overflow-y-scroll no-scrollbar py-4 h-screen'>
-							{/* {test.map((t) => (
-								<div
-									key={t}
-									className='backdrop-blur-2xl bg-foreground/5 rounded-xl'
-								>
-									<div className='cursor-pointer p-6'>
-										<p className='w-full text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance'>
-											{t}
-										</p>
+							{messages &&
+								messages.map((message) => (
+									<div
+										key={message.id}
+										className='backdrop-blur-2xl bg-foreground/5 rounded-xl'
+									>
+										<div className='cursor-pointer p-6'>
+											<p className='w-full text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance'>
+												{message.content}
+											</p>
+										</div>
 									</div>
-								</div>
-							))} */}
+								))}
 						</ScrollShadow>
 					</div>
 					{/* Message */}
@@ -146,15 +154,25 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 						<div className='w-full'>
 							<input
 								type='text'
+								value={message}
 								placeholder='Aa'
 								className='p-3 w-full rounded-xl placeholder:font-bold placeholder:text-foreground font-bold text-foreground text-2xl'
+								onChange={(event) => {
+									setMessage(event.target.value);
+								}}
 							/>
 						</div>
 						<div className='flex items-center justify-center space-x-2'>
 							<button className='block rounded-full bg-foreground text-background text-2xl p-4'>
 								<FaMicrophone />
 							</button>
-							<button className='block rounded-full bg-foreground text-background text-2xl p-4'>
+							<button
+								className='block rounded-full bg-foreground text-background text-2xl p-4'
+								onClick={() => {
+									addMessageMutation.mutate(message);
+									setMessage('');
+								}}
+							>
 								<FaLocationArrow />
 							</button>
 						</div>

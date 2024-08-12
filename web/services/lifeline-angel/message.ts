@@ -1,13 +1,23 @@
 import client from './client';
 
-export const getMessages = async (email: string) => {
+const apiClient = client(
+	process.env.NEXT_PUBLIC_LIFELINE_ANGEL_API_URL as string
+);
+
+export const getMessages = async (email: string, id: string) => {
 	try {
-		const response = await client.get('/api/message/get', {
-			headers: {
-				'Content-Type': 'application/json',
-				'X-User-Email': email,
+		const response = await apiClient.post(
+			'/api/message/get',
+			{
+				id,
 			},
-		});
+			{
+				headers: {
+					'Content-Type': 'application/json',
+					'X-User-Email': email,
+				},
+			}
+		);
 
 		if (response.status === 200) {
 			return response.data.messages;
@@ -20,11 +30,16 @@ export const getMessages = async (email: string) => {
 	}
 };
 
-export const addMessage = async (email: string, message: string) => {
+export const addMessage = async (
+	email: string,
+	id: string,
+	message: string
+) => {
 	try {
-		const response = await client.post(
+		const response = await apiClient.post(
 			'/api/message/add',
 			{
+				id,
 				message,
 			},
 			{
@@ -36,7 +51,7 @@ export const addMessage = async (email: string, message: string) => {
 		);
 
 		if (response.status === 200) {
-			return true;
+			return response.data.answer;
 		}
 
 		throw new Error();
@@ -48,7 +63,7 @@ export const addMessage = async (email: string, message: string) => {
 
 export const deleteMessage = async (email: string, id: string) => {
 	try {
-		const response = await client.post(
+		const response = await apiClient.post(
 			'/api/message/delete',
 			{ id },
 			{

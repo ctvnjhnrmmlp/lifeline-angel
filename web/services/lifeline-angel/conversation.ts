@@ -1,8 +1,12 @@
 import client from './client';
 
+const apiClient = client(
+	process.env.NEXT_PUBLIC_LIFELINE_ANGEL_API_URL as string
+);
+
 export const getConversations = async (email: string) => {
 	try {
-		const response = await client.get('/api/conversation/get', {
+		const response = await apiClient.get('/api/conversation/get', {
 			headers: {
 				'Content-Type': 'application/json',
 				'X-User-Email': email,
@@ -22,7 +26,7 @@ export const getConversations = async (email: string) => {
 
 export const getConversation = async (email: string, id: string) => {
 	try {
-		const response = await client.post(
+		const response = await apiClient.post(
 			'/api/conversation/get/id',
 			{ id },
 			{
@@ -46,7 +50,7 @@ export const getConversation = async (email: string, id: string) => {
 
 export const addConversation = async (email: string) => {
 	try {
-		const response = await client.post('/api/conversation/add', {
+		const response = await apiClient.post('/api/conversation/add', {
 			headers: {
 				'Content-Type': 'application/json',
 				'X-User-Email': email,
@@ -70,7 +74,7 @@ export const updateConversation = async (
 	title: string
 ) => {
 	try {
-		const response = await client.post(
+		const response = await apiClient.post(
 			'/api/conversation/update',
 			{
 				id,
@@ -97,7 +101,7 @@ export const updateConversation = async (
 
 export const deleteConversation = async (email: string, id: string) => {
 	try {
-		const response = await client.post(
+		const response = await apiClient.post(
 			'/api/conversation/delete',
 			{ id },
 			{

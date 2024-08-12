@@ -1,7 +1,9 @@
 import axios from 'axios';
 
-const client = axios.create({
-	baseURL: process.env.NEXT_PUBLIC_LIFELINE_ANGEL_API_URL as string,
-});
+const client = (url: string) => {
+	return axios.create({
+		baseURL: url,
+	});
+};
 
 export default client;
