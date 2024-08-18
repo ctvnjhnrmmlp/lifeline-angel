@@ -7,6 +7,7 @@ import {
 	updateConversation,
 } from '@/services/lifeline-angel/conversation';
 import SETTINGS from '@/sources/settings';
+import { useMultipleConversationStore } from '@/stores/lifeline-angel/conversation';
 import {
 	Avatar,
 	Dropdown,
@@ -15,20 +16,38 @@ import {
 	DropdownTrigger,
 	ScrollShadow,
 } from '@nextui-org/react';
-import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+import { useMutation, useQuery } from '@tanstack/react-query';
 import { signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
 import React from 'react';
 import { BiSolidRightArrow } from 'react-icons/bi';
 import { ImPlus } from 'react-icons/im';
 import { IoMdDownload } from 'react-icons/io';
+import { v4 as uuidv4 } from 'uuid';
 
 const Sidebar = () => {
 	const { data: session } = useSession();
-	const queryClient = useQueryClient();
 
 	const {
-		data: conversations,
+		conversations: conversationsLocal,
+		setConversations: setConversationsLocal,
+		addConversation: addConversationLocal,
+	} = useMultipleConversationStore();
+
+	const addConversationMutation = useMutation({
+		mutationFn: async (cid: string) =>
+			await addConversation(session?.user.email, cid),
+	});
+
+	const handleAddConversation = () => {
+		let cid = uuidv4();
+
+		addConversationLocal(cid);
+		addConversationMutation.mutate(cid);
+	};
+
+	const {
+		data: conversationsServer,
 		error: conversationsError,
 		status: conversationsStatus,
 		fetchStatus: conversationsFetchStatus,
@@ -38,11 +57,9 @@ const Sidebar = () => {
 		queryFn: async () => await getConversations(session?.user.email),
 	});
 
-	const addConversationMutation = useMutation({
-		mutationFn: async () => await addConversation(session?.user.email),
-		onSuccess: () =>
-			queryClient.invalidateQueries({ queryKey: ['getConversations'] }),
-	});
+	React.useEffect(() => {
+		setConversationsLocal(conversationsServer);
+	}, [conversationsServer]);
 
 	return (
 		<aside className='fixed flex flex-col justify-center p-4 z-10 h-screen'>
@@ -95,9 +112,7 @@ const Sidebar = () => {
 							<Link href='/'>
 								<button
 									className='block rounded-full p-3 bg-foreground text-background text-2xl'
-									onClick={() => {
-										addConversationMutation.mutate();
-									}}
+									onClick={() => handleAddConversation()}
 								>
 									<ImPlus />
 								</button>
@@ -115,24 +130,23 @@ const Sidebar = () => {
 					{/* Messages Container */}
 					<div className='overflow-y-scroll no-scrollbar h-screen'>
 						<ScrollShadow className='flex flex-col gap-2 overflow-y-scroll no-scrollbar py-4 h-screen'>
-							{conversations &&
-								conversations.map((conv) => (
-									<div
-										key={conv.id}
-										className='backdrop-blur-2xl bg-foreground/5 rounded-xl'
-									>
-										<Link href={`/conversation/${conv.id}`}>
-											<div className='rounded-xl cursor-pointer p-4'>
-												<p className='font-bold w-full text-xl text-foreground tracking-tight leading-none text-ellipsi text-balance'>
-													{conv.id}
-												</p>
-												<p className='font-light w-full text-sm text-zinc-700 tracking-tight leading-none text-ellipsis text-balance'>
-													{conv.updatedAt}
-												</p>
-											</div>
-										</Link>
-									</div>
-								))}
+							{conversationsLocal?.map((conv) => (
+								<div
+									key={conv.id}
+									className='backdrop-blur-2xl bg-foreground/5 rounded-xl'
+								>
+									<Link href={`/conversation/${conv.id}`}>
+										<div className='rounded-xl cursor-pointer p-4'>
+											<p className='font-bold w-full text-xl text-foreground tracking-tight leading-none text-ellipsi text-balance'>
+												{conv.id}
+											</p>
+											<p className='font-light w-full text-sm text-zinc-700 tracking-tight leading-none text-ellipsis text-balance'>
+												{conv.updatedAt.toString()}
+											</p>
+										</div>
+									</Link>
+								</div>
+							))}
 						</ScrollShadow>
 					</div>
 				</div>

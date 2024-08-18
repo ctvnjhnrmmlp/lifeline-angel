@@ -6,8 +6,8 @@ import {
 	updateConversation,
 } from '@/services/lifeline-angel/conversation';
 import {
-	addMessage,
-	deleteMessage,
+	addTextMessage,
+	deleteTextMessage,
 	getMessages,
 } from '@/services/lifeline-angel/message';
 import {
@@ -18,11 +18,15 @@ import {
 	ModalHeader,
 	useDisclosure,
 } from '@nextui-org/react';
-import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+import { useMutation, useQuery } from '@tanstack/react-query';
 import { useSession } from 'next-auth/react';
 import { BsGrid1X2Fill } from 'react-icons/bs';
 import { FaCamera } from 'react-icons/fa';
 
+import {
+	useMultipleConversationStore,
+	useSingleConversationStore,
+} from '@/stores/lifeline-angel/conversation';
 import { ScrollShadow } from '@nextui-org/react';
 import { redirect, useRouter } from 'next/navigation';
 import React from 'react';
@@ -45,12 +49,44 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 		onOpen: onOpenOptions,
 		onOpenChange: onOpenChangeOptions,
 	} = useDisclosure();
-	const queryClient = useQueryClient();
 	const router = useRouter();
 	const [message, setMessage] = React.useState('');
 
 	const {
-		data: conversation,
+		conversation: conversationLocal,
+		setConversation: setConversationLocal,
+	} = useSingleConversationStore();
+
+	const { deleteConversation: deleteConversationLocal } =
+		useMultipleConversationStore();
+
+	const updateConversationMutation = useMutation({
+		mutationFn: async () =>
+			await updateConversation(session?.user.email, params.slug[0], ''),
+	});
+
+	const deleteConversationMutation = useMutation({
+		mutationFn: async () =>
+			await deleteConversation(session?.user.email, params.slug[0]),
+	});
+
+	const addMessageMutation = useMutation({
+		mutationFn: async (msg: string) =>
+			await addTextMessage(session?.user.email, params.slug[0], msg),
+	});
+
+	const deleteMessageMutation = useMutation({
+		mutationFn: async () => await deleteTextMessage(session?.user.email, ''),
+	});
+
+	const handleDeleteConversation = () => {
+		deleteConversationLocal(params.slug[0]);
+		deleteConversationMutation.mutate();
+		router.push('/');
+	};
+
+	const {
+		data: conversationServer,
 		error: conversationError,
 		status: conversationStatus,
 		fetchStatus: conversationFetchStatus,
@@ -72,38 +108,9 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 		queryFn: async () => await getMessages(session?.user.email, params.slug[0]),
 	});
 
-	const updateConversationMutation = useMutation({
-		mutationFn: async () =>
-			await updateConversation(session?.user.email, params.slug[0], ''),
-		onSuccess: () =>
-			queryClient.invalidateQueries({ queryKey: ['getConversations'] }),
-	});
-
-	const deleteConversationMutation = useMutation({
-		mutationFn: async () =>
-			await deleteConversation(session?.user.email, params.slug[0]),
-		onSuccess: () =>
-			queryClient.invalidateQueries({
-				queryKey: ['getConversations'],
-			}),
-	});
-
-	const addMessageMutation = useMutation({
-		mutationFn: async (msg: string) =>
-			await addMessage(session?.user.email, params.slug[0], msg),
-		onSuccess: () =>
-			queryClient.invalidateQueries({ queryKey: ['getMessages'] }),
-	});
-
-	const deleteMessageMutation = useMutation({
-		mutationFn: async () => await deleteMessage(session?.user.email, ''),
-		onSuccess: () =>
-			queryClient.invalidateQueries({ queryKey: ['getMessages'] }),
-	});
-
-	if (messagesStatus && messages) {
-		console.log(messages);
-	}
+	React.useEffect(() => {
+		setConversationLocal(conversationServer);
+	}, [conversationServer]);
 
 	return (
 		<main className='flex flex-col justify-center pl-[26rem] py-4 pr-4 h-screen w-screen'>
@@ -251,11 +258,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 											</button>
 											<button
 												className='bg-red-700 rounded-xl cursor-pointer p-4'
-												onClick={() => {
-													onOpenChangeOptions();
-													deleteConversationMutation.mutate();
-													router.push('/');
-												}}
+												onClick={() => handleDeleteConversation()}
 											>
 												<p className='font-bold w-full text-2xl text-foreground tracking-tight leading-none text-ellipsis text-balance'>
 													Delete

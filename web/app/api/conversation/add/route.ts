@@ -3,11 +3,12 @@ import Prisma from '@/database/database';
 export async function POST(req: Request) {
 	try {
 		const request = await req.json();
-		const email = request.headers['X-User-Email'];
+		const email = req.headers.get('x-user-email');
+		const { id } = request;
 
 		const user = await Prisma.user.findUnique({
 			where: {
-				email: email,
+				email: email as string,
 			},
 		});
 
@@ -19,6 +20,7 @@ export async function POST(req: Request) {
 
 		const conversation = await Prisma.conversation.create({
 			data: {
+				id: id,
 				title: '',
 				userId: user.id,
 			},

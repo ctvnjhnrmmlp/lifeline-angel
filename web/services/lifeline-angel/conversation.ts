@@ -48,14 +48,20 @@ export const getConversation = async (email: string, id: string) => {
 	}
 };
 
-export const addConversation = async (email: string) => {
+export const addConversation = async (email: string, id: string) => {
 	try {
-		const response = await apiClient.post('/api/conversation/add', {
-			headers: {
-				'Content-Type': 'application/json',
-				'X-User-Email': email,
+		const response = await apiClient.post(
+			'/api/conversation/add',
+			{
+				id,
 			},
-		});
+			{
+				headers: {
+					'Content-Type': 'application/json',
+					'X-User-Email': email,
+				},
+			}
+		);
 
 		if (response.status === 200) {
 			return response;
