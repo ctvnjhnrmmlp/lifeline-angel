@@ -7,7 +7,7 @@ const apiClient = client(
 export const getMessages = async (email: string, id: string) => {
 	try {
 		const response = await apiClient.post(
-			'/api/message/get',
+			'/api/message/text/get',
 			{
 				id,
 			},
@@ -18,6 +18,8 @@ export const getMessages = async (email: string, id: string) => {
 				},
 			}
 		);
+
+		console.log(response);
 
 		if (response.status === 200) {
 			return response.data.messages;
@@ -32,14 +34,16 @@ export const getMessages = async (email: string, id: string) => {
 
 export const addTextMessage = async (
 	email: string,
-	id: string,
+	cid: string,
+	mid: string,
 	message: string
 ) => {
 	try {
 		const response = await apiClient.post(
 			'/api/message/text/add',
 			{
-				id,
+				cid,
+				mid,
 				message,
 			},
 			{

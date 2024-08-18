@@ -5,15 +5,15 @@ export async function POST(req: Request) {
 		const request = await req.json();
 		const email = req.headers.get('x-user-email');
 		const message = request.message;
-		const id = request.id;
+		const { cid, mid } = request;
 
 		const user = await Prisma.user.findUnique({
 			where: {
-				email: email,
+				email: email as string,
 			},
 		});
 
-		if (!user || !email || !id || !message) {
+		if (!user || !email || !cid || !mid || !message) {
 			return new Response('Bad Request', {
 				status: 400,
 			});
@@ -31,12 +31,13 @@ export async function POST(req: Request) {
 
 		const conversation = await Prisma.conversation.update({
 			where: {
-				id: id,
+				id: cid,
 			},
 			data: {
 				messages: {
 					create: [
 						{
+							id: mid,
 							content: message,
 						},
 						{
@@ -46,6 +47,8 @@ export async function POST(req: Request) {
 				},
 			},
 		});
+
+		/////////
 
 		// const conversation = await Prisma.conversation.create({
 		// 	data: {
@@ -66,6 +69,8 @@ export async function POST(req: Request) {
 		// 		},
 		// 	},
 		// });
+
+		/////////
 
 		return Response.json({ message: 'Success', answer: data.response });
 	} catch (error) {

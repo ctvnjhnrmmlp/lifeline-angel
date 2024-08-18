@@ -10,6 +10,7 @@ import {
 	deleteTextMessage,
 	getMessages,
 } from '@/services/lifeline-angel/message';
+import { useMultipleMessageStore } from '@/stores/lifeline-angel/message';
 import {
 	Modal,
 	ModalBody,
@@ -31,6 +32,7 @@ import { ScrollShadow } from '@nextui-org/react';
 import { redirect, useRouter } from 'next/navigation';
 import React from 'react';
 import { FaLocationArrow, FaMicrophone } from 'react-icons/fa';
+import { v4 as uuidv4 } from 'uuid';
 
 export default function Page({ params }: { params: { slug: string[] } }) {
 	const { data: session } = useSession();
@@ -57,32 +59,48 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 		setConversation: setConversationLocal,
 	} = useSingleConversationStore();
 
+	const {
+		messages: messagesLocal,
+		setMessages: setMessagesLocal,
+		addMessage: addMessageLocal,
+	} = useMultipleMessageStore();
+
 	const { deleteConversation: deleteConversationLocal } =
 		useMultipleConversationStore();
 
 	const updateConversationMutation = useMutation({
 		mutationFn: async () =>
-			await updateConversation(session?.user.email, params.slug[0], ''),
+			await updateConversation(session.user.email, params.slug[0], ''),
 	});
 
 	const deleteConversationMutation = useMutation({
 		mutationFn: async () =>
-			await deleteConversation(session?.user.email, params.slug[0]),
+			await deleteConversation(session.user.email, params.slug[0]),
 	});
 
 	const addMessageMutation = useMutation({
-		mutationFn: async (msg: string) =>
-			await addTextMessage(session?.user.email, params.slug[0], msg),
+		mutationFn: async ({ mid, message }: { mid: string; message: string }) =>
+			await addTextMessage(session.user.email, params.slug[0], mid, message),
+		onSuccess: () => refetchMessages(),
 	});
 
 	const deleteMessageMutation = useMutation({
-		mutationFn: async () => await deleteTextMessage(session?.user.email, ''),
+		mutationFn: async () => await deleteTextMessage(session.user.email, ''),
 	});
 
 	const handleDeleteConversation = () => {
 		deleteConversationLocal(params.slug[0]);
 		deleteConversationMutation.mutate();
 		router.push('/');
+	};
+
+	const handleAddMessage = (message: string) => {
+		const mid = uuidv4();
+
+		addMessageLocal(params.slug[0], mid, message);
+		addMessageMutation.mutate({ mid, message });
+		refetchMessages();
+		setMessage('');
 	};
 
 	const {
@@ -98,7 +116,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 	});
 
 	const {
-		data: messages,
+		data: messagesServer,
 		error: messagesError,
 		status: messagesStatus,
 		fetchStatus: messagesFetchStatus,
@@ -111,6 +129,16 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 	React.useEffect(() => {
 		setConversationLocal(conversationServer);
 	}, [conversationServer]);
+
+	React.useEffect(() => {
+		setMessagesLocal(messagesServer);
+	}, [messagesServer]);
+
+	React.useEffect(() => {
+		if (messagesStatus === 'success' && messagesServer) {
+			setMessagesLocal(messagesServer);
+		}
+	}, [refetchMessages]);
 
 	return (
 		<main className='flex flex-col justify-center pl-[26rem] py-4 pr-4 h-screen w-screen'>
@@ -141,19 +169,18 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 					{/* Messages */}
 					<div className='overflow-y-scroll no-scrollbar h-screen my-4'>
 						<ScrollShadow className='flex flex-col gap-2 overflow-y-scroll no-scrollbar py-4 h-screen'>
-							{messages &&
-								messages.map((message) => (
-									<div
-										key={message.id}
-										className='backdrop-blur-2xl bg-foreground/5 rounded-xl'
-									>
-										<div className='cursor-pointer p-6'>
-											<p className='w-full text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance'>
-												{message.content}
-											</p>
-										</div>
+							{messagesLocal.map((message) => (
+								<div
+									key={message.id}
+									className='backdrop-blur-2xl bg-foreground/5 rounded-xl'
+								>
+									<div className='cursor-pointer p-6'>
+										<p className='w-full text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance'>
+											{message.content}
+										</p>
 									</div>
-								))}
+								</div>
+							))}
 						</ScrollShadow>
 					</div>
 					{/* Message */}
@@ -175,10 +202,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 							</button>
 							<button
 								className='block rounded-full bg-foreground text-background text-2xl p-4'
-								onClick={() => {
-									addMessageMutation.mutate(message);
-									setMessage('');
-								}}
+								onClick={() => handleAddMessage(message)}
 							>
 								<FaLocationArrow />
 							</button>
