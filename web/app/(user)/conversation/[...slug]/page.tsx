@@ -64,6 +64,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 	const router = useRouter();
 	const [message, setMessage] = React.useState('');
 	const fileRef = React.useRef<HTMLInputElement>(null);
+	const [uploading, setUploading] = React.useState(false);
 
 	const {
 		conversation: conversationLocal,
@@ -291,7 +292,14 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 															)
 															.required('Required'),
 													})}
-													onSubmit={() => {}}
+													onSubmit={async (values, { setSubmitting }) => {
+														setUploading(true);
+
+														try {
+														} catch (error) {}
+
+														setUploading(false);
+													}}
 												>
 													{({ values, errors, touched, getFieldProps }) => (
 														<Form className='space-y-4'>
@@ -324,6 +332,19 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 																	</Chip>
 																)}
 															</div>
+															<button
+																type='submit'
+																disabled={uploading}
+																className='block bg-foreground text-background text-3xl px-3 py-3 w-full rounded-xl font-bold leading-none tracking-tight'
+															>
+																<div>
+																	<FaLocationArrow className='absolute left-26' />
+																	<span className='font-extrabold leading-none tracking-tight uppercase mx-auto pl-1'>
+																		{uploading && <span>Posting...</span>}
+																		{!uploading && <span>Post</span>}
+																	</span>
+																</div>
+															</button>
 														</Form>
 													)}
 												</Formik>
