@@ -12,6 +12,8 @@ import {
 } from '@/services/lifeline-angel/message';
 import { useMultipleMessageStore } from '@/stores/lifeline-angel/message';
 import {
+	Chip,
+	Input,
 	Modal,
 	ModalBody,
 	ModalContent,
@@ -22,17 +24,20 @@ import {
 import { useMutation, useQuery } from '@tanstack/react-query';
 import { useSession } from 'next-auth/react';
 import { BsGrid1X2Fill } from 'react-icons/bs';
-import { FaCamera } from 'react-icons/fa';
+import { FaCamera, FaPaperclip } from 'react-icons/fa';
 
 import {
 	useMultipleConversationStore,
 	useSingleConversationStore,
 } from '@/stores/lifeline-angel/conversation';
 import { ScrollShadow } from '@nextui-org/react';
+import { Form, Formik } from 'formik';
 import { redirect, useRouter } from 'next/navigation';
 import React from 'react';
 import { FaLocationArrow, FaMicrophone } from 'react-icons/fa';
+import { FaCloudArrowUp } from 'react-icons/fa6';
 import { v4 as uuidv4 } from 'uuid';
+import * as Yup from 'yup';
 
 export default function Page({ params }: { params: { slug: string[] } }) {
 	const { data: session } = useSession();
@@ -41,6 +46,11 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 		return redirect('/signin');
 	}
 
+	const {
+		isOpen: isOpenFile,
+		onOpen: onOpenFile,
+		onOpenChange: onOpenChangeFile,
+	} = useDisclosure();
 	const {
 		isOpen: isOpenCamera,
 		onOpen: onOpenCamera,
@@ -53,6 +63,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 	} = useDisclosure();
 	const router = useRouter();
 	const [message, setMessage] = React.useState('');
+	const fileRef = React.useRef<HTMLInputElement>(null);
 
 	const {
 		conversation: conversationLocal,
@@ -153,13 +164,13 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 							<div className='flex space-x-2'>
 								<button
 									className='block rounded-full p-3 bg-foreground text-background text-2xl'
-									onClick={onOpenCamera}
+									onClick={() => onOpenCamera()}
 								>
 									<FaCamera />
 								</button>
 								<button
 									className='block rounded-full p-3 bg-foreground text-background text-2xl'
-									onClick={onOpenOptions}
+									onClick={() => onOpenOptions()}
 								>
 									<BsGrid1X2Fill />
 								</button>
@@ -169,18 +180,19 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 					{/* Messages */}
 					<div className='overflow-y-scroll no-scrollbar h-screen my-4'>
 						<ScrollShadow className='flex flex-col gap-2 overflow-y-scroll no-scrollbar py-4 h-screen'>
-							{messagesLocal.map((message) => (
-								<div
-									key={message.id}
-									className='backdrop-blur-2xl bg-foreground/5 rounded-xl'
-								>
-									<div className='cursor-pointer p-6'>
-										<p className='w-full text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance'>
-											{message.content}
-										</p>
+							{messagesLocal &&
+								messagesLocal.map((message) => (
+									<div
+										key={message.id}
+										className='backdrop-blur-2xl bg-foreground/5 rounded-xl'
+									>
+										<div className='cursor-pointer p-6'>
+											<p className='w-full text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance'>
+												{message.content}
+											</p>
+										</div>
 									</div>
-								</div>
-							))}
+								))}
 						</ScrollShadow>
 					</div>
 					{/* Message */}
@@ -197,6 +209,12 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 							/>
 						</div>
 						<div className='flex items-center justify-center space-x-2'>
+							<button
+								className='block rounded-full bg-foreground text-background text-2xl p-4'
+								onClick={() => onOpenFile()}
+							>
+								<FaPaperclip />
+							</button>
 							<button className='block rounded-full bg-foreground text-background text-2xl p-4'>
 								<FaMicrophone />
 							</button>
@@ -209,6 +227,113 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 						</div>
 					</div>
 					<div>
+						<Modal
+							size='lg'
+							backdrop='blur'
+							isOpen={isOpenFile}
+							onOpenChange={onOpenChangeFile}
+							classNames={{
+								base: 'bg-background',
+								header: 'flex justify-center items-center',
+								body: 'flex gap-4',
+							}}
+						>
+							<ModalContent>
+								{(onClose) => (
+									<>
+										<ModalHeader>
+											<p className='text-3xl font-bold text-center'>File</p>
+										</ModalHeader>
+										<ModalBody>
+											<div className='flex justify-center'>
+												<Formik
+													initialValues={{
+														file: '',
+													}}
+													validationSchema={Yup.object({
+														file: Yup.mixed()
+															.test(
+																'is-file-too-big',
+																'File exceeds 50MB',
+																() => {
+																	let valid = true;
+																	const files = fileRef?.current?.files;
+																	if (files) {
+																		const fileArr = Array.from(files);
+																		fileArr.forEach((file) => {
+																			const size = file.size / 1024 / 1024;
+																			if (size > 50) {
+																				valid = false;
+																			}
+																		});
+																	}
+																	return valid;
+																}
+															)
+															.test(
+																'is-file-of-correct-type',
+																'File is not of supported type',
+																() => {
+																	let valid = true;
+																	const files = fileRef?.current?.files;
+																	if (files) {
+																		const fileArr = Array.from(files);
+																		fileArr.forEach((file) => {
+																			const type = file.type.split('/')[1];
+																			const validTypes = ['png', 'jpg', 'jpeg'];
+																			if (!validTypes.includes(type)) {
+																				valid = false;
+																			}
+																		});
+																	}
+																	return valid;
+																}
+															)
+															.required('Required'),
+													})}
+													onSubmit={() => {}}
+												>
+													{({ values, errors, touched, getFieldProps }) => (
+														<Form className='space-y-4'>
+															<div className='space-y-2'>
+																<Input
+																	required
+																	ref={fileRef}
+																	id='image-input'
+																	type='file'
+																	accept='image/*'
+																	{...getFieldProps('file')}
+																/>
+																<label
+																	htmlFor='video-input'
+																	className='flex flex-col items-center justify-center w-full h-72 rounded-2xl cursor-pointer bg-background outline outline-[#3F3F46] outline-[0.1px]'
+																>
+																	<div className='flex flex-col items-center justify-center pt-5 pb-6'>
+																		<FaCloudArrowUp className='text-9xl text-foreground' />
+																		<p className='text-xl font-bold text-foreground'>
+																			Click above to upload
+																		</p>
+																		<p className='text-sm text-foreground'>
+																			PNG, JPG, JPEG
+																		</p>
+																	</div>
+																</label>
+																{touched.file && errors.file && (
+																	<Chip color='danger' radius='sm'>
+																		{errors.file}
+																	</Chip>
+																)}
+															</div>
+														</Form>
+													)}
+												</Formik>
+											</div>
+										</ModalBody>
+										<ModalFooter></ModalFooter>
+									</>
+								)}
+							</ModalContent>
+						</Modal>
 						<Modal
 							size='lg'
 							backdrop='blur'
