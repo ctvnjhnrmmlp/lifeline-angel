@@ -12,6 +12,7 @@ import {
 	getMessages,
 } from '@/services/lifeline-angel/message';
 import { useMultipleMessageStore } from '@/stores/lifeline-angel/message';
+import { checkTextValidURL } from '@/utilities/functions';
 import {
 	Chip,
 	Input,
@@ -24,6 +25,7 @@ import {
 } from '@nextui-org/react';
 import { useMutation, useQuery } from '@tanstack/react-query';
 import { useSession } from 'next-auth/react';
+import Image from 'next/image';
 import { BsGrid1X2Fill } from 'react-icons/bs';
 import { FaCamera, FaPaperclip } from 'react-icons/fa';
 
@@ -231,18 +233,41 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 					<div className='overflow-y-scroll no-scrollbar h-screen my-4'>
 						<ScrollShadow className='flex flex-col gap-2 overflow-y-scroll no-scrollbar py-4 h-screen'>
 							{messagesLocal &&
-								messagesLocal.map((message) => (
-									<div
-										key={message.id}
-										className='backdrop-blur-2xl bg-foreground/5 rounded-xl'
-									>
-										<div className='cursor-pointer p-6'>
-											<p className='w-full text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance'>
-												{message.content}
-											</p>
-										</div>
-									</div>
-								))}
+								messagesLocal.map((message) => {
+									if (checkTextValidURL(message.content)) {
+										return (
+											<div
+												key={message.id}
+												className='backdrop-blur-2xl bg-foreground/5 rounded-xl'
+											>
+												<div className='cursor-pointer p-6'>
+													<p className='w-full text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance'>
+														<Image
+															src={`${message.content}`}
+															height={300}
+															width={300}
+															alt='Wound image'
+															className='mx-auto'
+														/>
+													</p>
+												</div>
+											</div>
+										);
+									} else {
+										return (
+											<div
+												key={message.id}
+												className='backdrop-blur-2xl bg-foreground/5 rounded-xl'
+											>
+												<div className='cursor-pointer p-6'>
+													<p className='w-full text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance'>
+														{message.content}
+													</p>
+												</div>
+											</div>
+										);
+									}
+								})}
 						</ScrollShadow>
 					</div>
 					{/* Message */}
