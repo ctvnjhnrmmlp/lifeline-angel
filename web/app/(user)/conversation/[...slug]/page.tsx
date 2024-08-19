@@ -133,9 +133,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 					uuidv4(),
 					formik.values.file
 				);
-
 				onOpenChangeFile();
-
 				refetchMessages();
 			} catch (error) {}
 
@@ -149,14 +147,12 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 						const supportedFormats = ['png', 'jpg', 'jpeg'];
 						return supportedFormats.includes(value.name.split('.').pop());
 					}
-
 					return true;
 				})
 				.test('file-size', 'File size must not be more than 10MB', (value) => {
 					if (value) {
 						return value.size < 5145728;
 					}
-
 					return true;
 				}),
 		}),
@@ -322,113 +318,6 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 										</ModalHeader>
 										<ModalBody>
 											<div className='flex justify-center'>
-												{/* <Formik
-													enableReinitialize={true}
-													initialValues={{
-														file: null,
-													}}
-													validationSchema={Yup.object({
-														file: Yup.mixed()
-															.test(
-																'is-file-too-big',
-																'File exceeds 50MB',
-																() => {
-																	let valid = true;
-																	const files = fileRef?.current?.files;
-																	if (files) {
-																		const fileArr = Array.from(files);
-																		fileArr.forEach((file) => {
-																			const size = file.size / 1024 / 1024;
-																			if (size > 50) {
-																				valid = false;
-																			}
-																		});
-																	}
-																	return valid;
-																}
-															)
-															.test(
-																'is-file-of-correct-type',
-																'File is not of supported type',
-																() => {
-																	let valid = true;
-																	const files = fileRef?.current?.files;
-																	if (files) {
-																		const fileArr = Array.from(files);
-																		fileArr.forEach((file) => {
-																			const type = file.type.split('/')[1];
-																			const validTypes = ['png', 'jpg', 'jpeg'];
-																			if (!validTypes.includes(type)) {
-																				valid = false;
-																			}
-																		});
-																	}
-																	return valid;
-																}
-															)
-															.required('Required'),
-													})}
-													onSubmit={async (values, { setSubmitting }) => {
-														setUploading(true);
-
-														try {
-															const response = await addImageMessage(
-																session.user.email,
-																params.slug[0],
-																uuidv4(),
-																values.file
-															);
-														} catch (error) {}
-
-														setUploading(false);
-													}}
-												>
-													{({ values, errors, touched, getFieldProps }) => (
-														<Form
-															encType='multipart/form-data'
-															className='space-y-4'
-														>
-															<div className='space-y-2'>
-																<Input
-																	required
-																	ref={fileRef}
-																	id='image-input'
-																	type='file'
-																	accept='image/*'
-																	{...getFieldProps('file')}
-																/>
-																<label
-																	htmlFor='video-input'
-																	className='flex flex-col items-center justify-center w-full h-72 rounded-2xl cursor-pointer bg-background outline outline-[#3F3F46] outline-[0.1px]'
-																>
-																	<div className='flex flex-col items-center justify-center pt-5 pb-6'>
-																		<FaCloudArrowUp className='text-9xl text-foreground' />
-																		<p className='text-xl font-bold text-foreground'>
-																			Click above to upload
-																		</p>
-																		<p className='text-sm text-foreground'>
-																			PNG, JPG, JPEG
-																		</p>
-																	</div>
-																</label>
-																{touched.file && errors.file && (
-																	<Chip color='danger' radius='sm'>
-																		{errors.file}
-																	</Chip>
-																)}
-															</div>
-															<button
-																type='submit'
-																disabled={uploading}
-																className='block bg-foreground text-background text-3xl px-3 py-3 w-full rounded-xl font-extrabold leading-none tracking-tight uppercase'
-															>
-																{uploading && <span>Posting...</span>}
-																{!uploading && <span>Post</span>}
-															</button>
-														</Form>
-													)}
-												</Formik> */}
-
 												<form
 													encType='multipart/form-data'
 													className='space-y-4'
