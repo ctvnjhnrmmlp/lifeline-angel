@@ -1,8 +1,9 @@
 import { nextui } from '@nextui-org/react';
 import type { Config } from 'tailwindcss';
+import { withUt } from 'uploadthing/tw';
 import COLORS from './configurations/colors';
 
-const config: Config = {
+const config: Config = withUt({
 	content: [
 		'./(app|components)/**/*.{js,ts,jsx,tsx,mdx}',
 		'./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
@@ -24,6 +25,6 @@ const config: Config = {
 			},
 		}),
 	],
-};
+});
 
 export default config;

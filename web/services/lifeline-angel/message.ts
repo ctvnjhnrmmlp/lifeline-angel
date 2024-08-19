@@ -91,50 +91,26 @@ export const deleteTextMessage = async (email: string, id: string) => {
 
 export const addImageMessage = async (
 	email: string,
-	id: string,
-	message: string
+	cid: string,
+	mid: string,
+	file: string
 ) => {
 	try {
-		const response = await apiClient.post(
-			'/api/message/image/add',
-			{
-				id,
-				message,
+		const formData = new FormData();
+
+		formData.append('cid', cid);
+		formData.append('mid', mid);
+		formData.append('file', file);
+
+		const response = await apiClient.post('/api/message/image/add', formData, {
+			headers: {
+				'Content-Type': 'multipart/form-data',
+				'X-User-Email': email,
 			},
-			{
-				headers: {
-					'Content-Type': 'application/json',
-					'X-User-Email': email,
-				},
-			}
-		);
+		});
 
 		if (response.status === 200) {
-			return response.data.answer;
-		}
-
-		throw new Error();
-	} catch (error) {
-		console.error(error);
-		return false;
-	}
-};
-
-export const deleteImageMessage = async (email: string, id: string) => {
-	try {
-		const response = await apiClient.post(
-			'/api/message/image/delete',
-			{ id },
-			{
-				headers: {
-					'Content-Type': 'application/json',
-					'X-User-Email': email,
-				},
-			}
-		);
-
-		if (response.status === 200) {
-			return true;
+			return response.data;
 		}
 
 		throw new Error();

@@ -1,51 +1,130 @@
 import Prisma from '@/database/database';
+import client from '@/services/lifeline-angel/client';
+import { PutObjectCommand, S3Client } from '@aws-sdk/client-s3';
 
-export async function POST(req: Request) {
+const apiClient = client(
+	process.env.NEXT_PUBLIC_LIFELINE_ANGEL_API_MODEL_URL as string
+);
+
+const s3Client = new S3Client({
+	region: process.env.AWS_REGION as string,
+	credentials: {
+		accessKeyId: process.env.AWS_ACCESS_KEY_ID as string,
+		secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY as string,
+	},
+});
+
+const uploadFile = async (file: Buffer, fileName: string) => {
 	try {
-		const request = await req.json();
-		const email = req.headers.get('x-user-email');
-		const message = request.message;
-		const id = request.id;
+		await s3Client.send(
+			new PutObjectCommand({
+				Bucket: process.env.AWS_BUCKET_NAME,
+				Key: `${fileName}`,
+				Body: file,
+				ContentType: 'image/*',
+			})
+		);
 
-		const user = await Prisma.user.findUnique({
-			where: {
-				email: email,
+		return fileName;
+	} catch (error) {
+		console.error('Error uploading file:', error);
+		throw error;
+	}
+};
+
+const classifyImage = async (file: File) => {
+	try {
+		const imageFormData = new FormData();
+
+		imageFormData.append('file', file);
+
+		const response = await apiClient.post('/api/classify', imageFormData, {
+			headers: {
+				'Content-Type': 'multipart/form-data',
 			},
 		});
 
-		if (!user || !email || !id || !message) {
+		if (response.status === 200) {
+			return response.data;
+		}
+
+		throw new Error();
+	} catch (error) {
+		console.error(error);
+		return false;
+	}
+};
+
+const classifyText = async (text: string) => {
+	try {
+		const response = await apiClient.post(
+			'/api/talk',
+			JSON.stringify({
+				message: text,
+			}),
+			{
+				headers: {
+					'Content-Type': 'application/json',
+				},
+			}
+		);
+
+		if (response.status === 200) {
+			return response.data;
+		}
+
+		throw new Error();
+	} catch (error) {
+		console.error(error);
+	}
+};
+
+export async function POST(req: Request) {
+	try {
+		const formData = await req.formData();
+		const email = req.headers.get('x-user-email');
+		const cid = formData.get('cid') as string;
+		const mid = formData.get('mid') as string;
+		const file = formData.get('file') as File;
+
+		const user = await Prisma.user.findUnique({
+			where: {
+				email: email as string,
+			},
+		});
+
+		if (!user || !email || !cid || !mid || !file) {
 			return new Response('Bad Request', {
 				status: 400,
 			});
 		}
 
-		const res = await fetch('http://localhost:8000/api/talk', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify({ message: message }),
-		});
+		await uploadFile(Buffer.from(await file.arrayBuffer()), file.name);
 
-		const data = await res.json();
+		const imagePrediction = await classifyImage(file);
+
+		const textPrediction = await classifyText(imagePrediction.prediction);
 
 		const conversation = await Prisma.conversation.update({
 			where: {
-				id: id,
+				id: cid,
 			},
 			data: {
 				messages: {
 					create: [
 						{
-							content: message,
+							id: mid,
+							content: imagePrediction.prediction,
 						},
 						{
-							content: data.response,
+							content: textPrediction.response,
 						},
 					],
 				},
 			},
 		});
+
+		///////
 
 		// const conversation = await Prisma.conversation.create({
 		// 	data: {
@@ -67,7 +146,12 @@ export async function POST(req: Request) {
 		// 	},
 		// });
 
-		return Response.json({ message: 'Success', answer: data.response });
+		///////
+
+		return Response.json({
+			message: 'Success',
+			answer: textPrediction.response,
+		});
 	} catch (error) {
 		console.log(error);
 		return new Response('Internal Server Error', {

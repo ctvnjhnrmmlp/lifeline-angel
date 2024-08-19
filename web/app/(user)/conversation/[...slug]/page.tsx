@@ -6,6 +6,7 @@ import {
 	updateConversation,
 } from '@/services/lifeline-angel/conversation';
 import {
+	addImageMessage,
 	addTextMessage,
 	deleteTextMessage,
 	getMessages,
@@ -31,7 +32,7 @@ import {
 	useSingleConversationStore,
 } from '@/stores/lifeline-angel/conversation';
 import { ScrollShadow } from '@nextui-org/react';
-import { Form, Formik } from 'formik';
+import { useFormik } from 'formik';
 import { redirect, useRouter } from 'next/navigation';
 import React from 'react';
 import { FaLocationArrow, FaMicrophone } from 'react-icons/fa';
@@ -65,6 +66,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 	const [message, setMessage] = React.useState('');
 	const fileRef = React.useRef<HTMLInputElement>(null);
 	const [uploading, setUploading] = React.useState(false);
+	const [imageData, setImageData] = React.useState('');
 
 	const {
 		conversation: conversationLocal,
@@ -113,6 +115,53 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 		addMessageMutation.mutate({ mid, message });
 		refetchMessages();
 		setMessage('');
+	};
+
+	const formik = useFormik({
+		initialValues: {
+			file: '',
+		},
+		onSubmit: async () => {
+			setUploading(true);
+
+			try {
+				const response = await addImageMessage(
+					session.user.email,
+					params.slug[0],
+					uuidv4(),
+					formik.values.file
+				);
+
+				onOpenFile();
+
+				refetchMessages();
+			} catch (error) {}
+
+			setUploading(false);
+		},
+		validationSchema: Yup.object().shape({
+			file: Yup.mixed()
+				.required('Required')
+				.test('file-format', 'Only image files are allowed', (value) => {
+					if (value) {
+						const supportedFormats = ['png', 'jpg', 'jpeg'];
+						return supportedFormats.includes(value.name.split('.').pop());
+					}
+
+					return true;
+				})
+				.test('file-size', 'File size must not be more than 10MB', (value) => {
+					if (value) {
+						return value.size < 5145728;
+					}
+
+					return true;
+				}),
+		}),
+	});
+
+	const handleChange = (event) => {
+		formik.setFieldValue('file', event.target.files[0]);
 	};
 
 	const {
@@ -231,13 +280,14 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 						<Modal
 							size='lg'
 							backdrop='blur'
+							closeButton={<></>}
 							isOpen={isOpenFile}
-							onOpenChange={onOpenChangeFile}
 							classNames={{
 								base: 'bg-background',
 								header: 'flex justify-center items-center',
 								body: 'flex gap-4',
 							}}
+							onOpenChange={() => onOpenChangeFile()}
 						>
 							<ModalContent>
 								{(onClose) => (
@@ -247,9 +297,10 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 										</ModalHeader>
 										<ModalBody>
 											<div className='flex justify-center'>
-												<Formik
+												{/* <Formik
+													enableReinitialize={true}
 													initialValues={{
-														file: '',
+														file: null,
 													}}
 													validationSchema={Yup.object({
 														file: Yup.mixed()
@@ -296,13 +347,22 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 														setUploading(true);
 
 														try {
+															const response = await addImageMessage(
+																session.user.email,
+																params.slug[0],
+																uuidv4(),
+																values.file
+															);
 														} catch (error) {}
 
 														setUploading(false);
 													}}
 												>
 													{({ values, errors, touched, getFieldProps }) => (
-														<Form className='space-y-4'>
+														<Form
+															encType='multipart/form-data'
+															className='space-y-4'
+														>
 															<div className='space-y-2'>
 																<Input
 																	required
@@ -335,19 +395,59 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 															<button
 																type='submit'
 																disabled={uploading}
-																className='block bg-foreground text-background text-3xl px-3 py-3 w-full rounded-xl font-bold leading-none tracking-tight'
+																className='block bg-foreground text-background text-3xl px-3 py-3 w-full rounded-xl font-extrabold leading-none tracking-tight uppercase'
 															>
-																<div>
-																	<FaLocationArrow className='absolute left-26' />
-																	<span className='font-extrabold leading-none tracking-tight uppercase mx-auto pl-1'>
-																		{uploading && <span>Posting...</span>}
-																		{!uploading && <span>Post</span>}
-																	</span>
-																</div>
+																{uploading && <span>Posting...</span>}
+																{!uploading && <span>Post</span>}
 															</button>
 														</Form>
 													)}
-												</Formik>
+												</Formik> */}
+
+												<form
+													encType='multipart/form-data'
+													className='space-y-4'
+													onSubmit={formik.handleSubmit}
+												>
+													<Input
+														required
+														ref={fileRef}
+														id='image-input'
+														name='file'
+														type='file'
+														accept='image/*'
+														onChange={handleChange}
+													/>
+													<label
+														htmlFor='image-input'
+														className='flex flex-col items-center justify-center w-full h-72 rounded-2xl cursor-pointer bg-background outline outline-[#3F3F46] outline-[0.1px]'
+													>
+														<div className='flex flex-col items-center justify-center pt-5 pb-6'>
+															<FaCloudArrowUp className='text-9xl text-foreground' />
+															<p className='text-xl font-bold text-foreground'>
+																Click above to upload
+															</p>
+															<p className='text-sm text-foreground'>
+																PNG, JPG, JPEG
+															</p>
+														</div>
+													</label>
+													<div>
+														{formik.touched.file && formik.errors.file && (
+															<Chip color='danger' radius='sm'>
+																{formik.errors.file}
+															</Chip>
+														)}
+													</div>
+													<button
+														type='submit'
+														disabled={uploading}
+														className='block bg-foreground text-background text-3xl px-3 py-3 w-full rounded-xl font-extrabold leading-none tracking-tight uppercase'
+													>
+														{uploading && <span>Posting...</span>}
+														{!uploading && <span>Post</span>}
+													</button>
+												</form>
 											</div>
 										</ModalBody>
 										<ModalFooter></ModalFooter>
@@ -359,12 +459,12 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 							size='lg'
 							backdrop='blur'
 							isOpen={isOpenCamera}
-							onOpenChange={onOpenChangeCamera}
 							classNames={{
 								base: 'bg-background',
 								header: 'flex justify-center items-center',
 								body: 'flex gap-4',
 							}}
+							onOpenChange={() => onOpenChangeCamera()}
 						>
 							<ModalContent>
 								{(onClose) => (
@@ -385,12 +485,12 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 							size='lg'
 							backdrop='blur'
 							isOpen={isOpenOptions}
-							onOpenChange={onOpenChangeOptions}
 							classNames={{
 								base: 'bg-background',
 								header: 'flex justify-center items-center',
 								body: 'space-y-0.5',
 							}}
+							onOpenChange={() => onOpenChangeOptions()}
 						>
 							<ModalContent>
 								{(onClose) => (

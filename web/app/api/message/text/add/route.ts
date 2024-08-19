@@ -1,4 +1,33 @@
 import Prisma from '@/database/database';
+import client from '@/services/lifeline-angel/client';
+
+const apiClient = client(
+	process.env.NEXT_PUBLIC_LIFELINE_ANGEL_API_MODEL_URL as string
+);
+
+const classifyText = async (text: string) => {
+	try {
+		const response = await apiClient.post(
+			'/api/talk',
+			JSON.stringify({
+				message: text,
+			}),
+			{
+				headers: {
+					'Content-Type': 'application/json',
+				},
+			}
+		);
+
+		if (response.status === 200) {
+			return response.data;
+		}
+
+		throw new Error();
+	} catch (error) {
+		console.error(error);
+	}
+};
 
 export async function POST(req: Request) {
 	try {
@@ -19,15 +48,7 @@ export async function POST(req: Request) {
 			});
 		}
 
-		const res = await fetch('http://localhost:8000/api/talk', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify({ message: message }),
-		});
-
-		const data = await res.json();
+		const textPrediction = await classifyText(message);
 
 		const conversation = await Prisma.conversation.update({
 			where: {
@@ -41,7 +62,7 @@ export async function POST(req: Request) {
 							content: message,
 						},
 						{
-							content: data.response,
+							content: textPrediction.response,
 						},
 					],
 				},
@@ -72,7 +93,10 @@ export async function POST(req: Request) {
 
 		/////////
 
-		return Response.json({ message: 'Success', answer: data.response });
+		return Response.json({
+			message: 'Success',
+			answer: textPrediction.response,
+		});
 	} catch (error) {
 		console.log(error);
 		return new Response('Internal Server Error', {
