@@ -134,7 +134,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 					formik.values.file
 				);
 
-				onOpenFile();
+				onOpenChangeFile();
 
 				refetchMessages();
 			} catch (error) {}
