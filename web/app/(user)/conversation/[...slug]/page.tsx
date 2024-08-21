@@ -277,6 +277,11 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 								onChange={(event) => {
 									setMessage(event.target.value);
 								}}
+								onKeyPress={(event) => {
+									if (event.key === 'Enter') {
+										handleAddMessage(message);
+									}
+								}}
 							/>
 						</div>
 						<div className='flex items-center justify-center space-x-2'>

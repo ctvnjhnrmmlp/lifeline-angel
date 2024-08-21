@@ -70,11 +70,7 @@ const Sidebar = () => {
 						<div>
 							<Dropdown className='backdrop-blur-2xl bg-foreground/1'>
 								<DropdownTrigger>
-									<Avatar
-										size='lg'
-										radius='md'
-										src='https://i.pravatar.cc/150?u=a04258a2462d826712d'
-									/>
+									<Avatar size='lg' radius='md' src={session?.user.image} />
 								</DropdownTrigger>
 								<DropdownMenu aria-label='Static Actions'>
 									{/* @ts-ignore */}
