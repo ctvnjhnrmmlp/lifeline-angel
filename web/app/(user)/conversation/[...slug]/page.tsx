@@ -69,6 +69,11 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 		onOpen: onOpenUpdate,
 		onOpenChange: onOpenChangeUpdate,
 	} = useDisclosure();
+	const {
+		isOpen: isOpenSearch,
+		onOpen: onOpenSearch,
+		onOpenChange: onOpenChangeSearch,
+	} = useDisclosure();
 	const router = useRouter();
 	const [message, setMessage] = React.useState('');
 	const fileRef = React.useRef<HTMLInputElement>(null);
@@ -425,7 +430,10 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 											</p>
 										</ModalHeader>
 										<ModalBody>
-											<button className='backdrop-blur-2xl bg-foreground/10 rounded-xl cursor-pointer p-4'>
+											<button
+												className='backdrop-blur-2xl bg-foreground/10 rounded-xl cursor-pointer p-4'
+												onChange={() => onOpenChangeSearch()}
+											>
 												<p className='font-bold w-full text-2xl text-foreground tracking-tight leading-none text-ellipsis text-balance'>
 													Search
 												</p>
@@ -485,6 +493,31 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 								<>
 									<ModalHeader>
 										<p className='text-2xl font-bold text-center'>Update</p>
+									</ModalHeader>
+									<ModalBody>
+										<div className='flex justify-center'></div>
+									</ModalBody>
+									<ModalFooter></ModalFooter>
+								</>
+							)}
+						</ModalContent>
+					</Modal>
+					<Modal
+						size='lg'
+						backdrop='blur'
+						isOpen={isOpenSearch}
+						classNames={{
+							base: 'bg-background',
+							header: 'flex justify-center items-center',
+							body: 'flex gap-4',
+						}}
+						onOpenChange={() => onOpenChangeSearch()}
+					>
+						<ModalContent>
+							{(onClose) => (
+								<>
+									<ModalHeader>
+										<p className='text-2xl font-bold text-center'>Search</p>
 									</ModalHeader>
 									<ModalBody>
 										<div className='flex justify-center'></div>
