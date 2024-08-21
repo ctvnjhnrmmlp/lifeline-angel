@@ -64,6 +64,11 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 		onOpen: onOpenOptions,
 		onOpenChange: onOpenChangeOptions,
 	} = useDisclosure();
+	const {
+		isOpen: isOpenUpdate,
+		onOpen: onOpenUpdate,
+		onOpenChange: onOpenChangeUpdate,
+	} = useDisclosure();
 	const router = useRouter();
 	const [message, setMessage] = React.useState('');
 	const fileRef = React.useRef<HTMLInputElement>(null);
@@ -440,7 +445,10 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 													Support
 												</p>
 											</button>
-											<button className='bg-foreground rounded-xl cursor-pointer p-4'>
+											<button
+												className='bg-foreground rounded-xl cursor-pointer p-4'
+												onClick={() => onOpenChangeUpdate()}
+											>
 												<p className='font-bold w-full text-2xl text-background tracking-tight leading-none text-ellipsis text-balance'>
 													Update
 												</p>
@@ -460,6 +468,32 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 							</ModalContent>
 						</Modal>
 					</div>
+					{/* Other Modals */}
+					<Modal
+						size='lg'
+						backdrop='blur'
+						isOpen={isOpenUpdate}
+						classNames={{
+							base: 'bg-background',
+							header: 'flex justify-center items-center',
+							body: 'flex gap-4',
+						}}
+						onOpenChange={() => onOpenChangeUpdate()}
+					>
+						<ModalContent>
+							{(onClose) => (
+								<>
+									<ModalHeader>
+										<p className='text-2xl font-bold text-center'>Update</p>
+									</ModalHeader>
+									<ModalBody>
+										<div className='flex justify-center'></div>
+									</ModalBody>
+									<ModalFooter></ModalFooter>
+								</>
+							)}
+						</ModalContent>
+					</Modal>
 				</div>
 			</section>
 		</main>
