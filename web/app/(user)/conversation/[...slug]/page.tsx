@@ -314,7 +314,10 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 							</button>
 							<button
 								className='block rounded-full bg-foreground text-background text-2xl p-4'
-								onClick={() => handleAddMessage(message)}
+								onClick={() => {
+									handleAddMessage(message);
+									handleUpdateConversation(message);
+								}}
 							>
 								<FaLocationArrow />
 							</button>
