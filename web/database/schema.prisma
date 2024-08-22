@@ -79,6 +79,7 @@ model Conversation {
 model Message {
   id             String       @id @default(cuid()) @map("_id")
   content        String
+  from           String
   conversation   Conversation @relation("MessageConversation", fields: [conversationId], references: [id])
   conversationId String
   createdAt      DateTime     @default(now())

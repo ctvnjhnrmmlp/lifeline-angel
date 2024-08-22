@@ -213,7 +213,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 		<main className='flex flex-col justify-center pl-[26rem] py-4 pr-4 h-screen w-screen'>
 			<section className='overflow-y-scroll no-scrollbar backdrop-blur-2xl bg-foreground/5 rounded-2xl h-screen'>
 				<div className='flex flex-col p-6 outline h-full'>
-					{/* Mini Navbar */}
+					{/* Conversation Navbar */}
 					<div className='w-full flex flex-col flex-wrap justify-between space-between gap-12'>
 						<div className='flex items-center justify-between'>
 							<div>
@@ -312,6 +312,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 							</button>
 						</div>
 					</div>
+					{/* Conversation Modals */}
 					<div>
 						<Modal
 							size='lg'
@@ -476,57 +477,59 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 							</ModalContent>
 						</Modal>
 					</div>
-					{/* Other Modals */}
-					<Modal
-						size='lg'
-						backdrop='blur'
-						isOpen={isOpenUpdate}
-						classNames={{
-							base: 'bg-background',
-							header: 'flex justify-center items-center',
-							body: 'flex gap-4',
-						}}
-						onOpenChange={() => onOpenChangeUpdate()}
-					>
-						<ModalContent>
-							{(onClose) => (
-								<>
-									<ModalHeader>
-										<p className='text-2xl font-bold text-center'>Update</p>
-									</ModalHeader>
-									<ModalBody>
-										<div className='flex justify-center'></div>
-									</ModalBody>
-									<ModalFooter></ModalFooter>
-								</>
-							)}
-						</ModalContent>
-					</Modal>
-					<Modal
-						size='lg'
-						backdrop='blur'
-						isOpen={isOpenSearch}
-						classNames={{
-							base: 'bg-background',
-							header: 'flex justify-center items-center',
-							body: 'flex gap-4',
-						}}
-						onOpenChange={() => onOpenChangeSearch()}
-					>
-						<ModalContent>
-							{(onClose) => (
-								<>
-									<ModalHeader>
-										<p className='text-2xl font-bold text-center'>Search</p>
-									</ModalHeader>
-									<ModalBody>
-										<div className='flex justify-center'></div>
-									</ModalBody>
-									<ModalFooter></ModalFooter>
-								</>
-							)}
-						</ModalContent>
-					</Modal>
+					{/* Message Modals */}
+					<div>
+						<Modal
+							size='lg'
+							backdrop='blur'
+							isOpen={isOpenUpdate}
+							classNames={{
+								base: 'bg-background',
+								header: 'flex justify-center items-center',
+								body: 'flex gap-4',
+							}}
+							onOpenChange={() => onOpenChangeUpdate()}
+						>
+							<ModalContent>
+								{(onClose) => (
+									<>
+										<ModalHeader>
+											<p className='text-2xl font-bold text-center'>Update</p>
+										</ModalHeader>
+										<ModalBody>
+											<div className='flex justify-center'></div>
+										</ModalBody>
+										<ModalFooter></ModalFooter>
+									</>
+								)}
+							</ModalContent>
+						</Modal>
+						<Modal
+							size='lg'
+							backdrop='blur'
+							isOpen={isOpenSearch}
+							classNames={{
+								base: 'bg-background',
+								header: 'flex justify-center items-center',
+								body: 'flex gap-4',
+							}}
+							onOpenChange={() => onOpenChangeSearch()}
+						>
+							<ModalContent>
+								{(onClose) => (
+									<>
+										<ModalHeader>
+											<p className='text-2xl font-bold text-center'>Search</p>
+										</ModalHeader>
+										<ModalBody>
+											<div className='flex justify-center'></div>
+										</ModalBody>
+										<ModalFooter></ModalFooter>
+									</>
+								)}
+							</ModalContent>
+						</Modal>
+					</div>
 				</div>
 			</section>
 		</main>
