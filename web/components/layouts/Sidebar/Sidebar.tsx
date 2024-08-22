@@ -134,7 +134,7 @@ const Sidebar = () => {
 									<Link href={`/conversation/${conv.id}`}>
 										<div className='rounded-xl cursor-pointer p-4'>
 											<p className='font-bold w-full text-xl text-foreground tracking-tight leading-none text-ellipsi text-balance'>
-												{conv.id}
+												{conv.title ? conv.title : conv.id}
 											</p>
 											<p className='font-light w-full text-sm text-zinc-700 tracking-tight leading-none text-ellipsis text-balance'>
 												{conv.updatedAt.toString()}

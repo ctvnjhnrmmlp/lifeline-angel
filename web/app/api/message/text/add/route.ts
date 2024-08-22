@@ -55,7 +55,7 @@ export async function POST(req: Request) {
 				id: cid,
 			},
 			data: {
-				title: textPrediction.response,
+				title: message,
 				messages: {
 					create: [
 						{
