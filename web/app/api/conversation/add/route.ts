@@ -26,19 +26,6 @@ export async function POST(req: Request) {
 			},
 		});
 
-		// await Prisma.user.update({
-		// 	where: {
-		// 		id: user.id,
-		// 	},
-		// 	data: {
-		// 		conversation: {
-		// 			connect: {
-		// 				id: conversation.id,
-		// 			},
-		// 		},
-		// 	},
-		// });
-
 		return Response.json({ message: 'Success', conversation });
 	} catch (error) {
 		console.log(error);

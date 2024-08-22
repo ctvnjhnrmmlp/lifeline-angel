@@ -105,51 +105,31 @@ export async function POST(req: Request) {
 
 		const textPrediction = await classifyText(imagePrediction.prediction);
 
-		const conversation = await Prisma.conversation.update({
+		await Prisma.conversation.update({
 			where: {
 				id: cid,
 			},
 			data: {
+				title: imagePrediction.prediction,
 				messages: {
 					create: [
 						{
 							content: `https://lifeline-angel.s3.ap-southeast-2.amazonaws.com/${file.name}`,
+							from: 'user',
 						},
 						{
 							id: mid,
 							content: imagePrediction.prediction,
+							from: 'model',
 						},
 						{
 							content: textPrediction.response,
+							from: 'model',
 						},
 					],
 				},
 			},
 		});
-
-		///////
-
-		// const conversation = await Prisma.conversation.create({
-		// 	data: {
-		// 		title: '',
-		// 		userId: user.id,
-		// 	},
-		// });
-
-		// await Prisma.user.update({
-		// 	where: {
-		// 		id: user.id,
-		// 	},
-		// 	data: {
-		// 		conversation: {
-		// 			connect: {
-		// 				id: conversation.id,
-		// 			},
-		// 		},
-		// 	},
-		// });
-
-		///////
 
 		return Response.json({
 			message: 'Success',

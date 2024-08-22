@@ -18,13 +18,13 @@ export async function POST(req: Request) {
 			});
 		}
 
-		const messages = await Prisma.message.deleteMany({
+		await Prisma.message.deleteMany({
 			where: {
 				conversationId: id,
 			},
 		});
 
-		const conversation = await Prisma.conversation.delete({
+		await Prisma.conversation.delete({
 			where: {
 				id: id,
 			},
