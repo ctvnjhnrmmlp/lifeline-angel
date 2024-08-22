@@ -64,6 +64,21 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 		onOpenChange: onOpenChangeSearch,
 	} = useDisclosure();
 	const {
+		isOpen: isOpenMedia,
+		onOpen: onOpenMedia,
+		onOpenChange: onOpenChangeMedia,
+	} = useDisclosure();
+	const {
+		isOpen: isOpenPrivacy,
+		onOpen: onOpenPrivacy,
+		onOpenChange: onOpenChangePrivacy,
+	} = useDisclosure();
+	const {
+		isOpen: isOpenSupport,
+		onOpen: onOpenSupport,
+		onOpenChange: onOpenChangeSupport,
+	} = useDisclosure();
+	const {
 		isOpen: isOpenFile,
 		onOpen: onOpenFile,
 		onOpenChange: onOpenChangeFile,
@@ -453,17 +468,26 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 													Search
 												</p>
 											</button>
-											<button className='backdrop-blur-2xl bg-foreground/10 rounded-xl cursor-pointer p-4'>
+											<button
+												className='backdrop-blur-2xl bg-foreground/10 rounded-xl cursor-pointer p-4'
+												onClick={() => onOpenChangeMedia()}
+											>
 												<p className='font-bold w-full text-2xl text-foreground tracking-tight leading-none text-ellipsis text-balance'>
 													Media
 												</p>
 											</button>
-											<button className='backdrop-blur-2xl bg-foreground/10 rounded-xl cursor-pointer p-4'>
+											<button
+												className='backdrop-blur-2xl bg-foreground/10 rounded-xl cursor-pointer p-4'
+												onClick={() => onOpenChangePrivacy()}
+											>
 												<p className='font-bold w-full text-2xl text-foreground tracking-tight leading-none text-ellipsis text-balance'>
 													Privacy
 												</p>
 											</button>
-											<button className='backdrop-blur-2xl bg-foreground/10 rounded-xl cursor-pointer p-4'>
+											<button
+												className='backdrop-blur-2xl bg-foreground/10 rounded-xl cursor-pointer p-4'
+												onClick={() => onOpenChangeSupport()}
+											>
 												<p className='font-bold w-full text-2xl text-foreground tracking-tight leading-none text-ellipsis text-balance'>
 													Support
 												</p>
@@ -534,6 +558,81 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 									<>
 										<ModalHeader>
 											<p className='text-2xl font-bold text-center'>Update</p>
+										</ModalHeader>
+										<ModalBody>
+											<div className='flex justify-center'></div>
+										</ModalBody>
+										<ModalFooter></ModalFooter>
+									</>
+								)}
+							</ModalContent>
+						</Modal>
+						<Modal
+							size='lg'
+							backdrop='blur'
+							isOpen={isOpenMedia}
+							classNames={{
+								base: 'bg-background',
+								header: 'flex justify-center items-center',
+								body: 'flex gap-4',
+							}}
+							onOpenChange={() => onOpenChangeMedia()}
+						>
+							<ModalContent>
+								{(onClose) => (
+									<>
+										<ModalHeader>
+											<p className='text-2xl font-bold text-center'>Media</p>
+										</ModalHeader>
+										<ModalBody>
+											<div className='flex justify-center'></div>
+										</ModalBody>
+										<ModalFooter></ModalFooter>
+									</>
+								)}
+							</ModalContent>
+						</Modal>
+						<Modal
+							size='lg'
+							backdrop='blur'
+							isOpen={isOpenPrivacy}
+							classNames={{
+								base: 'bg-background',
+								header: 'flex justify-center items-center',
+								body: 'flex gap-4',
+							}}
+							onOpenChange={() => onOpenChangePrivacy()}
+						>
+							<ModalContent>
+								{(onClose) => (
+									<>
+										<ModalHeader>
+											<p className='text-2xl font-bold text-center'>Privacy</p>
+										</ModalHeader>
+										<ModalBody>
+											<div className='flex justify-center'></div>
+										</ModalBody>
+										<ModalFooter></ModalFooter>
+									</>
+								)}
+							</ModalContent>
+						</Modal>
+						<Modal
+							size='lg'
+							backdrop='blur'
+							isOpen={isOpenSupport}
+							classNames={{
+								base: 'bg-background',
+								header: 'flex justify-center items-center',
+								body: 'flex gap-4',
+							}}
+							onOpenChange={() => onOpenChangeSupport()}
+						>
+							<ModalContent>
+								{(onClose) => (
+									<>
+										<ModalHeader>
+											<p className='text-2xl font-bold text-center'>Support</p>
 										</ModalHeader>
 										<ModalBody>
 											<div className='flex justify-center'></div>
