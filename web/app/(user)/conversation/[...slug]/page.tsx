@@ -184,7 +184,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 		error: conversationError,
 		status: conversationStatus,
 		fetchStatus: conversationFetchStatus,
-		refetch: refetchConversation,
+		refetch: refetchConversationServer,
 	} = useQuery({
 		queryKey: ['getConversation'],
 		queryFn: async () =>
