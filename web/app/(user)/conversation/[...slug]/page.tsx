@@ -286,10 +286,18 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 										return (
 											<div
 												key={message.id}
-												className={`backdrop-blur-2xl bg-foreground/5 rounded-2xl`}
+												className='backdrop-blur-2xl bg-foreground/5 rounded-2xl'
+												style={{
+													background: message.from === 'model' ? '#FFFFFF' : '',
+												}}
 											>
 												<div className='cursor-pointer p-6'>
-													<p className='w-full text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance'>
+													<p
+														className='w-full text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance'
+														style={{
+															color: message.from === 'model' ? '#000000' : '',
+														}}
+													>
 														{message.content}
 													</p>
 												</div>
