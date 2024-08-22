@@ -227,7 +227,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 								<p className='font-bold text-4xl'>
 									{conversationLocal?.title
 										? conversationLocal.title
-										: params.slug[0]}
+										: conversationLocal?.id}
 								</p>
 							</div>
 							<div className='flex space-x-2'>
@@ -248,7 +248,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 					</div>
 					{/* Messages */}
 					<div className='overflow-y-scroll no-scrollbar h-screen my-4'>
-						<ScrollShadow className='flex flex-col gap-2 overflow-y-scroll no-scrollbar py-4 h-screen'>
+						<ScrollShadow className='flex flex-col space-y-3 overflow-y-scroll no-scrollbar py-4 h-screen'>
 							{messagesLocal &&
 								messagesLocal.map((message) => {
 									if (checkTextValidURL(message.content)) {
@@ -274,7 +274,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 										return (
 											<div
 												key={message.id}
-												className='backdrop-blur-2xl bg-foreground/5 rounded-xl'
+												className={`backdrop-blur-2xl bg-foreground/5 rounded-2xl`}
 											>
 												<div className='cursor-pointer p-6'>
 													<p className='w-full text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance'>
@@ -439,7 +439,9 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 									<>
 										<ModalHeader>
 											<p className='text-3xl font-bold text-center'>
-												{params.slug[0]}
+												{conversationLocal?.title
+													? conversationLocal.title
+													: params.slug[0]}
 											</p>
 										</ModalHeader>
 										<ModalBody>
