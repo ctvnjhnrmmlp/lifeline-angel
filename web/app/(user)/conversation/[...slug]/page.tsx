@@ -8,7 +8,6 @@ import {
 import {
 	addImageMessage,
 	addTextMessage,
-	deleteTextMessage,
 	getMessages,
 } from '@/services/lifeline-angel/message';
 import { useMultipleMessageStore } from '@/stores/lifeline-angel/message';
@@ -112,10 +111,6 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 		onSuccess: () => refetchMessages(),
 	});
 
-	const deleteMessageMutation = useMutation({
-		mutationFn: async () => await deleteTextMessage(session.user.email, ''),
-	});
-
 	const handleUpdateConversation = (message: string) => {
 		updateConversationLocal(params.slug[0], message);
 		updateConversationMutation.mutate(message);
@@ -150,6 +145,9 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 					uuidv4(),
 					formik.values.file
 				);
+				const message = response.prediction;
+
+				handleUpdateConversation(message);
 				onOpenChangeFile();
 				refetchMessages();
 			} catch (error) {}
@@ -258,15 +256,13 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 												className='backdrop-blur-2xl bg-foreground/5 rounded-xl'
 											>
 												<div className='cursor-pointer p-6'>
-													<p className='w-full text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance'>
-														<Image
-															src={`${message.content}`}
-															height={300}
-															width={300}
-															alt='Wound image'
-															className='mx-auto'
-														/>
-													</p>
+													<Image
+														src={`${message.content}`}
+														height={300}
+														width={300}
+														alt='Wound image'
+														className='mx-auto'
+													/>
 												</div>
 											</div>
 										);

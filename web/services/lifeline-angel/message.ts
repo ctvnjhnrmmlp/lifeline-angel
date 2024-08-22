@@ -19,8 +19,6 @@ export const getMessages = async (email: string, id: string) => {
 			}
 		);
 
-		console.log(response);
-
 		if (response.status === 200) {
 			return response.data.messages;
 		}
@@ -86,7 +84,7 @@ export const addImageMessage = async (
 		});
 
 		if (response.status === 200) {
-			return true;
+			return response.data;
 		}
 
 		throw new Error();

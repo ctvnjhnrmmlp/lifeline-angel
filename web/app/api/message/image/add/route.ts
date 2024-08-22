@@ -16,7 +16,7 @@ const s3Client = new S3Client({
 
 const uploadFile = async (file: Buffer, fileName: string) => {
 	try {
-		const response = await s3Client.send(
+		await s3Client.send(
 			new PutObjectCommand({
 				Bucket: process.env.AWS_BUCKET_NAME,
 				Key: `${fileName}`,
@@ -24,8 +24,6 @@ const uploadFile = async (file: Buffer, fileName: string) => {
 				ContentType: 'image/*',
 			})
 		);
-
-		console.log(response);
 	} catch (error) {
 		console.error('Error uploading file:', error);
 		throw error;
@@ -133,6 +131,7 @@ export async function POST(req: Request) {
 
 		return Response.json({
 			message: 'Success',
+			prediction: imagePrediction.prediction,
 		});
 	} catch (error) {
 		console.log(error);
