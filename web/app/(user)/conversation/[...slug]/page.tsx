@@ -91,12 +91,14 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 		addMessage: addMessageLocal,
 	} = useMultipleMessageStore();
 
-	const { deleteConversation: deleteConversationLocal } =
-		useMultipleConversationStore();
+	const {
+		updateConversation: updateConversationLocal,
+		deleteConversation: deleteConversationLocal,
+	} = useMultipleConversationStore();
 
 	const updateConversationMutation = useMutation({
-		mutationFn: async () =>
-			await updateConversation(session.user.email, params.slug[0], ''),
+		mutationFn: async (message: string) =>
+			await updateConversation(session.user.email, params.slug[0], message),
 	});
 
 	const deleteConversationMutation = useMutation({
@@ -113,6 +115,11 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 	const deleteMessageMutation = useMutation({
 		mutationFn: async () => await deleteTextMessage(session.user.email, ''),
 	});
+
+	const handleUpdateConversation = (message: string) => {
+		updateConversationLocal(params.slug[0], message);
+		updateConversationMutation.mutate(message);
+	};
 
 	const handleDeleteConversation = () => {
 		deleteConversationLocal(params.slug[0]);
@@ -217,7 +224,11 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 					<div className='w-full flex flex-col flex-wrap justify-between space-between gap-12'>
 						<div className='flex items-center justify-between'>
 							<div>
-								<p className='font-bold text-4xl'>{params.slug[0]}</p>
+								<p className='font-bold text-4xl'>
+									{conversationLocal?.title
+										? conversationLocal.title
+										: params.slug[0]}
+								</p>
 							</div>
 							<div className='flex space-x-2'>
 								<button
@@ -290,6 +301,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 								onKeyPress={(event) => {
 									if (event.key === 'Enter') {
 										handleAddMessage(message);
+										handleUpdateConversation(message);
 									}
 								}}
 							/>

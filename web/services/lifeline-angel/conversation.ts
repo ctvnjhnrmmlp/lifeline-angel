@@ -64,7 +64,7 @@ export const addConversation = async (email: string, id: string) => {
 		);
 
 		if (response.status === 200) {
-			return response;
+			return true;
 		}
 
 		throw new Error();

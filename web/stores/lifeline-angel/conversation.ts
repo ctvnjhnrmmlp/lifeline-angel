@@ -5,6 +5,7 @@ type MultipleConversationStore = {
 	conversations: Conversation[];
 	setConversations: (conversations: Conversation[]) => void;
 	addConversation: (cid: string) => void;
+	updateConversation: (cid: string, title: string) => void;
 	deleteConversation: (cid: string) => void;
 };
 
@@ -30,6 +31,19 @@ export const useMultipleConversationStore = create<MultipleConversationStore>()(
 						updatedAt: new Date(),
 					},
 				],
+			})),
+		updateConversation: (cid, title) =>
+			set((state) => ({
+				conversations: state.conversations.map((conversation) => {
+					if (conversation.id === cid) {
+						return {
+							...conversation,
+							title: title,
+						};
+					} else {
+						return conversation;
+					}
+				}),
 			})),
 		deleteConversation: (cid) =>
 			set((state) => ({

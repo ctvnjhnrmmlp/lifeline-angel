@@ -22,6 +22,7 @@ export const useMultipleMessageStore = create<MultipleMessageStore>()(
 						id: mid,
 						content: message,
 						conversationId: cid,
+						from: 'user',
 						createdAt: new Date(),
 						updatedAt: new Date(),
 					},

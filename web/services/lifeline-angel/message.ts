@@ -65,30 +65,6 @@ export const addTextMessage = async (
 	}
 };
 
-export const deleteTextMessage = async (email: string, id: string) => {
-	try {
-		const response = await apiClient.post(
-			'/api/message/text/delete',
-			{ id },
-			{
-				headers: {
-					'Content-Type': 'application/json',
-					'X-User-Email': email,
-				},
-			}
-		);
-
-		if (response.status === 200) {
-			return true;
-		}
-
-		throw new Error();
-	} catch (error) {
-		console.error(error);
-		return false;
-	}
-};
-
 export const addImageMessage = async (
 	email: string,
 	cid: string,
@@ -110,7 +86,7 @@ export const addImageMessage = async (
 		});
 
 		if (response.status === 200) {
-			return response.data;
+			return true;
 		}
 
 		throw new Error();

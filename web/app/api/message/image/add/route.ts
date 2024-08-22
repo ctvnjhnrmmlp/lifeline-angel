@@ -133,7 +133,6 @@ export async function POST(req: Request) {
 
 		return Response.json({
 			message: 'Success',
-			answer: textPrediction.response,
 		});
 	} catch (error) {
 		console.log(error);
