@@ -2,9 +2,7 @@
 
 import {
 	addConversation,
-	deleteConversation,
 	getConversations,
-	updateConversation,
 } from '@/services/lifeline-angel/conversation';
 import SETTINGS from '@/sources/settings';
 import { useMultipleConversationStore } from '@/stores/lifeline-angel/conversation';
@@ -60,6 +58,10 @@ const Sidebar = () => {
 	React.useEffect(() => {
 		setConversationsLocal(conversationsServer);
 	}, [conversationsServer]);
+
+	if (conversationsLocal) {
+		console.log(conversationsLocal);
+	}
 
 	return (
 		<aside className='fixed flex flex-col justify-center p-4 z-10 h-screen'>
@@ -136,9 +138,9 @@ const Sidebar = () => {
 											<p className='font-bold w-full text-xl text-foreground tracking-tight leading-none text-ellipsi text-balance'>
 												{conv.title ? conv.title : conv.id}
 											</p>
-											<p className='font-light w-full text-sm text-zinc-700 tracking-tight leading-none text-ellipsis text-balance'>
+											{/* <p className='font-light w-full text-sm text-zinc-700 tracking-tight leading-none text-ellipsis text-balance'>
 												{conv.updatedAt.toString()}
-											</p>
+											</p> */}
 										</div>
 									</Link>
 								</div>
