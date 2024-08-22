@@ -59,10 +59,6 @@ const Sidebar = () => {
 		setConversationsLocal(conversationsServer);
 	}, [conversationsServer]);
 
-	if (conversationsLocal) {
-		console.log(conversationsLocal);
-	}
-
 	return (
 		<aside className='fixed flex flex-col justify-center p-4 z-10 h-screen'>
 			<div className='hidden lg:block overflow-y-scroll no-scrollbar backdrop-blur-2xl bg-foreground/5 rounded-2xl h-screen w-96'>

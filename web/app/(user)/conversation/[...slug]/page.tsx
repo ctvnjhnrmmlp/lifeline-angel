@@ -144,6 +144,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 		addMessageLocal(params.slug[0], mid, message);
 		addMessageMutation.mutate({ mid, message });
 		refetchMessages();
+		refetchConversationServer();
 		setMessage('');
 	};
 
