@@ -302,7 +302,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 											return (
 												<div
 													key={message.id}
-													className='backdrop-blur-2xl bg-foreground/5 rounded-2xl w-1/12 ml-auto mr-0'
+													className='backdrop-blur-2xl bg-foreground/5 rounded-2xl min-w-1/12 ml-auto mr-0'
 												>
 													<div className='cursor-pointer p-6'>
 														<p className='text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance text-center'>
