@@ -284,7 +284,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 										return (
 											<div
 												key={message.id}
-												className='backdrop-blur-2xl bg-foreground/5 rounded-xl'
+												className='backdrop-blur-2xl bg-foreground/5 rounded-2xl'
 											>
 												<div className='cursor-pointer p-6'>
 													<Image
@@ -298,21 +298,28 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 											</div>
 										);
 									} else {
+										if (message.from === 'user') {
+											return (
+												<div
+													key={message.id}
+													className='backdrop-blur-2xl bg-foreground/5 rounded-2xl w-1/12 ml-auto mr-0'
+												>
+													<div className='cursor-pointer p-6'>
+														<p className='text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance text-center'>
+															{message.content}
+														</p>
+													</div>
+												</div>
+											);
+										}
+
 										return (
 											<div
 												key={message.id}
-												className='backdrop-blur-2xl bg-foreground/5 rounded-2xl'
-												style={{
-													background: message.from === 'model' ? '#FFFFFF' : '',
-												}}
+												className='bg-foreground rounded-2xl ml-0 mr-auto w-6/12'
 											>
 												<div className='cursor-pointer p-6'>
-													<p
-														className='w-full text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance'
-														style={{
-															color: message.from === 'model' ? '#000000' : '',
-														}}
-													>
+													<p className='text-lg text-background tracking-tight leading-none text-ellipsis text-balance'>
 														{message.content}
 													</p>
 												</div>
