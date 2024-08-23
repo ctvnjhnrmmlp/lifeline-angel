@@ -36,7 +36,10 @@ import {
 	useMultipleConversationStore,
 	useSingleConversationStore,
 } from '@/stores/lifeline-angel/conversation';
-import { convertTo24HourTimeFormat } from '@/utilities/functions';
+import {
+	convertTo24HourTimeFormat,
+	convertToDateFormat,
+} from '@/utilities/functions';
 import { ScrollShadow } from '@nextui-org/react';
 import { useFormik } from 'formik';
 import { redirect, useRouter } from 'next/navigation';
@@ -283,6 +286,14 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 					{/* Messages */}
 					<div className='overflow-y-scroll no-scrollbar h-screen my-4'>
 						<ScrollShadow className='flex flex-col space-y-3 overflow-y-scroll no-scrollbar py-4 h-screen'>
+							<div className='backdrop-blur-2xl bg-foreground/5 rounded-full min-w-4/12 mx-auto'>
+								<div className='cursor-pointer px-6 py-4'>
+									<p className='text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance text-center'>
+										{convertToDateFormat(messagesLocal[0].createdAt.toString())}
+									</p>
+								</div>
+							</div>
+
 							{messagesLocal &&
 								messagesLocal.map((message) => {
 									if (checkTextValidURL(message.content)) {

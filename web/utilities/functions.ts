@@ -54,3 +54,12 @@ export const convertTo24HourTimeFormat = (timestamp: string) => {
 
 	return formattedTime;
 };
+
+export const convertToDateFormat = (timestamp: string) => {
+	const date = new Date(timestamp);
+
+	const options = { day: 'numeric', month: 'long', year: 'numeric' };
+	const formattedDate = date.toLocaleDateString('en-GB', options);
+
+	return formattedDate;
+};
