@@ -34,6 +34,8 @@ import { v4 as uuidv4 } from 'uuid';
 const Sidebar = () => {
 	const { data: session } = useSession();
 
+	const [conversationQuery, setConversationQuery] = React.useState('');
+
 	const {
 		isOpen: isOpenPreferences,
 		onOpen: onOpenPreferences,
@@ -79,8 +81,13 @@ const Sidebar = () => {
 	const {
 		conversations: conversationsLocal,
 		setConversations: setConversationsLocal,
+		searchConversations: searchConversationsLocal,
 		addConversation: addConversationLocal,
 	} = useMultipleConversationStore();
+
+	const handleSetConversationQuery = (query: string) => {
+		setConversationQuery(query);
+	};
 
 	const addConversationMutation = useMutation({
 		mutationFn: async (cid: string) =>
@@ -92,6 +99,10 @@ const Sidebar = () => {
 
 		addConversationLocal(cid);
 		addConversationMutation.mutate(cid);
+	};
+
+	const handleSearchConversation = (query: string) => {
+		searchConversationsLocal(query);
 	};
 
 	const {
@@ -219,8 +230,17 @@ const Sidebar = () => {
 					<div>
 						<input
 							type='text'
+							value={conversationQuery}
 							placeholder='Search conversation'
 							className='p-4 w-full rounded-xl placeholder:font-bold placeholder:text-foreground font-bold text-foreground text-xl'
+							onChange={(event) =>
+								handleSetConversationQuery(event.target.value)
+							}
+							onKeyUp={(event) => {
+								if (event.key === 'Enter') {
+									handleSearchConversation(conversationQuery);
+								}
+							}}
 						/>
 					</div>
 					{/* Messages Container */}

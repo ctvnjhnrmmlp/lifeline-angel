@@ -48,7 +48,7 @@ export const getConversation = async (email: string, id: string) => {
 	}
 };
 
-export const searchConversation = async (email: string, query: string) => {
+export const searchConversations = async (email: string, query: string) => {
 	try {
 		const response = await apiClient.post(
 			'/api/conversation/search',

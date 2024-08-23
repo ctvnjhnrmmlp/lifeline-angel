@@ -4,6 +4,7 @@ import { create } from 'zustand';
 type MultipleConversationStore = {
 	conversations: Conversation[];
 	setConversations: (conversations: Conversation[]) => void;
+	searchConversations: (query: string) => void;
 	addConversation: (cid: string) => void;
 	updateConversation: (cid: string, title: string) => void;
 	deleteConversation: (cid: string) => void;
@@ -31,6 +32,12 @@ export const useMultipleConversationStore = create<MultipleConversationStore>()(
 						updatedAt: new Date(),
 					},
 				],
+			})),
+		searchConversations: (query) =>
+			set((state) => ({
+				conversations: state.conversations.filter((conversation) =>
+					conversation.title.includes(query)
+				),
 			})),
 		updateConversation: (cid, title) =>
 			set((state) => ({
