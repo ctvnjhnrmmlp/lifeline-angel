@@ -53,16 +53,25 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 		onOpen: onOpenCamera,
 		onOpenChange: onOpenChangeCamera,
 	} = useDisclosure();
+
+	const {
+		isOpen: isOpenMicrophone,
+		onOpen: onOpenMicrophone,
+		onOpenChange: onOpenChangeMicrophone,
+	} = useDisclosure();
+
 	const {
 		isOpen: isOpenOptions,
 		onOpen: onOpenOptions,
 		onOpenChange: onOpenChangeOptions,
 	} = useDisclosure();
+
 	const {
 		isOpen: isOpenSearch,
 		onOpen: onOpenSearch,
 		onOpenChange: onOpenChangeSearch,
 	} = useDisclosure();
+
 	const {
 		isOpen: isOpenMedia,
 		onOpen: onOpenMedia,
@@ -73,16 +82,19 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 		onOpen: onOpenPrivacy,
 		onOpenChange: onOpenChangePrivacy,
 	} = useDisclosure();
+
 	const {
 		isOpen: isOpenSupport,
 		onOpen: onOpenSupport,
 		onOpenChange: onOpenChangeSupport,
 	} = useDisclosure();
+
 	const {
 		isOpen: isOpenFile,
 		onOpen: onOpenFile,
 		onOpenChange: onOpenChangeFile,
 	} = useDisclosure();
+
 	const {
 		isOpen: isOpenUpdate,
 		onOpen: onOpenUpdate,
@@ -332,14 +344,18 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 						<div className='flex items-center justify-center space-x-2'>
 							<button
 								className='block rounded-full bg-foreground text-background text-2xl p-4'
-								onClick={() => onOpenFile()}
+								onClick={onOpenFile}
 							>
 								<FaPaperclip />
 							</button>
-							<button className='block rounded-full bg-foreground text-background text-2xl p-4'>
+							<button
+								className='block rounded-full bg-foreground text-background text-2xl p-4'
+								onClick={onOpenMicrophone}
+							>
 								<FaMicrophone />
 							</button>
 							<button
+								disabled={message.length <= 0}
 								className='block rounded-full bg-foreground text-background text-2xl p-4'
 								onClick={() => {
 									handleAddMessage(message);
@@ -417,6 +433,33 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 													</button>
 												</form>
 											</div>
+										</ModalBody>
+										<ModalFooter></ModalFooter>
+									</>
+								)}
+							</ModalContent>
+						</Modal>
+						<Modal
+							size='lg'
+							backdrop='blur'
+							isOpen={isOpenMicrophone}
+							classNames={{
+								base: 'bg-background',
+								header: 'flex justify-center items-center',
+								body: 'flex gap-4',
+							}}
+							onOpenChange={() => onOpenChangeMicrophone()}
+						>
+							<ModalContent>
+								{(onClose) => (
+									<>
+										<ModalHeader>
+											<p className='text-2xl font-bold text-center'>
+												Microphone
+											</p>
+										</ModalHeader>
+										<ModalBody>
+											<div className='flex justify-center'></div>
 										</ModalBody>
 										<ModalFooter></ModalFooter>
 									</>
