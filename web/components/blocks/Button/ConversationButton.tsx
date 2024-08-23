@@ -5,6 +5,7 @@ import { Conversation } from '@prisma/client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
+import { GoDotFill } from 'react-icons/go';
 
 const ConversationButton = ({ conv }: { conv: Conversation }) => {
 	const pathname = usePathname();
@@ -12,7 +13,7 @@ const ConversationButton = ({ conv }: { conv: Conversation }) => {
 	return (
 		<div
 			key={conv.id}
-			className='backdrop-blur-2xl bg-foreground/1 rounded-2xl shadow-2xl'
+			className='backdrop-blur-2xl bg-foreground/1 rounded-2xl shadow-2xl hover:bg-zinc-800'
 			style={{
 				background: pathname.includes(conv.id) ? '#27272A' : '',
 			}}
@@ -29,7 +30,7 @@ const ConversationButton = ({ conv }: { conv: Conversation }) => {
 							{conv.title ? conv.title : 'New conversation'}
 						</p>
 					</div>
-					<div>
+					<div className='flex items-center space-x-1'>
 						<p
 							className='font-light w-full text-sm text-zinc-700 tracking-tight leading-none text-ellipsis text-balance'
 							style={{
@@ -37,6 +38,14 @@ const ConversationButton = ({ conv }: { conv: Conversation }) => {
 							}}
 						>
 							{getTimeDifference(conv.createdAt.toString())}
+						</p>
+						<p
+							className='text-zinc-700 text-xs'
+							style={{
+								color: pathname.includes(conv.id) ? '#FFFFFF' : '',
+							}}
+						>
+							<GoDotFill />
 						</p>
 					</div>
 				</div>
