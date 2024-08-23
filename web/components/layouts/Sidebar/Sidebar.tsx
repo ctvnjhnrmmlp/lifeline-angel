@@ -1,5 +1,6 @@
 'use client';
 
+import ConversationButton from '@/components/blocks/Button/ConversationButton';
 import {
 	addConversation,
 	getConversations,
@@ -136,7 +137,7 @@ const Sidebar = () => {
 								<DropdownTrigger>
 									<Avatar size='lg' radius='md' src={session?.user.image} />
 								</DropdownTrigger>
-								<DropdownMenu aria-label='Static Actions'>
+								<DropdownMenu aria-label='Application Actions'>
 									<DropdownItem
 										key='Install'
 										className='font-bold text-xl'
@@ -247,26 +248,16 @@ const Sidebar = () => {
 					<div className='overflow-y-scroll no-scrollbar h-screen'>
 						<ScrollShadow className='flex flex-col space-y-3 overflow-y-scroll no-scrollbar py-4 h-screen'>
 							{conversationsLocal?.map((conv) => (
-								<div
-									key={conv.id}
-									className='backdrop-blur-2xl bg-foreground/5 rounded-xl'
-								>
-									<Link href={`/conversation/${conv.id}`}>
-										<div className='flex items-center justify-between rounded-2xl cursor-pointer px-4 py-6'>
-											<div>
-												<p className='font-bold w-full text-xl text-foreground tracking-tight leading-none text-ellipsi text-balance'>
-													{conv.title ? conv.title : 'New conversation'}
-												</p>
-											</div>
-											<div>
-												<p className='font-light w-full text-sm text-zinc-700 tracking-tight leading-none text-ellipsis text-balance'>
-													Time
-												</p>
-											</div>
-										</div>
-									</Link>
-								</div>
+								<ConversationButton key={conv.id} conv={conv} />
 							))}
+
+							{conversationsLocal?.length <= 0 && (
+								<div>
+									<p className='text-xl font-extralight text-zinc-800 text-center'>
+										No conversations
+									</p>
+								</div>
+							)}
 						</ScrollShadow>
 					</div>
 					{/* Modals */}
