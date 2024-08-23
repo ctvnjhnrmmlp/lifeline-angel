@@ -12,7 +12,7 @@ import {
 } from '@/services/lifeline-angel/message';
 import { useMultipleMessageStore } from '@/stores/lifeline-angel/message';
 import {
-	checkMessageSecondsAgo,
+	checkEntitySecondsAgo,
 	checkTextValidURL,
 } from '@/utilities/functions';
 import {
@@ -324,7 +324,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 
 										return (
 											<>
-												{checkMessageSecondsAgo(
+												{checkEntitySecondsAgo(
 													message.createdAt.toString()
 												) && (
 													<div
@@ -343,7 +343,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 													</div>
 												)}
 
-												{!checkMessageSecondsAgo(
+												{!checkEntitySecondsAgo(
 													message.createdAt.toString()
 												) && (
 													<div

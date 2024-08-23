@@ -1,11 +1,15 @@
 'use client';
 
-import { getTimeDifference } from '@/utilities/functions';
+import {
+	checkEntitySecondsAgo,
+	getTimeDifference,
+} from '@/utilities/functions';
 import { Conversation } from '@prisma/client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
 import { GoDotFill } from 'react-icons/go';
+import { TypeAnimation } from 'react-type-animation';
 
 const ConversationButton = ({ conv }: { conv: Conversation }) => {
 	const pathname = usePathname();
@@ -20,16 +24,37 @@ const ConversationButton = ({ conv }: { conv: Conversation }) => {
 		>
 			<Link href={`/conversation/${conv.id}`}>
 				<div className='flex items-center justify-between rounded-2xl cursor-pointer px-4 py-6'>
-					<div>
-						<p
-							className='font-extrabold w-full text-xl text-foreground tracking-tight leading-none text-balance'
-							style={{
-								color: pathname.includes(conv.id) ? '#FFFFFF' : '',
-							}}
-						>
-							{conv.title ? conv.title : 'New conversation'}
-						</p>
-					</div>
+					{checkEntitySecondsAgo(conv.createdAt.toString()) && (
+						<div>
+							<p
+								className='font-extrabold w-full text-xl text-foreground tracking-tight leading-none text-balance'
+								style={{
+									color: pathname.includes(conv.id) ? '#FFFFFF' : '',
+								}}
+							>
+								<TypeAnimation
+									sequence={[
+										conv.title ? conv.title : 'New conversation',
+										1000,
+									]}
+									wrapper='span'
+									cursor={false}
+								/>
+							</p>
+						</div>
+					)}
+					{!checkEntitySecondsAgo(conv.createdAt.toString()) && (
+						<div>
+							<p
+								className='font-extrabold w-full text-xl text-foreground tracking-tight leading-none text-balance'
+								style={{
+									color: pathname.includes(conv.id) ? '#FFFFFF' : '',
+								}}
+							>
+								{conv.title ? conv.title : 'New conversation'}
+							</p>
+						</div>
+					)}
 					<div className='flex items-center space-x-1'>
 						<p
 							className='text-zinc-700 text-xs'

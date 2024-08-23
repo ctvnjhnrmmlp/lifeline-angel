@@ -31,7 +31,7 @@ export const getTimeDifference = (timestamp: string) => {
 	return `${yearsAgo}y`;
 };
 
-export const checkMessageSecondsAgo = (timestamp: string) => {
+export const checkEntitySecondsAgo = (timestamp: string) => {
 	const now = new Date();
 	const then = new Date(timestamp);
 	const diffInSeconds = Math.floor((now - then) / 1000);
