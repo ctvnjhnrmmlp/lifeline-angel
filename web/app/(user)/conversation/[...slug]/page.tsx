@@ -27,6 +27,7 @@ import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 import { BsGrid1X2Fill } from 'react-icons/bs';
 import { FaCamera, FaPaperclip } from 'react-icons/fa';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
 
 import {
 	useMultipleConversationStore,
@@ -248,7 +249,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 	return (
 		<main className='flex flex-col justify-center pl-[26rem] py-4 pr-4 h-screen w-screen'>
 			<section className='overflow-y-scroll no-scrollbar backdrop-blur-2xl bg-foreground/5 rounded-2xl h-screen'>
-				<div className='flex flex-col p-6 outline h-full'>
+				<div className='flex flex-col p-6 h-full'>
 					{/* Conversation Navbar */}
 					<div className='w-full flex flex-col flex-wrap justify-between space-between gap-12'>
 						<div className='flex items-center justify-between'>
@@ -284,16 +285,20 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 										return (
 											<div
 												key={message.id}
-												className='backdrop-blur-2xl bg-foreground/5 rounded-2xl'
+												className='backdrop-blur-2xl bg-foreground/5 rounded-2xl min-w-1/12 ml-auto mr-0'
 											>
 												<div className='cursor-pointer p-6'>
-													<Image
-														src={`${message.content}`}
-														height={300}
-														width={300}
-														alt='Wound image'
-														className='mx-auto'
-													/>
+													<PhotoProvider>
+														<PhotoView src={message.content}>
+															<Image
+																src={`${message.content}`}
+																height={300}
+																width={300}
+																alt='Wound image'
+																className='mx-auto'
+															/>
+														</PhotoView>
+													</PhotoProvider>
 												</div>
 											</div>
 										);
