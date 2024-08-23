@@ -36,6 +36,7 @@ import {
 	useMultipleConversationStore,
 	useSingleConversationStore,
 } from '@/stores/lifeline-angel/conversation';
+import { convertTo24HourTimeFormat } from '@/utilities/functions';
 import { ScrollShadow } from '@nextui-org/react';
 import { useFormik } from 'formik';
 import { redirect, useRouter } from 'next/navigation';
@@ -309,16 +310,23 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 									} else {
 										if (message.from === 'user') {
 											return (
-												<div
-													key={message.id}
-													className='backdrop-blur-2xl bg-foreground/5 rounded-2xl min-w-1/12 ml-auto mr-0'
-												>
-													<div className='cursor-pointer p-6'>
-														<p className='text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance text-center'>
-															{message.content}
-														</p>
+												<>
+													<div
+														key={message.id}
+														className='backdrop-blur-2xl bg-foreground/5 rounded-2xl min-w-4/12 ml-auto mr-0'
+													>
+														<div className='cursor-pointer p-4'>
+															<p className='text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance text-center'>
+																{message.content}
+															</p>
+														</div>
 													</div>
-												</div>
+													<p className='text-xs text-foreground tracking-tight leading-none text-ellipsis text-balance text-right'>
+														{convertTo24HourTimeFormat(
+															message.createdAt.toString()
+														)}
+													</p>
+												</>
 											);
 										}
 
@@ -327,35 +335,49 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 												{checkEntitySecondsAgo(
 													message.createdAt.toString()
 												) && (
-													<div
-														key={message.id}
-														className='bg-foreground rounded-2xl ml-0 mr-auto w-6/12'
-													>
-														<div className='cursor-pointer p-6'>
-															<p className='text-lg text-background tracking-tight leading-none text-ellipsis text-balance'>
-																<TypeAnimation
-																	sequence={[message.content, 3000]}
-																	wrapper='span'
-																	cursor={false}
-																/>
-															</p>
+													<>
+														<div
+															key={message.id}
+															className='bg-foreground rounded-2xl ml-0 mr-auto w-6/12'
+														>
+															<div className='cursor-pointer p-4'>
+																<p className='text-lg text-background tracking-tight leading-none text-ellipsis text-balance'>
+																	<TypeAnimation
+																		sequence={[message.content, 3000]}
+																		wrapper='span'
+																		cursor={false}
+																	/>
+																</p>
+															</div>
 														</div>
-													</div>
+														<p className='text-xs text-foreground tracking-tight leading-none text-ellipsis text-balance text-left'>
+															{convertTo24HourTimeFormat(
+																message.createdAt.toString()
+															)}
+														</p>
+													</>
 												)}
 
 												{!checkEntitySecondsAgo(
 													message.createdAt.toString()
 												) && (
-													<div
-														key={message.id}
-														className='bg-foreground rounded-2xl ml-0 mr-auto w-6/12'
-													>
-														<div className='cursor-pointer p-6'>
-															<p className='text-lg text-background tracking-tight leading-none text-ellipsis text-balance'>
-																{message.content}
-															</p>
+													<>
+														<div
+															key={message.id}
+															className='bg-foreground rounded-2xl ml-0 mr-auto w-6/12'
+														>
+															<div className='cursor-pointer p-4'>
+																<p className='text-lg text-background tracking-tight leading-none text-ellipsis text-balance'>
+																	{message.content}
+																</p>
+															</div>
 														</div>
-													</div>
+														<p className='text-xs text-foreground tracking-tight leading-none text-ellipsis text-balance text-left'>
+															{convertTo24HourTimeFormat(
+																message.createdAt.toString()
+															)}
+														</p>
+													</>
 												)}
 											</>
 										);

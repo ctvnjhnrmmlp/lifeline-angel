@@ -42,3 +42,15 @@ export const checkEntitySecondsAgo = (timestamp: string) => {
 
 	return false;
 };
+
+export const convertTo24HourTimeFormat = (timestamp: string) => {
+	const date = new Date(timestamp);
+	let hours = date.getHours();
+	const minutes = date.getMinutes().toString().padStart(2, '0');
+	// Convert hours from 24-hour format to 12-hour format
+	const convertedHours = hours < 12 ? hours + 12 : hours;
+	// Format the time as "20:58"
+	const formattedTime = `${convertedHours}:${minutes}`;
+
+	return formattedTime;
+};
