@@ -467,7 +467,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 											<p className='text-3xl font-bold text-center'>
 												{conversationLocal?.title
 													? conversationLocal.title
-													: params.slug[0]}
+													: 'New conversation'}
 											</p>
 										</ModalHeader>
 										<ModalBody>

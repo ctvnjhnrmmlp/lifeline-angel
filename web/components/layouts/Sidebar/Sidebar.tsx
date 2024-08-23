@@ -251,6 +251,14 @@ const Sidebar = () => {
 								<ConversationButton key={conv.id} conv={conv} />
 							))}
 
+							{conversationsLocal?.length > 0 && (
+								<div>
+									<p className='text-xl font-extralight text-zinc-800 text-center'>
+										{conversationsLocal.length} conversations in total
+									</p>
+								</div>
+							)}
+
 							{conversationsLocal?.length <= 0 && (
 								<div>
 									<p className='text-xl font-extralight text-zinc-800 text-center'>
