@@ -39,7 +39,7 @@ import {
 import { ScrollShadow } from '@nextui-org/react';
 import { useFormik } from 'formik';
 import { redirect, useRouter } from 'next/navigation';
-import React, { useState } from 'react';
+import React from 'react';
 import { FaLocationArrow, FaMicrophone } from 'react-icons/fa';
 import { FaCloudArrowUp } from 'react-icons/fa6';
 import { TypeAnimation } from 'react-type-animation';
@@ -338,9 +338,6 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 																	wrapper='span'
 																	cursor={false}
 																/>
-																{checkMessageSecondsAgo(
-																	message.createdAt.toString()
-																)}
 															</p>
 														</div>
 													</div>
@@ -357,9 +354,6 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 															<p className='text-lg text-background tracking-tight leading-none text-ellipsis text-balance'>
 																{message.content}
 															</p>
-															{checkMessageSecondsAgo(
-																message.createdAt.toString()
-															)}
 														</div>
 													</div>
 												)}
