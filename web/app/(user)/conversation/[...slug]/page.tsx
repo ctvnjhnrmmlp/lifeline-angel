@@ -241,7 +241,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 								<p className='font-bold text-4xl'>
 									{conversationLocal?.title
 										? conversationLocal.title
-										: conversationLocal?.id}
+										: 'New conversation'}
 								</p>
 							</div>
 							<div className='flex space-x-2'>
