@@ -61,7 +61,7 @@ const Sidebar = () => {
 
 	return (
 		<aside className='fixed flex flex-col justify-center p-4 z-10 h-screen'>
-			<div className='hidden lg:block overflow-y-scroll no-scrollbar backdrop-blur-2xl bg-foreground/5 rounded-2xl h-screen w-96'>
+			<div className='hidden lg:block overflow-y-scroll no-scrollbar backdrop-blur-2xl bg-foreground/5 rounded-3xl h-screen w-96'>
 				<div className='flex flex-col flex-wrap justify-between space-between px-4 py-6 gap-4'>
 					{/* Header Container */}
 					<div className='flex justify-between items-center'>
