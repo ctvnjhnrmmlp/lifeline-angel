@@ -11,7 +11,10 @@ import {
 	getMessages,
 } from '@/services/lifeline-angel/message';
 import { useMultipleMessageStore } from '@/stores/lifeline-angel/message';
-import { checkTextValidURL } from '@/utilities/functions';
+import {
+	checkMessageSecondsAgo,
+	checkTextValidURL,
+} from '@/utilities/functions';
 import {
 	Chip,
 	Input,
@@ -36,9 +39,10 @@ import {
 import { ScrollShadow } from '@nextui-org/react';
 import { useFormik } from 'formik';
 import { redirect, useRouter } from 'next/navigation';
-import React from 'react';
+import React, { useState } from 'react';
 import { FaLocationArrow, FaMicrophone } from 'react-icons/fa';
 import { FaCloudArrowUp } from 'react-icons/fa6';
+import { TypeAnimation } from 'react-type-animation';
 import { v4 as uuidv4 } from 'uuid';
 import * as Yup from 'yup';
 
@@ -319,16 +323,47 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 										}
 
 										return (
-											<div
-												key={message.id}
-												className='bg-foreground rounded-2xl ml-0 mr-auto w-6/12'
-											>
-												<div className='cursor-pointer p-6'>
-													<p className='text-lg text-background tracking-tight leading-none text-ellipsis text-balance'>
-														{message.content}
-													</p>
-												</div>
-											</div>
+											<>
+												{checkMessageSecondsAgo(
+													message.createdAt.toString()
+												) && (
+													<div
+														key={message.id}
+														className='bg-foreground rounded-2xl ml-0 mr-auto w-6/12'
+													>
+														<div className='cursor-pointer p-6'>
+															<p className='text-lg text-background tracking-tight leading-none text-ellipsis text-balance'>
+																<TypeAnimation
+																	sequence={[message.content, 1000]}
+																	wrapper='span'
+																	cursor={false}
+																/>
+																{checkMessageSecondsAgo(
+																	message.createdAt.toString()
+																)}
+															</p>
+														</div>
+													</div>
+												)}
+
+												{!checkMessageSecondsAgo(
+													message.createdAt.toString()
+												) && (
+													<div
+														key={message.id}
+														className='bg-foreground rounded-2xl ml-0 mr-auto w-6/12'
+													>
+														<div className='cursor-pointer p-6'>
+															<p className='text-lg text-background tracking-tight leading-none text-ellipsis text-balance'>
+																{message.content}
+															</p>
+															{checkMessageSecondsAgo(
+																message.createdAt.toString()
+															)}
+														</div>
+													</div>
+												)}
+											</>
 										);
 									}
 								})}

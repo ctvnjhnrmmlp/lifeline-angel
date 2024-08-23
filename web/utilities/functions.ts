@@ -30,3 +30,15 @@ export const getTimeDifference = (timestamp: string) => {
 
 	return `${yearsAgo}y`;
 };
+
+export const checkMessageSecondsAgo = (timestamp: string) => {
+	const now = new Date();
+	const then = new Date(timestamp);
+	const diffInSeconds = Math.floor((now - then) / 1000);
+
+	const seconds = diffInSeconds;
+
+	if (seconds <= 10) return true;
+
+	return false;
+};
