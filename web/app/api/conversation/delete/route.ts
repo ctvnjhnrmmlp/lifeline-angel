@@ -4,7 +4,9 @@ export async function POST(req: Request) {
 	try {
 		const request = await req.json();
 		const email = req.headers.get('x-user-email');
-		const { id } = request;
+		const { id } = request as {
+			id: string;
+		};
 
 		const user = await Prisma.user.findUnique({
 			where: {

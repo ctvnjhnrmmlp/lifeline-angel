@@ -32,13 +32,16 @@ const classifyText = async (text: string) => {
 export async function POST(req: Request) {
 	try {
 		const request = await req.json();
-		const email = req.headers.get('x-user-email');
+		const email = req.headers.get('x-user-email') as string;
 		const message = request.message;
-		const { cid, mid } = request;
+		const { cid, mid } = request as {
+			cid: string;
+			mid: string;
+		};
 
 		const user = await Prisma.user.findUnique({
 			where: {
-				email: email as string,
+				email: email,
 			},
 		});
 

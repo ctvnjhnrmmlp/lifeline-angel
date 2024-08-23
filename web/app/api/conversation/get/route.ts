@@ -2,7 +2,7 @@ import Prisma from '@/database/database';
 
 export async function GET(req: Request) {
 	try {
-		const email = req.headers.get('X-User-Email');
+		const email = req.headers.get('X-User-Email') as string;
 
 		const user = await Prisma.user.findUnique({
 			where: {
