@@ -189,8 +189,11 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 		}),
 	});
 
-	const handleChange = (event) => {
-		formik.setFieldValue('file', event.target.files[0]);
+	const handleChange = (event: React.ChangeEvent) => {
+		const target = event.target as HTMLInputElement;
+		const file = target.files![0];
+
+		formik.setFieldValue('file', file);
 	};
 
 	const {
