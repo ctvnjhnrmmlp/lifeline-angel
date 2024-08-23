@@ -35,7 +35,7 @@ const ConversationButton = ({ conv }: { conv: Conversation }) => {
 								<TypeAnimation
 									sequence={[
 										conv.title ? conv.title : 'New conversation',
-										1000,
+										3000,
 									]}
 									wrapper='span'
 									cursor={false}

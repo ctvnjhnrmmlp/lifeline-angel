@@ -334,7 +334,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 														<div className='cursor-pointer p-6'>
 															<p className='text-lg text-background tracking-tight leading-none text-ellipsis text-balance'>
 																<TypeAnimation
-																	sequence={[message.content, 1000]}
+																	sequence={[message.content, 3000]}
 																	wrapper='span'
 																	cursor={false}
 																/>
