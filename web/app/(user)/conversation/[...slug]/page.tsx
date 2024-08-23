@@ -111,7 +111,6 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 	const [message, setMessage] = React.useState('');
 	const fileRef = React.useRef<HTMLInputElement>(null);
 	const [uploading, setUploading] = React.useState(false);
-	const [imageData, setImageData] = React.useState('');
 
 	const {
 		conversation: conversationLocal,
