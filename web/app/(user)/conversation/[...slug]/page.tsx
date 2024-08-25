@@ -10,6 +10,7 @@ import {
 	addTextMessage,
 	getMessages,
 } from '@/services/lifeline-angel/message';
+import { IMAGE_INJURIES, TEXT_INJURIES } from '@/sources/injuries';
 import { useMultipleMessageStore } from '@/stores/lifeline-angel/message';
 import {
 	checkEntitySecondsAgo,
@@ -286,113 +287,134 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 					{/* Messages */}
 					<div className='overflow-y-scroll no-scrollbar h-screen my-4'>
 						<ScrollShadow className='flex flex-col space-y-3 overflow-y-scroll no-scrollbar py-4 h-screen'>
-							<div className='backdrop-blur-2xl bg-foreground/5 rounded-full min-w-4/12 mx-auto'>
-								<div className='cursor-pointer px-6 py-4'>
-									<p className='text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance text-center'>
-										{convertToDateFormat(messagesLocal[0].createdAt.toString())}
-									</p>
+							{/* {messagesLocal[0] && (
+								<div className='backdrop-blur-2xl bg-foreground/5 rounded-full min-w-4/12 mx-auto'>
+									<div className='cursor-pointer px-6 py-4'>
+										<p className='text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance text-center'>
+											{convertToDateFormat(
+												messagesLocal[0].createdAt.toString()
+											)}
+										</p>
+									</div>
 								</div>
-							</div>
+							)} */}
 
-							{messagesLocal &&
-								messagesLocal.map((message) => {
-									if (checkTextValidURL(message.content)) {
-										return (
-											<div
-												key={message.id}
-												className='backdrop-blur-2xl bg-foreground/5 rounded-2xl min-w-1/12 ml-auto mr-0'
+							{messagesLocal && !messagesLocal.length && (
+								<div className='space-y-4'>
+									<div>
+										<p className='text-2xl font-bold'>Text Injuries</p>
+									</div>
+									<div className='flex flex-wrap gap-2'>
+										{TEXT_INJURIES.map((injury) => (
+											<button
+												key={injury.content}
+												className='text-lg rounded-2xl py-2 px-5 backdrop-blur-2xl bg-foreground/5 font-bold tracking-tight'
+												onClick={() => {
+													handleAddMessage(injury.content);
+													handleUpdateConversation(injury.content);
+												}}
 											>
-												<div className='cursor-pointer p-6'>
-													<PhotoProvider>
-														<PhotoView src={message.content}>
-															<Image
-																src={`${message.content}`}
-																height={300}
-																width={300}
-																alt='Wound image'
-																className='mx-auto'
-															/>
-														</PhotoView>
-													</PhotoProvider>
-												</div>
+												{injury.content}
+											</button>
+										))}
+									</div>
+								</div>
+							)}
+
+							{messagesLocal?.map((message) => {
+								if (checkTextValidURL(message.content)) {
+									return (
+										<div
+											key={message.id}
+											className='backdrop-blur-2xl bg-foreground/5 rounded-2xl min-w-1/12 ml-auto mr-0'
+										>
+											<div className='cursor-pointer p-6'>
+												<PhotoProvider>
+													<PhotoView src={message.content}>
+														<Image
+															src={`${message.content}`}
+															height={300}
+															width={300}
+															alt='Wound image'
+															className='mx-auto'
+														/>
+													</PhotoView>
+												</PhotoProvider>
 											</div>
+										</div>
+									);
+								} else {
+									if (message.from === 'user') {
+										return (
+											<>
+												<div
+													key={message.id}
+													className='backdrop-blur-2xl bg-foreground/5 rounded-2xl min-w-4/12 ml-auto mr-0'
+												>
+													<div className='cursor-pointer p-4'>
+														<p className='text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance text-center'>
+															{message.content}
+														</p>
+													</div>
+												</div>
+												<p className='text-xs text-foreground tracking-tight leading-none text-ellipsis text-balance text-right'>
+													{convertTo24HourTimeFormat(
+														message.createdAt.toString()
+													)}
+												</p>
+											</>
 										);
-									} else {
-										if (message.from === 'user') {
-											return (
+									}
+
+									return (
+										<>
+											{checkEntitySecondsAgo(message.createdAt.toString()) && (
 												<>
 													<div
 														key={message.id}
-														className='backdrop-blur-2xl bg-foreground/5 rounded-2xl min-w-4/12 ml-auto mr-0'
+														className='bg-foreground rounded-2xl ml-0 mr-auto w-6/12'
 													>
 														<div className='cursor-pointer p-4'>
-															<p className='text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance text-center'>
-																{message.content}
+															<p className='text-lg text-background tracking-tight leading-none text-ellipsis text-balance'>
+																<TypeAnimation
+																	sequence={[message.content, 3000]}
+																	wrapper='span'
+																	cursor={false}
+																/>
 															</p>
 														</div>
 													</div>
-													<p className='text-xs text-foreground tracking-tight leading-none text-ellipsis text-balance text-right'>
+													<p className='text-xs text-foreground tracking-tight leading-none text-ellipsis text-balance text-left'>
 														{convertTo24HourTimeFormat(
 															message.createdAt.toString()
 														)}
 													</p>
 												</>
-											);
-										}
+											)}
 
-										return (
-											<>
-												{checkEntitySecondsAgo(
-													message.createdAt.toString()
-												) && (
-													<>
-														<div
-															key={message.id}
-															className='bg-foreground rounded-2xl ml-0 mr-auto w-6/12'
-														>
-															<div className='cursor-pointer p-4'>
-																<p className='text-lg text-background tracking-tight leading-none text-ellipsis text-balance'>
-																	<TypeAnimation
-																		sequence={[message.content, 3000]}
-																		wrapper='span'
-																		cursor={false}
-																	/>
-																</p>
-															</div>
+											{!checkEntitySecondsAgo(message.createdAt.toString()) && (
+												<>
+													<div
+														key={message.id}
+														className='bg-foreground rounded-2xl ml-0 mr-auto w-6/12'
+													>
+														<div className='cursor-pointer p-4'>
+															<p className='text-lg text-background tracking-tight leading-none text-ellipsis text-balance'>
+																{message.content}
+															</p>
 														</div>
-														<p className='text-xs text-foreground tracking-tight leading-none text-ellipsis text-balance text-left'>
-															{convertTo24HourTimeFormat(
-																message.createdAt.toString()
-															)}
-														</p>
-													</>
-												)}
-
-												{!checkEntitySecondsAgo(
-													message.createdAt.toString()
-												) && (
-													<>
-														<div
-															key={message.id}
-															className='bg-foreground rounded-2xl ml-0 mr-auto w-6/12'
-														>
-															<div className='cursor-pointer p-4'>
-																<p className='text-lg text-background tracking-tight leading-none text-ellipsis text-balance'>
-																	{message.content}
-																</p>
-															</div>
-														</div>
-														<p className='text-xs text-foreground tracking-tight leading-none text-ellipsis text-balance text-left'>
-															{convertTo24HourTimeFormat(
-																message.createdAt.toString()
-															)}
-														</p>
-													</>
-												)}
-											</>
-										);
-									}
-								})}
+													</div>
+													<p className='text-xs text-foreground tracking-tight leading-none text-ellipsis text-balance text-left'>
+														{convertTo24HourTimeFormat(
+															message.createdAt.toString()
+														)}
+													</p>
+												</>
+											)}
+										</>
+									);
+								}
+							})}
 						</ScrollShadow>
 					</div>
 					{/* Message */}
