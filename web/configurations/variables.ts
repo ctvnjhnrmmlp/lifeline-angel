@@ -6,9 +6,7 @@ const VARIABLES = {
 	stacks: 'TypeScript, React, NextJS, TailwindCSS, Prisma, trpc, PyTorch, etc.',
 	words: 'emergency, realtime, gps, etc.',
 	info: 'Lifeline Angel',
-	icon: '',
-	image: '',
-	icon: 'self-logo.svg',
+	icon: 'lifeline-angel.png',
 	image: 'self-abstract.webp',
 };
 
