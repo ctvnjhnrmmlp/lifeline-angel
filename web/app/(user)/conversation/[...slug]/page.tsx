@@ -466,7 +466,6 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 													</p>
 												</>
 											)}
-
 											{!checkEntitySecondsAgo(message.createdAt.toString()) && (
 												<>
 													<div
@@ -510,7 +509,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 								type='text'
 								value={message}
 								placeholder='Aa'
-								className='p-3 w-full rounded-xl placeholder:font-bold placeholder:text-foreground font-bold text-foreground text-2xl'
+								className='py-3 px-4 w-full rounded-xl placeholder:font-bold placeholder:text-foreground font-bold text-foreground text-2xl'
 								onChange={(event) => {
 									setMessage(event.target.value);
 								}}
