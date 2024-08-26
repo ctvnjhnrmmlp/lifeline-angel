@@ -5,7 +5,10 @@ import {
 	addConversation,
 	getConversations,
 } from '@/services/lifeline-angel/conversation';
-import { useMultipleConversationStore } from '@/stores/lifeline-angel/conversation';
+import {
+	useMultipleConversationStore,
+	useTemporaryMultipleConversationStore,
+} from '@/stores/lifeline-angel/conversation';
 import {
 	Avatar,
 	Dropdown,
@@ -24,7 +27,7 @@ import { useMutation, useQuery } from '@tanstack/react-query';
 import { signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import { BiSolidRightArrow } from 'react-icons/bi';
+import { BiSolidLeftArrow, BiSolidRightArrow } from 'react-icons/bi';
 import { FaLifeRing, FaQuestion } from 'react-icons/fa';
 import { FaGear, FaShield } from 'react-icons/fa6';
 import { FiPaperclip } from 'react-icons/fi';
@@ -37,12 +40,21 @@ const Sidebar = () => {
 
 	const [conversationQuery, setConversationQuery] = useState('');
 
+	const [openSearch, setOpenSearch] = useState(false);
+
 	const {
 		conversations: conversationsLocal,
 		setConversations: setConversationsLocal,
 		searchConversations: searchConversationsLocal,
 		addConversation: addConversationLocal,
 	} = useMultipleConversationStore();
+
+	const {
+		conversations: conversationsTemporary,
+		setConversations: setConversationsTemporary,
+		searchConversations: searchConversationsTemporary,
+		addConversation: addConversationTemporary,
+	} = useTemporaryMultipleConversationStore();
 
 	const {
 		isOpen: isOpenPreferences,
@@ -99,11 +111,16 @@ const Sidebar = () => {
 		let cid = uuidv4();
 
 		addConversationLocal(cid);
+		addConversationTemporary(cid);
 		addConversationMutation.mutate(cid);
 	};
 
 	const handleSearchConversation = (query: string) => {
-		searchConversationsLocal(query);
+		searchConversationsTemporary(query);
+	};
+
+	const handleOpenSearch = (search: boolean) => {
+		setOpenSearch(search);
 	};
 
 	const {
@@ -119,6 +136,7 @@ const Sidebar = () => {
 
 	useEffect(() => {
 		setConversationsLocal(conversationsServer);
+		setConversationsTemporary(conversationsTemporary);
 	}, [conversationsServer]);
 
 	return (
@@ -127,7 +145,7 @@ const Sidebar = () => {
 				<div className='flex flex-col flex-wrap justify-between space-between px-4 py-6 gap-4'>
 					{/* Header Container */}
 					<div className='flex justify-between items-center'>
-						<div className=''>
+						<div>
 							<Dropdown
 								backdrop='blur'
 								classNames={{
@@ -228,47 +246,82 @@ const Sidebar = () => {
 						</div>
 					</div>
 					{/* Search Container */}
-					<div>
+					<div className='flex space-x-3'>
+						{openSearch && (
+							<button
+								className='bg-background text-foreground text-2xl text-center leading-none'
+								onClick={() => handleOpenSearch(false)}
+							>
+								<BiSolidLeftArrow />
+							</button>
+						)}
 						<input
 							type='text'
 							value={conversationQuery}
 							placeholder='Search conversation'
-							className='p-4 w-full rounded-xl placeholder:font-bold placeholder:text-foreground font-bold text-foreground text-xl'
+							className='px-3 py-3 w-full rounded-xl placeholder:font-bold placeholder:text-foreground font-bold text-foreground text-xl'
 							onChange={(event) =>
 								handleSetConversationQuery(event.target.value)
 							}
+							onClick={() => handleOpenSearch(true)}
 							onKeyUp={(event) => {
 								if (event.key === 'Enter' && conversationQuery.length > 0) {
 									return handleSearchConversation(conversationQuery);
 								}
 
-								return setConversationsLocal(conversationsServer);
+								return setConversationsTemporary(conversationsLocal);
 							}}
 						/>
 					</div>
 					{/* Messages Container */}
 					<div className='overflow-y-scroll no-scrollbar h-screen'>
-						<ScrollShadow className='flex flex-col space-y-3 overflow-y-scroll no-scrollbar py-4 h-screen'>
-							{conversationsLocal?.map((conv) => (
-								<ConversationButton key={conv.id} conv={conv} />
-							))}
+						{openSearch && (
+							<ScrollShadow className='flex flex-col space-y-3 overflow-y-scroll no-scrollbar py-4 h-screen'>
+								{conversationsTemporary?.map((conv) => (
+									<ConversationButton key={conv.id} conv={conv} />
+								))}
 
-							{conversationsLocal?.length > 0 && (
-								<div>
-									<p className='text-xl font-extralight text-zinc-800 text-center'>
-										{conversationsLocal.length} conversations in total
-									</p>
-								</div>
-							)}
+								{conversationsTemporary?.length > 0 && (
+									<div>
+										<p className='text-xl font-extralight text-zinc-800 text-center'>
+											{conversationsTemporary.length} conversations in total
+										</p>
+									</div>
+								)}
 
-							{conversationsLocal?.length <= 0 && (
-								<div>
-									<p className='text-xl font-extralight text-zinc-800 text-center'>
-										No conversations
-									</p>
-								</div>
-							)}
-						</ScrollShadow>
+								{conversationsTemporary?.length <= 0 && (
+									<div>
+										<p className='text-xl font-extralight text-zinc-800 text-center'>
+											No conversations
+										</p>
+									</div>
+								)}
+							</ScrollShadow>
+						)}
+
+						{!openSearch && (
+							<ScrollShadow className='flex flex-col space-y-3 overflow-y-scroll no-scrollbar py-4 h-screen'>
+								{conversationsLocal?.map((conv) => (
+									<ConversationButton key={conv.id} conv={conv} />
+								))}
+
+								{conversationsLocal?.length > 0 && (
+									<div>
+										<p className='text-xl font-extralight text-zinc-800 text-center'>
+											{conversationsLocal.length} conversations in total
+										</p>
+									</div>
+								)}
+
+								{conversationsLocal?.length <= 0 && (
+									<div>
+										<p className='text-xl font-extralight text-zinc-800 text-center'>
+											No conversations
+										</p>
+									</div>
+								)}
+							</ScrollShadow>
+						)}
 					</div>
 					{/* Modals */}
 					<div>

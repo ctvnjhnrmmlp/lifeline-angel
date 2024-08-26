@@ -61,6 +61,51 @@ export const useMultipleConversationStore = create<MultipleConversationStore>()(
 	})
 );
 
+export const useTemporaryMultipleConversationStore =
+	create<MultipleConversationStore>()((set) => ({
+		conversations: [],
+		setConversations: (conversations) =>
+			set(() => ({ conversations: conversations })),
+		addConversation: (cid) =>
+			set((state) => ({
+				conversations: [
+					...state.conversations,
+					{
+						id: cid,
+						title: '',
+						userId: '',
+						createdAt: new Date(),
+						updatedAt: new Date(),
+					},
+				],
+			})),
+		searchConversations: (query) =>
+			set((state) => ({
+				conversations: state.conversations.filter(
+					(conversation) => conversation.title === query
+				),
+			})),
+		updateConversation: (cid, title) =>
+			set((state) => ({
+				conversations: state.conversations.map((conversation) => {
+					if (conversation.id === cid) {
+						return {
+							...conversation,
+							title: title,
+						};
+					} else {
+						return conversation;
+					}
+				}),
+			})),
+		deleteConversation: (cid) =>
+			set((state) => ({
+				conversations: state.conversations.filter(
+					(conversation) => conversation.id !== cid
+				),
+			})),
+	}));
+
 export const useSingleConversationStore = create<SingleConversationStore>()(
 	(set) => ({
 		conversation: null,

@@ -36,6 +36,7 @@ import { PhotoProvider, PhotoView } from 'react-photo-view';
 import {
 	useMultipleConversationStore,
 	useSingleConversationStore,
+	useTemporaryMultipleConversationStore,
 } from '@/stores/lifeline-angel/conversation';
 import {
 	convertTo24HourTimeFormat,
@@ -146,6 +147,11 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 		deleteConversation: deleteConversationLocal,
 	} = useMultipleConversationStore();
 
+	const {
+		updateConversation: updateConversationTemporary,
+		deleteConversation: deleteConversationTemporary,
+	} = useTemporaryMultipleConversationStore();
+
 	const updateConversationMutation = useMutation({
 		mutationFn: async (message: string) =>
 			await updateConversation(session.user.email, params.slug[0], message),
@@ -164,11 +170,13 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 
 	const handleUpdateConversation = (message: string) => {
 		updateConversationLocal(params.slug[0], message);
+		updateConversationTemporary(params.slug[0], message);
 		updateConversationMutation.mutate(message);
 	};
 
 	const handleDeleteConversation = () => {
 		deleteConversationLocal(params.slug[0]);
+		deleteConversationTemporary(params.slug[0]);
 		deleteConversationMutation.mutate();
 		router.push('/');
 	};
