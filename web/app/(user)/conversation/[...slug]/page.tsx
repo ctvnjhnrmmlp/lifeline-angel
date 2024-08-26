@@ -300,7 +300,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 							)} */}
 
 							{messagesLocal && !messagesLocal.length && (
-								<div className='space-y-6'>
+								<div className='space-y-10'>
 									<div className='space-y-4'>
 										<div>
 											<p className='text-2xl font-bold'>Text Injuries</p>
