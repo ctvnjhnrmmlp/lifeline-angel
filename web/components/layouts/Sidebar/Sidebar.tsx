@@ -137,7 +137,12 @@ const Sidebar = () => {
 	useEffect(() => {
 		setConversationsLocal(conversationsServer);
 		setConversationsTemporary(conversationsTemporary);
-	}, [conversationsServer, conversationsTemporary]);
+	}, [
+		setConversationsLocal,
+		setConversationsTemporary,
+		conversationsServer,
+		conversationsTemporary,
+	]);
 
 	return (
 		<aside className='fixed flex flex-col justify-center p-4 z-10 h-screen'>

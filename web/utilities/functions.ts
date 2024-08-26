@@ -14,6 +14,7 @@ export const getTimeDifference = (timestamp: string) => {
 	const now = new Date();
 	const time = new Date(timestamp);
 
+	// @ts-ignore
 	const secondsAgo = Math.floor((now - time) / 1000);
 	const minutesAgo = Math.floor(secondsAgo / 60);
 	const hoursAgo = Math.floor(minutesAgo / 60);
@@ -34,6 +35,7 @@ export const getTimeDifference = (timestamp: string) => {
 export const checkEntitySecondsAgo = (timestamp: string) => {
 	const now = new Date();
 	const then = new Date(timestamp);
+	// @ts-ignore
 	const diffInSeconds = Math.floor((now - then) / 1000);
 
 	const seconds = diffInSeconds;
@@ -59,6 +61,7 @@ export const convertToDateFormat = (timestamp: string) => {
 	const date = new Date(timestamp);
 
 	const options = { day: 'numeric', month: 'long', year: 'numeric' };
+	// @ts-ignore
 	const formattedDate = date.toLocaleDateString('en-GB', options);
 
 	return formattedDate;
