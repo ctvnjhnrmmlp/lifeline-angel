@@ -41,7 +41,7 @@ import {
 	convertTo24HourTimeFormat,
 	convertToDateFormat,
 } from '@/utilities/functions';
-import { ScrollShadow } from '@nextui-org/react';
+import { Card, CardBody, CardFooter, ScrollShadow } from '@nextui-org/react';
 import { useFormik } from 'formik';
 import { redirect, useRouter } from 'next/navigation';
 import React from 'react';
@@ -300,23 +300,60 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 							)} */}
 
 							{messagesLocal && !messagesLocal.length && (
-								<div className='space-y-4'>
-									<div>
-										<p className='text-2xl font-bold'>Text Injuries</p>
+								<div className='space-y-6'>
+									<div className='space-y-4'>
+										<div>
+											<p className='text-2xl font-bold'>Text Injuries</p>
+										</div>
+										<div className='flex flex-wrap gap-2'>
+											{TEXT_INJURIES.map((injury) => (
+												<button
+													key={injury.content}
+													className='text-lg rounded-2xl py-2 px-5 backdrop-blur-2xl bg-foreground/5 font-bold tracking-tight'
+													onClick={() => {
+														handleAddMessage(injury.content);
+														handleUpdateConversation(injury.content);
+													}}
+												>
+													{injury.content}
+												</button>
+											))}
+										</div>
 									</div>
-									<div className='flex flex-wrap gap-2'>
-										{TEXT_INJURIES.map((injury) => (
-											<button
-												key={injury.content}
-												className='text-lg rounded-2xl py-2 px-5 backdrop-blur-2xl bg-foreground/5 font-bold tracking-tight'
-												onClick={() => {
-													handleAddMessage(injury.content);
-													handleUpdateConversation(injury.content);
-												}}
-											>
-												{injury.content}
-											</button>
-										))}
+
+									<div className='space-y-4'>
+										<div>
+											<p className='text-2xl font-bold'>Image Injuries</p>
+										</div>
+										<div className='flex flex-wrap gap-3'>
+											{IMAGE_INJURIES.map((injury) => (
+												<Card
+													isPressable
+													shadow='sm'
+													key={injury.content}
+													classNames={{
+														base: 'backdrop-blur-2xl bg-foreground/5',
+													}}
+													onPress={() => {
+														handleAddMessage(injury.content);
+														handleUpdateConversation(injury.content);
+													}}
+												>
+													<CardBody className='overflow-visible p-0'>
+														<Image
+															width={130}
+															height={130}
+															alt={injury.content}
+															className='w-full object-cover'
+															src={`/images/${injury.source}`}
+														/>
+													</CardBody>
+													<CardFooter>
+														<p className='text-md'>{injury.content}</p>
+													</CardFooter>
+												</Card>
+											))}
+										</div>
 									</div>
 								</div>
 							)}
