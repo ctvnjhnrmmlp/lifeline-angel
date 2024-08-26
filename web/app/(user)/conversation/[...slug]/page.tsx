@@ -47,6 +47,8 @@ import { redirect, useRouter } from 'next/navigation';
 import React from 'react';
 import { FaLocationArrow, FaMicrophone } from 'react-icons/fa';
 import { FaCloudArrowUp } from 'react-icons/fa6';
+import { GiRaggedWound } from 'react-icons/gi';
+import { MdPersonalInjury } from 'react-icons/md';
 import { TypeAnimation } from 'react-type-animation';
 import { v4 as uuidv4 } from 'uuid';
 import * as Yup from 'yup';
@@ -57,6 +59,18 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 	if (!session) {
 		return redirect('/signin');
 	}
+
+	const {
+		isOpen: isOpenTextInjury,
+		onOpen: onOpenTextInjury,
+		onOpenChange: onOpenChangeTextInjury,
+	} = useDisclosure();
+
+	const {
+		isOpen: isOpenImageInjury,
+		onOpen: onOpenImageInjury,
+		onOpenChange: onOpenChangeImageInjury,
+	} = useDisclosure();
 
 	const {
 		isOpen: isOpenCamera,
@@ -269,6 +283,22 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 								</p>
 							</div>
 							<div className='flex space-x-2'>
+								{messagesServer && messagesServer.length > 0 && (
+									<>
+										<button
+											className='block rounded-full p-3 bg-foreground text-background text-2xl'
+											onClick={() => onOpenTextInjury()}
+										>
+											<MdPersonalInjury />
+										</button>
+										<button
+											className='block rounded-full p-3 bg-foreground text-background text-2xl'
+											onClick={() => onOpenImageInjury()}
+										>
+											<GiRaggedWound />
+										</button>
+									</>
+								)}
 								<button
 									className='block rounded-full p-3 bg-foreground text-background text-2xl'
 									onClick={() => onOpenCamera()}
@@ -287,12 +317,12 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 					{/* Messages */}
 					<div className='overflow-y-scroll no-scrollbar h-screen my-4'>
 						<ScrollShadow className='flex flex-col space-y-3 overflow-y-scroll no-scrollbar py-4 h-screen'>
-							{messagesLocal && messagesLocal.length && (
+							{messagesServer && messagesServer.length > 0 && (
 								<div className='backdrop-blur-2xl bg-foreground/5 rounded-full min-w-4/12 mx-auto'>
 									<div className='cursor-pointer px-6 py-4'>
 										<p className='text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance text-center'>
 											{convertToDateFormat(
-												messagesLocal[0].createdAt.toString()
+												messagesServer[0].createdAt.toString()
 											)}
 										</p>
 									</div>
@@ -503,68 +533,44 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 						<Modal
 							size='lg'
 							backdrop='blur'
-							closeButton={<></>}
-							isOpen={isOpenFile}
+							isOpen={isOpenTextInjury}
 							classNames={{
 								base: 'bg-background',
 								header: 'flex justify-center items-center',
 								body: 'flex gap-4',
 							}}
-							onOpenChange={() => onOpenChangeFile()}
+							onOpenChange={() => onOpenChangeTextInjury()}
 						>
 							<ModalContent>
 								{(onClose) => (
 									<>
 										<ModalHeader>
-											<p className='text-3xl font-bold text-center'>File</p>
+											<p className='text-2xl font-bold text-center'>
+												Text Injuries
+											</p>
 										</ModalHeader>
 										<ModalBody>
-											<div className='flex justify-center'>
-												<form
-													encType='multipart/form-data'
-													className='space-y-4'
-													onSubmit={formik.handleSubmit}
-												>
-													<Input
-														required
-														ref={fileRef}
-														id='image-input'
-														name='file'
-														type='file'
-														accept='image/*'
-														onChange={handleChange}
-													/>
-													<label
-														htmlFor='image-input'
-														className='flex flex-col items-center justify-center w-full h-72 rounded-2xl cursor-pointer bg-background outline outline-[#3F3F46] outline-[0.1px]'
-													>
-														<div className='flex flex-col items-center justify-center pt-5 pb-6'>
-															<FaCloudArrowUp className='text-9xl text-foreground' />
-															<p className='text-xl font-bold text-foreground'>
-																Click above to upload
-															</p>
-															<p className='text-sm text-foreground'>
-																PNG, JPG, JPEG
-															</p>
-														</div>
-													</label>
-													<div>
-														{formik.touched.file && formik.errors.file && (
-															<Chip color='danger' radius='sm'>
-																{formik.errors.file}
-															</Chip>
-														)}
-													</div>
-													<button
-														type='submit'
-														disabled={uploading}
-														className='block bg-foreground text-background text-3xl px-3 py-3 w-full rounded-xl font-extrabold leading-none tracking-tight uppercase'
-													>
-														{uploading && <span>Posting...</span>}
-														{!uploading && <span>Post</span>}
-													</button>
-												</form>
+											<div className='space-y-4'>
+												<div>
+													<p className='text-2xl font-bold'>Text Injuries</p>
+												</div>
+												<div className='flex flex-wrap gap-2'>
+													{TEXT_INJURIES.map((injury) => (
+														<button
+															key={injury.content}
+															className='text-lg rounded-2xl py-2 px-5 backdrop-blur-2xl bg-foreground/5 font-bold tracking-tight'
+															onClick={() => {
+																handleAddMessage(injury.content);
+																handleUpdateConversation(injury.content);
+															}}
+														>
+															{injury.content}
+														</button>
+													))}
+												</div>
 											</div>
+											{/* {messagesLocal && !messagesLocal.length && (
+											)} */}
 										</ModalBody>
 										<ModalFooter></ModalFooter>
 									</>
@@ -574,24 +580,57 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 						<Modal
 							size='lg'
 							backdrop='blur'
-							isOpen={isOpenMicrophone}
+							isOpen={isOpenImageInjury}
 							classNames={{
 								base: 'bg-background',
 								header: 'flex justify-center items-center',
 								body: 'flex gap-4',
 							}}
-							onOpenChange={() => onOpenChangeMicrophone()}
+							onOpenChange={() => onOpenChangeImageInjury()}
 						>
 							<ModalContent>
 								{(onClose) => (
 									<>
 										<ModalHeader>
 											<p className='text-2xl font-bold text-center'>
-												Microphone
+												Image Injuries
 											</p>
 										</ModalHeader>
 										<ModalBody>
-											<div className='flex justify-center'></div>
+											<div className='space-y-4'>
+												<div>
+													<p className='text-2xl font-bold'>Image Injuries</p>
+												</div>
+												<div className='flex flex-wrap gap-3'>
+													{IMAGE_INJURIES.map((injury) => (
+														<Card
+															isPressable
+															shadow='sm'
+															key={injury.content}
+															classNames={{
+																base: 'backdrop-blur-2xl bg-foreground/5',
+															}}
+															onPress={() => {
+																handleAddMessage(injury.content);
+																handleUpdateConversation(injury.content);
+															}}
+														>
+															<CardBody className='overflow-visible p-0'>
+																<Image
+																	width={130}
+																	height={130}
+																	alt={injury.content}
+																	className='w-full object-cover'
+																	src={`/images/${injury.source}`}
+																/>
+															</CardBody>
+															<CardFooter>
+																<p className='text-md'>{injury.content}</p>
+															</CardFooter>
+														</Card>
+													))}
+												</div>
+											</div>
 										</ModalBody>
 										<ModalFooter></ModalFooter>
 									</>
@@ -694,6 +733,104 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 													Delete
 												</p>
 											</button>
+										</ModalBody>
+										<ModalFooter></ModalFooter>
+									</>
+								)}
+							</ModalContent>
+						</Modal>
+						<Modal
+							size='lg'
+							backdrop='blur'
+							closeButton={<></>}
+							isOpen={isOpenFile}
+							classNames={{
+								base: 'bg-background',
+								header: 'flex justify-center items-center',
+								body: 'flex gap-4',
+							}}
+							onOpenChange={() => onOpenChangeFile()}
+						>
+							<ModalContent>
+								{(onClose) => (
+									<>
+										<ModalHeader>
+											<p className='text-3xl font-bold text-center'>File</p>
+										</ModalHeader>
+										<ModalBody>
+											<div className='flex justify-center'>
+												<form
+													encType='multipart/form-data'
+													className='space-y-4'
+													onSubmit={formik.handleSubmit}
+												>
+													<Input
+														required
+														ref={fileRef}
+														id='image-input'
+														name='file'
+														type='file'
+														accept='image/*'
+														onChange={handleChange}
+													/>
+													<label
+														htmlFor='image-input'
+														className='flex flex-col items-center justify-center w-full h-72 rounded-2xl cursor-pointer bg-background outline outline-[#3F3F46] outline-[0.1px]'
+													>
+														<div className='flex flex-col items-center justify-center pt-5 pb-6'>
+															<FaCloudArrowUp className='text-9xl text-foreground' />
+															<p className='text-xl font-bold text-foreground'>
+																Click above to upload
+															</p>
+															<p className='text-sm text-foreground'>
+																PNG, JPG, JPEG
+															</p>
+														</div>
+													</label>
+													<div>
+														{formik.touched.file && formik.errors.file && (
+															<Chip color='danger' radius='sm'>
+																{formik.errors.file}
+															</Chip>
+														)}
+													</div>
+													<button
+														type='submit'
+														disabled={uploading}
+														className='block bg-foreground text-background text-3xl px-3 py-3 w-full rounded-xl font-extrabold leading-none tracking-tight uppercase'
+													>
+														{uploading && <span>Posting...</span>}
+														{!uploading && <span>Post</span>}
+													</button>
+												</form>
+											</div>
+										</ModalBody>
+										<ModalFooter></ModalFooter>
+									</>
+								)}
+							</ModalContent>
+						</Modal>
+						<Modal
+							size='lg'
+							backdrop='blur'
+							isOpen={isOpenMicrophone}
+							classNames={{
+								base: 'bg-background',
+								header: 'flex justify-center items-center',
+								body: 'flex gap-4',
+							}}
+							onOpenChange={() => onOpenChangeMicrophone()}
+						>
+							<ModalContent>
+								{(onClose) => (
+									<>
+										<ModalHeader>
+											<p className='text-2xl font-bold text-center'>
+												Microphone
+											</p>
+										</ModalHeader>
+										<ModalBody>
+											<div className='flex justify-center'></div>
 										</ModalBody>
 										<ModalFooter></ModalFooter>
 									</>
