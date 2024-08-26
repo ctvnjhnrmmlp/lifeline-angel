@@ -35,8 +35,8 @@ export const useMultipleConversationStore = create<MultipleConversationStore>()(
 			})),
 		searchConversations: (query) =>
 			set((state) => ({
-				conversations: state.conversations.filter((conversation) =>
-					conversation.title.includes(query)
+				conversations: state.conversations.filter(
+					(conversation) => conversation.title === query
 				),
 			})),
 		updateConversation: (cid, title) =>

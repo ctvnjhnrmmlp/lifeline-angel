@@ -23,7 +23,7 @@ import {
 import { useMutation, useQuery } from '@tanstack/react-query';
 import { signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BiSolidRightArrow } from 'react-icons/bi';
 import { FaLifeRing, FaQuestion } from 'react-icons/fa';
 import { FaGear, FaShield } from 'react-icons/fa6';
@@ -35,7 +35,14 @@ import { v4 as uuidv4 } from 'uuid';
 const Sidebar = () => {
 	const { data: session } = useSession();
 
-	const [conversationQuery, setConversationQuery] = React.useState('');
+	const [conversationQuery, setConversationQuery] = useState('');
+
+	const {
+		conversations: conversationsLocal,
+		setConversations: setConversationsLocal,
+		searchConversations: searchConversationsLocal,
+		addConversation: addConversationLocal,
+	} = useMultipleConversationStore();
 
 	const {
 		isOpen: isOpenPreferences,
@@ -79,13 +86,6 @@ const Sidebar = () => {
 		onOpenChange: onOpenChangeReport,
 	} = useDisclosure();
 
-	const {
-		conversations: conversationsLocal,
-		setConversations: setConversationsLocal,
-		searchConversations: searchConversationsLocal,
-		addConversation: addConversationLocal,
-	} = useMultipleConversationStore();
-
 	const handleSetConversationQuery = (query: string) => {
 		setConversationQuery(query);
 	};
@@ -117,7 +117,7 @@ const Sidebar = () => {
 		queryFn: async () => await getConversations(session?.user.email),
 	});
 
-	React.useEffect(() => {
+	useEffect(() => {
 		setConversationsLocal(conversationsServer);
 	}, [conversationsServer]);
 
@@ -238,9 +238,11 @@ const Sidebar = () => {
 								handleSetConversationQuery(event.target.value)
 							}
 							onKeyUp={(event) => {
-								if (event.key === 'Enter') {
-									handleSearchConversation(conversationQuery);
+								if (event.key === 'Enter' && conversationQuery.length > 0) {
+									return handleSearchConversation(conversationQuery);
 								}
+
+								return setConversationsLocal(conversationsServer);
 							}}
 						/>
 					</div>
