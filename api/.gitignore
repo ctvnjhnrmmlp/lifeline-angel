@@ -34,13 +34,6 @@ build/
 # Environment variables
 .env
 
-# Model files
-*.h5
-*.keras
-
-# Pickle files
-*.pkl
-
 # NLTK data
 corpora/
 tokenizers/
