@@ -293,11 +293,15 @@
 				"How to treat heat stroke?",
 				"Heat stroke treatment advice?",
 				"How to prevent heat stroke?",
-				"Best way to cool down from heat stroke?"
+				"Best way to cool down from heat stroke?",
+				"Best way to recover from heat stroke?",
+				"How to manage heat stroke?"
 			],
 			"responses": [
 				"Move to a cooler place and lie down with your legs slightly elevated. Apply cool water to your skin and use a fan to help with cooling. Drink cool water or an electrolyte drink, but avoid sugary or alcoholic beverages. Seek emergency medical attention immediately.",
-				"Get to a cool place, remove excess clothing, and apply cold packs or wet cloths. Drink cool water or sports drinks, and seek immediate medical help."
+				"Get to a cool place, remove excess clothing, and apply cold packs or wet cloths. Drink cool water or sports drinks, and seek immediate medical help.",
+				"Call emergency services immediately. Move the person to a cool area and remove excess clothing. Use cool water or ice packs to lower their body temperature. Keep monitoring their condition until help arrives.",
+				"Seek emergency medical help. Cool the person down with water or ice packs and stay with them until help arrives."
 			],
 			"context_set": ""
 		},
@@ -462,21 +466,6 @@
 			"responses": [
 				"Move to a cool, shaded area and drink plenty of water. Loosen or remove clothing and apply cool, wet cloths to the skin. Rest until fully recovered. If symptoms worsen, seek medical help.",
 				"Cool down, hydrate, and rest in a shaded area. Seek medical attention if symptoms do not improve."
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Heat Stroke",
-			"patterns": [
-				"How to treat heat stroke?",
-				"What to do for heat stroke?",
-				"Best way to recover from heat stroke?",
-				"Heat stroke treatment advice?",
-				"How to manage heat stroke?"
-			],
-			"responses": [
-				"Call emergency services immediately. Move the person to a cool area and remove excess clothing. Use cool water or ice packs to lower their body temperature. Keep monitoring their condition until help arrives.",
-				"Seek emergency medical help. Cool the person down with water or ice packs and stay with them until help arrives."
 			],
 			"context_set": ""
 		},
