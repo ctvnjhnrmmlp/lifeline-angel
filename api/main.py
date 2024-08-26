@@ -15,6 +15,8 @@ from nltk.stem import WordNetLemmatizer
 from pydantic import BaseModel
 from tensorflow.keras.models import load_model
 
+nltk.download('punkt')
+
 app = FastAPI()
 
 # Initialize the lemmatizer
