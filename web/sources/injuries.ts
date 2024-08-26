@@ -7,15 +7,11 @@ export const TEXT_INJURIES = [
 	{ content: 'Sprains' },
 	{ content: 'Strains' },
 	{ content: 'Bruises' },
-	{ content: 'Normal Wound' },
-	{ content: 'Frost Bite' },
-	{ content: 'Insect Bites' },
 	{ content: 'Pulled Muscle' },
 	{ content: 'Sun Burn' },
 	{ content: 'Chemical Burn' },
 	{ content: 'Rash' },
 	{ content: 'Snake Bite' },
-	{ content: 'Animal Bite' },
 	{ content: 'Bleeding' },
 	{ content: 'Fracture' },
 	{ content: 'Fever' },
@@ -25,7 +21,6 @@ export const TEXT_INJURIES = [
 	{ content: 'Dehydration' },
 	{ content: 'Nasal Congestion' },
 	{ content: 'Cough' },
-	{ content: 'Gastrointestinal Problems' },
 	{ content: 'Skin Problems' },
 	{ content: 'Abdominal Pain' },
 	{ content: 'Broken Toe' },
@@ -45,7 +40,6 @@ export const TEXT_INJURIES = [
 	{ content: 'Headache' },
 	{ content: 'Cold' },
 	{ content: 'Drowning' },
-	{ content: 'CPR' },
 ];
 
 export const IMAGE_INJURIES = [
