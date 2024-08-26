@@ -45,7 +45,7 @@ import {
 import { Card, CardBody, CardFooter, ScrollShadow } from '@nextui-org/react';
 import { useFormik } from 'formik';
 import { redirect, useRouter } from 'next/navigation';
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { FaLocationArrow, FaMicrophone } from 'react-icons/fa';
 import { FaCloudArrowUp } from 'react-icons/fa6';
 import { GiRaggedWound } from 'react-icons/gi';
@@ -55,11 +55,11 @@ import { v4 as uuidv4 } from 'uuid';
 import * as Yup from 'yup';
 
 export default function Page({ params }: { params: { slug: string[] } }) {
+	const router = useRouter();
 	const { data: session } = useSession();
-
-	if (!session) {
-		return redirect('/signin');
-	}
+	const fileRef = useRef<HTMLInputElement>(null);
+	const [message, setMessage] = useState('');
+	const [uploading, setUploading] = useState(false);
 
 	const {
 		isOpen: isOpenTextInjury,
@@ -102,6 +102,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 		onOpen: onOpenMedia,
 		onOpenChange: onOpenChangeMedia,
 	} = useDisclosure();
+
 	const {
 		isOpen: isOpenPrivacy,
 		onOpen: onOpenPrivacy,
@@ -126,11 +127,6 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 		onOpenChange: onOpenChangeUpdate,
 	} = useDisclosure();
 
-	const router = useRouter();
-	const [message, setMessage] = React.useState('');
-	const fileRef = React.useRef<HTMLInputElement>(null);
-	const [uploading, setUploading] = React.useState(false);
-
 	const {
 		conversation: conversationLocal,
 		setConversation: setConversationLocal,
@@ -154,41 +150,19 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 
 	const updateConversationMutation = useMutation({
 		mutationFn: async (message: string) =>
-			await updateConversation(session.user.email, params.slug[0], message),
+			await updateConversation(session?.user.email, params.slug[0], message),
 	});
 
 	const deleteConversationMutation = useMutation({
 		mutationFn: async () =>
-			await deleteConversation(session.user.email, params.slug[0]),
+			await deleteConversation(session?.user.email, params.slug[0]),
 	});
 
 	const addMessageMutation = useMutation({
 		mutationFn: async ({ mid, message }: { mid: string; message: string }) =>
-			await addTextMessage(session.user.email, params.slug[0], mid, message),
+			await addTextMessage(session?.user.email, params.slug[0], mid, message),
 		onSuccess: () => refetchMessages(),
 	});
-
-	const handleUpdateConversation = (message: string) => {
-		updateConversationLocal(params.slug[0], message);
-		updateConversationTemporary(params.slug[0], message);
-		updateConversationMutation.mutate(message);
-	};
-
-	const handleDeleteConversation = () => {
-		deleteConversationLocal(params.slug[0]);
-		deleteConversationTemporary(params.slug[0]);
-		deleteConversationMutation.mutate();
-		router.push('/');
-	};
-
-	const handleAddMessage = (message: string) => {
-		const mid = uuidv4();
-
-		addMessageLocal(params.slug[0], mid, message);
-		addMessageMutation.mutate({ mid, message });
-		refetchMessages();
-		setMessage('');
-	};
 
 	const formik = useFormik({
 		initialValues: {
@@ -199,7 +173,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 
 			try {
 				const response = await addImageMessage(
-					session.user.email,
+					session?.user.email,
 					params.slug[0],
 					uuidv4(),
 					formik.values.file
@@ -219,25 +193,20 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 				.test('file-format', 'Only image files are allowed', (value) => {
 					if (value) {
 						const supportedFormats = ['png', 'jpg', 'jpeg'];
+						// @ts-ignore
 						return supportedFormats.includes(value.name.split('.').pop());
 					}
 					return true;
 				})
 				.test('file-size', 'File size must not be more than 10MB', (value) => {
 					if (value) {
+						// @ts-ignore
 						return value.size < 5145728;
 					}
 					return true;
 				}),
 		}),
 	});
-
-	const handleChange = (event: React.ChangeEvent) => {
-		const target = event.target as HTMLInputElement;
-		const file = target.files![0];
-
-		formik.setFieldValue('file', file);
-	};
 
 	const {
 		data: conversationServer,
@@ -262,19 +231,52 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 		queryFn: async () => await getMessages(session?.user.email, params.slug[0]),
 	});
 
-	React.useEffect(() => {
+	useEffect(() => {
 		setConversationLocal(conversationServer);
-	}, [conversationServer]);
+	}, [setConversationLocal, conversationServer]);
 
-	React.useEffect(() => {
+	useEffect(() => {
 		setMessagesLocal(messagesServer);
-	}, [messagesServer]);
+	}, [setMessagesLocal, messagesServer]);
 
-	React.useEffect(() => {
+	useEffect(() => {
 		if (messagesStatus === 'success' && messagesServer) {
 			setMessagesLocal(messagesServer);
 		}
-	}, [refetchMessages]);
+	}, [refetchMessages, messagesStatus, messagesServer, setMessagesLocal]);
+
+	if (!session) {
+		return redirect('/signin');
+	}
+
+	const handleUpdateConversation = (message: string) => {
+		updateConversationLocal(params.slug[0], message);
+		updateConversationTemporary(params.slug[0], message);
+		updateConversationMutation.mutate(message);
+	};
+
+	const handleDeleteConversation = () => {
+		deleteConversationLocal(params.slug[0]);
+		deleteConversationTemporary(params.slug[0]);
+		deleteConversationMutation.mutate();
+		router.push('/');
+	};
+
+	const handleAddMessage = (message: string) => {
+		const mid = uuidv4();
+
+		addMessageLocal(params.slug[0], mid, message);
+		addMessageMutation.mutate({ mid, message });
+		refetchMessages();
+		setMessage('');
+	};
+
+	const handleChange = (event: React.ChangeEvent) => {
+		const target = event.target as HTMLInputElement;
+		const file = target.files![0];
+
+		formik.setFieldValue('file', file);
+	};
 
 	return (
 		<main className='flex flex-col justify-center pl-[26rem] py-4 pr-4 h-screen w-screen'>

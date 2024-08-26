@@ -54,7 +54,7 @@ export default function Page() {
 						</div>
 						<div>
 							<p className='text-2xl font-light'>
-								Don't have an account?{' '}
+								{`Don't have an account?`}{' '}
 								<Link className='font-bold' href='/signup'>
 									{' '}
 									Sign up
