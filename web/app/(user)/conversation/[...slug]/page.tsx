@@ -287,7 +287,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 					{/* Messages */}
 					<div className='overflow-y-scroll no-scrollbar h-screen my-4'>
 						<ScrollShadow className='flex flex-col space-y-3 overflow-y-scroll no-scrollbar py-4 h-screen'>
-							{/* {messagesLocal[0] && (
+							{messagesLocal && messagesLocal.length && (
 								<div className='backdrop-blur-2xl bg-foreground/5 rounded-full min-w-4/12 mx-auto'>
 									<div className='cursor-pointer px-6 py-4'>
 										<p className='text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance text-center'>
@@ -297,7 +297,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 										</p>
 									</div>
 								</div>
-							)} */}
+							)}
 
 							{messagesLocal && !messagesLocal.length && (
 								<div className='space-y-10'>
