@@ -531,7 +531,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 					{/* Conversation Modals */}
 					<div>
 						<Modal
-							size='lg'
+							size='xl'
 							backdrop='blur'
 							isOpen={isOpenTextInjury}
 							classNames={{
@@ -550,27 +550,21 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 											</p>
 										</ModalHeader>
 										<ModalBody>
-											<div className='space-y-4'>
-												<div>
-													<p className='text-2xl font-bold'>Text Injuries</p>
-												</div>
-												<div className='flex flex-wrap gap-2'>
-													{TEXT_INJURIES.map((injury) => (
-														<button
-															key={injury.content}
-															className='text-lg rounded-2xl py-2 px-5 backdrop-blur-2xl bg-foreground/5 font-bold tracking-tight'
-															onClick={() => {
-																handleAddMessage(injury.content);
-																handleUpdateConversation(injury.content);
-															}}
-														>
-															{injury.content}
-														</button>
-													))}
-												</div>
+											<div className='flex flex-wrap gap-2'>
+												{TEXT_INJURIES.map((injury) => (
+													<button
+														key={injury.content}
+														className='text-lg rounded-2xl py-2 px-5 backdrop-blur-2xl bg-foreground/5 font-bold tracking-tight'
+														onClick={() => {
+															handleAddMessage(injury.content);
+															handleUpdateConversation(injury.content);
+															onOpenChangeTextInjury();
+														}}
+													>
+														{injury.content}
+													</button>
+												))}
 											</div>
-											{/* {messagesLocal && !messagesLocal.length && (
-											)} */}
 										</ModalBody>
 										<ModalFooter></ModalFooter>
 									</>
@@ -578,7 +572,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 							</ModalContent>
 						</Modal>
 						<Modal
-							size='lg'
+							size='full'
 							backdrop='blur'
 							isOpen={isOpenImageInjury}
 							classNames={{
@@ -597,39 +591,35 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 											</p>
 										</ModalHeader>
 										<ModalBody>
-											<div className='space-y-4'>
-												<div>
-													<p className='text-2xl font-bold'>Image Injuries</p>
-												</div>
-												<div className='flex flex-wrap gap-3'>
-													{IMAGE_INJURIES.map((injury) => (
-														<Card
-															isPressable
-															shadow='sm'
-															key={injury.content}
-															classNames={{
-																base: 'backdrop-blur-2xl bg-foreground/5',
-															}}
-															onPress={() => {
-																handleAddMessage(injury.content);
-																handleUpdateConversation(injury.content);
-															}}
-														>
-															<CardBody className='overflow-visible p-0'>
-																<Image
-																	width={130}
-																	height={130}
-																	alt={injury.content}
-																	className='w-full object-cover'
-																	src={`/images/${injury.source}`}
-																/>
-															</CardBody>
-															<CardFooter>
-																<p className='text-md'>{injury.content}</p>
-															</CardFooter>
-														</Card>
-													))}
-												</div>
+											<div className='flex flex-wrap gap-3'>
+												{IMAGE_INJURIES.map((injury) => (
+													<Card
+														isPressable
+														shadow='sm'
+														key={injury.content}
+														classNames={{
+															base: 'backdrop-blur-2xl bg-foreground/5',
+														}}
+														onPress={() => {
+															handleAddMessage(injury.content);
+															handleUpdateConversation(injury.content);
+															onOpenChangeImageInjury();
+														}}
+													>
+														<CardBody className='overflow-visible p-0'>
+															<Image
+																width={130}
+																height={130}
+																alt={injury.content}
+																className='w-full object-cover'
+																src={`/images/${injury.source}`}
+															/>
+														</CardBody>
+														<CardFooter>
+															<p className='text-md'>{injury.content}</p>
+														</CardFooter>
+													</Card>
+												))}
 											</div>
 										</ModalBody>
 										<ModalFooter></ModalFooter>
