@@ -237,7 +237,7 @@ const Sidebar = () => {
 						<div className='flex flex-grow justify-end gap-2'>
 							<Link href='/'>
 								<button
-									className='block rounded-full p-3 bg-foreground text-background text-2xl'
+									className='rounded-full p-3 bg-foreground text-background text-2xl'
 									onClick={() => handleAddConversation()}
 								>
 									<ImPlus />

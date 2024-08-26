@@ -294,13 +294,13 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 								{messagesServer && messagesServer.length > 0 && (
 									<>
 										<button
-											className='block rounded-full p-3 bg-foreground text-background text-2xl'
+											className='p-3 text-foreground text-2xl'
 											onClick={() => onOpenTextInjury()}
 										>
 											<MdPersonalInjury />
 										</button>
 										<button
-											className='block rounded-full p-3 bg-foreground text-background text-2xl'
+											className='p-3 text-foreground text-2xl'
 											onClick={() => onOpenImageInjury()}
 										>
 											<GiRaggedWound />
@@ -308,13 +308,13 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 									</>
 								)}
 								<button
-									className='block rounded-full p-3 bg-foreground text-background text-2xl'
+									className='p-3 text-foreground text-2xl'
 									onClick={() => onOpenCamera()}
 								>
 									<FaCamera />
 								</button>
 								<button
-									className='block rounded-full p-3 bg-foreground text-background text-2xl'
+									className='p-3 text-foreground text-2xl'
 									onClick={() => onOpenOptions()}
 								>
 									<BsGrid1X2Fill />
@@ -493,7 +493,18 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 						</ScrollShadow>
 					</div>
 					{/* Message */}
-					<div className='w-full flex justify-between space-x-3'>
+					<div className='flex justify-between items-center space-x-6'>
+						<div className='flex items-center justify-center space-x-4'>
+							<button className='text-foreground text-2xl' onClick={onOpenFile}>
+								<FaPaperclip />
+							</button>
+							<button
+								className='text-foreground text-2xl'
+								onClick={onOpenMicrophone}
+							>
+								<FaMicrophone />
+							</button>
+						</div>
 						<div className='w-full'>
 							<input
 								type='text'
@@ -511,22 +522,10 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 								}}
 							/>
 						</div>
-						<div className='flex items-center justify-center space-x-2'>
-							<button
-								className='block rounded-full bg-foreground text-background text-2xl p-4'
-								onClick={onOpenFile}
-							>
-								<FaPaperclip />
-							</button>
-							<button
-								className='block rounded-full bg-foreground text-background text-2xl p-4'
-								onClick={onOpenMicrophone}
-							>
-								<FaMicrophone />
-							</button>
+						<div>
 							<button
 								disabled={message.length <= 0}
-								className='block rounded-full bg-foreground text-background text-2xl p-4'
+								className='rounded-full bg-foreground text-background text-2xl p-3'
 								onClick={() => {
 									handleAddMessage(message);
 									handleUpdateConversation(message);
