@@ -449,7 +449,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 												<>
 													<div
 														key={message.id}
-														className='bg-foreground rounded-2xl ml-0 mr-auto w-6/12'
+														className='bg-foreground rounded-2xl ml-0 mr-auto w-4/12'
 													>
 														<div className='cursor-pointer p-4'>
 															<p className='text-lg text-background tracking-tight leading-none text-ellipsis text-balance'>
@@ -472,7 +472,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 												<>
 													<div
 														key={message.id}
-														className='bg-foreground rounded-2xl ml-0 mr-auto w-6/12'
+														className='bg-foreground rounded-2xl ml-0 mr-auto w-4/12'
 													>
 														<div className='cursor-pointer p-4'>
 															<p className='text-lg text-background tracking-tight leading-none text-ellipsis text-balance'>
