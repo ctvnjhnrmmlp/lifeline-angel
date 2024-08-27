@@ -23,7 +23,6 @@ export const useMultipleConversationStore = create<MultipleConversationStore>()(
 		addConversation: (cid) =>
 			set((state) => ({
 				conversations: [
-					...state.conversations,
 					{
 						id: cid,
 						title: '',
@@ -31,6 +30,7 @@ export const useMultipleConversationStore = create<MultipleConversationStore>()(
 						createdAt: new Date(),
 						updatedAt: new Date(),
 					},
+					...state.conversations,
 				],
 			})),
 		searchConversations: (query) =>
@@ -69,7 +69,6 @@ export const useTemporaryMultipleConversationStore =
 		addConversation: (cid) =>
 			set((state) => ({
 				conversations: [
-					...state.conversations,
 					{
 						id: cid,
 						title: '',
@@ -77,6 +76,7 @@ export const useTemporaryMultipleConversationStore =
 						createdAt: new Date(),
 						updatedAt: new Date(),
 					},
+					...state.conversations,
 				],
 			})),
 		searchConversations: (query) =>
