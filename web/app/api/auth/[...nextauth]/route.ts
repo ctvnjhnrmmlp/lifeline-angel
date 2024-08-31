@@ -16,21 +16,6 @@ const handler = NextAuth({
 		}),
 	],
 	callbacks: {
-		async session({ session }) {
-			if (session.user) {
-				const user = await Prisma.user.findUnique({
-					where: {
-						// @ts-ignore
-						email: session.user.email,
-					},
-				});
-
-				// @ts-ignore
-				session.user = user;
-			}
-
-			return session;
-		},
 		async signIn({ profile }) {
 			if (profile) {
 				try {
@@ -48,6 +33,21 @@ const handler = NextAuth({
 			}
 
 			return false;
+		},
+		async session({ session }) {
+			if (session.user) {
+				const user = await Prisma.user.findUnique({
+					where: {
+						// @ts-ignore
+						email: session.user.email,
+					},
+				});
+
+				// @ts-ignore
+				session.user = user;
+			}
+
+			return session;
 		},
 	},
 });

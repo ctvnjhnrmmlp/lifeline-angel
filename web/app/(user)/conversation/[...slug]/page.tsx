@@ -44,8 +44,8 @@ import {
 } from '@/utilities/functions';
 import { Card, CardBody, CardFooter, ScrollShadow } from '@nextui-org/react';
 import { useFormik } from 'formik';
-import { useRouter } from 'next/navigation';
-import { useEffect, useRef, useState } from 'react';
+import { redirect, useRouter } from 'next/navigation';
+import React, { useEffect, useRef, useState } from 'react';
 import { FaLocationArrow, FaMicrophone } from 'react-icons/fa';
 import { FaCloudArrowUp } from 'react-icons/fa6';
 import { GiRaggedWound } from 'react-icons/gi';
@@ -273,6 +273,10 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 
 		formik.setFieldValue('file', file);
 	};
+
+	if (!session) {
+		return redirect('/signin');
+	}
 
 	return (
 		<main className='flex flex-col justify-center pl-[26rem] py-4 pr-4 h-screen w-screen'>

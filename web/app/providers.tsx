@@ -4,12 +4,9 @@ import { NextUIProvider } from '@nextui-org/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { SessionProvider } from 'next-auth/react';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
-import { useRouter } from 'next/navigation';
-import React from 'react';
+import { ReactNode } from 'react';
 
-export default function Providers({ children }: { children: React.ReactNode }) {
-	const router = useRouter();
-
+export default function Providers({ children }: { children: ReactNode }) {
 	const queryClient = new QueryClient({
 		defaultOptions: {
 			queries: {
