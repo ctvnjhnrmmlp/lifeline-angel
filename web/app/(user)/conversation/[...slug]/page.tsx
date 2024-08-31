@@ -44,8 +44,8 @@ import {
 } from '@/utilities/functions';
 import { Card, CardBody, CardFooter, ScrollShadow } from '@nextui-org/react';
 import { useFormik } from 'formik';
-import { redirect, useRouter } from 'next/navigation';
-import React, { useEffect, useRef, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { useEffect, useRef, useState } from 'react';
 import { FaLocationArrow, FaMicrophone } from 'react-icons/fa';
 import { FaCloudArrowUp } from 'react-icons/fa6';
 import { GiRaggedWound } from 'react-icons/gi';
@@ -244,10 +244,6 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 			setMessagesLocal(messagesServer);
 		}
 	}, [refetchMessages, messagesStatus, messagesServer, setMessagesLocal]);
-
-	if (!session) {
-		return redirect('/signin');
-	}
 
 	const handleUpdateConversation = (message: string) => {
 		updateConversationLocal(params.slug[0], message);

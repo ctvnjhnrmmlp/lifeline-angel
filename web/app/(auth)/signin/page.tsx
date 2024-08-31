@@ -1,12 +1,10 @@
 'use client';
 
-import { signIn, useSession } from 'next-auth/react';
+import { signIn } from 'next-auth/react';
 import Link from 'next/link';
-import { redirect } from 'next/navigation';
 import { FaFacebookF, FaGoogle, FaInstagram } from 'react-icons/fa';
 
 export default function Page() {
-	const { data: session } = useSession();
 	const STRATEGIES = [
 		{
 			name: 'Google',
@@ -21,10 +19,6 @@ export default function Page() {
 			icon: FaInstagram,
 		},
 	];
-
-	if (session) {
-		return redirect('/');
-	}
 
 	return (
 		<main className='flex flex-col justify-center p-6 h-screen w-screen'>

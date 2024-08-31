@@ -6,10 +6,13 @@ import GoogleProvider from 'next-auth/providers/google';
 
 const handler = NextAuth({
 	adapter: PrismaAdapter(Prisma) as Adapter,
+	pages: {
+		signIn: '/signin',
+	},
 	providers: [
 		GoogleProvider({
-			clientId: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID as string,
-			clientSecret: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_SECRET as string,
+			clientId: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID,
+			clientSecret: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_SECRET,
 		}),
 	],
 	callbacks: {
@@ -31,7 +34,7 @@ const handler = NextAuth({
 		async signIn({ profile }) {
 			if (profile) {
 				try {
-					const user = await Prisma.user.findUnique({
+					await Prisma.user.findUnique({
 						where: {
 							email: profile.email,
 						},

@@ -1,12 +1,10 @@
 'use client';
 
-import { signIn, useSession } from 'next-auth/react';
+import { signIn } from 'next-auth/react';
 import Link from 'next/link';
-import { redirect } from 'next/navigation';
 import { FaFacebookF, FaGoogle, FaInstagram } from 'react-icons/fa';
 
 export default function Page() {
-	const { data: session } = useSession();
 	const STRATEGIES = [
 		{
 			name: 'Google',
@@ -22,15 +20,10 @@ export default function Page() {
 		},
 	];
 
-	if (session) {
-		return redirect('/');
-	}
-
 	return (
 		<main className='flex flex-col justify-center p-6 h-screen w-screen'>
 			<section className='flex items-center overflow-y-scroll no-scrollbar backdrop-blur-2xl bg-foreground/5 rounded-3xl h-screen'>
 				<div className='w-full flex flex-col flex-wrap justify-between space-between px-4 py-12 gap-12'>
-					{/*  */}
 					<div className='flex flex-col justify-center items-center space-y-12'>
 						<div>
 							<h1 className='text-foreground text-center font-extrabold text-8xl leading-none tracking-tight uppercase'>
@@ -42,6 +35,7 @@ export default function Page() {
 								<button
 									key={strategy.name}
 									className='py-2 px-6 sm:p-4 md:px-12 md:py-10 text-2xl sm:text-3xl md:text-5xl lg:text-6xl rounded-full text-center sm:flex-grow backdrop-blur-sm bg-background/5'
+									onClick={() => signIn(strategy.name.toLocaleLowerCase())}
 								>
 									<div>
 										<strategy.icon className='absolute left-12' />

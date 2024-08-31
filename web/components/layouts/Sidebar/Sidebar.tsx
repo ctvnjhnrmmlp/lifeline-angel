@@ -26,7 +26,7 @@ import {
 import { useMutation, useQuery } from '@tanstack/react-query';
 import { signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BiSolidLeftArrow, BiSolidRightArrow } from 'react-icons/bi';
 import { FaLifeRing, FaQuestion } from 'react-icons/fa';
 import { FaGear, FaShield } from 'react-icons/fa6';
