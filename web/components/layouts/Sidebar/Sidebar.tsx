@@ -135,7 +135,7 @@ const Sidebar = () => {
 	});
 
 	useEffect(() => {
-		setConversationsLocal(conversationsServer);
+		setConversationsLocal(conversationsServer!);
 		setConversationsTemporary(conversationsTemporary);
 	}, [conversationsServer]);
 
