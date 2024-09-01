@@ -232,11 +232,11 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 	});
 
 	useEffect(() => {
-		setConversationLocal(conversationServer);
+		setConversationLocal(conversationServer!);
 	}, [setConversationLocal, conversationServer]);
 
 	useEffect(() => {
-		setMessagesLocal(messagesServer);
+		setMessagesLocal(messagesServer!);
 	}, [setMessagesLocal, messagesServer]);
 
 	useEffect(() => {

@@ -1,10 +1,12 @@
+import { Message } from '@prisma/client';
 import client from './client';
 
-const apiClient = client(
-	process.env.NEXT_PUBLIC_LIFELINE_ANGEL_API_URL as string
-);
+const apiClient = client(process.env.NEXT_PUBLIC_LIFELINE_ANGEL_API_URL);
 
-export const getMessages = async (email: string, id: string) => {
+export const getMessages = async (
+	email: string,
+	id: string
+): Promise<Message[]> => {
 	try {
 		const response = await apiClient.post(
 			'/api/message/text/get',
@@ -25,8 +27,7 @@ export const getMessages = async (email: string, id: string) => {
 
 		throw new Error();
 	} catch (error) {
-		console.error(error);
-		return false;
+		return [];
 	}
 };
 
@@ -58,7 +59,6 @@ export const addTextMessage = async (
 
 		throw new Error();
 	} catch (error) {
-		console.error(error);
 		return false;
 	}
 };
@@ -89,7 +89,6 @@ export const addImageMessage = async (
 
 		throw new Error();
 	} catch (error) {
-		console.error(error);
 		return false;
 	}
 };

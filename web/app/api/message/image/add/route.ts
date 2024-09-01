@@ -2,15 +2,13 @@ import Prisma from '@/database/database';
 import client from '@/services/lifeline-angel/client';
 import { PutObjectCommand, S3Client } from '@aws-sdk/client-s3';
 
-const apiClient = client(
-	process.env.NEXT_PUBLIC_LIFELINE_ANGEL_API_MODEL_URL as string
-);
+const apiClient = client(process.env.NEXT_PUBLIC_LIFELINE_ANGEL_API_MODEL_URL);
 
 const s3Client = new S3Client({
-	region: process.env.AWS_REGION as string,
+	region: process.env.AWS_REGION,
 	credentials: {
-		accessKeyId: process.env.AWS_ACCESS_KEY_ID as string,
-		secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY as string,
+		accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+		secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
 	},
 });
 

@@ -1,10 +1,11 @@
+import { Conversation } from '@prisma/client';
 import client from './client';
 
-const apiClient = client(
-	process.env.NEXT_PUBLIC_LIFELINE_ANGEL_API_URL as string
-);
+const apiClient = client(process.env.NEXT_PUBLIC_LIFELINE_ANGEL_API_URL);
 
-export const getConversations = async (email: string) => {
+export const getConversations = async (
+	email: string
+): Promise<Conversation[]> => {
 	try {
 		const response = await apiClient.get('/api/conversation/get', {
 			headers: {
@@ -19,12 +20,14 @@ export const getConversations = async (email: string) => {
 
 		throw new Error();
 	} catch (error) {
-		console.error(error);
-		return false;
+		return [];
 	}
 };
 
-export const getConversation = async (email: string, id: string) => {
+export const getConversation = async (
+	email: string,
+	id: string
+): Promise<Conversation | null> => {
 	try {
 		const response = await apiClient.post(
 			'/api/conversation/get/id',
@@ -43,12 +46,14 @@ export const getConversation = async (email: string, id: string) => {
 
 		throw new Error();
 	} catch (error) {
-		console.error(error);
-		return false;
+		return null;
 	}
 };
 
-export const searchConversations = async (email: string, query: string) => {
+export const searchConversations = async (
+	email: string,
+	query: string
+): Promise<Conversation[]> => {
 	try {
 		const response = await apiClient.post(
 			'/api/conversation/search',
@@ -67,8 +72,7 @@ export const searchConversations = async (email: string, query: string) => {
 
 		throw new Error();
 	} catch (error) {
-		console.error(error);
-		return false;
+		return [];
 	}
 };
 
@@ -93,7 +97,6 @@ export const addConversation = async (email: string, id: string) => {
 
 		throw new Error();
 	} catch (error) {
-		console.error(error);
 		return false;
 	}
 };
@@ -124,7 +127,6 @@ export const updateConversation = async (
 
 		throw new Error();
 	} catch (error) {
-		console.error(error);
 		return false;
 	}
 };
@@ -148,7 +150,6 @@ export const deleteConversation = async (email: string, id: string) => {
 
 		throw new Error();
 	} catch (error) {
-		console.error(error);
 		return false;
 	}
 };

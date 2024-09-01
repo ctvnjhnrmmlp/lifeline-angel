@@ -1,9 +1,7 @@
 import Prisma from '@/database/database';
 import client from '@/services/lifeline-angel/client';
 
-const apiClient = client(
-	process.env.NEXT_PUBLIC_LIFELINE_ANGEL_API_MODEL_URL as string
-);
+const apiClient = client(process.env.NEXT_PUBLIC_LIFELINE_ANGEL_API_MODEL_URL);
 
 const classifyText = async (text: string) => {
 	try {
