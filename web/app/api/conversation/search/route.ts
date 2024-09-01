@@ -22,6 +22,9 @@ export async function POST(req: Request) {
 
 		const conversations = await Prisma.conversation.findMany({
 			where: {
+				user: {
+					email: email,
+				},
 				title: {
 					contains: query,
 					mode: 'insensitive',

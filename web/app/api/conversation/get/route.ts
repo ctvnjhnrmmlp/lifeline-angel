@@ -16,7 +16,13 @@ export async function GET(req: Request) {
 			});
 		}
 
-		const conversations = await Prisma.conversation.findMany();
+		const conversations = await Prisma.conversation.findMany({
+			where: {
+				user: {
+					email: email,
+				},
+			},
+		});
 
 		return Response.json({ message: 'Success', conversations });
 	} catch (error) {

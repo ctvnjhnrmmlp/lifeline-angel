@@ -29,6 +29,9 @@ export async function POST(req: Request) {
 		await Prisma.conversation.delete({
 			where: {
 				id: id,
+				user: {
+					email: email,
+				},
 			},
 		});
 

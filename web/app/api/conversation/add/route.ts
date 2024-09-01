@@ -24,7 +24,11 @@ export async function POST(req: Request) {
 			data: {
 				id: id,
 				title: '',
-				userId: user.id,
+				user: {
+					connect: {
+						id: user.id,
+					},
+				},
 			},
 		});
 

@@ -23,6 +23,9 @@ export async function POST(req: Request) {
 		const conversation = await Prisma.conversation.findUnique({
 			where: {
 				id: id,
+				user: {
+					email: email,
+				},
 			},
 		});
 

@@ -24,6 +24,9 @@ export async function POST(req: Request) {
 		await Prisma.conversation.update({
 			where: {
 				id: id,
+				user: {
+					email: email,
+				},
 			},
 			data: {
 				title: title,
