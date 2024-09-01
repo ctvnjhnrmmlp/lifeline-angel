@@ -27,6 +27,7 @@ export default function Page() {
 		isOpen: isOpenConsent,
 		onOpen: onOpenConsent,
 		onOpenChange: onOpenChangeConsent,
+		onClose: onCloseConsent,
 	} = useDisclosure();
 
 	const agreeMutation = useMutation({
@@ -34,7 +35,7 @@ export default function Page() {
 	});
 
 	const handleAgree = () => {
-		onOpenConsent();
+		onCloseConsent();
 		setAgreeLocal();
 		agreeMutation.mutate();
 	};
@@ -52,10 +53,10 @@ export default function Page() {
 	}, [userServer]);
 
 	useEffect(() => {
-		if (!userLocal?.agreed) {
+		if (userLocal?.agreed === false) {
 			onOpenConsent();
 		}
-	}, []);
+	}, [userLocal]);
 
 	if (!session) {
 		return redirect('/signin');
