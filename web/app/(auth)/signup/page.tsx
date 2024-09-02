@@ -74,7 +74,7 @@ export default function Page() {
 						<Modal
 							size='5xl'
 							backdrop='blur'
-							isDismissable={false}
+							isOpen={isOpenConsent}
 							closeButton={<></>}
 							classNames={{
 								base: 'bg-background',
