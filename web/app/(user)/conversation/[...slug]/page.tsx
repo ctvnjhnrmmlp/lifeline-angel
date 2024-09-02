@@ -32,6 +32,9 @@ import Image from 'next/image';
 import { BsGrid1X2Fill } from 'react-icons/bs';
 import { FaCamera, FaPaperclip } from 'react-icons/fa';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
+import SpeechRecognition, {
+	useSpeechRecognition,
+} from 'react-speech-recognition';
 
 import {
 	useMultipleConversationStore,
@@ -45,13 +48,15 @@ import {
 import { Card, CardBody, CardFooter, ScrollShadow } from '@nextui-org/react';
 import { useFormik } from 'formik';
 import { redirect, useRouter } from 'next/navigation';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { FaLocationArrow, FaMicrophone } from 'react-icons/fa';
 import { FaCloudArrowUp } from 'react-icons/fa6';
 import { GiRaggedWound } from 'react-icons/gi';
 import { MdPersonalInjury } from 'react-icons/md';
-import { useTextToVoice, useVoiceToText } from 'react-speakup';
+import { RiVoiceprintFill } from 'react-icons/ri';
+import { useTextToVoice } from 'react-speakup';
 import { TypeAnimation } from 'react-type-animation';
+import Webcam from 'react-webcam';
 import { v4 as uuidv4 } from 'uuid';
 import * as Yup from 'yup';
 
@@ -61,9 +66,20 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 	const fileRef = useRef<HTMLInputElement>(null);
 	const [message, setMessage] = useState('');
 	const [uploading, setUploading] = useState(false);
-	const { startListening, stopListening, transcript } = useVoiceToText();
 	const [microphone, setMicrophone] = useState(false);
 	const [camera, setCamera] = useState(false);
+	const cameraRef = useRef<Webcam>(null);
+	const [image, setImage] = useState('');
+
+	const {
+		transcript,
+		listening,
+		resetTranscript,
+		browserSupportsSpeechRecognition,
+	} = useSpeechRecognition();
+
+	const { speak, pause, resume, ref, setVoice, voices } =
+		useTextToVoice<HTMLDivElement>();
 
 	const {
 		isOpen: isOpenTextInjury,
@@ -81,6 +97,12 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 		isOpen: isOpenCamera,
 		onOpen: onOpenCamera,
 		onOpenChange: onOpenChangeCamera,
+	} = useDisclosure();
+
+	const {
+		isOpen: isOpenCapturedImage,
+		onOpen: onOpenCapturedImage,
+		onOpenChange: onOpenChangeCapturedImage,
 	} = useDisclosure();
 
 	const {
@@ -280,14 +302,28 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 
 	const handleOpenMicrophone = () => {
 		setMicrophone(true);
-		startListening();
+		SpeechRecognition.startListening();
 	};
 
-	const handleCloseMicrophone = (message: string) => {
+	const handleCloseMicrophone = (transcript: string) => {
+		setMessage(transcript);
+		resetTranscript();
 		setMicrophone(false);
-		setMessage(message);
-		stopListening();
+		SpeechRecognition.stopListening();
 	};
+
+	const handleOpenCamera = () => {
+		setCamera(true);
+	};
+
+	const handleCloseCamera = () => {
+		setCamera(false);
+	};
+
+	const handleCameraCapture = useCallback(() => {
+		setImage(() => cameraRef.current?.getScreenshot()!);
+		onOpenCapturedImage();
+	}, [cameraRef]);
 
 	if (!session) {
 		return redirect('/signin');
@@ -324,12 +360,6 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 										</button>
 									</>
 								)}
-								<button
-									className='p-3 text-foreground text-2xl'
-									onClick={() => onOpenCamera()}
-								>
-									<FaCamera />
-								</button>
 								<button
 									className='p-3 text-foreground text-2xl'
 									onClick={() => onOpenOptions()}
@@ -520,6 +550,12 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 							>
 								<FaMicrophone />
 							</button>
+							<button
+								className='text-foreground text-2xl'
+								onClick={() => onOpenCamera()}
+							>
+								<FaCamera />
+							</button>
 						</div>
 						<div className='w-full'>
 							<input
@@ -644,31 +680,6 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 													</Card>
 												))}
 											</div>
-										</ModalBody>
-										<ModalFooter></ModalFooter>
-									</>
-								)}
-							</ModalContent>
-						</Modal>
-						<Modal
-							size='lg'
-							backdrop='blur'
-							isOpen={isOpenCamera}
-							classNames={{
-								base: 'bg-background',
-								header: 'flex justify-center items-center',
-								body: 'flex gap-4',
-							}}
-							onOpenChange={() => onOpenChangeCamera()}
-						>
-							<ModalContent>
-								{(onClose) => (
-									<>
-										<ModalHeader>
-											<p className='text-2xl font-bold text-center'>Camera</p>
-										</ModalHeader>
-										<ModalBody>
-											<div className='flex justify-center'></div>
 										</ModalBody>
 										<ModalFooter></ModalFooter>
 									</>
@@ -843,21 +854,132 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 											</p>
 										</ModalHeader>
 										<ModalBody>
-											<div className='flex flex-col space-y-4 justify-center'>
-												{!microphone && (
+											<div className='flex flex-col space-y-8 items-center justify-center'>
+												{browserSupportsSpeechRecognition && (
+													<>
+														<div>
+															<p className='text-[11rem]'>
+																<RiVoiceprintFill />
+															</p>
+														</div>
+														{!microphone && (
+															<div>
+																<button
+																	className='rounded-full bg-foreground text-2xl p-6 outline'
+																	onClick={() => handleOpenMicrophone()}
+																></button>
+															</div>
+														)}
+														{microphone && (
+															<div>
+																<button
+																	className='rounded-full bg-red-600 text-2xl p-6 outline'
+																	onClick={() =>
+																		handleCloseMicrophone(transcript)
+																	}
+																></button>
+															</div>
+														)}
+														<div className='flex flex-wrap w-96'>
+															<p className='text-lg'>{transcript}</p>
+														</div>
+													</>
+												)}
+												{!browserSupportsSpeechRecognition && (
+													<span>
+														Browser doesn't support speech recognition.
+													</span>
+												)}
+											</div>
+										</ModalBody>
+										<ModalFooter></ModalFooter>
+									</>
+								)}
+							</ModalContent>
+						</Modal>
+						<Modal
+							size='lg'
+							backdrop='blur'
+							isOpen={isOpenCamera}
+							classNames={{
+								base: 'bg-background',
+								header: 'flex justify-center items-center',
+								body: 'flex gap-4',
+							}}
+							onOpenChange={() => onOpenChangeCamera()}
+						>
+							<ModalContent>
+								{(onClose) => (
+									<>
+										<ModalHeader>
+											<p className='text-2xl font-bold text-center'>Camera</p>
+										</ModalHeader>
+										<ModalBody>
+											<div className='flex flex-col space-y-8 items-center justify-center'>
+												<div>
+													<Webcam
+														ref={cameraRef}
+														height={1000}
+														width={1000}
+														screenshotFormat='image/jpeg'
+														screenshotQuality={1}
+														className='rounded-2xl'
+													/>
+												</div>
+												<div>
+													<button
+														className='rounded-full bg-foreground text-2xl p-6 outline'
+														onClick={() => handleCameraCapture()}
+													></button>
+												</div>
+											</div>
+										</ModalBody>
+										<ModalFooter></ModalFooter>
+									</>
+								)}
+							</ModalContent>
+						</Modal>
+						<Modal
+							size='lg'
+							backdrop='blur'
+							isOpen={isOpenCapturedImage}
+							classNames={{
+								base: 'bg-background',
+								header: 'flex justify-center items-center',
+								body: 'flex gap-4',
+							}}
+							onOpenChange={() => onOpenChangeCapturedImage()}
+						>
+							<ModalContent>
+								{(onClose) => (
+									<>
+										<ModalHeader>
+											<p className='text-2xl font-bold text-center'>
+												Captured Image
+											</p>
+										</ModalHeader>
+										<ModalBody>
+											<div className='flex flex-col space-y-8 items-center justify-center'>
+												<div>
+													<Image
+														src={image}
+														width={1000}
+														height={1000}
+														alt='User captured image'
+													/>
+												</div>
+												<p>{image}</p>
+												<div>
 													<button
 														className='rounded-full bg-foreground text-background text-2xl p-3'
-														onClick={() => handleOpenMicrophone()}
-													></button>
-												)}
-												{microphone && (
-													<button
-														className='rounded-full bg-foreground text-background text-2xl p-3'
-														onClick={() => handleCloseMicrophone(transcript)}
-													></button>
-												)}
-
-												<p className='text-xl'>{transcript}</p>
+														onClick={() => {
+															handleAddMessage(message);
+															handleUpdateConversation(message);
+														}}
+													>
+														<FaLocationArrow />
+													</button>
+												</div>
 											</div>
 										</ModalBody>
 										<ModalFooter></ModalFooter>

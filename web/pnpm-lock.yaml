@@ -35,6 +35,9 @@ importers:
       '@types/animejs':
         specifier: ^3.1.12
         version: 3.1.12
+      '@types/react-speech-recognition':
+        specifier: ^3.9.5
+        version: 3.9.5
       '@types/uuid':
         specifier: ^10.0.0
         version: 10.0.0
@@ -92,6 +95,9 @@ importers:
       react-speakup:
         specifier: ^1.0.0
         version: 1.0.0(react@18.3.1)
+      react-speech-recognition:
+        specifier: ^3.10.0
+        version: 3.10.0(react@18.3.1)
       react-type-animation:
         specifier: ^3.2.0
         version: 3.2.0(prop-types@15.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1825,6 +1831,9 @@ packages:
   '@types/cors@2.8.17':
     resolution: {integrity: sha512-8CGDvrBj1zgo2qE+oS3pOCyYNqCPryMWY2bGfwA0dcfopWGgxs+78df0Rs3rc9THP4JkOhLsAa+15VdpAqkcUA==}
 
+  '@types/dom-speech-recognition@0.0.4':
+    resolution: {integrity: sha512-zf2GwV/G6TdaLwpLDcGTIkHnXf8JEf/viMux+khqKQKDa8/8BAUtXXZS563GnvJ4Fg0PBLGAaFf2GekEVSZ6GQ==}
+
   '@types/hoist-non-react-statics@3.3.5':
     resolution: {integrity: sha512-SbcrWzkKBw2cdwRTwQAswfpB9g9LJWfjtUeW/jvNwbhC8cpmmNYVePa+ncbUe0rGTQ7G3Ff6mYUN2VMfLVr+Sg==}
 
@@ -1845,6 +1854,9 @@ packages:
 
   '@types/react-dom@18.3.0':
     resolution: {integrity: sha512-EhwApuTmMBmXuFOikhQLIBUn6uFg81SwLMOAUgodJF14SOBOCMdU04gDoYi0WOJJHD144TL32z4yDqCW3dnkQg==}
+
+  '@types/react-speech-recognition@3.9.5':
+    resolution: {integrity: sha512-m3Sg3Xtj/YcEUu+nLPGwI6oq1wcSblsuyAmXgBfW6Nprfmtl+A+kH4ruPzzFKnFkq6WmmRxdsLvt0nLRAAJtBw==}
 
   '@types/react@18.3.5':
     resolution: {integrity: sha512-WeqMfGJLGuLCqHGYRGHxnKrXcTitc6L/nBUWfWPcTarG3t9PsquqUMuVeXZeca+mglY4Vo5GZjCi0A3Or2lnxA==}
@@ -3348,6 +3360,11 @@ packages:
     resolution: {integrity: sha512-uZlLfBrWcdlw9fC6N5NY14GA8olnXh7DNaWNQya1osBPIE2nd/URv3nc6+yXeIlu55bwdGYSPoyAXEo5znN1hg==}
     peerDependencies:
       react: '>=16'
+
+  react-speech-recognition@3.10.0:
+    resolution: {integrity: sha512-EVSr4Ik8l9urwdPiK2r0+ADrLyDDrjB0qBRdUWO+w2MfwEBrj6NuRmy1GD3x7BU/V6/hab0pl8Lupen0zwlJyw==}
+    peerDependencies:
+      react: '>=16.8.0'
 
   react-style-singleton@2.2.1:
     resolution: {integrity: sha512-ZWj0fHEMyWkHzKYUr2Bs/4zU6XLmq9HsgBURm7g5pAVfyn49DgUiNgY2d4lXRlYSiCif9YBGpQleewkcqddc7g==}
@@ -6984,6 +7001,8 @@ snapshots:
     dependencies:
       '@types/node': 20.16.3
 
+  '@types/dom-speech-recognition@0.0.4': {}
+
   '@types/hoist-non-react-statics@3.3.5':
     dependencies:
       '@types/react': 18.3.5
@@ -7006,6 +7025,10 @@ snapshots:
   '@types/react-dom@18.3.0':
     dependencies:
       '@types/react': 18.3.5
+
+  '@types/react-speech-recognition@3.9.5':
+    dependencies:
+      '@types/dom-speech-recognition': 0.0.4
 
   '@types/react@18.3.5':
     dependencies:
@@ -8717,6 +8740,10 @@ snapshots:
       '@types/react': 18.3.5
 
   react-speakup@1.0.0(react@18.3.1):
+    dependencies:
+      react: 18.3.1
+
+  react-speech-recognition@3.10.0(react@18.3.1):
     dependencies:
       react: 18.3.1
 
