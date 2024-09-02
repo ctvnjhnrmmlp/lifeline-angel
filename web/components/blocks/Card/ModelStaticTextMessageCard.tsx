@@ -2,74 +2,41 @@
 
 import { convertTo24HourTimeFormat, copy } from '@/utilities/functions';
 import { Message } from '@prisma/client';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { IoIosCopy } from 'react-icons/io';
 import { RiVoiceprintFill } from 'react-icons/ri';
 import { useTextToVoice } from 'react-speakup';
 
 const ModelStaticTextMessageCard = ({ message }: { message: Message }) => {
 	const [voiceMessageMode, setVoiceMessageMode] = useState('');
-	const [isPaused, setIsPaused] = useState(false);
-	const [utterance, setUtterance] = useState<SpeechSynthesisUtterance>();
-	const [voice, setVoice] = useState(null);
-	const [pitch, setPitch] = useState(1);
-	const [rate, setRate] = useState(1);
-	const [volume, setVolume] = useState(1);
+
+	const {
+		speak: speakMessage,
+		pause: pauseMessage,
+		resume: resumeMessage,
+		ref: messageRef,
+		setVoice,
+		voices,
+	} = useTextToVoice<HTMLDivElement>({
+		pitch: 1,
+		rate: 1,
+		volume: 1,
+	});
 
 	const handleSpeakMessage = () => {
-		const synth = window.speechSynthesis;
-
-		if (isPaused) {
-			synth.resume();
-		} else {
-			if (utterance) {
-				utterance.voice = voice;
-				utterance.pitch = pitch;
-				utterance.rate = rate;
-				utterance.volume = volume;
-				synth.speak(utterance);
-			}
-		}
-
-		setIsPaused(false);
 		setVoiceMessageMode('speaking');
+		speakMessage();
 	};
 
 	const handlePauseMessage = () => {
-		const synth = window.speechSynthesis;
-
-		setIsPaused(true);
-		synth.pause();
 		setVoiceMessageMode('paused');
+		pauseMessage();
 	};
 
 	const handleResumeMessage = () => {
-		const synth = window.speechSynthesis;
-
-		setIsPaused(false);
-		synth.cancel();
-		setVoiceMessageMode('resumed');
+		setVoiceMessageMode('speaking');
+		resumeMessage();
 	};
-
-	useEffect(() => {
-		const synth = window.speechSynthesis;
-		const u = new SpeechSynthesisUtterance('Mamba');
-
-		setUtterance(u);
-
-		// Add an event listener to the speechSynthesis object to listen for the voiceschanged event
-		synth.addEventListener('voiceschanged', () => {
-			const voices = synth.getVoices();
-			setVoice(voices[0]);
-		});
-
-		return () => {
-			synth.cancel();
-			synth.removeEventListener('voiceschanged', () => {
-				setVoice(null);
-			});
-		};
-	}, [message]);
 
 	return (
 		<div className='flex flex-col space-y-2'>
@@ -78,7 +45,10 @@ const ModelStaticTextMessageCard = ({ message }: { message: Message }) => {
 				className='bg-foreground rounded-2xl ml-0 mr-auto w-5/12'
 			>
 				<div className='cursor-pointer p-4'>
-					<p className='text-lg text-background tracking-tight leading-none text-ellipsis text-justify'>
+					<p
+						ref={messageRef}
+						className='text-lg text-background tracking-tight leading-none text-ellipsis text-justify'
+					>
 						{message.content}
 					</p>
 				</div>
@@ -98,6 +68,15 @@ const ModelStaticTextMessageCard = ({ message }: { message: Message }) => {
 							<IoIosCopy />
 						</button>
 					</div>
+					<select
+						onChange={(event: React.ChangeEvent<HTMLSelectElement>) =>
+							setVoice(event.target.value)
+						}
+					>
+						{voices.map((voice) => (
+							<option key={voice}>{voice}</option>
+						))}
+					</select>
 					{voiceMessageMode === '' && (
 						<div>
 							<button
