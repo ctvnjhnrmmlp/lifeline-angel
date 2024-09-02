@@ -31,11 +31,14 @@ import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 import { BsGrid1X2Fill } from 'react-icons/bs';
 import { FaCamera, FaPaperclip } from 'react-icons/fa';
-import { PhotoProvider, PhotoView } from 'react-photo-view';
 import SpeechRecognition, {
 	useSpeechRecognition,
 } from 'react-speech-recognition';
 
+import ModelAnimatedTextMessageCard from '@/components/blocks/Card/ModelAnimatedTextMessageCard';
+import ModelStaticTextMessageCard from '@/components/blocks/Card/ModelStaticTextMessageCard';
+import UserImageMessageCard from '@/components/blocks/Card/UserImageMessageCard';
+import UserTextMessageCard from '@/components/blocks/Card/UserTextMessageCard';
 import {
 	useMultipleConversationStore,
 	useSingleConversationStore,
@@ -43,7 +46,6 @@ import {
 } from '@/stores/lifeline-angel/conversation';
 import {
 	convertImageDataUrlToFile,
-	convertTo24HourTimeFormat,
 	convertToDateFormat,
 } from '@/utilities/functions';
 import { Card, CardBody, CardFooter, ScrollShadow } from '@nextui-org/react';
@@ -57,7 +59,6 @@ import { GiRaggedWound } from 'react-icons/gi';
 import { MdPersonalInjury } from 'react-icons/md';
 import { RiVoiceprintFill } from 'react-icons/ri';
 import { useTextToVoice } from 'react-speakup';
-import { TypeAnimation } from 'react-type-animation';
 import Webcam from 'react-webcam';
 import { v4 as uuidv4 } from 'uuid';
 import * as Yup from 'yup';
@@ -455,91 +456,28 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 							{messagesLocal?.map((message) => {
 								if (checkTextValidURL(message.content)) {
 									return (
-										<div
-											key={message.id}
-											className='backdrop-blur-2xl bg-foreground/5 rounded-2xl min-w-1/12 ml-auto mr-0'
-										>
-											<div className='cursor-pointer p-6'>
-												<PhotoProvider>
-													<PhotoView src={message.content}>
-														<Image
-															src={`${message.content}`}
-															height={300}
-															width={300}
-															alt='Wound image'
-															className='mx-auto'
-														/>
-													</PhotoView>
-												</PhotoProvider>
-											</div>
-										</div>
+										<UserImageMessageCard key={message.id} message={message} />
 									);
 								} else {
 									if (message.from === 'user') {
 										return (
-											<>
-												<div
-													key={message.id}
-													className='backdrop-blur-2xl bg-foreground/5 rounded-2xl min-w-4/12 ml-auto mr-0'
-												>
-													<div className='cursor-pointer p-4'>
-														<p className='text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance text-center'>
-															{message.content}
-														</p>
-													</div>
-												</div>
-												<p className='text-xs text-foreground tracking-tight leading-none text-ellipsis text-balance text-right'>
-													{convertTo24HourTimeFormat(
-														message.createdAt.toString()
-													)}
-												</p>
-											</>
+											<UserTextMessageCard key={message.id} message={message} />
 										);
 									}
 
 									return (
 										<>
 											{checkEntitySecondsAgo(message.createdAt.toString()) && (
-												<>
-													<div
-														key={message.id}
-														className='bg-foreground rounded-2xl ml-0 mr-auto w-5/12'
-													>
-														<div className='cursor-pointer p-4'>
-															<p className='text-lg text-background tracking-tight leading-none text-ellipsis text-justify'>
-																<TypeAnimation
-																	sequence={[message.content]}
-																	cursor={false}
-																	speed={75}
-																/>
-															</p>
-														</div>
-													</div>
-													<p className='text-xs text-foreground tracking-tight leading-none text-ellipsis text-balance text-left'>
-														{convertTo24HourTimeFormat(
-															message.createdAt.toString()
-														)}
-													</p>
-												</>
+												<ModelAnimatedTextMessageCard
+													key={message.id}
+													message={message}
+												/>
 											)}
 											{!checkEntitySecondsAgo(message.createdAt.toString()) && (
-												<>
-													<div
-														key={message.id}
-														className='bg-foreground rounded-2xl ml-0 mr-auto w-5/12'
-													>
-														<div className='cursor-pointer p-4'>
-															<p className='text-lg text-background tracking-tight leading-none text-ellipsis text-justify'>
-																{message.content}
-															</p>
-														</div>
-													</div>
-													<p className='text-xs text-foreground tracking-tight leading-none text-ellipsis text-balance text-left'>
-														{convertTo24HourTimeFormat(
-															message.createdAt.toString()
-														)}
-													</p>
-												</>
+												<ModelStaticTextMessageCard
+													key={message.id}
+													message={message}
+												/>
 											)}
 										</>
 									);
