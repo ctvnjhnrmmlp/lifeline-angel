@@ -1,3 +1,7 @@
+export const copy = async (text: string) => {
+	await window.navigator.clipboard.writeText(text);
+};
+
 export const checkTextValidURL = (text: string) => {
 	let url;
 
