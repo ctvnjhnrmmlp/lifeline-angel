@@ -50,6 +50,7 @@ import { FaLocationArrow, FaMicrophone } from 'react-icons/fa';
 import { FaCloudArrowUp } from 'react-icons/fa6';
 import { GiRaggedWound } from 'react-icons/gi';
 import { MdPersonalInjury } from 'react-icons/md';
+import { useTextToVoice, useVoiceToText } from 'react-speakup';
 import { TypeAnimation } from 'react-type-animation';
 import { v4 as uuidv4 } from 'uuid';
 import * as Yup from 'yup';
@@ -60,6 +61,9 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 	const fileRef = useRef<HTMLInputElement>(null);
 	const [message, setMessage] = useState('');
 	const [uploading, setUploading] = useState(false);
+	const { startListening, stopListening, transcript } = useVoiceToText();
+	const [microphone, setMicrophone] = useState(false);
+	const [camera, setCamera] = useState(false);
 
 	const {
 		isOpen: isOpenTextInjury,
@@ -272,6 +276,17 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 		const file = target.files![0];
 
 		formik.setFieldValue('file', file);
+	};
+
+	const handleOpenMicrophone = () => {
+		setMicrophone(true);
+		startListening();
+	};
+
+	const handleCloseMicrophone = (message: string) => {
+		setMicrophone(false);
+		setMessage(message);
+		stopListening();
 	};
 
 	if (!session) {
@@ -828,7 +843,22 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 											</p>
 										</ModalHeader>
 										<ModalBody>
-											<div className='flex justify-center'></div>
+											<div className='flex flex-col space-y-4 justify-center'>
+												{!microphone && (
+													<button
+														className='rounded-full bg-foreground text-background text-2xl p-3'
+														onClick={() => handleOpenMicrophone()}
+													></button>
+												)}
+												{microphone && (
+													<button
+														className='rounded-full bg-foreground text-background text-2xl p-3'
+														onClick={() => handleCloseMicrophone(transcript)}
+													></button>
+												)}
+
+												<p className='text-xl'>{transcript}</p>
+											</div>
 										</ModalBody>
 										<ModalFooter></ModalFooter>
 									</>
