@@ -68,15 +68,6 @@ const ModelStaticTextMessageCard = ({ message }: { message: Message }) => {
 							<IoIosCopy />
 						</button>
 					</div>
-					<select
-						onChange={(event: React.ChangeEvent<HTMLSelectElement>) =>
-							setVoice(event.target.value)
-						}
-					>
-						{voices.map((voice) => (
-							<option key={voice}>{voice}</option>
-						))}
-					</select>
 					{voiceMessageMode === '' && (
 						<div>
 							<button
