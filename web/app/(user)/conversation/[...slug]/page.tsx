@@ -42,11 +42,13 @@ import {
 	useTemporaryMultipleConversationStore,
 } from '@/stores/lifeline-angel/conversation';
 import {
+	convertImageDataUrlToFile,
 	convertTo24HourTimeFormat,
 	convertToDateFormat,
 } from '@/utilities/functions';
 import { Card, CardBody, CardFooter, ScrollShadow } from '@nextui-org/react';
 import { useFormik } from 'formik';
+import Link from 'next/link';
 import { redirect, useRouter } from 'next/navigation';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { FaLocationArrow, FaMicrophone } from 'react-icons/fa';
@@ -67,7 +69,6 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 	const [message, setMessage] = useState('');
 	const [uploading, setUploading] = useState(false);
 	const [microphone, setMicrophone] = useState(false);
-	const [camera, setCamera] = useState(false);
 	const cameraRef = useRef<Webcam>(null);
 	const [image, setImage] = useState('');
 
@@ -96,12 +97,14 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 	const {
 		isOpen: isOpenCamera,
 		onOpen: onOpenCamera,
+		onClose: onCloseCamera,
 		onOpenChange: onOpenChangeCamera,
 	} = useDisclosure();
 
 	const {
 		isOpen: isOpenCapturedImage,
 		onOpen: onOpenCapturedImage,
+		onClose: onCloseCapturedImage,
 		onOpenChange: onOpenChangeCapturedImage,
 	} = useDisclosure();
 
@@ -312,18 +315,24 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 		SpeechRecognition.stopListening();
 	};
 
-	const handleOpenCamera = () => {
-		setCamera(true);
-	};
-
-	const handleCloseCamera = () => {
-		setCamera(false);
-	};
-
 	const handleCameraCapture = useCallback(() => {
 		setImage(() => cameraRef.current?.getScreenshot()!);
 		onOpenCapturedImage();
 	}, [cameraRef]);
+
+	const handleAddImageMessage = async (image: string) => {
+		const response = await addImageMessage(
+			session?.user.email,
+			params.slug[0],
+			uuidv4(),
+			convertImageDataUrlToFile(image, uuidv4())
+		);
+		const message = response.prediction;
+
+		handleUpdateConversation(message);
+		onCloseCapturedImage();
+		onCloseCamera();
+	};
 
 	if (!session) {
 		return redirect('/signin');
@@ -918,6 +927,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 											<div className='flex flex-col space-y-8 items-center justify-center'>
 												<div>
 													<Webcam
+														mirrored
 														ref={cameraRef}
 														height={1000}
 														width={1000}
@@ -968,14 +978,10 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 														alt='User captured image'
 													/>
 												</div>
-												<p>{image}</p>
 												<div>
 													<button
 														className='rounded-full bg-foreground text-background text-2xl p-3'
-														onClick={() => {
-															handleAddMessage(message);
-															handleUpdateConversation(message);
-														}}
+														onClick={() => handleAddImageMessage(image)}
 													>
 														<FaLocationArrow />
 													</button>

@@ -67,7 +67,7 @@ export const addImageMessage = async (
 	email: string,
 	cid: string,
 	mid: string,
-	file: string
+	file: File | string
 ) => {
 	try {
 		const formData = new FormData();
