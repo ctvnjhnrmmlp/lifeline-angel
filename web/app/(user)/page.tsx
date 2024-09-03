@@ -1,31 +1,10 @@
 'use client';
 
-import { getUser } from '@/services/lifeline-angel/user';
-import { useUserStore } from '@/stores/lifeline-angel/user';
-import { useQuery } from '@tanstack/react-query';
 import { useSession } from 'next-auth/react';
 import { redirect } from 'next/navigation';
-import { useEffect } from 'react';
 
 export default function Page() {
 	const { data: session } = useSession();
-	const {
-		user: userLocal,
-		setUser: setUserLocal,
-		setAgree: setAgreeLocal,
-	} = useUserStore();
-
-	const { data: userServer, status: userServerStatus } = useQuery({
-		queryKey: ['getUser'],
-		refetchOnWindowFocus: false,
-		queryFn: async () => await getUser(session?.user.email),
-	});
-
-	useEffect(() => {
-		if (userServerStatus === 'success' && userServer && !userLocal) {
-			setUserLocal(userServer);
-		}
-	}, [userServer]);
 
 	if (!session) {
 		return redirect('/signin');

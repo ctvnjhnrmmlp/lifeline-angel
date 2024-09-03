@@ -20,6 +20,7 @@ const config: Config = withUt({
 					colors: {
 						background: COLORS.alpha,
 						foreground: COLORS.bravo,
+						default: COLORS.bravo,
 					},
 				},
 			},
