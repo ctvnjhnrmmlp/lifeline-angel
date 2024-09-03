@@ -51,7 +51,10 @@ const ModelStaticTextMessageCard = ({ message }: { message: Message }) => {
 				<div className='cursor-pointer p-4'>
 					<ul>
 						{formattedMessages.map((message) => (
-							<li key={message} className='text-lg text-background'>
+							<li
+								key={message}
+								className='text-lg text-background tracking-tight text-ellipsis'
+							>
 								{message}
 							</li>
 						))}
