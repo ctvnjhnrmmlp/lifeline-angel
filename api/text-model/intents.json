@@ -10,8 +10,14 @@
 				"What to do in case of a burn?"
 			],
 			"responses": [
-				"Cool the burn with running water for at least 10 minutes. Avoid using ice. Cover the burn with a sterile gauze bandage. Do not apply butter or ointments to the burn. For pain relief, consider over-the-counter pain relievers like ibuprofen or acetaminophen.",
-				"First, cool the burn under cool but not cold water for 10-20 minutes. Cover the burn with a clean, non-fluffy cloth or cling film. Take a painkiller such as paracetamol or ibuprofen."
+				{
+					"eng": "Cool the burn with running water for at least 10 minutes. Avoid using ice. Cover the burn with a sterile gauze bandage. Do not apply butter or ointments to the burn. For pain relief, consider over-the-counter pain relievers like ibuprofen or acetaminophen.",
+					"fil": "Palamigin ang paso gamit ang umaagos na tubig nang hindi bababa sa 10 minuto. Iwasang gumamit ng yelo. Takpan ang paso ng sterile gauze bandage. Huwag maglagay ng mantikilya o mga pamahid sa paso. Para sa lunas sa pananakit, isaalang-alang ang mga over-the-counter na pain reliever tulad ng ibuprofen o acetaminophen."
+				},
+				{
+					"eng": "First, cool the burn under cool but not cold water for 10-20 minutes. Cover the burn with a clean, non-fluffy cloth or cling film. Take a painkiller such as paracetamol or ibuprofen.",
+					"fil": "Una, palamigin ang paso sa ilalim ng malamig ngunit hindi malamig na tubig sa loob ng 10-20 minuto. Takpan ang paso ng malinis, hindi malambot na tela o cling film. Uminom ng painkiller tulad ng paracetamol o ibuprofen."
+				}
 			],
 			"context_set": ""
 		},
@@ -25,8 +31,14 @@
 				"Cut treatment advice?"
 			],
 			"responses": [
-				"Clean the cut with soap and water to avoid infection. Apply pressure to stop the bleeding, and once stopped, apply an antibiotic ointment. Cover the wound with a bandage and change it daily. If the cut is deep, seek medical help.",
-				"Wash the area with mild soap and water, then apply an antiseptic. Cover with a sterile bandage and monitor for signs of infection. For minor pain, over-the-counter painkillers can be used."
+				{
+					"eng": "Clean the cut with soap and water to avoid infection. Apply pressure to stop the bleeding, and once stopped, apply an antibiotic ointment. Cover the wound with a bandage and change it daily. If the cut is deep, seek medical help.",
+					"fil": "Linisin ang hiwa gamit ang sabon at tubig upang maiwasan ang impeksyon. Lagyan ng presyon upang ihinto ang pagdurugo, at sa sandaling tumigil, maglagay ng antibiotic ointment. Takpan ang sugat ng benda at palitan ito araw-araw. Kung malalim ang hiwa, humingi ng medikal na tulong."
+				},
+				{
+					"eng": "Wash the area with mild soap and water, then apply an antiseptic. Cover with a sterile bandage and monitor for signs of infection. For minor pain, over-the-counter painkillers can be used.",
+					"fil": "Hugasan ang lugar na may banayad na sabon at tubig, pagkatapos ay lagyan ng antiseptiko. Takpan ng sterile bandage at subaybayan ang mga palatandaan ng impeksyon. Para sa menor de edad na pananakit, maaaring gumamit ng mga over-the-counter na pangpawala ng sakit."
+				}
 			],
 			"context_set": ""
 		},
