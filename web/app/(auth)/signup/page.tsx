@@ -154,7 +154,7 @@ export default function Page() {
 											<p className='text-lg text-balance'>
 												If you agree to these terms, please indicate your
 												consent by clicking{' '}
-												<span className='font-bold'>"Accept"</span> below.
+												<span className='font-bold'>Accept</span> below.
 											</p>
 										</div>
 										<div>

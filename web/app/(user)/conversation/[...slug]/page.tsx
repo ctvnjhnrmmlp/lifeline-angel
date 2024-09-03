@@ -834,7 +834,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 												)}
 												{!browserSupportsSpeechRecognition && (
 													<span>
-														Browser doesn't support speech recognition.
+														Browser does not support speech recognition.
 													</span>
 												)}
 											</div>
