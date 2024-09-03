@@ -22,9 +22,7 @@ const classifyText = async (text: string) => {
 		}
 
 		throw new Error();
-	} catch (error) {
-		console.error(error);
-	}
+	} catch (error) {}
 };
 
 export async function POST(req: Request) {
@@ -81,7 +79,6 @@ export async function POST(req: Request) {
 			answer: textPrediction.response,
 		});
 	} catch (error) {
-		console.log(error);
 		return new Response('Internal Server Error', {
 			status: 500,
 		});

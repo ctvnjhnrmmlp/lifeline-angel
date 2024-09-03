@@ -39,13 +39,11 @@ chatbot_model = load_model(
 image_model = load_model("./image-model/best_image_model.keras")
 class_names = ["Abrasions", "Bruises", "Burns", "Cuts", "Laceration"]
 
-
 # Clean up the sentences
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
     sentence_words = [lemmatizer.lemmatize(word.lower()) for word in sentence_words]
     return sentence_words
-
 
 # Converts the sentences into a bag of words
 def bag_of_words(sentence):
@@ -57,11 +55,8 @@ def bag_of_words(sentence):
                 bag[i] = 1
     return np.array(bag)
 
-
 def predict_class(sentence):
-    bow = bag_of_words(
-        sentence
-    )  # bow: Bag Of Words, feed the data into the neural network
+    bow = bag_of_words(sentence)  # bow: Bag Of Words, feed the data into the neural network
     res = chatbot_model.predict(np.array([bow]))[0]  # res: result. [0] as index 0
     ERROR_THRESHOLD = 0.25
     results = [[i, r] for i, r in enumerate(res) if r > ERROR_THRESHOLD]
@@ -72,28 +67,23 @@ def predict_class(sentence):
         return_list.append({"intent": classes[r[0]], "probability": str(r[1])})
     return return_list
 
-
 def get_response(intents_list, intents_json):
     tag = intents_list[0]["intent"]
     for intent in intents_json["intents"]:
         if intent["tag"] == tag:
             return random.choice(intent["responses"])
 
-
 class ChatRequest(BaseModel):
     message: str
 
-
 class ChatResponse(BaseModel):
-    response: str
-
+    response: dict  # Updated to return the full response object
 
 @app.post("/api/talk", response_model=ChatResponse)
 async def chat_endpoint(request: ChatRequest):
     ints = predict_class(request.message)
     response = get_response(ints, intents)
     return ChatResponse(response=response)
-
 
 @app.post("/api/classify")
 async def classify_image(file: UploadFile = File(...)):
@@ -112,7 +102,6 @@ async def classify_image(file: UploadFile = File(...)):
     index = np.argmax(prediction)
     return {"prediction": class_names[index]}
 
-
 @app.websocket("/api/ws/talk")
 async def websocket_chat(websocket: WebSocket):
     await websocket.accept()
@@ -121,10 +110,9 @@ async def websocket_chat(websocket: WebSocket):
             data = await websocket.receive_text()
             ints = predict_class(data)
             response = get_response(ints, intents)
-            await websocket.send_text(response)
+            await websocket.send_text(json.dumps(response))
     except WebSocketDisconnect:
         print("Client disconnected")
-
 
 @app.websocket("/api/ws/classify")
 async def websocket_classify_image(websocket: WebSocket):
@@ -149,7 +137,6 @@ async def websocket_classify_image(websocket: WebSocket):
             await websocket.send_text(class_names[index])
     except WebSocketDisconnect:
         print("Client disconnected")
-
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)

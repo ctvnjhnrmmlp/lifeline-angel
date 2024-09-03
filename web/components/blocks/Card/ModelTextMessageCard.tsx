@@ -7,11 +7,21 @@ import { IoIosCopy } from 'react-icons/io';
 import { RiVoiceprintFill } from 'react-icons/ri';
 import { useTextToVoice } from 'react-speakup';
 
-const ModelAnimatedTextMessageCard = ({ message }: { message: Message }) => {
+const ModelTextMessageCard = ({ message }: { message: Message }) => {
 	const [voiceMessageMode, setVoiceMessageMode] = useState('');
-	const formattedMessages = message.content
-		.split('.')
+	// @ts-ignore
+	const formattedEnglishMessage = message.content.eng
+		.split('.')!
+		// @ts-ignore
 		.map((point) => point.trim())
+		// @ts-ignore
+		.filter((point) => point.length > 0);
+	// @ts-ignore
+	const formattedFilipinoMessages = message.content.fil
+		.split('.')
+		// @ts-ignore
+		.map((point) => point.trim())
+		// @ts-ignore
 		.filter((point) => point.length > 0);
 
 	const {
@@ -42,15 +52,29 @@ const ModelAnimatedTextMessageCard = ({ message }: { message: Message }) => {
 		resumeMessage();
 	};
 
+	if (message) {
+		console.log(message.content);
+	}
+
 	return (
 		<div className='flex flex-col space-y-2'>
 			<div
 				key={message.id}
 				className='bg-foreground rounded-2xl ml-0 mr-auto w-5/12'
 			>
-				<div className='cursor-pointer p-4'>
+				<div className='flex flex-col space-y-6 cursor-pointer p-4'>
 					<ul>
-						{formattedMessages.map((message) => (
+						{formattedEnglishMessage.map((message: string) => (
+							<li
+								key={message}
+								className='text-lg text-background tracking-tight text-ellipsis'
+							>
+								{message}
+							</li>
+						))}
+					</ul>
+					<ul className='italic'>
+						{formattedFilipinoMessages.map((message: string) => (
 							<li
 								key={message}
 								className='text-lg text-background tracking-tight text-ellipsis'
@@ -71,7 +95,7 @@ const ModelAnimatedTextMessageCard = ({ message }: { message: Message }) => {
 					<div>
 						<button
 							className='text-foreground text-lg'
-							onClick={() => copy(message.content)}
+							// onClick={() => copy(message.content)}
 						>
 							<IoIosCopy />
 						</button>
@@ -112,4 +136,4 @@ const ModelAnimatedTextMessageCard = ({ message }: { message: Message }) => {
 	);
 };
 
-export default ModelAnimatedTextMessageCard;
+export default ModelTextMessageCard;

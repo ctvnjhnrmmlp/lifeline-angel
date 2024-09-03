@@ -12,10 +12,7 @@ import {
 } from '@/services/lifeline-angel/message';
 import { IMAGE_INJURIES, TEXT_INJURIES } from '@/sources/injuries';
 import { useMultipleMessageStore } from '@/stores/lifeline-angel/message';
-import {
-	checkEntitySecondsAgo,
-	checkTextValidURL,
-} from '@/utilities/functions';
+import { checkTextValidURL } from '@/utilities/functions';
 import {
 	Chip,
 	Input,
@@ -35,8 +32,7 @@ import SpeechRecognition, {
 	useSpeechRecognition,
 } from 'react-speech-recognition';
 
-import ModelAnimatedTextMessageCard from '@/components/blocks/Card/ModelAnimatedTextMessageCard';
-import ModelStaticTextMessageCard from '@/components/blocks/Card/ModelStaticTextMessageCard';
+import ModelTextMessageCard from '@/components/blocks/Card/ModelTextMessageCard';
 import UserImageMessageCard from '@/components/blocks/Card/UserImageMessageCard';
 import UserTextMessageCard from '@/components/blocks/Card/UserTextMessageCard';
 import {
@@ -57,7 +53,6 @@ import { FaCloudArrowUp } from 'react-icons/fa6';
 import { GiRaggedWound } from 'react-icons/gi';
 import { MdPersonalInjury } from 'react-icons/md';
 import { RiVoiceprintFill } from 'react-icons/ri';
-import { useTextToVoice } from 'react-speakup';
 import Webcam from 'react-webcam';
 import { v4 as uuidv4 } from 'uuid';
 import * as Yup from 'yup';
@@ -78,9 +73,6 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 		resetTranscript,
 		browserSupportsSpeechRecognition,
 	} = useSpeechRecognition();
-
-	const { speak, pause, resume, ref, setVoice, voices } =
-		useTextToVoice<HTMLDivElement>();
 
 	const {
 		isOpen: isOpenTextInjury,
@@ -453,6 +445,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 							)}
 
 							{messagesLocal?.map((message) => {
+								// @ts-ignore
 								if (checkTextValidURL(message.content)) {
 									return (
 										<UserImageMessageCard key={message.id} message={message} />
@@ -466,18 +459,10 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 
 									return (
 										<>
-											{checkEntitySecondsAgo(message.createdAt.toString()) && (
-												<ModelAnimatedTextMessageCard
-													key={message.id}
-													message={message}
-												/>
-											)}
-											{!checkEntitySecondsAgo(message.createdAt.toString()) && (
-												<ModelStaticTextMessageCard
-													key={message.id}
-													message={message}
-												/>
-											)}
+											<ModelTextMessageCard
+												key={message.id}
+												message={message}
+											/>
 										</>
 									);
 								}

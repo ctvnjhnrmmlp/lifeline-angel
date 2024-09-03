@@ -135,7 +135,6 @@ export async function POST(req: Request) {
 			prediction: imagePrediction.prediction,
 		});
 	} catch (error) {
-		console.log(error);
 		return new Response('Internal Server Error', {
 			status: 500,
 		});
