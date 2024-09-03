@@ -22,6 +22,9 @@ export async function GET(req: Request) {
 					email: email,
 				},
 			},
+			orderBy: {
+				createdAt: 'desc',
+			},
 		});
 
 		return Response.json({ message: 'Success', conversations });
