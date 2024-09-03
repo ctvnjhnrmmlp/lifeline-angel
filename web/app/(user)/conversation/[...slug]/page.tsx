@@ -50,7 +50,6 @@ import {
 } from '@/utilities/functions';
 import { Card, CardBody, CardFooter, ScrollShadow } from '@nextui-org/react';
 import { useFormik } from 'formik';
-import Link from 'next/link';
 import { redirect, useRouter } from 'next/navigation';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { FaLocationArrow, FaMicrophone } from 'react-icons/fa';

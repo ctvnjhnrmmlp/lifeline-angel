@@ -136,7 +136,7 @@ const Sidebar = () => {
 
 	useEffect(() => {
 		setConversationsLocal(conversationsServer!);
-		setConversationsTemporary(conversationsTemporary);
+		setConversationsTemporary(conversationsServer!);
 	}, [conversationsServer]);
 
 	return (
