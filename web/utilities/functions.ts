@@ -49,7 +49,7 @@ export const checkEntitySecondsAgo = (timestamp: string) => {
 	return false;
 };
 
-export const convertTo24HourTimeFormat = (timestamp: string) => {
+export const convertDateTo24HourTimeFormat = (timestamp: string) => {
 	const date = new Date(timestamp);
 	let hours = date.getHours();
 	const minutes = date.getMinutes().toString().padStart(2, '0');

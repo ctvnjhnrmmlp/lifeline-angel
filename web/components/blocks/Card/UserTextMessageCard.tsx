@@ -1,6 +1,6 @@
 'use client';
 
-import { convertTo24HourTimeFormat } from '@/utilities/functions';
+import { convertDateTo24HourTimeFormat } from '@/utilities/functions';
 import { Message } from '@prisma/client';
 
 const TextMessageCard = ({ message }: { message: Message }) => {
@@ -18,7 +18,7 @@ const TextMessageCard = ({ message }: { message: Message }) => {
 			</div>
 			<div>
 				<p className='text-xs text-foreground tracking-tight leading-none text-ellipsis text-balance text-right'>
-					{convertTo24HourTimeFormat(message.createdAt.toString())}
+					{convertDateTo24HourTimeFormat(message.createdAt.toString())}
 				</p>
 			</div>
 		</div>
