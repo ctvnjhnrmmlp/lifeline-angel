@@ -12,14 +12,15 @@ const UserImageMessageCard = ({ message }: { message: Message }) => {
 		>
 			<div className='cursor-pointer p-6'>
 				<PhotoProvider>
+					{/* @ts-ignore */}
 					<PhotoView src={message.content}>
-						{/* <Image
+						<Image
 							src={`${message.content}`}
 							height={300}
 							width={300}
 							alt='Wound image'
 							className='mx-auto'
-						/> */}
+						/>
 					</PhotoView>
 				</PhotoProvider>
 			</div>
