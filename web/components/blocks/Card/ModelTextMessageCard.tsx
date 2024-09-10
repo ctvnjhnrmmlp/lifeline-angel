@@ -2,27 +2,17 @@
 
 import { convertDateTo24HourTimeFormat, copy } from '@/utilities/functions';
 import { Message } from '@prisma/client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { IoIosCopy } from 'react-icons/io';
 import { RiVoiceprintFill } from 'react-icons/ri';
 import { useTextToVoice } from 'react-speakup';
 
 const ModelTextMessageCard = ({ message }: { message: Message }) => {
 	const [voiceMessageMode, setVoiceMessageMode] = useState('');
-	// @ts-ignore
-	const formattedEnglishMessage = message.content.eng
-		.split('.')!
-		// @ts-ignore
-		.map((point) => point.trim())
-		// @ts-ignore
-		.filter((point) => point.length > 0);
-	// @ts-ignore
-	const formattedFilipinoMessages = message.content.fil
-		.split('.')
-		// @ts-ignore
-		.map((point) => point.trim())
-		// @ts-ignore
-		.filter((point) => point.length > 0);
+	const [formattedEnglishMessages, setFormattedEnglishMessages] = useState([]);
+	const [formattedFilipinoMessages, setFormattedFilipinoMessages] = useState(
+		[]
+	);
 
 	const {
 		speak: speakMessage,
@@ -52,9 +42,27 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 		resumeMessage();
 	};
 
-	if (message) {
-		console.log(message.content);
-	}
+	useEffect(() => {
+		if (typeof message.content === 'object') {
+			// @ts-ignore
+			const formattedEnglishMessages = message.content.eng
+				.split('.')!
+				// @ts-ignore
+				.map((point) => point.trim())
+				// @ts-ignore
+				.filter((point) => point.length > 0);
+			// @ts-ignore
+			const formattedFilipinoMessages = message.content.fil
+				.split('.')
+				// @ts-ignore
+				.map((point) => point.trim())
+				// @ts-ignore
+				.filter((point) => point.length > 0);
+
+			setFormattedEnglishMessages(formattedEnglishMessages);
+			setFormattedFilipinoMessages(formattedFilipinoMessages);
+		}
+	}, []);
 
 	return (
 		<div className='flex flex-col space-y-2'>
@@ -63,26 +71,35 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 				className='bg-foreground rounded-2xl ml-0 mr-auto w-5/12'
 			>
 				<div className='flex flex-col space-y-6 cursor-pointer p-4'>
-					<ul>
-						{formattedEnglishMessage.map((message: string) => (
-							<li
-								key={message}
-								className='text-lg text-background tracking-tight text-ellipsis'
-							>
-								{message}
-							</li>
-						))}
-					</ul>
-					<ul className='italic'>
-						{formattedFilipinoMessages.map((message: string) => (
-							<li
-								key={message}
-								className='text-lg text-background tracking-tight text-ellipsis'
-							>
-								{message}
-							</li>
-						))}
-					</ul>
+					{typeof message.content === 'string' && (
+						<p className='text-lg text-background tracking-tight text-ellipsis'>
+							{message.content}
+						</p>
+					)}
+					{typeof message.content === 'object' && (
+						<>
+							<ul>
+								{formattedEnglishMessages.map((message: string) => (
+									<li
+										key={message}
+										className='text-lg text-background tracking-tight text-ellipsis'
+									>
+										{message}
+									</li>
+								))}
+							</ul>
+							<ul className='italic'>
+								{formattedFilipinoMessages.map((message: string) => (
+									<li
+										key={message}
+										className='text-lg text-background tracking-tight text-ellipsis'
+									>
+										{message}
+									</li>
+								))}
+							</ul>
+						</>
+					)}
 				</div>
 			</div>
 			<div className='flex items-center space-x-3'>
