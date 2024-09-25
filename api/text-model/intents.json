@@ -1,994 +1,1621 @@
 {
-	"intents": [
-		{
-			"tag": "Burns",
-			"patterns": [
-				"What should I do for a burn?",
-				"How to treat burns?",
-				"Which ointment to apply on burns?",
-				"Burn treatment steps?",
-				"What to do in case of a burn?"
-			],
-			"responses": [
-				{
-					"eng": "Cool the burn with running water for at least 10 minutes. Avoid using ice. Cover the burn with a sterile gauze bandage. Do not apply butter or ointments to the burn. For pain relief, consider over-the-counter pain relievers like ibuprofen or acetaminophen.",
-					"fil": "Palamigin ang paso gamit ang umaagos na tubig nang hindi bababa sa 10 minuto. Iwasang gumamit ng yelo. Takpan ang paso ng sterile gauze bandage. Huwag maglagay ng mantikilya o mga pamahid sa paso. Para sa lunas sa pananakit, isaalang-alang ang mga over-the-counter na pain reliever tulad ng ibuprofen o acetaminophen."
-				},
-				{
-					"eng": "First, cool the burn under cool but not cold water for 10-20 minutes. Cover the burn with a clean, non-fluffy cloth or cling film. Take a painkiller such as paracetamol or ibuprofen.",
-					"fil": "Una, palamigin ang paso sa ilalim ng malamig ngunit hindi malamig na tubig sa loob ng 10-20 minuto. Takpan ang paso ng malinis, hindi malambot na tela o cling film. Uminom ng painkiller tulad ng paracetamol o ibuprofen."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Cuts",
-			"patterns": [
-				"What to do if I have a cut?",
-				"How to treat a cut?",
-				"Best way to heal cuts?",
-				"What medicine to use for a cut?",
-				"Cut treatment advice?"
-			],
-			"responses": [
-				{
-					"eng": "Clean the cut with soap and water to avoid infection. Apply pressure to stop the bleeding, and once stopped, apply an antibiotic ointment. Cover the wound with a bandage and change it daily. If the cut is deep, seek medical help.",
-					"fil": "Linisin ang hiwa gamit ang sabon at tubig upang maiwasan ang impeksyon. Lagyan ng presyon upang ihinto ang pagdurugo, at sa sandaling tumigil, maglagay ng antibiotic ointment. Takpan ang sugat ng benda at palitan ito araw-araw. Kung malalim ang hiwa, humingi ng medikal na tulong."
-				},
-				{
-					"eng": "Wash the area with mild soap and water, then apply an antiseptic. Cover with a sterile bandage and monitor for signs of infection. For minor pain, over-the-counter painkillers can be used.",
-					"fil": "Hugasan ang lugar na may banayad na sabon at tubig, pagkatapos ay lagyan ng antiseptiko. Takpan ng sterile bandage at subaybayan ang mga palatandaan ng impeksyon. Para sa menor de edad na pananakit, maaaring gumamit ng mga over-the-counter na pangpawala ng sakit."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Abrasions",
-			"patterns": [
-				"How to treat abrasions?",
-				"What to do if I have an abrasion?",
-				"Best way to heal abrasions?",
-				"What should I apply on an abrasion?",
-				"Abrasions treatment steps?"
-			],
-			"responses": [
-				{
-					"eng": "Clean the abrasion with water and soap to remove any debris. Apply an antiseptic to prevent infection. Cover with a sterile bandage or gauze and change it daily. Keep the area dry and monitor for signs of infection.",
-					"fil": "Linisin ang gasgas gamit ang tubig at sabon upang alisin ang anumang dumi. Maglagay ng antiseptiko upang maiwasan ang impeksyon. Takpan ng sterile na benda o gasa at palitan ito araw-araw. Panatilihing tuyo ang lugar at bantayan para sa mga senyales ng impeksyon."
-				},
-				{
-					"eng": "Gently wash the abrasion with soap and water. Apply an antibiotic ointment and cover with a clean, dry bandage. If the abrasion is large, seek medical advice.",
-					"fil": "Maingat na hugasan ang gasgas gamit ang sabon at tubig. Maglagay ng antibiotic ointment at takpan ng malinis at tuyong benda. Kung malaki ang gasgas, magpakonsulta sa doktor."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Stings",
-			"patterns": [
-				"How to treat a sting?",
-				"What to do for insect stings?",
-				"How to relieve sting pain?",
-				"Sting treatment advice?",
-				"Best remedy for stings?"
-			],
-			"responses": [
-				{
-					"eng": "Remove the stinger if present by scraping it off with a flat object. Wash the area with soap and water. Apply a cold compress to reduce swelling. Use an antihistamine cream or take oral antihistamines for itching. If you experience difficulty breathing, seek emergency medical help immediately.",
-					"fil": "Alisin ang tibo kung mayroon, sa pamamagitan ng pag-scrape gamit ang patag na bagay. Hugasan ang lugar na natibo gamit ang sabon at tubig. Maglagay ng malamig na pomento upang mabawasan ang pamamaga. Gumamit ng antihistamine cream o uminom ng oral antihistamines para sa pangangati. Kung makaranas ng hirap sa paghinga, agad na humingi ng tulong medikal."
-				},
-				{
-					"eng": "Wash the sting site with soap and water. Apply ice wrapped in a cloth to reduce swelling. Take an antihistamine for itching or swelling.",
-					"fil": "Hugasan ang lugar ng sting gamit ang sabon at tubig. Maglagay ng yelo na binalot sa tela upang mabawasan ang pamamaga. Uminom ng antihistamine para sa pangangati o pamamaga."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Splinter",
-			"patterns": [
-				"How to remove a splinter?",
-				"What to do if I have a splinter?",
-				"Best way to remove splinters?",
-				"Splinter removal advice?",
-				"How to treat splinters?"
-			],
-			"responses": [
-				{
-					"eng": "Clean the area with soap and water. Use sterilized tweezers to remove the splinter carefully. After removal, apply an antiseptic and cover with a bandage if necessary",
-					"fil": "Linisin ang lugar gamit ang sabon at tubig. Gumamit ng sterilized na pang-ipit upang maingat na alisin ang tinik. Pagkatapos alisin, maglagay ng antiseptiko at takpan ng benda kung kinakailangan"
-				},
-				{
-					"eng": "Soak the affected area in warm water to soften the skin. Gently remove the splinter with sterilized tweezers. Clean the area with antiseptic and bandage if needed.",
-					"fil": "Ibabad ang apektadong lugar sa maligamgam na tubig upang lumambot ang balat. Maingat na alisin ang tinik gamit ang sterilized na pang-ipit. Linisin ang lugar gamit ang antiseptiko at takpan ng benda kung kinakailangan"
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Sprains",
-			"patterns": [
-				"What to do for a sprain?",
-				"How to treat a sprained ankle?",
-				"Sprain treatment advice?",
-				"Best way to heal sprains?",
-				"How to relieve sprain pain?"
-			],
-			"responses": [
-				{
-					"eng": "Rest the injured limb and avoid putting weight on it. Apply ice packs to reduce swelling and pain. Compress the area with an elastic bandage, and elevate it above heart level. Consider over-the-counter pain relievers for pain management",
-					"fil": "Pahingahin ang nasugatang bahagi at iwasan ang paglalagay ng bigat dito. Maglagay ng yelo upang mabawasan ang pamamaga at sakit. I-compress ang lugar gamit ang elastic na benda, at itaas ito sa taas ng puso. Isaalang-alang ang paggamit ng mga over-the-counter na gamot para sa sakit."
-				},
-				{
-					"eng": "Use the R.I.C.E. method: Rest, Ice, Compression, and Elevation. If the pain persists or the swelling is severe, consult a healthcare provider.",
-					"fil": "Gamitin ang R.I.C.E. na pamamaraan: Rest, Ice, Compression, at Elevation. Kung patuloy ang sakit o malubha ang pamamaga, magpakonsulta sa isang healthcare provider."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Strains",
-			"patterns": [
-				"How to treat muscle strain?",
-				"What to do if I have a strain?",
-				"Best way to treat muscle strains?",
-				"Strain treatment advice?",
-				"How to heal a muscle strain?"
-			],
-			"responses": [
-				{
-					"eng": "Rest the strained muscle and avoid activities that cause pain. Apply ice to the area for 15-20 minutes several times a day. Use an elastic bandage to compress the area, and elevate it to reduce swelling. Over-the-counter painkillers can help manage pain.",
-					"fil": "Pahingahin ang na-pilay na kalamnan at iwasan ang mga aktibidad na nagdudulot ng sakit. Maglagay ng yelo sa apektadong lugar sa loob ng 15-20 minuto nang ilang beses sa isang araw. Gumamit ng elastic na benda upang i-compress ang lugar, at itaas ito upang mabawasan ang pamamaga. Ang mga over-the-counter na painkillers ay maaaring makatulong sa pamamahala ng sakit."
-				},
-				{
-					"eng": "Rest the affected muscle, apply ice, and compress with a bandage. Elevate the limb and take pain relievers as needed.",
-					"fil": "Pahingahin ang apektadong kalamnan, maglagay ng yelo, at i-compress gamit ang benda. Itaas ang bahagi at uminom ng pain relievers kung kinakailangan."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Bruises",
-			"patterns": [
-				"How to treat a bruise?",
-				"What to do for a bruise?",
-				"Best way to heal bruises?",
-				"Bruise treatment advice?",
-				"How to reduce bruise pain?"
-			],
-			"responses": [
-				{
-					"eng": "Apply a cold compress to the bruise to reduce swelling. Elevate the affected area to minimize blood flow to the bruise. Rest and avoid further injury to the area. Over-the-counter pain relievers can help with discomfort.",
-					"fil": "Maglagay ng malamig na pomento sa pasa upang mabawasan ang pamamaga. Itaas ang apektadong lugar upang mabawasan ang daloy ng dugo sa pasa. Magpahinga at iwasan ang karagdagang pinsala sa lugar. Ang mga over-the-counter na pain relievers ay maaaring makatulong sa pag-alis ng hindi komportableng pakiramdam."
-				},
-				{
-					"eng": "Use ice packs on the bruise for 10-15 minutes at a time. Keep the bruised area elevated and take pain relief medication if needed.",
-					"fil": "Gumamit ng yelo sa pasa sa loob ng 10-15 minuto bawat sesyon. Panatilihing nakataas ang lugar na may pasa at uminom ng gamot para sa sakit kung kinakailangan."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Pulled Muscle",
-			"patterns": [
-				"How to treat a pulled muscle?",
-				"What to do for a muscle pull?",
-				"Best way to heal a pulled muscle?",
-				"Pulled muscle treatment advice?",
-				"How to reduce pulled muscle pain?"
-			],
-			"responses": [
-				{
-					"eng": "Rest the affected muscle and apply ice to reduce swelling. Use compression with an elastic bandage and elevate the muscle to help reduce inflammation. Take pain relievers if needed and avoid strenuous activity until fully healed.",
-					"fil": "Pahingahin ang apektadong kalamnan at maglagay ng yelo upang mabawasan ang pamamaga. Gumamit ng compression gamit ang elastic na benda at itaas ang kalamnan upang makatulong sa pagbawas ng pamamaga. Uminom ng pain relievers kung kinakailangan at iwasan ang mabigat na aktibidad hanggang sa ganap na maghilom."
-				},
-				{
-					"eng": "Apply the R.I.C.E. method: Rest, Ice, Compression, and Elevation. For persistent pain or severe muscle strain, consult a healthcare provider.",
-					"fil": "Gamitin ang R.I.C.E. na pamamaraan: Rest, Ice, Compression, at Elevation. Para sa patuloy na sakit o malubhang pilay ng kalamnan, magpakonsulta sa isang healthcare provider."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Sun Burn",
-			"patterns": [
-				"How to treat sunburn?",
-				"What to do for sunburn?",
-				"Best way to relieve sunburn pain?",
-				"Sunburn treatment advice?",
-				"How to heal sunburn?"
-			],
-			"responses": [
-				{
-					"eng": "Cool the skin with a damp cloth or take a cool bath. Apply aloe vera or a moisturizing lotion to soothe the skin. Drink plenty of water to stay hydrated and avoid further sun exposure. Over-the-counter pain relievers can help with discomfort.",
-					"fil": "Palamigin ang balat gamit ang basang tela o maligamgam na paligo. Maglagay ng aloe vera o moisturizing lotion upang mapagaan ang balat. Uminom ng maraming tubig upang manatiling hydrated at iwasan ang karagdagang pagkakalantad sa araw. Ang mga over-the-counter na pain relievers ay maaaring makatulong sa pag-alis ng hindi komportableng pakiramdam."
-				},
-				{
-					"eng": "Use cool compresses and moisturize with aloe vera gel. Drink water and avoid the sun until the burn heals.",
-					"fil": "Gumamit ng malamig na pomento at maglagay ng aloe vera gel upang moisturize ang balat. Uminom ng tubig at iwasan ang araw hanggang sa maghilom ang paso."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Chemical Burn",
-			"patterns": [
-				"What to do for a chemical burn?",
-				"How to treat chemical burns?",
-				"Chemical burn treatment advice?",
-				"How to relieve chemical burn pain?",
-				"Best way to heal a chemical burn?"
-			],
-			"responses": [
-				{
-					"eng": "Immediately flush the affected area with water for at least 20 minutes. Remove any contaminated clothing. Cover the burn with a sterile bandage and avoid applying creams or ointments unless instructed by a healthcare provider. Seek medical attention immediately.",
-					"fil": "Agad na banlawan ang apektadong lugar ng tubig sa loob ng hindi bababa sa 20 minuto. Alisin ang anumang maruming damit. Takpan ang paso ng sterile na benda at iwasan ang paglalagay ng mga creams o ointments maliban kung inutusan ng isang healthcare provider. Magpakonsulta sa doktor agad."
-				},
-				{
-					"eng": "Rinse the burn with water continuously for 20 minutes and remove contaminated clothing. Seek immediate medical help.",
-					"fil": "Banlawan ang paso ng tubig ng tuluy-tuloy sa loob ng 20 minuto at alisin ang maruming damit. Humingi ng agarang medikal na tulong."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Rash",
-			"patterns": [
-				"How to treat a rash?",
-				"What to do for a rash?",
-				"Best way to relieve rash?",
-				"Rash treatment advice?",
-				"How to reduce rash itching?"
-			],
-			"responses": [
-				{
-					"eng": "Wash the affected area with mild soap and water. Apply an over-the-counter anti-itch cream or antihistamine. Avoid scratching to prevent infection. If the rash persists or is severe, consult a healthcare provider.",
-					"fil": "Hugasan ang apektadong lugar gamit ang mild na sabon at tubig. Maglagay ng over-the-counter na anti-itch cream o antihistamine. Iwasan ang pangangati upang maiwasan ang impeksyon. Kung ang pantal ay nagpapatuloy o malubha, magpakonsulta sa isang healthcare provider."
-				},
-				{
-					"eng": "Clean the area gently, apply an anti-itch cream, and avoid irritants. Seek medical advice if the rash spreads or doesn't improve.",
-					"fil": "Linisin ang lugar ng maingat, maglagay ng anti-itch cream, at iwasan ang mga irritants. Humingi ng medikal na payo kung ang pantal ay kumakalat o hindi bumubuti."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Snake Bite",
-			"patterns": [
-				"What to do if bitten by a snake?",
-				"How to treat a snake bite?",
-				"Snake bite treatment advice?",
-				"How to manage a snake bite?",
-				"What to do for a snake bite?"
-			],
-			"responses": [
-				{
-					"eng": "Keep the bitten area still and below heart level to slow venom spread. Remove any tight clothing or jewelry near the bite. Do not attempt to suck out the venom. Seek emergency medical help immediately",
-					"fil": "Ipahinga ang tinukso na lugar at panatilihing nasa ilalim ng antas ng puso upang mapabagal ang pagkalat ng lason. Alisin ang anumang masikip na damit o alahas malapit sa kagat. Huwag subukang sipsipin ang lason. Humingi agad ng tulong medikal."
-				},
-				{
-					"eng": "Stay calm and immobilize the bitten limb. Seek emergency medical care as quickly as possible",
-					"fil": "Manatiling kalmado at i-immobilize ang tinukso na bahagi. Humingi ng agarang medikal na pangangalaga sa lalong madaling panahon."
-				},
-				{
-					"eng": "Call emergency services immediately. Keep the bite area still and lower than the heart. Do not apply ice or a tourniquet.",
-					"fil": "Tumawag agad ng emergency services. Panatilihing hindi gumagalaw ang lugar ng kagat at nasa ibaba ng puso. Huwag maglagay ng yelo o tourniquet."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Bleeding",
-			"patterns": [
-				"How to stop bleeding?",
-				"What to do if I am bleeding?",
-				"Best way to stop bleeding?",
-				"Bleeding treatment advice?",
-				"How to manage bleeding?"
-			],
-			"responses": [
-				{
-					"eng": "Apply direct pressure to the wound with a clean cloth or bandage. If possible, elevate the injured area above heart level. Keep applying pressure until the bleeding stops. If the bleeding is severe, seek emergency medical help immediately.",
-					"fil": "Maglagay ng direktang pressure sa sugat gamit ang malinis na tela o benda. Kung maaari, itaas ang nasugatang lugar sa itaas ng antas ng puso. Patuloy na mag-aplay ng pressure hanggang sa tumigil ang pagdurugo. Kung malubha ang pagdurugo, humingi agad ng tulong medikal."
-				},
-				{
-					"eng": "Use a clean cloth to apply pressure to the wound. Elevate the area if possible and seek medical attention for severe bleeding.",
-					"fil": "Gamitin ang malinis na tela upang mag-aplay ng pressure sa sugat. Itaas ang lugar kung maaari at humingi ng medikal na atensyon para sa malubhang pagdurugo."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Fracture",
-			"patterns": [
-				"What to do for a fracture?",
-				"How to treat a broken bone?",
-				"Fracture treatment advice?",
-				"Best way to manage a fracture?",
-				"How to relieve fracture pain?"
-			],
-			"responses": [
-				{
-					"eng": "Keep the injured area still and avoid moving it. Apply a splint to immobilize the fracture and use a cold pack to reduce swelling. Seek immediate medical attention.",
-					"fil": "Ipahinga ang nasugatang lugar at iwasang galawin ito. Maglagay ng splint upang i-immobilize ang bali at gumamit ng cold pack upang mabawasan ang pamamaga. Humingi ng agarang medikal na atensyon."
-				},
-				{
-					"eng": "Do not move the injured area and use a splint to keep it immobile. Apply ice and seek emergency medical help.",
-					"fil": "Huwag galawin ang nasugatang lugar at gamitin ang splint upang mapanatiling hindi gumagalaw ito. Maglagay ng yelo at humingi ng agarang medikal na tulong."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Fever",
-			"patterns": [
-				"How to reduce a fever?",
-				"What to do for a fever?",
-				"Best way to bring down fever?",
-				"Fever treatment advice?",
-				"How to manage fever?"
-			],
-			"responses": [
-				{
-					"eng": "Stay hydrated by drinking plenty of fluids. Use over-the-counter fever reducers like acetaminophen or ibuprofen. Rest in a cool environment and wear lightweight clothing. If the fever is very high or persists, seek medical advice.",
-					"fil": "Manatiling hydrated sa pamamagitan ng pag-inom ng maraming likido. Gumamit ng over-the-counter na gamot para sa lagnat tulad ng acetaminophen o ibuprofen. Magpahinga sa isang malamig na kapaligiran at magsuot ng magagaan na damit. Kung ang lagnat ay napakataas o nagpapatuloy, magpakonsulta sa doktor."
-				},
-				{
-					"eng": "Drink water, rest, and use fever-reducing medication. Seek medical care if the fever is very high or persists for more than a day.",
-					"fil": "Uminom ng tubig, magpahinga, at gumamit ng gamot para sa pagbawas ng lagnat. Humingi ng medikal na pangangalaga kung ang lagnat ay napakataas o nagpapatuloy ng higit sa isang araw."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Convulsions",
-			"patterns": [
-				"What to do during convulsions?",
-				"How to help someone having a seizure?",
-				"Convulsion first aid steps?",
-				"Best way to manage convulsions?",
-				"What should I do for convulsions?"
-			],
-			"responses": [
-				{
-					"eng": "Protect the person from injury by removing nearby objects. Do not restrain them or put anything in their mouth. After the convulsions stop, place them in the recovery position and monitor their breathing. Seek emergency medical help.",
-					"fil": "Protektahan ang tao mula sa pinsala sa pamamagitan ng pagtanggal ng mga nakapaligid na bagay. Huwag silang pigilan o maglagay ng anumang bagay sa kanilang bibig. Pagkatapos huminto ang mga convulsions, ilagay sila sa recovery position at bantayan ang kanilang paghinga. Humingi ng agarang medikal na tulong."
-				},
-				{
-					"eng": "Stay with the person and protect them from harm. Do not restrain them or place anything in their mouth. Call emergency services.",
-					"fil": "Manatili sa tabi ng tao at protektahan sila mula sa pinsala. Huwag silang pigilan o maglagay ng anumang bagay sa kanilang bibig. Tumawag ng emergency services."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Chest Pain",
-			"patterns": [
-				"What to do for chest pain?",
-				"How to treat chest pain?",
-				"Chest pain treatment advice?",
-				"What should I do if I have chest pain?",
-				"Best way to relieve chest pain?"
-			],
-			"responses": [
-				{
-					"eng": "If you experience chest pain, stop any physical activity and rest. Take deep breaths and try to stay calm. If the pain persists, seek emergency medical help immediately, as it could be a sign of a heart attack.",
-					"fil": "Kung makaranas ka ng pananakit sa dibdib, itigil ang anumang pisikal na aktibidad at magpahinga. Huminga ng malalim at subukang manatiling kalmado. Kung magpapatuloy ang sakit, humingi ng agarang medikal na tulong, dahil maaari itong senyales ng atake sa puso."
-				},
-				{
-					"eng": "Rest and take slow, deep breaths. Seek emergency medical attention if the pain is severe or does not go away.",
-					"fil": "Magpahinga at huminga ng mabagal at malalim. Humingi ng agarang medikal na atensyon kung ang sakit ay malubha o hindi nawawala."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Dizziness",
-			"patterns": [
-				"How to treat dizziness?",
-				"What to do if I feel dizzy?",
-				"Best way to relieve dizziness?",
-				"Dizziness treatment advice?",
-				"How to stop feeling dizzy?"
-			],
-			"responses": [
-				{
-					"eng": "Sit or lie down immediately and rest until the dizziness passes. Drink plenty of water and avoid sudden movements. If dizziness persists or is accompanied by other symptoms, seek medical attention.",
-					"fil": "Umupo o humiga agad at magpahinga hanggang sa mawala ang pagkahilo. Uminom ng maraming tubig at iwasan ang biglaang paggalaw. Kung magpapatuloy ang pagkahilo o sinasamahan ng iba pang sintomas, magpakonsulta sa doktor."
-				},
-				{
-					"eng": "Sit or lie down and drink water. Avoid sudden movements. If dizziness continues, consult a doctor.",
-					"fil": "Umupo o humiga at uminom ng tubig. Iwasan ang biglaang paggalaw. Kung magpatuloy ang pagkahilo, magpakonsulta sa doktor."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Heat Stroke",
-			"patterns": [
-				"What to do for heat stroke?",
-				"How to treat heat stroke?",
-				"Heat stroke treatment advice?",
-				"How to prevent heat stroke?",
-				"Best way to cool down from heat stroke?",
-				"Best way to recover from heat stroke?",
-				"How to manage heat stroke?"
-			],
-			"responses": [
-				{
-					"eng": "Move to a cooler place and lie down with your legs slightly elevated. Apply cool water to your skin and use a fan to help with cooling. Drink cool water or an electrolyte drink, but avoid sugary or alcoholic beverages. Seek emergency medical attention immediately.",
-					"fil": "Lumipat sa isang mas malamig na lugar at humiga na may bahagyang itaas ang mga binti. Maglagay ng malamig na tubig sa iyong balat at gumamit ng pamaypay upang makatulong sa pagpapalamig. Uminom ng malamig na tubig o electrolyte drink, ngunit iwasan ang matatamis o alcoholic na inumin. Humingi ng agarang medikal na tulong."
-				},
-				{
-					"eng": "Get to a cool place, remove excess clothing, and apply cold packs or wet cloths. Drink cool water or sports drinks, and seek immediate medical help.",
-					"fil": "Pumunta sa isang malamig na lugar, alisin ang sobrang damit, at maglagay ng cold packs o basang tela. Uminom ng malamig na tubig o sports drinks, at humingi ng agarang medikal na tulong."
-				},
-				{
-					"eng": "Call emergency services immediately. Move the person to a cool area and remove excess clothing. Use cool water or ice packs to lower their body temperature. Keep monitoring their condition until help arrives.",
-					"fil": "Tumawag agad ng emergency services. Ilipat ang tao sa isang malamig na lugar at alisin ang sobrang damit. Gumamit ng malamig na tubig o ice packs upang ibaba ang kanilang temperatura ng katawan. Patuloy na bantayan ang kanilang kondisyon hanggang dumating ang tulong."
-				},
-				{
-					"eng": "Seek emergency medical help. Cool the person down with water or ice packs and stay with them until help arrives.",
-					"fil": "Humingi ng agarang medikal na tulong. Palamigin ang tao gamit ang tubig o ice packs at manatili sa kanilang tabi hanggang dumating ang tulong."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Heart Attack",
-			"patterns": [
-				"What to do if someone is having a heart attack?",
-				"How to treat a heart attack?",
-				"Heart attack emergency steps?",
-				"Heart attack treatment advice?",
-				"How to recognize a heart attack?"
-			],
-			"responses": [
-				{
-					"eng": "Call emergency services immediately. Help the person to sit down and stay calm. If available, give them aspirin to chew slowly unless they are allergic or have been advised not to by a doctor. If they lose consciousness, begin CPR if trained to do so.",
-					"fil": "Tumawag agad ng emergency services. Tulungan ang tao na umupo at manatiling kalmado. Kung maaari, bigyan sila ng aspirin upang nguyain ng dahan-dahan maliban kung sila ay allergic o inutusan ng doktor na huwag gawin ito. Kung mawalan sila ng malay, simulan ang CPR kung ikaw ay sinanay sa paggawa nito."
-				},
-				{
-					"eng": "Call for emergency medical help right away. Keep the person calm and have them chew aspirin if not allergic.",
-					"fil": "Tumawag agad ng tulong medikal. Panatilihing kalmado ang tao at hayaang nguyain nila ang aspirin kung hindi sila allergic."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Stroke",
-			"patterns": [
-				"What to do if someone has a stroke?",
-				"How to treat a stroke?",
-				"Stroke first aid advice?",
-				"Best way to help during a stroke?",
-				"What to do during a stroke?",
-				"What to do if someone is having a stroke?",
-				"How to treat a stroke?",
-				"Stroke emergency steps?",
-				"Stroke treatment advice?",
-				"How to recognize a stroke?"
-			],
-			"responses": [
-				{
-					"eng": "If you suspect someone is having a stroke, call emergency services immediately. Have the person lie down with their head slightly elevated. Monitor their breathing and be ready to perform CPR if necessary.",
-					"fil": "Kung sa tingin mo ay may stroke ang isang tao, tumawag agad ng emergency services. Hayaang humiga ang tao na may bahagyang itaas ang ulo. Bantayan ang kanilang paghinga at maging handa na magsagawa ng CPR kung kinakailangan."
-				},
-				{
-					"eng": "Seek emergency medical help immediately. Keep the person calm and monitor their breathing.",
-					"fil": "Humingi agad ng tulong medikal. Panatilihing kalmado ang tao at bantayan ang kanilang paghinga."
-				},
-				{
-					"eng": "Act FAST: Face drooping, Arm weakness, Speech difficulty, Time to call emergency services. Call emergency services immediately and note the time the symptoms began. Keep the person comfortable and calm until help arrives.",
-					"fil": "Gumamit ng FAST: Face drooping, Arm weakness, Speech difficulty, Time to call emergency services. Tumawag agad ng emergency services at tandaan ang oras ng pagsisimula ng mga sintomas. Panatilihin ang tao na komportable at kalmado hanggang dumating ang tulong."
-				},
-				{
-					"eng": "Call emergency services immediately if you notice face drooping, arm weakness, or speech difficulty. Act FAST and get medical help right away.",
-					"fil": "Tumawag agad ng emergency services kung mapansin ang pag-dagilid ng mukha, kahinaan ng braso, o kahirapan sa pagsasalita. Kumilos ng FAST at kumuha ng medikal na tulong kaagad."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Dehydration",
-			"patterns": [
-				"How to treat dehydration?",
-				"What to do for dehydration?",
-				"Best way to rehydrate?",
-				"Dehydration treatment advice?",
-				"How to manage dehydration?"
-			],
-			"responses": [
-				{
-					"eng": "Drink plenty of water or an oral rehydration solution (ORS). Rest in a cool environment and avoid physical activity until fully rehydrated. For severe dehydration, seek medical attention.",
-					"fil": "Uminom ng maraming tubig o oral rehydration solution (ORS). Magpahinga sa isang malamig na kapaligiran at iwasan ang pisikal na aktibidad hanggang sa ganap na ma-rehydrate. Para sa malubhang dehydration, humingi ng medikal na tulong."
-				},
-				{
-					"eng": "Increase fluid intake, rest, and use an ORS if available. Seek medical help if dehydration is severe.",
-					"fil": "Dagdagan ang pag-inom ng likido, magpahinga, at gumamit ng ORS kung available. Humingi ng tulong medikal kung ang dehydration ay malubha."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Nasal Congestion",
-			"patterns": [
-				"How to relieve nasal congestion?",
-				"What to do for a stuffy nose?",
-				"Best way to clear nasal congestion?",
-				"Nasal congestion treatment advice?",
-				"How to treat a blocked nose?"
-			],
-			"responses": [
-				{
-					"eng": "Use a saline nasal spray or steam inhalation to clear the nasal passages. Stay hydrated and use a humidifier if needed. Over-the-counter decongestants can also help relieve symptoms.",
-					"fil": "Gumamit ng saline nasal spray o steam inhalation upang linisin ang mga nasal passages. Manatiling hydrated at gumamit ng humidifier kung kinakailangan. Ang mga over-the-counter na decongestants ay maaari ring makatulong sa pagpapaluwag ng mga sintomas."
-				},
-				{
-					"eng": "Try steam inhalation, saline spray, and stay hydrated. Consider using a decongestant if symptoms persist.",
-					"fil": "Subukan ang steam inhalation, saline spray, at manatiling hydrated. Isaalang-alang ang paggamit ng decongestant kung ang mga sintomas ay nagpapatuloy."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Cough",
-			"patterns": [
-				"How to treat a cough?",
-				"What to do for a cough?",
-				"Best way to stop coughing?",
-				"Cough treatment advice?",
-				"How to relieve a persistent cough?"
-			],
-			"responses": [
-				{
-					"eng": "Drink warm fluids like tea with honey. Use a humidifier to add moisture to the air. Over-the-counter cough syrups or lozenges can help soothe your throat. If the cough persists for more than a week, consult a healthcare provider.",
-					"fil": "Uminom ng mainit na likido tulad ng tsaa na may honey. Gumamit ng humidifier upang magdagdag ng moisture sa hangin. Ang mga over-the-counter na cough syrups o lozenges ay maaaring makatulong upang maibsan ang sore throat. Kung ang ubo ay nagpapatuloy ng higit sa isang linggo, magpakonsulta sa healthcare provider."
-				},
-				{
-					"eng": "Stay hydrated, use cough drops, and consider a humidifier. If the cough persists, seek medical advice.",
-					"fil": "Manatiling hydrated, gumamit ng cough drops, at isaalang-alang ang paggamit ng humidifier. Kung ang ubo ay nagpapatuloy, humingi ng medikal na payo."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Abdominal Pain",
-			"patterns": [
-				"How to treat abdominal pain?",
-				"What to do for stomach pain?",
-				"Best way to relieve abdominal pain?",
-				"Abdominal pain treatment advice?",
-				"How to manage stomach pain?"
-			],
-			"responses": [
-				{
-					"eng": "Rest and avoid heavy meals. Drink clear fluids and apply a warm compress to the abdomen. Over-the-counter antacids or pain relievers can help. If the pain is severe or persistent, seek medical attention.",
-					"fil": "Magpahinga at iwasan ang mabibigat na pagkain. Uminom ng malinaw na likido at maglagay ng mainit na compress sa tiyan. Ang mga over-the-counter na antacids o pain relievers ay maaaring makatulong. Kung ang sakit ay malubha o nagpapatuloy, humingi ng medikal na tulong."
-				},
-				{
-					"eng": "Rest and stay hydrated. Use a warm compress and take pain relief medication if needed. Consult a healthcare provider if the pain persists.",
-					"fil": "Magpahinga at manatiling hydrated. Gumamit ng mainit na compress at uminom ng gamot para sa sakit kung kinakailangan. Magpakonsulta sa healthcare provider kung ang sakit ay nagpapatuloy."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Broken Toe",
-			"patterns": [
-				"How to treat a broken toe?",
-				"What to do for a broken toe?",
-				"Best way to heal a broken toe?",
-				"Broken toe treatment advice?",
-				"How to manage a broken toe?"
-			],
-			"responses": [
-				{
-					"eng": "Rest and avoid putting weight on the toe. Apply ice to reduce swelling and elevate the foot. Use a splint or buddy tape the toe to the adjacent one. Seek medical attention if the pain is severe.",
-					"fil": "Magpahinga at iwasang maglagay ng bigat sa daliri sa paa. Maglagay ng yelo upang mabawasan ang pamamaga at itaas ang paa. Gumamit ng splint o i-tape ang daliri sa paa sa katabing daliri. Humingi ng medikal na tulong kung ang sakit ay malubha."
-				},
-				{
-					"eng": "Elevate the foot, apply ice, and tape the toe to the next one. Consult a healthcare provider if necessary.",
-					"fil": "Itaas ang paa, maglagay ng yelo, at i-tape ang daliri sa katabing daliri. Magpakonsulta sa healthcare provider kung kinakailangan."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Choking",
-			"patterns": [
-				"What to do if someone is choking?",
-				"How to help someone who is choking?",
-				"Choking first aid steps?",
-				"Best way to stop choking?",
-				"How to save someone choking?",
-				"What to do if someone is choking?",
-				"How to treat choking?",
-				"Choking emergency steps?",
-				"Choking treatment advice?",
-				"How to help someone who is choking?"
-			],
-			"responses": [
-				{
-					"eng": "If someone is choking, ask if they can speak or cough. If they cannot, perform the Heimlich maneuver by standing behind them, wrapping your arms around their waist, and giving quick, upward thrusts below their ribcage. Call emergency services immediately.",
-					"fil": "Kung ang isang tao ay nasasakal, tanungin kung sila ay makapagsalita o makakaugong. Kung hindi nila magawa, isagawa ang Heimlich maneuver sa pamamagitan ng pagtayo sa likuran nila, pagyakap sa kanilang baywang, at pagbibigay ng mabilis at pataas na puwersa sa ilalim ng kanilang ribcage. Tumawag agad ng emergency services."
-				},
-				{
-					"eng": "Perform the Heimlich maneuver or back blows to dislodge the object. Call emergency services if the person cannot breathe.",
-					"fil": "Isagawa ang Heimlich maneuver o back blows upang alisin ang bagay. Tumawag ng emergency services kung ang tao ay hindi makakahinga."
-				},
-				{
-					"eng": "If the person is unable to speak, cough, or breathe, perform the Heimlich maneuver: Stand behind the person, place your arms around their waist, make a fist with one hand, place it above their navel, and give quick, upward thrusts. If the person becomes unconscious, begin CPR and call emergency services.",
-					"fil": "Kung ang tao ay hindi makapagsalita, makakaugong, o makahinga, isagawa ang Heimlich maneuver: Tumayo sa likuran ng tao, ilagay ang iyong mga braso sa kanilang baywang, gumawa ng kamao gamit ang isang kamay, ilagay ito sa itaas ng kanilang pusod, at bigyan ng mabilis, pataas na puwersa. Kung ang tao ay mawalan ng malay, simulan ang CPR at tumawag ng emergency services."
-				},
-				{
-					"eng": "Perform the Heimlich maneuver by standing behind the person and giving quick, upward abdominal thrusts. Call emergency services if needed.",
-					"fil": "Isagawa ang Heimlich maneuver sa pamamagitan ng pagtayo sa likuran ng tao at pagbibigay ng mabilis, pataas na abdominal thrusts. Tumawag ng emergency services kung kinakailangan."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Diarrhea",
-			"patterns": [
-				"How to treat diarrhea?",
-				"What to do for diarrhea?",
-				"Best way to stop diarrhea?",
-				"Diarrhea treatment advice?",
-				"How to manage diarrhea?"
-			],
-			"responses": [
-				{
-					"eng": "Stay hydrated by drinking plenty of fluids like water or an oral rehydration solution. Avoid solid foods until the symptoms improve. Over-the-counter anti-diarrheal medications can be used, but consult a healthcare provider if symptoms persist.",
-					"fil": "Manatiling hydrated sa pamamagitan ng pag-inom ng maraming likido tulad ng tubig o oral rehydration solution. Iwasan ang solidong pagkain hanggang sa bumuti ang mga sintomas. Maaaring gumamit ng over-the-counter na anti-diarrheal medications, ngunit magpakonsulta sa healthcare provider kung ang mga sintomas ay nagpapatuloy."
-				},
-				{
-					"eng": "Drink fluids, avoid solid food, and consider over-the-counter medications. Seek medical help if symptoms persist.",
-					"fil": "Uminom ng likido, iwasan ang solidong pagkain, at isaalang-alang ang paggamit ng over-the-counter na mga gamot. Humingi ng medikal na tulong kung ang mga sintomas ay nagpapatuloy."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Heat Exhaustion",
-			"patterns": [
-				"How to treat heat exhaustion?",
-				"What to do for heat exhaustion?",
-				"Best way to recover from heat exhaustion?",
-				"Heat exhaustion treatment advice?",
-				"How to manage heat exhaustion?"
-			],
-			"responses": [
-				{
-					"eng": "Move to a cool, shaded area and drink plenty of water. Loosen or remove clothing and apply cool, wet cloths to the skin. Rest until fully recovered. If symptoms worsen, seek medical help.",
-					"fil": "Lumipat sa isang malamig at may anino na lugar at uminom ng maraming tubig. Alisin o luwagan ang damit at maglagay ng malamig, basang tela sa balat. Magpahinga hanggang sa ganap na mag-recover. Kung lumalala ang mga sintomas, humingi ng medikal na tulong."
-				},
-				{
-					"eng": "Cool down, hydrate, and rest in a shaded area. Seek medical attention if symptoms do not improve.",
-					"fil": "Palamigin ang katawan, manatiling hydrated, at magpahinga sa isang lugar na may anino. Humingi ng medikal na atensyon kung ang mga sintomas ay hindi bumubuti."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Nose Bleed",
-			"patterns": [
-				"How to stop a nosebleed?",
-				"What to do for a nosebleed?",
-				"Best way to stop nose bleeding?",
-				"Nosebleed treatment advice?",
-				"How to manage a nosebleed?",
-				"How to stop a nosebleed?",
-				"How to treat a nosebleed?",
-				"Best way to stop nosebleeds?"
-			],
-			"responses": [
-				{
-					"eng": "Sit up straight and lean slightly forward. Pinch the soft part of your nose and hold for 10-15 minutes. Apply a cold compress to the bridge of the nose. If the bleeding continues for more than 20 minutes, seek medical attention.",
-					"fil": "Umupo ng tuwid at magyuko ng bahagya pasulong. Pisilin ang malambot na bahagi ng iyong ilong at hawakan ito ng 10-15 minuto. Maglagay ng malamig na compress sa tulay ng ilong. Kung ang pagdurugo ay magpapatuloy ng higit sa 20 minuto, humingi ng medikal na tulong."
-				},
-				{
-					"eng": "Lean forward, pinch your nose, and hold until the bleeding stops. Use a cold compress and seek medical help if the bleeding doesn't stop.",
-					"fil": "Yuko pasulong, pisilin ang iyong ilong, at hawakan hanggang sa tumigil ang pagdurugo. Gumamit ng malamig na compress at humingi ng medikal na tulong kung ang pagdurugo ay hindi tumitigil."
-				},
-				{
-					"eng": "Sit up straight and lean forward slightly. Pinch the soft part of your nose with your thumb and index finger for 10-15 minutes. Breathe through your mouth and avoid lying down. Apply a cold compress to the bridge of your nose. Seek medical help if the bleeding doesn't stop after 20 minutes.",
-					"fil": "Umupo ng tuwid at magyuko ng bahagya pasulong. Pisilin ang malambot na bahagi ng iyong ilong gamit ang iyong hinlalaki at hintuturo ng 10-15 minuto. Huminga sa pamamagitan ng iyong bibig at iwasang humiga. Maglagay ng malamig na compress sa tulay ng iyong ilong. Humingi ng medikal na tulong kung ang pagdurugo ay hindi tumitigil pagkatapos ng 20 minuto."
-				},
-				{
-					"eng": "Tilt your head forward and pinch your nose just below the bridge. Hold for 10-15 minutes and avoid blowing your nose afterward.",
-					"fil": "Itilt ang iyong ulo pasulong at pisilin ang iyong ilong sa ilalim ng tulay. Hawakan ito ng 10-15 minuto at iwasang sabunin ang iyong ilong pagkatapos."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Rectal Bleeding",
-			"patterns": [
-				"What to do if I have rectal bleeding?",
-				"How to treat rectal bleeding?",
-				"Rectal bleeding treatment advice?",
-				"What to do for rectal bleeding?",
-				"How to manage rectal bleeding?"
-			],
-			"responses": [
-				{
-					"eng": "Stay calm and avoid straining during bowel movements. Increase fiber intake and drink plenty of water to ease bowel movements. Seek medical attention to determine the cause and receive appropriate treatment.",
-					"fil": "Manatiling kalmado at iwasang mag-igting sa panahon ng pagdumi. Dagdagan ang iyong fiber intake at uminom ng maraming tubig upang mapadali ang pagdumi. Humingi ng medikal na tulong upang matukoy ang sanhi at makatanggap ng angkop na paggamot."
-				},
-				{
-					"eng": "Increase fiber and water intake. Avoid straining and consult a healthcare provider to determine the cause.",
-					"fil": "Dagdagan ang fiber at water intake. Iwasan ang pag-igting at kumonsulta sa healthcare provider upang matukoy ang sanhi."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Testicle Pain",
-			"patterns": [
-				"What to do if I have testicle pain?",
-				"How to treat testicle pain?",
-				"Best way to relieve testicle pain?",
-				"Testicle pain treatment advice?",
-				"How to manage testicle pain?"
-			],
-			"responses": [
-				{
-					"eng": "Rest and avoid strenuous activity. Apply ice to the affected area and wear supportive underwear. If the pain persists or is severe, seek medical attention.",
-					"fil": "Magpahinga at iwasan ang mabibigat na aktibidad. Maglagay ng yelo sa apektadong lugar at magsuot ng supportive na underwear. Kung ang sakit ay nagpapatuloy o malubha, humingi ng medikal na tulong."
-				},
-				{
-					"eng": "Rest, use ice, and wear supportive clothing. Seek medical advice if the pain is severe or does not improve.",
-					"fil": "Magpahinga, gumamit ng yelo, at magsuot ng supportive na damit. Humingi ng medikal na payo kung ang sakit ay malubha o hindi bumubuti."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Vertigo",
-			"patterns": [
-				"What to do if I have vertigo?",
-				"How to treat vertigo?",
-				"Best way to manage vertigo?",
-				"Vertigo treatment advice?",
-				"How to relieve vertigo symptoms?"
-			],
-			"responses": [
-				{
-					"eng": "Sit or lie down immediately when feeling dizzy. Avoid sudden head movements and rest in a dark, quiet room. Stay hydrated and seek medical advice if symptoms persist.",
-					"fil": "Umupo o humiga agad kapag nakakaramdam ng pagkahilo. Iwasan ang biglaang paggalaw ng ulo at magpahinga sa isang madilim at tahimik na kwarto. Manatiling hydrated at humingi ng medikal na payo kung ang mga sintomas ay nagpapatuloy."
-				},
-				{
-					"eng": "Rest and avoid sudden movements. Stay hydrated and consult a healthcare provider if the symptoms continue.",
-					"fil": "Magpahinga at iwasan ang biglaang paggalaw. Manatiling hydrated at kumonsulta sa healthcare provider kung ang mga sintomas ay nagpapatuloy."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Eye Injury",
-			"patterns": [
-				"What to do if I have an eye injury?",
-				"How to treat an eye injury?",
-				"Eye injury first aid advice?",
-				"Best way to manage an eye injury?",
-				"How to care for an eye injury?"
-			],
-			"responses": [
-				{
-					"eng": "Avoid rubbing the eye and rinse it with clean water. If there is a foreign object in the eye, do not attempt to remove it yourself. Cover the eye with a clean cloth or eye patch and seek medical attention immediately.",
-					"fil": "Iwasan ang pagdila sa mata at banlawan ito ng malinis na tubig. Kung may banyagang bagay sa mata, huwag subukang alisin ito nang mag-isa. Takpan ang mata ng malinis na tela o eye patch at humingi ng agarang medikal na tulong."
-				},
-				{
-					"eng": "Rinse the eye with clean water and avoid rubbing it. Seek emergency medical help, especially if there is a foreign object in the eye.",
-					"fil": "Banlawan ang mata ng malinis na tubig at iwasan ang pagdila dito. Humingi ng agarang medikal na tulong, lalo na kung may banyagang bagay sa mata."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Food Poison",
-			"patterns": [
-				"How to treat food poisoning?",
-				"What to do for food poisoning?",
-				"Best way to recover from food poisoning?",
-				"Food poisoning treatment advice?",
-				"How to manage food poisoning?"
-			],
-			"responses": [
-				{
-					"eng": "Stay hydrated by drinking clear fluids like water or oral rehydration solutions. Rest and avoid solid foods until symptoms subside. If symptoms are severe or persistent, seek medical attention.",
-					"fil": "Manatiling hydrated sa pamamagitan ng pag-inom ng malinaw na likido tulad ng tubig o oral rehydration solutions. Magpahinga at iwasan ang solidong pagkain hanggang sa humupa ang mga sintomas. Kung ang mga sintomas ay malubha o nagpapatuloy, humingi ng medikal na tulong."
-				},
-				{
-					"eng": "Drink clear fluids, rest, and avoid solid food until symptoms improve. Consult a healthcare provider if symptoms persist.",
-					"fil": "Uminom ng malinaw na likido, magpahinga, at iwasan ang solidong pagkain hanggang sa bumuti ang mga sintomas. Kumonsulta sa healthcare provider kung ang mga sintomas ay nagpapatuloy."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Seizure",
-			"patterns": [
-				"What to do during a seizure?",
-				"How to help someone having a seizure?",
-				"Seizure first aid steps?",
-				"Best way to manage a seizure?",
-				"What should I do for a seizure?",
-				"What to do if someone is having a seizure?",
-				"How to treat a seizure?",
-				"Seizure emergency steps?",
-				"Seizure treatment advice?",
-				"How to help during a seizure?"
-			],
-			"responses": [
-				{
-					"eng": "Stay calm and protect the person from injury by moving nearby objects. Do not restrain them or put anything in their mouth. Once the seizure ends, place them in the recovery position and monitor their breathing. Seek emergency medical help.",
-					"fil": "Manatiling kalmado at protektahan ang tao mula sa pinsala sa pamamagitan ng pag-aalis ng mga bagay na malapit sa kanila. Huwag silang pigilan o maglagay ng anumang bagay sa kanilang bibig. Kapag natapos na ang seizure, ilagay sila sa recovery position at bantayan ang kanilang paghinga. Humingi ng agarang medikal na tulong."
-				},
-				{
-					"eng": "Protect the person from harm, do not restrain them, and call emergency services. Place them in the recovery position once the seizure stops.",
-					"fil": "Protektahan ang tao mula sa pinsala, huwag silang pigilan, at tumawag ng emergency services. Ilagay sila sa recovery position kapag natapos ang seizure."
-				},
-				{
-					"eng": "Do not restrain the person. Move any dangerous objects away from them. Cushion their head and time the seizure. Once the seizure stops, place them in the recovery position and stay with them until they are fully conscious. Seek medical attention if it's their first seizure or if the seizure lasts more than 5 minutes.",
-					"fil": "Huwag pigilan ang tao. Ilipat ang anumang panganib na bagay mula sa kanila. Pahiran ang kanilang ulo at itala ang oras ng seizure. Kapag natapos ang seizure, ilagay sila sa recovery position at manatili sa kanilang tabi hanggang sa sila ay ganap na magising. Humingi ng medikal na tulong kung ito ang kanilang unang seizure o kung ang seizure ay tumatagal ng higit sa 5 minuto."
-				},
-				{
-					"eng": "Move objects away from the person to prevent injury and cushion their head. Don't restrain them or put anything in their mouth. After the seizure, help them into the recovery position and seek medical help.",
-					"fil": "Ilipat ang mga bagay mula sa tao upang maiwasan ang pinsala at pahiran ang kanilang ulo. Huwag silang pigilan o maglagay ng anumang bagay sa kanilang bibig. Pagkatapos ng seizure, tulungan silang pumunta sa recovery position at humingi ng medikal na tulong."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Head Injury",
-			"patterns": [
-				"What to do for a head injury?",
-				"How to treat a head injury?",
-				"Head injury first aid advice?",
-				"Best way to manage a head injury?",
-				"How to care for a head injury?"
-			],
-			"responses": [
-				{
-					"eng": "If the injury is minor, apply a cold compress to reduce swelling and rest. For more serious injuries, seek emergency medical help immediately. Keep the person awake and monitor their symptoms closely.",
-					"fil": "Kung ang pinsala ay maliit, maglagay ng malamig na compress upang mabawasan ang pamamaga at magpahinga. Para sa mas seryosong pinsala, humingi ng agarang medikal na tulong. Panatilihing gising ang tao at bantayan ang kanilang mga sintomas."
-				},
-				{
-					"eng": "Use a cold compress for minor injuries. For serious head injuries, seek immediate medical help and monitor the person's condition.",
-					"fil": "Gumamit ng malamig na compress para sa maliit na pinsala. Para sa seryosong pinsala sa ulo, humingi ng agarang medikal na tulong at bantayan ang kondisyon ng tao."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Fainting",
-			"patterns": [
-				"What to do if someone faints?",
-				"How to help someone who fainted?",
-				"Fainting first aid steps?",
-				"Best way to manage fainting?",
-				"What should I do for fainting?"
-			],
-			"responses": [
-				{
-					"eng": "Help the person lie down and elevate their legs to improve blood flow to the brain. Loosen any tight clothing and keep them lying down until they recover. If they don't regain consciousness quickly, seek medical help immediately.",
-					"fil": "Tulungan ang tao na humiga at itaas ang kanilang mga binti upang mapabuti ang daloy ng dugo sa utak. Luwagan ang anumang masisikip na damit at panatilihing nakahiga sila hanggang sa sila ay makabawi. Kung hindi sila agad bumalik sa malay, humingi ng agarang medikal na tulong."
-				},
-				{
-					"eng": "Have the person lie down, elevate their legs, and loosen tight clothing. Seek medical attention if they don't regain consciousness.",
-					"fil": "Pahigain ang tao, itaas ang kanilang mga binti, at luwagan ang masisikip na damit. Humingi ng medikal na tulong kung hindi sila bumalik sa malay."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Headache",
-			"patterns": [
-				"How to treat a headache?",
-				"What to do for a headache?",
-				"Best way to relieve a headache?",
-				"Headache treatment advice?",
-				"How to manage headache?"
-			],
-			"responses": [
-				{
-					"eng": "Rest in a quiet, dark room and apply a cold or warm compress to your forehead. Over-the-counter pain relievers like ibuprofen or acetaminophen can help. Stay hydrated and avoid triggers like bright lights or loud noises.",
-					"fil": "Magpahinga sa isang tahimik at madilim na kwarto at maglagay ng malamig o mainit na compress sa iyong noo. Maaaring makatulong ang mga over-the-counter na pain relievers tulad ng ibuprofen o acetaminophen. Manatiling hydrated at iwasan ang mga trigger tulad ng maliwanag na ilaw o malalakas na tunog."
-				},
-				{
-					"eng": "Rest, use pain relief medication, and apply a compress. Stay hydrated and avoid known triggers.",
-					"fil": "Magpahinga, gumamit ng gamot para sa sakit, at maglagay ng compress. Manatiling hydrated at iwasan ang mga kilalang trigger."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Cold",
-			"patterns": [
-				"How to treat a cold?",
-				"What to do for a cold?",
-				"Best way to get over a cold?",
-				"Cold treatment advice?",
-				"How to manage cold symptoms?"
-			],
-			"responses": [
-				{
-					"eng": "Rest and stay hydrated by drinking plenty of fluids. Use over-the-counter medications to relieve symptoms like congestion and sore throat. Inhale steam or use a humidifier to ease breathing. If symptoms persist or worsen, consult a healthcare provider.",
-					"fil": "Magpahinga at manatiling hydrated sa pamamagitan ng pag-inom ng maraming likido. Gumamit ng mga over-the-counter na gamot para maibsan ang mga sintomas tulad ng congestion at sore throat. Huminga ng steam o gumamit ng humidifier upang mapadali ang paghinga. Kung ang mga sintomas ay nagpapatuloy o lumalala, kumonsulta sa healthcare provider."
-				},
-				{
-					"eng": "Stay hydrated, rest, and use medications for symptom relief. Seek medical advice if the cold persists or worsens.",
-					"fil": "Manatiling hydrated, magpahinga, at gumamit ng mga gamot para sa pag-alis ng sintomas. Humingi ng medikal na payo kung ang sipon ay nagpapatuloy o lumalala."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Drowning",
-			"patterns": [
-				"What to do if someone is drowning?",
-				"How to save someone who is drowning?",
-				"Drowning rescue steps?",
-				"Best way to help a drowning person?",
-				"What should I do if someone is drowning?"
-			],
-			"responses": [
-				{
-					"eng": "Call for emergency help immediately. If it's safe, try to reach the person with a pole or throw a flotation device. Do not enter the water unless you're trained in water rescue. Once the person is out of the water, check for breathing and start CPR if necessary.",
-					"fil": "Tumawag ng agarang tulong sa emergency. Kung ligtas, subukang abutin ang tao gamit ang isang poste o ihagis ang flotation device. Huwag pumasok sa tubig maliban kung ikaw ay may pagsasanay sa water rescue. Kapag ang tao ay nailabas na sa tubig, suriin ang kanilang paghinga at simulan ang CPR kung kinakailangan."
-				},
-				{
-					"eng": "Call emergency services and try to help without putting yourself at risk. Use a pole or flotation device, and be ready to perform CPR.",
-					"fil": "Tumawag ng emergency services at subukang tumulong nang hindi inilalagay ang iyong sarili sa panganib. Gumamit ng poste o flotation device, at maging handa na magsagawa ng CPR."
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Greeting",
-			"patterns": ["Hi", "Hello", "Hey", "Good day", "Good morning"],
-			"responses": [
-				{
-					"eng": "Hello! How can I assist you today?",
-					"fil": "Kamusta! Paano kita matutulungan ngayon?"
-				},
-				{
-					"eng": "Hi there! What first aid information do you need?",
-					"fil": "Hi! Anong impormasyon tungkol sa first aid ang kailangan mo?"
-				},
-				{
-					"eng": "Hey! How can I help you today?",
-					"fil": "Hello! Paano kita matutulungan ngayon?"
-				}
-			],
-			"context_set": ""
-		},
-		{
-			"tag": "Thank You",
-			"patterns": [
-				"Thank you",
-				"Thanks a lot",
-				"Thanks for the help",
-				"I appreciate it",
-				"Thank you so much"
-			],
-			"responses": [
-				{
-					"eng": "You're welcome! Stay safe!",
-					"fil": "Walang anuman! Mag ingat palagi!"
-				},
-				{
-					"eng": "Happy to help! Take care!",
-					"fil": "Masaya akong makatulong! Mag-ingat ka!"
-				},
-				{
-					"eng": "No problem! Glad I could assist.",
-					"fil": "Walang problema! Natutuwa akong nakatulong."
-				}
-			],
-			"context_set": ""
-		}
-	]
+  "intents": [
+    {
+      "tag": "Buko Water",
+      "patterns": [
+        "How to prepare Buko (Coconut) Water for diarrhea?",
+        "Paano maghanda ng Buko (Coconut) Water para sa pagtatae?",
+        "Steps to use Buko Water for dehydration",
+        "Mga hakbang sa paggamit ng Buko Water para sa dehydration",
+        "How to use coconut water for rehydration?",
+        "Paano gamitin ang tubig ng niyog para sa rehydration?",
+        "Best practices for using Buko Water in home remedies",
+        "Mga tamang pamamaraan ng paggamit ng Buko Water sa mga remedyo sa bahay",
+        "How to filter coconut water for medicinal use?",
+        "Paano salain ang tubig ng niyog para sa medicinal na paggamit?"
+      ],
+      "responses": [
+        {
+          "eng": "Select Fresh Coconuts: Choose young, green coconuts. Open the Coconut: Use a sharp knife or coconut opener to pierce the soft eye and drain the water into a clean container. Filter the Water: Pour the coconut water through a fine mesh strainer or cheesecloth. Consume Slowly: Drink the coconut water slowly to help with rehydration.",
+          "fil": "Pumili ng Mga Sariwang Niyog: Pumili ng mga bata at berdeng niyog. Buksan ang Niyog: Gumamit ng matalim na kutsilyo o pambukas ng niyog upang mabutas ang malambot na mata at patuyuin ang tubig sa malinis na lalagyan. Salain ang Tubig: Ibuhos ang tubig ng niyog sa pamamagitan ng malinis na tela na pangsala. Uminom nang Dahan-dahan: Uminom ng tubig ng niyog nang dahan-dahan upang makatulong sa rehydration."
+        }
+      ],
+      "contextLinks": "W. E. Contributors, “Health Benefits of Coconut Water,” WebMD, Mar. 17, 2023. https://www.webmd.com/diet/health-benefits-coconut-water",
+      "context_set": ""
+    },
+    {
+      "tag": "Tanglad",
+      "patterns": [
+        "How to prepare Tanglad for dehydration?",
+        "Paano maghanda ng Tanglad para sa dehydration?",
+        "Steps to use Tanglad for rehydration",
+        "Mga hakbang sa paggamit ng Tanglad para sa rehydration",
+        "How to use lemongrass for dehydration?",
+        "Paano gamitin ang tanglad para sa dehydration?",
+        "Best practices for using Tanglad in home remedies",
+        "Mga tamang pamamaraan ng paggamit ng Tanglad sa mga remedyo sa bahay",
+        "How to make lemongrass tea for dehydration?",
+        "Paano gumawa ng tsaa ng tanglad para sa dehydration?"
+      ],
+      "responses": [
+        {
+          "eng": "Gather Ingredients: Fresh tanglad stalks, water, optional sweeteners (honey or sugar), and optional flavorings (ginger or lemon). Wash and Chop: Thoroughly wash the tanglad stalks and chop them into small pieces. Boil Water: Bring a pot of water to a boil. Add Tanglad: Add the chopped tanglad to the boiling water. Simmer: Reduce the heat and let it simmer for about 10-15 minutes. Strain: Strain the tea to remove the tanglad pieces. Serve: Consume your tanglad tea slowly hot or let it cool.",
+          "fil": "Magtipon ng Mga Sangkap: Mga sariwang tanglad na tanglad, tubig, mga opsyonal na pampatamis (pulot o asukal), at mga opsyonal na pampalasa (luya o lemon). Hugasan at Tadtarin: Hugasan nang maigi ang tanglad na tanglad at tadtarin ito ng maliliit. Pakuluan ang Tubig: Pakuluan ang isang palayok ng tubig. Magdagdag ng Tanglad: Idagdag ang tinadtad na tanglad sa kumukulong tubig. Kumulo: Bawasan ang apoy at hayaang kumulo ng mga 10-15 minuto. Salain: Salain ang tsaa para matanggal ang mga piraso ng tanglad. Ihain: Uminom ng iyong tanglad tea nang dahan-dahang mainit o hayaan itong lumamig."
+        }
+      ],
+      "contextLinks": "Lemongrass Tea: 10 Benefits,” Healthline, Nov. 07, 2017. https://www.healthline.com/health/food-nutrition/lemongrass-tea#antioxidant",
+      "context_set": ""
+    },
+    {
+      "tag": "Lagundi",
+      "patterns": [
+        "How to prepare Lagundi for nasal congestion?",
+        "Paano maghanda ng Lagundi para sa nasal congestion?",
+        "Steps to use Lagundi for nasal congestion",
+        "Mga hakbang sa paggamit ng Lagundi para sa nasal congestion",
+        "How to use Lagundi for nasal congestion?",
+        "Paano gamitin ang Lagundi para sa nasal congestion?",
+        "Best practices for using Lagundi in home remedies",
+        "Mga tamang pamamaraan ng paggamit ng Lagundi sa mga remedyo sa bahay",
+        "How to make Lagundi tea for nasal congestion?",
+        "Paano gumawa ng tsaa ng Lagundi para sa nasal congestion?"
+      ],
+      "responses": [
+        {
+          "eng": "Gather Ingredients: Fresh or dried lagundi leaves, water. Wash and Chop: Thoroughly wash the lagundi leaves and chop them into small pieces. Boil Water: Bring 2 cups of water to a boil. Add Lagundi: Add half a cup of chopped fresh or dried lagundi leaves to the boiling water. Simmer: Reduce the heat and let it simmer for 10-15 minutes. Strain: Strain the mixture to remove the leaves. Drink: Drink half a cup of the decoction three times a day.",
+          "fil": "Magtipon ng Mga Sangkap: Sariwa o tuyo na dahon ng lagundi, tubig. Hugasan at Tadtarin: Hugasan nang maigi ang mga dahon ng lagundi at tadtarin ito ng maliliit. Pakuluan ang Tubig: Pakuluan ang 2 basong tubig. Magdagdag ng Lagundi: Magdagdag ng kalahating tasa ng tinadtad na sariwa o tuyo na dahon ng lagundi sa kumukulong tubig. Kumulo: Bawasan ang apoy at hayaang kumulo ng 10-15 minuto. Salain: Salain ang pinaghalong para maalis ang mga dahon. Inumin: Uminom ng kalahating tasa ng decoction tatlong beses sa isang araw."
+        }
+      ],
+      "contextLinks": "https://www.pchrd.dost.gov.ph/heartnovation/sambong-tablet-herbal-drug-formulation-for-kidney-stones/",
+      "context_set": ""
+    },
+    {
+      "tag": "Oregano",
+      "patterns": [
+        "How to prepare Oregano for nasal congestion?",
+        "Paano maghanda ng Oregano para sa nasal congestion?",
+        "Steps to use Oregano for nasal congestion",
+        "Mga hakbang sa paggamit ng Oregano para sa nasal congestion",
+        "How to use Oregano for nasal congestion?",
+        "Paano gamitin ang Oregano para sa nasal congestion?",
+        "Best practices for using Oregano in home remedies",
+        "Mga tamang pamamaraan ng paggamit ng Oregano sa mga remedyo sa bahay",
+        "How to make Oregano tea for nasal congestion?",
+        "Paano gumawa ng tsaa ng Oregano para sa nasal congestion?"
+      ],
+      "responses": [
+        {
+          "eng": "Gather Ingredients: Fresh oregano leaves, water. Wash and Chop: Thoroughly wash the oregano leaves and chop them into small pieces. Boil Water: Bring 2 cups of water to a boil. Add Oregano: Add half a cup of chopped oregano leaves to the boiling water. Simmer: Reduce the heat and let it simmer for 10-15 minutes. Strain: Strain the mixture to remove the leaves. Drink: Drink half a cup of the decoction three times a day.",
+          "fil": "Kunin ang mga Sangkap: Sariwang dahon ng oregano, tubig. Hugasan at Tadtarin: Hugasan nang mabuti ang mga dahon ng oregano at tadtarin ito ng maliliit na piraso. Pakuluan ang Tubig: Pakuluan ang 2 tasa ng tubig. Idagdag ang Oregano: Idagdag ang kalahating tasa ng tinadtad na dahon ng oregano sa kumukulong tubig. Pakuluin: Bawasan ang init at hayaang kumulo ng 10-15 minuto. Salain: Salain ang pinagpakuluan upang alisin ang mga dahon. Inumin: Uminom ng kalahating tasa ng pinagpakuluan tatlong beses sa isang araw."
+        }
+      ],
+      "contextLinks": "https://www.pchrd.dost.gov.ph/heartnovation/sambong-tablet-herbal-drug-formulation-for-kidney-stones/",
+      "context_set": ""
+    },
+    {
+      "tag": "Sambong",
+      "patterns": [
+        "How to prepare Sambong for nasal congestion?",
+        "Paano maghanda ng Sambong para sa nasal congestion?",
+        "Steps to use Sambong for nasal congestion",
+        "Mga hakbang sa paggamit ng Sambong para sa nasal congestion",
+        "How to use Sambong for nasal congestion?",
+        "Paano gamitin ang Sambong para sa nasal congestion?",
+        "Best practices for using Sambong in home remedies",
+        "Mga tamang pamamaraan ng paggamit ng Sambong sa mga remedyo sa bahay",
+        "How to make Sambong tea for nasal congestion?",
+        "Paano gumawa ng tsaa ng Sambong para sa nasal congestion?"
+      ],
+      "responses": [
+        {
+          "eng": "Gather Ingredients: Fresh sambong leaves, water. Wash and Chop: Thoroughly wash the sambong leaves and chop them into small pieces. Boil Water: Bring 2 cups of water to a boil. Add Sambong: Add half a cup of chopped sambong leaves to the boiling water. Simmer: Reduce the heat and let it simmer for 10-15 minutes. Strain: Strain the mixture to remove the leaves. Inhale Steam: For nasal congestion, you can inhale the steam from the boiling sambong leaves. Cover your head with a towel to trap the steam and breathe deeply for relief. Drink: You can also drink half a cup of the decoction three times a day.",
+          "fil": "Kunin ang mga Sangkap: Sariwang dahon ng sambong, tubig. Hugasan at Tadtarin: Hugasan nang mabuti ang mga dahon ng sambong at tadtarin ito ng maliliit na piraso. Pakuluan ang Tubig: Pakuluan ang 2 tasa ng tubig. Idagdag ang Sambong: Idagdag ang kalahating tasa ng tinadtad na dahon ng sambong sa kumukulong tubig. Pakuluin: Bawasan ang init at hayaang kumulo ng 10-15 minuto. Salain: Salain ang pinagpakuluan upang alisin ang mga dahon. Singhutin ang Singaw: Para sa baradong ilong, maaari mong singhutin ang singaw mula sa kumukulong dahon ng sambong. Takpan ang ulo ng tuwalya upang makulong ang singaw at huminga nang malalim para sa ginhawa. Inumin: Maaari ka ring uminom ng kalahating tasa ng pinagpakuluan tatlong beses sa isang araw."
+        }
+      ],
+      "contextLinks": "https://www.pchrd.dost.gov.ph/heartnovation/sambong-tablet-herbal-drug-formulation-for-kidney-stones/",
+      "context_set": ""
+    },
+    {
+      "tag": "Tsaang Gubat",
+      "patterns": [
+        "How to prepare Tsaang Gubat for abdominal pain?",
+        "Paano maghanda ng Tsaang Gubat para sa pananakit ng tiyan?",
+        "Steps to use Tsaang Gubat for abdominal pain",
+        "Mga hakbang sa paggamit ng Tsaang Gubat para sa pananakit ng tiyan",
+        "How to use Tsaang Gubat for abdominal pain?",
+        "Paano gamitin ang Tsaang Gubat para sa pananakit ng tiyan?",
+        "Best practices for using Tsaang Gubat in home remedies",
+        "Mga tamang pamamaraan ng paggamit ng Tsaang Gubat sa mga remedyo sa bahay",
+        "How to make Tsaang Gubat tea for abdominal pain?",
+        "Paano gumawa ng tsaa ng Tsaang Gubat para sa pananakit ng tiyan?"
+      ],
+      "responses": [
+        {
+          "eng": "Gather Ingredients: Fresh Tsaang Gubat leaves, water. Wash and Chop: Thoroughly wash the Tsaang Gubat leaves and chop them into small pieces. Boil Water: Bring 2 cups of water to a boil. Add Tsaang Gubat: Add half a cup of chopped Tsaang Gubat leaves to the boiling water. Simmer: Reduce the heat and let it simmer for 10-15 minutes. Strain: Strain the mixture to remove the leaves. Drink: Drink half a cup of the decoction three times a day.",
+          "fil": "Kunin ang mga Sangkap: Sariwang dahon ng Tsaang Gubat, tubig. Hugasan at Tadtarin: Hugasan nang mabuti ang mga dahon ng Tsaang Gubat at tadtarin ito ng maliliit na piraso. Pakuluan ang Tubig: Pakuluan ang 2 tasa ng tubig. Idagdag ang Tsaang Gubat: Idagdag ang kalahating tasa ng tinadtad na dahon ng Tsaang Gubat sa kumukulong tubig. Pakuluin: Bawasan ang init at hayaang kumulo ng 10-15 minuto. Salain: Salain ang pinagpakuluan upang alisin ang mga dahon. Inumin: Uminom ng kalahating tasa ng pinagpakuluan tatlong beses sa isang araw."
+        }
+      ],
+      "contextLinks": "https://www.aigastro.net/blog/305938-can-ginger-actually-help-your-upset-stomach/%20(accessed%20Sep.%2005,%202024).",
+      "context_set": ""
+    },
+    {
+      "tag": "Luya",
+      "patterns": [
+        "How to prepare Luya for abdominal pain?",
+        "Paano maghanda ng Luya para sa pananakit ng tiyan?",
+        "Steps to use Luya for abdominal pain",
+        "Mga hakbang sa paggamit ng Luya para sa pananakit ng tiyan",
+        "How to use Luya for abdominal pain?",
+        "Paano gamitin ang Luya para sa pananakit ng tiyan?",
+        "Best practices for using Luya in home remedies",
+        "Mga tamang pamamaraan ng paggamit ng Luya sa mga remedyo sa bahay",
+        "How to make Luya tea for abdominal pain?",
+        "Paano gumawa ng tsaa ng Luya para sa pananakit ng tiyan?"
+      ],
+      "responses": [
+        {
+          "eng": "Gather Ingredients: Fresh ginger root, water, optional sweeteners (honey or sugar). Wash and Slice: Thoroughly wash the ginger root and slice it into thin pieces. Boil Water: Bring 2 cups of water to a boil. Add Ginger: Add the sliced ginger to the boiling water. Simmer: Reduce the heat and let it simmer for 10-15 minutes. Strain: Strain the mixture to remove the ginger slices. Optional Additions: Add honey or sugar to sweeten if desired. Drink: Drink half a cup of the ginger tea three times a day.",
+          "fil": "Kunin ang mga Sangkap: Sariwang ugat ng luya, tubig, opsyonal na pampatamis (pulot o asukal). Hugasan at Hiwain: Hugasan nang mabuti ang ugat ng luya at hiwain ito ng manipis. Pakuluan ang Tubig: Pakuluan ang 2 tasa ng tubig. Idagdag ang Luya: Idagdag ang hiniwang luya sa kumukulong tubig. Pakuluin: Bawasan ang init at hayaang kumulo ng 10-15 minuto. Salain: Salain ang pinagpakuluan upang alisin ang mga hiwa ng luya. Opsyonal na Pampatamis: Magdagdag ng pulot o asukal kung nais. Inumin: Uminom ng kalahating tasa ng tsaa ng luya tatlong beses sa isang araw."
+        }
+      ],
+      "contextLinks": "https://www.aigastro.net/blog/305938-can-ginger-actually-help-your-upset-stomach/%20(accessed%20Sep.%2005,%202024).",
+      "context_set": ""
+    },
+    {
+      "tag": "Bayabas",
+      "patterns": [
+        "How to prepare Bayabas for nosebleed?",
+        "Paano maghanda ng Bayabas para sa nosebleed?",
+        "Steps to use Bayabas for nosebleed",
+        "Mga hakbang sa paggamit ng Bayabas para sa nosebleed",
+        "How to use Bayabas for nosebleed?",
+        "Paano gamitin ang Bayabas para sa nosebleed?",
+        "Best practices for using Bayabas in home remedies",
+        "Mga tamang pamamaraan ng paggamit ng Bayabas sa mga remedyo sa bahay",
+        "How to make Bayabas for nosebleed?",
+        "Paano gumawa ng Bayabas para sa nosebleed?"
+      ],
+      "responses": [
+        {
+          "eng": "Gather Ingredients: Fresh bayabas leaves. Wash and Roll: Thoroughly wash the bayabas leaves and roll them densely. Insert: Place the rolled bayabas leaves into the nostril cavities to help stop the bleeding.",
+          "fil": "Kunin ang mga Sangkap: Sariwang dahon ng bayabas. Hugasan at Irolyo: Hugasan nang mabuti ang mga dahon ng bayabas at irolyo nang mahigpit. Ipasok: Ipasok ang mga nirolyong dahon ng bayabas sa butas ng ilong upang matigil ang pagdurugo."
+        }
+      ],
+      "contextLinks": [
+        "https://www.philippineherbalmedicine.org/doh_herbs.htm"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Guava Leaves",
+      "patterns": [
+        "How to prepare Guava Leaves for food poisoning?",
+        "Paano maghanda ng Guava Leaves para sa food poisoning?",
+        "Steps to use Guava Leaves for food poisoning",
+        "Mga hakbang sa paggamit ng Guava Leaves para sa food poisoning",
+        "How to use Guava Leaves for food poisoning?",
+        "Paano gamitin ang Guava Leaves para sa food poisoning?",
+        "Best practices for using Guava Leaves in home remedies",
+        "Mga tamang pamamaraan ng paggamit ng Guava Leaves sa mga remedyo sa bahay",
+        "How to make Guava Leaves for food poisoning?",
+        "Paano gumawa ng Guava Leaves para sa food poisoning?"
+      ],
+      "responses": [
+        {
+          "eng": "Wash the guava leaves thoroughly. Boil 1.5 liters of water in a pot. Add the guava leaves to the boiling water. Let it simmer for about 10-15 minutes. Remove from heat and let it cool slightly. Strain the leaves and pour the tea into a cup. Drink 2-3 times a day on an empty stomach until symptoms improve.",
+          "fil": "Hugasan nang mabuti ang mga dahon ng bayabas. Pakuluan ang 1.5 litro ng tubig sa isang kaldero. Idagdag ang mga dahon ng bayabas sa kumukulong tubig. Hayaang kumulo ng mga 10-15 minuto. Alisin sa apoy at hayaang lumamig ng kaunti. Salain ang mga dahon at ibuhos ang tsaa sa tasa. Uminom ng 2-3 beses sa isang araw nang walang laman ang tiyan hanggang sa bumuti ang pakiramdam."
+        }
+      ],
+      "contextLinks": [
+        "https://medicaltrendsnow.com/emergency-medicine/treatments-for-food-poisoning-in-the-philippines/"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Atis",
+      "patterns": [
+        "How to prepare Atis for Fainting",
+        "Paano maghanda ng Atis para sa Fainting",
+        "Steps to use Atis for Fainting",
+        "Mga hakbang sa paggamit ng Atis para sa Fainting",
+        "How to use Atis for Fainting?",
+        "Paano gamitin ang Atis para sa Fainting?",
+        "Best practices for using Atis in home remedies",
+        "Mga tamang pamamaraan ng paggamit ng Atis sa mga remedyo sa bahay",
+        "How to make Atis for Fainting?",
+        "Paano gumawa ng Atis para sa Fainting?"
+      ],
+      "responses": [
+        {
+          "eng": "Crush a few fresh atis leaves to release their juice. Apply the crushed leaves directly to the nose area. Inhale the scent of the leaves to help revive someone who has fainted.",
+          "fil": "Durugin ang ilang sariwang dahon ng atis upang lumabas ang katas. Ilagay ang dinurog na dahon sa ilong. Singhutin ang amoy ng dahon upang makatulong na gisingin ang taong nahimatay."
+        }
+      ],
+      "contextLinks": [
+        "https://www.philippineherbalmedicine.org/medicinal_plants.htm"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Yerba Buena",
+      "patterns": [
+        "How to prepare Yerba Buena for Headache",
+        "Paano maghanda ng Yerba Buena para sa Headache",
+        "Steps to use Yerba Buena for Headache",
+        "Mga hakbang sa paggamit ng Yerba Buena para sa Headache",
+        "How to use Yerba Buena for Headache?",
+        "Paano gamitin ang Yerba Buena para sa Headache?",
+        "Best practices for using Yerba Buena in home remedies",
+        "Mga tamang pamamaraan ng paggamit ng Yerba Buena sa mga remedyo sa bahay",
+        "How to make Yerba Buena for Headache?",
+        "Paano gumawa ng Yerba Buena para sa Headache?"
+      ],
+      "responses": [
+        {
+          "eng": "Wash a handful of fresh Yerba Buena leaves thoroughly. Boil 2 cups of water. Add the leaves to the boiling water. Let it simmer for 10-15 minutes. Strain the leaves and pour the tea into a cup. Drink 1 cup every 3-4 hours as needed.",
+          "fil": "Hugasan nang maigi ang isang dakot ng sariwang dahon ng Yerba Buena. Pakuluan ang 2 tasa ng tubig. Idagdag ang mga dahon sa kumukulong tubig. Hayaang kumulo ng 10-15 minuto. Salain ang mga dahon at ibuhos ang tsaa sa tasa. Uminom ng 1 tasa bawat 3-4 na oras kung kinakailangan."
+        }
+      ],
+      "contextLinks": [
+        "https://www.pchrd.dost.gov.ph/heartnovation/sambong-tablet-herbal-drug-formulation-for-kidney-stones/",
+        "https://www.philippineherbalmedicine.org/doh_herbs.htm"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Calamansi with Honey",
+      "patterns": [
+        "How to prepare Calamansi with Honey for Cold",
+        "Paano maghanda ng Calamansi with Honey para sa Cold",
+        "Steps to use Calamansi with Honey for Cold",
+        "Mga hakbang sa paggamit ng Calamansi with Honey para sa Cold",
+        "How to use Calamansi with Honey for Cold?",
+        "Paano gamitin ang Calamansi with Honey para sa Cold?",
+        "Best practices for using Calamansi with Honey in home remedies",
+        "Mga tamang pamamaraan ng paggamit ng Calamansi with Honey sa mga remedyo sa bahay",
+        "How to make Calamansi with Honey for Cold?",
+        "Paano gumawa ng Calamansi with Honey para sa Cold?"
+      ],
+      "responses": [
+        {
+          "eng": "Wash the calamansi fruits thoroughly. Cut each calamansi in half and squeeze out the juice into a container. Remove any seeds from the juice. In a mug, mix the calamansi juice with 1 cup of warm water. Add 2 tablespoons of honey and stir well until the honey is fully dissolved. Drink this mixture 2-3 times a day to help alleviate cold symptoms.",
+          "fil": "Hugasan nang mabuti ang mga calamansi. Hiwain ang bawat calamansi sa kalahati at pigain ang katas sa isang lalagyan. Alisin ang mga buto mula sa katas. Sa isang tasa, ihalo ang katas ng calamansi sa 1 tasa ng maligamgam na tubig. Magdagdag ng 2 kutsara ng pulot at haluin nang mabuti hanggang matunaw ang pulot. Inumin ito ng 2-3 beses sa isang araw upang makatulong na maibsan ang mga sintomas ng sipon."
+        }
+      ],
+      "contextLinks": [
+        "https://mypharma.ph/articles/10-classic-home-remedies-trusted-by-filipino-moms"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Ginger",
+      "patterns": [
+        "How to use ginger for chest congestion?",
+        "Paano gamitin ang luya para sa bara sa dibdib?",
+        "Steps to prepare ginger for topical application",
+        "Mga hakbang sa paghahanda ng luya para sa panlabas na paggamit",
+        "How to apply ginger water on chest?",
+        "Paano ilapat ang tubig na may luya sa dibdib?",
+        "Best practices for using ginger for skin",
+        "Mga tamang pamamaraan sa paggamit ng luya sa balat"
+      ],
+      "responses": [
+        {
+          "eng": "Peel and slice a 1-2 inch piece of fresh ginger. Boil the ginger slices in water for 10 minutes. Let the ginger water cool slightly. Soak a cloth in the ginger water. Apply the warm, damp cloth to the chest for 10-15 minutes.",
+          "fil": "Balatan at hiwain ang 1-2 pulgadang piraso ng sariwang luya. Pakuluan ang mga hiwa ng luya sa tubig ng 10 minuto. Hayaan na lumamig ng bahagya ang tubig na may luya. Isawsaw ang tela sa tubig na may luya. Ilagay ang mainit, mamasa-masang tela sa dibdib ng 10-15 minuto."
+        }
+      ],
+      "contextLinks": "https://www.medicalnewstoday.com/articles/321133#home-remedies"
+    },
+    {
+      "tag": "Almond",
+      "patterns": [
+        "How to use almond paste for skin?",
+        "Paano gamitin ang almond paste sa balat?",
+        "Steps to prepare almond for topical application",
+        "Mga hakbang sa paghahanda ng almond para sa panlabas na paggamit",
+        "How to apply almond paste on chest?",
+        "Paano ilapat ang almond paste sa dibdib?",
+        "Best practices for using almond for skincare",
+        "Mga tamang pamamaraan sa paggamit ng almond sa skincare",
+        "How to prepare soaked almonds?",
+        "Paano ihanda ang nababad na almonds?"
+      ],
+      "responses": [
+        {
+          "eng": "Soak 10-12 almonds in water overnight. Peel the almonds and grind them into a fine paste. Mix the paste with a small amount of coconut oil or milk. Apply the almond paste to the chest. Cover with a cloth and leave on for 10-15 minutes. Rinse off with warm water.",
+          "fil": "Ibabad ang 10-12 almonds sa tubig magdamag. Balatan ang almonds at durugin ito hanggang maging pino na paste. Ihalo ang paste sa kaunting coconut oil o gatas. Ilapat ang almond paste sa dibdib. Takpan ng tela at iwanan ng 10-15 minuto. Banlawan ng maligamgam na tubig."
+        }
+      ],
+      "contextLinks": "https://www.medicalnewstoday.com/articles/321133#home-remedies",
+      "context_set": ""
+    },
+    {
+      "tag": "Cucumber",
+      "patterns": [
+        "How to use cucumber for skin irritation?",
+        "Paano gamitin ang pipino para sa iritasyon ng balat?",
+        "Steps to prepare cucumber for burns",
+        "Mga hakbang sa paghahanda ng pipino para sa mga sunog",
+        "How to apply cucumber for puffy eyes?",
+        "Paano ilagay ang pipino para sa namamagang mata?",
+        "Best practices for using cucumber on skin",
+        "Mga tamang pamamaraan sa paggamit ng pipino sa balat",
+        "How to prepare fresh cucumber for topical use?",
+        "Paano ihanda ang sariwang pipino para sa panlabas na paggamit?"
+      ],
+      "responses": [
+        {
+          "eng": "Choose Fresh Cucumbers: Use fresh, firm cucumbers for best results. Prepare the Cucumber: Wash Thoroughly: Rinse the cucumber under clean water to remove any dirt or pesticides. Peel (Optional): Peel the cucumber if desired, though the skin contains beneficial nutrients. Slice or Mash: Cut the cucumber into thin slices or mash it into a paste. Apply to the Affected Area: For Skin Irritations, Burns, or Swelling: Place the cucumber slices directly on the affected area. Alternatively, apply the cucumber paste to soothe the skin. For Puffy Eyes: Place chilled cucumber slices over the eyes to help reduce puffiness and soothe the area. Cover if Needed: Use a clean bandage or cloth to secure the cucumber slices or paste if necessary.",
+          "fil": "Pumili ng Pipino: Piliin ang sariwa at matigas na pipino. Ihanda: Banlawan: Banlawan ng tubig. Balatan (Opsyonal): Balatan kung gusto. Hiwain o Durugin: Gupitin o durugin. Ilagay: Para sa Irritasyon o Sunog: Ilagay sa apektadong lugar. Para sa Namamagang Mata: Ilagay ang malamig na hiwa sa mata. Takpan Kung Kailangan: Gumamit ng bendahe o tela."
+        }
+      ],
+      "contextLinks": "https://www.manisteenews.com/news/article/sunburn-home-remedies-19551484.php",
+      "context_set": ""
+    },
+    {
+      "tag": "Spinach",
+      "patterns": [
+        "How to use spinach for skin irritation?",
+        "Paano gamitin ang spinach para sa iritasyon ng balat?",
+        "Steps to prepare spinach for minor burns",
+        "Mga hakbang sa paghahanda ng spinach para sa maliit na burns",
+        "How to apply spinach paste to inflammation?",
+        "Paano ilagay ang spinach paste sa pamamaga?",
+        "Best practices for using spinach on skin",
+        "Mga tamang pamamaraan sa paggamit ng spinach sa balat",
+        "How to prepare fresh spinach for topical use?",
+        "Paano ihanda ang sariwang spinach para sa panlabas na paggamit?"
+      ],
+      "responses": [
+        {
+          "eng": "Choose Fresh Spinach: Use fresh, green spinach leaves for best results. Wash the Leaves: Rinse the spinach leaves thoroughly with clean water to remove any dirt or contaminants. Prepare the Spinach: For External Use: Chop or crush the spinach leaves to release their juice. For Internal Use: Blend or cook the spinach as desired. Apply to the Affected Area: For Skin Irritations or Minor Burns: Apply crushed spinach leaves directly to the affected area, or use a spinach paste made by blending the leaves. For Inflammation: Apply the spinach paste to the inflamed area to help reduce swelling and irritation. Cover if Needed: Use a clean bandage or cloth to cover the area if necessary, especially if applying to larger areas. Monitor for Reactions: Watch for any signs of irritation or allergic reactions.",
+          "fil": "Pumili ng Sariwang Spinach: Gumamit ng sariwang, berdeng dahon ng spinach para sa pinakamahusay na resulta. Hugasan ang mga Dahon: Banlawan ang mga dahon ng spinach nang mabuti gamit ang malinis na tubig upang alisin ang anumang dumi o kontaminante. Ihanda ang Spinach: Para sa Panlabas na Paggamit: Tadtarin o durugin ang mga dahon ng spinach upang mailabas ang kanilang katas. Para sa Panloob na Paggamit: I-blend o lutuin ang spinach ayon sa iyong gusto. Ilagay sa Apektadong Lugar: Para sa Irritasyon ng Balat o Maliit na Burns: Ilagay ang dinurog na dahon ng spinach direkta sa apektadong lugar, o gumamit ng spinach paste na ginawa sa pamamagitan ng pag-blend ng mga dahon. Para sa Pamamaga: Ilagay ang spinach paste sa namamagang lugar upang makatulong sa pagbawas ng pamamaga at iritasyon. Takpan Kung Kinakailangan: Gumamit ng malinis na bendahe o tela upang takpan ang lugar kung kinakailangan, lalo na kung sa mas malaking bahagi. Suriin ang Reaksyon: Obserbahan ang anumang palatandaan ng iritasyon o allergic reactions."
+        }
+      ],
+      "contextLinks": "https://www.healthline.com/health/spinach-benefits",
+      "context_set": ""
+    },
+    {
+      "tag": "Orange",
+      "patterns": [
+        "How to use orange for skin irritation?",
+        "Paano gamitin ang orange para sa iritasyon ng balat?",
+        "Steps to prepare orange for minor burns",
+        "Mga hakbang sa paghahanda ng orange para sa maliit na burns",
+        "How to apply orange juice to cuts?",
+        "Paano ilagay ang orange juice sa mga sugat?",
+        "Best practices for using orange juice on skin",
+        "Mga tamang pamamaraan sa paggamit ng katas ng orange sa balat",
+        "How to prepare fresh orange for topical use?",
+        "Paano ihanda ang sariwang orange para sa panlabas na paggamit?"
+      ],
+      "responses": [
+        {
+          "eng": "Choose Fresh Oranges: Use fresh oranges for the best results. Prepare the Orange: Peel the Orange: Remove the outer peel and pith. Cut into Pieces: Cut the orange into small pieces. Apply to the Affected Area: For Skin Irritations or Minor Burns: Squeeze the juice from the orange and apply it directly to the affected area. For Cuts or Scrapes: Apply the orange juice to the wound using a clean cloth or cotton ball. Cover if Needed: Use a clean bandage or cloth to cover the area if necessary. Monitor for Reactions: Watch for any signs of irritation or allergic reactions. Oranges are acidic and might cause a stinging sensation in some cases.",
+          "fil": "Pumili ng Sariwang Orange: Gumamit ng sariwang orange para sa pinakamahusay na resulta. Ihanda ang Orange: Balatan ang Orange: Alisin ang panlabas na balat at puting bahagi. Ihiwa sa Maliit na Piraso: Ihiwa ang orange sa maliliit na piraso. Ilagay sa Apektadong Lugar: Para sa Irritasyon ng Balat o Maliit na Burns: Pisilin ang katas ng orange at ipahid direkta sa apektadong lugar. Para sa Sugat o Gasgas: Ipatak ang katas ng orange sa sugat gamit ang malinis na tela o cotton ball. Takpan Kung Kinakailangan: Gumamit ng malinis na bendahe o tela upang takpan ang lugar kung kinakailangan. Suriin ang Reaksyon: Obserbahan ang anumang palatandaan ng iritasyon o allergic reactions. Ang orange ay maasim at maaaring magdulot ng stinging sensation sa ilang mga kaso."
+        }
+      ],
+      "contextLinks": "https://www.greenchildmagazine.com/herbal-remedies-for-bruises/",
+      "context_set": ""
+    },
+    {
+      "tag": "Pineapple",
+      "patterns": [
+        "How to use pineapple for skin inflammation?",
+        "Paano gamitin ang pinya para sa pamamaga ng balat?",
+        "Steps to prepare pineapple for minor burns",
+        "Mga hakbang sa paghahanda ng pinya para sa maliit na burns",
+        "How to apply pineapple to bruises?",
+        "Paano ilagay ang pinya sa mga buis?",
+        "Best practices for using pineapple juice on skin",
+        "Mga tamang pamamaraan sa paggamit ng katas ng pinya sa balat",
+        "How to prepare fresh pineapple for topical use?",
+        "Paano ihanda ang sariwang pinya para sa panlabas na paggamit?"
+      ],
+      "responses": [
+        {
+          "eng": "Choose Fresh Pineapple: Use fresh pineapple for its natural enzymes and benefits. Prepare the Pineapple: Peel and Core: Peel the pineapple and remove the core. Cut into Pieces: Cut the pineapple into small, manageable pieces. Apply to the Affected Area: For Skin Inflammation or Minor Burns: Crush or mash the pineapple pieces to release its juice and apply directly to the affected area. For Bruises: Apply fresh pineapple pieces directly to the bruise to help reduce inflammation and promote healing. Cover if Needed: Use a clean bandage or cloth to cover the pineapple if necessary, especially if applying to a larger area. Monitor for Reactions: Observe for any signs of irritation or allergic reactions. Pineapple contains bromelain, which can be potent and might cause a stinging sensation.",
+          "fil": "Pumili ng Sariwang Pinya: Gumamit ng sariwang pinya para sa natural na mga enzyme at benepisyo nito. Ihanda ang Pinya: Balatan at Alisin ang Core: Balatan ang pinya at alisin ang matigas na bahagi sa gitna. Ihiwa sa Maliit na Piraso: Ihiwa ang pinya sa maliliit, madaling hawakan na piraso. Ilagay sa Apektadong Lugar: Para sa Pamamaga ng Balat o Maliit na Burns: Durugin o mash ang mga piraso ng pinya upang mailabas ang katas at ipahid direkta sa apektadong lugar. Para sa Mga Buis: Ilagay ang sariwang piraso ng pinya direkta sa bruise upang makatulong sa pagbawas ng pamamaga at pagpapabilis ng pagpapagaling. Takpan Kung Kinakailangan: Gumamit ng malinis na bendahe o tela upang takpan ang pinya kung kinakailangan, lalo na kung sa mas malaking lugar. Suriin ang Reaksyon: Obserbahan ang anumang palatandaan ng iritasyon o allergic reactions. Ang pinya ay naglalaman ng bromelain na maaaring maging matindi at magdulot ng stinging sensation."
+        }
+      ],
+      "contextLinks": "https://www.greenchildmagazine.com/herbal-remedies-for-bruises/",
+      "context_set": ""
+    },
+    {
+      "tag": "Elastic Bandage",
+      "patterns": [
+        "How to apply an elastic bandage correctly?",
+        "Paano ilagay nang tama ang elastic bandage?",
+        "Steps for using an elastic bandage",
+        "Mga hakbang sa paggamit ng elastic bandage",
+        "How to secure an elastic bandage?",
+        "Paano i-secure ang elastic bandage?",
+        "Best practices for wrapping injuries with an elastic bandage",
+        "Mga tamang pamamaraan sa pagbalot ng mga pinsala gamit ang elastic bandage",
+        "How to check circulation after applying an elastic bandage?",
+        "Paano suriin ang sirkulasyon pagkatapos maglagay ng elastic bandage?"
+      ],
+      "responses": [
+        {
+          "eng": "Choose the Right Size: Select an elastic bandage of appropriate width and length for the area you're treating. Prepare the Area: Clean and, if necessary, apply a sterile dressing to the wound or injury. Unroll the Bandage: Start by unrolling the elastic bandage slightly to make it easier to work with. Apply the Bandage: Start at the Base: Begin wrapping at the base of the injury, ensuring the bandage covers the area without overlapping too much. Wrap in a Spiral: Wrap the bandage in a spiral manner, moving up or down from the base. Make sure the bandage is snug but not too tight. Overlap Slightly: Each layer of the bandage should overlap the previous layer by about half its width. Secure the Bandage: Once you’ve covered the area, secure the end of the bandage with the built-in clips, Velcro, or tape. Check Circulation: Ensure the bandage is not too tight by checking for signs of restricted circulation (e.g., coldness, numbness, or discoloration). Adjust as Needed: If you notice any issues, adjust the bandage for comfort and proper coverage.",
+          "fil": "Pumili ng Tamang Laki: Pumili ng elastic bandage na may angkop na lapad at haba para sa lugar na iyong ginagamot. Ihanda ang Lugar: Linisin at, kung kinakailangan, maglagay ng sterile na dressing sa sugat o pinsala. I-unroll ang Bandage: Simulan ang pag-unroll ng elastic bandage ng kaunti upang mas madali itong gamitin. Ilagay ang Bandage: Simulan sa Base: Magsimula sa pagbalot mula sa base ng pinsala, siguraduhing natatakpan ng bandage ang lugar nang hindi masyadong nag-overlap. Balutin sa Spiral: I-wrap ang bandage sa isang spiral na paraan, pataas o pababa mula sa base. Tiyaking ang bandage ay snug pero hindi masyadong mahigpit. Mag-Overlap ng Kaunti: Ang bawat layer ng bandage ay dapat mag-overlap sa nakaraang layer ng mga kalahating lapad nito. I-secure ang Bandage: Kapag natakpan mo na ang lugar, i-secure ang dulo ng bandage gamit ang built-in na clips, Velcro, o tape. Suriin ang Sirkulasyon: Tiyaking ang bandage ay hindi masyadong mahigpit sa pamamagitan ng pag-check sa mga palatandaan ng restricted circulation (hal. malamig na pakiramdam, pamamanhid, o discoloration). I-adjust Kung Kinakailangan: Kung may napansin kang isyu, i-adjust ang bandage para sa kaginhawahan at tamang saklaw."
+        }
+      ],
+      "contextLinks": "",
+      "context_set": ""
+    },
+    {
+      "tag": "Cabbage",
+      "patterns": [
+        "How to prepare cabbage for bruises?",
+        "Paano ihanda ang cabbage para sa mga buis?",
+        "Steps to use cabbage for swelling",
+        "Mga hakbang sa paggamit ng cabbage para sa pamamaga",
+        "How to apply cabbage leaves for sore breasts?",
+        "Paano maglagay ng dahon ng cabbage para sa sakit sa dibdib?",
+        "Best practices for using cabbage leaves in home remedies",
+        "Mga tamang pamamaraan ng paggamit ng dahon ng cabbage sa mga remedyo sa bahay",
+        "How to soften cabbage leaves for external use?",
+        "Paano palambutin ang mga dahon ng cabbage para sa panlabas na paggamit?"
+      ],
+      "responses": [
+        {
+          "eng": "Choose Fresh Cabbage: Use fresh, green cabbage leaves. Prepare the Leaves: Wash the cabbage leaves thoroughly with clean water. Soften the Leaves: For External Use: Gently heat the cabbage leaves by placing them in hot water for a few minutes, or use a rolling pin to soften them. For Colds and Swelling: Use raw leaves without heating. Apply to the Affected Area: For Bruises, Swelling, or Pain: Place the softened or raw cabbage leaves directly on the affected area. Secure with a clean bandage or cloth. For Sore Breasts (Lactation Issues): Apply cooled, softened cabbage leaves to the breasts to help reduce pain and swelling. Replace as Needed: Change the cabbage leaves regularly, especially if they become wet or dirty. Monitor for Reactions: Watch for any signs of irritation or discomfort.",
+          "fil": "Pumili ng Sariwang Cabbage: Gumamit ng sariwa, berdeng dahon ng cabbage. Ihanda ang mga Dahon: Hugasan ang mga dahon ng cabbage nang mabuti gamit ang malinis na tubig. Pahinain ang mga Dahon: Para sa Panlabas na Paggamit: Dahan-dahang initin ang mga dahon ng cabbage sa pamamagitan ng paglubog sa mainit na tubig ng ilang minuto, o gamitin ang rolling pin upang palambutin ang mga ito. Para sa Sipon at Pamamaga: Gumamit ng hilaw na mga dahon nang hindi iniinit. Ilagay sa Apektadong Lugar: Para sa Mga Buis, Pamamaga, o Sakit: Ilagay ang pinahing o hilaw na dahon ng cabbage direkta sa apektadong bahagi. Talian gamit ang malinis na bendahe o tela. Para sa Sakit sa Dibdib (Isyu sa Pagpapasuso): Ilagay ang pinalamig, pinahing dahon ng cabbage sa mga suso upang makatulong sa pagpapababa ng sakit at pamamaga. Palitan Kung Kinakailangan: Palitan ang mga dahon ng cabbage nang regular, lalo na kung nagiging basa o marumi. Suriin ang Reaksyon: Obserbahan ang anumang palatandaan ng iritasyon o discomfort."
+        }
+      ],
+      "contextLinks": "https://www.algotech.ca/en/natural-remedies-for-an-ankle-sprain/"
+    },
+    {
+      "tag": "Onions",
+      "patterns": [
+        "How to prepare onions for wounds?",
+        "Paano maghanda ng sibuyas para sa mga sugat?",
+        "Steps to use onions for minor cuts and scrapes",
+        "Mga hakbang sa paggamit ng sibuyas para sa maliit na sugat at gasgas",
+        "How to apply onions for insect bites?",
+        "Paano maglagay ng sibuyas para sa kagat ng insekto?",
+        "Best practices for using onions in home remedies",
+        "Mga tamang pamamaraan ng paggamit ng sibuyas sa mga remedyo sa bahay",
+        "How to chop onions for medicinal use?",
+        "Paano tadtarin ang sibuyas para sa medicinal na paggamit?"
+      ],
+      "responses": [
+        {
+          "eng": "Choose Fresh Onions: Use fresh onions for best results. Chop or Crush the Onion: Chop or crush the onion to release its juices. Apply to the Affected Area: For Minor Cuts and Scrapes: Place the chopped or crushed onion directly on the wound. You can also use a piece of onion wrapped in a clean cloth or bandage. For Insect Bites or Stings: Rub a cut onion directly on the affected area to help reduce itching and swelling. Cover and Protect: Use a clean bandage or cloth to secure the onion in place, especially for cuts or scrapes. Monitor for Reactions: Watch for any signs of irritation or allergic reactions. Onions can cause a burning sensation or discomfort in some cases.",
+          "fil": "Pumili ng Sariwang Sibuyas: Gumamit ng sariwang sibuyas para sa pinakamahusay na resulta. Tadtarin o Durugin ang Sibuyas: Tadtarin o durugin ang sibuyas upang mailabas ang katas nito. Ilagay sa Apektadong Lugar: Para sa Maliit na Sugat at Gasgas: Ilagay ang tinadtad o dinurog na sibuyas direkta sa sugat. Maaari ring gumamit ng piraso ng sibuyas na nakabalot sa malinis na tela o bendahe. Para sa Kagat ng Insekto o Stings: I-rub ang hiniwang sibuyas direkta sa apektadong lugar upang makatulong na mabawasan ang pangangati at pamamaga. Takpan at Protektahan: Gumamit ng malinis na bendahe o tela upang i-secure ang sibuyas sa lugar, lalo na para sa mga sugat o gasgas. Suriin ang Reaksyon: Obserbahan ang anumang palatandaan ng iritasyon o allergic reactions. Ang sibuyas ay maaaring magdulot ng burning sensation o discomfort sa ilang mga kaso."
+        }
+      ],
+      "contextLinks": "https://www.algotech.ca/en/natural-remedies-for-an-ankle-sprain/",
+      "context_set": ""
+    },
+    {
+      "tag": "Garlic",
+      "patterns": [
+        "How to prepare garlic for skin infections?",
+        "Paano maghanda ng bawang para sa mga impeksyon sa balat?",
+        "Steps to use garlic for wounds",
+        "Mga hakbang sa paggamit ng bawang para sa mga sugat",
+        "How to apply garlic for ear infections?",
+        "Paano maglagay ng bawang para sa impeksyon sa tainga?",
+        "Best practices for using garlic in home remedies",
+        "Mga tamang pamamaraan ng paggamit ng bawang sa mga remedyo sa bahay",
+        "How to crush garlic for medicinal use?",
+        "Paano durugin ang bawang para sa medicinal na paggamit?"
+      ],
+      "responses": [
+        {
+          "eng": "Choose Fresh Garlic: Use fresh garlic cloves for maximum effectiveness. Crush or Chop the Garlic: Crush or finely chop the garlic to release its active compounds. Apply to the Affected Area: For Skin Infections or Cuts: Apply the crushed garlic directly to the area. You can also mix it with a small amount of honey for added benefits. For Ear Infections: Make a garlic oil by gently heating garlic cloves in olive oil, then strain and apply a few drops into the ear. Cover and Protect: Use a clean bandage or cloth to cover the area if needed, especially for cuts or skin infections. Monitor for Reactions: Watch for any signs of irritation or allergic reactions. Garlic can be potent and might cause discomfort or a burning sensation.",
+          "fil": "Pumili ng Sariwang Bawang: Gumamit ng sariwang cloves ng bawang para sa pinakamataas na bisa. Durugin o Tadtarin ang Bawang: Durugin o tadtarin ang bawang upang mailabas ang mga aktibong compound nito. Ilagay sa Apektadong Lugar: Para sa Mga Impeksyon sa Balat o Sugat: Ipahid ang dinurog na bawang direkta sa lugar. Maaari ring ihalo ito sa kaunting honey para sa karagdagang benepisyo. Para sa Impeksyon sa Tainga: Gumawa ng bawang oil sa pamamagitan ng mahinang pag-init ng cloves ng bawang sa olive oil, pagkatapos ay salain at ibuhos ang ilang patak sa tainga. Takpan at Protektahan: Gumamit ng malinis na bendahe o tela upang takpan ang lugar kung kinakailangan, lalo na para sa mga sugat o impeksyon sa balat. Suriin ang Reaksyon: Obserbahan ang anumang palatandaan ng iritasyon o allergic reactions. Ang bawang ay maaaring maging matindi at magdulot ng discomfort o burning sensation."
+        }
+      ],
+      "contextLinks": "https://www.algotech.ca/en/natural-remedies-for-an-ankle-sprain/",
+      "context_set": ""
+    },
+    {
+      "tag": "Honey",
+      "patterns": [
+        "How to prepare honey for wounds?",
+        "Paano ihanda ang honey para sa sugat?",
+        "Steps to use honey for wound healing",
+        "Mga hakbang sa paggamit ng honey para sa pagpapagaling ng sugat",
+        "How to apply honey on wounds?",
+        "Paano maglagay ng honey sa sugat?",
+        "Best practices for using honey on cuts",
+        "Mga tamang pamamaraan ng paggamit ng honey sa sugat",
+        "How to choose raw honey for healing?",
+        "Paano pumili ng raw honey para sa paggaling?"
+      ],
+      "responses": [
+        {
+          "eng": "Choose Raw Honey: Use raw, unprocessed honey for its natural medicinal properties. Clean the Wound: Gently rinse the wound with clean water. Apply Honey: Spread a thin layer of honey directly on the wound or affected area. Cover the Wound: Place a sterile bandage or gauze over the honey-coated area to keep it in place. Change Regularly: Replace the honey and bandage as needed, especially if the bandage becomes wet or dirty. Monitor for Reactions: Observe the wound for any signs of allergic reactions or irritation.",
+          "fil": "Pumili ng Raw Honey: Gumamit ng raw, hindi naprosesong honey para sa natural na medicinal properties nito. Linisin ang Sugat: Banayad na banlawan ang sugat gamit ang malinis na tubig. Ilagay ang Honey: Maglagay ng manipis na layer ng honey direkta sa sugat o apektadong bahagi. Takpan ang Sugat: Ilagay ang sterile na bendahe o gauze sa ibabaw ng honey-coated na bahagi upang manatili ito sa lugar. Palitan Regularly: Palitan ang honey at bendahe kung kinakailangan, lalo na kung nagiging basa o marumi ang bendahe. Suriin ang Reaksyon: Obserbahan ang sugat para sa anumang palatandaan ng allergic reactions o iritasyon."
+        }
+      ],
+      "contextLinks": "https://www.medicalnewstoday.com/articles/322907#medical-treatments",
+      "context_set": ""
+    },
+    {
+      "tag": "Mayana Leaves",
+      "patterns": [
+        "How to prepare Mayana leaves?",
+        "Paano ihanda ang dahon ng Mayana?",
+        "Steps to prepare Mayana leaves for wounds",
+        "Mga hakbang sa paghahanda ng dahon ng Mayana para sa sugat",
+        "How to use Mayana leaves for healing?",
+        "Paano gamitin ang dahon ng Mayana para sa paggaling?",
+        "How to crush Mayana leaves?",
+        "Paano durugin ang dahon ng Mayana?",
+        "Best practices for using Mayana leaves on cuts",
+        "Mga tamang pamamaraan ng paggamit ng dahon ng Mayana sa sugat"
+      ],
+      "responses": [
+        {
+          "eng": "Clean the Leaves: Rinse the Mayana leaves thoroughly with clean water. Crush the Leaves: Gently crush or mash the leaves to release their juices. Apply on Affected Area: Place the crushed leaves directly on the cut, swollen, or inflamed area. Secure in Place: Use a clean cloth or bandage to hold the leaves in place. Replace as Needed: Change the leaves regularly, especially when they dry out.",
+          "fil": "Linisin ang Dahon: Hugasan ang mga dahon ng Mayana nang mabuti gamit ang malinis na tubig. Durugin ang Dahon: Dahan-dahang durugin o dikdikin ang mga dahon upang lumabas ang katas. Ilagay sa Apektadong Bahagi: Ipatong ang dinurog na dahon direkta sa sugat, pamamaga, o namamagang bahagi. Talian o Siguraduhin ang Puwesto: Gumamit ng malinis na tela o benda para manatili ang dahon sa lugar. Palitan kung Kinakailangan: Palitan ang dahon kapag natuyo o hindi na sariwa."
+        }
+      ],
+      "contextLinks": "https://tl.wikibooks.org/wiki/Lunas_Gamit_ang_Halamang_Gamot_at_Haydroterapi/Lunas_sa_nagdurugong_sugat",
+      "context_set": ""
+    },
+    {
+      "tag": "Banana Leaf",
+      "patterns": [
+        "How to prepare banana leaves?",
+        "Paano ihanda ang dahon ng saging?",
+        "Steps to prepare banana leaves for wounds",
+        "Mga hakbang sa paghahanda ng dahon ng saging para sa sugat",
+        "How to use banana leaves for healing?",
+        "Paano gamitin ang dahon ng saging para sa paggaling?",
+        "How to soften banana leaves?",
+        "Paano palambutin ang dahon ng saging?",
+        "Best practices for using banana leaves on cuts",
+        "Mga tamang pamamaraan ng paggamit ng dahon ng saging sa sugat"
+      ],
+      "responses": [
+        {
+          "eng": "Clean the Banana Leaf: Rinse the banana leaf thoroughly with clean water to remove dirt. Heat the Leaf: Gently pass the leaf over low heat to soften it without burning. Cool the Leaf: Allow the leaf to cool down until it's comfortable to touch. Place on the Cut: Wrap or place the softened banana leaf over the cut. Secure in Place: Use a clean bandage or cloth to hold the leaf in place.",
+          "fil": "Linisin ang Dahon ng Saging: Hugasan ang dahon ng saging nang mabuti gamit ang malinis na tubig para matanggal ang dumi. Painitin ang Dahon: Dahan-dahang ipadaan ang dahon sa mahinang apoy para lumambot, ngunit huwag itong sunugin. Palamigin ang Dahon: Hayaan itong lumamig hanggang sa kaya na itong hawakan nang kumportable. Ilagay sa Sugat: Ibalot o ilagay ang pinalambot na dahon ng saging sa sugat. Talian o Siguraduhin ang Puwesto: Gumamit ng malinis na benda o tela para manatili ang dahon sa lugar."
+        }
+      ],
+      "contextLinks": "https://tl.wikibooks.org/wiki/Lunas_Gamit_ang_Halamang_Gamot_at_Haydroterapi/Lunas_sa_nagdurugong_sugat",
+      "context_set": ""
+    },
+    {
+      "tag": "Gauze Bandage",
+      "patterns": [
+        "How to properly apply a gauze bandage?",
+        "Paano maayos na maglagay ng gauze bandage?",
+        "Steps to prepare and use a gauze bandage",
+        "Mga hakbang sa paghahanda at paggamit ng gauze bandage",
+        "What are the best practices for using a gauze bandage?",
+        "Ano ang mga tamang pamamaraan ng paggamit ng gauze bandage?",
+        "How to sterilize a gauze bandage before use?"
+      ],
+      "responses": [
+        {
+          "eng": "Wash hands or use sanitizer. Clean the wound with sterile water. Place sterile gauze pad on the wound. Wrap with gauze roll (if needed), snug but not tight  Secure with tape or bandage clips. Check circulation and adjust if too tight. Replace if dirty or wet.",
+          "fil": "Hugasan ang mga kamay o gumamit ng sanitizer. Linisin ang sugat gamit ang sterile na tubig Ilagay ang sterile gauze pad sa sugat. Balutin ng gauze roll (kung kailangan), tiyaking maayos pero hindi masyadong mahigpit. Siguruhing nakasecure gamit ang tape o bandage clips. Suriin ang sirkulasyon at ayusin kung masyadong mahigpit. Palitan kung marumi o basa."
+        }
+      ],
+      "contextLinks": "https://www.band-aid.com/first-aid-info/first-aid-basics/bandaging-a-wound",
+      "context_set": ""
+    },
+    {
+      "tag": "Aloe Vera",
+      "patterns": [
+        "How to prepare Aloe Vera?",
+        "Paano ihanda ang Aloe Vera?",
+        "Steps to prepare Aloe Vera for burns",
+        "Mga hakbang sa paghahanda ng Aloe Vera para sa paso",
+        "How to use Aloe Vera for healing?",
+        "Paano gamitin ang Aloe Vera para sa paggaling?",
+        "How to extract Aloe Vera gel?",
+        "Paano kunin ang gel ng Aloe Vera?",
+        "Best practices for Aloe Vera application",
+        "Mga tamang pamamaraan ng paglalagay ng Aloe Vera",
+        "How to store Aloe Vera gel?",
+        "Paano itago ang gel ng Aloe Vera?"
+      ],
+      "responses": [
+        {
+          "eng": "Clean the Burn: Gently rinse the burn with cool water to remove debris. Cut a Fresh Aloe Vera Leaf: Use a clean knife to cut an Aloe Vera leaf near the base. Extract the Gel: Slice the leaf open lengthwise and scoop out the gel inside. Apply the Gel: Gently apply a thin layer of the Aloe Vera gel directly onto the burn. Let It Absorb: Allow the gel to absorb into the skin. You can reapply as needed. Store Extra Gel: Place leftover gel in an airtight container and refrigerate for later use.",
+          "fil": "Linisin ang Paso: Banayad na banlawan ang paso gamit ang malamig na tubig para matanggal ang dumi. Putulin ang Fresh na Dahon ng Aloe Vera: Gamit ang malinis na kutsilyo, putulin ang dahon ng Aloe Vera malapit sa base. Kunin ang Gel: Hiwain ang dahon nang pahaba at kunin ang gel sa loob. Ilagay ang Gel: Maingat na ipahid ang manipis na layer ng Aloe Vera gel direkta sa paso. Pahintulutan itong Ma-absorb: Hayaan ang gel na ma-absorb ng balat. Pwede itong ulitin kung kinakailangan. Itago ang Natirang Gel: Ilagay ang natirang gel sa isang airtight container at ilagay sa ref para magamit sa susunod."
+        }
+      ],
+      "contextLinks": "https://hellodoctor.com.ph/fil/mga-herbal-at-alternatives/halamang-gamot/benepisyo-ng-aloe-vera/",
+      "context_set": ""
+    },
+    {
+      "tag": "Burns",
+      "patterns": [
+        "What should I do for a burn?",
+        "How to treat burns?",
+        "Which ointment to apply on burns?",
+        "Burn treatment steps?",
+        "What to do in case of a burn?"
+      ],
+      "responses": [
+        {
+          "eng": "Cool the burn with running water for at least 10 minutes. Avoid using ice. Cover the burn with a sterile gauze bandage. Do not apply butter or ointments to the burn. For pain relief, consider over-the-counter pain relievers like ibuprofen or acetaminophen.",
+          "fil": "Palamigin ang paso gamit ang umaagos na tubig nang hindi bababa sa 10 minuto. Iwasang gumamit ng yelo. Takpan ang paso ng sterile gauze bandage. Huwag maglagay ng mantikilya o mga pamahid sa paso. Para sa lunas sa pananakit, isaalang-alang ang mga over-the-counter na pain reliever tulad ng ibuprofen o acetaminophen."
+        },
+        {
+          "eng": "First, cool the burn under cool but not cold water for 10-20 minutes. Cover the burn with a clean, non-fluffy cloth or cling film. Take a painkiller such as paracetamol or ibuprofen.",
+          "fil": "Una, palamigin ang paso sa ilalim ng malamig ngunit hindi malamig na tubig sa loob ng 10-20 minuto. Takpan ang paso ng malinis, hindi malambot na tela o cling film. Uminom ng painkiller tulad ng paracetamol o ibuprofen."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Cuts",
+      "patterns": [
+        "What to do if I have a cut?",
+        "How to treat a cut?",
+        "Best way to heal cuts?",
+        "What medicine to use for a cut?",
+        "Cut treatment advice?"
+      ],
+      "responses": [
+        {
+          "eng": "Clean the cut with soap and water to avoid infection. Apply pressure to stop the bleeding, and once stopped, apply an antibiotic ointment. Cover the wound with a bandage and change it daily. If the cut is deep, seek medical help.",
+          "fil": "Linisin ang hiwa gamit ang sabon at tubig upang maiwasan ang impeksyon. Lagyan ng presyon upang ihinto ang pagdurugo, at sa sandaling tumigil, maglagay ng antibiotic ointment. Takpan ang sugat ng benda at palitan ito araw-araw. Kung malalim ang hiwa, humingi ng medikal na tulong."
+        },
+        {
+          "eng": "Wash the area with mild soap and water, then apply an antiseptic. Cover with a sterile bandage and monitor for signs of infection. For minor pain, over-the-counter painkillers can be used.",
+          "fil": "Hugasan ang lugar na may banayad na sabon at tubig, pagkatapos ay lagyan ng antiseptiko. Takpan ng sterile bandage at subaybayan ang mga palatandaan ng impeksyon. Para sa menor de edad na pananakit, maaaring gumamit ng mga over-the-counter na pangpawala ng sakit."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Abrasions",
+      "patterns": [
+        "How to treat abrasions?",
+        "What to do if I have an abrasion?",
+        "Best way to heal abrasions?",
+        "What should I apply on an abrasion?",
+        "Abrasions treatment steps?"
+      ],
+      "responses": [
+        {
+          "eng": "Clean the abrasion with water and soap to remove any debris. Apply an antiseptic to prevent infection. Cover with a sterile bandage or gauze and change it daily. Keep the area dry and monitor for signs of infection.",
+          "fil": "Linisin ang gasgas gamit ang tubig at sabon upang alisin ang anumang dumi. Maglagay ng antiseptiko upang maiwasan ang impeksyon. Takpan ng sterile na benda o gasa at palitan ito araw-araw. Panatilihing tuyo ang lugar at bantayan para sa mga senyales ng impeksyon."
+        },
+        {
+          "eng": "Gently wash the abrasion with soap and water. Apply an antibiotic ointment and cover with a clean, dry bandage. If the abrasion is large, seek medical advice.",
+          "fil": "Maingat na hugasan ang gasgas gamit ang sabon at tubig. Maglagay ng antibiotic ointment at takpan ng malinis at tuyong benda. Kung malaki ang gasgas, magpakonsulta sa doktor."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Stings",
+      "patterns": [
+        "How to treat a sting?",
+        "What to do for insect stings?",
+        "How to relieve sting pain?",
+        "Sting treatment advice?",
+        "Best remedy for stings?"
+      ],
+      "responses": [
+        {
+          "eng": "Remove the stinger if present by scraping it off with a flat object. Wash the area with soap and water. Apply a cold compress to reduce swelling. Use an antihistamine cream or take oral antihistamines for itching. If you experience difficulty breathing, seek emergency medical help immediately.",
+          "fil": "Alisin ang tibo kung mayroon, sa pamamagitan ng pag-scrape gamit ang patag na bagay. Hugasan ang lugar na natibo gamit ang sabon at tubig. Maglagay ng malamig na pomento upang mabawasan ang pamamaga. Gumamit ng antihistamine cream o uminom ng oral antihistamines para sa pangangati. Kung makaranas ng hirap sa paghinga, agad na humingi ng tulong medikal."
+        },
+        {
+          "eng": "Wash the sting site with soap and water. Apply ice wrapped in a cloth to reduce swelling. Take an antihistamine for itching or swelling.",
+          "fil": "Hugasan ang lugar ng sting gamit ang sabon at tubig. Maglagay ng yelo na binalot sa tela upang mabawasan ang pamamaga. Uminom ng antihistamine para sa pangangati o pamamaga."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Splinter",
+      "patterns": [
+        "How to remove a splinter?",
+        "What to do if I have a splinter?",
+        "Best way to remove splinters?",
+        "Splinter removal advice?",
+        "How to treat splinters?"
+      ],
+      "responses": [
+        {
+          "eng": "Clean the area with soap and water. Use sterilized tweezers to remove the splinter carefully. After removal, apply an antiseptic and cover with a bandage if necessary",
+          "fil": "Linisin ang lugar gamit ang sabon at tubig. Gumamit ng sterilized na pang-ipit upang maingat na alisin ang tinik. Pagkatapos alisin, maglagay ng antiseptiko at takpan ng benda kung kinakailangan"
+        },
+        {
+          "eng": "Soak the affected area in warm water to soften the skin. Gently remove the splinter with sterilized tweezers. Clean the area with antiseptic and bandage if needed.",
+          "fil": "Ibabad ang apektadong lugar sa maligamgam na tubig upang lumambot ang balat. Maingat na alisin ang tinik gamit ang sterilized na pang-ipit. Linisin ang lugar gamit ang antiseptiko at takpan ng benda kung kinakailangan"
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Sprains",
+      "patterns": [
+        "What to do for a sprain?",
+        "How to treat a sprained ankle?",
+        "Sprain treatment advice?",
+        "Best way to heal sprains?",
+        "How to relieve sprain pain?"
+      ],
+      "responses": [
+        {
+          "eng": "Rest the injured limb and avoid putting weight on it. Apply ice packs to reduce swelling and pain. Compress the area with an elastic bandage, and elevate it above heart level. Consider over-the-counter pain relievers for pain management",
+          "fil": "Pahingahin ang nasugatang bahagi at iwasan ang paglalagay ng bigat dito. Maglagay ng yelo upang mabawasan ang pamamaga at sakit. I-compress ang lugar gamit ang elastic na benda, at itaas ito sa taas ng puso. Isaalang-alang ang paggamit ng mga over-the-counter na gamot para sa sakit."
+        },
+        {
+          "eng": "Use the R.I.C.E. method: Rest, Ice, Compression, and Elevation. If the pain persists or the swelling is severe, consult a healthcare provider.",
+          "fil": "Gamitin ang R.I.C.E. na pamamaraan: Rest, Ice, Compression, at Elevation. Kung patuloy ang sakit o malubha ang pamamaga, magpakonsulta sa isang healthcare provider."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Strains",
+      "patterns": [
+        "How to treat muscle strain?",
+        "What to do if I have a strain?",
+        "Best way to treat muscle strains?",
+        "Strain treatment advice?",
+        "How to heal a muscle strain?"
+      ],
+      "responses": [
+        {
+          "eng": "Rest the strained muscle and avoid activities that cause pain. Apply ice to the area for 15-20 minutes several times a day. Use an elastic bandage to compress the area, and elevate it to reduce swelling. Over-the-counter painkillers can help manage pain.",
+          "fil": "Pahingahin ang na-pilay na kalamnan at iwasan ang mga aktibidad na nagdudulot ng sakit. Maglagay ng yelo sa apektadong lugar sa loob ng 15-20 minuto nang ilang beses sa isang araw. Gumamit ng elastic na benda upang i-compress ang lugar, at itaas ito upang mabawasan ang pamamaga. Ang mga over-the-counter na painkillers ay maaaring makatulong sa pamamahala ng sakit."
+        },
+        {
+          "eng": "Rest the affected muscle, apply ice, and compress with a bandage. Elevate the limb and take pain relievers as needed.",
+          "fil": "Pahingahin ang apektadong kalamnan, maglagay ng yelo, at i-compress gamit ang benda. Itaas ang bahagi at uminom ng pain relievers kung kinakailangan."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Bruises",
+      "patterns": [
+        "How to treat a bruise?",
+        "What to do for a bruise?",
+        "Best way to heal bruises?",
+        "Bruise treatment advice?",
+        "How to reduce bruise pain?"
+      ],
+      "responses": [
+        {
+          "eng": "Apply a cold compress to the bruise to reduce swelling. Elevate the affected area to minimize blood flow to the bruise. Rest and avoid further injury to the area. Over-the-counter pain relievers can help with discomfort.",
+          "fil": "Maglagay ng malamig na pomento sa pasa upang mabawasan ang pamamaga. Itaas ang apektadong lugar upang mabawasan ang daloy ng dugo sa pasa. Magpahinga at iwasan ang karagdagang pinsala sa lugar. Ang mga over-the-counter na pain relievers ay maaaring makatulong sa pag-alis ng hindi komportableng pakiramdam."
+        },
+        {
+          "eng": "Use ice packs on the bruise for 10-15 minutes at a time. Keep the bruised area elevated and take pain relief medication if needed.",
+          "fil": "Gumamit ng yelo sa pasa sa loob ng 10-15 minuto bawat sesyon. Panatilihing nakataas ang lugar na may pasa at uminom ng gamot para sa sakit kung kinakailangan."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Pulled Muscle",
+      "patterns": [
+        "How to treat a pulled muscle?",
+        "What to do for a muscle pull?",
+        "Best way to heal a pulled muscle?",
+        "Pulled muscle treatment advice?",
+        "How to reduce pulled muscle pain?"
+      ],
+      "responses": [
+        {
+          "eng": "Rest the affected muscle and apply ice to reduce swelling. Use compression with an elastic bandage and elevate the muscle to help reduce inflammation. Take pain relievers if needed and avoid strenuous activity until fully healed.",
+          "fil": "Pahingahin ang apektadong kalamnan at maglagay ng yelo upang mabawasan ang pamamaga. Gumamit ng compression gamit ang elastic na benda at itaas ang kalamnan upang makatulong sa pagbawas ng pamamaga. Uminom ng pain relievers kung kinakailangan at iwasan ang mabigat na aktibidad hanggang sa ganap na maghilom."
+        },
+        {
+          "eng": "Apply the R.I.C.E. method: Rest, Ice, Compression, and Elevation. For persistent pain or severe muscle strain, consult a healthcare provider.",
+          "fil": "Gamitin ang R.I.C.E. na pamamaraan: Rest, Ice, Compression, at Elevation. Para sa patuloy na sakit o malubhang pilay ng kalamnan, magpakonsulta sa isang healthcare provider."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Sun Burn",
+      "patterns": [
+        "How to treat sunburn?",
+        "What to do for sunburn?",
+        "Best way to relieve sunburn pain?",
+        "Sunburn treatment advice?",
+        "How to heal sunburn?"
+      ],
+      "responses": [
+        {
+          "eng": "Cool the skin with a damp cloth or take a cool bath. Apply aloe vera or a moisturizing lotion to soothe the skin. Drink plenty of water to stay hydrated and avoid further sun exposure. Over-the-counter pain relievers can help with discomfort.",
+          "fil": "Palamigin ang balat gamit ang basang tela o maligamgam na paligo. Maglagay ng aloe vera o moisturizing lotion upang mapagaan ang balat. Uminom ng maraming tubig upang manatiling hydrated at iwasan ang karagdagang pagkakalantad sa araw. Ang mga over-the-counter na pain relievers ay maaaring makatulong sa pag-alis ng hindi komportableng pakiramdam."
+        },
+        {
+          "eng": "Use cool compresses and moisturize with aloe vera gel. Drink water and avoid the sun until the burn heals.",
+          "fil": "Gumamit ng malamig na pomento at maglagay ng aloe vera gel upang moisturize ang balat. Uminom ng tubig at iwasan ang araw hanggang sa maghilom ang paso."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Chemical Burn",
+      "patterns": [
+        "What to do for a chemical burn?",
+        "How to treat chemical burns?",
+        "Chemical burn treatment advice?",
+        "How to relieve chemical burn pain?",
+        "Best way to heal a chemical burn?"
+      ],
+      "responses": [
+        {
+          "eng": "Immediately flush the affected area with water for at least 20 minutes. Remove any contaminated clothing. Cover the burn with a sterile bandage and avoid applying creams or ointments unless instructed by a healthcare provider. Seek medical attention immediately.",
+          "fil": "Agad na banlawan ang apektadong lugar ng tubig sa loob ng hindi bababa sa 20 minuto. Alisin ang anumang maruming damit. Takpan ang paso ng sterile na benda at iwasan ang paglalagay ng mga creams o ointments maliban kung inutusan ng isang healthcare provider. Magpakonsulta sa doktor agad."
+        },
+        {
+          "eng": "Rinse the burn with water continuously for 20 minutes and remove contaminated clothing. Seek immediate medical help.",
+          "fil": "Banlawan ang paso ng tubig ng tuluy-tuloy sa loob ng 20 minuto at alisin ang maruming damit. Humingi ng agarang medikal na tulong."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Rash",
+      "patterns": [
+        "How to treat a rash?",
+        "What to do for a rash?",
+        "Best way to relieve rash?",
+        "Rash treatment advice?",
+        "How to reduce rash itching?"
+      ],
+      "responses": [
+        {
+          "eng": "Wash the affected area with mild soap and water. Apply an over-the-counter anti-itch cream or antihistamine. Avoid scratching to prevent infection. If the rash persists or is severe, consult a healthcare provider.",
+          "fil": "Hugasan ang apektadong lugar gamit ang mild na sabon at tubig. Maglagay ng over-the-counter na anti-itch cream o antihistamine. Iwasan ang pangangati upang maiwasan ang impeksyon. Kung ang pantal ay nagpapatuloy o malubha, magpakonsulta sa isang healthcare provider."
+        },
+        {
+          "eng": "Clean the area gently, apply an anti-itch cream, and avoid irritants. Seek medical advice if the rash spreads or doesn't improve.",
+          "fil": "Linisin ang lugar ng maingat, maglagay ng anti-itch cream, at iwasan ang mga irritants. Humingi ng medikal na payo kung ang pantal ay kumakalat o hindi bumubuti."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Snake Bite",
+      "patterns": [
+        "What to do if bitten by a snake?",
+        "How to treat a snake bite?",
+        "Snake bite treatment advice?",
+        "How to manage a snake bite?",
+        "What to do for a snake bite?"
+      ],
+      "responses": [
+        {
+          "eng": "Keep the bitten area still and below heart level to slow venom spread. Remove any tight clothing or jewelry near the bite. Do not attempt to suck out the venom. Seek emergency medical help immediately",
+          "fil": "Ipahinga ang tinukso na lugar at panatilihing nasa ilalim ng antas ng puso upang mapabagal ang pagkalat ng lason. Alisin ang anumang masikip na damit o alahas malapit sa kagat. Huwag subukang sipsipin ang lason. Humingi agad ng tulong medikal."
+        },
+        {
+          "eng": "Stay calm and immobilize the bitten limb. Seek emergency medical care as quickly as possible",
+          "fil": "Manatiling kalmado at i-immobilize ang tinukso na bahagi. Humingi ng agarang medikal na pangangalaga sa lalong madaling panahon."
+        },
+        {
+          "eng": "Call emergency services immediately. Keep the bite area still and lower than the heart. Do not apply ice or a tourniquet.",
+          "fil": "Tumawag agad ng emergency services. Panatilihing hindi gumagalaw ang lugar ng kagat at nasa ibaba ng puso. Huwag maglagay ng yelo o tourniquet."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Bleeding",
+      "patterns": [
+        "How to stop bleeding?",
+        "What to do if I am bleeding?",
+        "Best way to stop bleeding?",
+        "Bleeding treatment advice?",
+        "How to manage bleeding?"
+      ],
+      "responses": [
+        {
+          "eng": "Apply direct pressure to the wound with a clean cloth or bandage. If possible, elevate the injured area above heart level. Keep applying pressure until the bleeding stops. If the bleeding is severe, seek emergency medical help immediately.",
+          "fil": "Maglagay ng direktang pressure sa sugat gamit ang malinis na tela o benda. Kung maaari, itaas ang nasugatang lugar sa itaas ng antas ng puso. Patuloy na mag-aplay ng pressure hanggang sa tumigil ang pagdurugo. Kung malubha ang pagdurugo, humingi agad ng tulong medikal."
+        },
+        {
+          "eng": "Use a clean cloth to apply pressure to the wound. Elevate the area if possible and seek medical attention for severe bleeding.",
+          "fil": "Gamitin ang malinis na tela upang mag-aplay ng pressure sa sugat. Itaas ang lugar kung maaari at humingi ng medikal na atensyon para sa malubhang pagdurugo."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Fracture",
+      "patterns": [
+        "What to do for a fracture?",
+        "How to treat a broken bone?",
+        "Fracture treatment advice?",
+        "Best way to manage a fracture?",
+        "How to relieve fracture pain?"
+      ],
+      "responses": [
+        {
+          "eng": "Keep the injured area still and avoid moving it. Apply a splint to immobilize the fracture and use a cold pack to reduce swelling. Seek immediate medical attention.",
+          "fil": "Ipahinga ang nasugatang lugar at iwasang galawin ito. Maglagay ng splint upang i-immobilize ang bali at gumamit ng cold pack upang mabawasan ang pamamaga. Humingi ng agarang medikal na atensyon."
+        },
+        {
+          "eng": "Do not move the injured area and use a splint to keep it immobile. Apply ice and seek emergency medical help.",
+          "fil": "Huwag galawin ang nasugatang lugar at gamitin ang splint upang mapanatiling hindi gumagalaw ito. Maglagay ng yelo at humingi ng agarang medikal na tulong."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Fever",
+      "patterns": [
+        "How to reduce a fever?",
+        "What to do for a fever?",
+        "Best way to bring down fever?",
+        "Fever treatment advice?",
+        "How to manage fever?"
+      ],
+      "responses": [
+        {
+          "eng": "Stay hydrated by drinking plenty of fluids. Use over-the-counter fever reducers like acetaminophen or ibuprofen. Rest in a cool environment and wear lightweight clothing. If the fever is very high or persists, seek medical advice.",
+          "fil": "Manatiling hydrated sa pamamagitan ng pag-inom ng maraming likido. Gumamit ng over-the-counter na gamot para sa lagnat tulad ng acetaminophen o ibuprofen. Magpahinga sa isang malamig na kapaligiran at magsuot ng magagaan na damit. Kung ang lagnat ay napakataas o nagpapatuloy, magpakonsulta sa doktor."
+        },
+        {
+          "eng": "Drink water, rest, and use fever-reducing medication. Seek medical care if the fever is very high or persists for more than a day.",
+          "fil": "Uminom ng tubig, magpahinga, at gumamit ng gamot para sa pagbawas ng lagnat. Humingi ng medikal na pangangalaga kung ang lagnat ay napakataas o nagpapatuloy ng higit sa isang araw."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Convulsions",
+      "patterns": [
+        "What to do during convulsions?",
+        "How to help someone having a seizure?",
+        "Convulsion first aid steps?",
+        "Best way to manage convulsions?",
+        "What should I do for convulsions?"
+      ],
+      "responses": [
+        {
+          "eng": "Protect the person from injury by removing nearby objects. Do not restrain them or put anything in their mouth. After the convulsions stop, place them in the recovery position and monitor their breathing. Seek emergency medical help.",
+          "fil": "Protektahan ang tao mula sa pinsala sa pamamagitan ng pagtanggal ng mga nakapaligid na bagay. Huwag silang pigilan o maglagay ng anumang bagay sa kanilang bibig. Pagkatapos huminto ang mga convulsions, ilagay sila sa recovery position at bantayan ang kanilang paghinga. Humingi ng agarang medikal na tulong."
+        },
+        {
+          "eng": "Stay with the person and protect them from harm. Do not restrain them or place anything in their mouth. Call emergency services.",
+          "fil": "Manatili sa tabi ng tao at protektahan sila mula sa pinsala. Huwag silang pigilan o maglagay ng anumang bagay sa kanilang bibig. Tumawag ng emergency services."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Chest Pain",
+      "patterns": [
+        "What to do for chest pain?",
+        "How to treat chest pain?",
+        "Chest pain treatment advice?",
+        "What should I do if I have chest pain?",
+        "Best way to relieve chest pain?"
+      ],
+      "responses": [
+        {
+          "eng": "If you experience chest pain, stop any physical activity and rest. Take deep breaths and try to stay calm. If the pain persists, seek emergency medical help immediately, as it could be a sign of a heart attack.",
+          "fil": "Kung makaranas ka ng pananakit sa dibdib, itigil ang anumang pisikal na aktibidad at magpahinga. Huminga ng malalim at subukang manatiling kalmado. Kung magpapatuloy ang sakit, humingi ng agarang medikal na tulong, dahil maaari itong senyales ng atake sa puso."
+        },
+        {
+          "eng": "Rest and take slow, deep breaths. Seek emergency medical attention if the pain is severe or does not go away.",
+          "fil": "Magpahinga at huminga ng mabagal at malalim. Humingi ng agarang medikal na atensyon kung ang sakit ay malubha o hindi nawawala."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Dizziness",
+      "patterns": [
+        "How to treat dizziness?",
+        "What to do if I feel dizzy?",
+        "Best way to relieve dizziness?",
+        "Dizziness treatment advice?",
+        "How to stop feeling dizzy?"
+      ],
+      "responses": [
+        {
+          "eng": "Sit or lie down immediately and rest until the dizziness passes. Drink plenty of water and avoid sudden movements. If dizziness persists or is accompanied by other symptoms, seek medical attention.",
+          "fil": "Umupo o humiga agad at magpahinga hanggang sa mawala ang pagkahilo. Uminom ng maraming tubig at iwasan ang biglaang paggalaw. Kung magpapatuloy ang pagkahilo o sinasamahan ng iba pang sintomas, magpakonsulta sa doktor."
+        },
+        {
+          "eng": "Sit or lie down and drink water. Avoid sudden movements. If dizziness continues, consult a doctor.",
+          "fil": "Umupo o humiga at uminom ng tubig. Iwasan ang biglaang paggalaw. Kung magpatuloy ang pagkahilo, magpakonsulta sa doktor."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Heat Stroke",
+      "patterns": [
+        "What to do for heat stroke?",
+        "How to treat heat stroke?",
+        "Heat stroke treatment advice?",
+        "How to prevent heat stroke?",
+        "Best way to cool down from heat stroke?",
+        "Best way to recover from heat stroke?",
+        "How to manage heat stroke?"
+      ],
+      "responses": [
+        {
+          "eng": "Move to a cooler place and lie down with your legs slightly elevated. Apply cool water to your skin and use a fan to help with cooling. Drink cool water or an electrolyte drink, but avoid sugary or alcoholic beverages. Seek emergency medical attention immediately.",
+          "fil": "Lumipat sa isang mas malamig na lugar at humiga na may bahagyang itaas ang mga binti. Maglagay ng malamig na tubig sa iyong balat at gumamit ng pamaypay upang makatulong sa pagpapalamig. Uminom ng malamig na tubig o electrolyte drink, ngunit iwasan ang matatamis o alcoholic na inumin. Humingi ng agarang medikal na tulong."
+        },
+        {
+          "eng": "Get to a cool place, remove excess clothing, and apply cold packs or wet cloths. Drink cool water or sports drinks, and seek immediate medical help.",
+          "fil": "Pumunta sa isang malamig na lugar, alisin ang sobrang damit, at maglagay ng cold packs o basang tela. Uminom ng malamig na tubig o sports drinks, at humingi ng agarang medikal na tulong."
+        },
+        {
+          "eng": "Call emergency services immediately. Move the person to a cool area and remove excess clothing. Use cool water or ice packs to lower their body temperature. Keep monitoring their condition until help arrives.",
+          "fil": "Tumawag agad ng emergency services. Ilipat ang tao sa isang malamig na lugar at alisin ang sobrang damit. Gumamit ng malamig na tubig o ice packs upang ibaba ang kanilang temperatura ng katawan. Patuloy na bantayan ang kanilang kondisyon hanggang dumating ang tulong."
+        },
+        {
+          "eng": "Seek emergency medical help. Cool the person down with water or ice packs and stay with them until help arrives.",
+          "fil": "Humingi ng agarang medikal na tulong. Palamigin ang tao gamit ang tubig o ice packs at manatili sa kanilang tabi hanggang dumating ang tulong."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Heart Attack",
+      "patterns": [
+        "What to do if someone is having a heart attack?",
+        "How to treat a heart attack?",
+        "Heart attack emergency steps?",
+        "Heart attack treatment advice?",
+        "How to recognize a heart attack?"
+      ],
+      "responses": [
+        {
+          "eng": "Call emergency services immediately. Help the person to sit down and stay calm. If available, give them aspirin to chew slowly unless they are allergic or have been advised not to by a doctor. If they lose consciousness, begin CPR if trained to do so.",
+          "fil": "Tumawag agad ng emergency services. Tulungan ang tao na umupo at manatiling kalmado. Kung maaari, bigyan sila ng aspirin upang nguyain ng dahan-dahan maliban kung sila ay allergic o inutusan ng doktor na huwag gawin ito. Kung mawalan sila ng malay, simulan ang CPR kung ikaw ay sinanay sa paggawa nito."
+        },
+        {
+          "eng": "Call for emergency medical help right away. Keep the person calm and have them chew aspirin if not allergic.",
+          "fil": "Tumawag agad ng tulong medikal. Panatilihing kalmado ang tao at hayaang nguyain nila ang aspirin kung hindi sila allergic."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Stroke",
+      "patterns": [
+        "What to do if someone has a stroke?",
+        "How to treat a stroke?",
+        "Stroke first aid advice?",
+        "Best way to help during a stroke?",
+        "What to do during a stroke?",
+        "What to do if someone is having a stroke?",
+        "How to treat a stroke?",
+        "Stroke emergency steps?",
+        "Stroke treatment advice?",
+        "How to recognize a stroke?"
+      ],
+      "responses": [
+        {
+          "eng": "If you suspect someone is having a stroke, call emergency services immediately. Have the person lie down with their head slightly elevated. Monitor their breathing and be ready to perform CPR if necessary.",
+          "fil": "Kung sa tingin mo ay may stroke ang isang tao, tumawag agad ng emergency services. Hayaang humiga ang tao na may bahagyang itaas ang ulo. Bantayan ang kanilang paghinga at maging handa na magsagawa ng CPR kung kinakailangan."
+        },
+        {
+          "eng": "Seek emergency medical help immediately. Keep the person calm and monitor their breathing.",
+          "fil": "Humingi agad ng tulong medikal. Panatilihing kalmado ang tao at bantayan ang kanilang paghinga."
+        },
+        {
+          "eng": "Act FAST: Face drooping, Arm weakness, Speech difficulty, Time to call emergency services. Call emergency services immediately and note the time the symptoms began. Keep the person comfortable and calm until help arrives.",
+          "fil": "Gumamit ng FAST: Face drooping, Arm weakness, Speech difficulty, Time to call emergency services. Tumawag agad ng emergency services at tandaan ang oras ng pagsisimula ng mga sintomas. Panatilihin ang tao na komportable at kalmado hanggang dumating ang tulong."
+        },
+        {
+          "eng": "Call emergency services immediately if you notice face drooping, arm weakness, or speech difficulty. Act FAST and get medical help right away.",
+          "fil": "Tumawag agad ng emergency services kung mapansin ang pag-dagilid ng mukha, kahinaan ng braso, o kahirapan sa pagsasalita. Kumilos ng FAST at kumuha ng medikal na tulong kaagad."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Dehydration",
+      "patterns": [
+        "How to treat dehydration?",
+        "What to do for dehydration?",
+        "Best way to rehydrate?",
+        "Dehydration treatment advice?",
+        "How to manage dehydration?"
+      ],
+      "responses": [
+        {
+          "eng": "Drink plenty of water or an oral rehydration solution (ORS). Rest in a cool environment and avoid physical activity until fully rehydrated. For severe dehydration, seek medical attention.",
+          "fil": "Uminom ng maraming tubig o oral rehydration solution (ORS). Magpahinga sa isang malamig na kapaligiran at iwasan ang pisikal na aktibidad hanggang sa ganap na ma-rehydrate. Para sa malubhang dehydration, humingi ng medikal na tulong."
+        },
+        {
+          "eng": "Increase fluid intake, rest, and use an ORS if available. Seek medical help if dehydration is severe.",
+          "fil": "Dagdagan ang pag-inom ng likido, magpahinga, at gumamit ng ORS kung available. Humingi ng tulong medikal kung ang dehydration ay malubha."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Nasal Congestion",
+      "patterns": [
+        "How to relieve nasal congestion?",
+        "What to do for a stuffy nose?",
+        "Best way to clear nasal congestion?",
+        "Nasal congestion treatment advice?",
+        "How to treat a blocked nose?"
+      ],
+      "responses": [
+        {
+          "eng": "Use a saline nasal spray or steam inhalation to clear the nasal passages. Stay hydrated and use a humidifier if needed. Over-the-counter decongestants can also help relieve symptoms.",
+          "fil": "Gumamit ng saline nasal spray o steam inhalation upang linisin ang mga nasal passages. Manatiling hydrated at gumamit ng humidifier kung kinakailangan. Ang mga over-the-counter na decongestants ay maaari ring makatulong sa pagpapaluwag ng mga sintomas."
+        },
+        {
+          "eng": "Try steam inhalation, saline spray, and stay hydrated. Consider using a decongestant if symptoms persist.",
+          "fil": "Subukan ang steam inhalation, saline spray, at manatiling hydrated. Isaalang-alang ang paggamit ng decongestant kung ang mga sintomas ay nagpapatuloy."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Cough",
+      "patterns": [
+        "How to treat a cough?",
+        "What to do for a cough?",
+        "Best way to stop coughing?",
+        "Cough treatment advice?",
+        "How to relieve a persistent cough?"
+      ],
+      "responses": [
+        {
+          "eng": "Drink warm fluids like tea with honey. Use a humidifier to add moisture to the air. Over-the-counter cough syrups or lozenges can help soothe your throat. If the cough persists for more than a week, consult a healthcare provider.",
+          "fil": "Uminom ng mainit na likido tulad ng tsaa na may honey. Gumamit ng humidifier upang magdagdag ng moisture sa hangin. Ang mga over-the-counter na cough syrups o lozenges ay maaaring makatulong upang maibsan ang sore throat. Kung ang ubo ay nagpapatuloy ng higit sa isang linggo, magpakonsulta sa healthcare provider."
+        },
+        {
+          "eng": "Stay hydrated, use cough drops, and consider a humidifier. If the cough persists, seek medical advice.",
+          "fil": "Manatiling hydrated, gumamit ng cough drops, at isaalang-alang ang paggamit ng humidifier. Kung ang ubo ay nagpapatuloy, humingi ng medikal na payo."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Abdominal Pain",
+      "patterns": [
+        "How to treat abdominal pain?",
+        "What to do for stomach pain?",
+        "Best way to relieve abdominal pain?",
+        "Abdominal pain treatment advice?",
+        "How to manage stomach pain?"
+      ],
+      "responses": [
+        {
+          "eng": "Rest and avoid heavy meals. Drink clear fluids and apply a warm compress to the abdomen. Over-the-counter antacids or pain relievers can help. If the pain is severe or persistent, seek medical attention.",
+          "fil": "Magpahinga at iwasan ang mabibigat na pagkain. Uminom ng malinaw na likido at maglagay ng mainit na compress sa tiyan. Ang mga over-the-counter na antacids o pain relievers ay maaaring makatulong. Kung ang sakit ay malubha o nagpapatuloy, humingi ng medikal na tulong."
+        },
+        {
+          "eng": "Rest and stay hydrated. Use a warm compress and take pain relief medication if needed. Consult a healthcare provider if the pain persists.",
+          "fil": "Magpahinga at manatiling hydrated. Gumamit ng mainit na compress at uminom ng gamot para sa sakit kung kinakailangan. Magpakonsulta sa healthcare provider kung ang sakit ay nagpapatuloy."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Broken Toe",
+      "patterns": [
+        "How to treat a broken toe?",
+        "What to do for a broken toe?",
+        "Best way to heal a broken toe?",
+        "Broken toe treatment advice?",
+        "How to manage a broken toe?"
+      ],
+      "responses": [
+        {
+          "eng": "Rest and avoid putting weight on the toe. Apply ice to reduce swelling and elevate the foot. Use a splint or buddy tape the toe to the adjacent one. Seek medical attention if the pain is severe.",
+          "fil": "Magpahinga at iwasang maglagay ng bigat sa daliri sa paa. Maglagay ng yelo upang mabawasan ang pamamaga at itaas ang paa. Gumamit ng splint o i-tape ang daliri sa paa sa katabing daliri. Humingi ng medikal na tulong kung ang sakit ay malubha."
+        },
+        {
+          "eng": "Elevate the foot, apply ice, and tape the toe to the next one. Consult a healthcare provider if necessary.",
+          "fil": "Itaas ang paa, maglagay ng yelo, at i-tape ang daliri sa katabing daliri. Magpakonsulta sa healthcare provider kung kinakailangan."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Choking",
+      "patterns": [
+        "What to do if someone is choking?",
+        "How to help someone who is choking?",
+        "Choking first aid steps?",
+        "Best way to stop choking?",
+        "How to save someone choking?",
+        "What to do if someone is choking?",
+        "How to treat choking?",
+        "Choking emergency steps?",
+        "Choking treatment advice?",
+        "How to help someone who is choking?"
+      ],
+      "responses": [
+        {
+          "eng": "If someone is choking, ask if they can speak or cough. If they cannot, perform the Heimlich maneuver by standing behind them, wrapping your arms around their waist, and giving quick, upward thrusts below their ribcage. Call emergency services immediately.",
+          "fil": "Kung ang isang tao ay nasasakal, tanungin kung sila ay makapagsalita o makakaugong. Kung hindi nila magawa, isagawa ang Heimlich maneuver sa pamamagitan ng pagtayo sa likuran nila, pagyakap sa kanilang baywang, at pagbibigay ng mabilis at pataas na puwersa sa ilalim ng kanilang ribcage. Tumawag agad ng emergency services."
+        },
+        {
+          "eng": "Perform the Heimlich maneuver or back blows to dislodge the object. Call emergency services if the person cannot breathe.",
+          "fil": "Isagawa ang Heimlich maneuver o back blows upang alisin ang bagay. Tumawag ng emergency services kung ang tao ay hindi makakahinga."
+        },
+        {
+          "eng": "If the person is unable to speak, cough, or breathe, perform the Heimlich maneuver: Stand behind the person, place your arms around their waist, make a fist with one hand, place it above their navel, and give quick, upward thrusts. If the person becomes unconscious, begin CPR and call emergency services.",
+          "fil": "Kung ang tao ay hindi makapagsalita, makakaugong, o makahinga, isagawa ang Heimlich maneuver: Tumayo sa likuran ng tao, ilagay ang iyong mga braso sa kanilang baywang, gumawa ng kamao gamit ang isang kamay, ilagay ito sa itaas ng kanilang pusod, at bigyan ng mabilis, pataas na puwersa. Kung ang tao ay mawalan ng malay, simulan ang CPR at tumawag ng emergency services."
+        },
+        {
+          "eng": "Perform the Heimlich maneuver by standing behind the person and giving quick, upward abdominal thrusts. Call emergency services if needed.",
+          "fil": "Isagawa ang Heimlich maneuver sa pamamagitan ng pagtayo sa likuran ng tao at pagbibigay ng mabilis, pataas na abdominal thrusts. Tumawag ng emergency services kung kinakailangan."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Diarrhea",
+      "patterns": [
+        "How to treat diarrhea?",
+        "What to do for diarrhea?",
+        "Best way to stop diarrhea?",
+        "Diarrhea treatment advice?",
+        "How to manage diarrhea?"
+      ],
+      "responses": [
+        {
+          "eng": "Stay hydrated by drinking plenty of fluids like water or an oral rehydration solution. Avoid solid foods until the symptoms improve. Over-the-counter anti-diarrheal medications can be used, but consult a healthcare provider if symptoms persist.",
+          "fil": "Manatiling hydrated sa pamamagitan ng pag-inom ng maraming likido tulad ng tubig o oral rehydration solution. Iwasan ang solidong pagkain hanggang sa bumuti ang mga sintomas. Maaaring gumamit ng over-the-counter na anti-diarrheal medications, ngunit magpakonsulta sa healthcare provider kung ang mga sintomas ay nagpapatuloy."
+        },
+        {
+          "eng": "Drink fluids, avoid solid food, and consider over-the-counter medications. Seek medical help if symptoms persist.",
+          "fil": "Uminom ng likido, iwasan ang solidong pagkain, at isaalang-alang ang paggamit ng over-the-counter na mga gamot. Humingi ng medikal na tulong kung ang mga sintomas ay nagpapatuloy."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Heat Exhaustion",
+      "patterns": [
+        "How to treat heat exhaustion?",
+        "What to do for heat exhaustion?",
+        "Best way to recover from heat exhaustion?",
+        "Heat exhaustion treatment advice?",
+        "How to manage heat exhaustion?"
+      ],
+      "responses": [
+        {
+          "eng": "Move to a cool, shaded area and drink plenty of water. Loosen or remove clothing and apply cool, wet cloths to the skin. Rest until fully recovered. If symptoms worsen, seek medical help.",
+          "fil": "Lumipat sa isang malamig at may anino na lugar at uminom ng maraming tubig. Alisin o luwagan ang damit at maglagay ng malamig, basang tela sa balat. Magpahinga hanggang sa ganap na mag-recover. Kung lumalala ang mga sintomas, humingi ng medikal na tulong."
+        },
+        {
+          "eng": "Cool down, hydrate, and rest in a shaded area. Seek medical attention if symptoms do not improve.",
+          "fil": "Palamigin ang katawan, manatiling hydrated, at magpahinga sa isang lugar na may anino. Humingi ng medikal na atensyon kung ang mga sintomas ay hindi bumubuti."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Nose Bleed",
+      "patterns": [
+        "How to stop a nosebleed?",
+        "What to do for a nosebleed?",
+        "Best way to stop nose bleeding?",
+        "Nosebleed treatment advice?",
+        "How to manage a nosebleed?",
+        "How to stop a nosebleed?",
+        "How to treat a nosebleed?",
+        "Best way to stop nosebleeds?"
+      ],
+      "responses": [
+        {
+          "eng": "Sit up straight and lean slightly forward. Pinch the soft part of your nose and hold for 10-15 minutes. Apply a cold compress to the bridge of the nose. If the bleeding continues for more than 20 minutes, seek medical attention.",
+          "fil": "Umupo ng tuwid at magyuko ng bahagya pasulong. Pisilin ang malambot na bahagi ng iyong ilong at hawakan ito ng 10-15 minuto. Maglagay ng malamig na compress sa tulay ng ilong. Kung ang pagdurugo ay magpapatuloy ng higit sa 20 minuto, humingi ng medikal na tulong."
+        },
+        {
+          "eng": "Lean forward, pinch your nose, and hold until the bleeding stops. Use a cold compress and seek medical help if the bleeding doesn't stop.",
+          "fil": "Yuko pasulong, pisilin ang iyong ilong, at hawakan hanggang sa tumigil ang pagdurugo. Gumamit ng malamig na compress at humingi ng medikal na tulong kung ang pagdurugo ay hindi tumitigil."
+        },
+        {
+          "eng": "Sit up straight and lean forward slightly. Pinch the soft part of your nose with your thumb and index finger for 10-15 minutes. Breathe through your mouth and avoid lying down. Apply a cold compress to the bridge of your nose. Seek medical help if the bleeding doesn't stop after 20 minutes.",
+          "fil": "Umupo ng tuwid at magyuko ng bahagya pasulong. Pisilin ang malambot na bahagi ng iyong ilong gamit ang iyong hinlalaki at hintuturo ng 10-15 minuto. Huminga sa pamamagitan ng iyong bibig at iwasang humiga. Maglagay ng malamig na compress sa tulay ng iyong ilong. Humingi ng medikal na tulong kung ang pagdurugo ay hindi tumitigil pagkatapos ng 20 minuto."
+        },
+        {
+          "eng": "Tilt your head forward and pinch your nose just below the bridge. Hold for 10-15 minutes and avoid blowing your nose afterward.",
+          "fil": "Itilt ang iyong ulo pasulong at pisilin ang iyong ilong sa ilalim ng tulay. Hawakan ito ng 10-15 minuto at iwasang sabunin ang iyong ilong pagkatapos."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Rectal Bleeding",
+      "patterns": [
+        "What to do if I have rectal bleeding?",
+        "How to treat rectal bleeding?",
+        "Rectal bleeding treatment advice?",
+        "What to do for rectal bleeding?",
+        "How to manage rectal bleeding?"
+      ],
+      "responses": [
+        {
+          "eng": "Stay calm and avoid straining during bowel movements. Increase fiber intake and drink plenty of water to ease bowel movements. Seek medical attention to determine the cause and receive appropriate treatment.",
+          "fil": "Manatiling kalmado at iwasang mag-igting sa panahon ng pagdumi. Dagdagan ang iyong fiber intake at uminom ng maraming tubig upang mapadali ang pagdumi. Humingi ng medikal na tulong upang matukoy ang sanhi at makatanggap ng angkop na paggamot."
+        },
+        {
+          "eng": "Increase fiber and water intake. Avoid straining and consult a healthcare provider to determine the cause.",
+          "fil": "Dagdagan ang fiber at water intake. Iwasan ang pag-igting at kumonsulta sa healthcare provider upang matukoy ang sanhi."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Testicle Pain",
+      "patterns": [
+        "What to do if I have testicle pain?",
+        "How to treat testicle pain?",
+        "Best way to relieve testicle pain?",
+        "Testicle pain treatment advice?",
+        "How to manage testicle pain?"
+      ],
+      "responses": [
+        {
+          "eng": "Rest and avoid strenuous activity. Apply ice to the affected area and wear supportive underwear. If the pain persists or is severe, seek medical attention.",
+          "fil": "Magpahinga at iwasan ang mabibigat na aktibidad. Maglagay ng yelo sa apektadong lugar at magsuot ng supportive na underwear. Kung ang sakit ay nagpapatuloy o malubha, humingi ng medikal na tulong."
+        },
+        {
+          "eng": "Rest, use ice, and wear supportive clothing. Seek medical advice if the pain is severe or does not improve.",
+          "fil": "Magpahinga, gumamit ng yelo, at magsuot ng supportive na damit. Humingi ng medikal na payo kung ang sakit ay malubha o hindi bumubuti."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Vertigo",
+      "patterns": [
+        "What to do if I have vertigo?",
+        "How to treat vertigo?",
+        "Best way to manage vertigo?",
+        "Vertigo treatment advice?",
+        "How to relieve vertigo symptoms?"
+      ],
+      "responses": [
+        {
+          "eng": "Sit or lie down immediately when feeling dizzy. Avoid sudden head movements and rest in a dark, quiet room. Stay hydrated and seek medical advice if symptoms persist.",
+          "fil": "Umupo o humiga agad kapag nakakaramdam ng pagkahilo. Iwasan ang biglaang paggalaw ng ulo at magpahinga sa isang madilim at tahimik na kwarto. Manatiling hydrated at humingi ng medikal na payo kung ang mga sintomas ay nagpapatuloy."
+        },
+        {
+          "eng": "Rest and avoid sudden movements. Stay hydrated and consult a healthcare provider if the symptoms continue.",
+          "fil": "Magpahinga at iwasan ang biglaang paggalaw. Manatiling hydrated at kumonsulta sa healthcare provider kung ang mga sintomas ay nagpapatuloy."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Eye Injury",
+      "patterns": [
+        "What to do if I have an eye injury?",
+        "How to treat an eye injury?",
+        "Eye injury first aid advice?",
+        "Best way to manage an eye injury?",
+        "How to care for an eye injury?"
+      ],
+      "responses": [
+        {
+          "eng": "Avoid rubbing the eye and rinse it with clean water. If there is a foreign object in the eye, do not attempt to remove it yourself. Cover the eye with a clean cloth or eye patch and seek medical attention immediately.",
+          "fil": "Iwasan ang pagdila sa mata at banlawan ito ng malinis na tubig. Kung may banyagang bagay sa mata, huwag subukang alisin ito nang mag-isa. Takpan ang mata ng malinis na tela o eye patch at humingi ng agarang medikal na tulong."
+        },
+        {
+          "eng": "Rinse the eye with clean water and avoid rubbing it. Seek emergency medical help, especially if there is a foreign object in the eye.",
+          "fil": "Banlawan ang mata ng malinis na tubig at iwasan ang pagdila dito. Humingi ng agarang medikal na tulong, lalo na kung may banyagang bagay sa mata."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Food Poison",
+      "patterns": [
+        "How to treat food poisoning?",
+        "What to do for food poisoning?",
+        "Best way to recover from food poisoning?",
+        "Food poisoning treatment advice?",
+        "How to manage food poisoning?"
+      ],
+      "responses": [
+        {
+          "eng": "Stay hydrated by drinking clear fluids like water or oral rehydration solutions. Rest and avoid solid foods until symptoms subside. If symptoms are severe or persistent, seek medical attention.",
+          "fil": "Manatiling hydrated sa pamamagitan ng pag-inom ng malinaw na likido tulad ng tubig o oral rehydration solutions. Magpahinga at iwasan ang solidong pagkain hanggang sa humupa ang mga sintomas. Kung ang mga sintomas ay malubha o nagpapatuloy, humingi ng medikal na tulong."
+        },
+        {
+          "eng": "Drink clear fluids, rest, and avoid solid food until symptoms improve. Consult a healthcare provider if symptoms persist.",
+          "fil": "Uminom ng malinaw na likido, magpahinga, at iwasan ang solidong pagkain hanggang sa bumuti ang mga sintomas. Kumonsulta sa healthcare provider kung ang mga sintomas ay nagpapatuloy."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Seizure",
+      "patterns": [
+        "What to do during a seizure?",
+        "How to help someone having a seizure?",
+        "Seizure first aid steps?",
+        "Best way to manage a seizure?",
+        "What should I do for a seizure?",
+        "What to do if someone is having a seizure?",
+        "How to treat a seizure?",
+        "Seizure emergency steps?",
+        "Seizure treatment advice?",
+        "How to help during a seizure?"
+      ],
+      "responses": [
+        {
+          "eng": "Stay calm and protect the person from injury by moving nearby objects. Do not restrain them or put anything in their mouth. Once the seizure ends, place them in the recovery position and monitor their breathing. Seek emergency medical help.",
+          "fil": "Manatiling kalmado at protektahan ang tao mula sa pinsala sa pamamagitan ng pag-aalis ng mga bagay na malapit sa kanila. Huwag silang pigilan o maglagay ng anumang bagay sa kanilang bibig. Kapag natapos na ang seizure, ilagay sila sa recovery position at bantayan ang kanilang paghinga. Humingi ng agarang medikal na tulong."
+        },
+        {
+          "eng": "Protect the person from harm, do not restrain them, and call emergency services. Place them in the recovery position once the seizure stops.",
+          "fil": "Protektahan ang tao mula sa pinsala, huwag silang pigilan, at tumawag ng emergency services. Ilagay sila sa recovery position kapag natapos ang seizure."
+        },
+        {
+          "eng": "Do not restrain the person. Move any dangerous objects away from them. Cushion their head and time the seizure. Once the seizure stops, place them in the recovery position and stay with them until they are fully conscious. Seek medical attention if it's their first seizure or if the seizure lasts more than 5 minutes.",
+          "fil": "Huwag pigilan ang tao. Ilipat ang anumang panganib na bagay mula sa kanila. Pahiran ang kanilang ulo at itala ang oras ng seizure. Kapag natapos ang seizure, ilagay sila sa recovery position at manatili sa kanilang tabi hanggang sa sila ay ganap na magising. Humingi ng medikal na tulong kung ito ang kanilang unang seizure o kung ang seizure ay tumatagal ng higit sa 5 minuto."
+        },
+        {
+          "eng": "Move objects away from the person to prevent injury and cushion their head. Don't restrain them or put anything in their mouth. After the seizure, help them into the recovery position and seek medical help.",
+          "fil": "Ilipat ang mga bagay mula sa tao upang maiwasan ang pinsala at pahiran ang kanilang ulo. Huwag silang pigilan o maglagay ng anumang bagay sa kanilang bibig. Pagkatapos ng seizure, tulungan silang pumunta sa recovery position at humingi ng medikal na tulong."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Head Injury",
+      "patterns": [
+        "What to do for a head injury?",
+        "How to treat a head injury?",
+        "Head injury first aid advice?",
+        "Best way to manage a head injury?",
+        "How to care for a head injury?"
+      ],
+      "responses": [
+        {
+          "eng": "If the injury is minor, apply a cold compress to reduce swelling and rest. For more serious injuries, seek emergency medical help immediately. Keep the person awake and monitor their symptoms closely.",
+          "fil": "Kung ang pinsala ay maliit, maglagay ng malamig na compress upang mabawasan ang pamamaga at magpahinga. Para sa mas seryosong pinsala, humingi ng agarang medikal na tulong. Panatilihing gising ang tao at bantayan ang kanilang mga sintomas."
+        },
+        {
+          "eng": "Use a cold compress for minor injuries. For serious head injuries, seek immediate medical help and monitor the person's condition.",
+          "fil": "Gumamit ng malamig na compress para sa maliit na pinsala. Para sa seryosong pinsala sa ulo, humingi ng agarang medikal na tulong at bantayan ang kondisyon ng tao."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Fainting",
+      "patterns": [
+        "What to do if someone faints?",
+        "How to help someone who fainted?",
+        "Fainting first aid steps?",
+        "Best way to manage fainting?",
+        "What should I do for fainting?"
+      ],
+      "responses": [
+        {
+          "eng": "Help the person lie down and elevate their legs to improve blood flow to the brain. Loosen any tight clothing and keep them lying down until they recover. If they don't regain consciousness quickly, seek medical help immediately.",
+          "fil": "Tulungan ang tao na humiga at itaas ang kanilang mga binti upang mapabuti ang daloy ng dugo sa utak. Luwagan ang anumang masisikip na damit at panatilihing nakahiga sila hanggang sa sila ay makabawi. Kung hindi sila agad bumalik sa malay, humingi ng agarang medikal na tulong."
+        },
+        {
+          "eng": "Have the person lie down, elevate their legs, and loosen tight clothing. Seek medical attention if they don't regain consciousness.",
+          "fil": "Pahigain ang tao, itaas ang kanilang mga binti, at luwagan ang masisikip na damit. Humingi ng medikal na tulong kung hindi sila bumalik sa malay."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Headache",
+      "patterns": [
+        "How to treat a headache?",
+        "What to do for a headache?",
+        "Best way to relieve a headache?",
+        "Headache treatment advice?",
+        "How to manage headache?"
+      ],
+      "responses": [
+        {
+          "eng": "Rest in a quiet, dark room and apply a cold or warm compress to your forehead. Over-the-counter pain relievers like ibuprofen or acetaminophen can help. Stay hydrated and avoid triggers like bright lights or loud noises.",
+          "fil": "Magpahinga sa isang tahimik at madilim na kwarto at maglagay ng malamig o mainit na compress sa iyong noo. Maaaring makatulong ang mga over-the-counter na pain relievers tulad ng ibuprofen o acetaminophen. Manatiling hydrated at iwasan ang mga trigger tulad ng maliwanag na ilaw o malalakas na tunog."
+        },
+        {
+          "eng": "Rest, use pain relief medication, and apply a compress. Stay hydrated and avoid known triggers.",
+          "fil": "Magpahinga, gumamit ng gamot para sa sakit, at maglagay ng compress. Manatiling hydrated at iwasan ang mga kilalang trigger."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Cold",
+      "patterns": [
+        "How to treat a cold?",
+        "What to do for a cold?",
+        "Best way to get over a cold?",
+        "Cold treatment advice?",
+        "How to manage cold symptoms?"
+      ],
+      "responses": [
+        {
+          "eng": "Rest and stay hydrated by drinking plenty of fluids. Use over-the-counter medications to relieve symptoms like congestion and sore throat. Inhale steam or use a humidifier to ease breathing. If symptoms persist or worsen, consult a healthcare provider.",
+          "fil": "Magpahinga at manatiling hydrated sa pamamagitan ng pag-inom ng maraming likido. Gumamit ng mga over-the-counter na gamot para maibsan ang mga sintomas tulad ng congestion at sore throat. Huminga ng steam o gumamit ng humidifier upang mapadali ang paghinga. Kung ang mga sintomas ay nagpapatuloy o lumalala, kumonsulta sa healthcare provider."
+        },
+        {
+          "eng": "Stay hydrated, rest, and use medications for symptom relief. Seek medical advice if the cold persists or worsens.",
+          "fil": "Manatiling hydrated, magpahinga, at gumamit ng mga gamot para sa pag-alis ng sintomas. Humingi ng medikal na payo kung ang sipon ay nagpapatuloy o lumalala."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Drowning",
+      "patterns": [
+        "What to do if someone is drowning?",
+        "How to save someone who is drowning?",
+        "Drowning rescue steps?",
+        "Best way to help a drowning person?",
+        "What should I do if someone is drowning?"
+      ],
+      "responses": [
+        {
+          "eng": "Call for emergency help immediately. If it's safe, try to reach the person with a pole or throw a flotation device. Do not enter the water unless you're trained in water rescue. Once the person is out of the water, check for breathing and start CPR if necessary.",
+          "fil": "Tumawag ng agarang tulong sa emergency. Kung ligtas, subukang abutin ang tao gamit ang isang poste o ihagis ang flotation device. Huwag pumasok sa tubig maliban kung ikaw ay may pagsasanay sa water rescue. Kapag ang tao ay nailabas na sa tubig, suriin ang kanilang paghinga at simulan ang CPR kung kinakailangan."
+        },
+        {
+          "eng": "Call emergency services and try to help without putting yourself at risk. Use a pole or flotation device, and be ready to perform CPR.",
+          "fil": "Tumawag ng emergency services at subukang tumulong nang hindi inilalagay ang iyong sarili sa panganib. Gumamit ng poste o flotation device, at maging handa na magsagawa ng CPR."
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Greeting",
+      "patterns": ["Hi", "Hello", "Hey", "Good day", "Good morning"],
+      "responses": [
+        {
+          "eng": "Hello! How can I assist you today?",
+          "fil": "Kamusta! Paano kita matutulungan ngayon?"
+        },
+        {
+          "eng": "Hi there! What first aid information do you need?",
+          "fil": "Hi! Anong impormasyon tungkol sa first aid ang kailangan mo?"
+        },
+        {
+          "eng": "Hey! How can I help you today?",
+          "fil": "Hello! Paano kita matutulungan ngayon?"
+        }
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Thank You",
+      "patterns": [
+        "Thank you",
+        "Thanks a lot",
+        "Thanks for the help",
+        "I appreciate it",
+        "Thank you so much"
+      ],
+      "responses": [
+        {
+          "eng": "You're welcome! Stay safe!",
+          "fil": "Walang anuman! Mag ingat palagi!"
+        },
+        {
+          "eng": "Happy to help! Take care!",
+          "fil": "Masaya akong makatulong! Mag-ingat ka!"
+        },
+        {
+          "eng": "No problem! Glad I could assist.",
+          "fil": "Walang problema! Natutuwa akong nakatulong."
+        }
+      ],
+      "context_set": ""
+    }
+  ]
 }
