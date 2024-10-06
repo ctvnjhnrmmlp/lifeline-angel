@@ -6,7 +6,7 @@ import cv2 as cv
 # Define class names
 class_names = ['Abrasions', 'Bruises', 'Burns', 'Cuts', 'Laceration']
 
-model = models.load_model('best_image_model.keras')
+model = models.load_model('image_model.keras')
 
 # Load, resize, and preprocess the image
 image = cv.imread('./laseration.jpg')

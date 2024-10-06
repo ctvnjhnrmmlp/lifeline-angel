@@ -6,63 +6,88 @@ import nltk
 from nltk.stem import WordNetLemmatizer
 from tensorflow.keras.models import load_model
 
-# Initialize the lemmatizer
+# Initialize lemmatizer
 lemmatizer = WordNetLemmatizer()
 
-# Load intents JSON file
-with open('intents.json') as file:
-    intents = json.load(file)
+# Load intents, words, classes, and model with error handling
+def load_files():
+    try:
+        with open('intents.json') as file:
+            intents_data = json.load(file)
+    except FileNotFoundError:
+        raise FileNotFoundError("Error: 'intents.json' not found.")
+    
+    try:
+        with open('words.pkl', 'rb') as file:
+            words_data = pickle.load(file)
+        with open('classes.pkl', 'rb') as file:
+            classes_data = pickle.load(file)
+    except FileNotFoundError:
+        raise FileNotFoundError("Error: 'words.pkl' or 'classes.pkl' not found.")
 
-# Load words, classes, and model
-with open('words.pkl', 'rb') as file:
-    words = pickle.load(file)
+    try:
+        model_data = load_model('text_model.h5')
+    except Exception as e:
+        raise Exception(f"Error loading model: {e}")
 
-with open('classes.pkl', 'rb') as file:
-    classes = pickle.load(file)
+    return intents_data, words_data, classes_data, model_data
 
-model = load_model('chatbot_model.h5')  # Ensure the correct model filename
+intents, words, classes, model = load_files()
 
-# Clean up the sentences
+# Clean up sentence by tokenizing and lemmatizing words
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
     sentence_words = [lemmatizer.lemmatize(word.lower()) for word in sentence_words]
     return sentence_words
 
-# Converts the sentences into a bag of words
+# Convert the sentence into a bag of words
 def bag_of_words(sentence):
     sentence_words = clean_up_sentence(sentence)
     bag = [0] * len(words)
     for w in sentence_words:
-        for i, word in enumerate(words):
-            if word == w:
-                bag[i] = 1
+        if w in words:
+            bag[words.index(w)] = 1
     return np.array(bag)
 
+# Predict the class (intent) based on the input sentence
 def predict_class(sentence):
-    bow = bag_of_words(sentence)  # bow: Bag Of Words, feed the data into the neural network
-    res = model.predict(np.array([bow]))[0]  # res: result. [0] as index 0
+    bow = bag_of_words(sentence)
+    res = model.predict(np.array([bow]))[0]
     ERROR_THRESHOLD = 0.25
-    results = [[i, r] for i, r in enumerate(res) if r > ERROR_THRESHOLD]
 
-    results.sort(key=lambda x: x[1], reverse=True)
-    return_list = []
-    for r in results:
-        return_list.append({'intent': classes[r[0]], 'probability': str(r[1])})
-    return return_list
+    results = [
+        {'intent': classes[i], 'probability': float(r)}
+        for i, r in enumerate(res) if r > ERROR_THRESHOLD
+    ]
+    # Sort by probability score, highest first
+    results.sort(key=lambda x: x['probability'], reverse=True)
+    return results
 
+# Get the response based on predicted intent
 def get_response(intents_list, intents_json):
-    tag = intents_list[0]['intent']
+    if not intents_list:
+        return "Sorry, I didn't understand that."
+    
+    intent_tag = intents_list[0]['intent']
     for intent in intents_json['intents']:
-        if intent['tag'] == tag:
+        if intent['tag'] == intent_tag:
             return random.choice(intent['responses'])
+    return "Sorry, I couldn't find a response for that."
 
-# Example usage
+# Main chatbot loop
 if __name__ == "__main__":
     print("Chatbot is running! Type 'quit' to exit.")
+    
     while True:
-        message = input("You: ")
+        message = input("You: ").strip()
         if message.lower() == 'quit':
+            print("Goodbye!")
             break
-        ints = predict_class(message)
-        response = get_response(ints, intents)
+        
+        if message == '':
+            print("Bot: Please enter a message.")
+            continue
+
+        intents = predict_class(message)
+        response = get_response(intents, intents)
         print(f"Bot: {response}")

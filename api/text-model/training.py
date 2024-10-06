@@ -8,82 +8,80 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.optimizers import SGD
 
-# Initialize the lemmatizer
+# Initialize lemmatizer
 lemmatizer = WordNetLemmatizer()
 
-# Load intents JSON file
-with open('intents.json') as file:
-    intents = json.load(file)
+# Load intents dataset with error handling
+try:
+    with open('dataset.json', 'r') as file:
+        intents = json.load(file)
+except FileNotFoundError:
+    print("Error: dataset.json not found.")
+    exit()
 
-# Create lists to hold words, classes, and documents
-words = []
-classes = []
-documents = []
-ignore_letters = ['?', '!', '.', ',']
+# Initialize lists to store data
+words, classes, documents = [], [], []
+ignore_chars = ['?', '!', '.', ',']
 
-# Process intents and patterns
-for intent in intents['intents']:
-    for pattern in intent['patterns']:
-        # Tokenize each word in the pattern
+# Tokenize, lemmatize, and collect patterns and classes from the intents dataset
+for intent in intents.get('intents', []):
+    for pattern in intent.get('patterns', []):
         word_list = nltk.word_tokenize(pattern)
         words.extend(word_list)
-        # Add the document to the list
         documents.append((word_list, intent['tag']))
-        # Add the tag to the classes if it's not already there
         if intent['tag'] not in classes:
             classes.append(intent['tag'])
 
-# Lemmatize and sort the words, and remove duplicates
-words = [lemmatizer.lemmatize(word.lower()) for word in words if word not in ignore_letters]
-words = sorted(set(words))
+# Lemmatize, lower, and remove duplicates from words, ignoring special characters
+words = sorted(set(lemmatizer.lemmatize(word.lower()) for word in words if word not in ignore_chars))
 
-# Sort classes
+# Sort classes to maintain consistent order
 classes = sorted(set(classes))
 
-# Serialize words and classes using pickle
+# Save words and classes using pickle for future use
 with open('words.pkl', 'wb') as file:
     pickle.dump(words, file)
 with open('classes.pkl', 'wb') as file:
     pickle.dump(classes, file)
 
-# Create the training data
-training = []
+# Prepare training data
+training_data = []
 output_empty = [0] * len(classes)
 
-for document in documents:
-    bag = []
-    word_patterns = document[0]
-    word_patterns = [lemmatizer.lemmatize(word.lower()) for word in word_patterns]
-    for word in words:
-        bag.append(1) if word in word_patterns else bag.append(0)
-
+# Create the bag of words model
+for word_list, tag in documents:
+    # Bag of words for the current pattern
+    bag = [1 if word in [lemmatizer.lemmatize(w.lower()) for w in word_list] else 0 for word in words]
+    
+    # Output is '1' for the current tag and '0' for others
     output_row = list(output_empty)
-    output_row[classes.index(document[1])] = 1
-    training.append([np.array(bag), np.array(output_row)])
+    output_row[classes.index(tag)] = 1
 
-# Shuffle and convert the training data to a numpy array
-random.shuffle(training)
-training = np.array(training, dtype=object)
+    training_data.append([np.array(bag), np.array(output_row)])
 
-# Split the training data into inputs and outputs
-train_x = np.array([element[0] for element in training])
-train_y = np.array([element[1] for element in training])
+# Shuffle and convert to numpy array
+random.shuffle(training_data)
+training_data = np.array(training_data, dtype=object)
 
-# Build the neural network model
+# Split data into input (X) and output (Y)
+train_x = np.array([data[0] for data in training_data])
+train_y = np.array([data[1] for data in training_data])
+
+# Build a Sequential neural network model
 model = Sequential()
 model.add(Dense(128, input_shape=(len(train_x[0]),), activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(64, activation='relu'))
-model.add(Dropout(0.5))
+model.add(Dropout(0.3))  # Reduced dropout for the second layer
 model.add(Dense(len(train_y[0]), activation='softmax'))
 
-# Compile the model
+# Compile the model using SGD with nesterov momentum
 sgd = SGD(learning_rate=0.01, decay=1e-6, momentum=0.9, nesterov=True)
 model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 
-# Train the model
-hist = model.fit(train_x, train_y, epochs=500, batch_size=5, verbose=1)
+# Train the model (you may want to adjust epochs and batch_size based on your dataset)
+hist = model.fit(train_x, train_y, epochs=200, batch_size=8, verbose=1)  # Reduced epochs for faster testing
 
 # Save the trained model
-model.save('chatbot_model.h5', hist)
-print("Done")
+model.save('text_model.h5')
+print("Training complete and model saved.")
