@@ -36,7 +36,7 @@ export default function Page() {
 
 	return (
 		<main className='flex flex-col justify-center p-6 h-screen w-screen'>
-			<section className='flex items-center overflow-y-scroll no-scrollbar backdrop-blur-2xl bg-foreground/5 rounded-3xl h-screen'>
+			<section className='flex items-center overflow-y-scroll no-scrollbar backdrop-blur-sm bg-white/5 border-white/20 border-1 rounded-3xl h-screen'>
 				<div className='w-full flex flex-col flex-wrap justify-between space-between px-4 py-12 gap-12'>
 					<div className='flex flex-col justify-center items-center space-y-12'>
 						<div>
@@ -48,7 +48,7 @@ export default function Page() {
 							{STRATEGIES.map((strategy) => (
 								<button
 									key={strategy.name}
-									className='py-2 px-6 sm:p-4 md:px-12 md:py-10 text-2xl sm:text-3xl md:text-5xl lg:text-6xl rounded-full text-center sm:flex-grow backdrop-blur-sm bg-background/5'
+									className='py-2 px-6 sm:p-4 md:px-20 md:py-10 text-2xl sm:text-3xl md:text-5xl lg:text-6xl rounded-full text-center sm:flex-grow backdrop-blur-sm bg-background/5 border-white/20 border-1'
 									onClick={() => handleAgree(strategy.name.toLocaleLowerCase())}
 								>
 									<div>
@@ -128,16 +128,7 @@ export default function Page() {
 												<span className='font-bold'>
 													Data Privacy Act of 2012
 												</span>{' '}
-												in the Philippines, the{' '}
-												<span className='font-bold'>
-													General Data Protection Regulation (GDPR)
-												</span>{' '}
-												for users in the European Union, and the
-												<span className='font-bold'>
-													{' '}
-													California Consumer Privacy Act (CCPA)
-												</span>{' '}
-												for users in California.
+												in the Philippines.
 											</p>
 										</div>
 										<div>
