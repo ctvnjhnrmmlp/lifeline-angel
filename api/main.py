@@ -15,11 +15,7 @@ from nltk.stem import WordNetLemmatizer
 from pydantic import BaseModel
 from tensorflow.keras.models import load_model
 
-# Ensure the NLTK tokenizer is downloaded
-try:
-    nltk.data.find('tokenizers/punkt')
-except LookupError:
-    nltk.download('punkt')
+nltk.download('punkt')
 
 app = FastAPI()
 

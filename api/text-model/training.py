@@ -8,11 +8,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.optimizers import SGD
 
-# Ensure the NLTK tokenizer is downloaded
-try:
-    nltk.data.find('tokenizers/punkt')
-except LookupError:
-    nltk.download('punkt')
+nltk.download('punkt')
 
 # Initialize lemmatizer
 lemmatizer = WordNetLemmatizer()
