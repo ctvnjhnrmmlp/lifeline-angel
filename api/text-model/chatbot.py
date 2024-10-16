@@ -6,7 +6,7 @@ import nltk
 from nltk.stem import WordNetLemmatizer
 from tensorflow.keras.models import load_model
 
-nltk.download('all')
+nltk.download('cmudict')
 
 # Initialize lemmatizer
 lemmatizer = WordNetLemmatizer()

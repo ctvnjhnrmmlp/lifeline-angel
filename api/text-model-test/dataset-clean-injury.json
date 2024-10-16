@@ -1,0 +1,1310 @@
+{
+	"intents": [
+		{
+			"tag": "Nasal Congestion",
+			"type": "injury",
+			"meaning": "Nasal congestion occurs when the tissues lining the nose become swollen due to inflamed blood vessels, often caused by colds, flu, or allergies. Symptoms include difficulty breathing through the nose, runny nose, sneezing, and sometimes headache. It can lead to sinusitis or ear infections if left untreated.",
+			"patterns": [
+				"How to relieve nasal congestion?",
+				"What to do for a stuffy nose?",
+				"Best way to clear nasal congestion?",
+				"Nasal congestion treatment advice?",
+				"How to treat a blocked nose?",
+				"What helps with nasal congestion?",
+				"How can I clear a stuffy nose quickly?",
+				"Remedies for nasal congestion?",
+				"How to unblock a congested nose?",
+				"Tips for relieving nasal congestion?"
+			],
+			"procedures": [
+				"Use a saline nasal spray or steam inhalation to clear the nasal passages. Stay hydrated and use a humidifier if needed. Over-the-counter decongestants can also help relieve symptoms."
+			],
+			"relations": ["Lagundi", "Oregano", "Sambong"],
+			"references": [
+				"https://my.clevelandclinic.org/health/diseases/17980-nasal-congestion",
+				"https://www.mayoclinic.org/diseases-conditions/nasal-congestion/symptoms-causes/syc-20375475"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Baradong Ilong",
+			"type": "injury",
+			"meaning": "Ang baradong ilong ay nangyayari kapag ang mga tisyu sa loob ng ilong ay namamaga dahil sa pamamaga ng mga daluyan ng dugo, na kadalasang dulot ng sipon, trangkaso, o alerhiya. Ang mga sintomas ay kinabibilangan ng hirap sa paghinga sa pamamagitan ng ilong, sipon, pagbahing, at minsan ay sakit ng ulo. Maaari itong magdulot ng sinusitis o impeksyon sa tainga kung hindi agad magagamot.",
+			"patterns": [
+				"Paano maibsan ang baradong ilong?",
+				"Ano ang gagawin sa baradong ilong?",
+				"Pinakamabisang paraan para maalis ang baradong ilong?",
+				"Payo sa paggamot ng baradong ilong?",
+				"Paano gamutin ang baradong ilong?",
+				"Ano ang makakatulong sa baradong ilong?",
+				"Paano mabilis na maalis ang baradong ilong?",
+				"Mga remedyo para sa baradong ilong?",
+				"Paano maalis ang baradong ilong?",
+				"Mga tip para maibsan ang baradong ilong?"
+			],
+			"procedures": [
+				"Ang baradong ilong ay nangyayari kapag ang mga tisyu sa loob ng ilong ay namamaga dahil sa pamamaga ng mga daluyan ng dugo, na kadalasang dulot ng sipon, trangkaso, o alerhiya. Ang mga sintomas ay kinabibilangan ng hirap sa paghinga sa pamamagitan ng ilong, sipon, pagbahing, at minsan ay sakit ng ulo. Maaari itong magdulot ng sinusitis o impeksyon sa tainga kung hindi agad magagamot."
+			],
+			"relations": ["Lagundi", "Oregano", "Sambong"],
+			"references": [
+				"https://my.clevelandclinic.org/health/diseases/17980-nasal-congestion",
+				"https://www.mayoclinic.org/diseases-conditions/nasal-congestion/symptoms-causes/syc-20375475"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Cough",
+			"type": "Injury",
+			"meaning": "A cough is a reflex action to clear your airways of mucus, irritants, or foreign particles. It can be caused by colds, flu, allergies, or respiratory infections. Symptoms include a dry or productive cough, chest discomfort, and sometimes a sore throat. Persistent coughing can disrupt daily activities and sleep.",
+			"patterns": [
+				"How to treat a cough?",
+				"What to do for a cough?",
+				"Best way to stop coughing?",
+				"Cough treatment advice?",
+				"How to relieve a persistent cough?",
+				"What helps with a cough?",
+				"How can I stop coughing quickly?",
+				"Remedies for a cough?",
+				"How to soothe a sore throat from coughing?",
+				"Tips for relieving a cough?"
+			],
+			"procedures": [
+				"Drink warm fluids like tea with honey. Use a humidifier to add moisture to the air. Over-the-counter cough syrups or lozenges can help soothe your throat. If the cough persists for more than a week, consult a healthcare provider.",
+				"Stay hydrated, use cough drops, and consider a humidifier. If the cough persists, seek medical advice."
+			],
+			"relations": ["Lagundi", "Oregano", "Sambong"],
+			"references": [
+				"https://www.webmd.com/cold-and-flu/cough-get-rid-home-hacks",
+				"https://www.nhsinform.scot/illnesses-and-conditions/lungs-and-airways/cough"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Ubo",
+			"type": "Injury",
+			"meaning": "Ang ubo ay isang reflex action upang linisin ang iyong mga daanan ng hangin mula sa plema, irritants, o mga banyagang particle. Maaari itong sanhi ng sipon, trangkaso, alerhiya, o impeksyon sa respiratory system. Ang mga sintomas ay kinabibilangan ng tuyong ubo o may plema, pananakit ng dibdib, at minsan ay pananakit ng lalamunan. Ang tuloy-tuloy na pag-ubo ay maaaring makaabala sa pang-araw-araw na gawain at pagtulog.",
+			"patterns": [
+				"Paano gamutin ang ubo?",
+				"Ano ang gagawin sa ubo?",
+				"Pinakamabisang paraan para matigil ang pag-ubo?",
+				"Payo sa paggamot ng ubo?",
+				"Paano maibsan ang tuloy-tuloy na pag-ubo?",
+				"Ano ang makakatulong sa ubo?",
+				"Paano mabilis na matigil ang pag-ubo?",
+				"Mga remedyo para sa ubo?",
+				"Paano pakalmahin ang masakit na lalamunan dahil sa pag-ubo?",
+				"Mga tip para maibsan ang ubo?"
+			],
+			"procedures": [
+				"Uminom ng mainit na likido tulad ng tsaa na may honey. Gumamit ng humidifier upang magdagdag ng moisture sa hangin. Ang mga over-the-counter na cough syrups o lozenges ay maaaring makatulong upang maibsan ang sore throat. Kung ang ubo ay nagpapatuloy ng higit sa isang linggo, magpakonsulta sa healthcare provider."
+			],
+			"relations": ["Lagundi", "Oregano", "Sambong"],
+			"references": [
+				"https://www.webmd.com/cold-and-flu/cough-get-rid-home-hacks",
+				"https://www.nhsinform.scot/illnesses-and-conditions/lungs-and-airways/cough"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Abdominal Pain",
+			"type": "Injury",
+			"meaning": "Abdominal pain refers to discomfort or other uncomfortable sensations that you feel in your belly area. It can be caused by various factors such as indigestion, gas, constipation, or more serious conditions like appendicitis or gallstones. Symptoms may include cramping, bloating, and sharp or dull pain. Persistent or severe abdominal pain should be evaluated by a healthcare provider.",
+			"patterns": [
+				"How to treat abdominal pain?",
+				"What to do for stomach pain?",
+				"Best way to relieve abdominal pain?",
+				"Abdominal pain treatment advice?",
+				"How to manage stomach pain?",
+				"What helps with abdominal pain?",
+				"How can I stop stomach pain quickly?",
+				"Remedies for abdominal pain?",
+				"How to soothe stomach pain?",
+				"Tips for relieving abdominal pain?"
+			],
+			"procedures": [
+				"Rest and avoid heavy meals. Drink clear fluids and apply a warm compress to the abdomen. Over-the-counter antacids or pain relievers can help. If the pain is severe or persistent, seek medical attention."
+			],
+			"relations": ["Tsaang Gubat", "Luya", "Tanglad"],
+			"references": [
+				"https://www.webmd.com/pain-management/abdominal-pain-causes-treatments",
+				"https://www.healthline.com/health/abdominal-pain"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Sakit ng Puson",
+			"type": "Injury",
+			"meaning": "Ang pananakit ng tiyan ay tumutukoy sa kakulangan sa ginhawa o iba pang hindi komportableng pakiramdam na nararamdaman mo sa iyong tiyan. Maaari itong sanhi ng iba't ibang salik tulad ng hindi pagkatunaw ng pagkain, hangin, pagtitibi, o mas seryosong kondisyon tulad ng appendicitis o gallstones. Ang mga sintomas ay maaaring kabilang ang paghilab, kabag, at matalim o mapurol na sakit. Ang tuloy-tuloy o matinding pananakit ng tiyan ay dapat suriin ng isang tagapagbigay ng pangangalagang pangkalusugan.",
+			"patterns": [
+				"Paano gamutin ang pananakit ng tiyan?",
+				"Ano ang gagawin sa pananakit ng tiyan?",
+				"Pinakamabisang paraan para maibsan ang pananakit ng tiyan?",
+				"Payo sa paggamot ng pananakit ng tiyan?",
+				"Paano maibsan ang pananakit ng tiyan?",
+				"Ano ang makakatulong sa pananakit ng tiyan?",
+				"Paano mabilis na matigil ang pananakit ng tiyan?",
+				"Mga remedyo para sa pananakit ng tiyan?",
+				"Paano pakalmahin ang pananakit ng tiyan?",
+				"Mga tip para maibsan ang pananakit ng tiyan?"
+			],
+			"procedures": [
+				"Magpahinga at iwasan ang mabibigat na pagkain. Uminom ng malinaw na likido at maglagay ng mainit na compress sa tiyan. Ang mga over-the-counter na antacids o pain relievers ay maaaring makatulong. Kung ang sakit ay malubha o nagpapatuloy, humingi ng medikal na tulong.",
+				"",
+				"Magpahinga at manatiling hydrated. Gumamit ng mainit na compress at uminom ng gamot para sa sakit kung kinakailangan. Magpakonsulta sa healthcare provider kung ang sakit ay nagpapatuloy."
+			],
+			"relations": ["Tsaang Gubat", "Luya", "Tanglad"],
+			"references": [
+				"https://www.webmd.com/pain-management/abdominal-pain-causes-treatments",
+				"https://www.healthline.com/health/abdominal-pain"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Broken Toe",
+			"type": "Injury",
+			"meaning": "A broken toe occurs when one of the bones in your toe fractures, often due to injury or trauma. Symptoms include pain, swelling, bruising, and difficulty walking. In severe cases, the toe may appear deformed or out of place. It's important to seek medical attention to ensure proper healing and avoid complications.\", \"fil\": \"Ang nabaling daliri sa paa ay nangyayari kapag ang isa sa mga buto sa iyong daliri sa paa ay nabali, kadalasan dahil sa pinsala o trauma. Ang mga sintomas ay kinabibilangan ng sakit, pamamaga, pasa, at kahirapan sa paglakad. Sa malubhang mga kaso, ang daliri sa paa ay maaaring magmukhang deformed o wala sa lugar. Mahalaga ang paghingi ng medikal na tulong upang matiyak ang tamang paggaling at maiwasan ang mga komplikasyon.",
+			"patterns": [
+				"How to treat a broken toe?",
+				"What to do for a broken toe?",
+				"Best way to heal a broken toe?",
+				"Broken toe treatment advice?",
+				"How to manage a broken toe?",
+				"What helps with a broken toe?",
+				"How can I heal a broken toe quickly?",
+				"Remedies for a broken toe?",
+				"How to soothe a broken toe?",
+				"Tips for managing a broken toe?"
+			],
+			"procedures": [
+				"Rest and avoid putting weight on the toe. Apply ice to reduce swelling and elevate the foot. Use a splint or buddy tape the toe to the adjacent one. Seek medical attention if the pain is severe.",
+				"",
+				"Elevate the foot, apply ice, and tape the toe to the next one. Consult a healthcare provider if necessary.', 'fil': 'Itaas ang paa, maglagay ng yelo, at i-tape ang daliri sa katabing daliri."
+			],
+			"relations": ["Lagundi", "Sambong", "Tsaang Gubat (Forrest Tea)"],
+			"references": [
+				"https://www.mayoclinic.org/diseases-conditions/broken-toe/diagnosis-treatment/drc-20370468",
+				"https://health.clevelandclinic.org/suspect-a-broken-toe-how-to-tell-and-what-not-to-do"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Daliri ng paa na nasira",
+			"type": "Injury",
+			"meaning": "Ang nabaling daliri sa paa ay nangyayari kapag ang isa sa mga buto sa iyong daliri sa paa ay nabali, kadalasan dahil sa pinsala o trauma. Ang mga sintomas ay kinabibilangan ng sakit, pamamaga, pasa, at kahirapan sa paglakad. Sa malubhang mga kaso, ang daliri sa paa ay maaaring magmukhang deformed o wala sa lugar. Mahalaga ang paghingi ng medikal na tulong upang matiyak ang tamang paggaling at maiwasan ang mga komplikasyon.",
+			"patterns": [
+				"Paano gamutin ang nabaling daliri sa paa?",
+				"Ano ang gagawin sa nabaling daliri sa paa?",
+				"Pinakamabisang paraan para gumaling ang nabaling daliri sa paa?",
+				"Payo sa paggamot ng nabaling daliri sa paa?",
+				"Paano pamahalaan ang nabaling daliri sa paa?",
+				"Ano ang makakatulong sa nabaling daliri sa paa?",
+				"Paano mabilis na gumaling ang nabaling daliri sa paa?",
+				"Mga remedyo para sa nabaling daliri sa paa?",
+				"Paano pakalmahin ang nabaling daliri sa paa?",
+				"Mga tip para pamahalaan ang nabaling daliri sa paa?"
+			],
+			"procedures": [
+				"Magpahinga at iwasang maglagay ng bigat sa daliri sa paa. Maglagay ng yelo upang mabawasan ang pamamaga at itaas ang paa. Gumamit ng splint o i-tape ang daliri sa paa sa katabing daliri. Humingi ng medikal na tulong kung ang sakit ay malubha.",
+				"",
+				"Itaas ang paa, maglagay ng yelo, at i-tape ang daliri sa katabing daliri. Magpakonsulta sa healthcare provider kung kinakailangan."
+			],
+			"relations": ["Lagundi", "Sambong", "Tsaang Gubat (Forrest Tea)"],
+			"references": [
+				"https://www.mayoclinic.org/diseases-conditions/broken-toe/diagnosis-treatment/drc-20370468",
+				"https://health.clevelandclinic.org/suspect-a-broken-toe-how-to-tell-and-what-not-to-do"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Choking",
+			"type": "Injury",
+			"meaning": "Choking occurs when an object blocks the airway, preventing air from reaching the lungs. Symptoms include inability to speak, difficulty breathing, and coughing. Immediate action is required to clear the airway and restore normal breathing. The Heimlich maneuver is a common technique used to dislodge the object.",
+			"patterns": [
+				"What to do if someone is choking?",
+				"How to help someone who is choking?",
+				"Choking first aid steps?",
+				"Best way to stop choking?",
+				"How to save someone choking?",
+				"What to do if someone is choking?",
+				"How to treat choking?",
+				"Choking emergency steps?",
+				"Choking treatment advice?",
+				"How to help someone who is choking?"
+			],
+			"procedures": [
+				"If someone is choking, ask if they can speak or cough. If they cannot, perform the Heimlich maneuver by standing behind them, wrapping your arms around their waist, and giving quick, upward thrusts below their ribcage.",
+				"",
+				"Perform the Heimlich maneuver or back blows to dislodge the object. Call emergency services if the person cannot breathe.', 'fil': 'Isagawa ang Heimlich maneuver o back blows upang alisin ang bagay."
+			],
+			"relations": ["nan"],
+			"references": [
+				"https://www.redcross.org.uk/first-aid/learn-first-aid/choking-adult",
+				"https://www.mayoclinic.org/first-aid/first-aid-choking/basics/art-20056637"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Mabulunan",
+			"type": "Injury",
+			"meaning": "Ang pagsakal ay nangyayari kapag ang isang bagay ay humarang sa daanan ng hangin, na pumipigil sa pagpasok ng hangin sa mga baga. Ang mga sintomas ay kinabibilangan ng hindi makapagsalita, hirap sa paghinga, at pag-ubo. Kinakailangan ang agarang aksyon upang maalis ang bara at maibalik ang normal na paghinga. Ang Heimlich maneuver ay isang karaniwang teknik na ginagamit upang alisin ang bagay.",
+			"patterns": [
+				"Paano tulungan ang nasasakal?",
+				"Ano ang gagawin kung may nasasakal?",
+				"Mga hakbang sa first aid para sa nasasakal?",
+				"Pinakamabisang paraan para matigil ang pagsakal?",
+				"Paano iligtas ang nasasakal?",
+				"Ano ang gagawin kung may nasasakal?",
+				"Paano gamutin ang pagsakal?",
+				"Mga hakbang sa emergency para sa nasasakal?",
+				"Payo sa paggamot ng pagsakal?",
+				"Paano tulungan ang nasasakal?"
+			],
+			"procedures": [
+				"Kung ang isang tao ay nasasakal, tanungin kung sila ay makapagsalita o makakaugong. Kung hindi nila magawa, isagawa ang Heimlich maneuver sa pamamagitan ng pagtayo sa likuran nila, pagyakap sa kanilang baywang, at pagbibigay ng mabilis at pataas na puwersa sa ilalim ng kanilang ribcage. Tumawag agad ng emergency services.",
+				"",
+				"Isagawa ang Heimlich maneuver o back blows upang alisin ang bagay. Tumawag ng emergency services kung ang tao ay hindi makakahinga.",
+				"",
+				"Kung ang tao ay hindi makapagsalita, makakaugong, o makahinga, isagawa ang Heimlich maneuver: Tumayo sa likuran ng tao, ilagay ang iyong mga braso sa kanilang baywang, gumawa ng kamao gamit ang isang kamay, ilagay ito sa itaas ng kanilang pusod, at bigyan ng mabilis, pataas na puwersa. Kung ang tao ay mawalan ng malay, simulan ang CPR at tumawag ng emergency services.",
+				"",
+				"Isagawa ang Heimlich maneuver sa pamamagitan ng pagtayo sa likuran ng tao at pagbibigay ng mabilis, pataas na abdominal thrusts. Tumawag ng emergency services kung kinakailangan."
+			],
+			"relations": ["nan"],
+			"references": [
+				"https://www.redcross.org.uk/first-aid/learn-first-aid/choking-adult",
+				"https://www.mayoclinic.org/first-aid/first-aid-choking/basics/art-20056637"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Diarrhea",
+			"type": "Injury",
+			"meaning": "Diarrhea is characterized by frequent, loose, or watery bowel movements. It can be caused by infections, food intolerances, or digestive disorders. Symptoms include abdominal cramps, bloating, and urgency to have a bowel movement. Staying hydrated and avoiding certain foods can help manage symptoms.",
+			"patterns": [
+				"How to treat diarrhea?",
+				"What to do for diarrhea?",
+				"Best way to stop diarrhea?",
+				"Diarrhea treatment advice?",
+				"How to manage diarrhea?",
+				"What helps with diarrhea?",
+				"How can I stop diarrhea quickly?",
+				"Remedies for diarrhea?",
+				"How to soothe diarrhea?",
+				"Tips for relieving diarrhea?",
+				""
+			],
+			"procedures": [
+				"Stay hydrated by drinking plenty of fluids like water or an oral rehydration solution. Avoid solid foods until the symptoms improve. Over-the-counter anti-diarrheal medications can be used, but consult a healthcare provider if symptoms persist.",
+				"",
+				"Drink fluids, avoid solid food, and consider over-the-counter medications. Seek medical help if symptoms persist."
+			],
+			"relations": ["Tsaang Gubat (Forrest Tea)", "Buko Water", "Lagundi"],
+			"references": [
+				"https://www.healthline.com/health/digestive-health/most-effective-diarrhea-remedies",
+				"https://www.mayoclinic.org/diseases-conditions/diarrhea/diagnosis-treatment/drc-20352246"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Pagtatae",
+			"type": "Injury",
+			"meaning": "Ang pagtatae ay nailalarawan sa pamamagitan ng madalas, maluwag, o matubig na pagdumi. Maaari itong sanhi ng mga impeksyon, hindi pagtanggap ng pagkain, o mga sakit sa pagtunaw. Ang mga sintomas ay kinabibilangan ng pananakit ng tiyan, kabag, at kagyat na pagdumi. Ang pananatiling hydrated at pag-iwas sa ilang pagkain ay makakatulong sa pamamahala ng mga sintomas.",
+			"patterns": [
+				"Paano gamutin ang pagtatae?",
+				"Ano ang gagawin sa pagtatae?",
+				"Pinakamabisang paraan para matigil ang pagtatae?",
+				"Payo sa paggamot ng pagtatae?",
+				"Paano pamahalaan ang pagtatae?",
+				"Ano ang makakatulong sa pagtatae?",
+				"Paano mabilis na matigil ang pagtatae?",
+				"Mga remedyo para sa pagtatae?",
+				"Paano pakalmahin ang pagtatae?",
+				"Mga tip para maibsan ang pagtatae?"
+			],
+			"procedures": [
+				"Manatiling hydrated sa pamamagitan ng pag-inom ng maraming likido tulad ng tubig o oral rehydration solution. Iwasan ang solidong pagkain hanggang sa bumuti ang mga sintomas. Maaaring gumamit ng over-the-counter na anti-diarrheal medications, ngunit magpakonsulta sa healthcare provider kung ang mga sintomas ay nagpapatuloy.",
+				"",
+				"Uminom ng likido, iwasan ang solidong pagkain, at isaalang-alang ang paggamit ng over-the-counter na mga gamot. Humingi ng medikal na tulong kung ang mga sintomas ay nagpapatuloy."
+			],
+			"relations": ["Tsaang Gubat (Forrest Tea)", "Buko Water", "Lagundi"],
+			"references": [
+				"https://www.healthline.com/health/digestive-health/most-effective-diarrhea-remedies",
+				"https://www.mayoclinic.org/diseases-conditions/diarrhea/diagnosis-treatment/drc-20352246"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Heat Exhaustion",
+			"type": "Injury",
+			"meaning": "Heat exhaustion occurs when your body overheats due to prolonged exposure to high temperatures, often combined with dehydration. Symptoms include heavy sweating, weakness, dizziness, nausea, and headache. Immediate treatment is crucial to prevent progression to heat stroke, which is a medical emergency.",
+			"patterns": [
+				"How to treat heat exhaustion?",
+				"What to do for heat exhaustion?",
+				"Best way to recover from heat exhaustion?",
+				"Heat exhaustion treatment advice?",
+				"How to manage heat exhaustion?",
+				"What helps with heat exhaustion?",
+				"How can I recover from heat exhaustion quickly?",
+				"Remedies for heat exhaustion?",
+				"How to cool down from heat exhaustion?",
+				"Tips for managing heat exhaustion?"
+			],
+			"procedures": [
+				"Move to a cool, shaded area and drink plenty of water. Loosen or remove clothing and apply cool, wet cloths to the skin. Rest until fully recovered. If symptoms worsen, seek medical help.",
+				"",
+				"Cool down, hydrate, and rest in a shaded area. Seek medical attention if symptoms do not improve."
+			],
+			"relations": ["Buko Water", "Tanglad"],
+			"references": [
+				"https://www.mayoclinic.org/diseases-conditions/heat-exhaustion/diagnosis-treatment/drc-20373253",
+				"https://www.webmd.com/fitness-exercise/heat-exhaustion"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "\nPagkapagod sa Init",
+			"type": "Injury",
+			"meaning": "Ang heat exhaustion ay nangyayari kapag ang iyong katawan ay sobrang init dahil sa matagal na pagkakalantad sa mataas na temperatura, kadalasang sinasabayan ng dehydration. Ang mga sintomas ay kinabibilangan ng labis na pagpapawis, panghihina, pagkahilo, pagduduwal, at sakit ng ulo. Ang agarang paggamot ay mahalaga upang maiwasan ang paglala sa heat stroke, na isang medikal na emerhensiya.",
+			"patterns": [
+				"Paano gamutin ang heat exhaustion?",
+				"Ano ang gagawin sa heat exhaustion?",
+				"Pinakamabisang paraan para makarekober mula sa heat exhaustion?",
+				"Payo sa paggamot ng heat exhaustion?",
+				"Paano pamahalaan ang heat exhaustion?",
+				"Ano ang makakatulong sa heat exhaustion?",
+				"Paano mabilis na makarekober mula sa heat exhaustion?",
+				"Mga remedyo para sa heat exhaustion?",
+				"Paano palamigin ang katawan mula sa heat exhaustion?",
+				"Mga tip para pamahalaan ang heat exhaustion?"
+			],
+			"procedures": [
+				"Lumipat sa isang malamig at may anino na lugar at uminom ng maraming tubig. Alisin o luwagan ang damit at maglagay ng malamig, basang tela sa balat. Magpahinga hanggang sa ganap na mag-recover. Kung lumalala ang mga sintomas, humingi ng medikal na tulong.",
+				"",
+				"Palamigin ang katawan, manatiling hydrated, at magpahinga sa isang lugar na may anino. Humingi ng medikal na atensyon kung ang mga sintomas ay hindi bumubuti."
+			],
+			"relations": ["Buko Water", "Tanglad"],
+			"references": [
+				"https://www.mayoclinic.org/diseases-conditions/heat-exhaustion/diagnosis-treatment/drc-20373253",
+				"https://www.webmd.com/fitness-exercise/heat-exhaustion"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Heat Stroke",
+			"type": "Injury",
+			"meaning": "Heat stroke is a severe heat-related illness that occurs when the body overheats and cannot cool down. Symptoms include high body temperature, altered mental state, nausea, and rapid breathing. Immediate medical attention is crucial to prevent serious complications or death.",
+			"patterns": [
+				"What to do for heat stroke?",
+				"How to treat heat stroke?",
+				"Heat stroke treatment advice?",
+				"How to prevent heat stroke?",
+				"Best way to cool down from heat stroke?",
+				"Best way to recover from heat stroke?",
+				"How to manage heat stroke?",
+				"What helps with heat stroke?",
+				"How can I recover from heat stroke quickly?",
+				"Remedies for heat stroke?",
+				"How to cool down from heat stroke?",
+				"Tips for managing heat stroke?",
+				""
+			],
+			"procedures": [
+				"Move to a cooler place and lie down with your legs slightly elevated. Apply cool water to your skin and use a fan to help with cooling. Drink cool water or an electrolyte drink, but avoid sugary or alcoholic beverages. Seek emergency medical attention immediately.",
+				"",
+				"Get to a cool place, remove excess clothing, and apply cold packs or wet cloths. Drink cool water or sports drinks, and seek immediate medical help.",
+				"",
+				"Call emergency services immediately. Move the person to a cool area and remove excess clothing. Use cool water or ice packs to lower their body temperature. Keep monitoring their condition until help arrives.",
+				"",
+				"Seek emergency medical help. Cool the person down with water or ice packs and stay with them until help arrives."
+			],
+			"relations": ["Buko Water", "Tanglad"],
+			"references": [
+				"https://www.mayoclinic.org/diseases-conditions/heat-stroke/diagnosis-treatment/drc-20353586",
+				"https://www.cdc.gov/disasters/extremeheat/heat_guide.html"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Heat Stroke",
+			"type": "Injury",
+			"meaning": "Ang heat stroke ay isang malubhang sakit na dulot ng sobrang init na nangyayari kapag ang katawan ay sobrang init at hindi na kayang magpalamig. Ang mga sintomas ay kinabibilangan ng mataas na temperatura ng katawan, pagbabago sa mental na estado, pagduduwal, at mabilis na paghinga. Ang agarang medikal na atensyon ay mahalaga upang maiwasan ang malubhang komplikasyon o kamatayan.",
+			"patterns": [
+				"Paano gamutin ang heat stroke?",
+				"Ano ang gagawin sa heat stroke?",
+				"Payo sa paggamot ng heat stroke?",
+				"Paano maiwasan ang heat stroke?",
+				"Pinakamabisang paraan para makarekober mula sa heat stroke?",
+				"Paano pamahalaan ang heat stroke?",
+				"Ano ang makakatulong sa heat stroke?",
+				"Paano mabilis na makarekober mula sa heat stroke?"
+			],
+			"procedures": [
+				"Lumipat sa isang mas malamig na lugar at humiga na may bahagyang itaas ang mga binti. Maglagay ng malamig na tubig sa iyong balat at gumamit ng pamaypay upang makatulong sa pagpapalamig. Uminom ng malamig na tubig o electrolyte drink, ngunit iwasan ang matatamis o alcoholic na inumin. Humingi ng agarang medikal na tulong.",
+				"",
+				"Pumunta sa isang malamig na lugar, alisin ang sobrang damit, at maglagay ng cold packs o basang tela. Uminom ng malamig na tubig o sports drinks, at humingi ng agarang medikal na tulong.",
+				"",
+				"Tumawag agad ng emergency services. Ilipat ang tao sa isang malamig na lugar at alisin ang sobrang damit. Gumamit ng malamig na tubig o ice packs upang ibaba ang kanilang temperatura ng katawan. Patuloy na bantayan ang kanilang kondisyon hanggang dumating ang tulong.",
+				"",
+				"Humingi ng agarang medikal na tulong. Palamigin ang tao gamit ang tubig o ice packs at manatili sa kanilang tabi hanggang dumating ang tulong.",
+				""
+			],
+			"relations": ["Buko Water", "Tanglad"],
+			"references": [
+				"https://www.mayoclinic.org/diseases-conditions/heat-stroke/diagnosis-treatment/drc-20353586",
+				"https://www.cdc.gov/disasters/extremeheat/heat_guide.html"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Nose Bleed",
+			"type": "Injury",
+			"meaning": "A nosebleed occurs when the blood vessels in the nose break, causing blood to flow from one or both nostrils. It can be caused by dry air, injury, allergies, or other factors. Symptoms include bleeding from the nose, which can range from light to heavy. Proper first aid can help stop the bleeding and prevent complications.",
+			"patterns": [
+				"How to stop a nosebleed?",
+				"What to do for a nosebleed?",
+				"Best way to stop nose bleeding?",
+				"Nosebleed treatment advice?",
+				"How to manage a nosebleed?",
+				"How to stop a nosebleed?",
+				"How to treat a nosebleed?",
+				"Best way to stop nosebleeds?"
+			],
+			"procedures": [
+				"Sit up straight and lean slightly forward. Pinch the soft part of your nose and hold for 10-15 minutes. Apply a cold compress to the bridge of the nose. If the bleeding continues for more than 20 minutes, seek medical attention.",
+				"",
+				"Lean forward, pinch your nose, and hold until the bleeding stops. Use a cold compress and seek medical help if the bleeding doesn't stop.",
+				"",
+				"Sit up straight and lean forward slightly. Pinch the soft part of your nose with your thumb and index finger for 10-15 minutes. Breathe through your mouth and avoid lying down. Apply a cold compress to the bridge of your nose. Seek medical help if the bleeding doesn't stop after 20 minutes.",
+				"",
+				"Tilt your head forward and pinch your nose just below the bridge. Hold for 10-15 minutes and avoid blowing your nose afterward."
+			],
+			"relations": ["Dahon ng Bayabas", "Lagundi", "Sambong", "Tsaang Gubat"],
+			"references": [
+				"https://www.mayoclinic.org/first-aid/first-aid-nosebleeds/basics/art-20056683",
+				"https://www.webmd.com/first-aid/nosebleeds-treatment"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Dumudugo sa Ilong",
+			"type": "Injury",
+			"meaning": "Ang pagdurugo ng ilong ay nangyayari kapag ang mga daluyan ng dugo sa ilong ay nabasag, na nagiging sanhi ng pagdaloy ng dugo mula sa isa o parehong butas ng ilong. Maaari itong sanhi ng tuyong hangin, pinsala, alerhiya, o iba pang mga salik. Ang mga sintomas ay kinabibilangan ng pagdurugo mula sa ilong, na maaaring magaan o mabigat. Ang tamang first aid ay makakatulong upang itigil ang pagdurugo at maiwasan ang mga komplikasyon.",
+			"patterns": [
+				"Paano itigil ang pagdurugo ng ilong?",
+				"Ano ang gagawin sa pagdurugo ng ilong?",
+				"Pinakamabisang paraan para itigil ang pagdurugo ng ilong?",
+				"Payo sa paggamot ng pagdurugo ng ilong?",
+				"Paano pamahalaan ang pagdurugo ng ilong?",
+				"Paano itigil ang pagdurugo ng ilong?",
+				"Paano gamutin ang pagdurugo ng ilong?",
+				"Pinakamabisang paraan para itigil ang pagdurugo ng ilong?",
+				"Ano ang makakatulong sa pagdurugo ng ilong?",
+				"Paano mabilis na itigil ang pagdurugo ng ilong?",
+				"Mga remedyo para sa pagdurugo ng ilong?",
+				"Paano pakalmahin ang pagdurugo ng ilong?"
+			],
+			"procedures": [
+				"Umupo ng tuwid at magyuko ng bahagya pasulong. Pisilin ang malambot na bahagi ng iyong ilong at hawakan ito ng 10-15 minuto. Maglagay ng malamig na compress sa tulay ng ilong. Kung ang pagdurugo ay magpapatuloy ng higit sa 20 minuto, humingi ng medikal na tulong.",
+				"",
+				"Yuko pasulong, pisilin ang iyong ilong, at hawakan hanggang sa tumigil ang pagdurugo. Gumamit ng malamig na compress at humingi ng medikal na tulong kung ang pagdurugo ay hindi tumitigil.",
+				"",
+				"Umupo ng tuwid at magyuko ng bahagya pasulong. Pisilin ang malambot na bahagi ng iyong ilong gamit ang iyong hinlalaki at hintuturo ng 10-15 minuto. Huminga sa pamamagitan ng iyong bibig at iwasang humiga. Maglagay ng malamig na compress sa tulay ng iyong ilong. Humingi ng medikal na tulong kung ang pagdurugo ay hindi tumitigil pagkatapos ng 20 minuto.",
+				"",
+				"Itilt ang iyong ulo pasulong at pisilin ang iyong ilong sa ilalim ng tulay. Hawakan ito ng 10-15 minuto at iwasang sabunin ang iyong ilong pagkatapos."
+			],
+			"relations": ["Dahon ng Bayabas", "Lagundi", "Sambong", "Tsaang Gubat"],
+			"references": [
+				"https://www.mayoclinic.org/first-aid/first-aid-nosebleeds/basics/art-20056683",
+				"https://www.webmd.com/first-aid/nosebleeds-treatment"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Rectal Bleeding",
+			"type": "Injury",
+			"meaning": "Rectal bleeding refers to any blood that passes from your anus. It can be caused by various conditions such as hemorrhoids, anal fissures, or more serious issues like colorectal cancer. Symptoms may include bright red blood on toilet paper, in the toilet bowl, or mixed with stool. It's important to seek medical evaluation to determine the cause and appropriate treatment.",
+			"patterns": [
+				"What to do if I have rectal bleeding?",
+				"How to treat rectal bleeding?",
+				"Rectal bleeding treatment advice?",
+				"What to do for rectal bleeding?",
+				"How to manage rectal bleeding?",
+				"What helps with rectal bleeding?",
+				"How can I stop rectal bleeding quickly?",
+				"Remedies for rectal bleeding?",
+				"How to soothe rectal bleeding?",
+				"Tips for managing rectal bleeding?"
+			],
+			"procedures": [
+				"Stay calm and avoid straining during bowel movements. Increase fiber intake and drink plenty of water to ease bowel movements. Seek medical attention to determine the cause and receive appropriate treatment.",
+				"",
+				"Increase fiber and water intake. Avoid straining and consult a healthcare provider to determine the cause."
+			],
+			"relations": ["nan"],
+			"references": [
+				"https://www.mayoclinic.org/symptoms/rectal-bleeding/basics/definition/sym-20050740",
+				"https://www.webmd.com/digestive-disorders/understanding-rectal-bleeding-basics",
+				""
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Pagdurugo ng Tumbong",
+			"type": "Injury",
+			"meaning": " Ang pagdurugo sa puwit ay tumutukoy sa anumang dugo na lumalabas mula sa iyong puwit. Maaari itong sanhi ng iba't ibang kondisyon tulad ng almoranas, anal fissures, o mas seryosong mga isyu tulad ng colorectal cancer. Ang mga sintomas ay maaaring kabilang ang maliwanag na pulang dugo sa toilet paper, sa toilet bowl, o halo sa dumi. Mahalaga ang paghingi ng medikal na pagsusuri upang matukoy ang sanhi at angkop na paggamot.",
+			"patterns": [
+				"Ano ang gagawin kung may pagdurugo sa puwit?",
+				"Paano gamutin ang pagdurugo sa puwit?",
+				"Payo sa paggamot ng pagdurugo sa puwit?",
+				"Ano ang gagawin sa pagdurugo sa puwit?",
+				"Paano pamahalaan ang pagdurugo sa puwit?",
+				"Ano ang makakatulong sa pagdurugo sa puwit?",
+				"Paano mabilis na matigil ang pagdurugo sa puwit?",
+				"Mga remedyo para sa pagdurugo sa puwit?",
+				"Paano pakalmahin ang pagdurugo sa puwit?",
+				"Mga tip para pamahalaan ang pagdurugo sa puwit?"
+			],
+			"procedures": [
+				"Manatiling kalmado at iwasang mag-igting sa panahon ng pagdumi. Dagdagan ang iyong fiber intake at uminom ng maraming tubig upang mapadali ang pagdumi. Humingi ng medikal na tulong upang matukoy ang sanhi at makatanggap ng angkop na paggamot.",
+				"",
+				"Dagdagan ang fiber at water intake. Iwasan ang pag-igting at kumonsulta sa healthcare provider upang matukoy ang sanhi."
+			],
+			"relations": ["nan"],
+			"references": [
+				"https://www.mayoclinic.org/symptoms/rectal-bleeding/basics/definition/sym-20050740",
+				"https://www.webmd.com/digestive-disorders/understanding-rectal-bleeding-basics",
+				""
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Testicle Pain",
+			"type": "Injury",
+			"meaning": "Testicle pain refers to discomfort or pain in one or both testicles. It can be caused by various factors such as injury, infection, or medical conditions like testicular torsion. Symptoms may include swelling, redness, and tenderness. Persistent or severe testicle pain should be evaluated by a healthcare provider.\n                                ",
+			"patterns": [
+				"What to do if I have testicle pain?",
+				"How to treat testicle pain?",
+				"Best way to relieve testicle pain?",
+				"Testicle pain treatment advice?",
+				"How to manage testicle pain?",
+				"What helps with testicle pain?",
+				"How can I stop testicle pain quickly?",
+				"Remedies for testicle pain?",
+				"How to soothe testicle pain?",
+				"Tips for relieving testicle pain?"
+			],
+			"procedures": [
+				"Rest and avoid strenuous activity. Apply ice to the affected area and wear supportive underwear. If the pain persists or is severe, seek medical attention.",
+				"",
+				"Rest, use ice, and wear supportive clothing. Seek medical advice if the pain is severe or does not improve."
+			],
+			"relations": ["nan"],
+			"references": [
+				"https://www.mayoclinic.org/symptoms/testicle-pain/basics/definition/sym-20050942",
+				"https://www.healthline.com/health/testicle-pain",
+				""
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Pananakit ng Testicle",
+			"type": "Injury",
+			"meaning": "Ang sakit sa bayag ay tumutukoy sa kakulangan sa ginhawa o sakit sa isa o parehong bayag. Maaari itong sanhi ng iba't ibang salik tulad ng pinsala, impeksyon, o mga kondisyong medikal tulad ng testicular torsion. Ang mga sintomas ay maaaring kabilang ang pamamaga, pamumula, at pagiging malambot. Ang tuloy-tuloy o matinding sakit sa bayag ay dapat suriin ng isang tagapagbigay ng pangangalagang pangkalusugan.",
+			"patterns": [
+				"Ano ang gagawin kung may sakit sa bayag?",
+				"Paano gamutin ang sakit sa bayag?",
+				"Pinakamabisang paraan para maibsan ang sakit sa bayag?",
+				"Payo sa paggamot ng sakit sa bayag?",
+				"Paano pamahalaan ang sakit sa bayag?",
+				"Ano ang makakatulong sa sakit sa bayag?",
+				"Paano mabilis na matigil ang sakit sa bayag?",
+				"Mga remedyo para sa sakit sa bayag?",
+				"Paano pakalmahin ang sakit sa bayag?",
+				"Mga tip para maibsan ang sakit sa bayag?"
+			],
+			"procedures": [
+				"Magpahinga at iwasan ang mabibigat na aktibidad. Maglagay ng yelo sa apektadong lugar at magsuot ng supportive na underwear. Kung ang sakit ay nagpapatuloy o malubha, humingi ng medikal na tulong.",
+				"",
+				"Magpahinga, gumamit ng yelo, at magsuot ng supportive na damit. Humingi ng medikal na payo kung ang sakit ay malubha o hindi bumubuti."
+			],
+			"relations": ["nan"],
+			"references": [
+				"https://www.mayoclinic.org/symptoms/testicle-pain/basics/definition/sym-20050942",
+				"https://www.healthline.com/health/testicle-pain",
+				""
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Vertigo",
+			"type": "Injury",
+			"meaning": "Vertigo is a sensation of feeling off balance, often described as feeling like you or your surroundings are spinning. It can be caused by inner ear problems, infections, or other medical conditions. Symptoms include dizziness, nausea, and difficulty maintaining balance. Managing vertigo involves addressing the underlying cause and using techniques to reduce symptoms.\n\t\t\t\t",
+			"patterns": [
+				"What to do if I have vertigo?",
+				"How to treat vertigo?",
+				"Best way to manage vertigo?",
+				"Vertigo treatment advice?",
+				"How to relieve vertigo symptoms?",
+				"What helps with vertigo?",
+				"How can I stop vertigo quickly?",
+				"Remedies for vertigo?",
+				"How to soothe vertigo?",
+				"Tips for managing vertigo?"
+			],
+			"procedures": [
+				"Sit or lie down immediately when feeling dizzy. Avoid sudden head movements and rest in a dark, quiet room. Stay hydrated and seek medical advice if symptoms persist.",
+				"",
+				"Rest and avoid sudden movements. Stay hydrated and consult a healthcare provider if the symptoms continue."
+			],
+			"relations": [
+				"Luya (Ginger)",
+				"Ginko Biloba Leaves",
+				"Lagundi",
+				"Tsaang Gubat"
+			],
+			"references": [
+				"https://www.webmd.com/brain/remedies-vertigo",
+				"https://www.webmd.com/brain/vertigo-symptoms-causes-treatment"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Vertigo",
+			"type": "Injury",
+			"meaning": "Ang vertigo ay isang pakiramdam ng kawalan ng balanse, madalas na inilarawan bilang pakiramdam na ikaw o ang iyong paligid ay umiikot. Maaari itong sanhi ng mga problema sa loob ng tainga, impeksyon, o iba pang mga kondisyong medikal. Ang mga sintomas ay kinabibilangan ng pagkahilo, pagduduwal, at kahirapan sa pagpapanatili ng balanse. Ang pamamahala ng vertigo ay kinabibilangan ng pagtugon sa pinagbabatayang sanhi at paggamit ng mga teknik upang mabawasan ang mga sintomas.",
+			"patterns": [
+				"Ano ang gagawin kung may vertigo?",
+				"Paano gamutin ang vertigo?",
+				"Pinakamabisang paraan para pamahalaan ang vertigo?",
+				"Payo sa paggamot ng vertigo?",
+				"Paano maibsan ang mga sintomas ng vertigo?",
+				"Ano ang makakatulong sa vertigo?",
+				"Paano mabilis na matigil ang vertigo?",
+				"Mga remedyo para sa vertigo?",
+				"Paano pakalmahin ang vertigo?",
+				"Mga tip para pamahalaan ang vertigo?"
+			],
+			"procedures": [
+				"Umupo o humiga agad kapag nakakaramdam ng pagkahilo. Iwasan ang biglaang paggalaw ng ulo at magpahinga sa isang madilim at tahimik na kwarto. Manatiling hydrated at humingi ng medikal na payo kung ang mga sintomas ay nagpapatuloy.",
+				"",
+				"Magpahinga at iwasan ang biglaang paggalaw. Manatiling hydrated at kumonsulta sa healthcare provider kung ang mga sintomas ay nagpapatuloy."
+			],
+			"relations": [
+				"Luya (Ginger)",
+				"Ginko Biloba Leaves",
+				"Lagundi",
+				"Tsaang Gubat"
+			],
+			"references": [
+				"https://www.webmd.com/brain/remedies-vertigo",
+				"https://www.webmd.com/brain/vertigo-symptoms-causes-treatment"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Eye Injury",
+			"type": "Injury",
+			"meaning": "An eye injury can occur due to various reasons such as trauma, foreign objects, or chemical exposure. Symptoms may include pain, redness, swelling, and vision changes. Immediate and appropriate first aid can help prevent further damage and complications.\",\n\t\t\t\t",
+			"patterns": [
+				"What to do if I have an eye injury?",
+				"How to treat an eye injury?",
+				"Eye injury first aid advice?",
+				"Best way to manage an eye injury?",
+				"How to care for an eye injury?",
+				"What helps with an eye injury?",
+				"How can I treat an eye injury quickly?",
+				"Remedies for an eye injury?",
+				"How to soothe an eye injury?",
+				"Tips for managing an eye injury?"
+			],
+			"procedures": [
+				"Avoid rubbing the eye and rinse it with clean water. If there is a foreign object in the eye, do not attempt to remove it yourself. Cover the eye with a clean cloth or eye patch and seek medical attention immediately.",
+				"",
+				"Rinse the eye with clean water and avoid rubbing it. Seek emergency medical help, especially if there is a foreign object in the eye."
+			],
+			"relations": ["nan"],
+			"references": [
+				"https://www.mayoclinic.org/first-aid/first-aid-eye-injury/basics/art-20056646",
+				"https://www.webmd.com/first-aid/eye-injuries-treatment"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Pinsala sa Mata",
+			"type": "Injury",
+			"meaning": "Ang pinsala sa mata ay maaaring mangyari dahil sa iba't ibang dahilan tulad ng trauma, banyagang bagay, o pagkakalantad sa kemikal. Ang mga sintomas ay maaaring kabilang ang sakit, pamumula, pamamaga, at pagbabago sa paningin. Ang agarang at angkop na first aid ay makakatulong upang maiwasan ang karagdagang pinsala at komplikasyon.",
+			"patterns": [
+				"Ano ang gagawin kung may pinsala sa mata?",
+				"Paano gamutin ang pinsala sa mata?",
+				"Payo sa first aid para sa pinsala sa mata?",
+				"Pinakamabisang paraan para pamahalaan ang pinsala sa mata?",
+				"Paano alagaan ang pinsala sa mata?",
+				"Ano ang makakatulong sa pinsala sa mata?",
+				"Paano mabilis na gamutin ang pinsala sa mata?",
+				"Mga remedyo para sa pinsala sa mata?",
+				"Paano pakalmahin ang pinsala sa mata?",
+				"Mga tip para pamahalaan ang pinsala sa mata?"
+			],
+			"procedures": [
+				"Iwasan ang pagdila sa mata at banlawan ito ng malinis na tubig. Kung may banyagang bagay sa mata, huwag subukang alisin ito nang mag-isa. Takpan ang mata ng malinis na tela o eye patch at humingi ng agarang medikal na tulong.",
+				"",
+				"Banlawan ang mata ng malinis na tubig at iwasan ang pagdila dito. Humingi ng agarang medikal na tulong, lalo na kung may banyagang bagay sa mata."
+			],
+			"relations": ["nan"],
+			"references": [
+				"https://www.mayoclinic.org/first-aid/first-aid-eye-injury/basics/art-20056646",
+				"https://www.webmd.com/first-aid/eye-injuries-treatment"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Food Poisoning",
+			"type": "Injury",
+			"meaning": "Food poisoning is an illness caused by consuming contaminated food or drink. Symptoms include nausea, vomiting, diarrhea, and abdominal pain. It is important to stay hydrated and rest while recovering.\n\t\t\t\n\t\t\t",
+			"patterns": [
+				"How to treat food poisoning?",
+				"What to do for food poisoning?",
+				"Best way to recover from food poisoning?",
+				"Food poisoning treatment advice?",
+				"How to manage food poisoning?",
+				"What helps with food poisoning?",
+				"How can I stop food poisoning quickly?",
+				"Remedies for food poisoning?",
+				"How to soothe food poisoning?",
+				"Tips for managing food poisoning?"
+			],
+			"procedures": [
+				"Stay hydrated by drinking clear fluids like water or oral rehydration solutions. Rest and avoid solid foods until symptoms subside. If symptoms are severe or persistent, seek medical attention.",
+				"",
+				"Drink clear fluids, rest, and avoid solid food until symptoms improve. Consult a healthcare provider if symptoms persist."
+			],
+			"relations": [
+				"Luya (Ginger)",
+				"Guava Leaves",
+				"Sambong",
+				"Buko (Coconut) Water"
+			],
+			"references": [
+				"https://www.webmd.com/digestive-disorders/remedies-for-food-poisoning",
+				"https://www.mayoclinic.org/diseases-conditions/food-poisoning/diagnosis-treatment/drc-20356236"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "\nPagkalason sa Pagkain",
+			"type": "Injury",
+			"meaning": "Ang food poisoning ay isang sakit na dulot ng pagkain o pag-inom ng kontaminadong pagkain o inumin. Ang mga sintomas ay kinabibilangan ng pagduduwal, pagsusuka, pagtatae, at pananakit ng tiyan. Mahalaga ang pananatiling hydrated at magpahinga habang nagpapagaling.",
+			"patterns": [
+				"Paano gamutin ang food poisoning?",
+				"Ano ang gagawin sa food poisoning?",
+				"Pinakamabisang paraan para makarekober mula sa food poisoning?",
+				"Payo sa paggamot ng food poisoning?",
+				"Paano pamahalaan ang food poisoning?",
+				"Ano ang makakatulong sa food poisoning?",
+				"Paano mabilis na matigil ang food poisoning?",
+				"Mga remedyo para sa food poisoning?",
+				"Paano pakalmahin ang food poisoning?",
+				"Mga tip para pamahalaan ang food poisoning?"
+			],
+			"procedures": [
+				"Manatiling hydrated sa pamamagitan ng pag-inom ng malinaw na likido tulad ng tubig o oral rehydration solutions. Magpahinga at iwasan ang solidong pagkain hanggang sa humupa ang mga sintomas. Kung ang mga sintomas ay malubha o nagpapatuloy, humingi ng medikal na tulong.",
+				"",
+				"Uminom ng malinaw na likido, magpahinga, at iwasan ang solidong pagkain hanggang sa bumuti ang mga sintomas. Kumonsulta sa healthcare provider kung ang mga sintomas ay nagpapatuloy."
+			],
+			"relations": [
+				"Luya (Ginger)",
+				"Guava Leaves",
+				"Sambong",
+				"Buko (Coconut) Water"
+			],
+			"references": [
+				"https://www.webmd.com/digestive-disorders/remedies-for-food-poisoning",
+				"https://www.mayoclinic.org/diseases-conditions/food-poisoning/diagnosis-treatment/drc-20356236"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Convulsions",
+			"type": "Injury",
+			"meaning": "Convulsions, also known as seizures, are sudden, uncontrolled electrical disturbances in the brain. They can cause changes in behavior, movements, feelings, and levels of consciousness. Immediate first aid is crucial to protect the person from injury and ensure they receive appropriate medical care.\n\t\t\t\t",
+			"patterns": [
+				"What to do during convulsions?",
+				"How to help someone having a seizure?",
+				"Convulsion first aid steps?",
+				"Best way to manage convulsions?",
+				"What should I do for convulsions?",
+				"What helps with convulsions?",
+				"How can I stop convulsions quickly?",
+				"Remedies for convulsions?",
+				"How to soothe convulsions?",
+				"Tips for managing convulsions?"
+			],
+			"procedures": [
+				"Protect the person from injury by removing nearby objects. Do not restrain them or put anything in their mouth. After the convulsions stop, place them in the recovery position and monitor their breathing. Seek emergency medical help.",
+				"",
+				"Stay with the person and protect them from harm. Do not restrain them or place anything in their mouth. Call emergency services."
+			],
+			"relations": ["nan"],
+			"references": [
+				"https://www.mayoclinic.org/first-aid/first-aid-seizures/basics/art-20056678",
+				"https://www.webmd.com/epilepsy/guide/first-aid-seizures"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Kombulsyon",
+			"type": "Injury",
+			"meaning": "Ang convulsions, na kilala rin bilang seizures, ay biglaang, hindi makontrol na mga kaguluhan sa kuryente sa utak. Maaari itong magdulot ng mga pagbabago sa pag-uugali, galaw, pakiramdam, at antas ng kamalayan. Ang agarang first aid ay mahalaga upang protektahan ang tao mula sa pinsala at matiyak na makakatanggap sila ng angkop na medikal na pangangalaga.",
+			"patterns": [
+				"Ano ang gagawin sa panahon ng convulsions?",
+				"Paano tulungan ang taong may seizure?",
+				"Mga hakbang sa first aid para sa convulsions?",
+				"Pinakamabisang paraan para pamahalaan ang convulsions?",
+				"Ano ang dapat gawin para sa convulsions?",
+				"Ano ang makakatulong sa convulsions?",
+				"Paano mabilis na matigil ang convulsions?",
+				"Mga remedyo para sa convulsions?",
+				"Paano pakalmahin ang convulsions?",
+				"Mga tip para pamahalaan ang convulsions?"
+			],
+			"procedures": [
+				"Protektahan ang tao mula sa pinsala sa pamamagitan ng pagtanggal ng mga nakapaligid na bagay. Huwag silang pigilan o maglagay ng anumang bagay sa kanilang bibig. Pagkatapos huminto ang mga convulsions, ilagay sila sa recovery position at bantayan ang kanilang paghinga. Humingi ng agarang medikal na tulong.",
+				"",
+				"Manatili sa tabi ng tao at protektahan sila mula sa pinsala. Huwag silang pigilan o maglagay ng anumang bagay sa kanilang bibig. Tumawag ng emergency services."
+			],
+			"relations": ["nan"],
+			"references": [
+				"https://www.mayoclinic.org/first-aid/first-aid-seizures/basics/art-20056678",
+				"https://www.webmd.com/epilepsy/guide/first-aid-seizures"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Head Injury",
+			"type": "Injury",
+			"meaning": "A head injury can result from various causes such as falls, accidents, or sports injuries. Symptoms may include headache, dizziness, confusion, and nausea. Immediate and appropriate first aid can help prevent further complications.\n\t\t\t\n\t\t\t",
+			"patterns": [
+				"What to do for a head injury?",
+				"How to treat a head injury?",
+				"Head injury first aid advice?",
+				"Best way to manage a head injury?",
+				"How to care for a head injury?",
+				"What helps with a head injury?",
+				"How can I treat a head injury quickly?",
+				"Remedies for a head injury?",
+				"How to soothe a head injury?",
+				"Tips for managing a head injury?"
+			],
+			"procedures": [
+				"If the injury is minor, apply a cold compress to reduce swelling and rest. For more serious injuries, seek emergency medical help immediately. Keep the person awake and monitor their symptoms closely.",
+				"",
+				"Use a cold compress for minor injuries. For serious head injuries, seek immediate medical help and monitor the person's condition."
+			],
+			"relations": [
+				"Sambong",
+				"Lagundi",
+				"Tsaang Gubat",
+				"Ginkgo Biloba Leaves"
+			],
+			"references": [
+				"https://www.mayoclinic.org/first-aid/first-aid-head-trauma/basics/art-20056626",
+				"https://www.mountsinai.org/health-library/injury/head-injury-first-aid"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Pinsala sa Ulo",
+			"type": "Injury",
+			"meaning": "Ang pinsala sa ulo ay maaaring sanhi ng iba't ibang dahilan tulad ng pagkahulog, aksidente, o pinsala sa sports. Ang mga sintomas ay maaaring kabilang ang sakit ng ulo, pagkahilo, pagkalito, at pagduduwal. Ang agarang at angkop na first aid ay makakatulong upang maiwasan ang karagdagang komplikasyon.",
+			"patterns": [
+				"Ano ang gagawin kung may pinsala sa ulo?",
+				"Paano gamutin ang pinsala sa ulo?",
+				"Payo sa first aid para sa pinsala sa ulo?",
+				"Pinakamabisang paraan para pamahalaan ang pinsala sa ulo?",
+				"Paano alagaan ang pinsala sa ulo?",
+				"Ano ang makakatulong sa pinsala sa ulo?",
+				"Paano mabilis na gamutin ang pinsala sa ulo?",
+				"Mga remedyo para sa pinsala sa ulo?",
+				"Paano pakalmahin ang pinsala sa ulo?",
+				"Mga tip para pamahalaan ang pinsala sa ulo?"
+			],
+			"procedures": [
+				"Kung ang pinsala ay maliit, maglagay ng malamig na compress upang mabawasan ang pamamaga at magpahinga. Para sa mas seryosong pinsala, humingi ng agarang medikal na tulong. Panatilihing gising ang tao at bantayan ang kanilang mga sintomas.",
+				"",
+				"Gumamit ng malamig na compress para sa maliit na pinsala. Para sa seryosong pinsala sa ulo, humingi ng agarang medikal na tulong at bantayan ang kondisyon ng tao."
+			],
+			"relations": [
+				"Sambong",
+				"Lagundi",
+				"Tsaang Gubat",
+				"Ginkgo Biloba Leaves"
+			],
+			"references": [
+				"https://www.mayoclinic.org/first-aid/first-aid-head-trauma/basics/art-20056626",
+				"https://www.mountsinai.org/health-library/injury/head-injury-first-aid"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Fainting",
+			"type": "Injury",
+			"meaning": "Fainting, also known as syncope, can occur due to various reasons such as dehydration, low blood pressure, or sudden changes in posture. Symptoms may include dizziness, lightheadedness, and temporary loss of consciousness. Immediate first aid can help prevent further complications. ",
+			"patterns": [
+				"What to do if someone faints?",
+				"How to help someone who fainted?",
+				"Fainting first aid steps?",
+				"Best way to manage fainting?",
+				"What should I do for fainting?"
+			],
+			"procedures": [
+				"Help the person lie down and elevate their legs to improve blood flow to the brain. Loosen any tight clothing and keep them lying down until they recover. If they don't regain consciousness quickly, seek medical help immediately.",
+				"",
+				"Have the person lie down, elevate their legs, and loosen tight clothing. Seek medical attention if they don't regain consciousness.",
+				"",
+				""
+			],
+			"relations": ["Atis"],
+			"references": [
+				"https://www.mayoclinic.org/first-aid/first-aid-fainting/basics/art-20056606",
+				"https://www.mountsinai.org/health-library/condition/fainting"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Nanghihina",
+			"type": "Injury",
+			"meaning": "Ang paghimatay, na kilala rin bilang syncope, ay maaaring mangyari dahil sa iba't ibang dahilan tulad ng dehydration, mababang presyon ng dugo, o biglaang pagbabago ng postura. Ang mga sintomas ay maaaring kabilang ang pagkahilo, pagkakaroon ng magaan na ulo, at pansamantalang pagkawala ng malay. Ang agarang first aid ay makakatulong upang maiwasan ang karagdagang komplikasyon.",
+			"patterns": [
+				"Ano ang gagawin kung may hinimatay?",
+				"Paano tulungan ang hinimatay?",
+				"Mga hakbang sa first aid para sa hinimatay?",
+				"Pinakamabisang paraan para pamahalaan ang hinimatay?",
+				"Ano ang dapat gawin para sa hinimatay?",
+				"How to revive someone who fainted?",
+				"What helps with fainting?",
+				"How to treat fainting?",
+				"First aid for fainting?",
+				"How to care for someone who fainted?",
+				"Ano ang makakatulong sa hinimatay?",
+				"Paano gamutin ang hinimatay?",
+				"First aid para sa hinimatay?",
+				"Paano alagaan ang hinimatay?",
+				"Tips for managing fainting?"
+			],
+			"procedures": [
+				"Tulungan ang tao na humiga at itaas ang kanilang mga binti upang mapabuti ang daloy ng dugo sa utak. Luwagan ang anumang masisikip na damit at panatilihing nakahiga sila hanggang sa sila ay makabawi. Kung hindi sila agad bumalik sa malay, humingi ng agarang medikal na tulong.",
+				"",
+				"Pahigain ang tao, itaas ang kanilang mga binti, at luwagan ang masisikip na damit. Humingi ng medikal na tulong kung hindi sila bumalik sa malay."
+			],
+			"relations": ["Atis"],
+			"references": [
+				"https://www.mayoclinic.org/first-aid/first-aid-fainting/basics/art-20056606",
+				"https://www.mountsinai.org/health-library/condition/fainting"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Headache",
+			"type": "Injury",
+			"meaning": "Headaches can be caused by various factors such as stress, dehydration, or tension. Symptoms may include a dull or sharp pain in the head, sensitivity to light or sound, and nausea. Proper management and treatment can help alleviate the discomfort.\n\t\t\t",
+			"patterns": [
+				"How to treat a headache?",
+				"What to do for a headache?",
+				"Best way to relieve a headache?",
+				"Headache treatment advice?",
+				"How to manage headache?",
+				"How to get rid of a headache?",
+				"What helps with a headache?",
+				"How to soothe a headache?",
+				"First aid for headache?",
+				"How to care for a headache?",
+				""
+			],
+			"procedures": [
+				"Rest in a quiet, dark room and apply a cold or warm compress to your forehead. Over-the-counter pain relievers like ibuprofen or acetaminophen can help. Stay hydrated and avoid triggers like bright lights or loud noises.\",",
+				"",
+				"Rest, use pain relief medication, and apply a compress. Stay hydrated and avoid known triggers.",
+				"",
+				""
+			],
+			"relations": ["Lagundi", "Yerba Buena", "Ginger (Luya)"],
+			"references": [
+				"https://www.mayoclinic.org/diseases-conditions/headache/symptoms-causes/syc-20361797",
+				"https://www.mountsinai.org/health-library/symptom/headache"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Sakit ng ulo",
+			"type": "Injury",
+			"meaning": "Ang sakit ng ulo ay maaaring sanhi ng iba't ibang salik tulad ng stress, dehydration, o tensyon. Ang mga sintomas ay maaaring kabilang ang mapurol o matalim na sakit sa ulo, pagiging sensitibo sa liwanag o tunog, at pagduduwal. Ang tamang pamamahala at paggamot ay makakatulong upang maibsan ang kakulangan sa ginhawa.",
+			"patterns": [
+				"Ano ang gagawin para sa sakit ng ulo?",
+				"Paano gamutin ang sakit ng ulo?",
+				"Pinakamabisang paraan para maibsan ang sakit ng ulo?",
+				"Payo sa paggamot ng sakit ng ulo?",
+				"Paano pamahalaan ang sakit ng ulo?",
+				"Ano ang makakatulong sa sakit ng ulo?",
+				"Paano maalis ang sakit ng ulo?",
+				"First aid para sa sakit ng ulo?",
+				"Paano alagaan ang sakit ng ulo?",
+				"Tips for managing headache?"
+			],
+			"procedures": [
+				"Magpahinga sa isang tahimik at madilim na kwarto at maglagay ng malamig o mainit na compress sa iyong noo. Maaaring makatulong ang mga over-the-counter na pain relievers tulad ng ibuprofen o acetaminophen. Manatiling hydrated at iwasan ang mga trigger tulad ng maliwanag na ilaw o malalakas na tunog.",
+				"",
+				"Magpahinga, gumamit ng gamot para sa sakit, at maglagay ng compress. Manatiling hydrated at iwasan ang mga kilalang trigger."
+			],
+			"relations": ["Lagundi", "Yerba Buena", "Ginger (Luya)"],
+			"references": [
+				"https://www.mayoclinic.org/diseases-conditions/headache/symptoms-causes/syc-20361797",
+				"https://www.mountsinai.org/health-library/symptom/headache"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Cold",
+			"type": "Injury",
+			"meaning": "The common cold is a viral infection that affects the upper respiratory tract. Symptoms may include a runny or stuffy nose, sore throat, cough, congestion, and mild body aches. Proper care and treatment can help alleviate symptoms and speed up recovery.                                ",
+			"patterns": [
+				"How to treat a cold?",
+				"What to do for a cold?",
+				"Best way to get over a cold?",
+				"Cold treatment advice?",
+				"How to manage cold symptoms?",
+				"How to get rid of a cold?",
+				"What helps with a cold?",
+				"How to soothe a cold?",
+				"First aid for cold?",
+				"How to care for a cold?",
+				""
+			],
+			"procedures": [
+				"Rest and stay hydrated by drinking plenty of fluids. Use over-the-counter medications to relieve symptoms like congestion and sore throat. Inhale steam or use a humidifier to ease breathing. If symptoms persist or worsen, consult a healthcare provider.",
+				"",
+				"Stay hydrated, rest, and use medications for symptom relief. Seek medical advice if the cold persists or worsens.",
+				"",
+				""
+			],
+			"relations": [
+				"Lagundi",
+				"Sambong",
+				"Tsaang Gubat",
+				"Calamansi with Honey"
+			],
+			"references": [
+				"https://www.mayoclinic.org/diseases-conditions/common-cold/in-depth/cold-remedies/art-20046403",
+				"https://www.mountsinai.org/health-library/condition/common-cold"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Sipon",
+			"type": "Injury",
+			"meaning": "Ang sipon ay isang viral infection na nakakaapekto sa upper respiratory tract. Ang mga sintomas ay maaaring kabilang ang sipon o baradong ilong, sore throat, ubo, congestion, at bahagyang pananakit ng katawan. Ang tamang pangangalaga at paggamot ay makakatulong upang maibsan ang mga sintomas at mapabilis ang paggaling.",
+			"patterns": [
+				"Ano ang gagawin para sa sipon?",
+				"Paano gamutin ang sipon?",
+				"Pinakamabisang paraan para gumaling sa sipon?",
+				"Payo sa paggamot ng sipon?",
+				"Paano pamahalaan ang mga sintomas ng sipon?",
+				"Ano ang makakatulong sa sipon?",
+				"Paano maalis ang sipon?",
+				"First aid para sa sipon?",
+				"Paano alagaan ang sipon?",
+				""
+			],
+			"procedures": [
+				"Magpahinga at manatiling hydrated sa pamamagitan ng pag-inom ng maraming likido. Gumamit ng mga over-the-counter na gamot para maibsan ang mga sintomas tulad ng congestion at sore throat. Huminga ng steam o gumamit ng humidifier upang mapadali ang paghinga. Kung ang mga sintomas ay nagpapatuloy o lumalala, kumonsulta sa healthcare provider.",
+				"",
+				"Manatiling hydrated, magpahinga, at gumamit ng mga gamot para sa pag-alis ng sintomas. Humingi ng medikal na payo kung ang sipon ay nagpapatuloy o lumalala."
+			],
+			"relations": [
+				"Lagundi",
+				"Sambong",
+				"Tsaang Gubat",
+				"Calamansi with Honey"
+			],
+			"references": [
+				"https://www.mayoclinic.org/diseases-conditions/common-cold/in-depth/cold-remedies/art-20046403",
+				"https://www.mountsinai.org/health-library/condition/common-cold"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Drowning",
+			"type": "Injury",
+			"meaning": "Drowning occurs when a person is submerged in water and unable to breathe. Symptoms may include difficulty breathing, coughing, and unconsciousness. Immediate and appropriate rescue and first aid can save lives and prevent further complications.\n\t\t\t\t\n\t\t\t",
+			"patterns": [
+				"What to do if someone is drowning?",
+				"How to save someone who is drowning?",
+				"Drowning rescue steps?",
+				"Best way to help a drowning person?",
+				"What should I do if someone is drowning?",
+				"How to rescue a drowning person?",
+				"What helps with drowning?",
+				"How to perform a drowning rescue?",
+				"First aid for drowning?",
+				"How to care for a drowning person?",
+				"",
+				""
+			],
+			"procedures": [
+				"Call for emergency help immediately. If it's safe, try to reach the person with a pole or throw a flotation device. Do not enter the water unless you're trained in water rescue. Once the person is out of the water, check for breathing and start CPR if necessary.",
+				"",
+				"Call emergency services and try to help without putting yourself at risk. Use a pole or flotation device, and be ready to perform CPR.",
+				"",
+				""
+			],
+			"relations": ["nan"],
+			"references": [
+				"https://www.mayoclinic.org/first-aid/first-aid-drowning/basics/art-20056649",
+				"https://www.mountsinai.org/health-library/condition/drowning"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "\nNalulunod",
+			"type": "Injury",
+			"meaning": "Ang pagkalunod ay nangyayari kapag ang isang tao ay nalulubog sa tubig at hindi makakahinga. Ang mga sintomas ay maaaring kabilang ang kahirapan sa paghinga, pag-ubo, at pagkawala ng malay. Ang agarang at angkop na pagligtas at first aid ay makakapagligtas ng buhay at makakaiwas sa karagdagang komplikasyon.",
+			"patterns": [
+				"Ano ang gagawin kung may nalulunod?",
+				"Paano iligtas ang nalulunod?",
+				"Mga hakbang sa pagligtas ng nalulunod?",
+				"Pinakamabisang paraan para tulungan ang nalulunod?",
+				"Ano ang dapat gawin kung may nalulunod?",
+				"Ano ang makakatulong sa nalulunod?",
+				"Paano iligtas ang nalulunod?",
+				"First aid para sa nalulunod?",
+				"Paano alagaan ang nalulunod?",
+				"Tips for managing drowning?"
+			],
+			"procedures": [
+				"Tumawag ng agarang tulong sa emergency. Kung ligtas, subukang abutin ang tao gamit ang isang poste o ihagis ang flotation device. Huwag pumasok sa tubig maliban kung ikaw ay may pagsasanay sa water rescue. Kapag ang tao ay nailabas na sa tubig, suriin ang kanilang paghinga at simulan ang CPR kung kinakailangan.",
+				"",
+				"Tumawag ng emergency services at subukang tumulong nang hindi inilalagay ang iyong sarili sa panganib. Gumamit ng poste o flotation device, at maging handa na magsagawa ng CPR."
+			],
+			"relations": ["nan"],
+			"references": [
+				"https://www.mayoclinic.org/first-aid/first-aid-drowning/basics/art-20056649",
+				"https://www.mountsinai.org/health-library/condition/drowning"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Chest Pain",
+			"type": "Injury",
+			"meaning": "Chest pain can be caused by various factors such as heart problems, lung issues, or digestive disorders. Symptoms may include a sharp, dull, or burning sensation in the chest, shortness of breath, and dizziness. Immediate and appropriate action can help prevent serious complications.\n\t\t\t\t\n\t\t\t",
+			"patterns": [
+				"What to do for chest pain?",
+				"How to treat chest pain?",
+				"Chest pain treatment advice?",
+				"What should I do if I have chest pain?",
+				"Best way to relieve chest pain?",
+				"How to get rid of chest pain?",
+				"What helps with chest pain?",
+				"How to soothe chest pain?",
+				"First aid for chest pain?",
+				"How to care for chest pain?",
+				""
+			],
+			"procedures": [
+				"If you experience chest pain, stop any physical activity and rest. Take deep breaths and try to stay calm. If the pain persists, seek emergency medical help immediately, as it could be a sign of a heart attack.",
+				"",
+				"Rest and take slow, deep breaths. Seek emergency medical attention if the pain is severe or does not go away"
+			],
+			"relations": ["Garlic (Chest Pain)", "Ginger (Chest Pain)", "Almonds"],
+			"references": [
+				"https://www.mayoclinic.org/diseases-conditions/chest-pain/diagnosis-treatment/drc-20370842",
+				"https://my.clevelandclinic.org/health/symptoms/21209-chest-pain"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Pananakit ng dibdib",
+			"type": "Injury",
+			"meaning": "Ang pananakit ng dibdib ay maaaring sanhi ng iba't ibang salik tulad ng problema sa puso, isyu sa baga, o mga sakit sa pagtunaw. Ang mga sintomas ay maaaring kabilang ang matalim, mapurol, o nasusunog na pakiramdam sa dibdib, hirap sa paghinga, at pagkahilo. Ang agarang at angkop na aksyon ay makakatulong upang maiwasan ang seryosong komplikasyon.",
+			"patterns": [
+				"Ano ang gagawin para sa pananakit ng dibdib?",
+				"Paano gamutin ang pananakit ng dibdib?",
+				"Payo sa paggamot ng pananakit ng dibdib?",
+				"Ano ang dapat gawin kung may pananakit ng dibdib?",
+				"Pinakamabisang paraan para maibsan ang pananakit ng dibdib?",
+				"Ano ang makakatulong sa pananakit ng dibdib?",
+				"Paano maalis ang pananakit ng dibdib?",
+				"First aid para sa pananakit ng dibdib?",
+				"Paano alagaan ang pananakit ng dibdib?",
+				"Tips for managing chest pain?"
+			],
+			"procedures": [
+				"Kung makaranas ka ng pananakit sa dibdib, itigil ang anumang pisikal na aktibidad at magpahinga. Huminga ng malalim at subukang manatiling kalmado. Kung magpapatuloy ang sakit, humingi ng agarang medikal na tulong, dahil maaari itong senyales ng atake sa puso.",
+				"",
+				"Magpahinga at huminga ng mabagal at malalim. Humingi ng agarang medikal na atensyon kung ang sakit ay malubha o hindi nawawala."
+			],
+			"relations": ["Garlic (Chest Pain)", "Ginger (Chest Pain)", "Almonds"],
+			"references": [
+				"https://www.mayoclinic.org/diseases-conditions/chest-pain/diagnosis-treatment/drc-20370842",
+				"https://my.clevelandclinic.org/health/symptoms/21209-chest-pain"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Dehydration",
+			"type": "Injury",
+			"meaning": "Dehydration occurs when the body loses more fluids than it takes in, leading to an imbalance. Symptoms may include dry mouth, thirst, dark urine, dizziness, and fatigue. Proper hydration and timely treatment can help restore fluid balance and prevent complications.\n\t\t\t",
+			"patterns": [
+				"How to treat dehydration?",
+				"What to do for dehydration?",
+				"Best way to rehydrate?",
+				"Dehydration treatment advice?",
+				"How to manage dehydration?",
+				"How to get rid of dehydration?",
+				"What helps with dehydration?",
+				"How to soothe dehydration?",
+				"First aid for dehydration?",
+				"How to care for dehydration?"
+			],
+			"procedures": [
+				"Drink plenty of water or an oral rehydration solution (ORS). Rest in a cool environment and avoid physical activity until fully rehydrated. For severe dehydration, seek medical attention.",
+				"",
+				"Increase fluid intake, rest, and use an ORS if available. Seek medical help if dehydration is severe.",
+				"",
+				""
+			],
+			"relations": ["Buko Water", "Tanglad"],
+			"references": [
+				"https://www.mayoclinic.org/diseases-conditions/dehydration/diagnosis-treatment/drc-20354092",
+				"https://www.verywellhealth.com/dehydration-treatment-8704072"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Dehydration",
+			"type": "Injury",
+			"meaning": "Ang dehydration ay nangyayari kapag ang katawan ay nawawalan ng mas maraming likido kaysa sa tinatanggap, na nagdudulot ng kawalan ng balanse. Ang mga sintomas ay maaaring kabilang ang tuyong bibig, uhaw, madilim na ihi, pagkahilo, at pagkapagod. Ang tamang hydration at agarang paggamot ay makakatulong upang maibalik ang balanse ng likido at maiwasan ang komplikasyon.",
+			"patterns": [
+				"Ano ang gagawin para sa dehydration?",
+				"Paano gamutin ang dehydration?",
+				"Pinakamabisang paraan para ma-rehydrate?",
+				"Payo sa paggamot ng dehydration?",
+				"Paano pamahalaan ang dehydration?",
+				"Ano ang makakatulong sa dehydration?",
+				"Paano maalis ang dehydration?",
+				"First aid para sa dehydration?",
+				"Paano alagaan ang dehydration?",
+				"Tips for managing dehydration?",
+				""
+			],
+			"procedures": [
+				"Uminom ng maraming tubig o oral rehydration solution (ORS). Magpahinga sa isang malamig na kapaligiran at iwasan ang pisikal na aktibidad hanggang sa ganap na ma-rehydrate. Para sa malubhang dehydration, humingi ng medikal na tulong.",
+				"",
+				"Dadagan ang pag-inom ng likido, magpahinga, at gumamit ng ORS kung available. Humingi ng tulong medikal kung ang dehydration ay malubha."
+			],
+			"relations": ["Buko Water", "Tanglad"],
+			"references": [
+				"https://www.mayoclinic.org/diseases-conditions/dehydration/diagnosis-treatment/drc-20354092",
+				"https://www.verywellhealth.com/dehydration-treatment-8704072"
+			],
+			"context_set": ""
+		}
+	]
+}

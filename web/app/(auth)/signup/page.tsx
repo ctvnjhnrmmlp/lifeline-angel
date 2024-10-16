@@ -37,7 +37,8 @@ export default function Page() {
 	return (
 		<main className='flex flex-col justify-center p-6 h-screen w-screen'>
 			<section className='flex items-center overflow-y-scroll no-scrollbar backdrop-blur-sm bg-white/5 border-white/20 border-1 rounded-3xl h-screen'>
-				<div className='w-full flex flex-col flex-wrap justify-between space-between px-4 py-12 gap-12'>
+				<div className='h-full w-full bg-lifeline-angel-cover bg-cover bg-no-repeat' />
+				<div className='p-12'>
 					<div className='flex flex-col justify-center items-center space-y-12'>
 						<div>
 							<h1 className='text-foreground text-center font-extrabold text-8xl leading-none tracking-tight uppercase'>

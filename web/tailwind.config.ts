@@ -9,6 +9,13 @@ const config: Config = withUt({
 		'./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
 	],
 	darkMode: 'class',
+	theme: {
+		extend: {
+			backgroundImage: {
+				'lifeline-angel-cover': "url('/images/self-abstract.webp')",
+			},
+		},
+	},
 	plugins: [
 		nextui({
 			defaultTheme: 'dark',

@@ -15,7 +15,7 @@ from nltk.stem import WordNetLemmatizer
 from pydantic import BaseModel
 from tensorflow.keras.models import load_model
 
-nltk.download('all')
+nltk.download('cmudict')
 
 app = FastAPI()
 
@@ -76,7 +76,8 @@ def get_response(intents_list, intents_json):
             return {
                 "meaning": intent["meaning"],
                 "procedures": intent["procedures"],
-                "links": intent["links"],
+                "relations": intent["relations"],
+                "references": intent["references"],
             }
 
 class ChatRequest(BaseModel):

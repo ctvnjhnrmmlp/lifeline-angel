@@ -37,7 +37,8 @@ export default function Page() {
 	return (
 		<main className='flex flex-col justify-center p-6 h-screen w-screen'>
 			<section className='flex items-center overflow-y-scroll no-scrollbar backdrop-blur-sm bg-white/5 border-white/20 border-1 rounded-3xl h-screen'>
-				<div className='w-full flex flex-col flex-wrap justify-between space-between px-4 py-12 gap-12'>
+				<div className='h-full w-full bg-lifeline-angel-cover bg-cover bg-no-repeat' />
+				<div className='p-12'>
 					<div className='flex flex-col justify-center items-center space-y-12'>
 						<div>
 							<h1 className='text-foreground text-center font-extrabold text-8xl leading-none tracking-tight uppercase'>
@@ -77,7 +78,7 @@ export default function Page() {
 							isOpen={isOpenConsent}
 							closeButton={<></>}
 							classNames={{
-								base: 'bg-background',
+								base: 'backdrop-blur-sm bg-background/90 border-white/20 border-1 p-4',
 								header: 'flex justify-center items-center',
 								body: 'flex gap-4',
 								footer: 'py-4 space-x-0.5',
@@ -86,9 +87,9 @@ export default function Page() {
 						>
 							<ModalContent>
 								<ModalHeader>
-									<p className='text-2xl font-bold text-center'>
+									<h1 className='text-3xl font-bold text-center'>
 										Collecting Personal Information
-									</p>
+									</h1>
 								</ModalHeader>
 								<ModalBody>
 									<div className='flex flex-col space-y-5 justify-center'>
@@ -162,13 +163,13 @@ export default function Page() {
 								</ModalBody>
 								<ModalFooter>
 									<button
-										className='px-5 py-2 bg-foreground/60 text-background rounded-lg text-2xl font-bold tracking-tight'
+										className='px-5 py-2 backdrop-blur-sm bg-background/5 border-white/20 border-1 text-foreground rounded-full text-2xl font-bold tracking-tight'
 										onClick={() => onCloseConsent()}
 									>
 										Disagree
 									</button>
 									<button
-										className='px-5 py-2 bg-foreground text-background rounded-lg text-2xl font-bold tracking-tight'
+										className='px-5 py-2 backdrop-blur-sm bg-foreground/5 border-foreground/20 border-1 text-foreground rounded-full text-2xl font-bold tracking-tight'
 										onClick={() => signIn(strategy)}
 									>
 										Agree
