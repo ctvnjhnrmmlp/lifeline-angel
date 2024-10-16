@@ -6,7 +6,7 @@ import nltk
 from nltk.stem import WordNetLemmatizer
 from tensorflow.keras.models import load_model
 
-nltk.download('cmudict')
+nltk.download('punkt_tab')
 
 # Initialize lemmatizer
 lemmatizer = WordNetLemmatizer()
