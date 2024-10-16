@@ -8,7 +8,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.optimizers import SGD
 
-nltk.download('punkt_tab')
+# nltk.download('punkt_tab')
 
 # Initialize lemmatizer
 lemmatizer = WordNetLemmatizer()
