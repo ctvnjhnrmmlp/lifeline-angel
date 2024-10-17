@@ -132,7 +132,7 @@
 			"context_set": ""
 		},
 		{
-			"tag": "Sakit ng Puson",
+			"tag": "Abdominal Pain",
 			"type": "Injury",
 			"meaning": "Ang pananakit ng tiyan ay tumutukoy sa kakulangan sa ginhawa o iba pang hindi komportableng pakiramdam na nararamdaman mo sa iyong tiyan. Maaari itong sanhi ng iba't ibang salik tulad ng hindi pagkatunaw ng pagkain, hangin, pagtitibi, o mas seryosong kondisyon tulad ng appendicitis o gallstones. Ang mga sintomas ay maaaring kabilang ang paghilab, kabag, at matalim o mapurol na sakit. Ang tuloy-tuloy o matinding pananakit ng tiyan ay dapat suriin ng isang tagapagbigay ng pangangalagang pangkalusugan.",
 			"patterns": [
@@ -1303,6 +1303,906 @@
 			"references": [
 				"https://www.mayoclinic.org/diseases-conditions/dehydration/diagnosis-treatment/drc-20354092",
 				"https://www.verywellhealth.com/dehydration-treatment-8704072"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Cuts",
+			"type": "Injury",
+			"meaning": "Cuts are injuries caused by a sharp object that breaks the skin. They can range from minor to severe, depending on the depth and location of the cut. Common causes of cuts include: Accidents: Slips, falls, or other accidents can lead to cuts. Sharp objects: Knives, scissors, broken glass, and other sharp objects can cause cuts.",
+			"patterns": [
+				"What to do if I have a cut?",
+				"How to treat a cut?",
+				"Best way to heal cuts?",
+				"What medicine to use for a cut?",
+				"Cut treatment advice?",
+				"How to stop bleeding from a cut?",
+				"First aid for cuts?",
+				"How to clean a cut wound?",
+				"How do I prevent infection in a cut?"
+			],
+			"procedures": [
+				"Clean the cut with soap and water to avoid infection. Apply pressure to stop the bleeding, and once stopped, apply an antibiotic ointment. Cover the wound with a bandage and change it daily. If the cut is deep, seek medical help."
+			],
+			"relations": ["Dahon ng Saging", "Dahon ng Mayana", "Dahon ng Bayabas"],
+			"references": [
+				"https://www.mayoclinic.org/first-aid/first-aid-cuts/basics/art-20056711",
+				"https://www.emedicinehealth.com/cuts_or_lacerations/article_em.htm",
+				"https://www.healthline.com/health/cuts-scratches"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "hiwa",
+			"type": "Injury",
+			"meaning": "Hiwa ay mga pinsala na dulot ng isang matalim na bagay na pumuputol sa balat. Maaari silang mag-iba mula sa menor de edad hanggang malubha, depende sa lalim at lokasyon ng hiwa. Ang mga karaniwang sanhi ng hiwa ay kinabibilangan ng: Aksidente: Ang mga pagdulas, pagkahulog, o iba pang aksidente ay maaaring humantong sa mga hiwa. Matatalim na bagay: Ang mga kutsilyo, gunting, sirang baso, at iba pang matatalim na bagay ay maaaring magdulot ng mga hiwa.",
+			"patterns": [
+				"Paano gamutin ang hiwa?",
+				"Ano ang dapat gawin kapag may hiwa?",
+				"Anong gamot ang ilalagay sa hiwa?",
+				"Paano pigilan ang pagdurugo mula sa hiwa?",
+				"Ano ang dapat gawin upang maiwasan ang impeksyon sa hiwa?",
+				"Mga hakbang sa paggamot ng hiwa?"
+			],
+			"procedures": [
+				"Linisin ang hiwa gamit ang sabon at tubig upang maiwasan ang impeksyon. Lagyan ng presyon upang ihinto ang pagdurugo, at sa sandaling tumigil, maglagay ng antibiotic ointment. Takpan ang sugat ng benda at palitan ito araw-araw. Kung malalim ang hiwa, humingi ng medikal na tulong."
+			],
+			"relations": ["Dahon ng Saging", "Dahon ng Mayana", "Dahon ng Bayabas"],
+			"references": [
+				"https://www.mayoclinic.org/first-aid/first-aid-cuts/basics/art-20056711",
+				"https://www.emedicinehealth.com/cuts_or_lacerations/article_em.htm",
+				"https://www.healthline.com/health/cuts-scratches"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Burns",
+			"type": "injury",
+			"meaning": "Burns are injuries caused by tissue damage from heat, chemicals, electricity, radiation, or the sun. They can range from mild to severe, depending on the extent and depth of the damage.",
+			"patterns": [
+				"What should I do for a burn?",
+				"How to treat burns?",
+				"Which ointment to apply on burns?",
+				"Burn treatment steps?",
+				"What to do in case of a burn?",
+				"First aid for burns?",
+				"How do I soothe a burn?",
+				"Best remedy for burns?",
+				"How to heal a burn fast?"
+			],
+			"procedures": [
+				"Cool the burn with running water for at least 10 minutes. Avoid using ice. Cover the burn with a sterile gauze bandage. Do not apply butter or ointments to the burn. For pain relief, consider over-the-counter pain relievers like ibuprofen or acetaminophen."
+			],
+			"relations": ["Aloe Vera", "Gauze Bandage"],
+			"references": [
+				"https://www.youtube.com/watch?v=LIaqKI7B8EI",
+				"https://www.mayoclinic.org/first-aid/first-aid-burns/basics/art-20056649",
+				"https://my.clevelandclinic.org/health/diseases/12063-burns",
+				"https://www.mayoclinic.org/diseases-conditions/burns/symptoms-causes/syc-20370539"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Paso",
+			"type": "injury",
+			"meaning": "Burns ay mga pinsala na dulot ng pagkasira ng tissue mula sa init, kemikal, kuryente, radiation, o araw. Maaari silang mag-iba mula sa mild hanggang severe, depende sa lawak at lalim ng pinsala.",
+			"patterns": [
+				"Paano gamutin ang paso?",
+				"Ano ang dapat gawin kapag napaso?",
+				"Anong ointment ang dapat ilagay sa paso?",
+				"Mga hakbang sa paggamot ng paso?",
+				"Paano gamutin ang sugat mula sa paso?",
+				"Anong gagawin kapag napaso ang balat?"
+			],
+			"procedures": [
+				"Palamigin ang paso gamit ang umaagos na tubig nang hindi bababa sa 10 minuto. Iwasang gumamit ng yelo. Takpan ang paso ng sterile gauze bandage. Huwag maglagay ng mantikilya o mga pamahid sa paso. Para sa lunas sa pananakit, isaalang-alang ang mga over-the-counter na pain reliever tulad ng ibuprofen o acetaminophen."
+			],
+			"relations": ["Aloe Vera", "Gauze Bandage"],
+			"references": [
+				"https://www.youtube.com/watch?v=LIaqKI7B8EI",
+				"https://www.mayoclinic.org/first-aid/first-aid-burns/basics/art-20056649",
+				"https://my.clevelandclinic.org/health/diseases/12063-burns",
+				"https://www.mayoclinic.org/diseases-conditions/burns/symptoms-causes/syc-20370539"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Abrasions",
+			"type": "injury",
+			"meaning": "Abrasions are superficial skin injuries caused by the scraping away of the top layer of skin. They often result from friction or rubbing against a rough surface. Common causes of abrasions include: Falls: Falling onto a hard surface can cause abrasions. Sports injuries: Contact sports or accidents during physical activity can lead to abrasions. Accidents: Slips, trips, or other accidents can result in abrasions. Friction: Rubbing against a rough surface, such as sandpaper or concrete, can cause abrasions.",
+			"patterns": [
+				"How to treat abrasions?",
+				"What to do if I have an abrasion?",
+				"Best way to heal abrasions?",
+				"What should I apply on an abrasion?",
+				"Abrasions treatment steps?",
+				"How to clean an abrasion?",
+				"First aid for abrasions?",
+				"How to stop bleeding from an abrasion?",
+				"What ointment is best for abrasions?",
+				"What should I do for scraped skin?"
+			],
+			"procedures": [
+				"Gently wash the abrasion with soap and water. Apply an antibiotic ointment and cover with a clean, dry bandage. If the abrasion is large, seek medical advice.",
+				"Clean the abrasion with water and soap to remove any debris. Apply an antiseptic to prevent infection. Cover with a sterile bandage or gauze and change it daily. Keep the area dry and monitor for signs of infection."
+			],
+			"relations": ["Dahon ng Saging", "Dahon ng Mayana", "Dahon ng Bayabas"],
+			"references": [
+				"https://www.mayoclinic.org/first-aid/first-aid-cuts/basics/art-20056711",
+				"https://www.healthline.com/health/abrasion",
+				"https://my.clevelandclinic.org/health/diseases/25079-abrasion",
+				"https://www.healthgrades.com/right-care/skin-hair-and-nails/abrasion"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Gasgas",
+			"type": "injury",
+			"meaning": "Gasgas ay mga mababaw na pinsala sa balat na dulot ng pagkiskis ng pinakamataas na layer ng balat. Madalas itong resulta ng alitan o pagkuskos sa isang magaspang na ibabaw. Ang mga karaniwang sanhi ng gasgas ay kinabibilangan ng: Pagbagsak: Ang pagbagsak sa isang matigas na ibabaw ay maaaring magdulot ng gasgas. Mga pinsala sa sports: Ang mga contact sports o aksidente sa panahon ng pisikal na aktibidad ay maaaring humantong sa gasgas. Aksidente: Ang mga pagdulas, pagkatisod, o iba pang aksidente ay maaaring magresulta sa gasgas. Alitan: Ang pagkuskos sa isang magaspang na ibabaw, tulad ng papel de liha o semento, ay maaaring magdulot ng gasgas.",
+			"patterns": [
+				"Paano gamutin ang gasgas?",
+				"Ano ang dapat gawin kapag may gasgas?",
+				"Anong ointment ang dapat ilagay sa gasgas?",
+				"Mga hakbang sa paggamot ng gasgas?",
+				"Paano linisin ang gasgas?",
+				"Ano ang unang lunas para sa gasgas?",
+				"Paano pigilan ang pagdurugo mula sa gasgas?",
+				"Anong gamot ang dapat ilagay sa gasgas?",
+				"Ano ang pinakamainam na gawin para gumaling ang gasgas?",
+				"Paano gamutin ang sugat mula sa gasgas?",
+				"",
+				"",
+				""
+			],
+			"procedures": [
+				"Linisin ang gasgas gamit ang tubig at sabon upang alisin ang anumang dumi. Maglagay ng antiseptiko upang maiwasan ang impeksyon. Takpan ng sterile na benda o gasa at palitan ito araw-araw. Panatilihing tuyo ang lugar at bantayan para sa mga senyales ng impeksyon.",
+				"Maingat na hugasan ang gasgas gamit ang sabon at tubig. Maglagay ng antibiotic ointment at takpan ng malinis at tuyong benda. Kung malaki ang gasgas, magpakonsulta sa doktor."
+			],
+			"relations": ["Dahon ng Saging", "Dahon ng Mayana", "Dahon ng Bayabas"],
+			"references": [
+				"https://www.mayoclinic.org/first-aid/first-aid-cuts/basics/art-20056711",
+				"https://www.healthline.com/health/abrasion",
+				"https://my.clevelandclinic.org/health/diseases/25079-abrasion",
+				"https://www.healthgrades.com/right-care/skin-hair-and-nails/abrasion"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Stings",
+			"type": "injury",
+			"meaning": "Stings are injuries caused by the injection of venom or irritants from insects or other animals. They can range from mild to severe, depending on the type of animal and the individual's sensitivity. Common causes of stings include: Bees: Honeybees, bumblebees, and wasps can sting when they feel threatened. Ants: Fire ants and other ant species can sting when disturbed. Hornets: Hornets can sting multiple times and their venom is more potent than that of bees. Jellyfish: Jellyfish can sting when their tentacles come into contact with the skin. Other animals: Some animals, such as scorpions and spiders, can also sting.",
+			"patterns": [
+				"How to treat a sting?",
+				"What to do for insect stings?",
+				"How to relieve sting pain?",
+				"Sting treatment advice?",
+				"Best remedy for stings?",
+				"How to reduce swelling from a sting?",
+				"What should I apply to a sting?",
+				"How to stop itching from a sting?",
+				"First aid for insect stings?",
+				"What is the best ointment for stings?"
+			],
+			"procedures": [
+				"Remove the stinger if present by scraping it off with a flat object. Wash the area with soap and water. Apply a cold compress to reduce swelling. Use an antihistamine cream or take oral antihistamines for itching. If you experience difficulty breathing, seek emergency medical help immediately.",
+				"Wash the sting site with soap and water. Apply ice wrapped in a cloth to reduce swelling. Take an antihistamine for itching or swelling."
+			],
+			"relations": ["Aloe Vera", "Honey"],
+			"references": [
+				"https://www.healthline.com/health/bug-bites",
+				"https://www.mayoclinic.org/first-aid/first-aid-insect-bites/basics/art-20056593",
+				"https://www.healthline.com/health/first-aid/bites-stings"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Stings",
+			"type": "injury",
+			"meaning": "Sakit ng kagat ay mga pinsala na dulot ng pag-iniksyon ng lason o mga irritant mula sa mga insekto o iba pang hayop. Maaari silang mag-iba mula sa mild hanggang severe, depende sa uri ng hayop at sa sensitivity ng indibidwal. Ang mga karaniwang sanhi ng sakit ng kagat ay kinabibilangan ng: Bubuyog: Ang mga bubuyog, bumblebees, at wasps ay maaaring mangagat kapag nakaramdam sila ng banta. Langgam: Ang mga fire ants at iba pang species ng langgam ay maaaring mangagat kapag nabalisa. Hornets: Ang mga hornets ay maaaring mangagat ng maraming beses at ang kanilang lason ay mas malakas kaysa sa mga bubuyog. Jellyfish: Ang mga jellyfish ay maaaring mangagat kapag ang kanilang mga galamay ay nakikipag-ugnay sa balat. Iba pang hayop: Ang ilang hayop, tulad ng mga alakdan at gagamba, ay maaari ring mangagat.",
+			"patterns": [
+				"Paano gamutin ang kagat ng insekto?",
+				"Ano ang dapat gawin kapag nakagat ng insekto?",
+				"Paano bawasan ang sakit mula sa kagat ng insekto?",
+				"Ano ang dapat ilagay sa kagat ng insekto?",
+				"Paano pigilan ang pangangati mula sa kagat ng insekto?",
+				"Mga hakbang sa paggamot ng kagat ng insekto?",
+				"Anong ointment ang dapat ilagay sa kagat ng insekto?",
+				"Paano bawasan ang pamamaga mula sa kagat ng insekto?",
+				"Ano ang pinakamainam na lunas para sa kagat ng insekto?",
+				"Ano ang unang lunas sa kagat ng insekto?"
+			],
+			"procedures": [
+				"Alisin ang tibo kung mayroon, sa pamamagitan ng pag-scrape gamit ang patag na bagay. Hugasan ang lugar na natibo gamit ang sabon at tubig. Maglagay ng malamig na pomento upang mabawasan ang pamamaga. Gumamit ng antihistamine cream o uminom ng oral antihistamines para sa pangangati. Kung makaranas ng hirap sa paghinga, agad na humingi ng tulong medikal.",
+				"Hugasan ang lugar ng sting gamit ang sabon at tubig. Maglagay ng yelo na binalot sa tela upang mabawasan ang pamamaga. Uminom ng antihistamine para sa pangangati o pamamaga."
+			],
+			"relations": ["Aloe Vera", "Honey"],
+			"references": [
+				"https://www.healthline.com/health/bug-bites",
+				"https://www.mayoclinic.org/first-aid/first-aid-insect-bites/basics/art-20056593",
+				"https://www.healthline.com/health/first-aid/bites-stings"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Splinter",
+			"type": "injury",
+			"meaning": "Splinters are small pieces of wood, glass, or other materials that become embedded in the skin. They can cause pain, inflammation, and even infection if not removed properly. Common causes of splinters include: Accidents: Slips, falls, or other accidents can lead to splinters. Working with wood or other materials: People who work with wood, construction, or gardening are at risk of getting splinters. Playing outdoors: Children playing outdoors may accidentally get splinters from tree branches, playground equipment, or other objects.",
+			"patterns": [
+				"What should I do for a burn?",
+				"How to treat burns?",
+				"Which ointment to apply on burns?",
+				"Burn treatment steps?",
+				"What to do in case of a burn?",
+				"How to remove a splinter?",
+				"What to do if I have a splinter?",
+				"Best way to remove splinters?",
+				"Splinter removal advice?",
+				"How to treat splinters?",
+				"How to get a splinter out without pain?",
+				"What should I do for a deep splinter?",
+				"How to clean a splinter wound?",
+				"How to prevent infection from a splinter?",
+				"First aid for splinters?"
+			],
+			"procedures": [
+				"Clean the area with soap and water. Use sterilized tweezers to remove the splinter carefully. After removal, apply an antiseptic and cover with a bandage if necessary",
+				"Soak the affected area in warm water to soften the skin. Gently remove the splinter with sterilized tweezers. Clean the area with antiseptic and bandage if needed."
+			],
+			"relations": ["Honey"],
+			"references": [
+				"https://www.mayoclinic.org/first-aid/first-aid/basics/art-20056604",
+				"https://www.goodrx.com/health-topic/environmental/how-to-remove-splinter"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Splinter",
+			"type": "injury",
+			"meaning": "Titid ay maliliit na piraso ng kahoy, salamin, o iba pang materyales na natatangay sa balat. Maaari silang magdulot ng sakit, pamamaga, at maging impeksyon kung hindi maalis nang maayos. Ang mga karaniwang sanhi ng titid ay kinabibilangan ng: Aksidente: Ang mga pagdulas, pagkahulog, o iba pang aksidente ay maaaring humantong sa titid. Pagtatrabaho sa kahoy o iba pang materyales: Ang mga taong nagtatrabaho sa kahoy, konstruksyon, o paghahalaman ay nasa panganib na makakuha ng titid. Paglalaro sa labas: Ang mga batang naglalaro sa labas ay maaaring hindi sinasadyang makakuha ng titid mula sa mga sanga ng puno, kagamitan sa palaruan, o iba pang bagay.",
+			"patterns": [
+				"Paano alisin ang tinik o piraso ng kahoy?",
+				"Ano ang dapat gawin kapag may tinik sa balat?",
+				"Ano ang pinakamadaling paraan para alisin ang tinik?",
+				"Paano linisin ang sugat mula sa tinik?",
+				"Paano iwasan ang impeksyon mula sa tinik?",
+				"Ano ang unang lunas sa sugat mula sa tinik?",
+				"Anong dapat gawin kung malalim ang tinik?",
+				"Ano ang pinakamabisang paraan para alisin ang tinik?",
+				"Paano bawasan ang sakit kapag tinanggal ang tinik?",
+				"Anong gamot ang dapat ilagay pagkatapos alisin ang tinik?"
+			],
+			"procedures": [
+				"Linisin ang lugar gamit ang sabon at tubig. Gumamit ng sterilized na pang-ipit upang maingat na alisin ang tinik. Pagkatapos alisin, maglagay ng antiseptiko at takpan ng benda kung kinakailangan",
+				"Ibabad ang apektadong lugar sa maligamgam na tubig upang lumambot ang balat. Maingat na alisin ang tinik gamit ang sterilized na pang-ipit. Linisin ang lugar gamit ang antiseptiko at takpan ng benda kung kinakailangan"
+			],
+			"relations": ["Honey"],
+			"references": [
+				"https://www.mayoclinic.org/first-aid/first-aid/basics/art-20056604",
+				"https://www.goodrx.com/health-topic/environmental/how-to-remove-splinter"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Sprains",
+			"type": "injury",
+			"meaning": "Sprains are injuries to ligaments, which are tough bands of tissue that connect bones to each other. They occur when a ligament is stretched or torn. Common causes of sprains include: Overstretching or twisting: Overstretching or twisting a joint beyond its normal range of motion can cause a sprain Falls: Falling awkwardly can lead to sprains, especially in the ankle or wrist. Sports injuries: Many sports, such as basketball, football, and soccer, involve sudden movements that can cause sprains. Accidents: Car accidents or other accidents can cause sprains.",
+			"patterns": [
+				"What to do for a sprain?",
+				"How to treat a sprained ankle?",
+				"Sprain treatment advice?",
+				"Best way to heal sprains?",
+				"How to relieve sprain pain?",
+				"How to reduce swelling from a sprain?",
+				"What should I do for a wrist sprain?",
+				"How long does a sprain take to heal?",
+				"First aid for sprains?",
+				"What is the RICE method for sprains?"
+			],
+			"procedures": [
+				"Rest the injured limb and avoid putting weight on it. Apply ice packs to reduce swelling and pain. Compress the area with an elastic bandage, and elevate it above heart level. Consider over-the-counter pain relievers for pain management",
+				"Use the R.I.C.E. method: Rest, Ice, Compression, and Elevation. If the pain persists or the swelling is severe, consult a healthcare provider."
+			],
+			"relations": ["Garlic (Sprains)", "Onion", "Cabbage"],
+			"references": [
+				"https://www.mayoclinic.org/diseases-conditions/sprains/symptoms-causes/syc-20377938",
+				"https://my.clevelandclinic.org/health/diseases/sprains",
+				"https://www.verywellhealth.com/sprains-and-strains-2548839"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Sprains",
+			"type": "injury",
+			"meaning": "Pilay ay mga pinsala sa ligament, na mga matigas na banda ng tissue na nagkokonekta sa mga buto sa isa't isa. Nangyayari ang mga ito kapag ang isang ligament ay naunat o napunit. Ang mga karaniwang sanhi ng pilay ay kinabibilangan ng: Pag-unat o pag-ikot nang sobra: Ang pag-unat o pag-ikot ng isang kasu-kasuan lampas sa normal nitong saklaw ng paggalaw ay maaaring magdulot ng pilay Pagbagsak: Ang pagbagsak nang hindi maayos ay maaaring humantong sa mga pilay, lalo na sa bukung-bukong o pulso. Mga pinsala sa sports: Maraming sports, tulad ng basketball, football, at soccer, ay nagsasangkot ng biglang mga galaw na maaaring magdulot ng pilay. Aksidente: Ang mga aksidente sa sasakyan o iba pang aksidente ay maaaring magdulot ng pilay.",
+			"patterns": [
+				"Paano gamutin ang sprain?",
+				"Ano ang dapat gawin kapag napinsala ang bukung-bukong?",
+				"Mga hakbang sa paggamot ng sprain?",
+				"Paano bawasan ang pamamaga mula sa sprain?",
+				"Paano mabilis na gumaling ang sprain?",
+				"Paano maalis ang sakit mula sa sprain?",
+				"Anong gamot ang maaaring inumin para sa sprain?",
+				"Paano iwasan ang karagdagang pinsala sa sprain?",
+				"Anong mga ehersisyo ang dapat gawin sa sprain?",
+				"Ano ang mga palatandaan ng malalang sprain?"
+			],
+			"procedures": [
+				"Pahingahin ang nasugatang bahagi at iwasan ang paglalagay ng bigat dito. Maglagay ng yelo upang mabawasan ang pamamaga at sakit. I-compress ang lugar gamit ang elastic na benda, at itaas ito sa taas ng puso. Isaalang-alang ang paggamit ng mga over-the-counter na gamot para sa sakit.",
+				"Gamitin ang R.I.C.E. na pamamaraan: Rest, Ice, Compression, at Elevation. Kung patuloy ang sakit o malubha ang pamamaga, magpakonsulta sa isang healthcare provider."
+			],
+			"relations": ["Garlic (Sprains)", "Onion", "Cabbage"],
+			"references": [
+				"https://www.mayoclinic.org/diseases-conditions/sprains/symptoms-causes/syc-20377938",
+				"https://my.clevelandclinic.org/health/diseases/sprains",
+				"https://www.verywellhealth.com/sprains-and-strains-2548839"
+			],
+			"context_set": ""
+		},
+
+		{
+			"tag": "Pulled Muscle",
+			"type": "injury",
+			"meaning": "Pulled muscles, also known as muscle strains, are injuries that occur when a muscle is overstretched or torn. They can range from mild to severe, depending on the extent of the damage. Common causes of pulled muscles include: Overexertion: Exercising too hard or for too long can lead to pulled muscles. Sudden movements: Sudden, forceful movements, such as lifting heavy objects or twisting awkwardly, can strain muscles. Poor posture: Poor posture can put undue stress on muscles, making them more susceptible to strains. Muscle weakness: Weak muscles are more likely to be strained.",
+			"patterns": [
+				"How to treat a pulled muscle?",
+				"What to do for a muscle pull?",
+				"Best way to heal a pulled muscle?",
+				"Pulled muscle treatment advice?",
+				"How to reduce pulled muscle pain?",
+				"How to relieve tightness in a pulled muscle?",
+				"What should I do if I feel a muscle pull?",
+				"How long does it take for a pulled muscle to heal?",
+				"First aid for pulled muscles?",
+				"What is the RICE method for muscle pulls?"
+			],
+			"procedures": [
+				"Rest the affected muscle, apply ice to reduce swelling, use compression with an elastic bandage, and elevate the muscle. Take pain relievers if necessary and avoid strenuous activity.",
+				"",
+				"Apply the R.I.C.E. method: Rest, Ice, Compression, Elevation. Consult a healthcare provider for severe strains."
+			],
+			"relations": ["Luya"],
+			"references": [
+				"https://www.mayoclinic.org/diseases-conditions/muscle-strains/symptoms-causes/syc-20450507"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Pulled Muscle",
+			"type": "injury",
+			"meaning": "Ang pilay ng kalamnan ay nangyayari kapag ang isang kalamnan ay naunat nang sobra o napunit. Maaaring mag-iba ito mula sa mild hanggang severe, depende sa pinsala. Karaniwang sanhi ay pag-abuso, biglang galaw, masamang postura, at kahinaan ng kalamnan.",
+			"patterns": [
+				"Paano gamutin ang napinsalang kalamnan?",
+				"Ano ang dapat gawin kapag may muscle pull?",
+				"Mga hakbang sa paggamot ng napinsalang kalamnan?",
+				"Paano mabilis na gumaling ang napinsalang kalamnan?",
+				"Paano maalis ang sakit mula sa muscle pull?",
+				"Anong gamot ang maaaring inumin para sa muscle pull?",
+				"Paano maiwasan ang karagdagang pinsala sa napinsalang kalamnan?",
+				"Anong mga ehersisyo ang dapat gawin para sa napinsalang kalamnan?",
+				"Paano maiwasan ang muscle pull sa hinaharap?",
+				"Ano ang mga palatandaan ng malubhang muscle pull?"
+			],
+			"procedures": [
+				"Pahingahin ang apektadong kalamnan, maglagay ng yelo, gumamit ng elastic na benda, at itaas ang kalamnan. Uminom ng pain relievers kung kinakailangan at iwasan ang mabigat na aktibidad.",
+				"",
+				"Gamitin ang R.I.C.E.: Rest, Ice, Compression, Elevation. Magpakonsulta sa healthcare provider para sa malubhang pilay."
+			],
+			"relations": ["Luya"],
+			"references": [
+				"https://www.mayoclinic.org/diseases-conditions/muscle-strains/symptoms-causes/syc-20450507"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Sunburn",
+			"type": "injury",
+			"meaning": "Sunburn is caused by excessive exposure to UV radiation from the sun, ranging from mild to severe depending on the depth of the damage. Causes include prolonged sun exposure, not using sunscreen, or using expired sunscreen.",
+			"patterns": [
+				"How to treat sunburn?",
+				"What to do for sunburn?",
+				"Best way to relieve sunburn pain?",
+				"Sunburn treatment advice?",
+				"How to heal sunburn?",
+				"How to reduce redness from sunburn?",
+				"What should I apply to sunburned skin?",
+				"How long does it take for sunburn to heal?",
+				"First aid for sunburn?",
+				"How to prevent peeling from sunburn?"
+			],
+			"procedures": [
+				"Cool the skin with a damp cloth or a cool bath, apply aloe vera or a moisturizer, drink plenty of water, and avoid further sun exposure.",
+				"",
+				"Use cool compresses and aloe vera gel. Drink water and avoid the sun until healed."
+			],
+			"relations": ["Honey", "Aloe vera", "Cucumber"],
+			"references": [
+				"https://www.mayoclinic.org/diseases-conditions/sunburn/diagnosis-treatment/drc-20355928",
+				"https://www.healthline.com/health/video/how-long-does-sunburn-last"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Sunburn",
+			"type": "injury",
+			"meaning": "Ang sunburn ay sanhi ng sobrang pagkakalantad sa ultraviolet (UV) radiation mula sa araw. Maaari itong mag-iba mula sa mild hanggang severe depende sa pinsala. Karaniwang sanhi ay sobrang pagkakalantad sa araw, hindi paggamit ng sunscreen, o paggamit ng expired na sunscreen.",
+			"patterns": [
+				"Paano gamutin ang sunburn?",
+				"Ano ang dapat gawin kapag may sunburn?",
+				"Ano ang pinakamainam na gawin upang maibsan ang sakit ng sunburn?",
+				"Mga hakbang sa paggamot ng sunburn?",
+				"Paano mabilis na gumaling ang sunburn?",
+				"Paano bawasan ang pamumula mula sa sunburn?",
+				"Anong dapat ilagay sa sunburned na balat?",
+				"Gaano katagal ang paggaling ng sunburn?",
+				"Paano maiwasan ang pagbabalat mula sa sunburn?",
+				"Paano maiiwasan ang sunburn sa hinaharap?",
+				"Anong mga natural na remedyo ang maaaring gamitin para sa sunburn?"
+			],
+			"procedures": [
+				"Palamigin ang balat gamit ang basang tela o maligamgam na paligo, maglagay ng aloe vera o moisturizer, uminom ng maraming tubig, at iwasan ang karagdagang pagkakalantad sa araw.",
+				"",
+				"Gumamit ng malamig na pomento at aloe vera gel. Uminom ng tubig at iwasan ang araw hanggang maghilom."
+			],
+			"relations": ["Honey", "Aloe vera", "Cucumber"],
+			"references": [
+				"https://www.mayoclinic.org/diseases-conditions/sunburn/diagnosis-treatment/drc-20355928",
+				"https://www.healthline.com/health/video/how-long-does-sunburn-last"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Strains",
+			"type": "injury",
+			"meaning": "Strains are injuries to muscles or tendons, which are tough bands of tissue that connect muscles to bones. They occur when a muscle or tendon is overstretched or torn. Common causes of strains include: Overuse: Overusing a muscle or tendon can lead to strain. Sudden movements: Sudden, forceful movements can strain muscles or tendons. Poor posture: Poor posture can put undue stress on muscles and tendons. Muscle weakness: Weak muscles are more susceptible to strains.",
+			"patterns": [
+				"How to treat muscle strain?",
+				"What to do if I have a strain?",
+				"Best way to treat muscle strains?",
+				"Strain treatment advice?",
+				"How to heal a muscle strain?",
+				"How to relieve pain from a muscle strain?",
+				"What should I do for a pulled muscle?",
+				"How long does a muscle strain take to heal?",
+				"First aid for muscle strains?",
+				"What is the RICE method for muscle strain?"
+			],
+			"procedures": [
+				"Rest the strained muscle and avoid activities that cause pain. Apply ice to the area for 15-20 minutes several times a day. Use an elastic bandage to compress the area, and elevate it to reduce swelling. Over-the-counter painkillers can help manage pain.",
+				"Rest the affected muscle, apply ice, and compress with a bandage. Elevate the limb and take pain relievers as needed."
+			],
+			"relations": ["Luya"],
+			"references": [
+				"https://www.mayoclinic.org/diseases-conditions/muscle-strains/symptoms-causes/syc-20450507",
+				"https://www.verywellhealth.com/sprains-and-strains-2548839"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Strains",
+			"type": "injury",
+			"meaning": "Pilay ng kalamnan ay mga pinsala sa mga kalamnan o tendon, na mga matigas na banda ng tissue na nagkokonekta sa mga kalamnan sa mga buto. Nangyayari ang mga ito kapag ang isang kalamnan o tendon ay naunat nang sobra o napunit. Ang mga karaniwang sanhi ng pilay ng kalamnan ay kinabibilangan ng: Pag-abuso: Ang pag-abuso sa isang kalamnan o tendon ay maaaring humantong sa pilay. Biglang mga galaw: Ang biglang, malalakas na galaw ay maaaring mag-strain sa mga kalamnan o tendon. Masamang postura: Ang masamang postura ay maaaring maglagay ng hindi nararapat na stress sa mga kalamnan at tendon. Kahinaan ng kalamnan: Ang mahina na mga kalamnan ay mas madaling kapitan ng mga pilay.",
+			"patterns": [
+				"Paano gamutin ang muscle strain?",
+				"Ano ang dapat gawin kapag may strain?",
+				"Mga hakbang sa paggamot ng muscle strain?",
+				"Paano mabilis na gumaling ang muscle strain?",
+				"Paano maalis ang sakit mula sa muscle strain?",
+				"Anong gamot ang maaaring inumin para sa muscle strain?",
+				"Paano iwasan ang karagdagang pinsala sa muscle strain?",
+				"Anong mga ehersisyo ang dapat gawin para sa muscle strain?",
+				"Paano iwasan ang muscle strain sa hinaharap?",
+				"Ano ang mga palatandaan ng malalang muscle strain?"
+			],
+			"procedures": [
+				"Pahingahin ang na-pilay na kalamnan at iwasan ang mga aktibidad na nagdudulot ng sakit. Maglagay ng yelo sa apektadong lugar sa loob ng 15-20 minuto nang ilang beses sa isang araw. Gumamit ng elastic na benda upang i-compress ang lugar, at itaas ito upang mabawasan ang pamamaga. Ang mga over-the-counter na painkillers ay maaaring makatulong sa pamamahala ng sakit.",
+				"Pahingahin ang apektadong kalamnan, maglagay ng yelo, at i-compress gamit ang benda. Itaas ang bahagi at uminom ng pain relievers kung kinakailangan."
+			],
+			"relations": ["Luya"],
+			"references": [
+				"https://www.mayoclinic.org/diseases-conditions/muscle-strains/symptoms-causes/syc-20450507",
+				"https://www.verywellhealth.com/sprains-and-strains-2548839"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Chemical Burns",
+			"type": "injury",
+			"meaning": "Chemical burns are injuries caused by contact with corrosive substances, such as acids or bases, which can damage the skin and underlying tissues. Common causes include industrial accidents, laboratory mishaps, household chemicals (e.g., bleach, drain cleaners), and accidental ingestion of harmful substances.",
+			"patterns": [
+				"What to do for a chemical burn?",
+				"How to treat chemical burns?",
+				"Chemical burn treatment advice?",
+				"How to relieve chemical burn pain?",
+				"Best way to heal a chemical burn?",
+				"How to flush a chemical burn?",
+				"What should I apply to a chemical burn?",
+				"How long does it take for a chemical burn to heal?",
+				"First aid for chemical burns?",
+				"What to do if the chemical burn is severe?"
+			],
+			"procedures": [
+				"Immediately flush the affected area with water for at least 20 minutes. Remove any contaminated clothing, cover the burn with a sterile bandage, and avoid applying creams or ointments unless instructed by a healthcare provider. Seek immediate medical attention.",
+				"",
+				"Rinse the burn with water continuously for 20 minutes and remove contaminated clothing. Seek immediate medical help."
+			],
+			"relations": ["nan"],
+			"references": [
+				"https://www.mayoclinic.org/first-aid/first-aid-chemical-burns/basics/art-20056667",
+				"https://my.clevelandclinic.org/health/diseases/22350-chemical-burns",
+				"https://www.nhs.uk/conditions/acid-and-chemical-burns/"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Chemical Burns",
+			"type": "injury",
+			"meaning": "Ang sunog ng kemikal ay sanhi ng pagkakadikit sa mga corrosive substances tulad ng acid o base, na maaaring makapinsala sa balat at mga underlying tissue. Karaniwang sanhi ay mga aksidente sa industriya, laboratoryo, mga kemikal sa bahay, at hindi sinasadyang paglunok ng mapanganib na kemikal.",
+			"patterns": [
+				"Paano gamutin ang kemikal na paso?",
+				"Ano ang dapat gawin kapag may kemikal na paso?",
+				"Mga hakbang sa paggamot ng kemikal na paso?",
+				"Paano maibsan ang sakit mula sa kemikal na paso?",
+				"Ano ang pinakamainam na gawin upang gumaling ang kemikal na paso?",
+				"Paano linisin ang sugat mula sa kemikal na paso?",
+				"Anong gamot ang maaaring ilagay sa kemikal na paso?",
+				"Gaano katagal ang paggaling ng kemikal na paso?",
+				"Paano maiwasan ang karagdagang pinsala mula sa kemikal na paso?",
+				"Ano ang mga palatandaan ng malubhang kemikal na paso?"
+			],
+			"procedures": [
+				"Agad na banlawan ang apektadong bahagi ng tubig sa loob ng hindi bababa sa 20 minuto. Alisin ang maruming damit, takpan ang paso ng sterile na benda, at iwasang maglagay ng mga creams o ointments maliban kung inutos ng healthcare provider. Magpakonsulta agad sa doktor.",
+				"",
+				"Banlawan ang paso ng tuluy-tuloy na tubig sa loob ng 20 minuto at alisin ang maruming damit. Humingi agad ng medikal na tulong.",
+				"",
+				""
+			],
+			"relations": ["nan"],
+			"references": [
+				"https://www.mayoclinic.org/first-aid/first-aid-chemical-burns/basics/art-20056667",
+				"https://my.clevelandclinic.org/health/diseases/22350-chemical-burns",
+				"https://www.nhs.uk/conditions/acid-and-chemical-burns/"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Rash",
+			"type": "injury",
+			"meaning": "A rash is a skin condition characterized by changes in skin appearance, often involving redness, itching, or bumps. Causes include allergies, infections, medications, irritants, and underlying conditions such as eczema or psoriasis.",
+			"patterns": [
+				"How to treat a rash?",
+				"What to do for a rash?",
+				"Best way to relieve rash?",
+				"Rash treatment advice?",
+				"How to reduce rash itching?",
+				"How to identify the cause of a rash?",
+				"What should I apply to a rash?",
+				"How long does it take for a rash to heal?",
+				"First aid for rashes?",
+				"What are the common remedies for rashes?"
+			],
+			"procedures": [
+				"Wash the affected area with mild soap and water. Apply an over-the-counter anti-itch cream or antihistamine. Avoid scratching to prevent infection. If the rash persists or is severe, consult a healthcare provider.",
+				"",
+				"Clean the area gently, apply an anti-itch cream, and avoid irritants. Seek medical advice if the rash spreads or doesn't improve."
+			],
+			"relations": ["Aloe Vera"],
+			"references": ["https://www.healthline.com/health/rashes"],
+			"context_set": ""
+		},
+		{
+			"tag": "Pantal",
+			"type": "injury",
+			"meaning": "Ang rash ay isang kondisyon sa balat na may kasamang pamumula, pangangati, o mga bukol. Maaaring sanhi ito ng mga alerdyi, impeksyon, gamot, irritants, o mga kondisyon sa balat tulad ng eksema at psoriasis.",
+			"patterns": [
+				"Paano gamutin ang pantal?",
+				"Ano ang dapat gawin kapag may pantal?",
+				"Ano ang pinakamainam na gawin upang maibsan ang pantal?",
+				"Mga hakbang sa paggamot ng pantal?",
+				"Paano bawasan ang pangangati mula sa pantal?",
+				"Paano malaman ang sanhi ng pantal?",
+				"Anong dapat ilagay sa pantal?",
+				"Gaano katagal ang paggaling ng pantal?",
+				"Paano iwasan ang paglala ng pantal?",
+				"Ano ang mga karaniwang lunas para sa pantal?",
+				"Kailan dapat kumonsulta sa doktor para sa pantal?"
+			],
+			"procedures": [
+				"Hugasan ang apektadong lugar gamit ang mild na sabon at tubig. Maglagay ng over-the-counter na anti-itch cream o antihistamine. Iwasang kamutin upang maiwasan ang impeksyon. Kung ang pantal ay nagpapatuloy o malubha, magpakonsulta sa isang healthcare provider.",
+				"",
+				"Linisin ang lugar ng maingat, maglagay ng anti-itch cream, at iwasan ang mga irritants. Humingi ng medikal na payo kung ang pantal ay kumakalat o hindi bumubuti."
+			],
+			"relations": ["Aloe Vera"],
+			"references": ["https://www.healthline.com/health/rashes"],
+			"context_set": ""
+		},
+		{
+			"tag": "Snake Bite",
+			"type": "injury",
+			"meaning": "A snakebite is a medical emergency caused by a snake's fangs penetrating the skin and injecting venom. Severity depends on factors such as snake type, bite location, and venom quantity. Common causes of snakebites include accidental encounters and defensive behavior of snakes. Symptoms include pain, swelling, nausea, difficulty breathing, and neurological symptoms like numbness or paralysis.",
+			"patterns": [
+				"What to do if bitten by a snake?",
+				"How to treat a snake bite?",
+				"Snake bite treatment advice?",
+				"How to manage a snake bite?",
+				"What to do for a snake bite?",
+				"How to identify a venomous snake bite?",
+				"What are the first aid steps for a snake bite?",
+				"How to prevent a snake bite?",
+				"What to avoid after a snake bite?",
+				"How long does it take to recover from a snake bite?"
+			],
+			"procedures": [
+				"Stay calm and immobilize the bitten limb. Seek emergency medical care as quickly as possible.",
+				"",
+				"Keep the bitten area still and below heart level to slow venom spread. Remove tight clothing or jewelry near the bite. Do not attempt to suck out the venom. Seek emergency medical help immediately.",
+				"",
+				"Call emergency services immediately. Keep the bite area still and lower than the heart. Do not apply ice or a tourniquet."
+			],
+			"relations": ["nan"],
+			"references": [
+				"https://www.healthline.com/health/snake-bites",
+				"https://my.clevelandclinic.org/health/diseases/15647-snake-bites"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Kagat ng Ahas",
+			"type": "injury",
+			"meaning": "Ang kagat ng ahas ay isang medikal na emerhensiya na nangyayari kapag ang mga ngipin ng ahas ay tumusok sa balat at nag-inject ng lason. Ang kalubhaan ay nakadepende sa uri ng ahas, lokasyon ng kagat, at dami ng lason. Karaniwang sanhi ay aksidenteng pagkikita at pagtatanggol ng mga ahas. Ang mga sintomas ay sakit, pamamaga, pagduduwal, hirap sa paghinga, at sintomas ng neurological tulad ng pamamanhid o paralisis.",
+			"patterns": [
+				"Paano gamutin ang kagat ng ahas?",
+				"Ano ang dapat gawin kung nakagat ng ahas?",
+				"Mga hakbang sa paggamot ng kagat ng ahas?",
+				"Paano pamahalaan ang kagat ng ahas?",
+				"Paano malaman kung ang kagat ng ahas ay makamandag?",
+				"Ano ang mga unang lunas para sa kagat ng ahas?",
+				"Paano maiwasan ang kagat ng ahas?",
+				"Ano ang dapat iwasan pagkatapos ng kagat ng ahas?",
+				"Gaano katagal ang paggaling mula sa kagat ng ahas?",
+				"Anong mga sintomas ang dapat bantayan pagkatapos ng kagat ng ahas?"
+			],
+			"procedures": [
+				"Tumawag agad ng emergency services. Panatilihing hindi gumagalaw ang lugar ng kagat at nasa ibaba ng puso. Huwag maglagay ng yelo o tourniquet.",
+				"",
+				"Manatiling kalmado at i-immobilize ang tinukso na bahagi. Humingi ng agarang medikal na pangangalaga.",
+				"",
+				"Ipahinga ang tinukso na lugar at panatilihing nasa ilalim ng antas ng puso upang mapabagal ang pagkalat ng lason. Alisin ang anumang masikip na damit o alahas malapit sa kagat. Huwag subukang sipsipin ang lason. Humingi agad ng tulong medikal."
+			],
+			"relations": ["nan"],
+			"references": [
+				"https://www.healthline.com/health/snake-bites",
+				"https://my.clevelandclinic.org/health/diseases/15647-snake-bites"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Bruises",
+			"type": "injury",
+			"meaning": "Bruises are caused by damage to blood vessels beneath the skin, leading to bleeding and discoloration. They are often referred to as `contusions.` Common causes of bruises include: Trauma: Injuries from falls, bumps, or collisions can cause bruises. Sports injuries: Contact sports or accidents during physical activity can lead to bruises. Medical conditions: Certain medical conditions, such as blood clotting disorders or easy bruising syndrome, can increase the risk of bruising. Medication side effects: Some medications can cause bruising as a side effect.",
+			"patterns": [
+				"How to treat a bruise?",
+				"What to do for a bruise?",
+				"Best way to heal bruises?",
+				"Bruise treatment advice?",
+				"How to reduce bruise pain?",
+				"How to reduce swelling from a bruise?",
+				"What should I apply to a bruise?",
+				"How long does it take for a bruise to heal?",
+				"First aid for bruises?",
+				"How to prevent bruising?"
+			],
+			"procedures": [
+				"Apply a cold compress to the bruise to reduce swelling. Elevate the affected area to minimize blood flow to the bruise. Rest and avoid further injury to the area. Over-the-counter pain relievers can help with discomfort.",
+				"Use ice packs on the bruise for 10-15 minutes at a time. Keep the bruised area elevated and take pain relief medication if needed."
+			],
+			"relations": ["Aloe Vera", "Pineapple", "orange", "Spinach"],
+			"references": [
+				"https://www.healthline.com/health/bruise",
+				"https://www.medicalnewstoday.com/articles/322742"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Pasa",
+			"type": "injury",
+			"meaning": "Galos ay dulot ng pinsala sa mga blood vessel sa ilalim ng balat, na nagreresulta sa pagdurugo at pagkaitim. Kadalasang tinatawag itong `contusions`. Ang mga karaniwang sanhi ng galos ay kinabibilangan ng: Trauma: Ang mga pinsala mula sa pagbagsak, pagkabunggo, o pagbangga ay maaaring magdulot ng galos. Mga pinsala sa sports: Ang mga contact sports o aksidente sa panahon ng pisikal na aktibidad ay maaaring humantong sa galos. Mga kondisyong medikal: Ang ilang mga kondisyong medikal, tulad ng mga disorder sa pagdugo ng dugo o madaling magkagalos na syndrome, ay maaaring magpataas ng panganib ng galos.",
+			"patterns": [
+				"Paano gamutin ang pasa?",
+				"Ano ang dapat gawin kapag may pasa?",
+				"Ano ang pinakamainam na gawin upang gumaling ang pasa?",
+				"Mga hakbang sa paggamot ng pasa?",
+				"Paano bawasan ang sakit mula sa pasa?",
+				"Paano bawasan ang pamamaga mula sa pasa?",
+				"Anong dapat ilagay sa pasa?",
+				"Gaano katagal ang paggaling ng pasa?",
+				"Paano maiwasan ang pagkakaroon ng pasa?",
+				"Ano ang mga palatandaan ng malubhang pasa?"
+			],
+			"procedures": [
+				"Maglagay ng malamig na pomento sa pasa upang mabawasan ang pamamaga. Itaas ang apektadong lugar upang mabawasan ang daloy ng dugo sa pasa. Magpahinga at iwasan ang karagdagang pinsala sa lugar. Ang mga over-the-counter na pain relievers ay maaaring makatulong sa pag-alis ng hindi komportableng pakiramdam.",
+				"Gumamit ng yelo sa pasa sa loob ng 10-15 minuto bawat sesyon. Panatilihing nakataas ang lugar na may pasa at uminom ng gamot para sa sakit kung kinakailangan."
+			],
+			"relations": ["Aloe Vera", "Pineapple", "orange", "Spinach"],
+			"references": [
+				"https://www.healthline.com/health/bruise",
+				"https://www.medicalnewstoday.com/articles/322742"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Fracture",
+			"type": "injury",
+			"meaning": "A fracture is a break or crack in a bone. Fractures can range from a simple hairline crack to a complete break. Common causes include accidents, sports injuries, osteoporosis, and medical conditions like bone cancer or infections.",
+			"patterns": [
+				"What to do for a fracture?",
+				"How to treat a broken bone?",
+				"Fracture treatment advice?",
+				"Best way to manage a fracture?",
+				"How to relieve fracture pain?",
+				"What first aid steps should I take for a fracture?",
+				"How to immobilize a broken bone?",
+				"How long does it take for a fracture to heal?",
+				"What are the signs of a fracture?",
+				"How to prevent complications from a fracture?"
+			],
+			"procedures": [
+				"Keep the injured area still and avoid moving it. Apply a splint to immobilize the fracture and use a cold pack to reduce swelling. Seek immediate medical attention.",
+				"",
+				"Do not move the injured area and use a splint to keep it immobile. Apply ice and seek emergency medical help."
+			],
+			"relations": ["nan"],
+			"references": ["nan"],
+			"context_set": ""
+		},
+		{
+			"tag": "Fraktura",
+			"type": "injury",
+			"meaning": "Ang bali ay isang pagbasag o pag-crack sa isang buto. Maaaring mag-iba mula sa isang simpleng hairline crack hanggang sa kumpletong pagbasag. Ang mga karaniwang sanhi ay aksidente, mga pinsala sa sports, osteoporosis, at mga kondisyong medikal tulad ng kanser sa buto o impeksyon.",
+			"patterns": [
+				"Paano gamutin ang bali?",
+				"Ano ang dapat gawin para sa bali?",
+				"Mga hakbang sa paggamot ng bali?",
+				"Paano pinakamahusay na pamahalaan ang bali?",
+				"Paano maalis ang sakit mula sa bali?",
+				"Ano ang mga unang lunas para sa bali?",
+				"Paano i-immobilize ang isang nabaling buto?",
+				"Gaano katagal ang paggaling ng bali?",
+				"Ano ang mga palatandaan ng bali?",
+				"Paano maiwasan ang mga komplikasyon mula sa bali?",
+				"Kailan dapat kumonsulta sa doktor para sa bali?"
+			],
+			"procedures": [
+				"Ipahinga ang nasugatang lugar at iwasang galawin ito. Maglagay ng splint upang i-immobilize ang bali at gumamit ng cold pack upang mabawasan ang pamamaga. Humingi ng agarang medikal na atensyon.",
+				"",
+				"Huwag galawin ang nasugatang lugar at gamitin ang splint upang hindi ito gumalaw. Maglagay ng yelo at humingi ng agarang medikal na tulong."
+			],
+			"relations": ["nan"],
+			"references": [
+				"https://my.clevelandclinic.org/health/diseases/15241-bone-fractures",
+				"https://www.healthline.com/health/broken-arm"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Stroke",
+			"type": "injury",
+			"meaning": "Stroke is a medical emergency that occurs when the blood supply to the brain is interrupted or reduced, leading to damage or death of brain cells. Symptoms include sudden numbness or weakness (especially on one side), confusion, trouble speaking or understanding, vision problems, severe headaches, and loss of balance.",
+			"patterns": [
+				"What to do if someone has a stroke?",
+				"How to treat a stroke?",
+				"Stroke first aid advice?",
+				"Best way to help during a stroke?",
+				"What to do during a stroke?",
+				"What to do if someone is having a stroke?",
+				"Stroke emergency steps?",
+				"Stroke treatment advice?",
+				"How to recognize a stroke?",
+				"How to respond if a stroke is suspected?"
+			],
+			"procedures": [
+				"If you suspect someone is having a stroke, call emergency services immediately. Have the person lie down with their head slightly elevated. Monitor their breathing and be ready to perform CPR if necessary.",
+				"",
+				"Seek emergency medical help immediately. Keep the person calm and monitor their breathing.",
+				"",
+				"Act FAST: Face drooping, Arm weakness, Speech difficulty, Time to call emergency services. Call emergency services immediately and note the time the symptoms began. Keep the person comfortable and calm until help arrives.",
+				"",
+				"Call emergency services immediately if you notice face drooping, arm weakness, or speech difficulty. Act FAST and get medical help right away."
+			],
+			"relations": ["nan"],
+			"references": [
+				"https://www.mayoclinic.org/diseases-conditions/stroke/multimedia/vid-20530787https://www.ninds.nih.gov/health-information/stroke/assess-and-treat/nih-stroke-scale"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Stroke",
+			"type": "injury",
+			"meaning": "Ang stroke ay isang medikal na emerhensiya na nangyayari kapag ang suplay ng dugo sa utak ay naantala o nabawasan, na nagdudulot ng pagkamatay o pagkasira ng mga selula ng utak. Ang mga sintomas ay biglaang pamamanhid o panghihina (lalo na sa isang bahagi ng katawan), pagkalito, problema sa pagsasalita o pag-unawa, mga problema sa paningin, matinding sakit ng ulo, at pagkawala ng balanse.",
+			"patterns": [
+				"Paano tumugon kung mayroong stroke ang isang tao?",
+				"Ano ang dapat gawin kung may stroke ang isang tao?",
+				"Ano ang mga palatandaan ng stroke?",
+				"Paano gamutin ang stroke?",
+				"Mga hakbang sa unang lunas para sa stroke?",
+				"Paano makilala ang stroke?",
+				"Ano ang pinakamainam na gawin habang may stroke?",
+				"Paano mas mabilis na makakuha ng tulong sa stroke?",
+				"Ano ang mga emergency steps para sa stroke?",
+				"Anong gamot ang maaaring ibigay sa pasyenteng may stroke?"
+			],
+			"procedures": [
+				"Kung sa tingin mo ay may stroke ang isang tao, tumawag agad ng emergency services. Hayaang humiga ang tao na may bahagyang nakataas ang ulo. Bantayan ang kanilang paghinga at maging handa na magsagawa ng CPR kung kinakailangan.",
+				"",
+				"Humingi agad ng tulong medikal. Panatilihing kalmado ang tao at bantayan ang kanilang paghinga.",
+				"",
+				"Gumamit ng FAST: Face drooping, Arm weakness, Speech difficulty, Time to call emergency services. Tumawag agad ng emergency services at tandaan ang oras ng pagsisimula ng mga sintomas. Panatilihin ang tao na komportable at kalmado hanggang dumating ang tulong.",
+				"",
+				"Tumawag agad ng emergency services kung mapansin ang pag-dagilid ng mukha, kahinaan ng braso, o kahirapan sa pagsasalita. Kumilos ng FAST at kumuha ng medikal na tulong kaagad."
+			],
+			"relations": ["nan"],
+			"references": [
+				"https://www.mayoclinic.org/diseases-conditions/stroke/multimedia/vid-20530787https://www.ninds.nih.gov/health-information/stroke/assess-and-treat/nih-stroke-scale"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Dehydration",
+			"type": "injury",
+			"meaning": "Dehydration occurs when your body loses more fluids than it takes in, preventing it from functioning properly. It can result from excessive sweating, vomiting, diarrhea, or not drinking enough water. Symptoms of dehydration: Dry mouth, thirst, dark-colored urine, fatigue, dizziness, and confusion. Severe dehydration can be life-threatening, leading to rapid heart rate, low blood pressure, and shock.",
+			"patterns": [
+				"What to do for dehydration?",
+				"How to treat dehydration?",
+				"Dehydration first aid advice?",
+				"Best way to rehydrate?",
+				"What are the signs of dehydration?",
+				"How to recognize dehydration?",
+				"What should I do if someone is dehydrated?",
+				"How to prevent dehydration?",
+				"How to avoid dehydration?"
+			],
+			"procedures": [
+				"Drink small sips of water or an oral rehydration solution frequently. Avoid drinks with caffeine or alcohol, as these can worsen dehydration. If dehydration is severe or caused by vomiting or diarrhea, seek medical attention immediately.",
+				"",
+				"If the person is unable to drink fluids due to vomiting, or if dehydration symptoms are severe (like dizziness or fainting), go to the hospital immediately for intravenous (IV) fluids.",
+				"",
+				"Keep the person in a cool environment, encourage them to drink water or a sports drink containing electrolytes. If symptoms do not improve, seek medical help.",
+				"",
+				"For mild dehydration, rest in a cool place and drink water or oral rehydration salts slowly. Avoid sugary or fizzy drinks."
+			],
+			"relations": ["Buko Water", "Tanglad"],
+			"references": [
+				"https://www.webmd.com/diet/health-benefits-coconut-water%20%20%E2%80%8C",
+				"https://www.healthline.com/health/food-nutrition/lemongrass-tea#antioxidant"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Dehydration",
+			"type": "injury",
+			"meaning": "Ang dehydration ay nangyayari kapag mas maraming likido ang nawawala sa iyong katawan kaysa sa iniinom, na pumipigil dito na gumana nang maayos. Maaari itong sanhi ng labis na pagpapawis, pagsusuka, pagtatae, o kakulangan sa pag-inom ng tubig. Mga sintomas ng dehydration: Tuyong bibig, uhaw, madilim na kulay ng ihi, pagkapagod, pagkahilo, at pagkalito. Ang matinding dehydration ay maaaring maging banta sa buhay, na nagdudulot ng mabilis na tibok ng puso, mababang presyon ng dugo, at pagkabigla.",
+			"patterns": [
+				"Paano maiwasan ang dehydration?",
+				"Ano ang mga sintomas ng dehydration?",
+				"Ano ang dapat gawin kung may dehydration?",
+				"Paano gamutin ang dehydration?",
+				"Ano ang mga hakbang upang maiwasan ang dehydration?",
+				"Paano makilala ang dehydration?",
+				"Ano ang pinakamainam na gawin kapag na-dehydrate?",
+				"Paano maibsan ang dehydration?"
+			],
+			"procedures": [
+				"Uminom ng maliliit na sips ng tubig o oral rehydration solution ng madalas. Iwasan ang mga inuming may caffeine o alkohol, dahil maaari nitong palalain ang dehydration. Kung malubha ang dehydration o sanhi ng pagsusuka o pagtatae, agad na humingi ng tulong medikal.",
+				"",
+				"Kung hindi makainom ng likido ang tao dahil sa pagsusuka, o kung malala ang mga sintomas ng dehydration (tulad ng pagkahilo o paghimatay), pumunta agad sa ospital para sa intravenous (IV) na likido.",
+				"",
+				"Panatilihin ang tao sa isang malamig na kapaligiran, hikayatin silang uminom ng tubig o sports drink na naglalaman ng electrolytes. Kung hindi bumuti ang mga sintomas, humingi ng tulong medikal.",
+				"",
+				"Para sa banayad na dehydration, magpahinga sa isang malamig na lugar at dahan-dahang uminom ng tubig o oral rehydration salts. Iwasan ang matatamis o carbonated na inumin."
+			],
+			"relations": ["Buko Water", "Tanglad"],
+			"references": [
+				"https://www.webmd.com/diet/health-benefits-coconut-water%20%20%E2%80%8C",
+				"https://www.healthline.com/health/food-nutrition/lemongrass-tea#antioxidant"
 			],
 			"context_set": ""
 		}
