@@ -179,13 +179,13 @@ export default function Page() {
 									</ModalBody>
 									<ModalFooter>
 										<button
-											className='px-5 py-2 backdrop-blur-sm bg-background/5 border-white/20 border-1 text-foreground rounded-full text-2xl font-bold tracking-tight'
+											className='px-5 py-3 backdrop-blur-sm bg-background/5 border-white/20 border-1 text-foreground rounded-xl text-2xl font-bold tracking-tight'
 											onClick={() => onCloseConsent()}
 										>
 											Disagree
 										</button>
 										<button
-											className='px-5 py-2 backdrop-blur-sm bg-foreground/5 border-foreground/20 border-1 text-foreground rounded-full text-2xl font-bold tracking-tight'
+											className='px-5 py-3 bg-foreground text-background border-foreground/20 border-1 rounded-xl text-2xl font-bold tracking-tight'
 											onClick={() => signIn(strategy)}
 										>
 											Agree
