@@ -8,3 +8,5 @@ nltk
 pandas
 openpyxl
 python-multipart
+keras
+scikit-learn

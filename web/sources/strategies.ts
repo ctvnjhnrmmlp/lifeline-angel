@@ -1,4 +1,4 @@
-import { FaFacebookF, FaGoogle, FaLock } from 'react-icons/fa';
+import { FaFacebookF, FaGoogle } from 'react-icons/fa';
 
 const STRATEGIES = [
 	{
@@ -8,10 +8,6 @@ const STRATEGIES = [
 	{
 		name: 'Facebook',
 		icon: FaFacebookF,
-	},
-	{
-		name: 'Credentials',
-		icon: FaLock,
 	},
 ];
 
