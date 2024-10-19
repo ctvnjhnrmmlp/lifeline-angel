@@ -16,9 +16,10 @@ const ConversationButton = ({ conv }: { conv: Conversation }) => {
 	return (
 		<div
 			key={conv.id}
-			className='backdrop-blur-2xl bg-foreground/1 rounded-2xl shadow-2xl hover:bg-zinc-800 transition duration-100 ease-linear'
+			className='bg-background border-white/20 border-1 rounded-xl hover:bg-zinc-800 transition duration-100 ease-linear'
 			style={{
-				background: pathname.includes(conv.id) ? '#27272A' : '',
+				background: pathname.includes(conv.id) ? '#FFFFFF' : '',
+				color: pathname.includes(conv.id) ? '#000000' : '',
 			}}
 		>
 			<Link href={`/conversation/${conv.id}`}>
@@ -44,7 +45,7 @@ const ConversationButton = ({ conv }: { conv: Conversation }) => {
 							<p
 								className='font-extrabold w-full text-xl text-foreground tracking-tight leading-none text-balance'
 								style={{
-									color: pathname.includes(conv.id) ? '#FFFFFF' : '',
+									color: pathname.includes(conv.id) ? '#000000' : '',
 								}}
 							>
 								{conv.title ? conv.title : 'New conversation'}
@@ -55,7 +56,7 @@ const ConversationButton = ({ conv }: { conv: Conversation }) => {
 						<p
 							className='text-zinc-700 text-xs'
 							style={{
-								color: pathname.includes(conv.id) ? '#FFFFFF' : '',
+								color: pathname.includes(conv.id) ? '#000000' : '',
 							}}
 						>
 							<GoDotFill />
@@ -63,7 +64,7 @@ const ConversationButton = ({ conv }: { conv: Conversation }) => {
 						<p
 							className='font-light w-full text-sm text-zinc-700 tracking-tight leading-none text-ellipsis text-balance'
 							style={{
-								color: pathname.includes(conv.id) ? '#FFFFFF' : '',
+								color: pathname.includes(conv.id) ? '#000000' : '',
 							}}
 						>
 							{getTimeDifference(conv.createdAt.toString())}

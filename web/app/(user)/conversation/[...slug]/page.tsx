@@ -332,7 +332,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 
 	return (
 		<main className='flex flex-col justify-center pl-[26rem] py-4 pr-4 h-screen w-screen'>
-			<section className='overflow-y-scroll no-scrollbar backdrop-blur-2xl bg-foreground/5 rounded-2xl h-screen'>
+			<section className='overflow-y-scroll no-scrollbar bg-background border-white/20 border-1 rounded-3xl h-screen'>
 				<div className='flex flex-col p-6 h-full'>
 					{/* Conversation Navbar */}
 					<div className='w-full flex flex-col flex-wrap justify-between space-between gap-12'>
@@ -372,102 +372,97 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 					</div>
 					{/* Messages */}
 					<div className='overflow-y-scroll no-scrollbar h-screen my-4'>
-						<ScrollShadow className='flex flex-col space-y-3 overflow-y-scroll no-scrollbar py-4 h-screen'>
-							{messagesServer && messagesServer.length > 0 && (
-								<div className='backdrop-blur-2xl bg-foreground/5 rounded-full min-w-4/12 mx-auto'>
-									<div className='cursor-pointer px-6 py-4'>
-										<p className='text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance text-center'>
-											{convertToDateFormat(
-												messagesServer[0].createdAt.toString()
-											)}
-										</p>
+						{messagesServer && messagesServer.length > 0 && (
+							<div className='backdrop-blur-2xl bg-foreground/5 rounded-full min-w-4/12 mx-auto'>
+								<div className='cursor-pointer px-6 py-4'>
+									<p className='text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance text-center'>
+										{convertToDateFormat(
+											messagesServer[0].createdAt.toString()
+										)}
+									</p>
+								</div>
+							</div>
+						)}
+
+						{messagesLocal && !messagesLocal.length && (
+							<div className='space-y-10'>
+								<div className='space-y-4'>
+									<div>
+										<p className='text-2xl font-bold'>Text Injuries</p>
+									</div>
+									<div className='flex flex-wrap gap-2'>
+										{TEXT_INJURIES.map((injury) => (
+											<button
+												key={injury.content}
+												className='text-lg rounded-2xl py-2 px-5 backdrop-blur-2xl bg-foreground/5 font-bold tracking-tight'
+												onClick={() => {
+													handleAddMessage(injury.content);
+													handleUpdateConversation(injury.content);
+												}}
+											>
+												{injury.content}
+											</button>
+										))}
 									</div>
 								</div>
-							)}
 
-							{messagesLocal && !messagesLocal.length && (
-								<div className='space-y-10'>
-									<div className='space-y-4'>
-										<div>
-											<p className='text-2xl font-bold'>Text Injuries</p>
-										</div>
-										<div className='flex flex-wrap gap-2'>
-											{TEXT_INJURIES.map((injury) => (
-												<button
-													key={injury.content}
-													className='text-lg rounded-2xl py-2 px-5 backdrop-blur-2xl bg-foreground/5 font-bold tracking-tight'
-													onClick={() => {
-														handleAddMessage(injury.content);
-														handleUpdateConversation(injury.content);
-													}}
-												>
-													{injury.content}
-												</button>
-											))}
-										</div>
+								<div className='space-y-4'>
+									<div>
+										<p className='text-2xl font-bold'>Image Injuries</p>
 									</div>
-
-									<div className='space-y-4'>
-										<div>
-											<p className='text-2xl font-bold'>Image Injuries</p>
-										</div>
-										<div className='flex flex-wrap gap-3'>
-											{IMAGE_INJURIES.map((injury) => (
-												<Card
-													isPressable
-													shadow='sm'
-													key={injury.content}
-													classNames={{
-														base: 'backdrop-blur-2xl bg-foreground/5',
-													}}
-													onPress={() => {
-														handleAddMessage(injury.content);
-														handleUpdateConversation(injury.content);
-													}}
-												>
-													<CardBody className='overflow-visible p-0'>
-														<Image
-															width={130}
-															height={130}
-															alt={injury.content}
-															className='w-full object-cover'
-															src={`/images/${injury.source}`}
-														/>
-													</CardBody>
-													<CardFooter>
-														<p className='text-md'>{injury.content}</p>
-													</CardFooter>
-												</Card>
-											))}
-										</div>
+									<div className='flex flex-wrap gap-3'>
+										{IMAGE_INJURIES.map((injury) => (
+											<Card
+												isPressable
+												shadow='sm'
+												key={injury.content}
+												classNames={{
+													base: 'backdrop-blur-2xl bg-foreground/5',
+												}}
+												onPress={() => {
+													handleAddMessage(injury.content);
+													handleUpdateConversation(injury.content);
+												}}
+											>
+												<CardBody className='overflow-visible p-0'>
+													<Image
+														width={130}
+														height={130}
+														alt={injury.content}
+														className='w-full object-cover'
+														src={`/images/${injury.source}`}
+													/>
+												</CardBody>
+												<CardFooter>
+													<p className='text-md'>{injury.content}</p>
+												</CardFooter>
+											</Card>
+										))}
 									</div>
 								</div>
-							)}
+							</div>
+						)}
 
-							{messagesLocal?.map((message) => {
-								// @ts-ignore
-								if (checkTextValidURL(message.content)) {
+						{messagesLocal?.map((message) => {
+							// @ts-ignore
+							if (checkTextValidURL(message.content)) {
+								return (
+									<UserImageMessageCard key={message.id} message={message} />
+								);
+							} else {
+								if (message.from === 'user') {
 									return (
-										<UserImageMessageCard key={message.id} message={message} />
-									);
-								} else {
-									if (message.from === 'user') {
-										return (
-											<UserTextMessageCard key={message.id} message={message} />
-										);
-									}
-
-									return (
-										<>
-											<ModelTextMessageCard
-												key={message.id}
-												message={message}
-											/>
-										</>
+										<UserTextMessageCard key={message.id} message={message} />
 									);
 								}
-							})}
-						</ScrollShadow>
+
+								return (
+									<>
+										<ModelTextMessageCard key={message.id} message={message} />
+									</>
+								);
+							}
+						})}
 					</div>
 					{/* Message */}
 					<div className='flex justify-between items-center space-x-6'>

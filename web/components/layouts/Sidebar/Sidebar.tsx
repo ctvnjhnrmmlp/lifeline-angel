@@ -141,7 +141,7 @@ const Sidebar = () => {
 
 	return (
 		<aside className='fixed flex flex-col justify-center p-4 z-10 h-screen'>
-			<div className='hidden lg:block overflow-y-scroll no-scrollbar backdrop-blur-2xl bg-foreground/5 rounded-3xl h-screen w-96'>
+			<div className='hidden lg:block overflow-y-scroll no-scrollbar bg-background border-white/20 border-1 rounded-3xl h-screen w-96'>
 				<div className='flex flex-col flex-wrap justify-between space-between px-4 py-6 gap-4'>
 					{/* Header Container */}
 					<div className='flex justify-between items-center'>
@@ -259,7 +259,7 @@ const Sidebar = () => {
 							type='text'
 							value={conversationQuery}
 							placeholder='Search conversation'
-							className='px-3 py-3 w-full rounded-xl placeholder:font-bold placeholder:text-foreground font-bold text-foreground text-xl'
+							className='px-3 py-3 w-full rounded-xl placeholder:font-bold placeholder:text-foreground font-bold text-foreground text-xl backdrop-blur-sm bg-background/5 border-white/20 border-1 rounded-xl'
 							onChange={(event) =>
 								handleSetConversationQuery(event.target.value)
 							}

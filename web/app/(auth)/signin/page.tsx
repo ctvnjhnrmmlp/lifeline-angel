@@ -42,7 +42,7 @@ export default function Page() {
 					<div className='h-full w-full border-white/20 border-1 rounded-3xl'>
 						<div className='h-full w-full bg-lifeline-angel-cover bg-cover bg-no-repeat rounded-3xl' />
 					</div>
-					<div className='p-28 backdrop-blur-sm bg-white/5 border-white/20 border-1 rounded-3xl'>
+					<div className='p-28 border-white/20 border-1 rounded-3xl'>
 						<div className='flex flex-col justify-center items-center space-y-12'>
 							<div>
 								<h1 className='text-foreground text-center font-extrabold text-7xl leading-none tracking-tight uppercase'>
@@ -92,7 +92,7 @@ export default function Page() {
 								isOpen={isOpenConsent}
 								closeButton={<></>}
 								classNames={{
-									base: 'backdrop-blur-sm bg-background/90 border-white/20 border-1 p-4',
+									base: 'bg-background border-white/20 border-1 p-4',
 									header: 'flex justify-center items-center',
 									body: 'flex gap-4',
 									footer: 'py-4 space-x-0.5',
@@ -179,7 +179,7 @@ export default function Page() {
 									</ModalBody>
 									<ModalFooter>
 										<button
-											className='px-5 py-3 backdrop-blur-sm bg-background/5 border-white/20 border-1 text-foreground rounded-xl text-2xl font-bold tracking-tight'
+											className='px-5 py-3 bg-background border-white/20 border-1 text-foreground rounded-xl text-2xl font-bold tracking-tight'
 											onClick={() => onCloseConsent()}
 										>
 											Disagree
