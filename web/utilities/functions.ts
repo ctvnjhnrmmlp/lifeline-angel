@@ -87,3 +87,16 @@ export const convertImageDataUrlToFile = (
 
 	return new File([u8arr], filename, { type: mime });
 };
+
+export const convertBase64UrlToInt8Array = (url: string) => {
+	const padding = '='.repeat((4 - (url.length % 4)) % 4);
+	const base64 = (url + padding).replace(/\\-/g, '+').replace(/_/g, '/');
+	const rawData = window.atob(base64);
+	const outputArray = new Uint8Array(rawData.length);
+
+	for (let i = 0; i < rawData.length; ++i) {
+		outputArray[i] = rawData.charCodeAt(i);
+	}
+
+	return outputArray;
+};

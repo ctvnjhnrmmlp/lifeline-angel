@@ -10,14 +10,14 @@ webpush.setVapidDetails(
 
 let subscription: PushSubscription | null = null;
 
-export async function subscribeUser(sub: PushSubscription) {
+export async function subscribeNotifications(sub: PushSubscription) {
 	subscription = sub;
 	// In a production environment, you would want to store the subscription in a database
 	// For example: await db.subscriptions.create({ data: sub })
 	return { success: true };
 }
 
-export async function unsubscribeUser() {
+export async function unsubscribeNotifications() {
 	subscription = null;
 	// In a production environment, you would want to remove the subscription from the database
 	// For example: await db.subscriptions.delete({ where: { ... } })
@@ -31,6 +31,7 @@ export async function sendNotification(message: string) {
 
 	try {
 		await webpush.sendNotification(
+			// @ts-ignore
 			subscription,
 			JSON.stringify({
 				title: 'Test Notification',

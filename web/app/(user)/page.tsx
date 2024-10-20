@@ -2,6 +2,7 @@
 
 import { useSession } from 'next-auth/react';
 import { redirect } from 'next/navigation';
+import { subscribeNotifications, unsubscribeNotifications } from '../actions';
 
 export default function Page() {
 	const { data: session } = useSession();
