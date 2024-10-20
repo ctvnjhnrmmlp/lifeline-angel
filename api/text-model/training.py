@@ -8,7 +8,8 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.optimizers import SGD
 
-nltk.download('all')
+nltk.download('punkt')
+nltk.download('wordnet')
 
 # Initialize lemmatizer
 lemmatizer = WordNetLemmatizer()
@@ -82,7 +83,7 @@ sgd = SGD(learning_rate=0.01, decay=1e-6, momentum=0.9, nesterov=True)
 model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 
 # Train the model (you may want to adjust epochs and batch_size based on your dataset)
-hist = model.fit(train_x, train_y, epochs=200, batch_size=8, verbose=1)  # Reduced epochs for faster testing
+hist = model.fit(train_x, train_y, epochs=300, batch_size=8, verbose=1)  # Reduced epochs for faster testing
 
 # Save the trained model
 model.save('text_model.h5')

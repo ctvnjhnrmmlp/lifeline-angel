@@ -10,3 +10,4 @@ openpyxl
 python-multipart
 keras
 scikit-learn
+cv
