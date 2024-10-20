@@ -602,7 +602,9 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 															/>
 														</CardBody>
 														<CardFooter>
-															<p className='text-md'>{injury.content}</p>
+															<p className='text-lg font-bold tracking-tight mx-auto text-center'>
+																{injury.content}
+															</p>
 														</CardFooter>
 													</Card>
 												))}
