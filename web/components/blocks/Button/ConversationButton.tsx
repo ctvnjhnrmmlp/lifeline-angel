@@ -23,7 +23,7 @@ const ConversationButton = ({ conv }: { conv: Conversation }) => {
 			}}
 		>
 			<Link href={`/conversation/${conv.id}`}>
-				<div className='flex items-center justify-between rounded-2xl cursor-pointer px-4 py-6'>
+				<div className='flex items-center justify-between rounded-2xl cursor-pointer px-4 py-5'>
 					{checkEntitySecondsAgo(conv.createdAt.toString()) && (
 						<div>
 							<p
