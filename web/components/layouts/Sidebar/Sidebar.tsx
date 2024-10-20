@@ -280,22 +280,6 @@ const Sidebar = () => {
 								{conversationsTemporary?.map((conv) => (
 									<ConversationButton key={conv.id} conv={conv} />
 								))}
-
-								{conversationsTemporary?.length > 0 && (
-									<div>
-										<p className='text-xl font-extralight text-zinc-800 text-center'>
-											{conversationsTemporary.length} conversations in total
-										</p>
-									</div>
-								)}
-
-								{conversationsTemporary?.length <= 0 && (
-									<div>
-										<p className='text-xl font-extralight text-zinc-800 text-center'>
-											No conversations
-										</p>
-									</div>
-								)}
 							</ScrollShadow>
 						)}
 
@@ -304,22 +288,6 @@ const Sidebar = () => {
 								{conversationsLocal?.map((conv) => (
 									<ConversationButton key={conv.id} conv={conv} />
 								))}
-
-								{conversationsLocal?.length > 0 && (
-									<div>
-										<p className='text-xl font-extralight text-zinc-800 text-center'>
-											{conversationsLocal.length} conversations in total
-										</p>
-									</div>
-								)}
-
-								{conversationsLocal?.length <= 0 && (
-									<div>
-										<p className='text-xl font-extralight text-zinc-800 text-center'>
-											No conversations
-										</p>
-									</div>
-								)}
 							</ScrollShadow>
 						)}
 					</div>
