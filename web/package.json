@@ -22,6 +22,7 @@
 		"@types/animejs": "^3.1.12",
 		"@types/react-speech-recognition": "^3.9.5",
 		"@types/uuid": "^10.0.0",
+		"@types/web-push": "^3.6.3",
 		"@uploadthing/react": "^6.7.2",
 		"animejs": "^3.2.2",
 		"aws-crt": "^1.21.3",
