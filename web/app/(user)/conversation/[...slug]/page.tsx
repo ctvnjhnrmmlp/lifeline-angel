@@ -373,7 +373,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 					{/* Messages */}
 					<div className='space-y-4 overflow-y-scroll no-scrollbar h-screen py-8 rounded-xl'>
 						{messagesServer && messagesServer.length > 0 && (
-							<div className='bg-background rounded-xl min-w-4/12 mx-auto'>
+							<div className='bg-background border-foreground/20 border-1 rounded-xl mx-auto'>
 								<div className='cursor-pointer px-6 py-4'>
 									<p className='text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance text-center'>
 										{convertToDateFormat(
