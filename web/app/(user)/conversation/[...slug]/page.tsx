@@ -335,7 +335,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 			<section className='overflow-y-scroll no-scrollbar bg-background border-foreground/20 border-1 rounded-3xl h-screen'>
 				<div className='flex flex-col p-6 h-full'>
 					{/* Conversation Navbar */}
-					<div className='w-full flex flex-col flex-wrap justify-between space-between gap-12'>
+					<div className='w-full flex flex-col flex-wrap justify-between space-between gap-12 pb-2'>
 						<div className='flex items-center justify-between'>
 							<div>
 								<p className='font-bold text-4xl'>
@@ -371,7 +371,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 						</div>
 					</div>
 					{/* Messages */}
-					<div className='overflow-y-scroll no-scrollbar h-screen my-8'>
+					<div className='overflow-y-scroll no-scrollbar h-screen py-8 rounded-xl'>
 						{messagesServer && messagesServer.length > 0 && (
 							<div className='backdrop-blur-2xl bg-foreground/5 rounded-full min-w-4/12 mx-auto'>
 								<div className='cursor-pointer px-6 py-4'>
@@ -414,7 +414,6 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 										{IMAGE_INJURIES.map((injury) => (
 											<Card
 												isPressable
-												shadow='sm'
 												key={injury.content}
 												classNames={{
 													base: 'bg-background border-foreground/20 border-1',
@@ -434,7 +433,9 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 													/>
 												</CardBody>
 												<CardFooter>
-													<p className='text-md'>{injury.content}</p>
+													<p className='text-lg font-bold tracking-tight mx-auto text-center'>
+														{injury.content}
+													</p>
 												</CardFooter>
 											</Card>
 										))}
@@ -465,7 +466,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 						})}
 					</div>
 					{/* Message */}
-					<div className='flex justify-between items-center space-x-6'>
+					<div className='flex justify-between items-center space-x-6 pt-4'>
 						<div className='flex items-center justify-center space-x-4'>
 							<button className='text-foreground text-2xl' onClick={onOpenFile}>
 								<FaPaperclip />
