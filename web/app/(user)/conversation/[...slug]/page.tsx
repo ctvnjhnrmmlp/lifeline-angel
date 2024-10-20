@@ -335,7 +335,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 			<section className='overflow-y-scroll no-scrollbar bg-background border-foreground/20 border-1 rounded-3xl h-screen'>
 				<div className='flex flex-col p-6 h-full'>
 					{/* Conversation Navbar */}
-					<div className='w-full flex flex-col flex-wrap justify-between space-between gap-12 pb-2'>
+					<div className='w-full flex flex-col flex-wrap justify-between space-between gap-12 pb-4'>
 						<div className='flex items-center justify-between'>
 							<div>
 								<p className='font-bold text-4xl'>
@@ -466,7 +466,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 						})}
 					</div>
 					{/* Message */}
-					<div className='flex justify-between items-center space-x-6 pt-4'>
+					<div className='flex justify-between items-center space-x-6 pt-6'>
 						<div className='flex items-center justify-center space-x-4'>
 							<button className='text-foreground text-2xl' onClick={onOpenFile}>
 								<FaPaperclip />
