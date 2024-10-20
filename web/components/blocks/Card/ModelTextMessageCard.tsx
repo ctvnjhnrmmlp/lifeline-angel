@@ -75,7 +75,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 		<div className='flex flex-col space-y-2'>
 			<div
 				key={message.id}
-				className='bg-foreground rounded-2xl ml-0 mr-auto w-5/12'
+				className='bg-foreground rounded-xl ml-0 mr-auto w-5/12'
 			>
 				<div className='flex flex-col space-y-6 cursor-pointer p-4'>
 					<div className='space-y-2'>

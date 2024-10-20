@@ -332,7 +332,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 
 	return (
 		<main className='flex flex-col justify-center pl-[26rem] py-4 pr-4 h-screen w-screen'>
-			<section className='overflow-y-scroll no-scrollbar bg-background border-white/20 border-1 rounded-3xl h-screen'>
+			<section className='overflow-y-scroll no-scrollbar bg-background border-foreground/20 border-1 rounded-3xl h-screen'>
 				<div className='flex flex-col p-6 h-full'>
 					{/* Conversation Navbar */}
 					<div className='w-full flex flex-col flex-wrap justify-between space-between gap-12'>
@@ -488,7 +488,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 								type='text'
 								value={message}
 								placeholder='Aa'
-								className='py-3 px-4 w-full rounded-xl placeholder:font-bold placeholder:text-foreground font-bold text-foreground text-2xl'
+								className='py-3 px-4 w-full rounded-xl bg-background border-foreground/20 border-1 placeholder:font-bold placeholder:text-foreground font-bold text-foreground text-2xl'
 								onChange={(event) => {
 									setMessage(event.target.value);
 								}}
@@ -539,7 +539,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 												{TEXT_INJURIES.map((injury) => (
 													<button
 														key={injury.content}
-														className='text-lg rounded-2xl py-2 px-5 backdrop-blur-2xl bg-foreground/10 font-bold tracking-tight'
+														className='text-lg rounded-xl py-2 px-5 bg-background border-foreground/20 border-1 font-bold tracking-tight'
 														onClick={() => {
 															handleAddMessage(injury.content);
 															handleUpdateConversation(injury.content);
@@ -583,7 +583,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 														shadow='sm'
 														key={injury.content}
 														classNames={{
-															base: 'backdrop-blur-2xl bg-foreground/10',
+															base: 'bg-background border-foreground/20 border-1',
 														}}
 														onPress={() => {
 															handleAddMessage(injury.content);
@@ -636,34 +636,34 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 										</ModalHeader>
 										<ModalBody>
 											<button
-												className='backdrop-blur-2xl bg-foreground/10 rounded-xl cursor-pointer p-4'
+												className='bg-foreground rounded-xl cursor-pointer p-4'
 												onClick={() => onOpenChangeSearch()}
 											>
-												<p className='font-bold w-full text-2xl text-foreground tracking-tight leading-none text-ellipsis text-balance'>
+												<p className='font-bold w-full text-2xl text-background tracking-tight leading-none text-ellipsis text-balance'>
 													Search
 												</p>
 											</button>
 											<button
-												className='backdrop-blur-2xl bg-foreground/10 rounded-xl cursor-pointer p-4'
+												className='bg-foreground rounded-xl cursor-pointer p-4'
 												onClick={() => onOpenChangeMedia()}
 											>
-												<p className='font-bold w-full text-2xl text-foreground tracking-tight leading-none text-ellipsis text-balance'>
+												<p className='font-bold w-full text-2xl text-background tracking-tight leading-none text-ellipsis text-balance'>
 													Media
 												</p>
 											</button>
 											<button
-												className='backdrop-blur-2xl bg-foreground/10 rounded-xl cursor-pointer p-4'
+												className='bg-foreground rounded-xl cursor-pointer p-4'
 												onClick={() => onOpenChangePrivacy()}
 											>
-												<p className='font-bold w-full text-2xl text-foreground tracking-tight leading-none text-ellipsis text-balance'>
+												<p className='font-bold w-full text-2xl text-background tracking-tight leading-none text-ellipsis text-balance'>
 													Privacy
 												</p>
 											</button>
 											<button
-												className='backdrop-blur-2xl bg-foreground/10 rounded-xl cursor-pointer p-4'
+												className='bg-foreground rounded-xl cursor-pointer p-4'
 												onClick={() => onOpenChangeSupport()}
 											>
-												<p className='font-bold w-full text-2xl text-foreground tracking-tight leading-none text-ellipsis text-balance'>
+												<p className='font-bold w-full text-2xl text-background tracking-tight leading-none text-ellipsis text-balance'>
 													Support
 												</p>
 											</button>
@@ -725,7 +725,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 													/>
 													<label
 														htmlFor='image-input'
-														className='flex flex-col items-center justify-center w-full h-72 rounded-2xl cursor-pointer bg-background outline outline-[#3F3F46] outline-[0.1px]'
+														className='flex flex-col items-center justify-center w-full h-72 rounded-2xl cursor-pointer bg-background border-foreground/20 border-1'
 													>
 														<div className='flex flex-col items-center justify-center pt-5 pb-6'>
 															<FaCloudArrowUp className='text-9xl text-foreground' />
