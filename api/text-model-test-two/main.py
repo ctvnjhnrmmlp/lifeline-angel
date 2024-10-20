@@ -15,8 +15,8 @@ from sklearn.preprocessing import LabelEncoder
 from tensorflow.keras.callbacks import EarlyStopping
 import matplotlib.pyplot as plt
 
-nltk.download('punkt')
-nltk.download('wordnet')
+# nltk.download('punkt')
+# nltk.download('wordnet')
 
 # Initialize lemmatizer
 lemmatizer = WordNetLemmatizer()
