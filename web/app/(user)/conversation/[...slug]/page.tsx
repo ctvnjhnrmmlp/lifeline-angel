@@ -371,7 +371,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 						</div>
 					</div>
 					{/* Messages */}
-					<div className='overflow-y-scroll no-scrollbar h-screen my-4'>
+					<div className='overflow-y-scroll no-scrollbar h-screen my-8'>
 						{messagesServer && messagesServer.length > 0 && (
 							<div className='backdrop-blur-2xl bg-foreground/5 rounded-full min-w-4/12 mx-auto'>
 								<div className='cursor-pointer px-6 py-4'>
