@@ -394,7 +394,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 										{TEXT_INJURIES.map((injury) => (
 											<button
 												key={injury.content}
-												className='text-lg rounded-2xl py-2 px-5 backdrop-blur-2xl bg-foreground/5 font-bold tracking-tight'
+												className='text-lg rounded-xl py-2 px-5 bg-background border-foreground/20 border-1 font-bold tracking-tight'
 												onClick={() => {
 													handleAddMessage(injury.content);
 													handleUpdateConversation(injury.content);
@@ -417,7 +417,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 												shadow='sm'
 												key={injury.content}
 												classNames={{
-													base: 'backdrop-blur-2xl bg-foreground/5',
+													base: 'bg-background border-foreground/20 border-1',
 												}}
 												onPress={() => {
 													handleAddMessage(injury.content);
