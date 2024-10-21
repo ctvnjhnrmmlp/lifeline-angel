@@ -12,8 +12,9 @@ from fastapi import (FastAPI, File, HTTPException, UploadFile, WebSocket,
                      WebSocketDisconnect)
 from nltk.stem import WordNetLemmatizer
 from pydantic import BaseModel
-from tensorflow.keras.models import load_model
+import tensorflow.keras.models as tf_models  # Explicit TensorFlow model import
 from PIL import Image
+from fastai.vision.all import *
 
 nltk.download('punkt')
 nltk.download('punkt_tab')
@@ -25,24 +26,22 @@ app = FastAPI()
 lemmatizer = WordNetLemmatizer()
 
 # Load intents JSON file
-with open("./text-model/dataset.json") as file:
+with open("../models/astra/dataset.json") as file:
     intents = json.load(file)
 
-# Load words, classes, and model
-with open("./text-model/words.pkl", "rb") as file:
+# Load words, classes, and model (using TensorFlow for the chatbot)
+with open("../models/astra/words.pkl", "rb") as file:
     words = pickle.load(file)
 
-with open("./text-model/classes.pkl", "rb") as file:
+with open("../models/astra/classes.pkl", "rb") as file:
     classes = pickle.load(file)
 
-chatbot_model = load_model(
-    "./text-model/text_model.h5"
-)
+# Load the TensorFlow chatbot model explicitly
+chatbot_model = tf_models.load_model("../models/astra/astra.h5")
 
-# Load the image classifier model
-image_model = load_model("./image-model-test-one/image_model.h5")
-class_names = ["Abrasions", "Bruises", "Burns", "Cuts", "Laserations"]
-img_size = 180  # Image size expected by the model
+# Load the image classifier model using FastAI
+image_model = load_learner("../models/vesper/vesper.pkl")
+class_names = image_model.dls.vocab  # Get the class names from the model's data
 
 # Text model functions
 def clean_up_sentence(sentence):
@@ -61,7 +60,7 @@ def bag_of_words(sentence):
 
 def predict_class(sentence):
     bow = bag_of_words(sentence)
-    res = chatbot_model.predict(np.array([bow]))[0]
+    res = chatbot_model.predict(np.array([bow]))[0]  # Using TensorFlow's model here
     ERROR_THRESHOLD = 0.25
     results = [[i, r] for i, r in enumerate(res) if r > ERROR_THRESHOLD]
 
@@ -95,13 +94,10 @@ async def chat_endpoint(request: ChatRequest):
     return ChatResponse(response=response)
 
 # Image classification functions
-def preprocess_image(image: np.ndarray):
-    """Preprocess the image to fit the model input."""
-    img = Image.fromarray(image)  # Convert numpy array to PIL Image
-    img = img.resize((img_size, img_size))  # Resize to expected input size
-    img_array = np.array(img) / 255.0  # Normalize pixel values
-    img_array = np.expand_dims(img_array, axis=0)  # Add batch dimension
-    return img_array
+def predict_image(image):
+    """Predict the class of an image using the FastAI model."""
+    pred, pred_idx, probs = image_model.predict(image)  # Using FastAI model here
+    return pred, probs[pred_idx].item()
 
 @app.post("/api/classify")
 async def classify_image(file: UploadFile = File(...)):
@@ -111,12 +107,14 @@ async def classify_image(file: UploadFile = File(...)):
     if image is None:
         raise HTTPException(status_code=400, detail="Invalid image file")
 
+    # Convert to PIL format for FastAI
     image = cv.cvtColor(image, cv.COLOR_BGR2RGB)
-    preprocessed_image = preprocess_image(image)
+    pil_image = Image.fromarray(image)
 
-    prediction = image_model.predict(preprocessed_image)
-    index = np.argmax(prediction)
-    return {"prediction": class_names[index]}
+    # Use FastAI's predict method
+    prediction, confidence = predict_image(pil_image)
+
+    return {"prediction": prediction, "confidence": confidence}
 
 @app.websocket("/api/ws/talk")
 async def websocket_chat(websocket: WebSocket):
@@ -142,12 +140,13 @@ async def websocket_classify_image(websocket: WebSocket):
                 await websocket.send_text("Invalid image file")
                 continue
 
+            # Convert to PIL format for FastAI
             image = cv.cvtColor(image, cv.COLOR_BGR2RGB)
-            preprocessed_image = preprocess_image(image)
+            pil_image = Image.fromarray(image)
 
-            prediction = image_model.predict(preprocessed_image)
-            index = np.argmax(prediction)
-            await websocket.send_text(class_names[index])
+            # Predict using FastAI model
+            prediction, confidence = predict_image(pil_image)
+            await websocket.send_text(f"{prediction} with confidence {confidence:.4f}")
     except WebSocketDisconnect:
         print("Client disconnected")
 
