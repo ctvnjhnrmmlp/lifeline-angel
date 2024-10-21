@@ -16,9 +16,11 @@ import tensorflow.keras.models as tf_models  # Explicit TensorFlow model import
 from PIL import Image
 from fastai.vision.all import *
 
-nltk.download('punkt')
-nltk.download('punkt_tab')
-nltk.download('wordnet')
+nltk.download('all')
+
+# nltk.download('punkt')
+# nltk.download('punkt_tab')
+# nltk.download('wordnet')
 
 app = FastAPI()
 
