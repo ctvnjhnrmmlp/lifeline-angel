@@ -7,17 +7,22 @@ from typing import List
 import cv2 as cv
 import nltk
 import numpy as np
-import uvicorn
-from fastapi import (FastAPI, File, HTTPException, UploadFile, WebSocket,
-                     WebSocketDisconnect)
-from nltk.stem import WordNetLemmatizer
-from pydantic import BaseModel
 import tensorflow.keras.models as tf_models  # Explicit TensorFlow model import
-from PIL import Image
+import uvicorn
 from fastai.vision.all import *
+from fastapi import (
+    FastAPI,
+    File,
+    HTTPException,
+    UploadFile,
+    WebSocket,
+    WebSocketDisconnect,
+)
+from nltk.stem import WordNetLemmatizer
+from PIL import Image
+from pydantic import BaseModel
 
-nltk.download('all')
-
+# nltk.download('all')
 # nltk.download('punkt')
 # nltk.download('punkt_tab')
 # nltk.download('wordnet')
@@ -45,11 +50,13 @@ chatbot_model = tf_models.load_model("../models/astra/astra.h5")
 image_model = load_learner("../models/vesper/vesper.pkl")
 class_names = image_model.dls.vocab  # Get the class names from the model's data
 
+
 # Text model functions
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
     sentence_words = [lemmatizer.lemmatize(word.lower()) for word in sentence_words]
     return sentence_words
+
 
 def bag_of_words(sentence):
     sentence_words = clean_up_sentence(sentence)
@@ -59,6 +66,7 @@ def bag_of_words(sentence):
             if word == w:
                 bag[i] = 1
     return np.array(bag)
+
 
 def predict_class(sentence):
     bow = bag_of_words(sentence)
@@ -72,6 +80,7 @@ def predict_class(sentence):
         return_list.append({"intent": classes[r[0]], "probability": str(r[1])})
     return return_list
 
+
 def get_response(intents_list, intents_json):
     tag = intents_list[0]["intent"]
     for intent in intents_json["intents"]:
@@ -83,11 +92,14 @@ def get_response(intents_list, intents_json):
                 "references": intent["references"],
             }
 
+
 class ChatRequest(BaseModel):
     message: str
 
+
 class ChatResponse(BaseModel):
     response: dict
+
 
 @app.post("/api/talk", response_model=ChatResponse)
 async def chat_endpoint(request: ChatRequest):
@@ -95,11 +107,13 @@ async def chat_endpoint(request: ChatRequest):
     response = get_response(ints, intents)
     return ChatResponse(response=response)
 
+
 # Image classification functions
 def predict_image(image):
     """Predict the class of an image using the FastAI model."""
     pred, pred_idx, probs = image_model.predict(image)  # Using FastAI model here
     return pred, probs[pred_idx].item()
+
 
 @app.post("/api/classify")
 async def classify_image(file: UploadFile = File(...)):
@@ -118,6 +132,7 @@ async def classify_image(file: UploadFile = File(...)):
 
     return {"prediction": prediction, "confidence": confidence}
 
+
 @app.websocket("/api/ws/talk")
 async def websocket_chat(websocket: WebSocket):
     await websocket.accept()
@@ -129,6 +144,7 @@ async def websocket_chat(websocket: WebSocket):
             await websocket.send_text(json.dumps(response))
     except WebSocketDisconnect:
         print("Client disconnected")
+
 
 @app.websocket("/api/ws/classify")
 async def websocket_classify_image(websocket: WebSocket):
@@ -151,6 +167,7 @@ async def websocket_classify_image(websocket: WebSocket):
             await websocket.send_text(f"{prediction} with confidence {confidence:.4f}")
     except WebSocketDisconnect:
         print("Client disconnected")
+
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)

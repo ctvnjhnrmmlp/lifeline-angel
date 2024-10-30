@@ -1,0 +1,88 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("NEXT_PUBLIC_MONGODB_URI_FULL")
+}
+
+model User {
+  id            String         @id @default(uuid()) @map("_id")
+  name          String
+  email         String?        @unique
+  emailVerified DateTime?      @map("email_verified")
+  image         String?
+  agreed        Boolean?
+  accounts      Account[]
+  sessions      Session[]
+  conversations Conversation[] @relation("UserConversation")
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+
+  @@map("users")
+}
+
+model Account {
+  id                String   @id @default(cuid()) @map("_id")
+  userId            String   @map("user_id")
+  type              String?
+  provider          String
+  providerAccountId String   @map("provider_account_id")
+  token_type        String?
+  refresh_token     String?  @db.String
+  access_token      String?  @db.String
+  expires_at        Int?
+  scope             String?
+  id_token          String?  @db.String
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@map("accounts")
+}
+
+model Session {
+  id           String   @id @default(cuid()) @map("_id")
+  userId       String?  @map("user_id")
+  sessionToken String   @unique @map("session_token") @db.String
+  accessToken  String?  @map("access_token") @db.String
+  expires      DateTime
+  user         User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@map("sessions")
+}
+
+model VerificationRequest {
+  id         String   @id @default(cuid()) @map("_id")
+  identifier String
+  token      String   @unique
+  expires    DateTime
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@unique([identifier, token])
+}
+
+model Conversation {
+  id        String    @id @default(cuid()) @map("_id")
+  title     String
+  messages  Message[] @relation("MessageConversation")
+  user      User      @relation("UserConversation", fields: [userId], references: [id])
+  userId    String
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Message {
+  id             String       @id @default(cuid()) @map("_id")
+  content        Json
+  from           String
+  conversation   Conversation @relation("MessageConversation", fields: [conversationId], references: [id])
+  conversationId String
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+}
