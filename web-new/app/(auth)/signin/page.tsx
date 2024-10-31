@@ -78,18 +78,18 @@ export default function Page() {
 										</button>
 									</div>
 								</DialogTrigger>
-								<DialogContent className='sm:max-w-[70rem] sm:max-h-[50rem]'>
+								<DialogContent className='sm:max-w-[70rem] sm:max-h-[50rem] bg-foreground border-0'>
 									<DialogHeader>
-										<DialogTitle className='text-3xl font-bold text-center'>
+										<DialogTitle className='text-3xl font-bold text-center text-background'>
 											Collecting Personal Information
 										</DialogTitle>
 										<DialogDescription asChild>
 											<div className='flex flex-col space-y-5 justify-center py-2'>
 												<div>
-													<p className='text-lg'>Dear User,</p>
+													<p className='text-lg text-background'>Dear User,</p>
 												</div>
 												<div>
-													<p className='text-lg text-balance'>
+													<p className='text-lg text-balance text-background'>
 														Welcome to Lifeline Angel! To provide you with
 														accurate and personalized first aid recommendations
 														based on your{' '}
@@ -106,7 +106,7 @@ export default function Page() {
 													</p>
 												</div>
 												<div>
-													<p className='text-lg text-balance'>
+													<p className='text-lg text-balance text-background'>
 														By using our service, you consent to our collection,
 														storage, and processing of this personal data in
 														accordance with our Privacy Policy. The information
@@ -117,7 +117,7 @@ export default function Page() {
 													</p>
 												</div>
 												<div>
-													<p className='text-lg text-balance'>
+													<p className='text-lg text-balance text-background'>
 														We take your privacy seriously and adhere to the
 														highest standards of data protection, in compliance
 														with relevant laws, including the{' '}
@@ -128,7 +128,7 @@ export default function Page() {
 													</p>
 												</div>
 												<div>
-													<p className='text-lg text-balance'>
+													<p className='text-lg text-balance text-background'>
 														You have the right to withdraw your consent at any
 														time, request access to your data, or ask for its
 														deletion by contacting us at{' '}
@@ -138,19 +138,19 @@ export default function Page() {
 													</p>
 												</div>
 												<div>
-													<p className='text-lg text-balance'>
+													<p className='text-lg text-balance text-background'>
 														If you agree to these terms, please indicate your
 														consent by clicking{' '}
 														<span className='font-bold'>Accept</span> below.
 													</p>
 												</div>
 												<div>
-													<p className='text-lg text-balance'>
+													<p className='text-lg text-balance text-background'>
 														Thank you for your trust!
 													</p>
 												</div>
 												<div>
-													<p className='text-xl font-bold text-balance'>
+													<p className='text-xl font-bold text-balance text-background'>
 														The Lifeline Angel Team
 													</p>
 												</div>
@@ -159,12 +159,12 @@ export default function Page() {
 									</DialogHeader>
 									<DialogFooter>
 										<DialogClose asChild>
-											<button className='px-5 py-3 bg-background border-white/20 border-1 text-foreground rounded-xl text-2xl font-bold tracking-tight outline outline-1'>
+											<button className='px-5 py-3 bg-foreground text-background rounded-xl text-2xl font-bold tracking-tight outline outline-1'>
 												Disagree
 											</button>
 										</DialogClose>
 										<button
-											className='px-5 py-3 bg-foreground text-background border-foreground/20 border-1 rounded-xl text-2xl font-bold tracking-tight'
+											className='px-5 py-3 bg-background text-foreground rounded-xl text-2xl font-bold tracking-tight'
 											onClick={() => signIn(strategy)}
 										>
 											Agree
