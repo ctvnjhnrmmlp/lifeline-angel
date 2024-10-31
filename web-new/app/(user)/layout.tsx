@@ -164,8 +164,8 @@ export default function Layout({
 
 	return (
 		<SidebarProvider>
-			<Sidebar collapsible='icon' className='bg-background min-w-14'>
-				<SidebarHeader>
+			<Sidebar collapsible='icon' className='min-w-14'>
+				<SidebarHeader className='bg-background'>
 					<SidebarMenu>
 						<SidebarMenuItem className='space-y-2'>
 							<Link href='/'>
@@ -186,7 +186,7 @@ export default function Layout({
 						</SidebarMenuItem>
 					</SidebarMenu>
 				</SidebarHeader>
-				<SidebarContent>
+				<SidebarContent className='bg-background'>
 					<SidebarGroup>
 						<SidebarMenu className='space-y-1 no-scrollbar'>
 							{openSearch && (
@@ -206,7 +206,7 @@ export default function Layout({
 						</SidebarMenu>
 					</SidebarGroup>
 				</SidebarContent>
-				<SidebarFooter>
+				<SidebarFooter className='bg-background'>
 					<SidebarMenu>
 						<SidebarMenuItem>
 							<DropdownMenu>
@@ -299,19 +299,17 @@ export default function Layout({
 					<div className='flex items-center gap-2 px-4'>
 						<SidebarTrigger className='-ml-1' />
 						<Separator orientation='vertical' className='mr-2 h-4' />
-						<Breadcrumb>
+						{/* <Breadcrumb>
 							<BreadcrumbList>
 								<BreadcrumbItem className='hidden md:block'>
-									<BreadcrumbLink href='#'>
-										Building Your Application
-									</BreadcrumbLink>
+									<Link href='/'>Conversations</Link>
 								</BreadcrumbItem>
 								<BreadcrumbSeparator className='hidden md:block' />
 								<BreadcrumbItem>
 									<BreadcrumbPage>Data Fetching</BreadcrumbPage>
 								</BreadcrumbItem>
 							</BreadcrumbList>
-						</Breadcrumb>
+						</Breadcrumb> */}
 					</div>
 				</header>
 				<div className='flex flex-1 flex-col gap-4 p-4 pt-0'>
