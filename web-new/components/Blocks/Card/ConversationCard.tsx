@@ -1,13 +1,18 @@
 'use client';
 
 import { Card, CardHeader, CardTitle } from '@/components/ui/card';
+import {
+	Popover,
+	PopoverContent,
+	PopoverTrigger,
+} from '@/components/ui/popover';
 import { SidebarMenuButton, SidebarMenuItem } from '@/components/ui/sidebar';
 import {
 	checkEntitySecondsAgo,
 	getTimeDifference,
 } from '@/utilities/functions';
 import { Conversation } from '@prisma/client';
-import { SquareTerminal } from 'lucide-react';
+import { MoreHorizontal, SquareTerminal } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { GoDotFill } from 'react-icons/go';
@@ -74,61 +79,6 @@ const ConversationCard = ({ conv }: { conv: Conversation }) => {
 					</div>
 				</SidebarMenuButton>
 			</SidebarMenuItem>
-
-			{/* <Card>
-				<CardHeader>
-					<CardTitle>
-						<div className='flex items-center justify-between rounded-2xl cursor-pointer'>
-							{checkEntitySecondsAgo(conv.createdAt.toString()) && (
-								<div>
-									<p
-										className='font-extrabold w-full text-xl text-foreground tracking-tight leading-none text-balance'
-										// style={{
-										// 	color: pathname.includes(conv.id) ? '#FFFFFF' : '',
-										// }}
-									>
-										<TypeAnimation
-											sequence={[conv.title ? conv.title : 'New conversation']}
-											cursor={false}
-											speed={75}
-										/>
-									</p>
-								</div>
-							)}
-							{!checkEntitySecondsAgo(conv.createdAt.toString()) && (
-								<div>
-									<p
-										className='font-extrabold w-full text-xl text-foreground tracking-tight leading-none text-balance'
-										style={{
-											color: pathname.includes(conv.id) ? '#000000' : '',
-										}}
-									>
-										{conv.title ? conv.title : 'New conversation'}
-									</p>
-								</div>
-							)}
-							<div className='flex items-center space-x-1'>
-								<p
-									className='text-zinc-700 text-xs'
-									// style={{
-									// 	color: pathname.includes(conv.id) ? '#000000' : '',
-									// }}
-								>
-									<GoDotFill />
-								</p>
-								<p
-									className='font-light w-full text-sm text-zinc-700 tracking-tight leading-none text-ellipsis text-balance'
-									// style={{
-									// 	color: pathname.includes(conv.id) ? '#000000' : '',
-									// }}
-								>
-									{getTimeDifference(conv.createdAt.toString())}
-								</p>
-							</div>
-						</div>
-					</CardTitle>
-				</CardHeader>
-			</Card> */}
 		</Link>
 	);
 };

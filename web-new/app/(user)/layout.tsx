@@ -4,25 +4,14 @@ import {
 	AudioWaveform,
 	BadgeCheck,
 	Bell,
-	BookOpen,
-	Bot,
-	ChevronRight,
 	ChevronsUpDown,
 	Command,
 	CreditCard,
-	Folder,
-	Forward,
-	Frame,
 	GalleryVerticalEnd,
 	LogOut,
-	Map,
-	MoreHorizontal,
-	PieChart,
 	Plus,
-	Settings2,
 	Sparkles,
 	SquareTerminal,
-	Trash2,
 } from 'lucide-react';
 import * as React from 'react';
 
@@ -37,11 +26,7 @@ import {
 	BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
 import { Button } from '@/components/ui/button';
-import {
-	Collapsible,
-	CollapsibleContent,
-	CollapsibleTrigger,
-} from '@/components/ui/collapsible';
+
 import {
 	DropdownMenu,
 	DropdownMenuContent,
@@ -49,7 +34,6 @@ import {
 	DropdownMenuItem,
 	DropdownMenuLabel,
 	DropdownMenuSeparator,
-	DropdownMenuShortcut,
 	DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Separator } from '@/components/ui/separator';
@@ -58,16 +42,11 @@ import {
 	SidebarContent,
 	SidebarFooter,
 	SidebarGroup,
-	SidebarGroupLabel,
 	SidebarHeader,
 	SidebarInset,
 	SidebarMenu,
-	SidebarMenuAction,
 	SidebarMenuButton,
 	SidebarMenuItem,
-	SidebarMenuSub,
-	SidebarMenuSubButton,
-	SidebarMenuSubItem,
 	SidebarProvider,
 	SidebarRail,
 	SidebarTrigger,
@@ -83,10 +62,9 @@ import {
 import { useMutation, useQuery } from '@tanstack/react-query';
 import { signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
-import { ReactNode, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
-// This is sample data.
 const data = {
 	user: {
 		name: 'shadcn',
@@ -179,7 +157,7 @@ export default function Layout({
 		queryFn: async () => await getConversations(session?.user.email),
 	});
 
-	React.useEffect(() => {
+	useEffect(() => {
 		setConversationsLocal(conversationsServer!);
 		setConversationsTemporary(conversationsServer!);
 	}, [conversationsServer]);
@@ -337,6 +315,7 @@ export default function Layout({
 					</div>
 				</header>
 				<div className='flex flex-1 flex-col gap-4 p-4 pt-0'>
+					{children}
 					{/* <div className='grid auto-rows-min gap-4 md:grid-cols-3'>
 						<div className='aspect-video rounded-xl bg-muted/50' />
 						<div className='aspect-video rounded-xl bg-muted/50' />
