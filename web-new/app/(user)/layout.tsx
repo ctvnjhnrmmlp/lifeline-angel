@@ -1,4 +1,6 @@
-// import Sidebar from '@/components/layouts/Sidebar/Sidebar';
+// 'use client';
+
+import Sidebar from '@/components/layouts/Sidebar/Sidebar';
 import { ReactNode } from 'react';
 
 export default function Layout({
@@ -8,7 +10,7 @@ export default function Layout({
 }>) {
 	return (
 		<>
-			{/* <Sidebar /> */}
+			<Sidebar />
 			{children}
 		</>
 	);

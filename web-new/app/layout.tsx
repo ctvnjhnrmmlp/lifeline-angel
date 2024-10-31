@@ -2,8 +2,8 @@ import FONTS from '@/configurations/fonts';
 import METADATA from '@/configurations/metadata';
 import type { Metadata } from 'next';
 import 'react-photo-view/dist/react-photo-view.css';
-import '../styles/globals.css';
 import Containers from './containers';
+import './globals.css';
 import Providers from './providers';
 
 export const metadata: Metadata = METADATA;
