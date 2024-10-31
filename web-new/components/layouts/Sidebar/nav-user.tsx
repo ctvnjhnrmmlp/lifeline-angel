@@ -10,6 +10,7 @@ import {
 	Sparkles,
 } from 'lucide-react';
 import { signOut } from 'next-auth/react';
+import { useTheme } from 'next-themes';
 import {
 	DropdownMenu,
 	DropdownMenuContent,
@@ -36,6 +37,7 @@ export default function NavUser({
 	};
 }) {
 	const { isMobile } = useSidebar();
+	const { setTheme } = useTheme();
 
 	return (
 		<SidebarMenu>
@@ -96,7 +98,11 @@ export default function NavUser({
 								<Bell />
 								Notifications
 							</DropdownMenuItem>
+							<DropdownMenuItem onClick={() => setTheme('light')}>
+								Light
+							</DropdownMenuItem>
 						</DropdownMenuGroup>
+
 						<DropdownMenuSeparator />
 						<DropdownMenuItem onClick={() => signOut()}>
 							<LogOut />

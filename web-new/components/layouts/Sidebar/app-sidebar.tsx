@@ -39,18 +39,6 @@ const data = {
 			isActive: false,
 		},
 		{
-			title: 'Sent',
-			url: '#',
-			icon: Send,
-			isActive: false,
-		},
-		{
-			title: 'Junk',
-			url: '#',
-			icon: ArchiveX,
-			isActive: false,
-		},
-		{
 			title: 'Trash',
 			url: '#',
 			icon: Trash2,
@@ -164,10 +152,6 @@ export default function AppSidebar({
 						<div className='text-base font-medium text-foreground'>
 							{activeItem.title}
 						</div>
-						<Label className='flex items-center gap-2 text-sm'>
-							<span>Unreads</span>
-							<Switch className='shadow-none' />
-						</Label>
 					</div>
 					<SidebarInput placeholder='Type to search...' />
 				</SidebarHeader>
