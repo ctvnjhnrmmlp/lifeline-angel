@@ -1,14 +1,7 @@
 'use client';
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import {
-	BadgeCheck,
-	Bell,
-	ChevronsUpDown,
-	CreditCard,
-	LogOut,
-	Sparkles,
-} from 'lucide-react';
+import { ChevronsUpDown, LogOut, Sparkles, SunMedium } from 'lucide-react';
 import { signOut } from 'next-auth/react';
 import { useTheme } from 'next-themes';
 import {
@@ -81,24 +74,12 @@ export default function NavUser({
 						<DropdownMenuGroup>
 							<DropdownMenuItem>
 								<Sparkles />
-								Upgrade to Pro
+								Privacy
 							</DropdownMenuItem>
 						</DropdownMenuGroup>
-						<DropdownMenuSeparator />
 						<DropdownMenuGroup>
-							<DropdownMenuItem>
-								<BadgeCheck />
-								Account
-							</DropdownMenuItem>
-							<DropdownMenuItem>
-								<CreditCard />
-								Billing
-							</DropdownMenuItem>
-							<DropdownMenuItem>
-								<Bell />
-								Notifications
-							</DropdownMenuItem>
 							<DropdownMenuItem onClick={() => setTheme('light')}>
+								<SunMedium />
 								Light
 							</DropdownMenuItem>
 						</DropdownMenuGroup>

@@ -1,0 +1,136 @@
+'use client';
+
+import { Card, CardHeader, CardTitle } from '@/components/ui/card';
+import { SidebarMenuButton, SidebarMenuItem } from '@/components/ui/sidebar';
+import {
+	checkEntitySecondsAgo,
+	getTimeDifference,
+} from '@/utilities/functions';
+import { Conversation } from '@prisma/client';
+import { SquareTerminal } from 'lucide-react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { GoDotFill } from 'react-icons/go';
+import { TypeAnimation } from 'react-type-animation';
+
+const ConversationCard = ({ conv }: { conv: Conversation }) => {
+	const pathname = usePathname();
+
+	return (
+		<Link href={`/conversation/${conv.id}`}>
+			<SidebarMenuItem
+				key={conv.id}
+				className='py-1 px-1 outline outline-1 outline-zinc-200 hover:outline-zinc-400 rounded-xl'
+			>
+				<SidebarMenuButton tooltip={conv.title} className='mx-auto'>
+					<SquareTerminal />
+					<div className='flex justify-between w-full'>
+						{checkEntitySecondsAgo(conv.createdAt.toString()) && (
+							<div>
+								<p
+									className='font-extrabold w-full text-md text-foreground tracking-tight leading-none text-balance'
+									// style={{
+									// 	color: pathname.includes(conv.id) ? '#FFFFFF' : '',
+									// }}
+								>
+									<TypeAnimation
+										sequence={[conv.title ? conv.title : 'New conversation']}
+										cursor={false}
+										speed={75}
+									/>
+								</p>
+							</div>
+						)}
+						{!checkEntitySecondsAgo(conv.createdAt.toString()) && (
+							<div>
+								<p
+									className='font-extrabold w-full text-md text-foreground tracking-tight leading-none text-balance'
+									style={{
+										color: pathname.includes(conv.id) ? '#000000' : '',
+									}}
+								>
+									{conv.title ? conv.title : 'New conversation'}
+								</p>
+							</div>
+						)}
+						<div className='flex items-center space-x-1'>
+							<p
+								className='text-zinc-700 text-xs'
+								// style={{
+								// 	color: pathname.includes(conv.id) ? '#000000' : '',
+								// }}
+							>
+								<GoDotFill />
+							</p>
+							<p
+								className='font-light w-full text-xs text-zinc-700 tracking-tight leading-none text-ellipsis text-balance'
+								// style={{
+								// 	color: pathname.includes(conv.id) ? '#000000' : '',
+								// }}
+							>
+								{getTimeDifference(conv.createdAt.toString())}
+							</p>
+						</div>
+					</div>
+				</SidebarMenuButton>
+			</SidebarMenuItem>
+
+			{/* <Card>
+				<CardHeader>
+					<CardTitle>
+						<div className='flex items-center justify-between rounded-2xl cursor-pointer'>
+							{checkEntitySecondsAgo(conv.createdAt.toString()) && (
+								<div>
+									<p
+										className='font-extrabold w-full text-xl text-foreground tracking-tight leading-none text-balance'
+										// style={{
+										// 	color: pathname.includes(conv.id) ? '#FFFFFF' : '',
+										// }}
+									>
+										<TypeAnimation
+											sequence={[conv.title ? conv.title : 'New conversation']}
+											cursor={false}
+											speed={75}
+										/>
+									</p>
+								</div>
+							)}
+							{!checkEntitySecondsAgo(conv.createdAt.toString()) && (
+								<div>
+									<p
+										className='font-extrabold w-full text-xl text-foreground tracking-tight leading-none text-balance'
+										style={{
+											color: pathname.includes(conv.id) ? '#000000' : '',
+										}}
+									>
+										{conv.title ? conv.title : 'New conversation'}
+									</p>
+								</div>
+							)}
+							<div className='flex items-center space-x-1'>
+								<p
+									className='text-zinc-700 text-xs'
+									// style={{
+									// 	color: pathname.includes(conv.id) ? '#000000' : '',
+									// }}
+								>
+									<GoDotFill />
+								</p>
+								<p
+									className='font-light w-full text-sm text-zinc-700 tracking-tight leading-none text-ellipsis text-balance'
+									// style={{
+									// 	color: pathname.includes(conv.id) ? '#000000' : '',
+									// }}
+								>
+									{getTimeDifference(conv.createdAt.toString())}
+								</p>
+							</div>
+						</div>
+					</CardTitle>
+				</CardHeader>
+			</Card> */}
+		</Link>
+	);
+};
+
+export default ConversationCard;

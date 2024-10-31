@@ -1,6 +1,15 @@
 'use client';
 
-import { ArchiveX, Command, File, Inbox, Send, Trash2 } from 'lucide-react';
+import {
+	ArchiveX,
+	ChevronRight,
+	Command,
+	File,
+	Inbox,
+	Plus,
+	Send,
+	Trash2,
+} from 'lucide-react';
 import * as React from 'react';
 import { Label } from '../../ui/label';
 import {
@@ -27,22 +36,10 @@ const data = {
 	},
 	navMain: [
 		{
-			title: 'Inbox',
+			title: 'Conversations',
 			url: '#',
 			icon: Inbox,
 			isActive: true,
-		},
-		{
-			title: 'Drafts',
-			url: '#',
-			icon: File,
-			isActive: false,
-		},
-		{
-			title: 'Trash',
-			url: '#',
-			icon: Trash2,
-			isActive: false,
 		},
 	],
 	mails: [
@@ -57,7 +54,22 @@ const data = {
 	],
 };
 
+import ConversationCard from '@/components/Blocks/Card/ConversationCard';
+import { Button } from '@/components/ui/button';
+
+import {
+	addConversation,
+	getConversations,
+} from '@/services/lifeline-angel/conversation';
+import {
+	useMultipleConversationStore,
+	useTemporaryMultipleConversationStore,
+} from '@/stores/lifeline-angel/conversation';
+import { useMutation, useQuery } from '@tanstack/react-query';
 import { useSession } from 'next-auth/react';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 export default function AppSidebar({
 	...props
@@ -68,6 +80,63 @@ export default function AppSidebar({
 	const [mails, setMails] = React.useState(data.mails);
 	const { setOpen } = useSidebar();
 	const { data: session } = useSession();
+	const [conversationQuery, setConversationQuery] = useState('');
+	const [openSearch, setOpenSearch] = useState(false);
+
+	const {
+		conversations: conversationsLocal,
+		setConversations: setConversationsLocal,
+		searchConversations: searchConversationsLocal,
+		addConversation: addConversationLocal,
+	} = useMultipleConversationStore();
+
+	const {
+		conversations: conversationsTemporary,
+		setConversations: setConversationsTemporary,
+		searchConversations: searchConversationsTemporary,
+		addConversation: addConversationTemporary,
+	} = useTemporaryMultipleConversationStore();
+
+	const handleSetConversationQuery = (query: string) => {
+		setConversationQuery(query);
+	};
+
+	const addConversationMutation = useMutation({
+		mutationFn: async (cid: string) =>
+			await addConversation(session?.user.email, cid),
+	});
+
+	const handleAddConversation = () => {
+		let cid = uuidv4();
+
+		addConversationLocal(cid);
+		addConversationTemporary(cid);
+		addConversationMutation.mutate(cid);
+	};
+
+	const handleSearchConversation = (query: string) => {
+		searchConversationsTemporary(query);
+	};
+
+	const handleOpenSearch = (search: boolean) => {
+		setOpenSearch(search);
+	};
+
+	const {
+		data: conversationsServer,
+		error: conversationsError,
+		status: conversationsStatus,
+		fetchStatus: conversationsFetchStatus,
+		refetch: refetchConversations,
+	} = useQuery({
+		queryKey: ['getConversations'],
+		queryFn: async () => await getConversations(session?.user.email),
+	});
+
+	useEffect(() => {
+		setConversationsLocal(conversationsServer!);
+		setConversationsTemporary(conversationsServer!);
+	}, [conversationsServer]);
 
 	return (
 		<Sidebar
@@ -152,28 +221,35 @@ export default function AppSidebar({
 						<div className='text-base font-medium text-foreground'>
 							{activeItem.title}
 						</div>
+						<Label className='flex items-center gap-2 text-sm'>
+							<Button
+								size='icon'
+								className='rounded-full'
+								onClick={() => handleAddConversation()}
+							>
+								<Plus className='h-4 w-4' />
+							</Button>
+						</Label>
 					</div>
 					<SidebarInput placeholder='Type to search...' />
 				</SidebarHeader>
 				<SidebarContent>
 					<SidebarGroup className='px-0 no-scrollbar'>
-						<SidebarGroupContent className='no-scrollbar'>
-							{mails.map((mail) => (
-								<a
-									href='#'
-									key={mail.email}
-									className='flex flex-col items-start gap-2 whitespace-nowrap border-b p-4 text-sm leading-tight last:border-b-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground'
-								>
-									<div className='flex w-full items-center gap-2'>
-										<span>{mail.name}</span>{' '}
-										<span className='ml-auto text-xs'>{mail.date}</span>
-									</div>
-									<span className='font-medium'>{mail.subject}</span>
-									<span className='line-clamp-2 w-[260px] whitespace-break-spaces text-xs'>
-										{mail.teaser}
-									</span>
-								</a>
-							))}
+						<SidebarGroupContent className='flex flex-col space-y-2 px-2 no-scrollbar'>
+							{openSearch && (
+								<>
+									{conversationsTemporary?.map((conv) => (
+										<ConversationCard key={conv.id} conv={conv} />
+									))}
+								</>
+							)}
+							{!openSearch && (
+								<>
+									{conversationsLocal?.map((conv) => (
+										<ConversationCard key={conv.id} conv={conv} />
+									))}
+								</>
+							)}
 						</SidebarGroupContent>
 					</SidebarGroup>
 				</SidebarContent>
