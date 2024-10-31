@@ -186,8 +186,8 @@ export default function Layout({
 						</SidebarMenuItem>
 					</SidebarMenu>
 				</SidebarHeader>
-				<SidebarContent className='bg-background'>
-					<SidebarGroup>
+				<SidebarContent className='bg-background no-scrollbar'>
+					<SidebarGroup className='no-scrollbar'>
 						<SidebarMenu className='space-y-1 no-scrollbar'>
 							{openSearch && (
 								<>
