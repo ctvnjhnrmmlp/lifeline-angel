@@ -1,6 +1,6 @@
 'use client';
 
-import { Avatar, AvatarFallback, AvatarImage } from '@radix-ui/react-avatar';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import {
 	BadgeCheck,
 	Bell,
@@ -9,6 +9,7 @@ import {
 	LogOut,
 	Sparkles,
 } from 'lucide-react';
+import { signOut } from 'next-auth/react';
 import {
 	DropdownMenu,
 	DropdownMenuContent,
@@ -97,7 +98,7 @@ export default function NavUser({
 							</DropdownMenuItem>
 						</DropdownMenuGroup>
 						<DropdownMenuSeparator />
-						<DropdownMenuItem>
+						<DropdownMenuItem onClick={() => signOut()}>
 							<LogOut />
 							Log out
 						</DropdownMenuItem>

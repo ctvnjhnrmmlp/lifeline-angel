@@ -42,10 +42,10 @@ export default function Page() {
 						className='h-full w-6/12 rounded-lg hidden lg:block'
 						unoptimized
 					/>
-					<div className='p-28 rounded-3xl outline outline-1 h-full'>
+					<div className='p-28 rounded-3xl h-full bg-foreground'>
 						<div className='flex flex-col justify-center items-center space-y-12 h-full'>
 							<div>
-								<h1 className='text-foreground text-center font-extrabold text-7xl leading-none tracking-tight uppercase'>
+								<h1 className='text-background text-center font-extrabold text-7xl leading-none tracking-tight uppercase'>
 									Sign In
 								</h1>
 							</div>
@@ -55,20 +55,20 @@ export default function Page() {
 										{STRATEGIES.map((strategy) => (
 											<button
 												key={strategy.name}
-												className='py-2 px-6 sm:p-4 md:px-20 md:py-8 text-2xl sm:text-3xl md:text-5xl rounded-3xl text-center sm:flex-grow backdrop-blur-sm bg-foreground border-background/20 '
+												className='py-2 px-6 sm:p-4 md:px-20 md:py-8 text-2xl sm:text-3xl md:text-5xl rounded-3xl text-center sm:flex-grow backdrop-blur-sm bg-background'
 												onClick={() =>
 													handleAgree(strategy.name.toLocaleLowerCase())
 												}
 											>
 												<div>
-													<strategy.icon className='text-background absolute left-12' />
-													<h4 className='font-extrabold text-background leading-none tracking-tight uppercase mx-auto pl-28'>
+													<strategy.icon className='text-foreground absolute left-12' />
+													<h4 className='font-extrabold text-foreground leading-none tracking-tight uppercase mx-auto pl-28'>
 														{strategy.name}
 													</h4>
 												</div>
 											</button>
 										))}
-										<button className='py-2 px-6 sm:p-4 md:px-20 md:py-8 text-2xl sm:text-3xl md:text-5xl rounded-3xl text-center sm:flex-grow backdrop-blur-sm bg-background outline outline-1'>
+										<button className='py-2 px-6 sm:p-4 md:px-20 md:py-8 text-2xl sm:text-3xl md:text-5xl rounded-3xl text-center sm:flex-grow backdrop-blur-sm bg-background'>
 											<div className='text-foreground'>
 												<IoPerson className='absolute left-12' />
 												<h4 className='font-extrabold leading-none tracking-tight uppercase mx-auto pl-28'>
@@ -173,7 +173,7 @@ export default function Page() {
 								</DialogContent>
 							</Dialog>
 							<div>
-								<p className='text-2xl font-light'>
+								<p className='text-2xl font-light text-background'>
 									{`Don't have an account?`}{' '}
 									<Link className='font-bold' href='/signup'>
 										{' '}
