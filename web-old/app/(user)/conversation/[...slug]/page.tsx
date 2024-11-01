@@ -228,17 +228,17 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 		validationSchema: Yup.object().shape({
 			file: Yup.mixed()
 				.required('Required')
+				// @ts-expect-error: must be corrected properly
 				.test('file-format', 'Only image files are allowed', (value) => {
 					if (value) {
 						const supportedFormats = ['png', 'jpg', 'jpeg'];
-						// @ts-expect-error: must be corrected properly
 						return supportedFormats.includes(value.name.split('.').pop());
 					}
 					return true;
 				})
+				// @ts-expect-error: must be corrected properly
 				.test('file-size', 'File size must not be more than 10MB', (value) => {
 					if (value) {
-						// @ts-expect-error: must be corrected properly
 						return value.size < 5145728;
 					}
 					return true;

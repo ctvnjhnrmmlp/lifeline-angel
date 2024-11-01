@@ -192,7 +192,6 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 					<div className='bg-foreground outline outline-1 outline-zinc-200 dark:outline-zinc-800 rounded-3xl min-w-4/12 mr-auto'>
 						<div className='cursor-pointer p-4'>
 							<p className='text-lg text-background tracking-tight leading-none text-ellipsis text-balance text-center'>
-								{/* @ts-expect-error: must be corrected properly */}
 								{message.content}
 							</p>
 						</div>
@@ -209,7 +208,6 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 					<div>
 						<button
 							className='text-foreground text-lg'
-							// @ts-expect-error: must be corrected properly
 							onClick={() =>
 								copy(
 									`Meaning\n${

@@ -1,6 +1,6 @@
 'use server';
 
-import webpush from '.pnpm/@types+web-push@3.6.4/node_modules/@types/web-push';
+import webpush from 'web-push';
 
 webpush.setVapidDetails(
 	'mailto:johnrommel.octaviano@gmail.com',
@@ -31,7 +31,6 @@ export async function sendNotification(message: string) {
 
 	try {
 		await webpush.sendNotification(
-			// @ts-expect-error: must be corrected properly
 			subscription,
 			JSON.stringify({
 				title: 'Test Notification',
