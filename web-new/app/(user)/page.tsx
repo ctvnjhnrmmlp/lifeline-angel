@@ -12,7 +12,7 @@ export default function Page() {
 	}
 
 	return (
-		<main className=''>
+		<main className='outline'>
 			<section className=' bg-background border-foreground/20 border-1 rounded-3xl h-screen'>
 				<div className='flex flex-col p-6 h-full'>
 					<div className='flex-grow w-full flex flex-col justify-center items-center'>

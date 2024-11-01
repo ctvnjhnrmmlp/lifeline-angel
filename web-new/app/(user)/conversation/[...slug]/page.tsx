@@ -272,7 +272,7 @@ export default function Page() {
 	return (
 		<main className='h-full'>
 			<section className='h-full'>
-				<div className='h-full outline outline-1 outline-zinc-200 rounded-3xl p-6'>
+				<div className='h-full outline outline-1 outline-zinc-200 dark:outline-zinc-800 rounded-3xl p-6'>
 					{/* Conversation Navbar */}
 					<div className='w-full flex flex-col flex-wrap justify-between space-between gap-12 pb-4'>
 						<div className='flex items-center justify-between'>
@@ -374,14 +374,14 @@ export default function Page() {
 										</DialogHeader>
 									</DialogContent>
 								</Dialog>
-								<SidebarTrigger className='text-foreground py-6 px-4 w-full outline outline-1 outline-zinc-200 rounded-xl' />
+								<SidebarTrigger className='text-foreground py-6 px-4 w-full outline outline-1 outline-zinc-200 dark:outline-zinc-800 rounded-xl' />
 							</div>
 						</div>
 					</div>
 					{/* Messages */}
 					<div className='space-y-4 py-8 rounded-xl'>
 						{messagesServer && messagesServer.length > 0 && (
-							<div className='bg-background outline outline-1 outline-zinc-200 rounded-3xl mx-auto'>
+							<div className='bg-background outline outline-1 outline-zinc-200 dark:outline-zinc-800 rounded-3xl mx-auto'>
 								<div className='cursor-pointer px-6 py-4'>
 									<p className='text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance text-center'>
 										{convertToDateFormat(

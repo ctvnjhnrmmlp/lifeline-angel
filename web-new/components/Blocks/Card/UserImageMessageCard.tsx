@@ -8,7 +8,7 @@ const UserImageMessageCard = ({ message }: { message: Message }) => {
 	return (
 		<div
 			key={message.id}
-			className='backdrop-blur-2xl bg-foreground/5 rounded-2xl min-w-1/12 ml-auto mr-0'
+			className='bg-background outline outline-1 outline-zinc-200 dark:outline-zinc-800 rounded-3xl min-w-1/12 ml-auto mr-0'
 		>
 			<div className='cursor-pointer p-6'>
 				<PhotoProvider>
