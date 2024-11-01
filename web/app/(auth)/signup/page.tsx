@@ -51,7 +51,7 @@ export default function Page() {
 						</DialogTrigger>
 						<DialogContent className='sm:max-w-[70rem] sm:max-h-[50rem] bg-foreground border-0'>
 							<DialogHeader>
-								<DialogTitle className='text-2xl md:text-3xl font-bold text-center text-background'>
+								<DialogTitle className='text-md sm:text-2xl md:text-3xl font-bold text-center text-background'>
 									Collecting Personal Information
 								</DialogTitle>
 								<DialogDescription asChild>
@@ -131,14 +131,14 @@ export default function Page() {
 									</ScrollArea>
 								</DialogDescription>
 							</DialogHeader>
-							<DialogFooter>
+							<DialogFooter className='flex flex-row justify-center items-center space-x-3'>
 								<DialogClose asChild>
-									<button className='px-5 py-3 bg-foreground text-background rounded-xl text-2xl font-bold tracking-tight outline outline-1 outline-zinc-800'>
+									<button className='px-5 py-2 md:py-3 bg-foreground text-background rounded-xl text-md sm:text-xl md:text-2xl font-bold tracking-tight outline outline-1 outline-zinc-800'>
 										Disagree
 									</button>
 								</DialogClose>
 								<button
-									className='px-5 py-3 bg-background text-foreground rounded-xl text-2xl font-bold tracking-tight mb-2 sm:mb-0'
+									className='px-5 py-2 md:py-3 bg-background text-foreground rounded-xl text-md sm:text-xl md:text-2xl font-bold tracking-tight'
 									onClick={() => {
 										if (strategy) return signIn(strategy);
 
