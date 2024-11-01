@@ -237,7 +237,6 @@ export default function Page() {
 
 	const handleCameraCapture = useCallback(() => {
 		setImage(() => cameraRef.current?.getScreenshot()!);
-		// onOpenCapturedImage();
 	}, [cameraRef]);
 
 	const handleAddImageMessage = async (image: string) => {
@@ -519,7 +518,7 @@ export default function Page() {
 										<FaMicrophone />
 									</button>
 								</DialogTrigger>
-								<DialogContent className='sm:max-w-[50rem] sm:max-h-[50rem] bg-foreground border-0'>
+								<DialogContent className='sm:max-w-[30rem] sm:max-h-[50rem] bg-foreground border-0'>
 									<DialogHeader>
 										<DialogTitle className='text-2xl font-bold text-center text-background'>
 											Microphone
@@ -552,7 +551,7 @@ export default function Page() {
 															</div>
 														)}
 														<div className='flex flex-wrap w-96'>
-															<p className='text-lg'>{transcript}</p>
+															<p className='text-lg text-white'>{transcript}</p>
 														</div>
 													</>
 												)}
@@ -572,13 +571,31 @@ export default function Page() {
 										<FaCamera />
 									</button>
 								</DialogTrigger>
-								<DialogContent className='sm:max-w-[50rem] sm:max-h-[50rem] bg-foreground border-0'>
+								<DialogContent className='sm:max-w-[30rem] sm:max-h-[50rem] bg-foreground border-0'>
 									<DialogHeader>
 										<DialogTitle className='text-2xl font-bold text-center text-background'>
 											Camera
 										</DialogTitle>
-										<DialogDescription className='py-4'>
-											<div className='flex flex-wrap gap-2'></div>
+										<DialogDescription className='py-4' asChild>
+											<div className='flex flex-col space-y-8 items-center justify-center'>
+												<div>
+													<Webcam
+														mirrored
+														ref={cameraRef}
+														height={1000}
+														width={1000}
+														screenshotFormat='image/jpeg'
+														screenshotQuality={1}
+														className='rounded-2xl'
+													/>
+												</div>
+												<div>
+													<button
+														className='rounded-full bg-foreground text-2xl p-6 outline'
+														onClick={() => handleCameraCapture()}
+													></button>
+												</div>
+											</div>
 										</DialogDescription>
 									</DialogHeader>
 								</DialogContent>

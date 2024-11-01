@@ -105,17 +105,17 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 		resumeMessage();
 	};
 
-	useEffect(() => {
-		// @ts-ignore
-		const formattedProcedureArr = message.content.procedures[0]
-			.split('. ')!
-			// @ts-ignore
-			.map((point) => point.trim())
-			// @ts-ignore
-			.filter((point) => point.length > 0);
+	// useEffect(() => {
+	// 	// @ts-ignore
+	// 	const formattedProcedureArr = message.content.procedures[0]
+	// 		.split('. ')!
+	// 		// @ts-ignore
+	// 		.map((point) => point.trim())
+	// 		// @ts-ignore
+	// 		.filter((point) => point.length > 0);
 
-		setFormattedProcedures(formattedProcedureArr);
-	}, []);
+	// 	setFormattedProcedures(formattedProcedureArr);
+	// }, []);
 
 	return (
 		<div className='flex flex-col space-y-2'>
@@ -133,7 +133,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 						</p>
 						<p className='text-lg text-background tracking-tight text-ellipsis'>
 							{/* @ts-ignore */}
-							{message.content.meaning}
+							{/* {message.content.meaning} */}
 						</p>
 					</div>
 					<div className='space-y-2'>
@@ -141,14 +141,14 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 							Procedures
 						</p>
 						<div className='flex flex-col space-y-1'>
-							{formattedProcedures.map((procedure) => (
+							{/* {formattedProcedures.map((procedure) => (
 								<p
 									key={procedure}
 									className='text-lg text-background tracking-tight text-ellipsis'
 								>
 									{procedure}
 								</p>
-							))}
+							))} */}
 						</div>
 					</div>
 					<div className='space-y-2'>
