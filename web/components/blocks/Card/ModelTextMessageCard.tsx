@@ -127,7 +127,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 								Meaning
 							</p>
 							<p className='text-lg text-background tracking-tight text-ellipsis'>
-								{/* @ts-expect-error */}
+								{/* @ts-expect-error: must be corrected properly */}
 								{message.content.meaning}
 							</p>
 						</div>
