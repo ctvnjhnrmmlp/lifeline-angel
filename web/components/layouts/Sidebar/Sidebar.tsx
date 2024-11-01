@@ -165,7 +165,9 @@ export default function Sidebar({
 										src='/images/lifeline-angel.png'
 										alt={data.user.name}
 									/>
-									<AvatarFallback className='rounded-lg'>CN</AvatarFallback>
+									<AvatarFallback className='rounded-lg'>
+										{session ? session?.user.name : 'G'}
+									</AvatarFallback>
 								</Avatar>
 							</Link>
 							<Button
@@ -242,11 +244,13 @@ export default function Sidebar({
 												src={session?.user.image}
 												alt={session?.user.name}
 											/>
-											<AvatarFallback className='rounded-lg'>CN</AvatarFallback>
+											<AvatarFallback className='rounded-lg'>
+												{session ? session?.user.name : 'G'}
+											</AvatarFallback>
 										</Avatar>
 										<div className='grid flex-1 text-left text-sm leading-tight'>
 											<span className='truncate font-semibold text-foreground'>
-												{session?.user.name}
+												{session ? session?.user.name : 'Guest'}
 											</span>
 											<span className='truncate text-xs text-foreground'>
 												{session?.user.email}
@@ -269,24 +273,26 @@ export default function Sidebar({
 													alt={session?.user.name}
 												/>
 												<AvatarFallback className='rounded-lg'>
-													CN
+													{session ? session?.user.name : 'G'}
 												</AvatarFallback>
 											</Avatar>
 											<div className='grid flex-1 text-left text-sm leading-tight'>
 												<span className='truncate font-semibold'>
-													{session?.user.name}
+													{session ? session?.user.name : 'Guest'}
 												</span>
 												<span className='truncate text-xs'>
-													{session?.user.email}
+													{session ? session?.user.email : 'No email'}
 												</span>
 											</div>
 										</div>
 									</DropdownMenuLabel>
 									<DropdownMenuSeparator />
-									<DropdownMenuItem onClick={() => signOut()}>
-										<LogOut />
-										Log out
-									</DropdownMenuItem>
+									{session && (
+										<DropdownMenuItem onClick={() => signOut()}>
+											<LogOut />
+											Log out
+										</DropdownMenuItem>
+									)}
 								</DropdownMenuContent>
 							</DropdownMenu>
 						</SidebarMenuItem>
