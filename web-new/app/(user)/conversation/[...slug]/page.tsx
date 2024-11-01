@@ -257,6 +257,8 @@ export default function Page() {
 		return redirect('/signin');
 	}
 
+	console.log(messagesLocal);
+
 	return (
 		<main className='h-full'>
 			<section className='h-full'>
