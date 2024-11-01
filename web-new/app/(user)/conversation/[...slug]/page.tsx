@@ -406,14 +406,14 @@ export default function Page() {
 											Image Injuries
 										</p>
 									</div>
-									<div className='flex flex-wrap gap-3'>
+									<div className='flex flex-wrap gap-2'>
 										{IMAGE_INJURIES.map((injury) => (
 											<Image
 												key={injury.content}
 												width={130}
 												height={130}
 												src={`/images/${injury.source}`}
-												className='w-full object-cover rounded-3xl'
+												className='w-full sm:w-36 md:w-56 object-cover rounded-3xl'
 												alt={injury.content}
 												onClick={() => {
 													handleAddMessage(injury.content);
