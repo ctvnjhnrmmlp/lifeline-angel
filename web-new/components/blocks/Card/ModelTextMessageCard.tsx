@@ -157,7 +157,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 						</p>
 						<div className='flex flex-col space-y-1'>
 							{/* @ts-ignore */}
-							{message.content.references.map((reference) => (
+							{/* {message.content.references.map((reference) => (
 								<Link
 									key={reference}
 									href={reference}
@@ -166,7 +166,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 								>
 									{reference}
 								</Link>
-							))}
+							))} */}
 						</div>
 					</div>
 					<div className='space-y-2'>
@@ -175,7 +175,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 						</p>
 						<div className='flex flex-wrap gap-2'>
 							{/* @ts-ignore */}
-							{message.content.relations.map((relation) => (
+							{/* {message.content.relations.map((relation) => (
 								<button
 									key={relation}
 									className='text-lg py-2 px-5 outline outline-1 outline-zinc-800 dark:outline-zinc-200 hover:bg-zinc-800 dark:hover:bg-zinc-200 rounded-3xl font-bold tracking-tight text-background'
@@ -186,7 +186,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 								>
 									{relation}
 								</button>
-							))}
+							))} */}
 						</div>
 					</div>
 				</div>

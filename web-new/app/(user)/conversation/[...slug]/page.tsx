@@ -49,8 +49,10 @@ import { useFormik } from 'formik';
 import { redirect, useParams, useRouter } from 'next/navigation';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { FaLocationArrow, FaMicrophone } from 'react-icons/fa';
+import { FaCloudArrowUp } from 'react-icons/fa6';
 import { GiRaggedWound } from 'react-icons/gi';
 import { MdPersonalInjury } from 'react-icons/md';
+import { RiVoiceprintFill } from 'react-icons/ri';
 import Webcam from 'react-webcam';
 import { v4 as uuidv4 } from 'uuid';
 import * as Yup from 'yup';
@@ -449,31 +451,144 @@ export default function Page() {
 					{/* Message */}
 					<div className='flex justify-between items-center space-x-6 pt-6'>
 						<div className='flex items-center justify-center space-x-4'>
-							<button
-								className='text-foreground text-2xl'
-								// onClick={onOpenFile}
-							>
-								<FaPaperclip />
-							</button>
-							<button
-								className='text-foreground text-2xl'
-								// onClick={onOpenMicrophone}
-							>
-								<FaMicrophone />
-							</button>
-							<button
-								className='text-foreground text-2xl'
-								// onClick={() => onOpenCamera()}
-							>
-								<FaCamera />
-							</button>
+							<Dialog>
+								<DialogTrigger asChild>
+									<button className='text-foreground text-2xl'>
+										<FaPaperclip />
+									</button>
+								</DialogTrigger>
+								<DialogContent className='sm:max-w-[30rem] sm:max-h-[50rem] bg-foreground border-0'>
+									<DialogHeader>
+										<DialogTitle className='text-2xl font-bold text-center text-background'>
+											File
+										</DialogTitle>
+										<DialogDescription className='py-4' asChild>
+											<div className='flex justify-center'>
+												<form
+													encType='multipart/form-data'
+													className='space-y-4'
+													onSubmit={formik.handleSubmit}
+												>
+													<Input
+														required
+														ref={fileRef}
+														id='image-input'
+														name='file'
+														type='file'
+														accept='image/*'
+														onChange={handleChange}
+													/>
+													<label
+														htmlFor='image-input'
+														className='flex flex-col items-center justify-center w-full h-72 rounded-2xl cursor-pointer bg-background border-foreground/20 border-1'
+													>
+														<div className='flex flex-col items-center justify-center pt-5 pb-6'>
+															<FaCloudArrowUp className='text-9xl text-foreground' />
+															<p className='text-xl font-bold text-foreground'>
+																Click above to upload
+															</p>
+															<p className='text-sm text-foreground'>
+																PNG, JPG, JPEG
+															</p>
+														</div>
+													</label>
+													<div>
+														{formik.touched.file && formik.errors.file && (
+															<p className='text-foreground'>
+																{formik.errors.file}
+															</p>
+														)}
+													</div>
+													<Button
+														type='submit'
+														disabled={uploading}
+														className='w-full text-xl py-6 bg-background text-foreground font-bold text-2xl'
+													>
+														{uploading && <span>Posting...</span>}
+														{!uploading && <span>Post</span>}
+													</Button>
+												</form>
+											</div>
+										</DialogDescription>
+									</DialogHeader>
+								</DialogContent>
+							</Dialog>
+							<Dialog>
+								<DialogTrigger asChild>
+									<button className='text-foreground text-2xl'>
+										<FaMicrophone />
+									</button>
+								</DialogTrigger>
+								<DialogContent className='sm:max-w-[50rem] sm:max-h-[50rem] bg-foreground border-0'>
+									<DialogHeader>
+										<DialogTitle className='text-2xl font-bold text-center text-background'>
+											Microphone
+										</DialogTitle>
+										<DialogDescription className='py-4'>
+											<div className='flex flex-col space-y-8 items-center justify-center'>
+												{browserSupportsSpeechRecognition && (
+													<>
+														<div>
+															<p className='text-[11rem] text-background'>
+																<RiVoiceprintFill />
+															</p>
+														</div>
+														{!microphone && (
+															<div>
+																<button
+																	className='rounded-full bg-background text-2xl p-6 outline'
+																	onClick={() => handleOpenMicrophone()}
+																></button>
+															</div>
+														)}
+														{microphone && (
+															<div>
+																<button
+																	className='rounded-full bg-red-600 text-2xl p-6 outline'
+																	onClick={() =>
+																		handleCloseMicrophone(transcript)
+																	}
+																></button>
+															</div>
+														)}
+														<div className='flex flex-wrap w-96'>
+															<p className='text-lg'>{transcript}</p>
+														</div>
+													</>
+												)}
+												{!browserSupportsSpeechRecognition && (
+													<span>
+														Browser does not support speech recognition.
+													</span>
+												)}
+											</div>
+										</DialogDescription>
+									</DialogHeader>
+								</DialogContent>
+							</Dialog>
+							<Dialog>
+								<DialogTrigger asChild>
+									<button className='text-foreground text-2xl'>
+										<FaCamera />
+									</button>
+								</DialogTrigger>
+								<DialogContent className='sm:max-w-[50rem] sm:max-h-[50rem] bg-foreground border-0'>
+									<DialogHeader>
+										<DialogTitle className='text-2xl font-bold text-center text-background'>
+											Camera
+										</DialogTitle>
+										<DialogDescription className='py-4'>
+											<div className='flex flex-wrap gap-2'></div>
+										</DialogDescription>
+									</DialogHeader>
+								</DialogContent>
+							</Dialog>
 						</div>
 						<div className='w-full'>
 							<Input
 								type='text'
 								value={message}
 								placeholder='Aa'
-								// className='py-3 px-4 w-full rounded-xl bg-background border-foreground/20 border-1 placeholder:font-bold placeholder:text-foreground font-bold text-foreground text-2xl'
 								className='py-6 px-4 placeholder:font-bold placeholder:text-foreground font-bold text-foreground text-2xl'
 								onChange={(event) => {
 									setMessage(event.target.value);
