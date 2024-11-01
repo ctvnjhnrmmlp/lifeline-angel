@@ -105,92 +105,108 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 		resumeMessage();
 	};
 
-	// useEffect(() => {
-	// 	// @ts-ignore
-	// 	const formattedProcedureArr = message.content.procedures[0]
-	// 		.split('. ')!
-	// 		// @ts-ignore
-	// 		.map((point) => point.trim())
-	// 		// @ts-ignore
-	// 		.filter((point) => point.length > 0);
+	useEffect(() => {
+		if (typeof message.content === 'object') {
+			// @ts-ignore
+			const formattedProcedureArr = message.content.procedures[0]
+				.split('. ')!
+				// @ts-ignore
+				.map((point) => point.trim())
+				// @ts-ignore
+				.filter((point) => point.length > 0);
 
-	// 	setFormattedProcedures(formattedProcedureArr);
-	// }, []);
+			setFormattedProcedures(formattedProcedureArr);
+		}
+	}, []);
 
 	return (
 		<div className='flex flex-col space-y-2'>
-			<div
-				key={message.id}
-				className='bg-foreground rounded-3xl ml-0 mr-auto w-12/12 md:w-10/12 lg:w-8/12 xl:w-5/12'
-			>
+			{typeof message.content === 'object' && (
 				<div
-					ref={messageRef}
-					className='flex flex-col space-y-6 cursor-pointer p-4'
+					key={message.id}
+					className='bg-foreground rounded-3xl ml-0 mr-auto w-12/12 md:w-10/12 lg:w-8/12 xl:w-5/12'
 				>
-					<div className='space-y-2'>
-						<p className='text-xl font-bold text-background tracking-tight text-ellipsis'>
-							Meaning
-						</p>
-						<p className='text-lg text-background tracking-tight text-ellipsis'>
-							{/* @ts-ignore */}
-							{/* {message.content.meaning} */}
-						</p>
-					</div>
-					<div className='space-y-2'>
-						<p className='text-xl font-bold text-background tracking-tight text-ellipsis'>
-							Procedures
-						</p>
-						<div className='flex flex-col space-y-1'>
-							{/* {formattedProcedures.map((procedure) => (
-								<p
-									key={procedure}
-									className='text-lg text-background tracking-tight text-ellipsis'
-								>
-									{procedure}
-								</p>
-							))} */}
+					<div
+						ref={messageRef}
+						className='flex flex-col space-y-6 cursor-pointer p-4'
+					>
+						<div className='space-y-2'>
+							<p className='text-xl font-bold text-background tracking-tight text-ellipsis'>
+								Meaning
+							</p>
+							<p className='text-lg text-background tracking-tight text-ellipsis'>
+								{/* @ts-ignore */}
+								{message.content.meaning}
+							</p>
 						</div>
-					</div>
-					<div className='space-y-2'>
-						<p className='text-xl font-bold text-background tracking-tight text-ellipsis'>
-							References
-						</p>
-						<div className='flex flex-col space-y-1'>
-							{/* @ts-ignore */}
-							{/* {message.content.references.map((reference) => (
-								<Link
-									key={reference}
-									href={reference}
-									target='_blank'
-									className='text-lg text-background tracking-tight text-ellipsis underline'
-								>
-									{reference}
-								</Link>
-							))} */}
+						<div className='space-y-2'>
+							<p className='text-xl font-bold text-background tracking-tight text-ellipsis'>
+								Procedures
+							</p>
+							<div className='flex flex-col space-y-1'>
+								{formattedProcedures.map((procedure) => (
+									<p
+										key={procedure}
+										className='text-lg text-background tracking-tight text-ellipsis'
+									>
+										{procedure}
+									</p>
+								))}
+							</div>
 						</div>
-					</div>
-					<div className='space-y-2'>
-						<p className='text-xl font-bold text-background tracking-tight text-ellipsis'>
-							Relations
-						</p>
-						<div className='flex flex-wrap gap-2'>
-							{/* @ts-ignore */}
-							{/* {message.content.relations.map((relation) => (
-								<button
-									key={relation}
-									className='text-lg py-2 px-5 outline outline-1 outline-zinc-800 dark:outline-zinc-200 hover:bg-zinc-800 dark:hover:bg-zinc-200 rounded-3xl font-bold tracking-tight text-background'
-									onClick={() => {
-										handleAddMessage(relation);
-										handleUpdateConversation(relation);
-									}}
-								>
-									{relation}
-								</button>
-							))} */}
+						<div className='space-y-2'>
+							<p className='text-xl font-bold text-background tracking-tight text-ellipsis'>
+								References
+							</p>
+							<div className='flex flex-col space-y-1'>
+								{/* @ts-ignore */}
+								{message.content.references.map((reference) => (
+									<Link
+										key={reference}
+										href={reference}
+										target='_blank'
+										className='text-lg text-background tracking-tight text-ellipsis underline'
+									>
+										{reference}
+									</Link>
+								))}
+							</div>
+						</div>
+						<div className='space-y-2'>
+							<p className='text-xl font-bold text-background tracking-tight text-ellipsis'>
+								Relations
+							</p>
+							<div className='flex flex-wrap gap-2'>
+								{/* @ts-ignore */}
+								{message.content.relations.map((relation) => (
+									<button
+										key={relation}
+										className='text-lg py-2 px-5 outline outline-1 outline-zinc-800 dark:outline-zinc-200 hover:bg-zinc-800 dark:hover:bg-zinc-200 rounded-3xl font-bold tracking-tight text-background'
+										onClick={() => {
+											handleAddMessage(relation);
+											handleUpdateConversation(relation);
+										}}
+									>
+										{relation}
+									</button>
+								))}
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			)}
+			{typeof message.content === 'string' && (
+				<div className='flex flex-col space-y-2'>
+					<div className='bg-foreground outline outline-1 outline-zinc-200 dark:outline-zinc-800 rounded-3xl min-w-4/12 mr-auto'>
+						<div className='cursor-pointer p-4'>
+							<p className='text-lg text-background tracking-tight leading-none text-ellipsis text-balance text-center'>
+								{/* @ts-ignore */}
+								{message.content}
+							</p>
+						</div>
+					</div>
+				</div>
+			)}
 			<div className='flex items-center space-x-3'>
 				<div>
 					<p className='text-xs text-foreground tracking-tight text-ellipsis text-balance text-left'>

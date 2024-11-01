@@ -440,7 +440,6 @@ export default function Page() {
 										<UserTextMessageCard key={message.id} message={message} />
 									);
 								}
-
 								return (
 									<>
 										<ModelTextMessageCard key={message.id} message={message} />
