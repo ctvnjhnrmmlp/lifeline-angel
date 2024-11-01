@@ -15,18 +15,18 @@ import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { IoIosCopy } from 'react-icons/io';
-import { RiVoiceprintFill } from 'react-icons/ri';
+// import { RiVoiceprintFill } from 'react-icons/ri';
 import { useTextToVoice } from 'react-speakup';
 import { v4 as uuidv4 } from 'uuid';
 
 const ModelTextMessageCard = ({ message }: { message: Message }) => {
 	const { data: session } = useSession();
-	const [voiceMessageMode, setVoiceMessageMode] = useState('');
+	// const [voiceMessageMode, setVoiceMessageMode] = useState('');
 	const [formattedProcedures, setFormattedProcedures] = useState([]);
-	const [formattedEnglishMessages, setFormattedEnglishMessages] = useState([]);
-	const [formattedFilipinoMessages, setFormattedFilipinoMessages] = useState(
-		[]
-	);
+	// const [formattedEnglishMessages, setFormattedEnglishMessages] = useState([]);
+	// const [formattedFilipinoMessages, setFormattedFilipinoMessages] = useState(
+	// 	[]
+	// );
 	const { slug } = useParams() as {
 		slug: string[];
 	};
@@ -90,29 +90,29 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 		volume: 1,
 	});
 
-	const handleSpeakMessage = () => {
-		setVoiceMessageMode('speaking');
-		speakMessage();
-	};
+	// const handleSpeakMessage = () => {
+	// 	setVoiceMessageMode('speaking');
+	// 	speakMessage();
+	// };
 
-	const handlePauseMessage = () => {
-		setVoiceMessageMode('paused');
-		pauseMessage();
-	};
+	// const handlePauseMessage = () => {
+	// 	setVoiceMessageMode('paused');
+	// 	pauseMessage();
+	// };
 
-	const handleResumeMessage = () => {
-		setVoiceMessageMode('speaking');
-		resumeMessage();
-	};
+	// const handleResumeMessage = () => {
+	// 	setVoiceMessageMode('speaking');
+	// 	resumeMessage();
+	// };
 
 	useEffect(() => {
 		if (typeof message.content === 'object') {
-			// @ts-expect-error
+			// @ts-expect-error: must be corrected properly
 			const formattedProcedureArr = message.content.procedures[0]
 				.split('. ')!
-				// @ts-expect-error
+				// @ts-expect-error: must be corrected properly
 				.map((point) => point.trim())
-				// @ts-expect-error
+				// @ts-expect-error: must be corrected properly
 				.filter((point) => point.length > 0);
 
 			setFormattedProcedures(formattedProcedureArr);
@@ -200,7 +200,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 					<div className='bg-foreground outline outline-1 outline-zinc-200 dark:outline-zinc-800 rounded-3xl min-w-4/12 mr-auto'>
 						<div className='cursor-pointer p-4'>
 							<p className='text-lg text-background tracking-tight leading-none text-ellipsis text-balance text-center'>
-								{/* @ts-expect-error */}
+								{/* @ts-expect-error: must be corrected properly */}
 								{message.content}
 							</p>
 						</div>
@@ -217,20 +217,20 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 					<div>
 						<button
 							className='text-foreground text-lg'
-							// @ts-expect-error
+							// @ts-expect-error: must be corrected properly
 							onClick={() =>
 								copy(
 									`Meaning\n${
-										// @ts-expect-error
+										// @ts-expect-error: must be corrected properly
 										message.content.meaning
 									}\nProcedures\n${
-										// @ts-expect-error
+										// @ts-expect-error: must be corrected properly
 										message.content.procedures[0]
 									} References\n${
-										// @ts-expect-error
+										// @ts-expect-error: must be corrected properly
 										message.content.references.map((reference) => reference)
 									}\nRelations\n${
-										// @ts-expect-error
+										// @ts-expect-error: must be corrected properly
 										message.content.relations.map((relation) => relation)
 									}`
 								)

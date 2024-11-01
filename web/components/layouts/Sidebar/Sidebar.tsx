@@ -2,17 +2,12 @@
 
 import {
 	AudioWaveform,
-	BadgeCheck,
-	Bell,
 	ChevronsUpDown,
 	Command,
-	CreditCard,
 	GalleryVerticalEnd,
-	Grip,
 	LogOut,
 	Moon,
 	Plus,
-	Sparkles,
 	SquareTerminal,
 	Sun,
 } from 'lucide-react';
@@ -20,26 +15,16 @@ import * as React from 'react';
 
 import ConversationCard from '@/components/blocks/Card/ConversationCard';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import {
-	Breadcrumb,
-	BreadcrumbItem,
-	BreadcrumbLink,
-	BreadcrumbList,
-	BreadcrumbPage,
-	BreadcrumbSeparator,
-} from '@/components/ui/breadcrumb';
 import { Button } from '@/components/ui/button';
 
 import {
 	DropdownMenu,
 	DropdownMenuContent,
-	DropdownMenuGroup,
 	DropdownMenuItem,
 	DropdownMenuLabel,
 	DropdownMenuSeparator,
 	DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { Separator } from '@/components/ui/separator';
 import {
 	SidebarContent,
 	SidebarFooter,

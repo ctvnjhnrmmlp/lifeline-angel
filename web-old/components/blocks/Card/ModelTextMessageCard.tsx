@@ -47,19 +47,19 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 
 	// useEffect(() => {
 	// 	if (typeof message.content === 'object') {
-	// 		// @ts-expect-error
+	// 		// @ts-expect-error: must be corrected properly
 	// 		const formattedEnglishMessages = message.content.eng
 	// 			.split('.')!
-	// 			// @ts-expect-error
+	// 			// @ts-expect-error: must be corrected properly
 	// 			.map((point) => point.trim())
-	// 			// @ts-expect-error
+	// 			// @ts-expect-error: must be corrected properly
 	// 			.filter((point) => point.length > 0);
-	// 		// @ts-expect-error
+	// 		// @ts-expect-error: must be corrected properly
 	// 		const formattedFilipinoMessages = message.content.fil
 	// 			.split('.')
-	// 			// @ts-expect-error
+	// 			// @ts-expect-error: must be corrected properly
 	// 			.map((point) => point.trim())
-	// 			// @ts-expect-error
+	// 			// @ts-expect-error: must be corrected properly
 	// 			.filter((point) => point.length > 0);
 
 	// 		setFormattedEnglishMessages(formattedEnglishMessages);

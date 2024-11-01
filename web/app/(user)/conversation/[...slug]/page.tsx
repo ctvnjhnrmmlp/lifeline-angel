@@ -41,10 +41,7 @@ import {
 	useSingleConversationStore,
 	useTemporaryMultipleConversationStore,
 } from '@/stores/lifeline-angel/conversation';
-import {
-	convertImageDataUrlToFile,
-	convertToDateFormat,
-} from '@/utilities/functions';
+import { convertToDateFormat } from '@/utilities/functions';
 import { useFormik } from 'formik';
 import { redirect, useParams, useRouter } from 'next/navigation';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
@@ -140,14 +137,14 @@ export default function Page() {
 				.test('file-format', 'Only image files are allowed', (value) => {
 					if (value) {
 						const supportedFormats = ['png', 'jpg', 'jpeg'];
-						// @ts-expect-error
+						// @ts-expect-error: must be corrected properly
 						return supportedFormats.includes(value.name.split('.').pop());
 					}
 					return true;
 				})
 				.test('file-size', 'File size must not be more than 10MB', (value) => {
 					if (value) {
-						// @ts-expect-error
+						// @ts-expect-error: must be corrected properly
 						return value.size < 5145728;
 					}
 					return true;
@@ -416,7 +413,7 @@ export default function Page() {
 							</div>
 						)}
 						{messagesLocal?.map((message) => {
-							// @ts-expect-error
+							// @ts-expect-error: must be corrected properly
 							if (checkTextValidURL(message.content)) {
 								return (
 									<UserImageMessageCard key={message.id} message={message} />
