@@ -1,5 +1,8 @@
 'use client';
 
+import ModelTextMessageCard from '@/components/Blocks/Card/ModelTextMessageCard';
+import UserImageMessageCard from '@/components/Blocks/Card/UserImageMessageCard';
+import UserTextMessageCard from '@/components/Blocks/Card/UserTextMessageCard';
 import {
 	deleteConversation,
 	getConversation,
@@ -33,6 +36,7 @@ import {
 	CardHeader,
 	CardTitle,
 } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
 import {
 	useMultipleConversationStore,
 	useSingleConversationStore,
@@ -43,6 +47,7 @@ import {
 	convertToDateFormat,
 } from '@/utilities/functions';
 import { useFormik } from 'formik';
+import { Send } from 'lucide-react';
 import { redirect, useParams, useRouter } from 'next/navigation';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { FaLocationArrow, FaMicrophone } from 'react-icons/fa';
@@ -258,12 +263,12 @@ export default function Page() {
 	return (
 		<main className='h-full'>
 			<section className='h-full'>
-				<div className='h-full outline outline-1 outline-zinc-200 rounded-3xl p-6 md:ml-2'>
+				<div className='h-full outline outline-1 outline-zinc-200 rounded-3xl p-6'>
 					{/* Conversation Navbar */}
 					<div className='w-full flex flex-col flex-wrap justify-between space-between gap-12 pb-4'>
 						<div className='flex items-center justify-between'>
 							<div>
-								<p className='font-bold text-4xl'>
+								<p className='font-bold text-4xl text-foreground'>
 									{conversationLocal?.title
 										? conversationLocal.title
 										: 'New conversation'}
@@ -296,9 +301,9 @@ export default function Page() {
 						</div>
 					</div>
 					{/* Messages */}
-					<div className='space-y-4 py-8 rounded-xl h-screen'>
+					<div className='space-y-4 py-8 rounded-xl'>
 						{messagesServer && messagesServer.length > 0 && (
-							<div className='bg-background border-foreground/20 border-1 rounded-xl mx-auto'>
+							<div className='bg-background outline outline-1 outline-zinc-200 rounded-3xl mx-auto'>
 								<div className='cursor-pointer px-6 py-4'>
 									<p className='text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance text-center'>
 										{convertToDateFormat(
@@ -313,13 +318,15 @@ export default function Page() {
 							<div className='space-y-10'>
 								<div className='space-y-4'>
 									<div>
-										<p className='text-2xl font-bold'>Text Injuries</p>
+										<p className='text-2xl font-bold text-foreground'>
+											Text Injuries
+										</p>
 									</div>
 									<div className='flex flex-wrap gap-2'>
-										{/* {TEXT_INJURIES.map((injury) => (
+										{TEXT_INJURIES.map((injury) => (
 											<button
 												key={injury.content}
-												className='text-lg rounded-xl py-2 px-5 bg-background border-foreground/20 border-1 font-bold tracking-tight'
+												className='text-lg py-2 px-5 outline outline-1 outline-zinc-200 hover:outline-zinc-400 rounded-3xl font-bold tracking-tight text-foreground'
 												onClick={() => {
 													handleAddMessage(injury.content);
 													handleUpdateConversation(injury.content);
@@ -327,27 +334,29 @@ export default function Page() {
 											>
 												{injury.content}
 											</button>
-										))} */}
+										))}
 									</div>
 								</div>
 
 								<div className='space-y-4'>
 									<div>
-										<p className='text-2xl font-bold'>Image Injuries</p>
+										<p className='text-2xl font-bold text-foreground'>
+											Image Injuries
+										</p>
 									</div>
 									<div className='flex flex-wrap gap-3'>
-										{/* {IMAGE_INJURIES.map((injury) => (
+										{IMAGE_INJURIES.map((injury) => (
 											<Card
 												key={injury.content}
-												classNames={{
-													base: 'bg-background border-foreground/20 border-1',
-												}}
-												onPress={() => {
-													handleAddMessage(injury.content);
-													handleUpdateConversation(injury.content);
-												}}
+												// classNames={{
+												// 	base: 'bg-background border-foreground/20 border-1',
+												// }}
+												// onPress={() => {
+												// 	handleAddMessage(injury.content);
+												// 	handleUpdateConversation(injury.content);
+												// }}
 											>
-												<CardBody className='overflow-visible p-0'>
+												<CardContent className='overflow-visible p-0'>
 													<Image
 														width={130}
 														height={130}
@@ -355,20 +364,20 @@ export default function Page() {
 														className='w-full object-cover'
 														src={`/images/${injury.source}`}
 													/>
-												</CardBody>
+												</CardContent>
 												<CardFooter>
 													<p className='text-lg font-bold tracking-tight mx-auto text-center'>
 														{injury.content}
 													</p>
 												</CardFooter>
 											</Card>
-										))} */}
+										))}
 									</div>
 								</div>
 							</div>
 						)}
 
-						{/* {messagesLocal?.map((message) => {
+						{messagesLocal?.map((message) => {
 							// @ts-ignore
 							if (checkTextValidURL(message.content)) {
 								return (
@@ -387,7 +396,60 @@ export default function Page() {
 									</>
 								);
 							}
-						})} */}
+						})}
+					</div>
+					{/* Message */}
+					<div className='flex justify-between items-center space-x-6 pt-6'>
+						<div className='flex items-center justify-center space-x-4'>
+							<button
+								className='text-foreground text-2xl'
+								// onClick={onOpenFile}
+							>
+								<FaPaperclip />
+							</button>
+							<button
+								className='text-foreground text-2xl'
+								// onClick={onOpenMicrophone}
+							>
+								<FaMicrophone />
+							</button>
+							<button
+								className='text-foreground text-2xl'
+								// onClick={() => onOpenCamera()}
+							>
+								<FaCamera />
+							</button>
+						</div>
+						<div className='w-full'>
+							<Input
+								type='text'
+								value={message}
+								placeholder='Aa'
+								// className='py-3 px-4 w-full rounded-xl bg-background border-foreground/20 border-1 placeholder:font-bold placeholder:text-foreground font-bold text-foreground text-2xl'
+								className='py-6 px-4 placeholder:font-bold placeholder:text-foreground font-bold text-foreground text-2xl'
+								onChange={(event) => {
+									setMessage(event.target.value);
+								}}
+								onKeyPress={(event) => {
+									if (event.key === 'Enter') {
+										handleAddMessage(message);
+										handleUpdateConversation(message);
+									}
+								}}
+							/>
+						</div>
+						<div>
+							<button
+								disabled={message.length <= 0}
+								className='rounded-full bg-foreground text-background text-xl p-3'
+								onClick={() => {
+									handleAddMessage(message);
+									handleUpdateConversation(message);
+								}}
+							>
+								<FaLocationArrow />
+							</button>
+						</div>
 					</div>
 				</div>
 			</section>

@@ -28,7 +28,7 @@ const ConversationCard = ({ conv }: { conv: Conversation }) => {
 				className='p-1 outline outline-1 outline-zinc-200 hover:outline-zinc-400 rounded-xl'
 			>
 				<SidebarMenuButton tooltip={conv.title} className='mx-auto'>
-					<SquareTerminal />
+					<SquareTerminal className='text-foreground' />
 					<div className='flex justify-between w-full'>
 						{checkEntitySecondsAgo(conv.createdAt.toString()) && (
 							<div>
