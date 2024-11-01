@@ -18,7 +18,7 @@ import {
 } from 'lucide-react';
 import * as React from 'react';
 
-import ConversationCard from '@/components/Blocks/Card/ConversationCard';
+import ConversationCard from '@/components/blocks/Card/ConversationCard';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import {
 	Breadcrumb,

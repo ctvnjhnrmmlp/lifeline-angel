@@ -1,26 +1,17 @@
 'use client';
 
-import { Card, CardHeader, CardTitle } from '@/components/ui/card';
-import {
-	Popover,
-	PopoverContent,
-	PopoverTrigger,
-} from '@/components/ui/popover';
 import { SidebarMenuButton, SidebarMenuItem } from '@/components/ui/sidebar';
 import {
 	checkEntitySecondsAgo,
 	getTimeDifference,
 } from '@/utilities/functions';
 import { Conversation } from '@prisma/client';
-import { MoreHorizontal, SquareTerminal } from 'lucide-react';
+import { SquareTerminal } from 'lucide-react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { GoDotFill } from 'react-icons/go';
 import { TypeAnimation } from 'react-type-animation';
 
 const ConversationCard = ({ conv }: { conv: Conversation }) => {
-	const pathname = usePathname();
-
 	return (
 		<Link href={`/conversation/${conv.id}`}>
 			<SidebarMenuItem

@@ -54,7 +54,7 @@ const data = {
 	],
 };
 
-import ConversationCard from '@/components/Blocks/Card/ConversationCard';
+import ConversationCard from '@/components/blocks/Card/ConversationCard';
 import { Button } from '@/components/ui/button';
 
 import {

@@ -1,8 +1,8 @@
 'use client';
 
-import ModelTextMessageCard from '@/components/Blocks/Card/ModelTextMessageCard';
-import UserImageMessageCard from '@/components/Blocks/Card/UserImageMessageCard';
-import UserTextMessageCard from '@/components/Blocks/Card/UserTextMessageCard';
+import ModelTextMessageCard from '@/components/blocks/Card/ModelTextMessageCard';
+import UserImageMessageCard from '@/components/blocks/Card/UserImageMessageCard';
+import UserTextMessageCard from '@/components/blocks/Card/UserTextMessageCard';
 import { Button } from '@/components/ui/button';
 import {
 	Dialog,
