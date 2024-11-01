@@ -565,7 +565,7 @@ export default function Page() {
 									</DialogHeader>
 								</DialogContent>
 							</Dialog>
-							<Dialog>
+							{/* <Dialog>
 								<DialogTrigger asChild>
 									<button className='text-foreground text-2xl'>
 										<FaCamera />
@@ -599,7 +599,7 @@ export default function Page() {
 										</DialogDescription>
 									</DialogHeader>
 								</DialogContent>
-							</Dialog>
+							</Dialog> */}
 						</div>
 						<div className='w-full'>
 							<Input
