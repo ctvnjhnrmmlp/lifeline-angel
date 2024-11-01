@@ -44,13 +44,13 @@ import {
 import { convertToDateFormat } from '@/utilities/functions';
 import { useFormik } from 'formik';
 import { redirect, useParams, useRouter } from 'next/navigation';
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { FaLocationArrow, FaMicrophone } from 'react-icons/fa';
 import { FaCloudArrowUp } from 'react-icons/fa6';
 import { GiRaggedWound } from 'react-icons/gi';
 import { MdPersonalInjury } from 'react-icons/md';
 import { RiVoiceprintFill } from 'react-icons/ri';
-import Webcam from 'react-webcam';
+// import Webcam from 'react-webcam';
 import { v4 as uuidv4 } from 'uuid';
 import * as Yup from 'yup';
 
@@ -61,7 +61,7 @@ export default function Page() {
 	const [message, setMessage] = useState('');
 	const [uploading, setUploading] = useState(false);
 	const [microphone, setMicrophone] = useState(false);
-	const cameraRef = useRef<Webcam>(null);
+	// const cameraRef = useRef<Webcam>(null);
 	// const [image, setImage] = useState('');
 	const { slug } = useParams() as {
 		slug: string[];
@@ -221,9 +221,9 @@ export default function Page() {
 		SpeechRecognition.stopListening();
 	};
 
-	const handleCameraCapture = useCallback(() => {
-		// setImage(() => cameraRef.current?.getScreenshot()!);
-	}, [cameraRef]);
+	// const handleCameraCapture = useCallback(() => {
+	// 	// setImage(() => cameraRef.current?.getScreenshot()!);
+	// }, [cameraRef]);
 
 	// const handleAddImageMessage = async (image: string) => {
 	// 	const response = await addImageMessage(

@@ -38,7 +38,6 @@ import {
 	SidebarRail,
 	SidebarTrigger,
 	Sidebar as SidebarUI,
-	useSidebar,
 } from '@/components/ui/sidebar';
 import {
 	addConversation,
@@ -52,7 +51,7 @@ import { useMutation, useQuery } from '@tanstack/react-query';
 import { signOut, useSession } from 'next-auth/react';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
-import { ReactNode, useEffect, useState } from 'react';
+import { ReactNode, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 const data = {
@@ -94,28 +93,28 @@ export default function Sidebar({
 	children: ReactNode;
 }>) {
 	const { data: session } = useSession();
-	const [conversationQuery, setConversationQuery] = useState('');
-	const [openSearch, setOpenSearch] = useState(false);
-	const { toggleSidebar, setOpen } = useSidebar();
+	// const [conversationQuery, setConversationQuery] = useState('');
+	// const [openSearch, setOpenSearch] = useState(false);
+	const openSearch = true;
 	const { setTheme } = useTheme();
 
 	const {
 		conversations: conversationsLocal,
 		setConversations: setConversationsLocal,
-		searchConversations: searchConversationsLocal,
+		// searchConversations: searchConversationsLocal,
 		addConversation: addConversationLocal,
 	} = useMultipleConversationStore();
 
 	const {
 		conversations: conversationsTemporary,
 		setConversations: setConversationsTemporary,
-		searchConversations: searchConversationsTemporary,
+		// searchConversations: searchConversationsTemporary,
 		addConversation: addConversationTemporary,
 	} = useTemporaryMultipleConversationStore();
 
-	const handleSetConversationQuery = (query: string) => {
-		setConversationQuery(query);
-	};
+	// const handleSetConversationQuery = (query: string) => {
+	// 	setConversationQuery(query);
+	// };
 
 	const addConversationMutation = useMutation({
 		mutationFn: async (cid: string) =>
@@ -123,27 +122,27 @@ export default function Sidebar({
 	});
 
 	const handleAddConversation = () => {
-		let cid = uuidv4();
+		const cid = uuidv4();
 
 		addConversationLocal(cid);
 		addConversationTemporary(cid);
 		addConversationMutation.mutate(cid);
 	};
 
-	const handleSearchConversation = (query: string) => {
-		searchConversationsTemporary(query);
-	};
+	// const handleSearchConversation = (query: string) => {
+	// 	searchConversationsTemporary(query);
+	// };
 
-	const handleOpenSearch = (search: boolean) => {
-		setOpenSearch(search);
-	};
+	// const handleOpenSearch = (search: boolean) => {
+	// 	setOpenSearch(search);
+	// };
 
 	const {
 		data: conversationsServer,
-		error: conversationsError,
-		status: conversationsStatus,
-		fetchStatus: conversationsFetchStatus,
-		refetch: refetchConversations,
+		// error: conversationsError,
+		// status: conversationsStatus,
+		// fetchStatus: conversationsFetchStatus,
+		// refetch: refetchConversations,
 	} = useQuery({
 		queryKey: ['getConversations'],
 		queryFn: async () => await getConversations(session?.user.email),

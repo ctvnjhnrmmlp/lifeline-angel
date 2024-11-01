@@ -36,21 +36,13 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 		queryFn: async () => await getMessages(session?.user.email, slug[0]),
 	});
 
-	const {
-		messages: messagesLocal,
-		setMessages: setMessagesLocal,
-		addMessage: addMessageLocal,
-	} = useMultipleMessageStore();
+	const { addMessage: addMessageLocal } = useMultipleMessageStore();
 
-	const {
-		updateConversation: updateConversationLocal,
-		deleteConversation: deleteConversationLocal,
-	} = useMultipleConversationStore();
+	const { updateConversation: updateConversationLocal } =
+		useMultipleConversationStore();
 
-	const {
-		updateConversation: updateConversationTemporary,
-		deleteConversation: deleteConversationTemporary,
-	} = useTemporaryMultipleConversationStore();
+	const { updateConversation: updateConversationTemporary } =
+		useTemporaryMultipleConversationStore();
 
 	const updateConversationMutation = useMutation({
 		mutationFn: async (message: string) =>
@@ -78,12 +70,12 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 	};
 
 	const {
-		speak: speakMessage,
-		pause: pauseMessage,
-		resume: resumeMessage,
+		// speak: speakMessage,
+		// pause: pauseMessage,
+		// resume: resumeMessage,
 		ref: messageRef,
-		setVoice,
-		voices,
+		// setVoice,
+		// voices,
 	} = useTextToVoice<HTMLDivElement>({
 		pitch: 1,
 		rate: 1,
