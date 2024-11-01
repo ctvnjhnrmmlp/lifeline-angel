@@ -1,10 +1,9 @@
-import Content from '@/components/compounds/Content/Content';
 import FONTS from '@/configurations/fonts';
-import { METADATA } from '@/configurations/metadata';
-import '@/styles/globals.css';
+import METADATA from '@/configurations/metadata';
 import type { Metadata } from 'next';
 import 'react-photo-view/dist/react-photo-view.css';
 import Containers from './containers';
+import './globals.css';
 import Providers from './providers';
 
 export const metadata: Metadata = METADATA;
@@ -15,12 +14,10 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang='en' className='select-none'>
+		<html lang='en' suppressHydrationWarning>
 			<body className={`${FONTS.alpha.className} antialiased no-scrollbar`}>
 				<Providers>
-					<Containers>
-						<Content>{children}</Content>
-					</Containers>
+					<Containers>{children}</Containers>
 				</Providers>
 			</body>
 		</html>

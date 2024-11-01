@@ -7,7 +7,7 @@ self.addEventListener('push', function (event) {
 			badge: '/images/lifeline-angel.png',
 			vibrate: [100, 50, 100],
 			data: {
-				// dateOfArrival: Date.now(),
+				dateOfArrival: Date.now(),
 				primaryKey: '2',
 			},
 		};

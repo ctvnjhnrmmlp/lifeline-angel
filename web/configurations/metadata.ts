@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import VARIABLES from './variables';
 
-export const METADATA: Metadata = {
+const METADATA: Metadata = {
 	metadataBase: new URL(VARIABLES.canonical),
 	title: VARIABLES.name,
 	description: VARIABLES.info,
@@ -53,3 +53,5 @@ export const METADATA: Metadata = {
 	category: VARIABLES.words,
 	classification: VARIABLES.info,
 };
+
+export default METADATA;

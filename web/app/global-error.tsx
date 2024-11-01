@@ -5,7 +5,7 @@ import Link from 'next/link';
 function GlobalError() {
 	return (
 		<main className='flex min-h-screen flex-col items-center justify-center items-center'>
-			<section className='flex flex-col space-y-8 sm:space-y-10 md:space-y-12 lg:space-y-14 justify-center items-center'>
+			{/* <section className='flex flex-col space-y-8 sm:space-y-10 md:space-y-12 lg:space-y-14 justify-center items-center'>
 				<div className='flex flex-col justify-center items-center space-y-8 p-8'>
 					<div className='flex flex-col justify-center items-center'>
 						<h1 className='font-bold text-6xl md:text-8xl uppercase'>Error</h1>
@@ -18,7 +18,7 @@ function GlobalError() {
 						</Link>
 					</div>
 				</div>
-			</section>
+			</section> */}
 		</main>
 	);
 }

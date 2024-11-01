@@ -12,9 +12,9 @@ export default function Page() {
 	}
 
 	return (
-		<main className='flex flex-col justify-center pl-[26rem] py-4 pr-4 h-screen w-screen'>
-			<section className='overflow-y-scroll no-scrollbar bg-background border-foreground/20 border-1 rounded-3xl h-screen'>
-				<div className='flex flex-col p-6 outline h-full'>
+		<main>
+			<section className='rounded-3xl h-screen'>
+				<div className='flex flex-col p-6 h-full'>
 					<div className='flex-grow w-full flex flex-col justify-center items-center'>
 						<div className='flex flex-col space-y-2'>
 							<div>

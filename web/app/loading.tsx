@@ -1,6 +1,6 @@
 'use client';
 
-import Splash from '@/components/compounds/Splash/Splash';
+// import Splash from '@/components/compounds/Splash/Splash';
 import { useState } from 'react';
 
 function Loading() {
@@ -8,7 +8,7 @@ function Loading() {
 
 	return (
 		<section className='flex flex-col gap-6 px-4 bg-background'>
-			{loading && <Splash finishLoading={() => setLoading(false)} />}
+			{/* {loading && <Splash finishLoading={() => setLoading(false)} />} */}
 		</section>
 	);
 }
