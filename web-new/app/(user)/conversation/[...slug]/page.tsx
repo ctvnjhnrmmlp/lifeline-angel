@@ -45,6 +45,7 @@ import {
 	CardTitle,
 } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
+import { SidebarTrigger } from '@/components/ui/sidebar';
 import {
 	useMultipleConversationStore,
 	useSingleConversationStore,
@@ -282,7 +283,7 @@ export default function Page() {
 										: 'New conversation'}
 								</p>
 							</div>
-							<div className='flex space-x-2'>
+							<div className='flex items-center space-x-3'>
 								{messagesServer && messagesServer.length > 0 && (
 									<>
 										<Dialog>
@@ -347,6 +348,7 @@ export default function Page() {
 										</DialogHeader>
 									</DialogContent>
 								</Dialog>
+								<SidebarTrigger className='text-foreground py-6 px-4 w-full outline outline-1 outline-zinc-200 rounded-xl' />
 							</div>
 						</div>
 					</div>
