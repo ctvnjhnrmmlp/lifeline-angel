@@ -4,6 +4,14 @@ import ModelTextMessageCard from '@/components/Blocks/Card/ModelTextMessageCard'
 import UserImageMessageCard from '@/components/Blocks/Card/UserImageMessageCard';
 import UserTextMessageCard from '@/components/Blocks/Card/UserTextMessageCard';
 import {
+	Dialog,
+	DialogContent,
+	DialogDescription,
+	DialogHeader,
+	DialogTitle,
+	DialogTrigger,
+} from '@/components/ui/dialog';
+import {
 	deleteConversation,
 	getConversation,
 	updateConversation,
@@ -277,26 +285,68 @@ export default function Page() {
 							<div className='flex space-x-2'>
 								{messagesServer && messagesServer.length > 0 && (
 									<>
-										<button
-											className='p-3 text-foreground text-2xl'
-											// onClick={() => onOpenTextInjury()}
-										>
-											<MdPersonalInjury />
-										</button>
-										<button
-											className='p-3 text-foreground text-2xl'
-											// onClick={() => onOpenImageInjury()}
-										>
-											<GiRaggedWound />
-										</button>
+										<Dialog>
+											<DialogTrigger asChild>
+												<button
+													className='p-3 text-foreground text-2xl'
+													// onClick={() => onOpenTextInjury()}
+												>
+													<MdPersonalInjury />
+												</button>
+											</DialogTrigger>
+											<DialogContent>
+												<DialogHeader>
+													<DialogTitle>Are you absolutely sure?</DialogTitle>
+													<DialogDescription>
+														This action cannot be undone. This will permanently
+														delete your account and remove your data from our
+														servers.
+													</DialogDescription>
+												</DialogHeader>
+											</DialogContent>
+										</Dialog>
+										<Dialog>
+											<DialogTrigger asChild>
+												<button
+													className='p-3 text-foreground text-2xl'
+													// onClick={() => onOpenImageInjury()}
+												>
+													<GiRaggedWound />
+												</button>
+											</DialogTrigger>
+											<DialogContent>
+												<DialogHeader>
+													<DialogTitle>Are you absolutely sure?</DialogTitle>
+													<DialogDescription>
+														This action cannot be undone. This will permanently
+														delete your account and remove your data from our
+														servers.
+													</DialogDescription>
+												</DialogHeader>
+											</DialogContent>
+										</Dialog>
 									</>
 								)}
-								<button
-									className='p-3 text-foreground text-2xl'
-									// onClick={() => onOpenOptions()}
-								>
-									<BsGrid1X2Fill />
-								</button>
+								<Dialog>
+									<DialogTrigger asChild>
+										<button
+											className='p-3 text-foreground text-2xl'
+											// onClick={() => onOpenOptions()}
+										>
+											<BsGrid1X2Fill />
+										</button>
+									</DialogTrigger>
+									<DialogContent>
+										<DialogHeader>
+											<DialogTitle>Are you absolutely sure?</DialogTitle>
+											<DialogDescription>
+												This action cannot be undone. This will permanently
+												delete your account and remove your data from our
+												servers.
+											</DialogDescription>
+										</DialogHeader>
+									</DialogContent>
+								</Dialog>
 							</div>
 						</div>
 					</div>
