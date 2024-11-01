@@ -42,27 +42,27 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 		resumeMessage();
 	};
 
-	useEffect(() => {
-		if (typeof message.content === 'object') {
-			// @ts-ignore
-			const formattedEnglishMessages = message.content.eng
-				.split('.')!
-				// @ts-ignore
-				.map((point) => point.trim())
-				// @ts-ignore
-				.filter((point) => point.length > 0);
-			// @ts-ignore
-			const formattedFilipinoMessages = message.content.fil
-				.split('.')
-				// @ts-ignore
-				.map((point) => point.trim())
-				// @ts-ignore
-				.filter((point) => point.length > 0);
+	// useEffect(() => {
+	// 	if (typeof message.content === 'object') {
+	// 		// @ts-ignore
+	// 		const formattedEnglishMessages = message.content.eng
+	// 			.split('.')!
+	// 			// @ts-ignore
+	// 			.map((point) => point.trim())
+	// 			// @ts-ignore
+	// 			.filter((point) => point.length > 0);
+	// 		// @ts-ignore
+	// 		const formattedFilipinoMessages = message.content.fil
+	// 			.split('.')
+	// 			// @ts-ignore
+	// 			.map((point) => point.trim())
+	// 			// @ts-ignore
+	// 			.filter((point) => point.length > 0);
 
-			setFormattedEnglishMessages(formattedEnglishMessages);
-			setFormattedFilipinoMessages(formattedFilipinoMessages);
-		}
-	}, []);
+	// 		setFormattedEnglishMessages(formattedEnglishMessages);
+	// 		setFormattedFilipinoMessages(formattedFilipinoMessages);
+	// 	}
+	// }, []);
 
 	return (
 		<div className='flex flex-col space-y-2'>
