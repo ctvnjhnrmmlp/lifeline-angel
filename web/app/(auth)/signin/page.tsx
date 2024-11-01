@@ -30,7 +30,7 @@ export default function Page() {
 
 	return (
 		<div className='flex h-screen w-full items-center justify-center'>
-			<Card className='mx-auto w-96'>
+			<Card className='mx-auto w-96 dark:border-zinc-800'>
 				<CardHeader>
 					<CardTitle className='text-4xl'>Sign In</CardTitle>
 				</CardHeader>
