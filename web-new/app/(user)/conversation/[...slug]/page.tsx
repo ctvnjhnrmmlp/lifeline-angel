@@ -286,10 +286,7 @@ export default function Page() {
 									<>
 										<Dialog>
 											<DialogTrigger asChild>
-												<button
-													className='p-3 text-foreground text-2xl'
-													// onClick={() => onOpenTextInjury()}
-												>
+												<button className='p-3 text-foreground text-2xl'>
 													<MdPersonalInjury />
 												</button>
 											</DialogTrigger>
@@ -303,7 +300,7 @@ export default function Page() {
 															{TEXT_INJURIES.map((injury) => (
 																<button
 																	key={injury.content}
-																	className='text-lg py-2 px-5 outline outline-1 outline-zinc-200 hover:outline-zinc-400 rounded-3xl font-bold tracking-tight text-background'
+																	className='text-lg py-2 px-5 outline outline-1 outline-zinc-800 dark:outline-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-3xl font-bold tracking-tight text-background'
 																	onClick={() => {
 																		handleAddMessage(injury.content);
 																		handleUpdateConversation(injury.content);
@@ -319,10 +316,7 @@ export default function Page() {
 										</Dialog>
 										<Dialog>
 											<DialogTrigger asChild>
-												<button
-													className='p-3 text-foreground text-2xl'
-													// onClick={() => onOpenImageInjury()}
-												>
+												<button className='p-3 text-foreground text-2xl'>
 													<GiRaggedWound />
 												</button>
 											</DialogTrigger>
@@ -332,18 +326,20 @@ export default function Page() {
 														Image Injuries
 													</DialogTitle>
 													<DialogDescription className='py-4'>
-														<div className='flex flex-wrap gap-2'>
-															{TEXT_INJURIES.map((injury) => (
-																<button
+														<div className='flex flex-wrap justify-center gap-2'>
+															{IMAGE_INJURIES.map((injury) => (
+																<Image
 																	key={injury.content}
-																	className='text-lg py-2 px-5 outline outline-1 outline-zinc-200 hover:outline-zinc-400 rounded-3xl font-bold tracking-tight text-background'
+																	width={130}
+																	height={130}
+																	src={`/images/${injury.source}`}
+																	className='w-56 object-cover rounded-3xl'
+																	alt={injury.content}
 																	onClick={() => {
 																		handleAddMessage(injury.content);
 																		handleUpdateConversation(injury.content);
 																	}}
-																>
-																	{injury.content}
-																</button>
+																/>
 															))}
 														</div>
 													</DialogDescription>
@@ -354,11 +350,8 @@ export default function Page() {
 								)}
 								<Dialog>
 									<DialogTrigger asChild>
-										<button
-											className='p-3 text-foreground text-2xl'
-											// onClick={() => onOpenImageInjury()}
-										>
-											<GiRaggedWound />
+										<button className='p-3 text-foreground text-2xl'>
+											<BsGrid1X2Fill />
 										</button>
 									</DialogTrigger>
 									<DialogContent className='sm:max-w-[30rem] sm:max-h-[30rem] bg-foreground border-0'>
@@ -395,7 +388,6 @@ export default function Page() {
 								</div>
 							</div>
 						)}
-
 						{messagesLocal && !messagesLocal.length && (
 							<div className='space-y-10'>
 								<div className='space-y-4'>
@@ -419,47 +411,31 @@ export default function Page() {
 										))}
 									</div>
 								</div>
-
 								<div className='space-y-4'>
 									<div>
 										<p className='text-2xl font-bold text-foreground'>
 											Image Injuries
 										</p>
 									</div>
-									<div className='flex flex-wrap gap-3'>
+									<div className='flex gap-3'>
 										{IMAGE_INJURIES.map((injury) => (
-											<Card
+											<Image
 												key={injury.content}
-												className='outline outline-1 outline-zinc-200 dark:outline-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800'
-												// classNames={{
-												// 	base: 'bg-background border-foreground/20 border-1',
-												// }}
-												// onPress={() => {
-												// 	handleAddMessage(injury.content);
-												// 	handleUpdateConversation(injury.content);
-												// }}
-											>
-												<CardContent className='overflow-visible p-0'>
-													<Image
-														width={130}
-														height={130}
-														alt={injury.content}
-														className='w-full object-cover'
-														src={`/images/${injury.source}`}
-													/>
-												</CardContent>
-												<CardFooter>
-													<p className='text-lg font-bold tracking-tight mx-auto text-center'>
-														{injury.content}
-													</p>
-												</CardFooter>
-											</Card>
+												width={130}
+												height={130}
+												src={`/images/${injury.source}`}
+												className='w-full object-cover rounded-3xl'
+												alt={injury.content}
+												onClick={() => {
+													handleAddMessage(injury.content);
+													handleUpdateConversation(injury.content);
+												}}
+											/>
 										))}
 									</div>
 								</div>
 							</div>
 						)}
-
 						{messagesLocal?.map((message) => {
 							// @ts-ignore
 							if (checkTextValidURL(message.content)) {
