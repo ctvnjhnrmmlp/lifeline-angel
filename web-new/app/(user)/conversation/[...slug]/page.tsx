@@ -295,13 +295,26 @@ export default function Page() {
 													<MdPersonalInjury />
 												</button>
 											</DialogTrigger>
-											<DialogContent>
+											<DialogContent className='sm:max-w-[50rem] sm:max-h-[50rem] bg-foreground border-0'>
 												<DialogHeader>
-													<DialogTitle>Are you absolutely sure?</DialogTitle>
-													<DialogDescription>
-														This action cannot be undone. This will permanently
-														delete your account and remove your data from our
-														servers.
+													<DialogTitle className='text-2xl font-bold text-center text-background'>
+														Text Injuries
+													</DialogTitle>
+													<DialogDescription className='py-4'>
+														<div className='flex flex-wrap gap-2'>
+															{TEXT_INJURIES.map((injury) => (
+																<button
+																	key={injury.content}
+																	className='text-lg py-2 px-5 outline outline-1 outline-zinc-200 hover:outline-zinc-400 rounded-3xl font-bold tracking-tight text-background'
+																	onClick={() => {
+																		handleAddMessage(injury.content);
+																		handleUpdateConversation(injury.content);
+																	}}
+																>
+																	{injury.content}
+																</button>
+															))}
+														</div>
 													</DialogDescription>
 												</DialogHeader>
 											</DialogContent>
@@ -315,13 +328,26 @@ export default function Page() {
 													<GiRaggedWound />
 												</button>
 											</DialogTrigger>
-											<DialogContent>
+											<DialogContent className='sm:max-w-[50rem] sm:max-h-[50rem] bg-foreground border-0'>
 												<DialogHeader>
-													<DialogTitle>Are you absolutely sure?</DialogTitle>
-													<DialogDescription>
-														This action cannot be undone. This will permanently
-														delete your account and remove your data from our
-														servers.
+													<DialogTitle className='text-2xl font-bold text-center text-background'>
+														Image Injuries
+													</DialogTitle>
+													<DialogDescription className='py-4'>
+														<div className='flex flex-wrap gap-2'>
+															{TEXT_INJURIES.map((injury) => (
+																<button
+																	key={injury.content}
+																	className='text-lg py-2 px-5 outline outline-1 outline-zinc-200 hover:outline-zinc-400 rounded-3xl font-bold tracking-tight text-background'
+																	onClick={() => {
+																		handleAddMessage(injury.content);
+																		handleUpdateConversation(injury.content);
+																	}}
+																>
+																	{injury.content}
+																</button>
+															))}
+														</div>
 													</DialogDescription>
 												</DialogHeader>
 											</DialogContent>

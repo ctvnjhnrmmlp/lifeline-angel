@@ -159,7 +159,7 @@ export default function Page() {
 									</DialogHeader>
 									<DialogFooter>
 										<DialogClose asChild>
-											<button className='px-5 py-3 bg-foreground text-background rounded-xl text-2xl font-bold tracking-tight outline outline-1'>
+											<button className='px-5 py-3 bg-foreground text-background rounded-xl text-2xl font-bold tracking-tight outline outline-1 outline-zinc-200'>
 												Disagree
 											</button>
 										</DialogClose>
