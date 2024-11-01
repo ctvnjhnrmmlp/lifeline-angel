@@ -201,19 +201,19 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 							// @ts-ignore
 							onClick={() =>
 								copy(
-									`Meaning\n
-									${
+									`Meaning\n${
 										// @ts-ignore
 										message.content.meaning
-									}\n
-									Procedures\n
-									${formattedProcedures.map((procedure) => procedure)}\n
-									Relations\n
-									${
+									}\nProcedures\n${
+										// @ts-ignore
+										message.content.procedures[0]
+									} References\n${
+										// @ts-ignore
+										message.content.references.map((reference) => reference)
+									}\nRelations\n${
 										// @ts-ignore
 										message.content.relations.map((relation) => relation)
-									}
-									`
+									}`
 								)
 							}
 						>
