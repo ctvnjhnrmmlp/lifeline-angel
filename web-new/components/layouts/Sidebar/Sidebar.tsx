@@ -216,12 +216,6 @@ export default function Sidebar({
 				<SidebarFooter className='bg-background'>
 					<SidebarMenu>
 						<SidebarMenuItem>
-							<SidebarTrigger
-								variant='outline'
-								className='text-foreground py-4 w-full  rounded-xl'
-							/>
-						</SidebarMenuItem>
-						<SidebarMenuItem>
 							<DropdownMenu>
 								<DropdownMenuTrigger asChild>
 									<Button variant='outline' size='icon' className='w-full'>
@@ -245,6 +239,12 @@ export default function Sidebar({
 									</DropdownMenuItem>
 								</DropdownMenuContent>
 							</DropdownMenu>
+						</SidebarMenuItem>
+						<SidebarMenuItem>
+							<SidebarTrigger
+								variant='outline'
+								className='text-foreground py-4 w-full  rounded-xl'
+							/>
 						</SidebarMenuItem>
 						<SidebarMenuItem className='mx-auto'>
 							<DropdownMenu>

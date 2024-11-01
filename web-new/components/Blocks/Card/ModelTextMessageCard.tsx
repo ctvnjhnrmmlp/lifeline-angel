@@ -2,6 +2,7 @@
 
 import { convertDateTo24HourTimeFormat } from '@/utilities/functions';
 import { Message } from '@prisma/client';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { IoIosCopy } from 'react-icons/io';
 import { RiVoiceprintFill } from 'react-icons/ri';
@@ -9,6 +10,7 @@ import { useTextToVoice } from 'react-speakup';
 
 const ModelTextMessageCard = ({ message }: { message: Message }) => {
 	const [voiceMessageMode, setVoiceMessageMode] = useState('');
+	const [formattedProcedures, setFormattedProcedures] = useState([]);
 	const [formattedEnglishMessages, setFormattedEnglishMessages] = useState([]);
 	const [formattedFilipinoMessages, setFormattedFilipinoMessages] = useState(
 		[]
@@ -42,27 +44,17 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 		resumeMessage();
 	};
 
-	// useEffect(() => {
-	// 	if (typeof message.content === 'object') {
-	// 		// @ts-ignore
-	// 		const formattedEnglishMessages = message.content.eng
-	// 			.split('.')!
-	// 			// @ts-ignore
-	// 			.map((point) => point.trim())
-	// 			// @ts-ignore
-	// 			.filter((point) => point.length > 0);
-	// 		// @ts-ignore
-	// 		const formattedFilipinoMessages = message.content.fil
-	// 			.split('.')
-	// 			// @ts-ignore
-	// 			.map((point) => point.trim())
-	// 			// @ts-ignore
-	// 			.filter((point) => point.length > 0);
+	useEffect(() => {
+		// @ts-ignore
+		const formattedProcedureArr = message.content.procedures[0]
+			.split('. ')!
+			// @ts-ignore
+			.map((point) => point.trim())
+			// @ts-ignore
+			.filter((point) => point.length > 0);
 
-	// 		setFormattedEnglishMessages(formattedEnglishMessages);
-	// 		setFormattedFilipinoMessages(formattedFilipinoMessages);
-	// 	}
-	// }, []);
+		setFormattedProcedures(formattedProcedureArr);
+	}, []);
 
 	return (
 		<div className='flex flex-col space-y-2'>
@@ -85,8 +77,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 							Procedures
 						</p>
 						<div className='flex flex-col space-y-1'>
-							{/* @ts-ignore */}
-							{message.content.procedures.map((procedure) => (
+							{formattedProcedures.map((procedure) => (
 								<p
 									key={procedure}
 									className='text-lg text-background tracking-tight text-ellipsis'
@@ -103,12 +94,14 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 						<div className='flex flex-col space-y-1'>
 							{/* @ts-ignore */}
 							{message.content.references.map((reference) => (
-								<p
+								<Link
 									key={reference}
-									className='text-lg text-background tracking-tight text-ellipsis'
+									href={reference}
+									target='_blank'
+									className='text-lg text-background tracking-tight text-ellipsis underline'
 								>
 									{reference}
-								</p>
+								</Link>
 							))}
 						</div>
 					</div>
@@ -118,14 +111,14 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 						</p>
 						<div className='flex flex-col space-y-1'>
 							{/* @ts-ignore */}
-							{/* {message.content.relations.map((relation) => (
+							{message.content.relations.map((relation) => (
 								<p
 									key={relation}
 									className='text-lg text-background tracking-tight text-ellipsis'
 								>
 									{relation}
 								</p>
-							))} */}
+							))}
 						</div>
 					</div>
 				</div>
