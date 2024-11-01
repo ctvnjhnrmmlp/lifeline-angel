@@ -1,8 +1,11 @@
 'use client';
 
-import { Message } from '@prisma/client';
-import Image from 'next/image';
-import { PhotoProvider, PhotoView } from 'react-photo-view';
+import { Message } from '.pnpm/@prisma+client@5.21.1_prisma@5.21.1/node_modules/@prisma/client/default';
+import Image from '.pnpm/next@15.0.2_react-dom@19.0.0-rc-02c0e824-20241028_react@19.0.0-rc-02c0e824-20241028__react@19.0.0-rc-02c0e824-20241028/node_modules/next/image';
+import {
+	PhotoProvider,
+	PhotoView,
+} from '.pnpm/react-photo-view@1.2.6_react-dom@19.0.0-rc-02c0e824-20241028_react@19.0.0-rc-02c0e824-2024102_spdqb4eqhi3seyyw7n6uskup6y/node_modules/react-photo-view/dist';
 
 const UserImageMessageCard = ({ message }: { message: Message }) => {
 	return (

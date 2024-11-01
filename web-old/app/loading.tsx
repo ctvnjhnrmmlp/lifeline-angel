@@ -1,7 +1,7 @@
 'use client';
 
+import { useState } from '.pnpm/@types+react@18.3.12/node_modules/@types/react';
 import Splash from '@/components/compounds/Splash/Splash';
-import { useState } from 'react';
 
 function Loading() {
 	const [loading, setLoading] = useState(true);

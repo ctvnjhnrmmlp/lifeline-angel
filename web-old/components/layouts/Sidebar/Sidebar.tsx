@@ -1,5 +1,38 @@
 'use client';
 
+import {
+	useMutation,
+	useQuery,
+} from '.pnpm/@tanstack+react-query@5.59.16_react@19.0.0-rc-02c0e824-20241028/node_modules/@tanstack/react-query/build/modern';
+import {
+	useEffect,
+	useState,
+} from '.pnpm/@types+react@18.3.12/node_modules/@types/react';
+import {
+	signOut,
+	useSession,
+} from '.pnpm/next-auth@4.24.10_next@15.0.2_react-dom@19.0.0-rc-02c0e824-20241028_react@19.0.0-rc-02c0e824-_6v3ny5a5udmzoog3xss5rkgreu/node_modules/next-auth/react';
+import Link from '.pnpm/next@15.0.2_react-dom@19.0.0-rc-02c0e824-20241028_react@19.0.0-rc-02c0e824-20241028__react@19.0.0-rc-02c0e824-20241028/node_modules/next/link';
+import {
+	BiSolidLeftArrow,
+	BiSolidRightArrow,
+} from '.pnpm/react-icons@5.3.0_react@19.0.0-rc-02c0e824-20241028/node_modules/react-icons/bi';
+import {
+	FaLifeRing,
+	FaQuestion,
+} from '.pnpm/react-icons@5.3.0_react@19.0.0-rc-02c0e824-20241028/node_modules/react-icons/fa';
+import {
+	FaGear,
+	FaShield,
+} from '.pnpm/react-icons@5.3.0_react@19.0.0-rc-02c0e824-20241028/node_modules/react-icons/fa6';
+import { FiPaperclip } from '.pnpm/react-icons@5.3.0_react@19.0.0-rc-02c0e824-20241028/node_modules/react-icons/fi';
+import { ImPlus } from '.pnpm/react-icons@5.3.0_react@19.0.0-rc-02c0e824-20241028/node_modules/react-icons/im';
+import {
+	IoIosPaper,
+	IoIosWarning,
+	IoMdDownload,
+} from '.pnpm/react-icons@5.3.0_react@19.0.0-rc-02c0e824-20241028/node_modules/react-icons/io';
+import { v4 as uuidv4 } from '.pnpm/uuid@11.0.2/node_modules/uuid/dist/esm-browser';
 import ConversationButton from '@/components/blocks/Button/ConversationButton';
 import {
 	addConversation,
@@ -23,17 +56,6 @@ import {
 	ScrollShadow,
 	useDisclosure,
 } from '@nextui-org/react';
-import { useMutation, useQuery } from '@tanstack/react-query';
-import { signOut, useSession } from 'next-auth/react';
-import Link from 'next/link';
-import { useEffect, useState } from 'react';
-import { BiSolidLeftArrow, BiSolidRightArrow } from 'react-icons/bi';
-import { FaLifeRing, FaQuestion } from 'react-icons/fa';
-import { FaGear, FaShield } from 'react-icons/fa6';
-import { FiPaperclip } from 'react-icons/fi';
-import { ImPlus } from 'react-icons/im';
-import { IoIosPaper, IoIosWarning, IoMdDownload } from 'react-icons/io';
-import { v4 as uuidv4 } from 'uuid';
 
 const Sidebar = () => {
 	const { data: session } = useSession();

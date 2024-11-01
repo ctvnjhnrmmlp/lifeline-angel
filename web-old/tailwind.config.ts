@@ -1,5 +1,5 @@
+import type { Config } from '.pnpm/tailwindcss@3.4.14/node_modules/tailwindcss/types';
 import { nextui } from '@nextui-org/react';
-import type { Config } from 'tailwindcss';
 import { withUt } from 'uploadthing/tw';
 import COLORS from './configurations/colors';
 

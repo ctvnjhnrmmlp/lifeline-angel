@@ -1,5 +1,5 @@
-import { Conversation } from '@prisma/client';
-import { create } from 'zustand';
+import { Conversation } from '.pnpm/@prisma+client@5.21.1_prisma@5.21.1/node_modules/@prisma/client/default';
+import { create } from '.pnpm/zustand@5.0.1_@types+react@18.3.12_react@19.0.0-rc-02c0e824-20241028/node_modules/zustand/esm/index.mjs';
 
 type MultipleConversationStore = {
 	conversations: Conversation[];

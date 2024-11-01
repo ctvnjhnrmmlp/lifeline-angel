@@ -1,11 +1,14 @@
 'use client';
 
+import { Message } from '.pnpm/@prisma+client@5.21.1_prisma@5.21.1/node_modules/@prisma/client/default';
+import {
+	useEffect,
+	useState,
+} from '.pnpm/@types+react@18.3.12/node_modules/@types/react';
+import { IoIosCopy } from '.pnpm/react-icons@5.3.0_react@19.0.0-rc-02c0e824-20241028/node_modules/react-icons/io';
+import { RiVoiceprintFill } from '.pnpm/react-icons@5.3.0_react@19.0.0-rc-02c0e824-20241028/node_modules/react-icons/ri';
+import { useTextToVoice } from '.pnpm/react-speakup@1.1.2_react@19.0.0-rc-02c0e824-20241028/node_modules/react-speakup/dist/esm';
 import { convertDateTo24HourTimeFormat, copy } from '@/utilities/functions';
-import { Message } from '@prisma/client';
-import { useEffect, useState } from 'react';
-import { IoIosCopy } from 'react-icons/io';
-import { RiVoiceprintFill } from 'react-icons/ri';
-import { useTextToVoice } from 'react-speakup';
 
 const ModelTextMessageCard = ({ message }: { message: Message }) => {
 	const [voiceMessageMode, setVoiceMessageMode] = useState('');

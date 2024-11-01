@@ -1,6 +1,9 @@
+import {
+	PutObjectCommand,
+	S3Client,
+} from '.pnpm/@aws-sdk+client-s3@3.682.0_aws-crt@1.23.0/node_modules/@aws-sdk/client-s3/dist-types';
 import Prisma from '@/database/database';
 import client from '@/services/lifeline-angel/client';
-import { PutObjectCommand, S3Client } from '@aws-sdk/client-s3';
 
 const apiClient = client(process.env.NEXT_PUBLIC_LIFELINE_ANGEL_API_MODEL_URL);
 

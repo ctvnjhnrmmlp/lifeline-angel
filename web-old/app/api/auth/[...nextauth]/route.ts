@@ -1,8 +1,8 @@
+import { PrismaAdapter } from '.pnpm/@auth+prisma-adapter@2.7.2_@prisma+client@5.21.1_prisma@5.21.1_/node_modules/@auth/prisma-adapter';
+import GoogleProvider from '.pnpm/next-auth@4.24.10_next@15.0.2_react-dom@19.0.0-rc-02c0e824-20241028_react@19.0.0-rc-02c0e824-_6v3ny5a5udmzoog3xss5rkgreu/node_modules/next-auth/providers/google';
 import Prisma from '@/database/database';
-import { PrismaAdapter } from '@auth/prisma-adapter';
 import NextAuth from 'next-auth';
 import { Adapter } from 'next-auth/adapters';
-import GoogleProvider from 'next-auth/providers/google';
 
 const handler = NextAuth({
 	adapter: PrismaAdapter(Prisma) as Adapter,

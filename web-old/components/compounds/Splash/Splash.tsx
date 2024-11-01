@@ -1,9 +1,12 @@
 'use client';
 
+import {
+	useEffect,
+	useState,
+} from '.pnpm/@types+react@18.3.12/node_modules/@types/react';
+import Image from '.pnpm/next@15.0.2_react-dom@19.0.0-rc-02c0e824-20241028_react@19.0.0-rc-02c0e824-20241028__react@19.0.0-rc-02c0e824-20241028/node_modules/next/image';
 import { Spinner } from '@nextui-org/react';
 import anime from 'animejs';
-import Image from 'next/image';
-import { useEffect, useState } from 'react';
 
 const Splash = ({ finishLoading }: { finishLoading: () => void }) => {
 	const [mounted, setMounted] = useState(false);

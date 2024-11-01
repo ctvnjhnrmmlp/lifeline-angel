@@ -1,6 +1,6 @@
 'use server';
 
-import webpush from 'web-push';
+import webpush from '.pnpm/@types+web-push@3.6.4/node_modules/@types/web-push';
 
 webpush.setVapidDetails(
 	'mailto:johnrommel.octaviano@gmail.com',

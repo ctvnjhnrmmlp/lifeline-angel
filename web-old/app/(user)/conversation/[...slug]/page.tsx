@@ -1,6 +1,17 @@
 'use client';
 
 import {
+	useMutation,
+	useQuery,
+} from '.pnpm/@tanstack+react-query@5.59.16_react@19.0.0-rc-02c0e824-20241028/node_modules/@tanstack/react-query/build/modern';
+import { useSession } from '.pnpm/next-auth@4.24.10_next@15.0.2_react-dom@19.0.0-rc-02c0e824-20241028_react@19.0.0-rc-02c0e824-_6v3ny5a5udmzoog3xss5rkgreu/node_modules/next-auth/react';
+import Image from '.pnpm/next@15.0.2_react-dom@19.0.0-rc-02c0e824-20241028_react@19.0.0-rc-02c0e824-20241028__react@19.0.0-rc-02c0e824-20241028/node_modules/next/image';
+import { BsGrid1X2Fill } from '.pnpm/react-icons@5.3.0_react@19.0.0-rc-02c0e824-20241028/node_modules/react-icons/bs';
+import {
+	FaCamera,
+	FaPaperclip,
+} from '.pnpm/react-icons@5.3.0_react@19.0.0-rc-02c0e824-20241028/node_modules/react-icons/fa';
+import {
 	deleteConversation,
 	getConversation,
 	updateConversation,
@@ -23,15 +34,31 @@ import {
 	ModalHeader,
 	useDisclosure,
 } from '@nextui-org/react';
-import { useMutation, useQuery } from '@tanstack/react-query';
-import { useSession } from 'next-auth/react';
-import Image from 'next/image';
-import { BsGrid1X2Fill } from 'react-icons/bs';
-import { FaCamera, FaPaperclip } from 'react-icons/fa';
 import SpeechRecognition, {
 	useSpeechRecognition,
 } from 'react-speech-recognition';
 
+import React, {
+	useCallback,
+	useEffect,
+	useRef,
+	useState,
+} from '.pnpm/@types+react@18.3.12/node_modules/@types/react';
+import { useFormik } from '.pnpm/formik@2.4.6_react@19.0.0-rc-02c0e824-20241028/node_modules/formik/dist';
+import {
+	redirect,
+	useRouter,
+} from '.pnpm/next@15.0.2_react-dom@19.0.0-rc-02c0e824-20241028_react@19.0.0-rc-02c0e824-20241028__react@19.0.0-rc-02c0e824-20241028/node_modules/next/navigation';
+import {
+	FaLocationArrow,
+	FaMicrophone,
+} from '.pnpm/react-icons@5.3.0_react@19.0.0-rc-02c0e824-20241028/node_modules/react-icons/fa';
+import { FaCloudArrowUp } from '.pnpm/react-icons@5.3.0_react@19.0.0-rc-02c0e824-20241028/node_modules/react-icons/fa6';
+import { GiRaggedWound } from '.pnpm/react-icons@5.3.0_react@19.0.0-rc-02c0e824-20241028/node_modules/react-icons/gi';
+import { MdPersonalInjury } from '.pnpm/react-icons@5.3.0_react@19.0.0-rc-02c0e824-20241028/node_modules/react-icons/md';
+import { RiVoiceprintFill } from '.pnpm/react-icons@5.3.0_react@19.0.0-rc-02c0e824-20241028/node_modules/react-icons/ri';
+import Webcam from '.pnpm/react-webcam@7.2.0_react-dom@19.0.0-rc-02c0e824-20241028_react@19.0.0-rc-02c0e824-20241028__r_scczfo7tbrwyuzgmtgayudzpiu/node_modules/react-webcam/dist/react-webcam';
+import { v4 as uuidv4 } from '.pnpm/uuid@11.0.2/node_modules/uuid/dist/esm-browser';
 import ModelTextMessageCard from '@/components/blocks/Card/ModelTextMessageCard';
 import UserImageMessageCard from '@/components/blocks/Card/UserImageMessageCard';
 import UserTextMessageCard from '@/components/blocks/Card/UserTextMessageCard';
@@ -45,16 +72,6 @@ import {
 	convertToDateFormat,
 } from '@/utilities/functions';
 import { Card, CardBody, CardFooter, ScrollShadow } from '@nextui-org/react';
-import { useFormik } from 'formik';
-import { redirect, useRouter } from 'next/navigation';
-import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { FaLocationArrow, FaMicrophone } from 'react-icons/fa';
-import { FaCloudArrowUp } from 'react-icons/fa6';
-import { GiRaggedWound } from 'react-icons/gi';
-import { MdPersonalInjury } from 'react-icons/md';
-import { RiVoiceprintFill } from 'react-icons/ri';
-import Webcam from 'react-webcam';
-import { v4 as uuidv4 } from 'uuid';
 import * as Yup from 'yup';
 
 export default function Page({ params }: { params: { slug: string[] } }) {

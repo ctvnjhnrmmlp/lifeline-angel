@@ -1,7 +1,7 @@
 'use client';
 
+import { Message } from '.pnpm/@prisma+client@5.21.1_prisma@5.21.1/node_modules/@prisma/client/default';
 import { convertDateTo24HourTimeFormat } from '@/utilities/functions';
-import { Message } from '@prisma/client';
 
 const TextMessageCard = ({ message }: { message: Message }) => {
 	return (

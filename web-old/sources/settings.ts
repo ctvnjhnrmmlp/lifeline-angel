@@ -1,8 +1,17 @@
+import {
+	FaLifeRing,
+	FaQuestion,
+} from '.pnpm/react-icons@5.3.0_react@19.0.0-rc-02c0e824-20241028/node_modules/react-icons/fa';
+import {
+	FaGear,
+	FaShield,
+} from '.pnpm/react-icons@5.3.0_react@19.0.0-rc-02c0e824-20241028/node_modules/react-icons/fa6';
+import { FiPaperclip } from '.pnpm/react-icons@5.3.0_react@19.0.0-rc-02c0e824-20241028/node_modules/react-icons/fi';
+import {
+	IoIosPaper,
+	IoIosWarning,
+} from '.pnpm/react-icons@5.3.0_react@19.0.0-rc-02c0e824-20241028/node_modules/react-icons/io';
 import { useDisclosure } from '@nextui-org/react';
-import { FaLifeRing, FaQuestion } from 'react-icons/fa';
-import { FaGear, FaShield } from 'react-icons/fa6';
-import { FiPaperclip } from 'react-icons/fi';
-import { IoIosPaper, IoIosWarning } from 'react-icons/io';
 
 const {
 	isOpen: isOpenPreferences,

@@ -1,14 +1,14 @@
 'use client';
 
+import { Conversation } from '.pnpm/@prisma+client@5.21.1_prisma@5.21.1/node_modules/@prisma/client/default';
+import Link from '.pnpm/next@15.0.2_react-dom@19.0.0-rc-02c0e824-20241028_react@19.0.0-rc-02c0e824-20241028__react@19.0.0-rc-02c0e824-20241028/node_modules/next/link';
+import { usePathname } from '.pnpm/next@15.0.2_react-dom@19.0.0-rc-02c0e824-20241028_react@19.0.0-rc-02c0e824-20241028__react@19.0.0-rc-02c0e824-20241028/node_modules/next/navigation';
+import { GoDotFill } from '.pnpm/react-icons@5.3.0_react@19.0.0-rc-02c0e824-20241028/node_modules/react-icons/go';
+import { TypeAnimation } from '.pnpm/react-type-animation@3.2.0_prop-types@15.8.1_react-dom@19.0.0-rc-02c0e824-20241028_react@19.0_ynivbapjqqay2br4cyrkigyq3u/node_modules/react-type-animation/dist';
 import {
 	checkEntitySecondsAgo,
 	getTimeDifference,
 } from '@/utilities/functions';
-import { Conversation } from '@prisma/client';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { GoDotFill } from 'react-icons/go';
-import { TypeAnimation } from 'react-type-animation';
 
 const ConversationButton = ({ conv }: { conv: Conversation }) => {
 	const pathname = usePathname();

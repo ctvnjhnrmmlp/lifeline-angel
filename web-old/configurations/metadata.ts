@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import { Metadata } from '.pnpm/next@15.0.2_react-dom@19.0.0-rc-02c0e824-20241028_react@19.0.0-rc-02c0e824-20241028__react@19.0.0-rc-02c0e824-20241028/node_modules/next';
 import VARIABLES from './variables';
 
 export const METADATA: Metadata = {

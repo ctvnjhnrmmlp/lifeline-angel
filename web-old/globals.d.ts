@@ -1,4 +1,4 @@
-import { User } from '@prisma/client';
+import { User } from '.pnpm/@prisma+client@5.21.1_prisma@5.21.1/node_modules/@prisma/client/default';
 import NextAuth from 'next-auth';
 
 declare global {
