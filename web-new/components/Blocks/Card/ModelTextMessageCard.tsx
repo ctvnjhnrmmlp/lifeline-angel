@@ -170,7 +170,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 						<p className='text-xl font-bold text-background tracking-tight text-ellipsis'>
 							Relations
 						</p>
-						<div className='flex gap-2'>
+						<div className='flex flex-wrap gap-2'>
 							{/* @ts-ignore */}
 							{message.content.relations.map((relation) => (
 								<button
