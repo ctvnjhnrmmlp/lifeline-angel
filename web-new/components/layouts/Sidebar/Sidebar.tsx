@@ -10,9 +10,11 @@ import {
 	GalleryVerticalEnd,
 	Grip,
 	LogOut,
+	Moon,
 	Plus,
 	Sparkles,
 	SquareTerminal,
+	Sun,
 } from 'lucide-react';
 import * as React from 'react';
 
@@ -63,6 +65,7 @@ import {
 } from '@/stores/lifeline-angel/conversation';
 import { useMutation, useQuery } from '@tanstack/react-query';
 import { signOut, useSession } from 'next-auth/react';
+import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import { ReactNode, useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
@@ -109,6 +112,7 @@ export default function Sidebar({
 	const [conversationQuery, setConversationQuery] = useState('');
 	const [openSearch, setOpenSearch] = useState(false);
 	const { toggleSidebar, setOpen } = useSidebar();
+	const { setTheme } = useTheme();
 
 	const {
 		conversations: conversationsLocal,
@@ -167,7 +171,7 @@ export default function Sidebar({
 
 	return (
 		<SidebarProvider>
-			<SidebarUI collapsible='icon' className='min-w-14'>
+			<SidebarUI collapsible='icon' className='min-w-14 dark:border-zinc-800'>
 				<SidebarHeader className='bg-background'>
 					<SidebarMenu>
 						<SidebarMenuItem className='space-y-2'>
@@ -212,7 +216,35 @@ export default function Sidebar({
 				<SidebarFooter className='bg-background'>
 					<SidebarMenu>
 						<SidebarMenuItem>
-							<SidebarTrigger className='text-foreground py-4 w-full outline outline-1 outline-zinc-200 rounded-xl' />
+							<SidebarTrigger
+								variant='outline'
+								className='text-foreground py-4 w-full  rounded-xl'
+							/>
+						</SidebarMenuItem>
+						<SidebarMenuItem>
+							<DropdownMenu>
+								<DropdownMenuTrigger asChild>
+									<Button variant='outline' size='icon' className='w-full'>
+										<Sun className='h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0' />
+										<Moon className='absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100' />
+										<span className='sr-only'>Toggle theme</span>
+									</Button>
+								</DropdownMenuTrigger>
+								<DropdownMenuContent
+									align='end'
+									className='dark:border-zinc-800'
+								>
+									<DropdownMenuItem onClick={() => setTheme('light')}>
+										Light
+									</DropdownMenuItem>
+									<DropdownMenuItem onClick={() => setTheme('dark')}>
+										Dark
+									</DropdownMenuItem>
+									<DropdownMenuItem onClick={() => setTheme('system')}>
+										System
+									</DropdownMenuItem>
+								</DropdownMenuContent>
+							</DropdownMenu>
 						</SidebarMenuItem>
 						<SidebarMenuItem className='mx-auto'>
 							<DropdownMenu>
@@ -240,7 +272,7 @@ export default function Sidebar({
 									</SidebarMenuButton>
 								</DropdownMenuTrigger>
 								<DropdownMenuContent
-									className='w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-lg'
+									className='w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-lg dark:border-zinc-800'
 									side='bottom'
 									align='end'
 									sideOffset={4}
