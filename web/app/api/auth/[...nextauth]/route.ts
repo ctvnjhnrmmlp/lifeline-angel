@@ -2,6 +2,7 @@ import Prisma from '@/database/database';
 import { PrismaAdapter } from '@auth/prisma-adapter';
 import NextAuth from 'next-auth';
 import { Adapter } from 'next-auth/adapters';
+import FacebookProvider from 'next-auth/providers/facebook';
 import GoogleProvider from 'next-auth/providers/google';
 
 const handler = NextAuth({
@@ -13,6 +14,10 @@ const handler = NextAuth({
 		GoogleProvider({
 			clientId: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID,
 			clientSecret: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_SECRET,
+		}),
+		FacebookProvider({
+			clientId: process.env.NEXT_PUBLIC_FACEBOOK_ID,
+			clientSecret: process.env.NEXT_PUBLIC_FACEBOOK_SECRET,
 		}),
 	],
 	callbacks: {

@@ -2,13 +2,15 @@ import { FaFacebookF, FaGoogle } from 'react-icons/fa';
 
 const STRATEGIES = [
 	{
-		name: 'Google',
+		name: 'google',
+		provider: 'Google',
 		icon: FaGoogle,
 	},
-	{
-		name: 'Facebook',
-		icon: FaFacebookF,
-	},
+	// {
+	// 	name: 'facebook',
+	// 	provider: 'Facebook',
+	// 	icon: FaFacebookF,
+	// },
 ];
 
 export default STRATEGIES;
