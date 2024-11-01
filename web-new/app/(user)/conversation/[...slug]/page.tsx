@@ -305,7 +305,7 @@ export default function Page() {
 															{TEXT_INJURIES.map((injury) => (
 																<button
 																	key={injury.content}
-																	className='text-lg py-2 px-5 outline outline-1 outline-zinc-200 hover:outline-zinc-400 rounded-3xl font-bold tracking-tight text-background'
+																	className='text-lg py-2 px-5 outline outline-1 outline-zinc-200 dark:outline-zinc-800 hover:outline-zinc-400 rounded-3xl font-bold tracking-tight text-background'
 																	onClick={() => {
 																		handleAddMessage(injury.content);
 																		handleUpdateConversation(injury.content);

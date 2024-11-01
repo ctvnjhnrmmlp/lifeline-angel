@@ -32,12 +32,7 @@ const ConversationCard = ({ conv }: { conv: Conversation }) => {
 					<div className='flex justify-between w-full'>
 						{checkEntitySecondsAgo(conv.createdAt.toString()) && (
 							<div>
-								<p
-									className='font-extrabold w-full text-md text-foreground tracking-tight leading-none text-balance'
-									// style={{
-									// 	color: pathname.includes(conv.id) ? '#FFFFFF' : '',
-									// }}
-								>
+								<p className='font-extrabold w-full text-md text-foreground tracking-tight leading-none text-balance'>
 									<TypeAnimation
 										sequence={[conv.title ? conv.title : 'New conversation']}
 										cursor={false}
@@ -48,31 +43,16 @@ const ConversationCard = ({ conv }: { conv: Conversation }) => {
 						)}
 						{!checkEntitySecondsAgo(conv.createdAt.toString()) && (
 							<div>
-								<p
-									className='font-extrabold w-full text-md text-foreground tracking-tight leading-none text-balance'
-									style={{
-										color: pathname.includes(conv.id) ? '#000000' : '',
-									}}
-								>
+								<p className='font-extrabold w-full text-md text-foreground tracking-tight leading-none text-balance'>
 									{conv.title ? conv.title : 'New conversation'}
 								</p>
 							</div>
 						)}
 						<div className='flex items-center space-x-1'>
-							<p
-								className='text-zinc-700 text-xs'
-								// style={{
-								// 	color: pathname.includes(conv.id) ? '#000000' : '',
-								// }}
-							>
+							<p className='text-zinc-700 text-xs'>
 								<GoDotFill />
 							</p>
-							<p
-								className='font-light w-full text-xs text-zinc-700 tracking-tight leading-none text-ellipsis text-balance'
-								// style={{
-								// 	color: pathname.includes(conv.id) ? '#000000' : '',
-								// }}
-							>
+							<p className='font-light w-full text-xs text-zinc-700 tracking-tight leading-none text-ellipsis text-balance'>
 								{getTimeDifference(conv.createdAt.toString())}
 							</p>
 						</div>
