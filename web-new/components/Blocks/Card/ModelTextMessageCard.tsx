@@ -1,20 +1,81 @@
 'use client';
 
+import { updateConversation } from '@/services/lifeline-angel/conversation';
+import { addTextMessage, getMessages } from '@/services/lifeline-angel/message';
+import {
+	useMultipleConversationStore,
+	useTemporaryMultipleConversationStore,
+} from '@/stores/lifeline-angel/conversation';
+import { useMultipleMessageStore } from '@/stores/lifeline-angel/message';
 import { convertDateTo24HourTimeFormat } from '@/utilities/functions';
 import { Message } from '@prisma/client';
+import { useMutation, useQuery } from '@tanstack/react-query';
+import { useSession } from 'next-auth/react';
 import Link from 'next/link';
+import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { IoIosCopy } from 'react-icons/io';
 import { RiVoiceprintFill } from 'react-icons/ri';
 import { useTextToVoice } from 'react-speakup';
+import { v4 as uuidv4 } from 'uuid';
 
 const ModelTextMessageCard = ({ message }: { message: Message }) => {
+	const { data: session } = useSession();
 	const [voiceMessageMode, setVoiceMessageMode] = useState('');
 	const [formattedProcedures, setFormattedProcedures] = useState([]);
 	const [formattedEnglishMessages, setFormattedEnglishMessages] = useState([]);
 	const [formattedFilipinoMessages, setFormattedFilipinoMessages] = useState(
 		[]
 	);
+	const { slug } = useParams() as {
+		slug: string[];
+	};
+
+	const { refetch: refetchMessages } = useQuery({
+		queryKey: ['getMessages'],
+		queryFn: async () => await getMessages(session?.user.email, slug[0]),
+	});
+
+	const {
+		messages: messagesLocal,
+		setMessages: setMessagesLocal,
+		addMessage: addMessageLocal,
+	} = useMultipleMessageStore();
+
+	const {
+		updateConversation: updateConversationLocal,
+		deleteConversation: deleteConversationLocal,
+	} = useMultipleConversationStore();
+
+	const {
+		updateConversation: updateConversationTemporary,
+		deleteConversation: deleteConversationTemporary,
+	} = useTemporaryMultipleConversationStore();
+
+	const updateConversationMutation = useMutation({
+		mutationFn: async (message: string) =>
+			await updateConversation(session?.user.email, slug[0], message),
+	});
+
+	const addMessageMutation = useMutation({
+		mutationFn: async ({ mid, message }: { mid: string; message: string }) =>
+			await addTextMessage(session?.user.email, slug[0], mid, message),
+		onSuccess: () => refetchMessages(),
+	});
+
+	const handleUpdateConversation = (message: string) => {
+		updateConversationLocal(slug[0], message);
+		updateConversationTemporary(slug[0], message);
+		updateConversationMutation.mutate(message);
+	};
+
+	const handleAddMessage = (message: string) => {
+		const mid = uuidv4();
+
+		addMessageLocal(slug[0], mid, message);
+		addMessageMutation.mutate({ mid, message });
+		refetchMessages();
+	};
 
 	const {
 		speak: speakMessage,
@@ -109,15 +170,19 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 						<p className='text-xl font-bold text-background tracking-tight text-ellipsis'>
 							Relations
 						</p>
-						<div className='flex flex-col space-y-1'>
+						<div className='flex gap-2'>
 							{/* @ts-ignore */}
 							{message.content.relations.map((relation) => (
-								<p
+								<button
 									key={relation}
-									className='text-lg text-background tracking-tight text-ellipsis'
+									className='text-lg py-2 px-5 outline outline-1 outline-zinc-800 dark:outline-zinc-200 hover:bg-zinc-800 dark:hover:bg-zinc-200 rounded-3xl font-bold tracking-tight text-background'
+									onClick={() => {
+										handleAddMessage(relation);
+										handleUpdateConversation(relation);
+									}}
 								>
 									{relation}
-								</p>
+								</button>
 							))}
 						</div>
 					</div>
