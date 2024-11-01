@@ -151,7 +151,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 								References
 							</p>
 							<div className='flex flex-col space-y-1'>
-								{/* @ts-expect-error */}
+								{/* @ts-expect-error: must be corrected properly */}
 								{message.content.references.map((reference) => (
 									<Link
 										key={reference}
@@ -169,7 +169,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 								Relations
 							</p>
 							<div className='flex flex-wrap gap-2'>
-								{/* @ts-expect-error */}
+								{/* @ts-expect-error: must be corrected properly */}
 								{message.content.relations.map((relation) => (
 									<button
 										key={relation}
