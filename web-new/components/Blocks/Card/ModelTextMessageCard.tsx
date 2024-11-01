@@ -2,18 +2,73 @@
 
 import { convertDateTo24HourTimeFormat } from '@/utilities/functions';
 import { Message } from '@prisma/client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { IoIosCopy } from 'react-icons/io';
 import { RiVoiceprintFill } from 'react-icons/ri';
+import { useTextToVoice } from 'react-speakup';
 
 const ModelTextMessageCard = ({ message }: { message: Message }) => {
 	const [voiceMessageMode, setVoiceMessageMode] = useState('');
+	const [formattedEnglishMessages, setFormattedEnglishMessages] = useState([]);
+	const [formattedFilipinoMessages, setFormattedFilipinoMessages] = useState(
+		[]
+	);
+
+	const {
+		speak: speakMessage,
+		pause: pauseMessage,
+		resume: resumeMessage,
+		ref: messageRef,
+		setVoice,
+		voices,
+	} = useTextToVoice<HTMLDivElement>({
+		pitch: 1,
+		rate: 1,
+		volume: 1,
+	});
+
+	const handleSpeakMessage = () => {
+		setVoiceMessageMode('speaking');
+		speakMessage();
+	};
+
+	const handlePauseMessage = () => {
+		setVoiceMessageMode('paused');
+		pauseMessage();
+	};
+
+	const handleResumeMessage = () => {
+		setVoiceMessageMode('speaking');
+		resumeMessage();
+	};
+
+	useEffect(() => {
+		if (typeof message.content === 'object') {
+			// @ts-ignore
+			const formattedEnglishMessages = message.content.eng
+				.split('.')!
+				// @ts-ignore
+				.map((point) => point.trim())
+				// @ts-ignore
+				.filter((point) => point.length > 0);
+			// @ts-ignore
+			const formattedFilipinoMessages = message.content.fil
+				.split('.')
+				// @ts-ignore
+				.map((point) => point.trim())
+				// @ts-ignore
+				.filter((point) => point.length > 0);
+
+			setFormattedEnglishMessages(formattedEnglishMessages);
+			setFormattedFilipinoMessages(formattedFilipinoMessages);
+		}
+	}, []);
 
 	return (
 		<div className='flex flex-col space-y-2'>
 			<div
 				key={message.id}
-				className='bg-foreground rounded-3xl ml-0 mr-auto w-5/12'
+				className='bg-foreground rounded-3xl ml-0 mr-auto w-12/12 md:w-10/12 lg:w-8/12 xl:w-5/12'
 			>
 				<div className='flex flex-col space-y-6 cursor-pointer p-4'>
 					<div className='space-y-2'>
