@@ -123,7 +123,10 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 				key={message.id}
 				className='bg-foreground rounded-3xl ml-0 mr-auto w-12/12 md:w-10/12 lg:w-8/12 xl:w-5/12'
 			>
-				<div className='flex flex-col space-y-6 cursor-pointer p-4'>
+				<div
+					ref={messageRef}
+					className='flex flex-col space-y-6 cursor-pointer p-4'
+				>
 					<div className='space-y-2'>
 						<p className='text-xl font-bold text-background tracking-tight text-ellipsis'>
 							Meaning
@@ -224,7 +227,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 						<div>
 							<button
 								className='text-foreground text-lg'
-								// onClick={() => handleSpeakMessage()}
+								onClick={() => handleSpeakMessage()}
 							>
 								<RiVoiceprintFill />
 							</button>
@@ -234,7 +237,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 						<div>
 							<button
 								className='text-green-600 text-lg'
-								// onClick={() => handlePauseMessage()}
+								onClick={() => handlePauseMessage()}
 							>
 								<RiVoiceprintFill />
 							</button>
@@ -244,7 +247,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 						<div>
 							<button
 								className='text-red-600 text-lg'
-								// onClick={() => handleResumeMessage()}
+								onClick={() => handleResumeMessage()}
 							>
 								<RiVoiceprintFill />
 							</button>
