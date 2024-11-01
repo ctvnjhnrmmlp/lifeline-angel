@@ -264,7 +264,7 @@ export default function Page() {
 					<div className='w-full flex flex-col flex-wrap justify-between space-between gap-12 pb-4'>
 						<div className='flex items-center justify-between'>
 							<div>
-								<p className='font-bold text-4xl text-foreground'>
+								<p className='font-bold text-3xl text-foreground'>
 									{conversationLocal?.title
 										? conversationLocal.title
 										: 'New conversation'}
@@ -406,7 +406,7 @@ export default function Page() {
 											Image Injuries
 										</p>
 									</div>
-									<div className='flex gap-3'>
+									<div className='flex flex-wrap gap-3'>
 										{IMAGE_INJURIES.map((injury) => (
 											<Image
 												key={injury.content}
