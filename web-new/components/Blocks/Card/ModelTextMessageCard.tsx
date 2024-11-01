@@ -7,7 +7,7 @@ import {
 	useTemporaryMultipleConversationStore,
 } from '@/stores/lifeline-angel/conversation';
 import { useMultipleMessageStore } from '@/stores/lifeline-angel/message';
-import { convertDateTo24HourTimeFormat } from '@/utilities/functions';
+import { convertDateTo24HourTimeFormat, copy } from '@/utilities/functions';
 import { Message } from '@prisma/client';
 import { useMutation, useQuery } from '@tanstack/react-query';
 import { useSession } from 'next-auth/react';
@@ -198,7 +198,24 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 					<div>
 						<button
 							className='text-foreground text-lg'
-							// onClick={() => copy(message.content)}
+							// @ts-ignore
+							onClick={() =>
+								copy(
+									`Meaning\n
+									${
+										// @ts-ignore
+										message.content.meaning
+									}\n
+									Procedures\n
+									${formattedProcedures.map((procedure) => procedure)}\n
+									Relations\n
+									${
+										// @ts-ignore
+										message.content.relations.map((relation) => relation)
+									}
+									`
+								)
+							}
 						>
 							<IoIosCopy />
 						</button>
