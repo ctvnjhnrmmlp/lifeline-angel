@@ -37,12 +37,12 @@ const handler = NextAuth({
 			if (session.user) {
 				const user = await Prisma.user.findUnique({
 					where: {
-						// @ts-ignore
+						// @ts-expect-error
 						email: session.user.email,
 					},
 				});
 
-				// @ts-ignore
+				// @ts-expect-error
 				session.user = user;
 			}
 

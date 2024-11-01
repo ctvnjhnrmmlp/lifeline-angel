@@ -231,14 +231,14 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 				.test('file-format', 'Only image files are allowed', (value) => {
 					if (value) {
 						const supportedFormats = ['png', 'jpg', 'jpeg'];
-						// @ts-ignore
+						// @ts-expect-error
 						return supportedFormats.includes(value.name.split('.').pop());
 					}
 					return true;
 				})
 				.test('file-size', 'File size must not be more than 10MB', (value) => {
 					if (value) {
-						// @ts-ignore
+						// @ts-expect-error
 						return value.size < 5145728;
 					}
 					return true;
@@ -462,7 +462,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 						)}
 
 						{messagesLocal?.map((message) => {
-							// @ts-ignore
+							// @ts-expect-error
 							if (checkTextValidURL(message.content)) {
 								return (
 									<UserImageMessageCard key={message.id} message={message} />

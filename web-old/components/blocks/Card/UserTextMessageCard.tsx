@@ -12,7 +12,7 @@ const TextMessageCard = ({ message }: { message: Message }) => {
 			>
 				<div className='cursor-pointer p-4'>
 					<p className='text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance text-center'>
-						{/* @ts-ignore */}
+						{/* @ts-expect-error */}
 						{message.content}
 					</p>
 				</div>

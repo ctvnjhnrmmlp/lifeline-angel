@@ -47,19 +47,19 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 
 	// useEffect(() => {
 	// 	if (typeof message.content === 'object') {
-	// 		// @ts-ignore
+	// 		// @ts-expect-error
 	// 		const formattedEnglishMessages = message.content.eng
 	// 			.split('.')!
-	// 			// @ts-ignore
+	// 			// @ts-expect-error
 	// 			.map((point) => point.trim())
-	// 			// @ts-ignore
+	// 			// @ts-expect-error
 	// 			.filter((point) => point.length > 0);
-	// 		// @ts-ignore
+	// 		// @ts-expect-error
 	// 		const formattedFilipinoMessages = message.content.fil
 	// 			.split('.')
-	// 			// @ts-ignore
+	// 			// @ts-expect-error
 	// 			.map((point) => point.trim())
-	// 			// @ts-ignore
+	// 			// @ts-expect-error
 	// 			.filter((point) => point.length > 0);
 
 	// 		setFormattedEnglishMessages(formattedEnglishMessages);
@@ -86,7 +86,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 							Meaning
 						</p>
 						<p className='text-lg text-background tracking-tight text-ellipsis'>
-							{/* @ts-ignore */}
+							{/* @ts-expect-error */}
 							{message.content.meaning}
 						</p>
 					</div>
@@ -95,7 +95,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 							Procedures
 						</p>
 						<div className='flex flex-col space-y-1'>
-							{/* @ts-ignore */}
+							{/* @ts-expect-error */}
 							{message.content.procedures.map((procedure) => (
 								<p
 									key={procedure}
@@ -111,7 +111,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 							References
 						</p>
 						<div className='flex flex-col space-y-1'>
-							{/* @ts-ignore */}
+							{/* @ts-expect-error */}
 							{message.content.references.map((reference) => (
 								<p
 									key={reference}
@@ -127,7 +127,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 							Relations
 						</p>
 						<div className='flex flex-col space-y-1'>
-							{/* @ts-ignore */}
+							{/* @ts-expect-error */}
 							{message.content.relations.map((relation) => (
 								<p
 									key={relation}

@@ -1,7 +1,5 @@
 'use client';
 
-import Link from 'next/link';
-
 function NotFound() {
 	return (
 		<main className='flex min-h-screen flex-col items-center justify-center items-center'>

@@ -31,6 +31,7 @@ export async function POST(req: Request) {
 
 		return Response.json({ message: 'Success', conversation });
 	} catch (error) {
+		console.log(error);
 		return new Response('Internal Server Error', {
 			status: 500,
 		});

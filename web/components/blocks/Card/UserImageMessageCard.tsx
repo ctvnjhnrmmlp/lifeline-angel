@@ -7,7 +7,7 @@ import { PhotoProvider, PhotoView } from 'react-photo-view';
 const UserImageMessageCard = ({ message }: { message: Message }) => {
 	return (
 		<PhotoProvider>
-			{/* @ts-ignore */}
+			{/* @ts-expect-error */}
 			<PhotoView src={message.content}>
 				<Image
 					src={`${message.content}`}

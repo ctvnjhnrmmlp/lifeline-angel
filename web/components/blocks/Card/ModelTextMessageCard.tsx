@@ -107,12 +107,12 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 
 	useEffect(() => {
 		if (typeof message.content === 'object') {
-			// @ts-ignore
+			// @ts-expect-error
 			const formattedProcedureArr = message.content.procedures[0]
 				.split('. ')!
-				// @ts-ignore
+				// @ts-expect-error
 				.map((point) => point.trim())
-				// @ts-ignore
+				// @ts-expect-error
 				.filter((point) => point.length > 0);
 
 			setFormattedProcedures(formattedProcedureArr);
@@ -135,7 +135,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 								Meaning
 							</p>
 							<p className='text-lg text-background tracking-tight text-ellipsis'>
-								{/* @ts-ignore */}
+								{/* @ts-expect-error */}
 								{message.content.meaning}
 							</p>
 						</div>
@@ -159,7 +159,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 								References
 							</p>
 							<div className='flex flex-col space-y-1'>
-								{/* @ts-ignore */}
+								{/* @ts-expect-error */}
 								{message.content.references.map((reference) => (
 									<Link
 										key={reference}
@@ -177,7 +177,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 								Relations
 							</p>
 							<div className='flex flex-wrap gap-2'>
-								{/* @ts-ignore */}
+								{/* @ts-expect-error */}
 								{message.content.relations.map((relation) => (
 									<button
 										key={relation}
@@ -200,7 +200,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 					<div className='bg-foreground outline outline-1 outline-zinc-200 dark:outline-zinc-800 rounded-3xl min-w-4/12 mr-auto'>
 						<div className='cursor-pointer p-4'>
 							<p className='text-lg text-background tracking-tight leading-none text-ellipsis text-balance text-center'>
-								{/* @ts-ignore */}
+								{/* @ts-expect-error */}
 								{message.content}
 							</p>
 						</div>
@@ -217,20 +217,20 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 					<div>
 						<button
 							className='text-foreground text-lg'
-							// @ts-ignore
+							// @ts-expect-error
 							onClick={() =>
 								copy(
 									`Meaning\n${
-										// @ts-ignore
+										// @ts-expect-error
 										message.content.meaning
 									}\nProcedures\n${
-										// @ts-ignore
+										// @ts-expect-error
 										message.content.procedures[0]
 									} References\n${
-										// @ts-ignore
+										// @ts-expect-error
 										message.content.references.map((reference) => reference)
 									}\nRelations\n${
-										// @ts-ignore
+										// @ts-expect-error
 										message.content.relations.map((relation) => relation)
 									}`
 								)

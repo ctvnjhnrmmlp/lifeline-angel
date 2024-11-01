@@ -29,7 +29,7 @@ import { useMutation, useQuery } from '@tanstack/react-query';
 import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 import { BsGrid1X2Fill } from 'react-icons/bs';
-import { FaCamera, FaPaperclip } from 'react-icons/fa';
+import { FaPaperclip } from 'react-icons/fa';
 import SpeechRecognition, {
 	useSpeechRecognition,
 } from 'react-speech-recognition';
@@ -65,17 +65,13 @@ export default function Page() {
 	const [uploading, setUploading] = useState(false);
 	const [microphone, setMicrophone] = useState(false);
 	const cameraRef = useRef<Webcam>(null);
-	const [image, setImage] = useState('');
+	// const [image, setImage] = useState('');
 	const { slug } = useParams() as {
 		slug: string[];
 	};
 
-	const {
-		transcript,
-		listening,
-		resetTranscript,
-		browserSupportsSpeechRecognition,
-	} = useSpeechRecognition();
+	const { transcript, resetTranscript, browserSupportsSpeechRecognition } =
+		useSpeechRecognition();
 
 	const {
 		conversation: conversationLocal,
@@ -131,9 +127,10 @@ export default function Page() {
 				const message = response.prediction;
 
 				handleUpdateConversation(message);
-				// onOpenChangeFile();
 				refetchMessages();
-			} catch (error) {}
+			} catch (error) {
+				console.log(error);
+			}
 
 			setUploading(false);
 		},
@@ -143,14 +140,14 @@ export default function Page() {
 				.test('file-format', 'Only image files are allowed', (value) => {
 					if (value) {
 						const supportedFormats = ['png', 'jpg', 'jpeg'];
-						// @ts-ignore
+						// @ts-expect-error
 						return supportedFormats.includes(value.name.split('.').pop());
 					}
 					return true;
 				})
 				.test('file-size', 'File size must not be more than 10MB', (value) => {
 					if (value) {
-						// @ts-ignore
+						// @ts-expect-error
 						return value.size < 5145728;
 					}
 					return true;
@@ -158,22 +155,14 @@ export default function Page() {
 		}),
 	});
 
-	const {
-		data: conversationServer,
-		error: conversationError,
-		status: conversationStatus,
-		fetchStatus: conversationFetchStatus,
-		refetch: refetchConversationServer,
-	} = useQuery({
+	const { data: conversationServer } = useQuery({
 		queryKey: ['getConversation'],
 		queryFn: async () => await getConversation(session?.user.email, slug[0]),
 	});
 
 	const {
 		data: messagesServer,
-		error: messagesError,
 		status: messagesStatus,
-		fetchStatus: messagesFetchStatus,
 		refetch: refetchMessages,
 	} = useQuery({
 		queryKey: ['getMessages'],
@@ -236,28 +225,26 @@ export default function Page() {
 	};
 
 	const handleCameraCapture = useCallback(() => {
-		setImage(() => cameraRef.current?.getScreenshot()!);
+		// setImage(() => cameraRef.current?.getScreenshot()!);
 	}, [cameraRef]);
 
-	const handleAddImageMessage = async (image: string) => {
-		const response = await addImageMessage(
-			session?.user.email,
-			slug[0],
-			uuidv4(),
-			convertImageDataUrlToFile(image, uuidv4())
-		);
-		const message = response.prediction;
+	// const handleAddImageMessage = async (image: string) => {
+	// 	const response = await addImageMessage(
+	// 		session?.user.email,
+	// 		slug[0],
+	// 		uuidv4(),
+	// 		convertImageDataUrlToFile(image, uuidv4())
+	// 	);
+	// 	const message = response.prediction;
 
-		handleUpdateConversation(message);
-		// onCloseCapturedImage();
-		// onCloseCamera();
-	};
+	// 	handleUpdateConversation(message);
+	// 	// onCloseCapturedImage();
+	// 	// onCloseCamera();
+	// };
 
 	if (!session) {
 		return redirect('/signin');
 	}
-
-	console.log(messagesLocal);
 
 	return (
 		<main className='h-full'>
@@ -429,7 +416,7 @@ export default function Page() {
 							</div>
 						)}
 						{messagesLocal?.map((message) => {
-							// @ts-ignore
+							// @ts-expect-error
 							if (checkTextValidURL(message.content)) {
 								return (
 									<UserImageMessageCard key={message.id} message={message} />
