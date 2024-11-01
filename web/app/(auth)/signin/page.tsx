@@ -29,7 +29,7 @@ export default function Page() {
 	}
 
 	return (
-		<div className='flex h-screen w-full items-center justify-center px-4'>
+		<div className='flex h-screen w-full items-center justify-center'>
 			<Card className='mx-auto max-w-sm'>
 				<CardHeader>
 					<CardTitle className='text-4xl'>Sign In</CardTitle>
@@ -41,14 +41,14 @@ export default function Page() {
 								{STRATEGIES.map((strategy) => (
 									<Button
 										key={strategy.name}
-										className='w-full text-xl py-7'
+										className='w-full text-md md:text-xl py-7'
 										onClick={() => setStrategy(strategy.name)}
 									>
 										Continue with {strategy.provider}
 									</Button>
 								))}
 								<Button
-									className='w-full text-xl py-7'
+									className='w-full text-md md:text-xl py-7'
 									onClick={() => setStrategy('')}
 								>
 									Continue as Guest
