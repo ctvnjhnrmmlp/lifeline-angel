@@ -34,14 +34,6 @@ import SpeechRecognition, {
 	useSpeechRecognition,
 } from 'react-speech-recognition';
 
-import {
-	Card,
-	CardContent,
-	CardDescription,
-	CardFooter,
-	CardHeader,
-	CardTitle,
-} from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { SidebarTrigger } from '@/components/ui/sidebar';
 import {
@@ -54,14 +46,11 @@ import {
 	convertToDateFormat,
 } from '@/utilities/functions';
 import { useFormik } from 'formik';
-import { Send } from 'lucide-react';
 import { redirect, useParams, useRouter } from 'next/navigation';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { FaLocationArrow, FaMicrophone } from 'react-icons/fa';
-import { FaCloudArrowUp } from 'react-icons/fa6';
 import { GiRaggedWound } from 'react-icons/gi';
 import { MdPersonalInjury } from 'react-icons/md';
-import { RiVoiceprintFill } from 'react-icons/ri';
 import Webcam from 'react-webcam';
 import { v4 as uuidv4 } from 'uuid';
 import * as Yup from 'yup';
