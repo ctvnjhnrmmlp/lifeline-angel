@@ -3,6 +3,7 @@
 import ModelTextMessageCard from '@/components/Blocks/Card/ModelTextMessageCard';
 import UserImageMessageCard from '@/components/Blocks/Card/UserImageMessageCard';
 import UserTextMessageCard from '@/components/Blocks/Card/UserTextMessageCard';
+import { Button } from '@/components/ui/button';
 import {
 	Dialog,
 	DialogContent,
@@ -33,9 +34,6 @@ import SpeechRecognition, {
 	useSpeechRecognition,
 } from 'react-speech-recognition';
 
-// import ModelTextMessageCard from '@/components/blocks/Card/ModelTextMessageCard';
-// import UserImageMessageCard from '@/components/blocks/Card/UserImageMessageCard';
-// import UserTextMessageCard from '@/components/blocks/Card/UserTextMessageCard';
 import {
 	Card,
 	CardContent,
@@ -305,7 +303,7 @@ export default function Page() {
 															{TEXT_INJURIES.map((injury) => (
 																<button
 																	key={injury.content}
-																	className='text-lg py-2 px-5 outline outline-1 outline-zinc-200 dark:outline-zinc-800 hover:outline-zinc-400 rounded-3xl font-bold tracking-tight text-background'
+																	className='text-lg py-2 px-5 outline outline-1 outline-zinc-200 hover:outline-zinc-400 rounded-3xl font-bold tracking-tight text-background'
 																	onClick={() => {
 																		handleAddMessage(injury.content);
 																		handleUpdateConversation(injury.content);
@@ -358,18 +356,24 @@ export default function Page() {
 									<DialogTrigger asChild>
 										<button
 											className='p-3 text-foreground text-2xl'
-											// onClick={() => onOpenOptions()}
+											// onClick={() => onOpenImageInjury()}
 										>
-											<BsGrid1X2Fill />
+											<GiRaggedWound />
 										</button>
 									</DialogTrigger>
-									<DialogContent>
+									<DialogContent className='sm:max-w-[30rem] sm:max-h-[30rem] bg-foreground border-0'>
 										<DialogHeader>
-											<DialogTitle>Are you absolutely sure?</DialogTitle>
-											<DialogDescription>
-												This action cannot be undone. This will permanently
-												delete your account and remove your data from our
-												servers.
+											<DialogTitle className='text-2xl font-bold text-center text-background'>
+												Settings
+											</DialogTitle>
+											<DialogDescription className='py-4 space-y-2'>
+												<Button
+													variant='destructive'
+													className='w-full text-xl py-6'
+													onClick={() => handleDeleteConversation()}
+												>
+													Delete
+												</Button>
 											</DialogDescription>
 										</DialogHeader>
 									</DialogContent>
@@ -404,7 +408,7 @@ export default function Page() {
 										{TEXT_INJURIES.map((injury) => (
 											<button
 												key={injury.content}
-												className='text-lg py-2 px-5 outline outline-1 outline-zinc-200 hover:outline-zinc-400 rounded-3xl font-bold tracking-tight text-foreground'
+												className='text-lg py-2 px-5 outline outline-1 outline-zinc-200 dark:outline-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-3xl font-bold tracking-tight text-foreground'
 												onClick={() => {
 													handleAddMessage(injury.content);
 													handleUpdateConversation(injury.content);
@@ -426,6 +430,7 @@ export default function Page() {
 										{IMAGE_INJURIES.map((injury) => (
 											<Card
 												key={injury.content}
+												className='outline outline-1 outline-zinc-200 dark:outline-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800'
 												// classNames={{
 												// 	base: 'bg-background border-foreground/20 border-1',
 												// }}
