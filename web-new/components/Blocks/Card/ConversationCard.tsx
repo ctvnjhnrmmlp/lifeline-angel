@@ -25,7 +25,7 @@ const ConversationCard = ({ conv }: { conv: Conversation }) => {
 		<Link href={`/conversation/${conv.id}`}>
 			<SidebarMenuItem
 				key={conv.id}
-				className='py-1 px-1 outline outline-1 outline-zinc-200 hover:outline-zinc-400 rounded-xl'
+				className='p-1 outline outline-1 outline-zinc-200 hover:outline-zinc-400 rounded-xl'
 			>
 				<SidebarMenuButton tooltip={conv.title} className='mx-auto'>
 					<SquareTerminal />

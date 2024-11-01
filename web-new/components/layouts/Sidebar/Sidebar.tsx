@@ -1,17 +1,22 @@
 'use client';
 
 import {
+	AudioWaveform,
 	BadgeCheck,
 	Bell,
-	Check,
 	ChevronsUpDown,
+	Command,
 	CreditCard,
 	GalleryVerticalEnd,
+	Grip,
 	LogOut,
-	Search,
+	Plus,
 	Sparkles,
+	SquareTerminal,
 } from 'lucide-react';
+import * as React from 'react';
 
+import ConversationCard from '@/components/Blocks/Card/ConversationCard';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import {
 	Breadcrumb,
@@ -21,6 +26,8 @@ import {
 	BreadcrumbPage,
 	BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
+import { Button } from '@/components/ui/button';
+
 import {
 	DropdownMenu,
 	DropdownMenuContent,
@@ -30,16 +37,12 @@ import {
 	DropdownMenuSeparator,
 	DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
 import {
 	SidebarContent,
 	SidebarFooter,
 	SidebarGroup,
-	SidebarGroupContent,
-	SidebarGroupLabel,
 	SidebarHeader,
-	SidebarInput,
 	SidebarInset,
 	SidebarMenu,
 	SidebarMenuButton,
@@ -48,123 +51,170 @@ import {
 	SidebarRail,
 	SidebarTrigger,
 	Sidebar as SidebarUI,
+	useSidebar,
 } from '@/components/ui/sidebar';
-import { useState } from 'react';
+import {
+	addConversation,
+	getConversations,
+} from '@/services/lifeline-angel/conversation';
+import {
+	useMultipleConversationStore,
+	useTemporaryMultipleConversationStore,
+} from '@/stores/lifeline-angel/conversation';
+import { useMutation, useQuery } from '@tanstack/react-query';
+import { signOut, useSession } from 'next-auth/react';
+import Link from 'next/link';
+import { ReactNode, useEffect, useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 const data = {
-	versions: ['1.0.1', '1.1.0-alpha', '2.0.0-beta1'],
+	user: {
+		name: 'shadcn',
+		email: 'm@example.com',
+		avatar: '/avatars/shadcn.jpg',
+	},
+	teams: [
+		{
+			name: 'Acme Inc',
+			logo: GalleryVerticalEnd,
+			plan: 'Enterprise',
+		},
+		{
+			name: 'Acme Corp.',
+			logo: AudioWaveform,
+			plan: 'Startup',
+		},
+		{
+			name: 'Evil Corp.',
+			logo: Command,
+			plan: 'Free',
+		},
+	],
 	navMain: [
 		{
-			title: 'Architecture',
+			title: 'Playground',
 			url: '#',
-			items: [
-				{
-					title: 'Accessibility',
-					url: '#',
-				},
-				{
-					title: 'Fast Refresh',
-					url: '#',
-				},
-				{
-					title: 'Next.js Compiler',
-					url: '#',
-				},
-				{
-					title: 'Supported Browsers',
-					url: '#',
-				},
-				{
-					title: 'Turbopack',
-					url: '#',
-				},
-			],
+			icon: SquareTerminal,
+			isActive: true,
 		},
 	],
 };
 
-export default function Sidebar() {
-	const [selectedVersion, setSelectedVersion] = useState(data.versions[0]);
+export default function Sidebar({
+	children,
+}: Readonly<{
+	children: ReactNode;
+}>) {
+	const { data: session } = useSession();
+	const [conversationQuery, setConversationQuery] = useState('');
+	const [openSearch, setOpenSearch] = useState(false);
+	const { toggleSidebar, setOpen } = useSidebar();
+
+	const {
+		conversations: conversationsLocal,
+		setConversations: setConversationsLocal,
+		searchConversations: searchConversationsLocal,
+		addConversation: addConversationLocal,
+	} = useMultipleConversationStore();
+
+	const {
+		conversations: conversationsTemporary,
+		setConversations: setConversationsTemporary,
+		searchConversations: searchConversationsTemporary,
+		addConversation: addConversationTemporary,
+	} = useTemporaryMultipleConversationStore();
+
+	const handleSetConversationQuery = (query: string) => {
+		setConversationQuery(query);
+	};
+
+	const addConversationMutation = useMutation({
+		mutationFn: async (cid: string) =>
+			await addConversation(session?.user.email, cid),
+	});
+
+	const handleAddConversation = () => {
+		let cid = uuidv4();
+
+		addConversationLocal(cid);
+		addConversationTemporary(cid);
+		addConversationMutation.mutate(cid);
+	};
+
+	const handleSearchConversation = (query: string) => {
+		searchConversationsTemporary(query);
+	};
+
+	const handleOpenSearch = (search: boolean) => {
+		setOpenSearch(search);
+	};
+
+	const {
+		data: conversationsServer,
+		error: conversationsError,
+		status: conversationsStatus,
+		fetchStatus: conversationsFetchStatus,
+		refetch: refetchConversations,
+	} = useQuery({
+		queryKey: ['getConversations'],
+		queryFn: async () => await getConversations(session?.user.email),
+	});
+
+	useEffect(() => {
+		setConversationsLocal(conversationsServer!);
+		setConversationsTemporary(conversationsServer!);
+	}, [conversationsServer]);
 
 	return (
 		<SidebarProvider>
-			<SidebarUI>
-				<SidebarHeader>
+			<SidebarUI collapsible='icon' className='min-w-14'>
+				<SidebarHeader className='bg-background'>
 					<SidebarMenu>
-						<SidebarMenuItem>
-							<DropdownMenu>
-								<DropdownMenuTrigger asChild>
-									<SidebarMenuButton
-										size='lg'
-										className='data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground'
-									>
-										<div className='flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground'>
-											<GalleryVerticalEnd className='size-4' />
-										</div>
-										<div className='flex flex-col gap-0.5 leading-none'>
-											<span className='font-semibold'>Documentation</span>
-											<span className=''>v{selectedVersion}</span>
-										</div>
-										<ChevronsUpDown className='ml-auto' />
-									</SidebarMenuButton>
-								</DropdownMenuTrigger>
-								<DropdownMenuContent
-									className='w-[--radix-dropdown-menu-trigger-width]'
-									align='start'
-								>
-									{data.versions.map((version) => (
-										<DropdownMenuItem
-											key={version}
-											onSelect={() => setSelectedVersion(version)}
-										>
-											v{version}{' '}
-											{version === selectedVersion && (
-												<Check className='ml-auto' />
-											)}
-										</DropdownMenuItem>
-									))}
-								</DropdownMenuContent>
-							</DropdownMenu>
+						<SidebarMenuItem className='space-y-2'>
+							<Link href='/'>
+								<Avatar className='h-10 w-10 rounded-lg'>
+									<AvatarImage
+										src='/images/lifeline-angel.png'
+										alt={data.user.name}
+									/>
+									<AvatarFallback className='rounded-lg'>CN</AvatarFallback>
+								</Avatar>
+							</Link>
+							<Button
+								className='w-full'
+								onClick={() => handleAddConversation()}
+							>
+								<Plus />
+							</Button>
 						</SidebarMenuItem>
 					</SidebarMenu>
-					<form>
-						<SidebarGroup className='py-0'>
-							<SidebarGroupContent className='relative'>
-								<Label htmlFor='search' className='sr-only'>
-									Search
-								</Label>
-								<SidebarInput
-									id='search'
-									placeholder='Search the docs...'
-									className='pl-8'
-								/>
-								<Search className='pointer-events-none absolute left-2 top-1/2 size-4 -translate-y-1/2 select-none opacity-50' />
-							</SidebarGroupContent>
-						</SidebarGroup>
-					</form>
 				</SidebarHeader>
-				<SidebarContent>
-					{/* We create a SidebarGroup for each parent. */}
-					{data.navMain.map((item) => (
-						<SidebarGroup key={item.title}>
-							<SidebarGroupLabel>{item.title}</SidebarGroupLabel>
-							<SidebarGroupContent>
-								<SidebarMenu>
-									{item.items.map((item) => (
-										<SidebarMenuItem key={item.title}>
-											<SidebarMenuButton asChild isActive={item.isActive}>
-												<a href={item.url}>{item.title}</a>
-											</SidebarMenuButton>
-										</SidebarMenuItem>
+				<SidebarContent className='bg-background no-scrollbar'>
+					<SidebarGroup className='no-scrollbar'>
+						<SidebarMenu className='space-y-1 no-scrollbar'>
+							{openSearch && (
+								<>
+									{conversationsTemporary?.map((conv) => (
+										<ConversationCard key={conv.id} conv={conv} />
 									))}
-								</SidebarMenu>
-							</SidebarGroupContent>
-						</SidebarGroup>
-					))}
+								</>
+							)}
+							{!openSearch && (
+								<>
+									{conversationsLocal?.map((conv) => (
+										<ConversationCard key={conv.id} conv={conv} />
+									))}
+								</>
+							)}
+						</SidebarMenu>
+					</SidebarGroup>
 				</SidebarContent>
-				<SidebarFooter>
+				<SidebarFooter className='bg-background'>
 					<SidebarMenu>
 						<SidebarMenuItem>
+							<SidebarTrigger className='text-foreground py-4 w-full outline outline-1 outline-zinc-200 rounded-xl' />
+						</SidebarMenuItem>
+						<SidebarMenuItem className='mx-auto'>
 							<DropdownMenu>
 								<DropdownMenuTrigger asChild>
 									<SidebarMenuButton
@@ -173,20 +223,20 @@ export default function Sidebar() {
 									>
 										<Avatar className='h-8 w-8 rounded-lg'>
 											<AvatarImage
-											// src={data.user.avatar}
-											// alt={data.user.name}
+												src={session?.user.image}
+												alt={session?.user.name}
 											/>
 											<AvatarFallback className='rounded-lg'>CN</AvatarFallback>
 										</Avatar>
 										<div className='grid flex-1 text-left text-sm leading-tight'>
-											<span className='truncate font-semibold'>
-												{/* {data.user.name} */}
+											<span className='truncate font-semibold text-foreground'>
+												{session?.user.name}
 											</span>
-											<span className='truncate text-xs'>
-												{/* {data.user.email} */}
+											<span className='truncate text-xs text-foreground'>
+												{session?.user.email}
 											</span>
 										</div>
-										<ChevronsUpDown className='ml-auto size-4' />
+										<ChevronsUpDown className='ml-auto size-4 text-foreground' />
 									</SidebarMenuButton>
 								</DropdownMenuTrigger>
 								<DropdownMenuContent
@@ -199,8 +249,8 @@ export default function Sidebar() {
 										<div className='flex items-center gap-2 px-1 py-1.5 text-left text-sm'>
 											<Avatar className='h-8 w-8 rounded-lg'>
 												<AvatarImage
-												// src={data.user.avatar}
-												// alt={data.user.name}
+													src={session?.user.image}
+													alt={session?.user.name}
 												/>
 												<AvatarFallback className='rounded-lg'>
 													CN
@@ -208,10 +258,10 @@ export default function Sidebar() {
 											</Avatar>
 											<div className='grid flex-1 text-left text-sm leading-tight'>
 												<span className='truncate font-semibold'>
-													{/* {data.user.name} */}
+													{session?.user.name}
 												</span>
 												<span className='truncate text-xs'>
-													{/* {data.user.email} */}
+													{session?.user.email}
 												</span>
 											</div>
 										</div>
@@ -226,20 +276,12 @@ export default function Sidebar() {
 									<DropdownMenuSeparator />
 									<DropdownMenuGroup>
 										<DropdownMenuItem>
-											<BadgeCheck />
-											Account
-										</DropdownMenuItem>
-										<DropdownMenuItem>
-											<CreditCard />
-											Billing
-										</DropdownMenuItem>
-										<DropdownMenuItem>
 											<Bell />
 											Notifications
 										</DropdownMenuItem>
 									</DropdownMenuGroup>
 									<DropdownMenuSeparator />
-									<DropdownMenuItem>
+									<DropdownMenuItem onClick={() => signOut()}>
 										<LogOut />
 										Log out
 									</DropdownMenuItem>
@@ -251,30 +293,30 @@ export default function Sidebar() {
 				<SidebarRail />
 			</SidebarUI>
 			<SidebarInset>
-				<header className='flex h-16 shrink-0 items-center gap-2 border-b px-4'>
-					<SidebarTrigger className='-ml-1' />
-					<Separator orientation='vertical' className='mr-2 h-4' />
-					<Breadcrumb>
-						<BreadcrumbList>
-							<BreadcrumbItem className='hidden md:block'>
-								<BreadcrumbLink href='#'>
-									Building Your Application
-								</BreadcrumbLink>
-							</BreadcrumbItem>
-							<BreadcrumbSeparator className='hidden md:block' />
-							<BreadcrumbItem>
-								<BreadcrumbPage>Data Fetching</BreadcrumbPage>
-							</BreadcrumbItem>
-						</BreadcrumbList>
-					</Breadcrumb>
+				<header className='flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12'>
+					<div className='flex items-center gap-2 px-4'>
+						{/* <Separator orientation='vertical' className='mr-2 h-4' /> */}
+						{/* <Breadcrumb>
+							<BreadcrumbList>
+								<BreadcrumbItem className='hidden md:block'>
+									<Link href='/'>Conversations</Link>
+								</BreadcrumbItem>
+								<BreadcrumbSeparator className='hidden md:block' />
+								<BreadcrumbItem>
+									<BreadcrumbPage>Data Fetching</BreadcrumbPage>
+								</BreadcrumbItem>
+							</BreadcrumbList>
+						</Breadcrumb> */}
+					</div>
 				</header>
-				<div className='flex flex-1 flex-col gap-4 p-4'>
-					<div className='grid auto-rows-min gap-4 md:grid-cols-3'>
+				<div className='flex flex-1 flex-col gap-4 p-4 pt-0'>
+					{children}
+					{/* <div className='grid auto-rows-min gap-4 md:grid-cols-3'>
 						<div className='aspect-video rounded-xl bg-muted/50' />
 						<div className='aspect-video rounded-xl bg-muted/50' />
 						<div className='aspect-video rounded-xl bg-muted/50' />
 					</div>
-					<div className='min-h-[100vh] flex-1 rounded-xl bg-muted/50 md:min-h-min' />
+					<div className='min-h-[100vh] flex-1 rounded-xl bg-muted/50 md:min-h-min' /> */}
 				</div>
 			</SidebarInset>
 		</SidebarProvider>
