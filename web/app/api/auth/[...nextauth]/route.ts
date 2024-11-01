@@ -42,7 +42,6 @@ const handler = NextAuth({
 					},
 				});
 
-				// @ts-expect-error: must be corrected properly
 				session.user = user;
 			}
 
