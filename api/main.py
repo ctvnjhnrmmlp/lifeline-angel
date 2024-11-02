@@ -33,18 +33,18 @@ app = FastAPI()
 lemmatizer = WordNetLemmatizer()
 
 # Load intents JSON file
-with open("../models/astra/dataset.json") as file:
+with open("../models/astra-v2/dataset.json") as file:
     intents = json.load(file)
 
 # Load words, classes, and model (using TensorFlow for the chatbot)
-with open("../models/astra/words.pkl", "rb") as file:
+with open("../models/astra-v2/words.pkl", "rb") as file:
     words = pickle.load(file)
 
-with open("../models/astra/classes.pkl", "rb") as file:
+with open("../models/astra-v2/classes.pkl", "rb") as file:
     classes = pickle.load(file)
 
 # Load the TensorFlow chatbot model explicitly
-chatbot_model = tf_models.load_model("../models/astra/astra.h5")
+chatbot_model = tf_models.load_model("../models/astra-v2/astra.h5")
 
 # Load the image classifier model using FastAI
 image_model = load_learner("../models/vesper/vesper.pkl")
