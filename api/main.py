@@ -32,24 +32,25 @@ app = FastAPI()
 # Initialize the lemmatizer
 lemmatizer = WordNetLemmatizer()
 
+CONFIDENCE_THRESHOLD = 0.7
+
 # Load intents JSON file
-with open("../models/astra-v2/dataset.json") as file:
+with open("../models/astra-v3/dataset.json") as file:
     intents = json.load(file)
 
 # Load words, classes, and model (using TensorFlow for the chatbot)
-with open("../models/astra-v2/words.pkl", "rb") as file:
+with open("../models/astra-v3/words.pkl", "rb") as file:
     words = pickle.load(file)
 
-with open("../models/astra-v2/classes.pkl", "rb") as file:
+with open("../models/astra-v3/classes.pkl", "rb") as file:
     classes = pickle.load(file)
 
 # Load the TensorFlow chatbot model explicitly
-chatbot_model = tf_models.load_model("../models/astra-v2/astra.h5")
+chatbot_model = tf_models.load_model("../models/astra-v3/astra.h5")
 
 # Load the image classifier model using FastAI
 image_model = load_learner("../models/vesper-v2/vesper-v2.pkl")
 class_names = image_model.dls.vocab  # Get the class names from the model's data
-
 
 # Text model functions
 def clean_up_sentence(sentence):
@@ -57,32 +58,39 @@ def clean_up_sentence(sentence):
     sentence_words = [lemmatizer.lemmatize(word.lower()) for word in sentence_words]
     return sentence_words
 
-
-def bag_of_words(sentence):
+def bag_of_words(sentence, words):
     sentence_words = clean_up_sentence(sentence)
     bag = [0] * len(words)
-    for w in sentence_words:
-        for i, word in enumerate(words):
-            if word == w:
+    for s in sentence_words:
+        for i, w in enumerate(words):
+            if w == s:
                 bag[i] = 1
     return np.array(bag)
 
-
-def predict_class(sentence):
-    bow = bag_of_words(sentence)
-    res = chatbot_model.predict(np.array([bow]))[0]  # Using TensorFlow's model here
-    ERROR_THRESHOLD = 0.25
-    results = [[i, r] for i, r in enumerate(res) if r > ERROR_THRESHOLD]
-
-    results.sort(key=lambda x: x[1], reverse=True)
-    return_list = []
-    for r in results:
-        return_list.append({"intent": classes[r[0]], "probability": str(r[1])})
-    return return_list
-
-
+def predict_class(sentence, model, threshold=0.7):
+    bow = bag_of_words(sentence, words)
+    res = model.predict(np.array([bow]))[0]
+    results = [{"intent": classes[i], "probability": prob} for i, prob in enumerate(res)]
+    
+    # Filter predictions based on threshold
+    results = [result for result in results if result["probability"] > threshold]
+    results.sort(key=lambda x: x["probability"], reverse=True)
+    
+    # If no results meet the threshold, return "unknown"
+    if not results:
+        return [{"intent": "unknown", "probability": 1.0}]
+    return results
+        
 def get_response(intents_list, intents_json):
     tag = intents_list[0]["intent"]
+    if tag == "unknown":
+        # Returning a dictionary even when the intent is unknown
+        return {
+            "meaning": "I don't recognize that.",
+            "procedures": None,
+            "relations": None,
+            "references": None,
+        }
     for intent in intents_json["intents"]:
         if intent["tag"] == tag:
             return {
@@ -92,28 +100,23 @@ def get_response(intents_list, intents_json):
                 "references": intent["references"],
             }
 
-
 class ChatRequest(BaseModel):
     message: str
-
 
 class ChatResponse(BaseModel):
     response: dict
 
-
 @app.post("/api/talk", response_model=ChatResponse)
 async def chat_endpoint(request: ChatRequest):
-    ints = predict_class(request.message)
-    response = get_response(ints, intents)
-    return ChatResponse(response=response)
-
+    intents_list = predict_class(request.message, chatbot_model)
+    response = get_response(intents_list, intents)  # Pass the original JSON-loaded `intents` dict here
+    return {"response": response}
 
 # Image classification functions
 def predict_image(image):
     """Predict the class of an image using the FastAI model."""
     pred, pred_idx, probs = image_model.predict(image)  # Using FastAI model here
     return pred, probs[pred_idx].item()
-
 
 @app.post("/api/classify")
 async def classify_image(file: UploadFile = File(...)):
@@ -132,19 +135,17 @@ async def classify_image(file: UploadFile = File(...)):
 
     return {"prediction": prediction, "confidence": confidence}
 
-
 @app.websocket("/api/ws/talk")
 async def websocket_chat(websocket: WebSocket):
     await websocket.accept()
     try:
         while True:
             data = await websocket.receive_text()
-            ints = predict_class(data)
-            response = get_response(ints, intents)
+            intents_list = predict_class(data, chatbot_model)
+            response = get_response(intents_list, intents)  # Pass the original JSON-loaded `intents` dict here
             await websocket.send_text(json.dumps(response))
     except WebSocketDisconnect:
         print("Client disconnected")
-
 
 @app.websocket("/api/ws/classify")
 async def websocket_classify_image(websocket: WebSocket):
@@ -167,7 +168,6 @@ async def websocket_classify_image(websocket: WebSocket):
             await websocket.send_text(f"{prediction} with confidence {confidence:.4f}")
     except WebSocketDisconnect:
         print("Client disconnected")
-
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)

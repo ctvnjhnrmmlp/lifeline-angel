@@ -612,7 +612,7 @@ export default function Page() {
 								type='text'
 								value={message}
 								placeholder='Aa'
-								className='py-6 px-4 placeholder:font-bold placeholder:text-foreground font-bold text-foreground text-2xl'
+								className='py-6 px-4 placeholder:font-bold placeholder:text-foreground/50 font-bold text-foreground text-2xl'
 								onChange={(event) => {
 									setMessage(event.target.value);
 								}}
