@@ -350,7 +350,7 @@
 			"context_set": ""
 		},
 		{
-			"tag": "\nPagkapagod sa Init",
+			"tag": "Pagkapagod sa Init",
 			"type": "Injury",
 			"meaning": "Ang heat exhaustion ay nangyayari kapag ang iyong katawan ay sobrang init dahil sa matagal na pagkakalantad sa mataas na temperatura, kadalasang sinasabayan ng dehydration. Ang mga sintomas ay kinabibilangan ng labis na pagpapawis, panghihina, pagkahilo, pagduduwal, at sakit ng ulo. Ang agarang paggamot ay mahalaga upang maiwasan ang paglala sa heat stroke, na isang medikal na emerhensiya.",
 			"patterns": [
@@ -549,7 +549,7 @@
 		{
 			"tag": "Testicle Pain",
 			"type": "Injury",
-			"meaning": "Testicle pain refers to discomfort or pain in one or both testicles. It can be caused by various factors such as injury, infection, or medical conditions like testicular torsion. Symptoms may include swelling, redness, and tenderness. Persistent or severe testicle pain should be evaluated by a healthcare provider.\n                                ",
+			"meaning": "Testicle pain refers to discomfort or pain in one or both testicles. It can be caused by various factors such as injury, infection, or medical conditions like testicular torsion. Symptoms may include swelling, redness, and tenderness. Persistent or severe testicle pain should be evaluated by a healthcare provider.",
 			"patterns": [
 				"What to do if I have testicle pain?",
 				"How to treat testicle pain?",
@@ -603,7 +603,7 @@
 		{
 			"tag": "Vertigo",
 			"type": "Injury",
-			"meaning": "Vertigo is a sensation of feeling off balance, often described as feeling like you or your surroundings are spinning. It can be caused by inner ear problems, infections, or other medical conditions. Symptoms include dizziness, nausea, and difficulty maintaining balance. Managing vertigo involves addressing the underlying cause and using techniques to reduce symptoms.\n\t\t\t\t",
+			"meaning": "Vertigo is a sensation of feeling off balance, often described as feeling like you or your surroundings are spinning. It can be caused by inner ear problems, infections, or other medical conditions. Symptoms include dizziness, nausea, and difficulty maintaining balance. Managing vertigo involves addressing the underlying cause and using techniques to reduce symptoms.",
 			"patterns": [
 				"What to do if I have vertigo?",
 				"How to treat vertigo?",
@@ -657,7 +657,7 @@
 		{
 			"tag": "Eye Injury",
 			"type": "Injury",
-			"meaning": "An eye injury can occur due to various reasons such as trauma, foreign objects, or chemical exposure. Symptoms may include pain, redness, swelling, and vision changes. Immediate and appropriate first aid can help prevent further damage and complications.\",\n\t\t\t\t",
+			"meaning": "An eye injury can occur due to various reasons such as trauma, foreign objects, or chemical exposure. Symptoms may include pain, redness, swelling, and vision changes. Immediate and appropriate first aid can help prevent further damage and complications.",
 			"patterns": [
 				"What to do if I have an eye injury?",
 				"How to treat an eye injury?",
@@ -819,7 +819,7 @@
 		{
 			"tag": "Head Injury",
 			"type": "Injury",
-			"meaning": "A head injury can result from various causes such as falls, accidents, or sports injuries. Symptoms may include headache, dizziness, confusion, and nausea. Immediate and appropriate first aid can help prevent further complications.\n\t\t\t\n\t\t\t",
+			"meaning": "A head injury can result from various causes such as falls, accidents, or sports injuries. Symptoms may include headache, dizziness, confusion, and nausea. Immediate and appropriate first aid can help prevent further complications.",
 			"patterns": [
 				"What to do for a head injury?",
 				"How to treat a head injury?",
@@ -927,7 +927,7 @@
 		{
 			"tag": "Headache",
 			"type": "Injury",
-			"meaning": "Headaches can be caused by various factors such as stress, dehydration, or tension. Symptoms may include a dull or sharp pain in the head, sensitivity to light or sound, and nausea. Proper management and treatment can help alleviate the discomfort.\n\t\t\t",
+			"meaning": "Headaches can be caused by various factors such as stress, dehydration, or tension. Symptoms may include a dull or sharp pain in the head, sensitivity to light or sound, and nausea. Proper management and treatment can help alleviate the discomfort.",
 			"patterns": [
 				"How to treat a headache?",
 				"What to do for a headache?",
@@ -941,7 +941,7 @@
 				"How to care for a headache?"
 			],
 			"procedures": [
-				"Rest in a quiet, dark room and apply a cold or warm compress to your forehead. Over-the-counter pain relievers like ibuprofen or acetaminophen can help. Stay hydrated and avoid triggers like bright lights or loud noises.\",",
+				"Rest in a quiet, dark room and apply a cold or warm compress to your forehead. Over-the-counter pain relievers like ibuprofen or acetaminophen can help. Stay hydrated and avoid triggers like bright lights or loud noises.",
 				"Rest, use pain relief medication, and apply a compress. Stay hydrated and avoid known triggers."
 			],
 			"relations": ["Lagundi", "Yerba Buena", "Ginger"],
@@ -1046,7 +1046,7 @@
 		{
 			"tag": "Drowning",
 			"type": "Injury",
-			"meaning": "Drowning occurs when a person is submerged in water and unable to breathe. Symptoms may include difficulty breathing, coughing, and unconsciousness. Immediate and appropriate rescue and first aid can save lives and prevent further complications.\n\t\t\t\t\n\t\t\t",
+			"meaning": "Drowning occurs when a person is submerged in water and unable to breathe. Symptoms may include difficulty breathing, coughing, and unconsciousness. Immediate and appropriate rescue and first aid can save lives and prevent further complications.",
 			"patterns": [
 				"What to do if someone is drowning?",
 				"How to save someone who is drowning?",
@@ -1071,7 +1071,7 @@
 			"context_set": ""
 		},
 		{
-			"tag": "\nNalulunod",
+			"tag": "Nalulunod",
 			"type": "Injury",
 			"meaning": "Ang pagkalunod ay nangyayari kapag ang isang tao ay nalulubog sa tubig at hindi makakahinga. Ang mga sintomas ay maaaring kabilang ang kahirapan sa paghinga, pag-ubo, at pagkawala ng malay. Ang agarang at angkop na pagligtas at first aid ay makakapagligtas ng buhay at makakaiwas sa karagdagang komplikasyon.",
 			"patterns": [
@@ -1154,7 +1154,7 @@
 		{
 			"tag": "Dehydration",
 			"type": "Injury",
-			"meaning": "Dehydration occurs when the body loses more fluids than it takes in, leading to an imbalance. Symptoms may include dry mouth, thirst, dark urine, dizziness, and fatigue. Proper hydration and timely treatment can help restore fluid balance and prevent complications.\n\t\t\t",
+			"meaning": "Dehydration occurs when the body loses more fluids than it takes in, leading to an imbalance. Symptoms may include dry mouth, thirst, dark urine, dizziness, and fatigue. Proper hydration and timely treatment can help restore fluid balance and prevent complications.",
 			"patterns": [
 				"How to treat dehydration?",
 				"What to do for dehydration?",

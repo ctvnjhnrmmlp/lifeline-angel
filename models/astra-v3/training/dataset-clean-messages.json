@@ -3,7 +3,13 @@
 		{
 			"tag": "Not related to first aid",
 			"type": "Message",
-			"meaning": "Thank you for sharing! Just a note that this query isn\u2019t directly related to first aid. Let me know if there's anything specific you\u2019d like to discuss.\nI appreciate your input! Please be advised that the query doesn't seem connected to first aid. If you need assistance on any other topic, just reach out.\nThank you for your message! It appears this query isn\u2019t related to first aid, but I\u2019d be happy to help with any other questions you may have.\nThank you for your inquiry! Kindly note that the query doesn't pertain to first aid. If you need help with any other topic, feel free to ask.\nThanks for reaching out! This query seems unrelated to first aid. I\u2019m here to help with anything else you might need, just let me know.",
+			"meaning": [
+				"Thank you for sharing! Just a note that this query isn't directly related to first aid. Let me know if there's anything specific you'd like to discuss.",
+				"I appreciate your input! Please be advised that the query doesn't seem connected to first aid. If you need assistance on any other topic, just reach out.",
+				"Thank you for your message! It appears this query isn't related to first aid, but I'd be happy to help with any other questions you may have.",
+				"Thank you for your inquiry! Kindly note that the query doesn't pertain to first aid. If you need help with any other topic, feel free to ask.",
+				"Thanks for reaching out! This query seems unrelated to first aid. I'm here to help with anything else you might need, just let me know."
+			],
 			"patterns": [
 				"Where is the nearest library?",
 				"How to start a podcast?",
@@ -156,7 +162,13 @@
 		{
 			"tag": "Hindi konektado sa first aid",
 			"type": "Message",
-			"meaning": "Salamat po sa inyong pagbabahagi! Paalala lamang na ang query na ito ay hindi po direktang kaugnay ng first aid. Kung may partikular po kayong gustong pag-usapan, ipaalam lang po.\nMaraming salamat po sa inyong input! Paumanhin po, ngunit ang query ay tila walang kaugnayan sa first aid. Kung may iba po kayong tanong, nandito lang po ako para tumulong.\nSalamat po sa inyong mensahe! Mukhang hindi po ito nauugnay sa first aid, ngunit masaya po akong tutulong kung may iba po kayong gustong itanong.\nSalamat po sa inyong pagtatanong! Tandaan lamang po na ang query ay hindi po konektado sa first aid. Kung kailangan niyo po ng tulong sa ibang bagay, ipagbigay-alam lang po.\nSalamat po sa inyong pag-abot! Mukhang hindi po konektado ang query na ito sa first aid. Nandito lang po ako kung may iba pa po kayong kailangan, ipaalam lang po.",
+			"meaning": [
+				"Salamat po sa inyong pagbabahagi! Paalala lamang na ang query na ito ay hindi po direktang kaugnay ng first aid. Kung may partikular po kayong gustong pag-usapan, ipaalam lang po.",
+				"Maraming salamat po sa inyong input! Paumanhin po, ngunit ang query ay tila walang kaugnayan sa first aid. Kung may iba po kayong tanong, nandito lang po ako para tumulong.",
+				"Salamat po sa inyong mensahe! Mukhang hindi po ito nauugnay sa first aid, ngunit masaya po akong tutulong kung may iba po kayong gustong itanong.",
+				"Salamat po sa inyong pagtatanong! Tandaan lamang po na ang query ay hindi po konektado sa first aid. Kung kailangan niyo po ng tulong sa ibang bagay, ipagbigay-alam lang po.",
+				"Salamat po sa inyong pag-abot! Mukhang hindi po konektado ang query na ito sa first aid. Nandito lang po ako kung may iba pa po kayong kailangan, ipaalam lang po."
+			],
 			"patterns": [
 				"Ano ang pinakamagandang paraan ng pagtitipid?",
 				"Anong oras ang huling biyahe ng bus?",
@@ -217,7 +229,11 @@
 		{
 			"tag": "Not in datasets",
 			"type": "Message",
-			"meaning": "I apologize, but the query you submitted is not included in the dataset. Please let me know if there is anything else I can assist you with.\nThank you for your inquiry! However, it seems that the information you are looking for is not present in the dataset. I'm here to help if you need further assistance.\nI appreciate your interest, but unfortunately, the query you provided is not available in the dataset. Please feel free to ask about other topics or queries!",
+			"meaning": [
+				"I apologize, but the query you submitted is not included in the dataset. Please let me know if there is anything else I can assist you with.",
+				"Thank you for your inquiry! However, it seems that the information you are looking for is not present in the dataset. I'm here to help if you need further assistance.",
+				"I appreciate your interest, but unfortunately, the query you provided is not available in the dataset. Please feel free to ask about other topics or queries!"
+			],
 			"patterns": [
 				"Avulsions",
 				"Contusions",
@@ -428,7 +444,11 @@
 		{
 			"tag": "Wala sa datasets",
 			"type": "Message",
-			"meaning": "Paumanhin, ngunit ang katanungan na iyong isinumite ay hindi kasama sa dataset. Mangyaring ipaalam sa akin kung mayroon pa akong maitutulong sa iyo.\nSalamat sa iyong tanong! Subalit, mukhang hindi naroroon ang impormasyong hinahanap mo sa dataset. Nandito ako upang tumulong kung kailangan mo pa ng karagdagang tulong.\nPinahahalagahan ko ang iyong interes, ngunit sa kasamaang palad, ang katanungan na iyong ibinigay ay wala sa dataset. Huwag mag-atubiling magtanong tungkol sa iba pang mga paksa o katanungan!",
+			"meaning": [
+				"Paumanhin, ngunit ang katanungan na iyong isinumite ay hindi kasama sa dataset. Mangyaring ipaalam sa akin kung mayroon pa akong maitutulong sa iyo.",
+				"Salamat sa iyong tanong! Subalit, mukhang hindi naroroon ang impormasyong hinahanap mo sa dataset. Nandito ako upang tumulong kung kailangan mo pa ng karagdagang tulong.",
+				"Pinahahalagahan ko ang iyong interes, ngunit sa kasamaang palad, ang katanungan na iyong ibinigay ay wala sa dataset. Huwag mag-atubiling magtanong tungkol sa iba pang mga paksa o katanungan!"
+			],
 			"patterns": [
 				"Pag-alis ng bahagi ng balat",
 				"Kontusyon",
@@ -586,7 +606,56 @@
 		{
 			"tag": "Greetings",
 			"type": "Message",
-			"meaning": "Hello! Thank you for visiting.\nHow are you? I\u2019m here to help you.\nHi! How can I assist you today?\nGood day! How can I support you?\nIs anyone there? What help do you need?\nHey! What\u2019s up? If you have questions, I\u2019m here.\nGood morning! What are your needs?\nHow are you doing? I\u2019m here if you need assistance.\nGood afternoon! What information are you looking for?\nHow was your day? I\u2019m here if you need anything.\nHope you're doing well. How can I help?\nThanks for coming! Feel free to ask any questions.\nHow\u2019s your family? If there\u2019s something to report, I\u2019m here.\nWhere have you been? What questions do you have?\nCome on, let\u2019s chat! What would you like to know?\nI\u2019m happy to see you! What\u2019s your question?\nLong time no see! I\u2019m here if you need help.\nSay hi to me! What questions do you have?\nGood morning, friend! How can I assist you?\nDo you know the news? If there\u2019s new information, I\u2019m here.\nAlways happy to see you! What concerns do you have?\nWhere are you headed? If you have questions, I\u2019m here.\nHow\u2019s work going? If you need help, I\u2019m here.\nGlad you're back! I\u2019m happy to see you.\nLooking forward to seeing you again! If you need anything, just let me know.\nWhat are you up to? If you need help, just ask.\nI\u2019m glad to talk to you! What information can I provide?\nHow\u2019s your health? If you have any symptoms, let me know.\nAre you happy? Don\u2019t hesitate to ask if you have concerns.\nDon\u2019t hesitate to reach out! What information do you need?\nGot any news? If there\u2019s an update, just let me know.\nHow are your friends? If they have questions, I\u2019m here.\nYour smile looks great! If you need anything, I\u2019m here.\nGood evening to you! What would you like to discuss?\nWelcome! What information can I provide you?\nWhat time will you arrive? If you need anything, just let me know.\nGood day to everyone! If you have questions, I\u2019m here to help.\nHappy you're here! What can I do for you?\nWhy didn't you text? If you have questions, I\u2019m here.\nI appreciate your presence! If you need anything, just let me know.\nHappy to see you! How can I assist you?\nWhat\u2019s new in your life? If you have any needs, I\u2019m here.\nDo you know what happened? If you have questions, just let me know.\nI would love to hang out! If you need anything, I\u2019m here.\nWhy don\u2019t we meet? If you have questions, I\u2019m here.\nHow are your projects going? If you have questions, just let me know.\nWhat\u2019s happy in your life right now? If you need help, I\u2019m here.\nGood day to all of you! If you have questions, I\u2019m here to assist.",
+			"meaning": [
+				"Hello! Thank you for visiting.",
+				"How are you? I'm here to help you.",
+				"Hi! How can I assist you today?",
+				"Good day! How can I support you?",
+				"Is anyone there? What help do you need?",
+				"Hey! What's up? If you have questions, I'm here.",
+				"Good morning! What are your needs?",
+				"How are you doing? I'm here if you need assistance.",
+				"Good afternoon! What information are you looking for?",
+				"How was your day? I'm here if you need anything.",
+				"Hope you're doing well. How can I help?",
+				"Thanks for coming! Feel free to ask any questions.",
+				"How's your family? If there's something to report, I'm here.",
+				"Where have you been? What questions do you have?",
+				"Come on, let's chat! What would you like to know?",
+				"I'm happy to see you! What's your question?",
+				"Long time no see! I'm here if you need help.",
+				"Say hi to me! What questions do you have?",
+				"Good morning, friend! How can I assist you?",
+				"Do you know the news? If there's new information, I'm here.",
+				"Always happy to see you! What concerns do you have?",
+				"Where are you headed? If you have questions, I'm here.",
+				"How's work going? If you need help, I'm here.",
+				"Glad you're back! I'm happy to see you.",
+				"Looking forward to seeing you again! If you need anything, just let me know.",
+				"What are you up to? If you need help, just ask.",
+				"I'm glad to talk to you! What information can I provide?",
+				"How's your health? If you have any symptoms, let me know.",
+				"Are you happy? Don't hesitate to ask if you have concerns.",
+				"Don't hesitate to reach out! What information do you need?",
+				"Got any news? If there's an update, just let me know.",
+				"How are your friends? If they have questions, I'm here.",
+				"Your smile looks great! If you need anything, I'm here.",
+				"Good evening to you! What would you like to discuss?",
+				"Welcome! What information can I provide you?",
+				"What time will you arrive? If you need anything, just let me know.",
+				"Good day to everyone! If you have questions, I'm here to help.",
+				"Happy you're here! What can I do for you?",
+				"Why didn't you text? If you have questions, I'm here.",
+				"I appreciate your presence! If you need anything, just let me know.",
+				"Happy to see you! How can I assist you?",
+				"What's new in your life? If you have any needs, I'm here.",
+				"Do you know what happened? If you have questions, just let me know.",
+				"I would love to hang out! If you need anything, I'm here.",
+				"Why don't we meet? If you have questions, I'm here.",
+				"How are your projects going? If you have questions, just let me know.",
+				"What's happy in your life right now? If you need help, I'm here.",
+				"Good day to all of you! If you have questions, I'm here to assist."
+			],
 			"patterns": [
 				"Hello!",
 				"Hi there!",
@@ -644,7 +713,57 @@
 		{
 			"tag": "Kamusta",
 			"type": "Message",
-			"meaning": "Hello! Salamat sa pag-bisita.\nKamusta! Nandito ako para tumulong.\nHi! Anong maitutulong ko sa iyo ngayon?\nMagandang araw! Paano kita matutulungan?\nNandiyan ba ang sinuman? Anong tulong ang kailangan mo?\nHoy! Anong balita? Kung may katanungan ka, nandito ako.\nMagandang umaga! Ano ang iyong mga pangangailangan?\nKumusta ka? Kung kailangan mo ng tulong, nandito ako.\nMagandang hapon! Anong impormasyon ang hinahanap mo?\nKumusta ang iyong araw? Nandito ako kung may kailangan ka.\nSana'y nasa mabuti kang kalagayan. Ano ang maitutulong ko?\nSalamat sa pagdating! Huwag mag-atubiling magtanong.\nKumusta ang pamilya mo? Kung may kailangang i-report, nandito lang ako.\nSaan ka galing? Anong mga katanungan ang mayroon ka?\nTara, usap tayo! Ano ang nais mong malaman?\nMasaya akong makita ka! Ano ang iyong katanungan?\nLong time no see! Narito ako kung kailangan mo ng tulong.\nBatiin mo ako! Anong mga katanungan ang mayroon ka?\nMagandang umaga, kaibigan! Paano kita matutulungan?\nAlam mo ba ang mga balita? Kung may bagong impormasyon, nandito ako.\nLaging masaya na makita ka! Ano ang iyong mga alalahanin?\nSaan ang lakad mo? Kung may katanungan ka, nandito lang ako.\nKumusta ang trabaho mo? Kung kailangan mo ng tulong, nandito ako.\nBumalik ka na! Masaya akong nandito ka.\nNakaasa akong makikita kita ulit! Kung may kailangan ka, nandito lang ako.\nAnong ginagawa mo? Kung kailangan mo ng tulong, sabihin mo lang.\nNatutuwa akong makausap ka! Anong impormasyon ang maibibigay ko?\nKumusta ang kalusugan mo? Kung may mga sintomas kang nararamdaman, ipaalam mo sa akin.\nIkaw ba'y masaya? Huwag mag-atubiling magtanong kung may alalahanin ka.\nHuwag kang mag-atubiling makipag-usap! Anong impormasyon ang kailangan mo?\nMay balita ka ba? Kung may bagong kaganapan, sabihin mo lang.\nKamusta ang iyong mga kaibigan? Kung may katanungan sila, nandito ako.\nTila mabuti ang iyong ngiti! Kung may kailangan ka, nandito ako.\nMagandang gabi sa iyo! Ano ang nais mong pag-usapan?\nMabuhay! Anong impormasyon ang maibibigay ko sa iyo?\nSaan ka pupunta? Kung may katanungan ka, nandito lang ako.\nAling oras ka darating? Kung may kailangan ka, ipaalam mo lang.\nMagandang araw sa lahat! Kung may mga tanong, nandito ako para tumulong.\nNatutuwa akong narito ka! Ano ang maaari kong gawin para sa iyo?\nBakit hindi ka nag-text? Kung may mga katanungan ka, nandito ako.\nIpinagpapasalamat ko ang iyong presensya! Kung may kailangan ka, sabihin mo lang.\nMagandang pagdating! Ano ang maitutulong ko sa iyo?\nAnong mga balita sa iyong buhay? Kung may mga pangangailangan ka, nandito lang ako.\nAlam mo ba kung ano ang nangyari? Kung may katanungan, sabihin mo lang.\nNais ko sanang makasama ka! Kung may kailangan ka, nandito ako.\nBakit hindi tayo magkita? Kung may katanungan ka, nandito lang ako.\nKumusta ang iyong mga proyekto? Kung may katanungan ka, ipaalam mo lang.\nAnong masaya sa buhay mo ngayon? Kung may kailangan ka, nandito ako.\nMagandang araw sa iyong lahat! Kung may tanong, nandito ako para tumulong.",
+			"meaning": [
+				"Hello! Salamat sa pag-bisita.",
+				"Kamusta! Nandito ako para tumulong.",
+				"Hi! Anong maitutulong ko sa iyo ngayon?",
+				"Magandang araw! Paano kita matutulungan?",
+				"Nandiyan ba ang sinuman? Anong tulong ang kailangan mo?",
+				"Hoy! Anong balita? Kung may katanungan ka, nandito ako.",
+				"Magandang umaga! Ano ang iyong mga pangangailangan?",
+				"Kumusta ka? Kung kailangan mo ng tulong, nandito ako.",
+				"Magandang hapon! Anong impormasyon ang hinahanap mo?",
+				"Kumusta ang iyong araw? Nandito ako kung may kailangan ka.",
+				"Sana'y nasa mabuti kang kalagayan. Ano ang maitutulong ko?",
+				"Salamat sa pagdating! Huwag mag-atubiling magtanong.",
+				"Kumusta ang pamilya mo? Kung may kailangang i-report, nandito lang ako.",
+				"Saan ka galing? Anong mga katanungan ang mayroon ka?",
+				"Tara, usap tayo! Ano ang nais mong malaman?",
+				"Masaya akong makita ka! Ano ang iyong katanungan?",
+				"Long time no see! Narito ako kung kailangan mo ng tulong.",
+				"Batiin mo ako! Anong mga katanungan ang mayroon ka?",
+				"Magandang umaga, kaibigan! Paano kita matutulungan?",
+				"Alam mo ba ang mga balita? Kung may bagong impormasyon, nandito ako.",
+				"Laging masaya na makita ka! Ano ang iyong mga alalahanin?",
+				"Saan ang lakad mo? Kung may katanungan ka, nandito lang ako.",
+				"Kumusta ang trabaho mo? Kung kailangan mo ng tulong, nandito ako.",
+				"Bumalik ka na! Masaya akong nandito ka.",
+				"Nakaasa akong makikita kita ulit! Kung may kailangan ka, nandito lang ako.",
+				"Anong ginagawa mo? Kung kailangan mo ng tulong, sabihin mo lang.",
+				"Natutuwa akong makausap ka! Anong impormasyon ang maibibigay ko?",
+				"Kumusta ang kalusugan mo? Kung may mga sintomas kang nararamdaman, ipaalam mo sa akin.",
+				"Ikaw ba'y masaya? Huwag mag-atubiling magtanong kung may alalahanin ka.",
+				"Huwag kang mag-atubiling makipag-usap! Anong impormasyon ang kailangan mo?",
+				"May balita ka ba? Kung may bagong kaganapan, sabihin mo lang.",
+				"Kamusta ang iyong mga kaibigan? Kung may katanungan sila, nandito ako.",
+				"Tila mabuti ang iyong ngiti! Kung may kailangan ka, nandito ako.",
+				"Magandang gabi sa iyo! Ano ang nais mong pag-usapan?",
+				"Mabuhay! Anong impormasyon ang maibibigay ko sa iyo?",
+				"Saan ka pupunta? Kung may katanungan ka, nandito lang ako.",
+				"Aling oras ka darating? Kung may kailangan ka, ipaalam mo lang.",
+				"Magandang araw sa lahat! Kung may mga tanong, nandito ako para tumulong.",
+				"Natutuwa akong narito ka! Ano ang maaari kong gawin para sa iyo?",
+				"Bakit hindi ka nag-text? Kung may mga katanungan ka, nandito ako.",
+				"Ipinagpapasalamat ko ang iyong presensya! Kung may kailangan ka, sabihin mo lang.",
+				"Magandang pagdating! Ano ang maitutulong ko sa iyo?",
+				"Anong mga balita sa iyong buhay? Kung may mga pangangailangan ka, nandito lang ako.",
+				"Alam mo ba kung ano ang nangyari? Kung may katanungan, sabihin mo lang.",
+				"Nais ko sanang makasama ka! Kung may kailangan ka, nandito ako.",
+				"Bakit hindi tayo magkita? Kung may katanungan ka, nandito lang ako.",
+				"Kumusta ang iyong mga proyekto? Kung may katanungan ka, ipaalam mo lang.",
+				"Anong masaya sa buhay mo ngayon? Kung may kailangan ka, nandito ako.",
+				"Magandang araw sa iyong lahat! Kung may tanong, nandito ako para tumulong."
+			],
 			"patterns": [
 				"Hello!",
 				"Kamusta!",
@@ -704,7 +823,13 @@
 		{
 			"tag": "Paalam",
 			"type": "Message",
-			"meaning": "Paalam! Ingat ka at alagaan mo ang iyong sarili!\nMagandang araw! Tandaan, nandito ako kung kailangan mo ng payo sa first aid.\nPaalam! Huwag mag-atubiling bumalik kung may mga tanong ka pa tungkol sa first aid.\nIngat! Nandito lang ako para tumulong tuwing kailangan mo ng tulong.\nKita tayo muli! Mahalaga ang iyong kalusugan, at masaya akong makatulong!",
+			"meaning": [
+				"Paalam! Ingat ka at alagaan mo ang iyong sarili!",
+				"Magandang araw! Tandaan, nandito ako kung kailangan mo ng payo sa first aid.",
+				"Paalam! Huwag mag-atubiling bumalik kung may mga tanong ka pa tungkol sa first aid.",
+				"Ingat! Nandito lang ako para tumulong tuwing kailangan mo ng tulong.",
+				"Kita tayo muli! Mahalaga ang iyong kalusugan, at masaya akong makatulong!"
+			],
 			"patterns": [
 				"Paalam sa ngayon",
 				"Kitakits mamaya",
@@ -735,7 +860,13 @@
 		{
 			"tag": "Goodbye",
 			"type": "Message",
-			"meaning": "See you! Stay safe and take care of yourself!\nHave a nice day! Remember, I'm here if you need any first aid advice.\nBye! Don\u2019t hesitate to return if you have more questions about first aid.\nTake care! I'm always here to help whenever you need assistance.\nSee you soon! Your health is important, and I'm glad to help!",
+			"meaning": [
+				"See you! Stay safe and take care of yourself!",
+				"Have a nice day! Remember, I'm here if you need any first aid advice.",
+				"Bye! Don't hesitate to return if you have more questions about first aid.",
+				"Take care! I'm always here to help whenever you need assistance.",
+				"See you soon! Your health is important, and I'm glad to help!"
+			],
 			"patterns": [
 				"Bye for now",
 				"Catch you later",
@@ -766,13 +897,24 @@
 		{
 			"tag": "Thanks",
 			"type": "Message",
-			"meaning": "I\u2019m glad to assist!\nAlways here to help!\nIt\u2019s my pleasure to support you!\nHappy to provide assistance!\nI\u2019m here whenever you need me!\nAlways ready to help you!\nIt\u2019s a joy to help!\nI'm here to make things easier for you!\nDelighted to assist you!\nYour well-being is my priority!",
+			"meaning": [
+				"I'm glad to assist!",
+				"Always here to help!",
+				"It's my pleasure to support you!",
+				"Happy to provide assistance!",
+				"I'm here whenever you need me!",
+				"Always ready to help you!",
+				"It's a joy to help!",
+				"I'm here to make things easier for you!",
+				"Delighted to assist you!",
+				"Your well-being is my priority!"
+			],
 			"patterns": [
 				"Thank you so much",
 				"I really appreciate it",
 				"Thank you very much",
-				"That\u2019s incredibly helpful, thanks!",
-				"I can\u2019t thank you enough",
+				"That's incredibly helpful, thanks!",
+				"I can't thank you enough",
 				"Thank you for your support",
 				"I'm so grateful for your help",
 				"Thank you kindly",
@@ -787,7 +929,18 @@
 		{
 			"tag": "Salamat",
 			"type": "Message",
-			"meaning": "Masaya akong makatulong!\nNandito lang ako para tumulong!\nKasiyahan kong suportahan ka!\nMasaya akong magbigay ng tulong!\nNandito ako tuwing kailangan mo!\nLaging handang tumulong sa iyo!\nKaligayahan kong tumulong!\nNandito ako para pasimplehin ang mga bagay para sa iyo!\nNatutuwa akong makasama ka!\nAng iyong kalusugan ang aking prayoridad!",
+			"meaning": [
+				"Masaya akong makatulong!",
+				"Nandito lang ako para tumulong!",
+				"Kasiyahan kong suportahan ka!",
+				"Masaya akong magbigay ng tulong!",
+				"Nandito ako tuwing kailangan mo!",
+				"Laging handang tumulong sa iyo!",
+				"Kaligayahan kong tumulong!",
+				"Nandito ako para pasimplehin ang mga bagay para sa iyo!",
+				"Natutuwa akong makasama ka!",
+				"Ang iyong kalusugan ang aking prayoridad!"
+			],
 			"patterns": [
 				"Salamat nang marami",
 				"Talagang pinahahalagahan ko ito",

@@ -13,13 +13,12 @@ for index, row in df.iterrows():
     intent = {
         "tag": row['Tag'],
         "type": row['Type (Injury or Treatment)'],
-        "meaning": row['Meaning'],
+        "meaning": [meaning.strip() for meaning in str(row['Meaning']).split('\n')],
         "patterns": [pattern.strip() for pattern in str(row['Patterns']).split('\n')],
-        "procedures": [procedure.strip() for procedure in str(row['Procedures']).split('\n')],
-        "relations": [relation.strip() for relation in str(row['Relations (Treatment or Procedures)']).split('\n')],
-        "references": [reference.strip() for reference in str(row['References']).split('\n')],
-        # Check if 'Context Set' is NaN, if so, set it to an empty string
-        "context_set": "" if pd.isna(row.get('Context Set')) else row['Context Set']
+        "procedures": [],
+        "relations": [],
+        "references": [],
+        "context_set": ""
     }
     
     # Append each processed intent to the list
