@@ -1,23 +1,23 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
-import {
-	Dialog,
-	DialogContent,
-	DialogDescription,
-	DialogHeader,
-	DialogTitle,
-	DialogTrigger,
-} from '@/components/ui/dialog';
+// import { Button } from '@/components/ui/button';
+// import {
+// 	Dialog,
+// 	DialogContent,
+// 	DialogDescription,
+// 	DialogHeader,
+// 	DialogTitle,
+// 	DialogTrigger,
+// } from '@/components/ui/dialog';
 import { FlipWords } from '@/components/ui/flip-words';
-import { Input } from '@/components/ui/input';
+// import { Input } from '@/components/ui/input';
 import { SidebarTrigger } from '@/components/ui/sidebar';
-import { TEXT_INJURIES } from '@/sources/injuries';
+// import { TEXT_INJURIES } from '@/sources/injuries';
 import { useSession } from 'next-auth/react';
 import { redirect } from 'next/navigation';
 // import { useRef, useState } from 'react';
-import { FaLocationArrow, FaMicrophone, FaPaperclip } from 'react-icons/fa';
-import { FaCloudArrowUp } from 'react-icons/fa6';
+// import { FaLocationArrow, FaMicrophone, FaPaperclip } from 'react-icons/fa';
+// import { FaCloudArrowUp } from 'react-icons/fa6';
 // import { RiVoiceprintFill } from 'react-icons/ri';
 // import { useSpeechRecognition } from 'react-speech-recognition';
 
