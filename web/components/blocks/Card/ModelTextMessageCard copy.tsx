@@ -21,11 +21,8 @@ import { v4 as uuidv4 } from 'uuid';
 
 const ModelTextMessageCard = ({ message }: { message: Message }) => {
 	const { data: session } = useSession();
-	const [meaning, setMeaning] = useState('');
-	const [procedures, setProcedures] = useState<string[] | []>();
-	const [relations, setRelations] = useState<string[] | []>();
-	const [references, setReferences] = useState<string[] | []>();
 	// const [voiceMessageMode, setVoiceMessageMode] = useState('');
+	const [formattedProcedures, setFormattedProcedures] = useState([]);
 	// const [formattedEnglishMessages, setFormattedEnglishMessages] = useState([]);
 	// const [formattedFilipinoMessages, setFormattedFilipinoMessages] = useState(
 	// 	[]
@@ -102,58 +99,41 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 
 	useEffect(() => {
 		if (typeof message.content === 'object') {
-			if (
-				// @ts-expect-error: must be corrected properly
-				message.content.type === 'injury' ||
-				// @ts-expect-error: must be corrected properly
-				message.content.type === 'treatment'
-			) {
-				// @ts-expect-error: must be corrected properly
-				const proceduresArr = message.content.procedures[0]
-					.split('. ')!
-					// @ts-expect-error: must be corrected properly
-					.map((point) => point.trim())
-					// @ts-expect-error: must be corrected properly
-					.filter((point) => point.length > 0);
-
-				// @ts-expect-error: must be corrected properly
-				setMeaning(message.content.meaning);
-				setProcedures(proceduresArr);
-				// @ts-expect-error: must be corrected properly
-				setRelations(message.content.relations);
-				// @ts-expect-error: must be corrected properly
-				setReferences(message.content.references);
+			// @ts-expect-error: must be corrected properly
+			if (message.content.type === 'out') {
 			}
 
 			// @ts-expect-error: must be corrected properly
 			if (message.content.type === 'message') {
-				setMeaning(
-					// @ts-expect-error: must be corrected properly
-					message.content.meaning[
-						// @ts-expect-error: must be corrected properly
-						Math.floor(Math.random() * message.content.meaning.length)
-					]
-				);
-				setProcedures([]);
-				setRelations([]);
-				setReferences([]);
 			}
 
 			// @ts-expect-error: must be corrected properly
-			if (message.content.type === 'out') {
-				// @ts-expect-error: must be corrected properly
-				setMeaning(message.content.meaning);
-				setProcedures([]);
-				setRelations([]);
-				setReferences([]);
+			if (message.content.type === 'injury') {
 			}
+
+			// @ts-expect-error: must be corrected properly
+			if (message.content.type === 'treatment') {
+			}
+
+			// @ts-expect-error: must be corrected properly
+			const formattedProcedureArr = message.content.procedures[0]
+				.split('. ')!
+				// @ts-expect-error: must be corrected properly
+				.map((point) => point.trim())
+				// @ts-expect-error: must be corrected properly
+				.filter((point) => point.length > 0);
+
+			setFormattedProcedures(formattedProcedureArr);
 		}
 	}, []);
 
 	return (
 		<div className='flex flex-col space-y-2'>
 			{typeof message.content === 'object' && (
-				<div className='bg-foreground rounded-3xl ml-0 mr-auto w-12/12 md:w-10/12 lg:w-8/12 xl:w-5/12'>
+				<div
+					key={message.id}
+					className='bg-foreground rounded-3xl ml-0 mr-auto w-12/12 md:w-10/12 lg:w-8/12 xl:w-5/12'
+				>
 					<div
 						ref={messageRef}
 						className='flex flex-col space-y-6 cursor-pointer p-4'
@@ -163,7 +143,8 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 								Meaning
 							</p>
 							<p className='text-lg text-background tracking-tight text-ellipsis'>
-								{meaning}
+								{/* @ts-expect-error: must be corrected properly */}
+								{message.content.meaning}
 							</p>
 						</div>
 						<div className='space-y-2'>
@@ -171,7 +152,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 								Procedures
 							</p>
 							<div className='flex flex-col space-y-1'>
-								{procedures?.map((procedure) => (
+								{formattedProcedures.map((procedure) => (
 									<p
 										key={procedure}
 										className='text-lg text-background tracking-tight text-ellipsis'
@@ -186,7 +167,8 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 								References
 							</p>
 							<div className='flex flex-col space-y-1'>
-								{references?.map((reference) => (
+								{/* @ts-expect-error: must be corrected properly */}
+								{message.content.references.map((reference) => (
 									<Link
 										key={reference}
 										href={reference}
@@ -203,7 +185,8 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 								Relations
 							</p>
 							<div className='flex flex-wrap gap-2'>
-								{relations?.map((relation) => (
+								{/* @ts-expect-error: must be corrected properly */}
+								{message.content.relations.map((relation) => (
 									<button
 										key={relation}
 										className='text-lg py-2 px-5 outline outline-1 outline-zinc-800 dark:outline-zinc-200 hover:bg-zinc-800 dark:hover:bg-zinc-200 rounded-3xl font-bold tracking-tight text-background'
