@@ -47,7 +47,7 @@ with open("../models/astra-v2/classes.pkl", "rb") as file:
 chatbot_model = tf_models.load_model("../models/astra-v2/astra.h5")
 
 # Load the image classifier model using FastAI
-image_model = load_learner("../models/vesper/vesper.pkl")
+image_model = load_learner("../models/vesper-v2/vesper-v2.pkl")
 class_names = image_model.dls.vocab  # Get the class names from the model's data
 
 
