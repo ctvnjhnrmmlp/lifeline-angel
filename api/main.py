@@ -118,6 +118,10 @@ def predict_image(image):
     pred, pred_idx, probs = image_model.predict(image)  # Using FastAI model here
     return pred, probs[pred_idx].item()
 
+def resize_image(image: Image.Image, size=(640, 640)) -> Image.Image:
+    """Resize the image to the specified size."""
+    return image.resize(size)
+
 @app.post("/api/classify")
 async def classify_image(file: UploadFile = File(...)):
     contents = await file.read()
@@ -129,6 +133,9 @@ async def classify_image(file: UploadFile = File(...)):
     # Convert to PIL format for FastAI
     image = cv.cvtColor(image, cv.COLOR_BGR2RGB)
     pil_image = Image.fromarray(image)
+
+    # Resize image to 640x640
+    pil_image = resize_image(pil_image)
 
     # Use FastAI's predict method
     prediction, confidence = predict_image(pil_image)
@@ -162,6 +169,9 @@ async def websocket_classify_image(websocket: WebSocket):
             # Convert to PIL format for FastAI
             image = cv.cvtColor(image, cv.COLOR_BGR2RGB)
             pil_image = Image.fromarray(image)
+
+            # Resize image to 640x640
+            pil_image = resize_image(pil_image)
 
             # Predict using FastAI model
             prediction, confidence = predict_image(pil_image)
