@@ -23,7 +23,7 @@ const ConversationCard = ({ conv }: { conv: Conversation }) => {
 					<div className='flex justify-between w-full'>
 						{checkEntitySecondsAgo(conv.createdAt.toString()) && (
 							<div>
-								<p className='font-extrabold w-full text-md text-foreground tracking-tight leading-none text-balance'>
+								<p className='font-extrabold w-full text-md text-foreground tracking-tight leading-none text-balance truncate'>
 									<TypeAnimation
 										sequence={[conv.title ? conv.title : 'New conversation']}
 										cursor={false}
@@ -34,7 +34,7 @@ const ConversationCard = ({ conv }: { conv: Conversation }) => {
 						)}
 						{!checkEntitySecondsAgo(conv.createdAt.toString()) && (
 							<div>
-								<p className='font-extrabold w-full text-md text-foreground tracking-tight leading-none text-balance'>
+								<p className='font-extrabold w-full text-md text-foreground tracking-tight leading-none text-balance truncate'>
 									{conv.title ? conv.title : 'New conversation'}
 								</p>
 							</div>

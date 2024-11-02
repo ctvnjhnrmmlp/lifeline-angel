@@ -1,16 +1,6 @@
 'use client';
 
-import {
-	AudioWaveform,
-	ChevronsUpDown,
-	Command,
-	GalleryVerticalEnd,
-	LogOut,
-	Moon,
-	Plus,
-	SquareTerminal,
-	Sun,
-} from 'lucide-react';
+import { ChevronsUpDown, LogOut, Moon, Plus, Sun } from 'lucide-react';
 import * as React from 'react';
 
 import ConversationCard from '@/components/blocks/Card/ConversationCard';
@@ -40,6 +30,11 @@ import {
 	Sidebar as SidebarUI,
 } from '@/components/ui/sidebar';
 import {
+	Tooltip,
+	TooltipContent,
+	TooltipTrigger,
+} from '@/components/ui/tooltip';
+import {
 	addConversation,
 	getConversations,
 } from '@/services/lifeline-angel/conversation';
@@ -53,39 +48,6 @@ import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import { ReactNode, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-
-const data = {
-	user: {
-		name: 'shadcn',
-		email: 'm@example.com',
-		avatar: '/avatars/shadcn.jpg',
-	},
-	teams: [
-		{
-			name: 'Acme Inc',
-			logo: GalleryVerticalEnd,
-			plan: 'Enterprise',
-		},
-		{
-			name: 'Acme Corp.',
-			logo: AudioWaveform,
-			plan: 'Startup',
-		},
-		{
-			name: 'Evil Corp.',
-			logo: Command,
-			plan: 'Free',
-		},
-	],
-	navMain: [
-		{
-			title: 'Playground',
-			url: '#',
-			icon: SquareTerminal,
-			isActive: true,
-		},
-	],
-};
 
 export default function Sidebar({
 	children,
@@ -163,19 +125,26 @@ export default function Sidebar({
 								<Avatar className='h-10 w-10 rounded-lg'>
 									<AvatarImage
 										src='/images/lifeline-angel.png'
-										alt={data.user.name}
+										alt={session?.user.name}
 									/>
 									<AvatarFallback className='rounded-lg'>
 										{session ? session?.user.name : 'G'}
 									</AvatarFallback>
 								</Avatar>
 							</Link>
-							<Button
-								className='w-full'
-								onClick={() => handleAddConversation()}
-							>
-								<Plus />
-							</Button>
+							<Tooltip>
+								<TooltipTrigger asChild>
+									<Button
+										className='w-full'
+										onClick={() => handleAddConversation()}
+									>
+										<Plus />
+									</Button>
+								</TooltipTrigger>
+								<TooltipContent className='border-1 border-zinc-200 dark:border-zinc-800'>
+									<p>New conversation</p>
+								</TooltipContent>
+							</Tooltip>
 						</SidebarMenuItem>
 					</SidebarMenu>
 				</SidebarHeader>

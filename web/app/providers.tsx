@@ -1,5 +1,7 @@
 'use client';
 
+import { SidebarProvider } from '@/components/ui/sidebar';
+import { TooltipProvider } from '@/components/ui/tooltip';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { SessionProvider } from 'next-auth/react';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
@@ -23,7 +25,9 @@ export default function Providers({ children }: { children: ReactNode }) {
 					enableSystem
 					// disableTransitionOnChange
 				>
-					{children}
+					<SidebarProvider>
+						<TooltipProvider>{children}</TooltipProvider>
+					</SidebarProvider>
 				</NextThemesProvider>
 			</QueryClientProvider>
 		</SessionProvider>

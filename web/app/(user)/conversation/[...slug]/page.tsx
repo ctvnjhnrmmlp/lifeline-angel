@@ -58,6 +58,11 @@ import {
 	CarouselNext,
 	CarouselPrevious,
 } from '@/components/ui/carousel';
+import {
+	Tooltip,
+	TooltipContent,
+	TooltipTrigger,
+} from '@/components/ui/tooltip';
 import { v4 as uuidv4 } from 'uuid';
 import * as Yup from 'yup';
 
@@ -311,18 +316,26 @@ export default function Page() {
 													<DialogDescription className='py-4'>
 														<div className='flex flex-wrap justify-center gap-2'>
 															{IMAGE_INJURIES.map((injury) => (
-																<Image
-																	key={injury.content}
-																	width={130}
-																	height={130}
-																	src={`/images/${injury.source}`}
-																	className='w-56 object-cover rounded-3xl'
-																	alt={injury.content}
-																	onClick={() => {
-																		handleAddMessage(injury.content);
-																		handleUpdateConversation(injury.content);
-																	}}
-																/>
+																<Tooltip key={injury.content}>
+																	<TooltipTrigger asChild>
+																		<Image
+																			width={130}
+																			height={130}
+																			src={`/images/${injury.source}`}
+																			className='w-56 object-cover rounded-3xl'
+																			alt={injury.content}
+																			onClick={() => {
+																				handleAddMessage(injury.content);
+																				handleUpdateConversation(
+																					injury.content
+																				);
+																			}}
+																		/>
+																	</TooltipTrigger>
+																	<TooltipContent className='border-1 border-zinc-200 dark:border-zinc-800'>
+																		<p>{injury.content}</p>
+																	</TooltipContent>
+																</Tooltip>
 															))}
 														</div>
 													</DialogDescription>

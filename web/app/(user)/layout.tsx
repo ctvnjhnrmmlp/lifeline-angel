@@ -1,7 +1,6 @@
 'use client';
 
 import Sidebar from '@/components/layouts/Sidebar/Sidebar';
-import { SidebarProvider } from '@/components/ui/sidebar';
 import { ReactNode } from 'react';
 
 export default function Layout({
@@ -9,9 +8,5 @@ export default function Layout({
 }: Readonly<{
 	children: ReactNode;
 }>) {
-	return (
-		<SidebarProvider>
-			<Sidebar>{children}</Sidebar>
-		</SidebarProvider>
-	);
+	return <Sidebar>{children}</Sidebar>;
 }

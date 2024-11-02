@@ -29,7 +29,29 @@ export default function Page() {
 	// const { transcript, resetTranscript, browserSupportsSpeechRecognition } =
 	// 	useSpeechRecognition();
 	// const [microphone, setMicrophone] = useState(false);
-	const words = ['ANGEL', 'VESPER', 'ASTRA', 'SAVIOR', 'HELPER', 'COMPANION'];
+	const words = [
+		'ANGEL',
+		'VESPER',
+		'ASTRA',
+		'SAVIOR',
+		'HELPER',
+		'COMPANION',
+		'GUIDE',
+		'PROTECTOR',
+		'ALLY',
+		'SUPPORT',
+		'SHIELD',
+		'FRIEND',
+		'BEACON',
+		'HERO',
+		'LIGHT',
+		'SOLACE',
+		'RESCUE',
+		'SHELTER',
+		'NURTURE',
+		'EMBRACE',
+		'HOPE',
+	];
 
 	// const formik = useFormik({
 	// 	initialValues: {
@@ -89,16 +111,15 @@ export default function Page() {
 			<section className='relative rounded-3xl h-screen'>
 				<SidebarTrigger
 					variant='outline'
-					className='absolute sm:invisible top-2 left-2 text-foreground p-5 rounded-xl'
+					className='absolute md:invisible top-2 left-2 text-foreground p-5 rounded-2xl'
 				/>
-
 				<div className='flex flex-col justify-center items-center h-full space-y-8 rounded-3xl outline outline-1 outline-zinc-200 dark:outline-zinc-800'>
 					<div className='w-full'>
-						<h1 className='text-5xl font-bold text-center uppercase'>
+						<h1 className='text-4xl sm:text-5xl md:text-6xl font-bold text-center uppercase'>
 							Lifeline <FlipWords words={words} /> <br />
 						</h1>
 					</div>
-					<div className='flex justify-center items-center space-x-3 w-6/12'>
+					{/* <div className='flex justify-center items-center space-x-3 w-6/12'>
 						<Dialog>
 							<DialogTrigger asChild>
 								<Button className='bg-background text-foreground outline outline-1 outline-zinc-200 dark:outline-zinc-800 hover:bg-zinc-100 py-6 px-4 hover:bg-zinc-100 dark:hover:bg-zinc-800'>
@@ -141,19 +162,19 @@ export default function Page() {
 													</div>
 												</label>
 												<div>
-													{/* {formik.touched.file && formik.errors.file && (
+													{formik.touched.file && formik.errors.file && (
 														<p className='text-foreground'>
 															{formik.errors.file}
 														</p>
-													)} */}
+													)}
 												</div>
 												<Button
 													type='submit'
 													// disabled={uploading}
 													className='w-full text-xl py-6 bg-background text-foreground font-bold text-2xl'
 												>
-													{/* {uploading && <span>Posting...</span>}
-													{!uploading && <span>Post</span>} */}
+													{uploading && <span>Posting...</span>}
+													{!uploading && <span>Post</span>}
 												</Button>
 											</form>
 										</div>
@@ -174,7 +195,7 @@ export default function Page() {
 									</DialogTitle>
 									<DialogDescription className='py-4'>
 										<div className='flex flex-col space-y-8 items-center justify-center'>
-											{/* {browserSupportsSpeechRecognition && (
+											{browserSupportsSpeechRecognition && (
 												<>
 													<div>
 														<p className='text-[11rem] text-background'>
@@ -208,7 +229,7 @@ export default function Page() {
 												<span>
 													Browser does not support speech recognition.
 												</span>
-											)} */}
+											)}
 										</div>
 									</DialogDescription>
 								</DialogHeader>
@@ -243,8 +264,8 @@ export default function Page() {
 								<FaLocationArrow />
 							</button>
 						</div>
-					</div>
-					<div className='flex flex-wrap gap-2 w-6/12'>
+					</div> */}
+					{/* <div className='flex flex-wrap gap-2 w-6/12'>
 						{TEXT_INJURIES.map((injury) => (
 							<button
 								key={injury.content}
@@ -257,7 +278,7 @@ export default function Page() {
 								{injury.content}
 							</button>
 						))}
-					</div>
+					</div> */}
 				</div>
 			</section>
 		</main>
