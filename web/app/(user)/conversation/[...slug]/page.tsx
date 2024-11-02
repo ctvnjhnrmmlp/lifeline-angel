@@ -51,6 +51,13 @@ import { GiRaggedWound } from 'react-icons/gi';
 import { MdPersonalInjury } from 'react-icons/md';
 import { RiVoiceprintFill } from 'react-icons/ri';
 // import Webcam from 'react-webcam';
+import {
+	Carousel,
+	CarouselContent,
+	CarouselItem,
+	CarouselNext,
+	CarouselPrevious,
+} from '@/components/ui/carousel';
 import { v4 as uuidv4 } from 'uuid';
 import * as Yup from 'yup';
 
@@ -394,20 +401,34 @@ export default function Page() {
 										</p>
 									</div>
 									<div className='flex flex-wrap gap-2'>
-										{IMAGE_INJURIES.map((injury) => (
-											<Image
-												key={injury.content}
-												width={130}
-												height={130}
-												src={`/images/${injury.source}`}
-												className='w-full sm:w-36 md:w-56 object-cover rounded-3xl'
-												alt={injury.content}
-												onClick={() => {
-													handleAddMessage(injury.content);
-													handleUpdateConversation(injury.content);
-												}}
-											/>
-										))}
+										<Carousel
+											opts={{
+												align: 'start',
+											}}
+										>
+											<CarouselContent>
+												{IMAGE_INJURIES.map((injury) => (
+													<CarouselItem
+														key={injury.content}
+														className='basis-3/9'
+													>
+														<Image
+															width={130}
+															height={130}
+															src={`/images/${injury.source}`}
+															className='w-full sm:w-36 md:w-56 object-cover rounded-3xl'
+															alt={injury.content}
+															onClick={() => {
+																handleAddMessage(injury.content);
+																handleUpdateConversation(injury.content);
+															}}
+														/>
+													</CarouselItem>
+												))}
+											</CarouselContent>
+											<CarouselPrevious />
+											<CarouselNext />
+										</Carousel>
 									</div>
 								</div>
 							</div>

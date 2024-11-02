@@ -38,15 +38,16 @@ export const TEXT_INJURIES = [
 	{ content: 'Stroke' },
 	{ content: 'Bleeding' },
 	{ content: 'Fever' },
-	// { content: 'Dizziness' },
-	// { content: 'Heart Attack' },
-	// { content: 'Seizure' },
 ];
 
 export const IMAGE_INJURIES = [
-	{ content: 'Abrasions', source: 'abrasions.png' },
-	{ content: 'Burns', source: 'burns.png' },
+	{ content: 'Abrasion', source: 'abrasions.png' },
+	{ content: 'Bite', source: 'bite.png' },
 	{ content: 'Bruise', source: 'bruise.png' },
-	{ content: 'Cuts', source: 'cuts.png' },
-	{ content: 'Laseration', source: 'sting.png' },
+	{ content: 'Burn', source: 'burns.png' },
+	{ content: 'Cut', source: 'cuts.png' },
+	{ content: 'Laseration', source: 'laseration.jpg' },
+	{ content: 'Splinter', source: 'splinter.jpg' },
+	{ content: 'Sting', source: 'sting.png' },
+	{ content: 'Sun Burn', source: 'sun-burn.png' },
 ];

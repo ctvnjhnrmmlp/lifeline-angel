@@ -133,7 +133,7 @@ export default function Page() {
 							</DialogHeader>
 							<DialogFooter className='flex flex-row justify-center items-center space-x-3'>
 								<DialogClose asChild>
-									<button className='px-5 py-2 md:py-3 bg-foreground text-background rounded-xl text-md sm:text-xl md:text-2xl font-bold tracking-tight outline outline-1 outline-zinc-800'>
+									<button className='px-5 py-2 md:py-3 bg-foreground text-background rounded-xl text-md sm:text-xl md:text-2xl font-bold tracking-tight outline outline-1 outline-zinc-800 dark:outline-zinc-200'>
 										Disagree
 									</button>
 								</DialogClose>
