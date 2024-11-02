@@ -86,6 +86,7 @@ def get_response(intents_list, intents_json):
     if tag == "unknown":
         # Returning a dictionary even when the intent is unknown
         return {
+            "type": "Out",
             "meaning": "I'm sorry, but I didn't quite catch that. Could you please provide more details or rephrase your question? I'm here to help!",
             "procedures": None,
             "relations": None,
@@ -94,6 +95,7 @@ def get_response(intents_list, intents_json):
     for intent in intents_json["intents"]:
         if intent["tag"] == tag:
             return {
+                "type": intent["type"],
                 "meaning": intent["meaning"],
                 "procedures": intent["procedures"],
                 "relations": intent["relations"],
