@@ -15,12 +15,15 @@ import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { IoIosCopy } from 'react-icons/io';
-// import { RiVoiceprintFill } from 'react-icons/ri';
 import { useTextToVoice } from 'react-speakup';
 import { v4 as uuidv4 } from 'uuid';
 
 const ModelTextMessageCard = ({ message }: { message: Message }) => {
 	const { data: session } = useSession();
+	const { slug } = useParams() as {
+		slug: string[];
+	};
+	const [content, setContent] = useState<Message | string>();
 	const [type, setType] = useState('');
 	const [meaning, setMeaning] = useState('');
 	const [procedures, setProcedures] = useState<string[] | []>();
@@ -31,9 +34,6 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 	// const [formattedFilipinoMessages, setFormattedFilipinoMessages] = useState(
 	// 	[]
 	// );
-	const { slug } = useParams() as {
-		slug: string[];
-	};
 
 	const { refetch: refetchMessages } = useQuery({
 		queryKey: ['getMessages'],
@@ -103,6 +103,8 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 
 	useEffect(() => {
 		// @ts-expect-error: must be corrected properly
+		setContent(message.content);
+		// @ts-expect-error: must be corrected properly
 		setType(message.content.type);
 
 		if (typeof message.content === 'object') {
@@ -131,6 +133,17 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 				setReferences(message.content.references);
 			}
 
+			if (
+				// @ts-expect-error: must be corrected properly
+				message.content.type === 'message' ||
+				// @ts-expect-error: must be corrected properly
+				message.content.type === 'out'
+			) {
+				setProcedures([]);
+				setRelations([]);
+				setReferences([]);
+			}
+
 			// @ts-expect-error: must be corrected properly
 			if (message.content.type === 'message') {
 				setMeaning(
@@ -140,27 +153,19 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 						Math.floor(Math.random() * message.content.meaning.length)
 					]
 				);
-				setProcedures([]);
-				setRelations([]);
-				setReferences([]);
 			}
 
 			// @ts-expect-error: must be corrected properly
 			if (message.content.type === 'out') {
 				// @ts-expect-error: must be corrected properly
 				setMeaning(message.content.meaning);
-				setProcedures([]);
-				setRelations([]);
-				setReferences([]);
 			}
 		}
 	}, []);
 
-	console.log(message);
-
 	return (
 		<div className='flex flex-col space-y-2'>
-			{typeof message.content === 'object' && (
+			{content && typeof content === 'object' && (
 				<div className='bg-foreground rounded-3xl ml-0 mr-auto w-12/12 md:w-10/12 lg:w-8/12 xl:w-5/12'>
 					<div
 						ref={messageRef}
@@ -241,12 +246,12 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 					</div>
 				</div>
 			)}
-			{typeof message.content === 'string' && (
+			{content && typeof content === 'string' && (
 				<div className='flex flex-col space-y-2'>
 					<div className='bg-foreground outline outline-1 outline-zinc-200 dark:outline-zinc-800 rounded-3xl min-w-4/12 mr-auto'>
 						<div className='cursor-pointer p-4'>
 							<p className='text-lg text-background tracking-tight leading-none text-ellipsis text-balance text-center'>
-								{message.content}
+								{content}
 							</p>
 						</div>
 					</div>
@@ -266,16 +271,16 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 								copy(
 									`Meaning\n${
 										// @ts-expect-error: must be corrected properly
-										message.content.meaning
+										content.meaning
 									}\nProcedures\n${
 										// @ts-expect-error: must be corrected properly
-										message.content.procedures[0]
+										content.procedures[0]
 									} References\n${
 										// @ts-expect-error: must be corrected properly
-										message.content.references.map((reference) => reference)
+										content.references.map((reference) => reference)
 									}\nRelations\n${
 										// @ts-expect-error: must be corrected properly
-										message.content.relations.map((relation) => relation)
+										content.relations.map((relation) => relation)
 									}`
 								)
 							}
