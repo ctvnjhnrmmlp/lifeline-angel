@@ -8,9 +8,6 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.optimizers import SGD
 
-# nltk.download('punkt')
-# nltk.download('wordnet')
-
 # Initialize lemmatizer
 lemmatizer = WordNetLemmatizer()
 
