@@ -110,6 +110,8 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 				// @ts-expect-error: must be corrected properly
 				message.content.type === 'injury' ||
 				// @ts-expect-error: must be corrected properly
+				message.content.type === 'Injury' ||
+				// @ts-expect-error: must be corrected properly
 				message.content.type === 'treatment'
 			) {
 				// @ts-expect-error: must be corrected properly
@@ -153,6 +155,8 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 			}
 		}
 	}, []);
+
+	console.log(message);
 
 	return (
 		<div className='flex flex-col space-y-2'>
