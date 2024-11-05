@@ -6,6 +6,8 @@ import * as React from 'react';
 import ConversationCard from '@/components/blocks/Card/ConversationCard';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { BiSolidLeftArrow } from 'react-icons/bi';
 
 import {
 	DropdownMenu,
@@ -46,7 +48,7 @@ import { useMutation, useQuery } from '@tanstack/react-query';
 import { signOut, useSession } from 'next-auth/react';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
-import { ReactNode, useEffect } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 export default function Sidebar({
@@ -55,28 +57,27 @@ export default function Sidebar({
 	children: ReactNode;
 }>) {
 	const { data: session } = useSession();
-	// const [conversationQuery, setConversationQuery] = useState('');
-	// const [openSearch, setOpenSearch] = useState(false);
-	const openSearch = true;
+	const [conversationQuery, setConversationQuery] = useState('');
+	const [openSearch, setOpenSearch] = useState(false);
 	const { setTheme } = useTheme();
 
 	const {
 		conversations: conversationsLocal,
 		setConversations: setConversationsLocal,
-		// searchConversations: searchConversationsLocal,
+		searchConversations: searchConversationsLocal,
 		addConversation: addConversationLocal,
 	} = useMultipleConversationStore();
 
 	const {
 		conversations: conversationsTemporary,
 		setConversations: setConversationsTemporary,
-		// searchConversations: searchConversationsTemporary,
+		searchConversations: searchConversationsTemporary,
 		addConversation: addConversationTemporary,
 	} = useTemporaryMultipleConversationStore();
 
-	// const handleSetConversationQuery = (query: string) => {
-	// 	setConversationQuery(query);
-	// };
+	const handleSetConversationQuery = (query: string) => {
+		setConversationQuery(query);
+	};
 
 	const addConversationMutation = useMutation({
 		mutationFn: async (cid: string) =>
@@ -91,13 +92,13 @@ export default function Sidebar({
 		addConversationMutation.mutate(cid);
 	};
 
-	// const handleSearchConversation = (query: string) => {
-	// 	searchConversationsTemporary(query);
-	// };
+	const handleSearchConversation = (query: string) => {
+		searchConversationsTemporary(query);
+	};
 
-	// const handleOpenSearch = (search: boolean) => {
-	// 	setOpenSearch(search);
-	// };
+	const handleOpenSearch = (search: boolean) => {
+		setOpenSearch(search);
+	};
 
 	const {
 		data: conversationsServer,
@@ -145,6 +146,31 @@ export default function Sidebar({
 									<p>New conversation</p>
 								</TooltipContent>
 							</Tooltip>
+							<div className='flex space-x-3'>
+								{openSearch && (
+									<button
+										className='bg-background text-foreground text-2xl text-center leading-none'
+										onClick={() => handleOpenSearch(false)}
+									>
+										<BiSolidLeftArrow />
+									</button>
+								)}
+								<Input
+									type='text'
+									placeholder='Search conversation'
+									onChange={(event) =>
+										handleSetConversationQuery(event.target.value)
+									}
+									onClick={() => handleOpenSearch(true)}
+									onKeyUp={(event) => {
+										if (event.key === 'Enter' && conversationQuery.length > 0) {
+											return handleSearchConversation(conversationQuery);
+										}
+
+										return setConversationsTemporary(conversationsLocal);
+									}}
+								/>
+							</div>
 						</SidebarMenuItem>
 					</SidebarMenu>
 				</SidebarHeader>
