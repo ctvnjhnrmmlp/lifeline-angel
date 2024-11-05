@@ -21,6 +21,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 const ModelTextMessageCard = ({ message }: { message: Message }) => {
 	const { data: session } = useSession();
+	const [type, setType] = useState('');
 	const [meaning, setMeaning] = useState('');
 	const [procedures, setProcedures] = useState<string[] | []>();
 	const [relations, setRelations] = useState<string[] | []>();
@@ -101,12 +102,15 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 	// };
 
 	useEffect(() => {
+		// @ts-expect-error: must be corrected properly
+		setType(message.content.type);
+
 		if (typeof message.content === 'object') {
 			if (
 				// @ts-expect-error: must be corrected properly
-				message.content.type === 'Injury' ||
+				message.content.type === 'injury' ||
 				// @ts-expect-error: must be corrected properly
-				message.content.type === 'Treatment'
+				message.content.type === 'treatment'
 			) {
 				// @ts-expect-error: must be corrected properly
 				const proceduresArr = message.content.procedures[0]
@@ -140,7 +144,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 			}
 
 			// @ts-expect-error: must be corrected properly
-			if (message.content.type === 'Out') {
+			if (message.content.type === 'out') {
 				// @ts-expect-error: must be corrected properly
 				setMeaning(message.content.meaning);
 				setProcedures([]);
@@ -150,12 +154,6 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 		}
 	}, []);
 
-	console.log(message.content);
-	console.log(meaning);
-	console.log(procedures);
-	console.log(relations);
-	console.log(references);
-
 	return (
 		<div className='flex flex-col space-y-2'>
 			{typeof message.content === 'object' && (
@@ -164,19 +162,20 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 						ref={messageRef}
 						className='flex flex-col space-y-6 cursor-pointer p-4'
 					>
-						{meaning.length <= 0 && (
+						{meaning && (
 							<div className='space-y-2'>
-								<p className='text-xl font-bold text-background tracking-tight text-ellipsis'>
-									Meaning
-								</p>
+								{type !== 'message' && type !== 'out' && (
+									<p className='text-xl font-bold text-background tracking-tight text-ellipsis'>
+										Meaning
+									</p>
+								)}
 								<p className='text-lg text-background tracking-tight text-ellipsis'>
 									{meaning}
 								</p>
 							</div>
 						)}
-
 						{/* @ts-ignore */}
-						{procedures?.length <= 0 && (
+						{procedures?.length > 0 && (
 							<div className='space-y-2'>
 								<p className='text-xl font-bold text-background tracking-tight text-ellipsis'>
 									Procedures
@@ -193,9 +192,8 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 								</div>
 							</div>
 						)}
-
 						{/* @ts-ignore */}
-						{references?.length <= 0 && (
+						{references?.length > 0 && (
 							<div className='space-y-2'>
 								<p className='text-xl font-bold text-background tracking-tight text-ellipsis'>
 									References
@@ -214,8 +212,8 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 								</div>
 							</div>
 						)}
-
-						{relations?.length && (
+						{/* @ts-ignore */}
+						{relations?.length > 0 && (
 							<div className='space-y-2'>
 								<p className='text-xl font-bold text-background tracking-tight text-ellipsis'>
 									Relations
