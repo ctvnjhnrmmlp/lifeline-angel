@@ -2,7 +2,7 @@
 	"intents": [
 		{
 			"tag": "Buko Water",
-			"type": "Treatment",
+			"type": "treatment",
 			"meaning": "Buko water is a refreshing and nutritious drink that is popular in many tropical countries, especially in Southeast Asia. It is the clear liquid found inside young coconuts. Buko water is a natural source of electrolytes, which helps to replenish fluids in the body. This makes it a great choice for staying hydrated, especially after exercise or illness. It also contains essential vitamins and minerals, such as vitamin C, calcium, and potassium, that are important for overall health. Additionally, buko water may aid in digestion and help prevent constipation. It is low in calories and fat, making it a suitable drink for those who are watching their weight.",
 			"patterns": [
 				"How to prepare Buko (Coconut) Water for diarrhea?",
@@ -49,7 +49,7 @@
 		},
 		{
 			"tag": "Katas ng Buko",
-			"type": "Treatment",
+			"type": "treatment",
 			"meaning": "Ang tubig ng buko ay isang nakakapreskong at masustansiyang inumin na tanyag sa maraming tropikal na bansa, lalo na sa Timog-Silangang Asya. Ito ang malinaw na likido na matatagpuan sa loob ng batang niyog. Ang tubig ng buko ay likas na pinagmumulan ng mga electrolytes, na tumutulong sa pagpapanumbalik ng likido sa katawan. Dahil dito, mainam itong inumin upang manatiling hydrated, lalo na pagkatapos ng ehersisyo o pagkakasakit. Naglalaman din ito ng mga mahahalagang bitamina at mineral, gaya ng vitamin C, calcium, at potassium, na mahalaga para sa pangkalahatang kalusugan. Bukod pa rito, maaaring makatulong ang tubig ng buko sa pagpapadali ng digestion at maiwasan ang constipation. Mababa ito sa calories at taba, kaya angkop na inumin para sa mga nagbabantay sa kanilang timbang.",
 			"patterns": [
 				"Paano maghanda ng Buko (Coconut) Water para sa pagtatae?",
@@ -96,7 +96,7 @@
 		},
 		{
 			"tag": "Lemongrass",
-			"type": "Treatment",
+			"type": "treatment",
 			"meaning": "Tanglad, also known as lemongrass, is a popular herb in Southeast Asian cuisine. It has a distinct citrusy aroma and flavor, often used in soups, stews, and teas. Beyond its culinary uses, tanglad offers several health benefits. It is rich in antioxidants, which help protect cells from damage. Additionally, tanglad contains compounds that may have anti-inflammatory and antimicrobial properties. Some studies suggest that tanglad may aid in digestion, relieve anxiety, and boost immunity.",
 			"patterns": [
 				"How to prepare Tanglad for dehydration?",
@@ -142,7 +142,7 @@
 		},
 		{
 			"tag": "Tanglad",
-			"type": "Treatment",
+			"type": "treatment",
 			"meaning": "Ang tanglad, na kilala rin bilang lemongrass, ay isang tanyag na halamang-gamot sa lutuing Timog-Silangang Asya. Ito ay may kakaibang aroma at lasa na citrus, at madalas na ginagamit sa mga sopas, nilaga, at tsaa. Bukod sa gamit nito sa pagluluto, ang tanglad ay nag-aalok ng iba't ibang benepisyo sa kalusugan. Ito ay mayaman sa mga antioxidants na tumutulong sa proteksyon ng mga selula mula sa pinsala. Bukod pa rito, naglalaman ang tanglad ng mga sangkap na maaaring may anti-inflammatory at antimicrobial na katangian. May ilang pag-aaral na nagpapakita na maaaring makatulong ang tanglad sa digestion, pagpapagaan ng anxiety, at pagpapalakas ng immunity.",
 			"patterns": [
 				"Paano maghanda ng Tanglad para sa dehydration?",
@@ -188,7 +188,7 @@
 		},
 		{
 			"tag": "Lagundi",
-			"type": "Treatment",
+			"type": "treatment",
 			"meaning": "Lagundi, also known as the Chinese violet, is a popular medicinal plant in the Philippines. It is known for its potential to alleviate various health conditions, including nasal congestion.Lagundi contains compounds that may have anti-inflammatory and decongestant properties. These compounds can help reduce swelling in the nasal passages, making it easier to breathe. Additionally, lagundi may help to soothe irritated mucous membranes and reduce congestion.",
 			"patterns": [
 				"How to prepare Lagundi for nasal congestion?",
@@ -249,7 +249,7 @@
 		},
 		{
 			"tag": "Lagundi",
-			"type": "Treatment",
+			"type": "treatment",
 			"meaning": "Ang lagundi, na kilala rin bilang Chinese violet, ay isang kilalang halamang-gamot sa Pilipinas. Ito ay kilala sa kakayahang magpaginhawa ng iba't ibang kondisyon sa kalusugan, kabilang ang baradong ilong. Ang lagundi ay naglalaman ng mga sangkap na maaaring may anti-inflammatory at decongestant na katangian. Ang mga sangkap na ito ay maaaring makatulong na mabawasan ang pamamaga sa mga daanan ng ilong, na nagpapadali ng paghinga. Bukod pa rito, maaaring makatulong ang lagundi sa pagpapakalma ng iritadong mga mucous membrane at mabawasan ang congestion.",
 			"patterns": [
 				"Paano maghanda ng Lagundi para sa nasal congestion?",
@@ -310,7 +310,7 @@
 		},
 		{
 			"tag": "Oregano",
-			"type": "Treatment",
+			"type": "treatment",
 			"meaning": "Oregano is a popular herb used in cooking and traditional medicine. It is known for its strong, pungent aroma and flavor. In addition to its culinary uses, oregano has been used for centuries to treat various health conditions, including nasal congestion. Oregano contains compounds that may have anti-inflammatory and antimicrobial properties. These compounds can help reduce swelling in the nasal passages and soothe irritated mucous membranes. This can help alleviate congestion and make breathing easier. Oregano can be used in various forms, such as tea, oil, or capsules.",
 			"patterns": [
 				"How to prepare Oregano for nasal congestion?",
@@ -331,7 +331,7 @@
 		},
 		{
 			"tag": "Oregano",
-			"type": "Treatment",
+			"type": "treatment",
 			"meaning": "Ang oregano ay isang tanyag na halamang-gamot na ginagamit sa pagluluto at tradisyunal na medisina. Kilala ito sa malakas at maanghang na aroma at lasa. Bukod sa gamit nito sa pagluluto, matagal nang ginagamit ang oregano upang gamutin ang iba't ibang kondisyon sa kalusugan, kabilang ang baradong ilong. Ang oregano ay naglalaman ng mga sangkap na maaaring may anti-inflammatory at antimicrobial na katangian. Ang mga sangkap na ito ay maaaring makatulong na mabawasan ang pamamaga sa mga daanan ng ilong at magpakalma ng iritadong mga mucous membrane. Makakatulong ito upang mapagaan ang congestion at mapadali ang paghinga. Maaaring gamitin ang oregano sa iba't ibang anyo, tulad ng tsaa, langis, o kapsula.",
 			"patterns": [
 				"Paano maghanda ng Oregano para sa nasal congestion?",
@@ -600,7 +600,7 @@
 		},
 		{
 			"tag": "Luya",
-			"type": "Treatment",
+			"type": "treatment",
 			"meaning": "Ang luya, na kilala rin bilang ginger, ay isang tanyag na pampalasa at halamang-gamot na ginagamit sa iba't ibang lutuin sa buong mundo. Ito ay may kakaibang, maanghang na lasa at aroma. Ang luya ay mayaman sa antioxidants at bioactive na mga sangkap na maaaring maghatid ng mga benepisyo sa kalusugan. Ilan sa mga sangkap na ito ay ang gingerol, shogaol, at zingerone. Ang mga sangkap na ito ay maaaring makatulong sa pagbabawas ng pamamaga, pagpapabuti ng digestion, at pagpapagaan ng pagduduwal. Bukod pa rito, pinag-aaralan ang luya para sa potensyal nito na pababain ang antas ng asukal sa dugo at pagbutihin ang kalusugan ng puso.",
 			"patterns": [
 				"Paano maghanda ng Luya para sa pananakit ng tiyan?",

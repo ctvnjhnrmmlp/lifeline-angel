@@ -2,7 +2,7 @@
 	"intents": [
 		{
 			"tag": "Not related to first aid",
-			"type": "Message",
+			"type": "message",
 			"meaning": [
 				"Thank you for sharing! Just a note that this query isn't directly related to first aid. Let me know if there's anything specific you'd like to discuss.",
 				"I appreciate your input! Please be advised that the query doesn't seem connected to first aid. If you need assistance on any other topic, just reach out.",
@@ -161,7 +161,7 @@
 		},
 		{
 			"tag": "Hindi konektado sa first aid",
-			"type": "Message",
+			"type": "message",
 			"meaning": [
 				"Salamat po sa inyong pagbabahagi! Paalala lamang na ang query na ito ay hindi po direktang kaugnay ng first aid. Kung may partikular po kayong gustong pag-usapan, ipaalam lang po.",
 				"Maraming salamat po sa inyong input! Paumanhin po, ngunit ang query ay tila walang kaugnayan sa first aid. Kung may iba po kayong tanong, nandito lang po ako para tumulong.",
@@ -228,7 +228,7 @@
 		},
 		{
 			"tag": "Not in datasets",
-			"type": "Message",
+			"type": "message",
 			"meaning": [
 				"I apologize, but the query you submitted is not included in the dataset. Please let me know if there is anything else I can assist you with.",
 				"Thank you for your inquiry! However, it seems that the information you are looking for is not present in the dataset. I'm here to help if you need further assistance.",
@@ -443,7 +443,7 @@
 		},
 		{
 			"tag": "Wala sa datasets",
-			"type": "Message",
+			"type": "message",
 			"meaning": [
 				"Paumanhin, ngunit ang katanungan na iyong isinumite ay hindi kasama sa dataset. Mangyaring ipaalam sa akin kung mayroon pa akong maitutulong sa iyo.",
 				"Salamat sa iyong tanong! Subalit, mukhang hindi naroroon ang impormasyong hinahanap mo sa dataset. Nandito ako upang tumulong kung kailangan mo pa ng karagdagang tulong.",
@@ -605,7 +605,7 @@
 		},
 		{
 			"tag": "Greetings",
-			"type": "Message",
+			"type": "message",
 			"meaning": [
 				"Hello! Thank you for visiting.",
 				"How are you? I'm here to help you.",
@@ -712,7 +712,7 @@
 		},
 		{
 			"tag": "Kamusta",
-			"type": "Message",
+			"type": "message",
 			"meaning": [
 				"Hello! Salamat sa pag-bisita.",
 				"Kamusta! Nandito ako para tumulong.",
@@ -822,7 +822,7 @@
 		},
 		{
 			"tag": "Paalam",
-			"type": "Message",
+			"type": "message",
 			"meaning": [
 				"Paalam! Ingat ka at alagaan mo ang iyong sarili!",
 				"Magandang araw! Tandaan, nandito ako kung kailangan mo ng payo sa first aid.",
@@ -859,7 +859,7 @@
 		},
 		{
 			"tag": "Goodbye",
-			"type": "Message",
+			"type": "message",
 			"meaning": [
 				"See you! Stay safe and take care of yourself!",
 				"Have a nice day! Remember, I'm here if you need any first aid advice.",
@@ -896,7 +896,7 @@
 		},
 		{
 			"tag": "Thanks",
-			"type": "Message",
+			"type": "message",
 			"meaning": [
 				"I'm glad to assist!",
 				"Always here to help!",
@@ -928,7 +928,7 @@
 		},
 		{
 			"tag": "Salamat",
-			"type": "Message",
+			"type": "message",
 			"meaning": [
 				"Masaya akong makatulong!",
 				"Nandito lang ako para tumulong!",

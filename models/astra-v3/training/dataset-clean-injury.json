@@ -54,7 +54,7 @@
 		},
 		{
 			"tag": "Cough",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "A cough is a reflex action to clear your airways of mucus, irritants, or foreign particles. It can be caused by colds, flu, allergies, or respiratory infections. Symptoms include a dry or productive cough, chest discomfort, and sometimes a sore throat. Persistent coughing can disrupt daily activities and sleep.",
 			"patterns": [
 				"How to treat a cough?",
@@ -81,7 +81,7 @@
 		},
 		{
 			"tag": "Ubo",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Ang ubo ay isang reflex action upang linisin ang iyong mga daanan ng hangin mula sa plema, irritants, o mga banyagang particle. Maaari itong sanhi ng sipon, trangkaso, alerhiya, o impeksyon sa respiratory system. Ang mga sintomas ay kinabibilangan ng tuyong ubo o may plema, pananakit ng dibdib, at minsan ay pananakit ng lalamunan. Ang tuloy-tuloy na pag-ubo ay maaaring makaabala sa pang-araw-araw na gawain at pagtulog.",
 			"patterns": [
 				"Paano gamutin ang ubo?",
@@ -107,7 +107,7 @@
 		},
 		{
 			"tag": "Abdominal Pain",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Abdominal pain refers to discomfort or other uncomfortable sensations that you feel in your belly area. It can be caused by various factors such as indigestion, gas, constipation, or more serious conditions like appendicitis or gallstones. Symptoms may include cramping, bloating, and sharp or dull pain. Persistent or severe abdominal pain should be evaluated by a healthcare provider.",
 			"patterns": [
 				"How to treat abdominal pain?",
@@ -133,7 +133,7 @@
 		},
 		{
 			"tag": "Abdominal Pain",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Ang pananakit ng tiyan ay tumutukoy sa kakulangan sa ginhawa o iba pang hindi komportableng pakiramdam na nararamdaman mo sa iyong tiyan. Maaari itong sanhi ng iba't ibang salik tulad ng hindi pagkatunaw ng pagkain, hangin, pagtitibi, o mas seryosong kondisyon tulad ng appendicitis o gallstones. Ang mga sintomas ay maaaring kabilang ang paghilab, kabag, at matalim o mapurol na sakit. Ang tuloy-tuloy o matinding pananakit ng tiyan ay dapat suriin ng isang tagapagbigay ng pangangalagang pangkalusugan.",
 			"patterns": [
 				"Paano gamutin ang pananakit ng tiyan?",
@@ -160,7 +160,7 @@
 		},
 		{
 			"tag": "Broken Toe",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "A broken toe occurs when one of the bones in your toe fractures, often due to injury or trauma. Symptoms include pain, swelling, bruising, and difficulty walking. In severe cases, the toe may appear deformed or out of place. It's important to seek medical attention to ensure proper healing and avoid complications.",
 			"patterns": [
 				"How to treat a broken toe?",
@@ -187,7 +187,7 @@
 		},
 		{
 			"tag": "Daliri ng Paa na Nasira",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Ang nabaling daliri sa paa ay nangyayari kapag ang isa sa mga buto sa iyong daliri sa paa ay nabali, kadalasan dahil sa pinsala o trauma. Ang mga sintomas ay kinabibilangan ng sakit, pamamaga, pasa, at kahirapan sa paglakad. Sa malubhang mga kaso, ang daliri sa paa ay maaaring magmukhang deformed o wala sa lugar. Mahalaga ang paghingi ng medikal na tulong upang matiyak ang tamang paggaling at maiwasan ang mga komplikasyon.",
 			"patterns": [
 				"Paano gamutin ang nabaling daliri sa paa?",
@@ -214,7 +214,7 @@
 		},
 		{
 			"tag": "Choking",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Choking occurs when an object blocks the airway, preventing air from reaching the lungs. Symptoms include inability to speak, difficulty breathing, and coughing. Immediate action is required to clear the airway and restore normal breathing. The Heimlich maneuver is a common technique used to dislodge the object.",
 			"patterns": [
 				"What to do if someone is choking?",
@@ -241,7 +241,7 @@
 		},
 		{
 			"tag": "Mabulunan",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Ang pagsakal ay nangyayari kapag ang isang bagay ay humarang sa daanan ng hangin, na pumipigil sa pagpasok ng hangin sa mga baga. Ang mga sintomas ay kinabibilangan ng hindi makapagsalita, hirap sa paghinga, at pag-ubo. Kinakailangan ang agarang aksyon upang maalis ang bara at maibalik ang normal na paghinga. Ang Heimlich maneuver ay isang karaniwang teknik na ginagamit upang alisin ang bagay.",
 			"patterns": [
 				"Paano tulungan ang nasasakal?",
@@ -270,7 +270,7 @@
 		},
 		{
 			"tag": "Diarrhea",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Diarrhea is characterized by frequent, loose, or watery bowel movements. It can be caused by infections, food intolerances, or digestive disorders. Symptoms include abdominal cramps, bloating, and urgency to have a bowel movement. Staying hydrated and avoiding certain foods can help manage symptoms.",
 			"patterns": [
 				"How to treat diarrhea?",
@@ -297,7 +297,7 @@
 		},
 		{
 			"tag": "Pagtatae",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Ang pagtatae ay nailalarawan sa pamamagitan ng madalas, maluwag, o matubig na pagdumi. Maaari itong sanhi ng mga impeksyon, hindi pagtanggap ng pagkain, o mga sakit sa pagtunaw. Ang mga sintomas ay kinabibilangan ng pananakit ng tiyan, kabag, at kagyat na pagdumi. Ang pananatiling hydrated at pag-iwas sa ilang pagkain ay makakatulong sa pamamahala ng mga sintomas.",
 			"patterns": [
 				"Paano gamutin ang pagtatae?",
@@ -324,7 +324,7 @@
 		},
 		{
 			"tag": "Heat Exhaustion",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Heat exhaustion occurs when your body overheats due to prolonged exposure to high temperatures, often combined with dehydration. Symptoms include heavy sweating, weakness, dizziness, nausea, and headache. Immediate treatment is crucial to prevent progression to heat stroke, which is a medical emergency.",
 			"patterns": [
 				"How to treat heat exhaustion?",
@@ -351,7 +351,7 @@
 		},
 		{
 			"tag": "Pagkapagod sa Init",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Ang heat exhaustion ay nangyayari kapag ang iyong katawan ay sobrang init dahil sa matagal na pagkakalantad sa mataas na temperatura, kadalasang sinasabayan ng dehydration. Ang mga sintomas ay kinabibilangan ng labis na pagpapawis, panghihina, pagkahilo, pagduduwal, at sakit ng ulo. Ang agarang paggamot ay mahalaga upang maiwasan ang paglala sa heat stroke, na isang medikal na emerhensiya.",
 			"patterns": [
 				"Paano gamutin ang heat exhaustion?",
@@ -378,7 +378,7 @@
 		},
 		{
 			"tag": "Heat Stroke",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Heat stroke is a severe heat-related illness that occurs when the body overheats and cannot cool down. Symptoms include high body temperature, altered mental state, nausea, and rapid breathing. Immediate medical attention is crucial to prevent serious complications or death.",
 			"patterns": [
 				"What to do for heat stroke?",
@@ -409,7 +409,7 @@
 		},
 		{
 			"tag": "Heat Stroke",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Ang heat stroke ay isang malubhang sakit na dulot ng sobrang init na nangyayari kapag ang katawan ay sobrang init at hindi na kayang magpalamig. Ang mga sintomas ay kinabibilangan ng mataas na temperatura ng katawan, pagbabago sa mental na estado, pagduduwal, at mabilis na paghinga. Ang agarang medikal na atensyon ay mahalaga upang maiwasan ang malubhang komplikasyon o kamatayan.",
 			"patterns": [
 				"Paano gamutin ang heat stroke?",
@@ -436,7 +436,7 @@
 		},
 		{
 			"tag": "Nose Bleed",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "A nosebleed occurs when the blood vessels in the nose break, causing blood to flow from one or both nostrils. It can be caused by dry air, injury, allergies, or other factors. Symptoms include bleeding from the nose, which can range from light to heavy. Proper first aid can help stop the bleeding and prevent complications.",
 			"patterns": [
 				"How to stop a nosebleed?",
@@ -463,7 +463,7 @@
 		},
 		{
 			"tag": "Dumudugo sa Ilong",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Ang pagdurugo ng ilong ay nangyayari kapag ang mga daluyan ng dugo sa ilong ay nabasag, na nagiging sanhi ng pagdaloy ng dugo mula sa isa o parehong butas ng ilong. Maaari itong sanhi ng tuyong hangin, pinsala, alerhiya, o iba pang mga salik. Ang mga sintomas ay kinabibilangan ng pagdurugo mula sa ilong, na maaaring magaan o mabigat. Ang tamang first aid ay makakatulong upang itigil ang pagdurugo at maiwasan ang mga komplikasyon.",
 			"patterns": [
 				"Paano itigil ang pagdurugo ng ilong?",
@@ -494,7 +494,7 @@
 		},
 		{
 			"tag": "Rectal Bleeding",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Rectal bleeding refers to any blood that passes from your anus. It can be caused by various conditions such as hemorrhoids, anal fissures, or more serious issues like colorectal cancer. Symptoms may include bright red blood on toilet paper, in the toilet bowl, or mixed with stool. It's important to seek medical evaluation to determine the cause and appropriate treatment.",
 			"patterns": [
 				"What to do if I have rectal bleeding?",
@@ -521,7 +521,7 @@
 		},
 		{
 			"tag": "Pagdurugo ng Tumbong",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": " Ang pagdurugo sa puwit ay tumutukoy sa anumang dugo na lumalabas mula sa iyong puwit. Maaari itong sanhi ng iba't ibang kondisyon tulad ng almoranas, anal fissures, o mas seryosong mga isyu tulad ng colorectal cancer. Ang mga sintomas ay maaaring kabilang ang maliwanag na pulang dugo sa toilet paper, sa toilet bowl, o halo sa dumi. Mahalaga ang paghingi ng medikal na pagsusuri upang matukoy ang sanhi at angkop na paggamot.",
 			"patterns": [
 				"Ano ang gagawin kung may pagdurugo sa puwit?",
@@ -548,7 +548,7 @@
 		},
 		{
 			"tag": "Testicle Pain",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Testicle pain refers to discomfort or pain in one or both testicles. It can be caused by various factors such as injury, infection, or medical conditions like testicular torsion. Symptoms may include swelling, redness, and tenderness. Persistent or severe testicle pain should be evaluated by a healthcare provider.",
 			"patterns": [
 				"What to do if I have testicle pain?",
@@ -575,7 +575,7 @@
 		},
 		{
 			"tag": "Pananakit ng Testicle",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Ang sakit sa bayag ay tumutukoy sa kakulangan sa ginhawa o sakit sa isa o parehong bayag. Maaari itong sanhi ng iba't ibang salik tulad ng pinsala, impeksyon, o mga kondisyong medikal tulad ng testicular torsion. Ang mga sintomas ay maaaring kabilang ang pamamaga, pamumula, at pagiging malambot. Ang tuloy-tuloy o matinding sakit sa bayag ay dapat suriin ng isang tagapagbigay ng pangangalagang pangkalusugan.",
 			"patterns": [
 				"Ano ang gagawin kung may sakit sa bayag?",
@@ -602,7 +602,7 @@
 		},
 		{
 			"tag": "Vertigo",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Vertigo is a sensation of feeling off balance, often described as feeling like you or your surroundings are spinning. It can be caused by inner ear problems, infections, or other medical conditions. Symptoms include dizziness, nausea, and difficulty maintaining balance. Managing vertigo involves addressing the underlying cause and using techniques to reduce symptoms.",
 			"patterns": [
 				"What to do if I have vertigo?",
@@ -629,7 +629,7 @@
 		},
 		{
 			"tag": "Vertigo",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Ang vertigo ay isang pakiramdam ng kawalan ng balanse, madalas na inilarawan bilang pakiramdam na ikaw o ang iyong paligid ay umiikot. Maaari itong sanhi ng mga problema sa loob ng tainga, impeksyon, o iba pang mga kondisyong medikal. Ang mga sintomas ay kinabibilangan ng pagkahilo, pagduduwal, at kahirapan sa pagpapanatili ng balanse. Ang pamamahala ng vertigo ay kinabibilangan ng pagtugon sa pinagbabatayang sanhi at paggamit ng mga teknik upang mabawasan ang mga sintomas.",
 			"patterns": [
 				"Ano ang gagawin kung may vertigo?",
@@ -655,8 +655,8 @@
 			"context_set": ""
 		},
 		{
-			"tag": "Eye Injury",
-			"type": "Injury",
+			"tag": "Eye injury",
+			"type": "injury",
 			"meaning": "An eye injury can occur due to various reasons such as trauma, foreign objects, or chemical exposure. Symptoms may include pain, redness, swelling, and vision changes. Immediate and appropriate first aid can help prevent further damage and complications.",
 			"patterns": [
 				"What to do if I have an eye injury?",
@@ -683,7 +683,7 @@
 		},
 		{
 			"tag": "Pinsala sa Mata",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Ang pinsala sa mata ay maaaring mangyari dahil sa iba't ibang dahilan tulad ng trauma, banyagang bagay, o pagkakalantad sa kemikal. Ang mga sintomas ay maaaring kabilang ang sakit, pamumula, pamamaga, at pagbabago sa paningin. Ang agarang at angkop na first aid ay makakatulong upang maiwasan ang karagdagang pinsala at komplikasyon.",
 			"patterns": [
 				"Ano ang gagawin kung may pinsala sa mata?",
@@ -710,7 +710,7 @@
 		},
 		{
 			"tag": "Food Poisoning",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Food poisoning is an illness caused by consuming contaminated food or drink. Symptoms include nausea, vomiting, diarrhea, and abdominal pain. It is important to stay hydrated and rest while recovering.",
 			"patterns": [
 				"How to treat food poisoning?",
@@ -737,7 +737,7 @@
 		},
 		{
 			"tag": "Pagkalason sa Pagkain",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Ang food poisoning ay isang sakit na dulot ng pagkain o pag-inom ng kontaminadong pagkain o inumin. Ang mga sintomas ay kinabibilangan ng pagduduwal, pagsusuka, pagtatae, at pananakit ng tiyan. Mahalaga ang pananatiling hydrated at magpahinga habang nagpapagaling.",
 			"patterns": [
 				"Paano gamutin ang food poisoning?",
@@ -764,7 +764,7 @@
 		},
 		{
 			"tag": "Convulsion",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Convulsions, also known as seizures, are sudden, uncontrolled electrical disturbances in the brain. They can cause changes in behavior, movements, feelings, and levels of consciousness. Immediate first aid is crucial to protect the person from injury and ensure they receive appropriate medical care.",
 			"patterns": [
 				"What to do during convulsions?",
@@ -791,7 +791,7 @@
 		},
 		{
 			"tag": "Kombulsyon",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Ang convulsions, na kilala rin bilang seizures, ay biglaang, hindi makontrol na mga kaguluhan sa kuryente sa utak. Maaari itong magdulot ng mga pagbabago sa pag-uugali, galaw, pakiramdam, at antas ng kamalayan. Ang agarang first aid ay mahalaga upang protektahan ang tao mula sa pinsala at matiyak na makakatanggap sila ng angkop na medikal na pangangalaga.",
 			"patterns": [
 				"Ano ang gagawin sa panahon ng convulsions?",
@@ -817,8 +817,8 @@
 			"context_set": ""
 		},
 		{
-			"tag": "Head Injury",
-			"type": "Injury",
+			"tag": "Head injury",
+			"type": "injury",
 			"meaning": "A head injury can result from various causes such as falls, accidents, or sports injuries. Symptoms may include headache, dizziness, confusion, and nausea. Immediate and appropriate first aid can help prevent further complications.",
 			"patterns": [
 				"What to do for a head injury?",
@@ -845,7 +845,7 @@
 		},
 		{
 			"tag": "Pinsala sa Ulo",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Ang pinsala sa ulo ay maaaring sanhi ng iba't ibang dahilan tulad ng pagkahulog, aksidente, o pinsala sa sports. Ang mga sintomas ay maaaring kabilang ang sakit ng ulo, pagkahilo, pagkalito, at pagduduwal. Ang agarang at angkop na first aid ay makakatulong upang maiwasan ang karagdagang komplikasyon.",
 			"patterns": [
 				"Ano ang gagawin kung may pinsala sa ulo?",
@@ -872,7 +872,7 @@
 		},
 		{
 			"tag": "Fainting",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Fainting, also known as syncope, can occur due to various reasons such as dehydration, low blood pressure, or sudden changes in posture. Symptoms may include dizziness, lightheadedness, and temporary loss of consciousness. Immediate first aid can help prevent further complications. ",
 			"patterns": [
 				"What to do if someone faints?",
@@ -894,7 +894,7 @@
 		},
 		{
 			"tag": "Nanghihina",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Ang paghimatay, na kilala rin bilang syncope, ay maaaring mangyari dahil sa iba't ibang dahilan tulad ng dehydration, mababang presyon ng dugo, o biglaang pagbabago ng postura. Ang mga sintomas ay maaaring kabilang ang pagkahilo, pagkakaroon ng magaan na ulo, at pansamantalang pagkawala ng malay. Ang agarang first aid ay makakatulong upang maiwasan ang karagdagang komplikasyon.",
 			"patterns": [
 				"Ano ang gagawin kung may hinimatay?",
@@ -926,7 +926,7 @@
 		},
 		{
 			"tag": "Headache",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Headaches can be caused by various factors such as stress, dehydration, or tension. Symptoms may include a dull or sharp pain in the head, sensitivity to light or sound, and nausea. Proper management and treatment can help alleviate the discomfort.",
 			"patterns": [
 				"How to treat a headache?",
@@ -953,7 +953,7 @@
 		},
 		{
 			"tag": "Sakit ng Ulo",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Ang sakit ng ulo ay maaaring sanhi ng iba't ibang salik tulad ng stress, dehydration, o tensyon. Ang mga sintomas ay maaaring kabilang ang mapurol o matalim na sakit sa ulo, pagiging sensitibo sa liwanag o tunog, at pagduduwal. Ang tamang pamamahala at paggamot ay makakatulong upang maibsan ang kakulangan sa ginhawa.",
 			"patterns": [
 				"Ano ang gagawin para sa sakit ng ulo?",
@@ -980,7 +980,7 @@
 		},
 		{
 			"tag": "Cold",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "The common cold is a viral infection that affects the upper respiratory tract. Symptoms may include a runny or stuffy nose, sore throat, cough, congestion, and mild body aches. Proper care and treatment can help alleviate symptoms and speed up recovery.                                ",
 			"patterns": [
 				"How to treat a cold?",
@@ -1013,7 +1013,7 @@
 		},
 		{
 			"tag": "Sipon",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Ang sipon ay isang viral infection na nakakaapekto sa upper respiratory tract. Ang mga sintomas ay maaaring kabilang ang sipon o baradong ilong, sore throat, ubo, congestion, at bahagyang pananakit ng katawan. Ang tamang pangangalaga at paggamot ay makakatulong upang maibsan ang mga sintomas at mapabilis ang paggaling.",
 			"patterns": [
 				"Ano ang gagawin para sa sipon?",
@@ -1045,7 +1045,7 @@
 		},
 		{
 			"tag": "Drowning",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Drowning occurs when a person is submerged in water and unable to breathe. Symptoms may include difficulty breathing, coughing, and unconsciousness. Immediate and appropriate rescue and first aid can save lives and prevent further complications.",
 			"patterns": [
 				"What to do if someone is drowning?",
@@ -1072,7 +1072,7 @@
 		},
 		{
 			"tag": "Nalulunod",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Ang pagkalunod ay nangyayari kapag ang isang tao ay nalulubog sa tubig at hindi makakahinga. Ang mga sintomas ay maaaring kabilang ang kahirapan sa paghinga, pag-ubo, at pagkawala ng malay. Ang agarang at angkop na pagligtas at first aid ay makakapagligtas ng buhay at makakaiwas sa karagdagang komplikasyon.",
 			"patterns": [
 				"Ano ang gagawin kung may nalulunod?",
@@ -1099,7 +1099,7 @@
 		},
 		{
 			"tag": "Chest Pain",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Chest pain can be caused by various factors such as heart problems, lung issues, or digestive disorders. Symptoms may include a sharp, dull, or burning sensation in the chest, shortness of breath, and dizziness. Immediate and appropriate action can help prevent serious complications.",
 			"patterns": [
 				"What to do for chest pain?",
@@ -1126,7 +1126,7 @@
 		},
 		{
 			"tag": "Pananakit ng dibdib",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Ang pananakit ng dibdib ay maaaring sanhi ng iba't ibang salik tulad ng problema sa puso, isyu sa baga, o mga sakit sa pagtunaw. Ang mga sintomas ay maaaring kabilang ang matalim, mapurol, o nasusunog na pakiramdam sa dibdib, hirap sa paghinga, at pagkahilo. Ang agarang at angkop na aksyon ay makakatulong upang maiwasan ang seryosong komplikasyon.",
 			"patterns": [
 				"Ano ang gagawin para sa pananakit ng dibdib?",
@@ -1153,7 +1153,7 @@
 		},
 		{
 			"tag": "Dehydration",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Dehydration occurs when the body loses more fluids than it takes in, leading to an imbalance. Symptoms may include dry mouth, thirst, dark urine, dizziness, and fatigue. Proper hydration and timely treatment can help restore fluid balance and prevent complications.",
 			"patterns": [
 				"How to treat dehydration?",
@@ -1180,7 +1180,7 @@
 		},
 		{
 			"tag": "Dehydration",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Ang dehydration ay nangyayari kapag ang katawan ay nawawalan ng mas maraming likido kaysa sa tinatanggap, na nagdudulot ng kawalan ng balanse. Ang mga sintomas ay maaaring kabilang ang tuyong bibig, uhaw, madilim na ihi, pagkahilo, at pagkapagod. Ang tamang hydration at agarang paggamot ay makakatulong upang maibalik ang balanse ng likido at maiwasan ang komplikasyon.",
 			"patterns": [
 				"Ano ang gagawin para sa dehydration?",
@@ -1207,7 +1207,7 @@
 		},
 		{
 			"tag": "Cut",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Cuts are injuries caused by a sharp object that breaks the skin. They can range from minor to severe, depending on the depth and location of the cut. Common causes of cuts include: Accidents: Slips, falls, or other accidents can lead to cuts. Sharp objects: Knives, scissors, broken glass, and other sharp objects can cause cuts.",
 			"patterns": [
 				"What to do if I have a cut?",
@@ -1233,7 +1233,7 @@
 		},
 		{
 			"tag": "Hiwa",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Hiwa ay mga pinsala na dulot ng isang matalim na bagay na pumuputol sa balat. Maaari silang mag-iba mula sa menor de edad hanggang malubha, depende sa lalim at lokasyon ng hiwa. Ang mga karaniwang sanhi ng hiwa ay kinabibilangan ng: Aksidente: Ang mga pagdulas, pagkahulog, o iba pang aksidente ay maaaring humantong sa mga hiwa. Matatalim na bagay: Ang mga kutsilyo, gunting, sirang baso, at iba pang matatalim na bagay ay maaaring magdulot ng mga hiwa.",
 			"patterns": [
 				"Paano gamutin ang hiwa?",

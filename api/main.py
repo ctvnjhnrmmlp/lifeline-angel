@@ -27,7 +27,7 @@ app = FastAPI()
 # Initialize the lemmatizer
 lemmatizer = WordNetLemmatizer()
 
-CONFIDENCE_THRESHOLD = 0.8
+CONFIDENCE_THRESHOLD = 0.7
 
 # Load intents JSON file
 try:

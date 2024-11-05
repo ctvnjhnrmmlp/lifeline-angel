@@ -104,9 +104,9 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 		if (typeof message.content === 'object') {
 			if (
 				// @ts-expect-error: must be corrected properly
-				message.content.type === 'injury' ||
+				message.content.type === 'Injury' ||
 				// @ts-expect-error: must be corrected properly
-				message.content.type === 'treatment'
+				message.content.type === 'Treatment'
 			) {
 				// @ts-expect-error: must be corrected properly
 				const proceduresArr = message.content.procedures[0]
@@ -140,7 +140,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 			}
 
 			// @ts-expect-error: must be corrected properly
-			if (message.content.type === 'out') {
+			if (message.content.type === 'Out') {
 				// @ts-expect-error: must be corrected properly
 				setMeaning(message.content.meaning);
 				setProcedures([]);
@@ -150,6 +150,12 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 		}
 	}, []);
 
+	console.log(message.content);
+	console.log(meaning);
+	console.log(procedures);
+	console.log(relations);
+	console.log(references);
+
 	return (
 		<div className='flex flex-col space-y-2'>
 			{typeof message.content === 'object' && (
@@ -158,65 +164,78 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 						ref={messageRef}
 						className='flex flex-col space-y-6 cursor-pointer p-4'
 					>
-						<div className='space-y-2'>
-							<p className='text-xl font-bold text-background tracking-tight text-ellipsis'>
-								Meaning
-							</p>
-							<p className='text-lg text-background tracking-tight text-ellipsis'>
-								{meaning}
-							</p>
-						</div>
-						<div className='space-y-2'>
-							<p className='text-xl font-bold text-background tracking-tight text-ellipsis'>
-								Procedures
-							</p>
-							<div className='flex flex-col space-y-1'>
-								{procedures?.map((procedure) => (
-									<p
-										key={procedure}
-										className='text-lg text-background tracking-tight text-ellipsis'
-									>
-										{procedure}
-									</p>
-								))}
+						{meaning.length <= 0 && (
+							<div className='space-y-2'>
+								<p className='text-xl font-bold text-background tracking-tight text-ellipsis'>
+									Meaning
+								</p>
+								<p className='text-lg text-background tracking-tight text-ellipsis'>
+									{meaning}
+								</p>
 							</div>
-						</div>
-						<div className='space-y-2'>
-							<p className='text-xl font-bold text-background tracking-tight text-ellipsis'>
-								References
-							</p>
-							<div className='flex flex-col space-y-1'>
-								{references?.map((reference) => (
-									<Link
-										key={reference}
-										href={reference}
-										target='_blank'
-										className='text-lg text-background tracking-tight text-ellipsis underline'
-									>
-										{reference}
-									</Link>
-								))}
+						)}
+
+						{/* @ts-ignore */}
+						{procedures?.length <= 0 && (
+							<div className='space-y-2'>
+								<p className='text-xl font-bold text-background tracking-tight text-ellipsis'>
+									Procedures
+								</p>
+								<div className='flex flex-col space-y-1'>
+									{procedures?.map((procedure) => (
+										<p
+											key={procedure}
+											className='text-lg text-background tracking-tight text-ellipsis'
+										>
+											{procedure}
+										</p>
+									))}
+								</div>
 							</div>
-						</div>
-						<div className='space-y-2'>
-							<p className='text-xl font-bold text-background tracking-tight text-ellipsis'>
-								Relations
-							</p>
-							<div className='flex flex-wrap gap-2'>
-								{relations?.map((relation) => (
-									<button
-										key={relation}
-										className='text-lg py-2 px-5 outline outline-1 outline-zinc-800 dark:outline-zinc-200 hover:bg-zinc-800 dark:hover:bg-zinc-200 rounded-3xl font-bold tracking-tight text-background'
-										onClick={() => {
-											handleAddMessage(relation);
-											handleUpdateConversation(relation);
-										}}
-									>
-										{relation}
-									</button>
-								))}
+						)}
+
+						{/* @ts-ignore */}
+						{references?.length <= 0 && (
+							<div className='space-y-2'>
+								<p className='text-xl font-bold text-background tracking-tight text-ellipsis'>
+									References
+								</p>
+								<div className='flex flex-col space-y-1'>
+									{references?.map((reference) => (
+										<Link
+											key={reference}
+											href={reference}
+											target='_blank'
+											className='text-lg text-background tracking-tight text-ellipsis underline'
+										>
+											{reference}
+										</Link>
+									))}
+								</div>
 							</div>
-						</div>
+						)}
+
+						{relations?.length && (
+							<div className='space-y-2'>
+								<p className='text-xl font-bold text-background tracking-tight text-ellipsis'>
+									Relations
+								</p>
+								<div className='flex flex-wrap gap-2'>
+									{relations?.map((relation) => (
+										<button
+											key={relation}
+											className='text-lg py-2 px-5 outline outline-1 outline-zinc-800 dark:outline-zinc-200 hover:bg-zinc-800 dark:hover:bg-zinc-200 rounded-3xl font-bold tracking-tight text-background'
+											onClick={() => {
+												handleAddMessage(relation);
+												handleUpdateConversation(relation);
+											}}
+										>
+											{relation}
+										</button>
+									))}
+								</div>
+							</div>
+						)}
 					</div>
 				</div>
 			)}
