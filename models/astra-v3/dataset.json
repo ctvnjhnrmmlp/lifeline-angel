@@ -155,7 +155,7 @@
 			],
 			"procedures": [
 				"Magpahinga at iwasan ang mabibigat na pagkain. Uminom ng malinaw na likido at maglagay ng mainit na compress sa tiyan. Ang mga over-the-counter na antacids o pain relievers ay maaaring makatulong. Kung ang sakit ay malubha o nagpapatuloy, humingi ng medikal na tulong.",
-				"",
+
 				"Magpahinga at manatiling hydrated. Gumamit ng mainit na compress at uminom ng gamot para sa sakit kung kinakailangan. Magpakonsulta sa healthcare provider kung ang sakit ay nagpapatuloy."
 			],
 			"relations": ["Tsaang Gubat", "Luya", "Tanglad"],
@@ -168,7 +168,7 @@
 		{
 			"tag": "Broken toe",
 			"type": "injury",
-			"meaning": "A broken toe occurs when one of the bones in your toe fractures, often due to injury or trauma. Symptoms include pain, swelling, bruising, and difficulty walking. In severe cases, the toe may appear deformed or out of place. It's important to seek medical attention to ensure proper healing and avoid complications.\", \"fil\": \"Ang nabaling daliri sa paa ay nangyayari kapag ang isa sa mga buto sa iyong daliri sa paa ay nabali, kadalasan dahil sa pinsala o trauma. Ang mga sintomas ay kinabibilangan ng sakit, pamamaga, pasa, at kahirapan sa paglakad. Sa malubhang mga kaso, ang daliri sa paa ay maaaring magmukhang deformed o wala sa lugar. Mahalaga ang paghingi ng medikal na tulong upang matiyak ang tamang paggaling at maiwasan ang mga komplikasyon.",
+			"meaning": "A broken toe occurs when one of the bones in your toe fractures, often due to injury or trauma. Symptoms include pain, swelling, bruising, and difficulty walking. In severe cases, the toe may appear deformed or out of place. It's important to seek medical attention to ensure proper healing and avoid complications. \"fil\": \"Ang nabaling daliri sa paa ay nangyayari kapag ang isa sa mga buto sa iyong daliri sa paa ay nabali, kadalasan dahil sa pinsala o trauma. Ang mga sintomas ay kinabibilangan ng sakit, pamamaga, pasa, at kahirapan sa paglakad. Sa malubhang mga kaso, ang daliri sa paa ay maaaring magmukhang deformed o wala sa lugar. Mahalaga ang paghingi ng medikal na tulong upang matiyak ang tamang paggaling at maiwasan ang mga komplikasyon.",
 			"patterns": [
 				"Broken toe",
 				"How to treat a broken toe?",
@@ -184,7 +184,7 @@
 			],
 			"procedures": [
 				"Rest and avoid putting weight on the toe. Apply ice to reduce swelling and elevate the foot. Use a splint or buddy tape the toe to the adjacent one. Seek medical attention if the pain is severe.",
-				"",
+
 				"Elevate the foot, apply ice, and tape the toe to the next one. Consult a healthcare provider if necessary.', 'fil': 'Itaas ang paa, maglagay ng yelo, at i-tape ang daliri sa katabing daliri."
 			],
 			"relations": ["Lagundi", "Sambong", "Forrest Tea"],
@@ -213,7 +213,7 @@
 			],
 			"procedures": [
 				"Magpahinga at iwasang maglagay ng bigat sa daliri sa paa. Maglagay ng yelo upang mabawasan ang pamamaga at itaas ang paa. Gumamit ng splint o i-tape ang daliri sa paa sa katabing daliri. Humingi ng medikal na tulong kung ang sakit ay malubha.",
-				"",
+
 				"Itaas ang paa, maglagay ng yelo, at i-tape ang daliri sa katabing daliri. Magpakonsulta sa healthcare provider kung kinakailangan."
 			],
 			"relations": ["Lagundi", "Sambong", "Tsaang Gubat"],
@@ -242,7 +242,7 @@
 			],
 			"procedures": [
 				"If someone is choking, ask if they can speak or cough. If they cannot, perform the Heimlich maneuver by standing behind them, wrapping your arms around their waist, and giving quick, upward thrusts below their ribcage.",
-				"",
+
 				"Perform the Heimlich maneuver or back blows to dislodge the object. Call emergency services if the person cannot breathe.', 'fil': 'Isagawa ang Heimlich maneuver o back blows upang alisin ang bagay."
 			],
 			"relations": ["nan"],
@@ -271,11 +271,11 @@
 			],
 			"procedures": [
 				"Kung ang isang tao ay nasasakal, tanungin kung sila ay makapagsalita o makakaugong. Kung hindi nila magawa, isagawa ang Heimlich maneuver sa pamamagitan ng pagtayo sa likuran nila, pagyakap sa kanilang baywang, at pagbibigay ng mabilis at pataas na puwersa sa ilalim ng kanilang ribcage. Tumawag agad ng emergency services.",
-				"",
+
 				"Isagawa ang Heimlich maneuver o back blows upang alisin ang bagay. Tumawag ng emergency services kung ang tao ay hindi makakahinga.",
-				"",
+
 				"Kung ang tao ay hindi makapagsalita, makakaugong, o makahinga, isagawa ang Heimlich maneuver: Tumayo sa likuran ng tao, ilagay ang iyong mga braso sa kanilang baywang, gumawa ng kamao gamit ang isang kamay, ilagay ito sa itaas ng kanilang pusod, at bigyan ng mabilis, pataas na puwersa. Kung ang tao ay mawalan ng malay, simulan ang CPR at tumawag ng emergency services.",
-				"",
+
 				"Isagawa ang Heimlich maneuver sa pamamagitan ng pagtayo sa likuran ng tao at pagbibigay ng mabilis, pataas na abdominal thrusts. Tumawag ng emergency services kung kinakailangan."
 			],
 			"relations": ["nan"],
@@ -304,7 +304,7 @@
 			],
 			"procedures": [
 				"Stay hydrated by drinking plenty of fluids like water or an oral rehydration solution. Avoid solid foods until the symptoms improve. Over-the-counter anti-diarrheal medications can be used, but consult a healthcare provider if symptoms persist.",
-				"",
+
 				"Drink fluids, avoid solid food, and consider over-the-counter medications. Seek medical help if symptoms persist."
 			],
 			"relations": ["Forrest Tea", "Buko Water", "Lagundi"],
@@ -333,7 +333,7 @@
 			],
 			"procedures": [
 				"Manatiling hydrated sa pamamagitan ng pag-inom ng maraming likido tulad ng tubig o oral rehydration solution. Iwasan ang solidong pagkain hanggang sa bumuti ang mga sintomas. Maaaring gumamit ng over-the-counter na anti-diarrheal medications, ngunit magpakonsulta sa healthcare provider kung ang mga sintomas ay nagpapatuloy.",
-				"",
+
 				"Uminom ng likido, iwasan ang solidong pagkain, at isaalang-alang ang paggamit ng over-the-counter na mga gamot. Humingi ng medikal na tulong kung ang mga sintomas ay nagpapatuloy."
 			],
 			"relations": ["Tsaang Gubat", "Lagundi", "Katas ng Buko"],
@@ -362,7 +362,7 @@
 			],
 			"procedures": [
 				"Move to a cool, shaded area and drink plenty of water. Loosen or remove clothing and apply cool, wet cloths to the skin. Rest until fully recovered. If symptoms worsen, seek medical help.",
-				"",
+
 				"Cool down, hydrate, and rest in a shaded area. Seek medical attention if symptoms do not improve."
 			],
 			"relations": ["Buko Water", "Lemongrass"],
@@ -391,7 +391,7 @@
 			],
 			"procedures": [
 				"Lumipat sa isang malamig at may anino na lugar at uminom ng maraming tubig. Alisin o luwagan ang damit at maglagay ng malamig, basang tela sa balat. Magpahinga hanggang sa ganap na mag-recover. Kung lumalala ang mga sintomas, humingi ng medikal na tulong.",
-				"",
+
 				"Palamigin ang katawan, manatiling hydrated, at magpahinga sa isang lugar na may anino. Humingi ng medikal na atensyon kung ang mga sintomas ay hindi bumubuti."
 			],
 			"relations": ["Katas ng Buko", "Tanglad"],
@@ -422,11 +422,11 @@
 			],
 			"procedures": [
 				"Move to a cooler place and lie down with your legs slightly elevated. Apply cool water to your skin and use a fan to help with cooling. Drink cool water or an electrolyte drink, but avoid sugary or alcoholic beverages. Seek emergency medical attention immediately.",
-				"",
+
 				"Get to a cool place, remove excess clothing, and apply cold packs or wet cloths. Drink cool water or sports drinks, and seek immediate medical help.",
-				"",
+
 				"Call emergency services immediately. Move the person to a cool area and remove excess clothing. Use cool water or ice packs to lower their body temperature. Keep monitoring their condition until help arrives.",
-				"",
+
 				"Seek emergency medical help. Cool the person down with water or ice packs and stay with them until help arrives."
 			],
 			"relations": ["Buko Water", "Tanglad"],
@@ -453,11 +453,11 @@
 			],
 			"procedures": [
 				"Lumipat sa isang mas malamig na lugar at humiga na may bahagyang itaas ang mga binti. Maglagay ng malamig na tubig sa iyong balat at gumamit ng pamaypay upang makatulong sa pagpapalamig. Uminom ng malamig na tubig o electrolyte drink, ngunit iwasan ang matatamis o alcoholic na inumin. Humingi ng agarang medikal na tulong.",
-				"",
+
 				"Pumunta sa isang malamig na lugar, alisin ang sobrang damit, at maglagay ng cold packs o basang tela. Uminom ng malamig na tubig o sports drinks, at humingi ng agarang medikal na tulong.",
-				"",
+
 				"Tumawag agad ng emergency services. Ilipat ang tao sa isang malamig na lugar at alisin ang sobrang damit. Gumamit ng malamig na tubig o ice packs upang ibaba ang kanilang temperatura ng katawan. Patuloy na bantayan ang kanilang kondisyon hanggang dumating ang tulong.",
-				"",
+
 				"Humingi ng agarang medikal na tulong. Palamigin ang tao gamit ang tubig o ice packs at manatili sa kanilang tabi hanggang dumating ang tulong.",
 				""
 			],
@@ -485,11 +485,11 @@
 			],
 			"procedures": [
 				"Sit up straight and lean slightly forward. Pinch the soft part of your nose and hold for 10-15 minutes. Apply a cold compress to the bridge of the nose. If the bleeding continues for more than 20 minutes, seek medical attention.",
-				"",
+
 				"Lean forward, pinch your nose, and hold until the bleeding stops. Use a cold compress and seek medical help if the bleeding doesn't stop.",
-				"",
+
 				"Sit up straight and lean forward slightly. Pinch the soft part of your nose with your thumb and index finger for 10-15 minutes. Breathe through your mouth and avoid lying down. Apply a cold compress to the bridge of your nose. Seek medical help if the bleeding doesn't stop after 20 minutes.",
-				"",
+
 				"Tilt your head forward and pinch your nose just below the bridge. Hold for 10-15 minutes and avoid blowing your nose afterward."
 			],
 			"relations": ["Guava Leaves", "Lagundi", "Sambong", "Forest Tea"],
@@ -520,11 +520,11 @@
 			],
 			"procedures": [
 				"Umupo ng tuwid at magyuko ng bahagya pasulong. Pisilin ang malambot na bahagi ng iyong ilong at hawakan ito ng 10-15 minuto. Maglagay ng malamig na compress sa tulay ng ilong. Kung ang pagdurugo ay magpapatuloy ng higit sa 20 minuto, humingi ng medikal na tulong.",
-				"",
+
 				"Yuko pasulong, pisilin ang iyong ilong, at hawakan hanggang sa tumigil ang pagdurugo. Gumamit ng malamig na compress at humingi ng medikal na tulong kung ang pagdurugo ay hindi tumitigil.",
-				"",
+
 				"Umupo ng tuwid at magyuko ng bahagya pasulong. Pisilin ang malambot na bahagi ng iyong ilong gamit ang iyong hinlalaki at hintuturo ng 10-15 minuto. Huminga sa pamamagitan ng iyong bibig at iwasang humiga. Maglagay ng malamig na compress sa tulay ng iyong ilong. Humingi ng medikal na tulong kung ang pagdurugo ay hindi tumitigil pagkatapos ng 20 minuto.",
-				"",
+
 				"Itilt ang iyong ulo pasulong at pisilin ang iyong ilong sa ilalim ng tulay. Hawakan ito ng 10-15 minuto at iwasang sabunin ang iyong ilong pagkatapos."
 			],
 			"relations": ["Dahon ng Bayabas", "Lagundi", "Sambong", "Tsaang Gubat"],
@@ -553,7 +553,7 @@
 			],
 			"procedures": [
 				"Stay calm and avoid straining during bowel movements. Increase fiber intake and drink plenty of water to ease bowel movements. Seek medical attention to determine the cause and receive appropriate treatment.",
-				"",
+
 				"Increase fiber and water intake. Avoid straining and consult a healthcare provider to determine the cause."
 			],
 			"relations": ["nan"],
@@ -583,7 +583,7 @@
 			],
 			"procedures": [
 				"Manatiling kalmado at iwasang mag-igting sa panahon ng pagdumi. Dagdagan ang iyong fiber intake at uminom ng maraming tubig upang mapadali ang pagdumi. Humingi ng medikal na tulong upang matukoy ang sanhi at makatanggap ng angkop na paggamot.",
-				"",
+
 				"Dagdagan ang fiber at water intake. Iwasan ang pag-igting at kumonsulta sa healthcare provider upang matukoy ang sanhi."
 			],
 			"relations": ["nan"],
@@ -597,7 +597,7 @@
 		{
 			"tag": "Testicle pain",
 			"type": "injury",
-			"meaning": "Testicle pain refers to discomfort or pain in one or both testicles. It can be caused by various factors such as injury, infection, or medical conditions like testicular torsion. Symptoms may include swelling, redness, and tenderness. Persistent or severe testicle pain should be evaluated by a healthcare provider.\n                                ",
+			"meaning": "Testicle pain refers to discomfort or pain in one or both testicles. It can be caused by various factors such as injury, infection, or medical conditions like testicular torsion. Symptoms may include swelling, redness, and tenderness. Persistent or severe testicle pain should be evaluated by a healthcare provider.                                ",
 			"patterns": [
 				"Testicle pain",
 				"What to do if I have testicle pain?",
@@ -613,7 +613,7 @@
 			],
 			"procedures": [
 				"Rest and avoid strenuous activity. Apply ice to the affected area and wear supportive underwear. If the pain persists or is severe, seek medical attention.",
-				"",
+
 				"Rest, use ice, and wear supportive clothing. Seek medical advice if the pain is severe or does not improve."
 			],
 			"relations": ["nan"],
@@ -643,7 +643,7 @@
 			],
 			"procedures": [
 				"Magpahinga at iwasan ang mabibigat na aktibidad. Maglagay ng yelo sa apektadong lugar at magsuot ng supportive na underwear. Kung ang sakit ay nagpapatuloy o malubha, humingi ng medikal na tulong.",
-				"",
+
 				"Magpahinga, gumamit ng yelo, at magsuot ng supportive na damit. Humingi ng medikal na payo kung ang sakit ay malubha o hindi bumubuti."
 			],
 			"relations": ["nan"],
@@ -657,7 +657,7 @@
 		{
 			"tag": "Vertigo",
 			"type": "injury",
-			"meaning": "Vertigo is a sensation of feeling off balance, often described as feeling like you or your surroundings are spinning. It can be caused by inner ear problems, infections, or other medical conditions. Symptoms include dizziness, nausea, and difficulty maintaining balance. Managing vertigo involves addressing the underlying cause and using techniques to reduce symptoms.\n\t\t\t\t",
+			"meaning": "Vertigo is a sensation of feeling off balance, often described as feeling like you or your surroundings are spinning. It can be caused by inner ear problems, infections, or other medical conditions. Symptoms include dizziness, nausea, and difficulty maintaining balance. Managing vertigo involves addressing the underlying cause and using techniques to reduce symptoms.",
 			"patterns": [
 				"Vertigo",
 				"What to do if I have vertigo?",
@@ -673,7 +673,7 @@
 			],
 			"procedures": [
 				"Sit or lie down immediately when feeling dizzy. Avoid sudden head movements and rest in a dark, quiet room. Stay hydrated and seek medical advice if symptoms persist.",
-				"",
+
 				"Rest and avoid sudden movements. Stay hydrated and consult a healthcare provider if the symptoms continue."
 			],
 			"relations": ["Ginger", "Ginkgo Biloba", "Lagundi", "Forest Tea"],
@@ -702,7 +702,7 @@
 			],
 			"procedures": [
 				"Umupo o humiga agad kapag nakakaramdam ng pagkahilo. Iwasan ang biglaang paggalaw ng ulo at magpahinga sa isang madilim at tahimik na kwarto. Manatiling hydrated at humingi ng medikal na payo kung ang mga sintomas ay nagpapatuloy.",
-				"",
+
 				"Magpahinga at iwasan ang biglaang paggalaw. Manatiling hydrated at kumonsulta sa healthcare provider kung ang mga sintomas ay nagpapatuloy."
 			],
 			"relations": ["Luya", "Ginkgo Biloba", "Lagundi", "Tsaang Gubat"],
@@ -715,7 +715,7 @@
 		{
 			"tag": "Eye injury",
 			"type": "injury",
-			"meaning": "An eye injury can occur due to various reasons such as trauma, foreign objects, or chemical exposure. Symptoms may include pain, redness, swelling, and vision changes. Immediate and appropriate first aid can help prevent further damage and complications.\",\n\t\t\t\t",
+			"meaning": "An eye injury can occur due to various reasons such as trauma, foreign objects, or chemical exposure. Symptoms may include pain, redness, swelling, and vision changes. Immediate and appropriate first aid can help prevent further damage and complications.",
 			"patterns": [
 				"Eye injury",
 				"What to do if I have an eye injury?",
@@ -731,7 +731,7 @@
 			],
 			"procedures": [
 				"Avoid rubbing the eye and rinse it with clean water. If there is a foreign object in the eye, do not attempt to remove it yourself. Cover the eye with a clean cloth or eye patch and seek medical attention immediately.",
-				"",
+
 				"Rinse the eye with clean water and avoid rubbing it. Seek emergency medical help, especially if there is a foreign object in the eye."
 			],
 			"relations": ["nan"],
@@ -760,7 +760,7 @@
 			],
 			"procedures": [
 				"Iwasan ang pagdila sa mata at banlawan ito ng malinis na tubig. Kung may banyagang bagay sa mata, huwag subukang alisin ito nang mag-isa. Takpan ang mata ng malinis na tela o eye patch at humingi ng agarang medikal na tulong.",
-				"",
+
 				"Banlawan ang mata ng malinis na tubig at iwasan ang pagdila dito. Humingi ng agarang medikal na tulong, lalo na kung may banyagang bagay sa mata."
 			],
 			"relations": ["nan"],
@@ -773,7 +773,7 @@
 		{
 			"tag": "Food poisoning",
 			"type": "injury",
-			"meaning": "Food poisoning is an illness caused by consuming contaminated food or drink. Symptoms include nausea, vomiting, diarrhea, and abdominal pain. It is important to stay hydrated and rest while recovering.\n\t\t\t\n\t\t\t",
+			"meaning": "Food poisoning is an illness caused by consuming contaminated food or drink. Symptoms include nausea, vomiting, diarrhea, and abdominal pain. It is important to stay hydrated and rest while recovering.",
 			"patterns": [
 				"Food poisoning",
 				"How to treat food poisoning?",
@@ -789,7 +789,7 @@
 			],
 			"procedures": [
 				"Stay hydrated by drinking clear fluids like water or oral rehydration solutions. Rest and avoid solid foods until symptoms subside. If symptoms are severe or persistent, seek medical attention.",
-				"",
+
 				"Drink clear fluids, rest, and avoid solid food until symptoms improve. Consult a healthcare provider if symptoms persist."
 			],
 			"relations": ["Ginger", "Guava Leaves", "Sambong", "Buko Water"],
@@ -818,7 +818,7 @@
 			],
 			"procedures": [
 				"Manatiling hydrated sa pamamagitan ng pag-inom ng malinaw na likido tulad ng tubig o oral rehydration solutions. Magpahinga at iwasan ang solidong pagkain hanggang sa humupa ang mga sintomas. Kung ang mga sintomas ay malubha o nagpapatuloy, humingi ng medikal na tulong.",
-				"",
+
 				"Uminom ng malinaw na likido, magpahinga, at iwasan ang solidong pagkain hanggang sa bumuti ang mga sintomas. Kumonsulta sa healthcare provider kung ang mga sintomas ay nagpapatuloy."
 			],
 			"relations": ["Luya", "Dahon ng Bayabas", "Sambong", "Katas ng Buko"],
@@ -831,7 +831,7 @@
 		{
 			"tag": "Convulsion",
 			"type": "injury",
-			"meaning": "Convulsions, also known as seizures, are sudden, uncontrolled electrical disturbances in the brain. They can cause changes in behavior, movements, feelings, and levels of consciousness. Immediate first aid is crucial to protect the person from injury and ensure they receive appropriate medical care.\n\t\t\t\t",
+			"meaning": "Convulsions, also known as seizures, are sudden, uncontrolled electrical disturbances in the brain. They can cause changes in behavior, movements, feelings, and levels of consciousness. Immediate first aid is crucial to protect the person from injury and ensure they receive appropriate medical care.",
 			"patterns": [
 				"Convulsion",
 				"What to do during convulsions?",
@@ -847,7 +847,7 @@
 			],
 			"procedures": [
 				"Protect the person from injury by removing nearby objects. Do not restrain them or put anything in their mouth. After the convulsions stop, place them in the recovery position and monitor their breathing. Seek emergency medical help.",
-				"",
+
 				"Stay with the person and protect them from harm. Do not restrain them or place anything in their mouth. Call emergency services."
 			],
 			"relations": ["nan"],
@@ -876,7 +876,7 @@
 			],
 			"procedures": [
 				"Protektahan ang tao mula sa pinsala sa pamamagitan ng pagtanggal ng mga nakapaligid na bagay. Huwag silang pigilan o maglagay ng anumang bagay sa kanilang bibig. Pagkatapos huminto ang mga convulsions, ilagay sila sa recovery position at bantayan ang kanilang paghinga. Humingi ng agarang medikal na tulong.",
-				"",
+
 				"Manatili sa tabi ng tao at protektahan sila mula sa pinsala. Huwag silang pigilan o maglagay ng anumang bagay sa kanilang bibig. Tumawag ng emergency services."
 			],
 			"relations": ["nan"],
@@ -889,7 +889,7 @@
 		{
 			"tag": "Head injury",
 			"type": "injury",
-			"meaning": "A head injury can result from various causes such as falls, accidents, or sports injuries. Symptoms may include headache, dizziness, confusion, and nausea. Immediate and appropriate first aid can help prevent further complications.\n\t\t\t\n\t\t\t",
+			"meaning": "A head injury can result from various causes such as falls, accidents, or sports injuries. Symptoms may include headache, dizziness, confusion, and nausea. Immediate and appropriate first aid can help prevent further complications.",
 			"patterns": [
 				"Head injury",
 				"What to do for a head injury?",
@@ -905,7 +905,7 @@
 			],
 			"procedures": [
 				"If the injury is minor, apply a cold compress to reduce swelling and rest. For more serious injuries, seek emergency medical help immediately. Keep the person awake and monitor their symptoms closely.",
-				"",
+
 				"Use a cold compress for minor injuries. For serious head injuries, seek immediate medical help and monitor the person's condition."
 			],
 			"relations": ["Sambong", "Lagundi", "Forest Tea", "Ginkgo Biloba"],
@@ -934,7 +934,7 @@
 			],
 			"procedures": [
 				"Kung ang pinsala ay maliit, maglagay ng malamig na compress upang mabawasan ang pamamaga at magpahinga. Para sa mas seryosong pinsala, humingi ng agarang medikal na tulong. Panatilihing gising ang tao at bantayan ang kanilang mga sintomas.",
-				"",
+
 				"Gumamit ng malamig na compress para sa maliit na pinsala. Para sa seryosong pinsala sa ulo, humingi ng agarang medikal na tulong at bantayan ang kondisyon ng tao."
 			],
 			"relations": ["Sambong", "Lagundi", "Tsaang Gubat", "Ginkgo Biloba"],
@@ -958,9 +958,9 @@
 			],
 			"procedures": [
 				"Help the person lie down and elevate their legs to improve blood flow to the brain. Loosen any tight clothing and keep them lying down until they recover. If they don't regain consciousness quickly, seek medical help immediately.",
-				"",
+
 				"Have the person lie down, elevate their legs, and loosen tight clothing. Seek medical attention if they don't regain consciousness.",
-				"",
+
 				""
 			],
 			"relations": ["Custard Apple"],
@@ -994,7 +994,7 @@
 			],
 			"procedures": [
 				"Tulungan ang tao na humiga at itaas ang kanilang mga binti upang mapabuti ang daloy ng dugo sa utak. Luwagan ang anumang masisikip na damit at panatilihing nakahiga sila hanggang sa sila ay makabawi. Kung hindi sila agad bumalik sa malay, humingi ng agarang medikal na tulong.",
-				"",
+
 				"Pahigain ang tao, itaas ang kanilang mga binti, at luwagan ang masisikip na damit. Humingi ng medikal na tulong kung hindi sila bumalik sa malay."
 			],
 			"relations": ["Atis"],
@@ -1007,7 +1007,7 @@
 		{
 			"tag": "Headache",
 			"type": "injury",
-			"meaning": "Headaches can be caused by various factors such as stress, dehydration, or tension. Symptoms may include a dull or sharp pain in the head, sensitivity to light or sound, and nausea. Proper management and treatment can help alleviate the discomfort.\n\t\t\t",
+			"meaning": "Headaches can be caused by various factors such as stress, dehydration, or tension. Symptoms may include a dull or sharp pain in the head, sensitivity to light or sound, and nausea. Proper management and treatment can help alleviate the discomfort.",
 			"patterns": [
 				"Headache",
 				"How to treat a headache?",
@@ -1022,10 +1022,10 @@
 				"How to care for a headache?"
 			],
 			"procedures": [
-				"Rest in a quiet, dark room and apply a cold or warm compress to your forehead. Over-the-counter pain relievers like ibuprofen or acetaminophen can help. Stay hydrated and avoid triggers like bright lights or loud noises.\",",
-				"",
+				"Rest in a quiet, dark room and apply a cold or warm compress to your forehead. Over-the-counter pain relievers like ibuprofen or acetaminophen can help. Stay hydrated and avoid triggers like bright lights or loud noises.",
+
 				"Rest, use pain relief medication, and apply a compress. Stay hydrated and avoid known triggers.",
-				"",
+
 				""
 			],
 			"relations": ["Lagundi", "Yerba Buena", "Ginger"],
@@ -1054,7 +1054,7 @@
 			],
 			"procedures": [
 				"Magpahinga sa isang tahimik at madilim na kwarto at maglagay ng malamig o mainit na compress sa iyong noo. Maaaring makatulong ang mga over-the-counter na pain relievers tulad ng ibuprofen o acetaminophen. Manatiling hydrated at iwasan ang mga trigger tulad ng maliwanag na ilaw o malalakas na tunog.",
-				"",
+
 				"Magpahinga, gumamit ng gamot para sa sakit, at maglagay ng compress. Manatiling hydrated at iwasan ang mga kilalang trigger."
 			],
 			"relations": ["Lagundi", "Yerba Buena", "Luya"],
@@ -1083,9 +1083,9 @@
 			],
 			"procedures": [
 				"Rest and stay hydrated by drinking plenty of fluids. Use over-the-counter medications to relieve symptoms like congestion and sore throat. Inhale steam or use a humidifier to ease breathing. If symptoms persist or worsen, consult a healthcare provider.",
-				"",
+
 				"Stay hydrated, rest, and use medications for symptom relief. Seek medical advice if the cold persists or worsens.",
-				"",
+
 				""
 			],
 			"relations": [
@@ -1119,7 +1119,7 @@
 			],
 			"procedures": [
 				"Magpahinga at manatiling hydrated sa pamamagitan ng pag-inom ng maraming likido. Gumamit ng mga over-the-counter na gamot para maibsan ang mga sintomas tulad ng congestion at sore throat. Huminga ng steam o gumamit ng humidifier upang mapadali ang paghinga. Kung ang mga sintomas ay nagpapatuloy o lumalala, kumonsulta sa healthcare provider.",
-				"",
+
 				"Manatiling hydrated, magpahinga, at gumamit ng mga gamot para sa pag-alis ng sintomas. Humingi ng medikal na payo kung ang sipon ay nagpapatuloy o lumalala."
 			],
 			"relations": [
@@ -1138,7 +1138,7 @@
 		{
 			"tag": "Drowning",
 			"type": "injury",
-			"meaning": "Drowning occurs when a person is submerged in water and unable to breathe. Symptoms may include difficulty breathing, coughing, and unconsciousness. Immediate and appropriate rescue and first aid can save lives and prevent further complications.\n\t\t\t\t\n\t\t\t",
+			"meaning": "Drowning occurs when a person is submerged in water and unable to breathe. Symptoms may include difficulty breathing, coughing, and unconsciousness. Immediate and appropriate rescue and first aid can save lives and prevent further complications.",
 			"patterns": [
 				"Drowning",
 				"What to do if someone is drowning?",
@@ -1154,9 +1154,9 @@
 			],
 			"procedures": [
 				"Call for emergency help immediately. If it's safe, try to reach the person with a pole or throw a flotation device. Do not enter the water unless you're trained in water rescue. Once the person is out of the water, check for breathing and start CPR if necessary.",
-				"",
+
 				"Call emergency services and try to help without putting yourself at risk. Use a pole or flotation device, and be ready to perform CPR.",
-				"",
+
 				""
 			],
 			"relations": ["nan"],
@@ -1185,7 +1185,7 @@
 			],
 			"procedures": [
 				"Tumawag ng agarang tulong sa emergency. Kung ligtas, subukang abutin ang tao gamit ang isang poste o ihagis ang flotation device. Huwag pumasok sa tubig maliban kung ikaw ay may pagsasanay sa water rescue. Kapag ang tao ay nailabas na sa tubig, suriin ang kanilang paghinga at simulan ang CPR kung kinakailangan.",
-				"",
+
 				"Tumawag ng emergency services at subukang tumulong nang hindi inilalagay ang iyong sarili sa panganib. Gumamit ng poste o flotation device, at maging handa na magsagawa ng CPR."
 			],
 			"relations": ["nan"],
@@ -1198,7 +1198,7 @@
 		{
 			"tag": "Chest pain",
 			"type": "injury",
-			"meaning": "Chest pain can be caused by various factors such as heart problems, lung issues, or digestive disorders. Symptoms may include a sharp, dull, or burning sensation in the chest, shortness of breath, and dizziness. Immediate and appropriate action can help prevent serious complications.\n\t\t\t\t\n\t\t\t",
+			"meaning": "Chest pain can be caused by various factors such as heart problems, lung issues, or digestive disorders. Symptoms may include a sharp, dull, or burning sensation in the chest, shortness of breath, and dizziness. Immediate and appropriate action can help prevent serious complications.",
 			"patterns": [
 				"Chest pain",
 				"What to do for chest pain?",
@@ -1214,7 +1214,7 @@
 			],
 			"procedures": [
 				"If you experience chest pain, stop any physical activity and rest. Take deep breaths and try to stay calm. If the pain persists, seek emergency medical help immediately, as it could be a sign of a heart attack.",
-				"",
+
 				"Rest and take slow, deep breaths. Seek emergency medical attention if the pain is severe or does not go away"
 			],
 			"relations": ["Garlic (Chest Pain)", "Ginger (Chest Pain)", "Almonds"],
@@ -1226,7 +1226,7 @@
 		},
 		{
 			"tag": "Pananakit ng dibdib",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Ang pananakit ng dibdib ay maaaring sanhi ng iba't ibang salik tulad ng problema sa puso, isyu sa baga, o mga sakit sa pagtunaw. Ang mga sintomas ay maaaring kabilang ang matalim, mapurol, o nasusunog na pakiramdam sa dibdib, hirap sa paghinga, at pagkahilo. Ang agarang at angkop na aksyon ay makakatulong upang maiwasan ang seryosong komplikasyon.",
 			"patterns": [
 				"Pananakit ng dibdib",
@@ -1243,7 +1243,7 @@
 			],
 			"procedures": [
 				"Kung makaranas ka ng pananakit sa dibdib, itigil ang anumang pisikal na aktibidad at magpahinga. Huminga ng malalim at subukang manatiling kalmado. Kung magpapatuloy ang sakit, humingi ng agarang medikal na tulong, dahil maaari itong senyales ng atake sa puso.",
-				"",
+
 				"Magpahinga at huminga ng mabagal at malalim. Humingi ng agarang medikal na atensyon kung ang sakit ay malubha o hindi nawawala."
 			],
 			"relations": ["Garlic (Chest Pain)", "Ginger (Chest Pain)", "Almonds"],
@@ -1255,8 +1255,8 @@
 		},
 		{
 			"tag": "Dehydration",
-			"type": "Injury",
-			"meaning": "Dehydration occurs when the body loses more fluids than it takes in, leading to an imbalance. Symptoms may include dry mouth, thirst, dark urine, dizziness, and fatigue. Proper hydration and timely treatment can help restore fluid balance and prevent complications.\n\t\t\t",
+			"type": "injury",
+			"meaning": "Dehydration occurs when the body loses more fluids than it takes in, leading to an imbalance. Symptoms may include dry mouth, thirst, dark urine, dizziness, and fatigue. Proper hydration and timely treatment can help restore fluid balance and prevent complications.",
 			"patterns": [
 				"Dehydration",
 				"How to treat dehydration?",
@@ -1272,9 +1272,9 @@
 			],
 			"procedures": [
 				"Drink plenty of water or an oral rehydration solution (ORS). Rest in a cool environment and avoid physical activity until fully rehydrated. For severe dehydration, seek medical attention.",
-				"",
+
 				"Increase fluid intake, rest, and use an ORS if available. Seek medical help if dehydration is severe.",
-				"",
+
 				""
 			],
 			"relations": ["Buko Water", "Lemongrass"],
@@ -1286,7 +1286,7 @@
 		},
 		{
 			"tag": "Pagkauhaw",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Ang pagkauhaw ay nangyayari kapag ang katawan ay nawawalan ng mas maraming likido kaysa sa tinatanggap, na nagdudulot ng kawalan ng balanse. Ang mga sintomas ay maaaring kabilang ang tuyong bibig, uhaw, madilim na ihi, pagkahilo, at pagkapagod. Ang tamang hydration at agarang paggamot ay makakatulong upang maibalik ang balanse ng likido at maiwasan ang komplikasyon.",
 			"patterns": [
 				"Pagkauhaw",
@@ -1303,7 +1303,7 @@
 			],
 			"procedures": [
 				"Uminom ng maraming tubig o oral rehydration solution (ORS). Magpahinga sa isang malamig na kapaligiran at iwasan ang pisikal na aktibidad hanggang sa ganap na ma-rehydrate. Para sa malubhang dehydration, humingi ng medikal na tulong.",
-				"",
+
 				"Dadagan ang pag-inom ng likido, magpahinga, at gumamit ng ORS kung available. Humingi ng tulong medikal kung ang dehydration ay malubha."
 			],
 			"relations": ["Katas ng Buko", "Tanglad"],
@@ -1315,7 +1315,7 @@
 		},
 		{
 			"tag": "Cut",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Cuts are injuries caused by a sharp object that breaks the skin. They can range from minor to severe, depending on the depth and location of the cut. Common causes of cuts include: Accidents: Slips, falls, or other accidents can lead to cuts. Sharp objects: Knives, scissors, broken glass, and other sharp objects can cause cuts.",
 			"patterns": [
 				"Cut",
@@ -1342,7 +1342,7 @@
 		},
 		{
 			"tag": "Hiwa",
-			"type": "Injury",
+			"type": "injury",
 			"meaning": "Hiwa ay mga pinsala na dulot ng isang matalim na bagay na pumuputol sa balat. Maaari silang mag-iba mula sa menor de edad hanggang malubha, depende sa lalim at lokasyon ng hiwa. Ang mga karaniwang sanhi ng hiwa ay kinabibilangan ng: Aksidente: Ang mga pagdulas, pagkahulog, o iba pang aksidente ay maaaring humantong sa mga hiwa. Matatalim na bagay: Ang mga kutsilyo, gunting, sirang baso, at iba pang matatalim na bagay ay maaaring magdulot ng mga hiwa.",
 			"patterns": [
 				"Hiwa",
@@ -1673,7 +1673,7 @@
 			],
 			"procedures": [
 				"Rest the affected muscle, apply ice to reduce swelling, use compression with an elastic bandage, and elevate the muscle. Take pain relievers if necessary and avoid strenuous activity.",
-				"",
+
 				"Apply the R.I.C.E. method: Rest, Ice, Compression, Elevation. Consult a healthcare provider for severe strains."
 			],
 			"relations": ["nan"],
@@ -1699,7 +1699,6 @@
 			],
 			"procedures": [
 				"Pahingahin ang apektadong kalamnan, maglagay ng yelo, gumamit ng elastic na benda, at itaas ang kalamnan. Uminom ng pain relievers kung kinakailangan at iwasan ang mabigat na aktibidad.",
-				"",
 				"Gamitin ang R.I.C.E.: Rest, Ice, Compression, Elevation. Magpakonsulta sa healthcare provider para sa malubhang pilay."
 			],
 			"relations": ["nan"],
@@ -1727,7 +1726,7 @@
 			],
 			"procedures": [
 				"Cool the skin with a damp cloth or a cool bath, apply aloe vera or a moisturizer, drink plenty of water, and avoid further sun exposure.",
-				"",
+
 				"Use cool compresses and aloe vera gel. Drink water and avoid the sun until healed."
 			],
 			"relations": ["Honey", "Aloe vera", "Cucumber"],
@@ -1757,7 +1756,6 @@
 			],
 			"procedures": [
 				"Palamigin ang balat gamit ang basang tela o maligamgam na paligo, maglagay ng aloe vera o moisturizer, uminom ng maraming tubig, at iwasan ang karagdagang pagkakalantad sa araw.",
-				"",
 				"Gumamit ng malamig na pomento at aloe vera gel. Uminom ng tubig at iwasan ang araw hanggang maghilom."
 			],
 			"relations": ["Honey", "Aloe vera", "Pipino"],
@@ -1838,7 +1836,7 @@
 			],
 			"procedures": [
 				"Immediately flush the affected area with water for at least 20 minutes. Remove any contaminated clothing, cover the burn with a sterile bandage, and avoid applying creams or ointments unless instructed by a healthcare provider. Seek immediate medical attention.",
-				"",
+
 				"Rinse the burn with water continuously for 20 minutes and remove contaminated clothing. Seek immediate medical help."
 			],
 			"relations": ["nan"],
@@ -1868,10 +1866,7 @@
 			],
 			"procedures": [
 				"Agad na banlawan ang apektadong bahagi ng tubig sa loob ng hindi bababa sa 20 minuto. Alisin ang maruming damit, takpan ang paso ng sterile na benda, at iwasang maglagay ng mga creams o ointments maliban kung inutos ng healthcare provider. Magpakonsulta agad sa doktor.",
-				"",
-				"Banlawan ang paso ng tuluy-tuloy na tubig sa loob ng 20 minuto at alisin ang maruming damit. Humingi agad ng medikal na tulong.",
-				"",
-				""
+				"Banlawan ang paso ng tuluy-tuloy na tubig sa loob ng 20 minuto at alisin ang maruming damit. Humingi agad ng medikal na tulong."
 			],
 			"relations": ["nan"],
 			"references": [
@@ -1900,7 +1895,6 @@
 			],
 			"procedures": [
 				"Wash the affected area with mild soap and water. Apply an over-the-counter anti-itch cream or antihistamine. Avoid scratching to prevent infection. If the rash persists or is severe, consult a healthcare provider.",
-				"",
 				"Clean the area gently, apply an anti-itch cream, and avoid irritants. Seek medical advice if the rash spreads or doesn't improve."
 			],
 			"relations": ["Aloe Vera"],
@@ -1927,7 +1921,6 @@
 			],
 			"procedures": [
 				"Hugasan ang apektadong lugar gamit ang mild na sabon at tubig. Maglagay ng over-the-counter na anti-itch cream o antihistamine. Iwasang kamutin upang maiwasan ang impeksyon. Kung ang pantal ay nagpapatuloy o malubha, magpakonsulta sa isang healthcare provider.",
-				"",
 				"Linisin ang lugar ng maingat, maglagay ng anti-itch cream, at iwasan ang mga irritants. Humingi ng medikal na payo kung ang pantal ay kumakalat o hindi bumubuti."
 			],
 			"relations": ["Aloe Vera"],
@@ -1953,9 +1946,7 @@
 			],
 			"procedures": [
 				"Stay calm and immobilize the bitten limb. Seek emergency medical care as quickly as possible.",
-				"",
 				"Keep the bitten area still and below heart level to slow venom spread. Remove tight clothing or jewelry near the bite. Do not attempt to suck out the venom. Seek emergency medical help immediately.",
-				"",
 				"Call emergency services immediately. Keep the bite area still and lower than the heart. Do not apply ice or a tourniquet."
 			],
 			"relations": ["nan"],
@@ -1984,9 +1975,7 @@
 			],
 			"procedures": [
 				"Tumawag agad ng emergency services. Panatilihing hindi gumagalaw ang lugar ng kagat at nasa ibaba ng puso. Huwag maglagay ng yelo o tourniquet.",
-				"",
 				"Manatiling kalmado at i-immobilize ang tinukso na bahagi. Humingi ng agarang medikal na pangangalaga.",
-				"",
 				"Ipahinga ang tinukso na lugar at panatilihing nasa ilalim ng antas ng puso upang mapabagal ang pagkalat ng lason. Alisin ang anumang masikip na damit o alahas malapit sa kagat. Huwag subukang sipsipin ang lason. Humingi agad ng tulong medikal."
 			],
 			"relations": ["nan"],
@@ -2071,7 +2060,6 @@
 			],
 			"procedures": [
 				"Keep the injured area still and avoid moving it. Apply a splint to immobilize the fracture and use a cold pack to reduce swelling. Seek immediate medical attention.",
-				"",
 				"Do not move the injured area and use a splint to keep it immobile. Apply ice and seek emergency medical help."
 			],
 			"relations": ["nan"],
@@ -2101,7 +2089,6 @@
 			],
 			"procedures": [
 				"Ipahinga ang nasugatang lugar at iwasang galawin ito. Maglagay ng splint upang i-immobilize ang bali at gumamit ng cold pack upang mabawasan ang pamamaga. Humingi ng agarang medikal na atensyon.",
-				"",
 				"Huwag galawin ang nasugatang lugar at gamitin ang splint upang hindi ito gumalaw. Maglagay ng yelo at humingi ng agarang medikal na tulong."
 			],
 			"relations": ["nan"],
@@ -2130,11 +2117,9 @@
 			],
 			"procedures": [
 				"If you suspect someone is having a stroke, call emergency services immediately. Have the person lie down with their head slightly elevated. Monitor their breathing and be ready to perform CPR if necessary.",
-				"",
+
 				"Seek emergency medical help immediately. Keep the person calm and monitor their breathing.",
-				"",
 				"Act FAST: Face drooping, Arm weakness, Speech difficulty, Time to call emergency services. Call emergency services immediately and note the time the symptoms began. Keep the person comfortable and calm until help arrives.",
-				"",
 				"Call emergency services immediately if you notice face drooping, arm weakness, or speech difficulty. Act FAST and get medical help right away."
 			],
 			"relations": ["nan"],
@@ -2162,11 +2147,8 @@
 			],
 			"procedures": [
 				"Kung sa tingin mo ay may stroke ang isang tao, tumawag agad ng emergency services. Hayaang humiga ang tao na may bahagyang nakataas ang ulo. Bantayan ang kanilang paghinga at maging handa na magsagawa ng CPR kung kinakailangan.",
-				"",
 				"Humingi agad ng tulong medikal. Panatilihing kalmado ang tao at bantayan ang kanilang paghinga.",
-				"",
 				"Gumamit ng FAST: Face drooping, Arm weakness, Speech difficulty, Time to call emergency services. Tumawag agad ng emergency services at tandaan ang oras ng pagsisimula ng mga sintomas. Panatilihin ang tao na komportable at kalmado hanggang dumating ang tulong.",
-				"",
 				"Tumawag agad ng emergency services kung mapansin ang pag-dagilid ng mukha, kahinaan ng braso, o kahirapan sa pagsasalita. Kumilos ng FAST at kumuha ng medikal na tulong kaagad."
 			],
 			"relations": ["nan"],
@@ -3510,10 +3492,6 @@
 				"https://wellnessmama.com/remedies/onion-benefits/",
 				"https://www.algotech.ca/en/natural-remedies-for-an-ankle-sprain/",
 				"https://txnaturalpediatrics.com/2019/08/06/natural-remedies-for-a-sprained-ankle/",
-				"",
-				"",
-				"",
-				"",
 				""
 			],
 			"context_set": ""
@@ -3538,11 +3516,6 @@
 				"https://wellnessmama.com/remedies/onion-benefits/",
 				"https://www.algotech.ca/en/natural-remedies-for-an-ankle-sprain/",
 				"https://txnaturalpediatrics.com/2019/08/06/natural-remedies-for-a-sprained-ankle/",
-				"",
-				"",
-				"",
-				"",
-				"",
 				""
 			],
 			"context_set": ""
