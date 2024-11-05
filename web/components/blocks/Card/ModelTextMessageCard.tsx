@@ -174,7 +174,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 								</p>
 							</div>
 						)}
-						{/* @ts-ignore: must be corrected properly */}
+						{/* @ts-expect-error: must be corrected properly */}
 						{procedures?.length > 0 && (
 							<div className='space-y-2'>
 								<p className='text-xl font-bold text-background tracking-tight text-ellipsis'>
@@ -192,7 +192,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 								</div>
 							</div>
 						)}
-						{/* @ts-ignore: must be corrected properly */}
+						{/* @ts-expect-error: must be corrected properly */}
 						{references?.length > 0 && (
 							<div className='space-y-2'>
 								<p className='text-xl font-bold text-background tracking-tight text-ellipsis'>
@@ -212,7 +212,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 								</div>
 							</div>
 						)}
-						{/* @ts-ignore: must be corrected properly */}
+						{/* @ts-expect-error: must be corrected properly */}
 						{relations?.length > 0 && (
 							<div className='space-y-2'>
 								<p className='text-xl font-bold text-background tracking-tight text-ellipsis'>
