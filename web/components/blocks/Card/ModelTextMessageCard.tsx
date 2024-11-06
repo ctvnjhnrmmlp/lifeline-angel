@@ -166,19 +166,19 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 	return (
 		<div className='flex flex-col space-y-2'>
 			{content && typeof content === 'object' && (
-				<div className='bg-foreground rounded-3xl ml-0 mr-auto w-12/12 md:w-10/12 lg:w-8/12 xl:w-5/12'>
+				<div className='bg-background outline outline-1 outline-zinc-200 dark:outline-zinc-800 rounded-3xl ml-0 mr-auto'>
 					<div
 						ref={messageRef}
-						className='flex flex-col space-y-6 cursor-pointer p-4'
+						className='flex flex-col space-y-6 cursor-pointer px-5 py-6'
 					>
 						{meaning && (
 							<div className='space-y-2'>
 								{type !== 'message' && type !== 'out' && (
-									<p className='text-xl font-bold text-background tracking-tight text-ellipsis'>
+									<p className='text-md sm:text-lg md:text-xl font-bold text-foreground tracking-tight text-ellipsis'>
 										Meaning
 									</p>
 								)}
-								<p className='text-lg text-background tracking-tight text-ellipsis'>
+								<p className='text-sm sm:text-md md:text-lg text-foreground tracking-tight text-ellipsis'>
 									{meaning}
 								</p>
 							</div>
@@ -186,14 +186,14 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 						{/* @ts-expect-error: must be corrected properly */}
 						{procedures?.length > 0 && (
 							<div className='space-y-2'>
-								<p className='text-xl font-bold text-background tracking-tight text-ellipsis'>
+								<p className='text-md sm:text-lg md:text-xl font-bold text-foreground tracking-tight text-ellipsis'>
 									Procedures
 								</p>
 								<div className='flex flex-col space-y-1'>
 									{procedures?.map((procedure) => (
 										<p
 											key={procedure}
-											className='text-lg text-background tracking-tight text-ellipsis'
+											className='text-sm sm:text-md md:text-lg text-foreground tracking-tight text-ellipsis'
 										>
 											{procedure}
 										</p>
@@ -204,7 +204,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 						{/* @ts-expect-error: must be corrected properly */}
 						{references?.length > 0 && (
 							<div className='space-y-2'>
-								<p className='text-xl font-bold text-background tracking-tight text-ellipsis'>
+								<p className='text-md sm:text-lg md:text-xl font-bold text-foreground tracking-tight text-ellipsis'>
 									References
 								</p>
 								<div className='flex flex-col space-y-1'>
@@ -213,7 +213,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 											key={reference}
 											href={reference}
 											target='_blank'
-											className='text-lg text-background tracking-tight text-ellipsis underline'
+											className='text-sm sm:text-md md:text-lg text-foreground tracking-tight text-ellipsis underline'
 										>
 											{reference}
 										</Link>
@@ -224,14 +224,14 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 						{/* @ts-expect-error: must be corrected properly */}
 						{relations?.length > 0 && (
 							<div className='space-y-2'>
-								<p className='text-xl font-bold text-background tracking-tight text-ellipsis'>
+								<p className='text-md sm:text-lg md:text-xl font-bold text-foreground tracking-tight text-ellipsis'>
 									Relations
 								</p>
 								<div className='flex flex-wrap gap-2'>
 									{relations?.map((relation) => (
 										<button
 											key={relation}
-											className='text-lg py-2 px-5 outline outline-1 outline-zinc-800 dark:outline-zinc-200 hover:bg-zinc-800 dark:hover:bg-zinc-200 rounded-3xl font-bold tracking-tight text-background'
+											className='text-sm md:text-md lg:text-lg py-2 px-5 outline outline-1 outline-zinc-200 dark:outline-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-3xl font-bold tracking-tight text-foreground'
 											onClick={() => {
 												handleAddMessage(relation);
 												handleUpdateConversation(relation);
@@ -248,9 +248,9 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 			)}
 			{content && typeof content === 'string' && (
 				<div className='flex flex-col space-y-2'>
-					<div className='bg-foreground outline outline-1 outline-zinc-200 dark:outline-zinc-800 rounded-3xl min-w-4/12 mr-auto'>
+					<div className='bg-background outline outline-1 outline-zinc-200 dark:outline-zinc-800 rounded-3xl min-w-4/12 mr-auto'>
 						<div className='cursor-pointer p-4'>
-							<p className='text-lg text-background tracking-tight leading-none text-ellipsis text-balance text-center'>
+							<p className='text-sm md:text-md lg:text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance text-center'>
 								{content}
 							</p>
 						</div>

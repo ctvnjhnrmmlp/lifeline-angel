@@ -73,6 +73,7 @@ export default function Page() {
 	const [message, setMessage] = useState('');
 	const [uploading, setUploading] = useState(false);
 	const [microphone, setMicrophone] = useState(false);
+	const [typing, setTyping] = useState(false);
 	// const cameraRef = useRef<Webcam>(null);
 	// const [image, setImage] = useState('');
 	const { slug } = useParams() as {
@@ -233,6 +234,10 @@ export default function Page() {
 		SpeechRecognition.stopListening();
 	};
 
+	const handleTyping = (typing: boolean) => {
+		setTyping(typing);
+	};
+
 	// const handleCameraCapture = useCallback(() => {
 	// 	// setImage(() => cameraRef.current?.getScreenshot()!);
 	// }, [cameraRef]);
@@ -258,12 +263,15 @@ export default function Page() {
 	return (
 		<main className='h-full'>
 			<section className='h-full'>
-				<div className='h-full outline outline-1 outline-zinc-200 dark:outline-zinc-800 rounded-3xl p-6'>
+				<div className='h-full outline outline-1 outline-zinc-200 dark:outline-zinc-800 rounded-3xl p-4 md:p-6'>
 					{/* Conversation Navbar */}
-					<div className='w-full flex flex-col flex-wrap justify-between space-between gap-12 pb-4'>
-						<div className='flex items-center justify-between'>
+					<div
+						key='conversation-navbar'
+						className='w-full flex flex-col flex-wrap justify-between space-between gap-12 pb-4'
+					>
+						<div className='flex flex-col lg:flex-row items-center justify-between space-y-2 lg:space-y-0'>
 							<div>
-								<p className='font-bold text-3xl text-foreground'>
+								<p className='font-bold text-xl md:text-2xl text-foreground'>
 									{conversationLocal?.title
 										? conversationLocal.title
 										: 'New conversation'}
@@ -274,7 +282,7 @@ export default function Page() {
 									<>
 										<Dialog>
 											<DialogTrigger asChild>
-												<button className='p-3 text-foreground text-2xl'>
+												<button className='text-foreground p-4 w-full outline outline-1 outline-zinc-200 dark:outline-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-xl'>
 													<MdPersonalInjury />
 												</button>
 											</DialogTrigger>
@@ -304,7 +312,7 @@ export default function Page() {
 										</Dialog>
 										<Dialog>
 											<DialogTrigger asChild>
-												<button className='p-3 text-foreground text-2xl'>
+												<button className='text-foreground p-4 w-full outline outline-1 outline-zinc-200 dark:outline-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-xl'>
 													<GiRaggedWound />
 												</button>
 											</DialogTrigger>
@@ -346,7 +354,7 @@ export default function Page() {
 								)}
 								<Dialog>
 									<DialogTrigger asChild>
-										<button className='p-3 text-foreground text-2xl'>
+										<button className='text-foreground p-4 w-full outline outline-1 outline-zinc-200 dark:outline-zinc-800 rounded-xl'>
 											<BsGrid1X2Fill />
 										</button>
 									</DialogTrigger>
@@ -372,8 +380,8 @@ export default function Page() {
 						</div>
 					</div>
 					{/* Messages */}
-					<div className='space-y-4 py-8 rounded-xl'>
-						{messagesServer && messagesServer.length > 0 && (
+					<div key='messages-block' className='space-y-4 py-8 rounded-xl'>
+						{/* {messagesServer && messagesServer.length > 0 && (
 							<div className='bg-background outline outline-1 outline-zinc-200 dark:outline-zinc-800 rounded-3xl mx-auto'>
 								<div className='cursor-pointer px-6 py-4'>
 									<p className='text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance text-center'>
@@ -383,12 +391,12 @@ export default function Page() {
 									</p>
 								</div>
 							</div>
-						)}
+						)} */}
 						{messagesLocal && !messagesLocal.length && (
 							<div className='space-y-10'>
 								<div className='space-y-4'>
 									<div>
-										<p className='text-2xl font-bold text-foreground'>
+										<p className='text-lg sm:text-xl md:text-2xl font-bold text-foreground'>
 											Text Injuries
 										</p>
 									</div>
@@ -396,7 +404,7 @@ export default function Page() {
 										{TEXT_INJURIES.map((injury) => (
 											<button
 												key={injury.content}
-												className='text-lg py-2 px-5 outline outline-1 outline-zinc-200 dark:outline-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-3xl font-bold tracking-tight text-foreground'
+												className='text-sm md:text-md lg:text-lg py-2 px-5 outline outline-1 outline-zinc-200 dark:outline-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-3xl font-bold tracking-tight text-foreground'
 												onClick={() => {
 													handleAddMessage(injury.content);
 													handleUpdateConversation(injury.content);
@@ -407,9 +415,9 @@ export default function Page() {
 										))}
 									</div>
 								</div>
-								<div className='space-y-4'>
+								{/* <div className='space-y-4'>
 									<div>
-										<p className='text-2xl font-bold text-foreground'>
+										<p className='text-lg sm:text-xl md:text-2xl font-bold text-foreground'>
 											Image Injuries
 										</p>
 									</div>
@@ -443,7 +451,7 @@ export default function Page() {
 											<CarouselNext />
 										</Carousel>
 									</div>
-								</div>
+								</div> */}
 							</div>
 						)}
 						{messagesLocal?.map((message) => {
@@ -467,124 +475,130 @@ export default function Page() {
 						})}
 					</div>
 					{/* Message */}
-					<div className='flex justify-between items-center space-x-6 pt-6'>
-						<div className='flex items-center justify-center space-x-4'>
-							<Dialog>
-								<DialogTrigger asChild>
-									<button className='text-foreground text-2xl'>
-										<FaPaperclip />
-									</button>
-								</DialogTrigger>
-								<DialogContent className='sm:max-w-[30rem] sm:max-h-[50rem] bg-foreground border-0'>
-									<DialogHeader>
-										<DialogTitle className='text-2xl font-bold text-center text-background'>
-											File
-										</DialogTitle>
-										<DialogDescription className='py-4' asChild>
-											<div className='flex justify-center'>
-												<form
-													encType='multipart/form-data'
-													className='space-y-4'
-													onSubmit={formik.handleSubmit}
-												>
-													<Input
-														required
-														ref={fileRef}
-														id='image-input'
-														name='file'
-														type='file'
-														accept='image/*'
-														onChange={handleChange}
-													/>
-													<label
-														htmlFor='image-input'
-														className='flex flex-col items-center justify-center w-full h-72 rounded-2xl cursor-pointer bg-background border-foreground/20 border-1'
+					<div
+						key='message-block'
+						className='flex justify-between items-center space-x-2 pt-6'
+					>
+						{!typing && (
+							<div className='flex items-center justify-center space-x-2'>
+								<Dialog>
+									<DialogTrigger asChild>
+										<button className='text-foreground p-4 w-full outline outline-1 outline-zinc-200 dark:outline-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-xl'>
+											<FaPaperclip />
+										</button>
+									</DialogTrigger>
+									<DialogContent className='sm:max-w-[30rem] sm:max-h-[50rem] bg-foreground border-0'>
+										<DialogHeader>
+											<DialogTitle className='text-2xl font-bold text-center text-background'>
+												File
+											</DialogTitle>
+											<DialogDescription className='py-4' asChild>
+												<div className='flex justify-center'>
+													<form
+														encType='multipart/form-data'
+														className='space-y-4'
+														onSubmit={formik.handleSubmit}
 													>
-														<div className='flex flex-col items-center justify-center pt-5 pb-6'>
-															<FaCloudArrowUp className='text-9xl text-foreground' />
-															<p className='text-xl font-bold text-foreground'>
-																Click above to upload
-															</p>
-															<p className='text-sm text-foreground'>
-																PNG, JPG, JPEG
-															</p>
-														</div>
-													</label>
-													<div>
-														{formik.touched.file && formik.errors.file && (
-															<p className='text-foreground'>
-																{formik.errors.file}
-															</p>
-														)}
-													</div>
-													<Button
-														type='submit'
-														disabled={uploading}
-														className='w-full text-xl py-6 bg-background text-foreground font-bold text-2xl'
-													>
-														{uploading && <span>Posting...</span>}
-														{!uploading && <span>Post</span>}
-													</Button>
-												</form>
-											</div>
-										</DialogDescription>
-									</DialogHeader>
-								</DialogContent>
-							</Dialog>
-							<Dialog>
-								<DialogTrigger asChild>
-									<button className='text-foreground text-2xl'>
-										<FaMicrophone />
-									</button>
-								</DialogTrigger>
-								<DialogContent className='sm:max-w-[30rem] sm:max-h-[50rem] bg-foreground border-0'>
-									<DialogHeader>
-										<DialogTitle className='text-2xl font-bold text-center text-background'>
-											Microphone
-										</DialogTitle>
-										<DialogDescription className='py-4'>
-											<div className='flex flex-col space-y-8 items-center justify-center'>
-												{browserSupportsSpeechRecognition && (
-													<>
+														<Input
+															required
+															ref={fileRef}
+															id='image-input'
+															name='file'
+															type='file'
+															accept='image/*'
+															onChange={handleChange}
+														/>
+														<label
+															htmlFor='image-input'
+															className='flex flex-col items-center justify-center w-full h-72 rounded-2xl cursor-pointer bg-background border-foreground/20 border-1'
+														>
+															<div className='flex flex-col items-center justify-center pt-5 pb-6'>
+																<FaCloudArrowUp className='text-9xl text-foreground' />
+																<p className='text-xl font-bold text-foreground'>
+																	Click above to upload
+																</p>
+																<p className='text-sm text-foreground'>
+																	PNG, JPG, JPEG
+																</p>
+															</div>
+														</label>
 														<div>
-															<p className='text-[11rem] text-background'>
-																<RiVoiceprintFill />
-															</p>
+															{formik.touched.file && formik.errors.file && (
+																<p className='text-foreground'>
+																	{formik.errors.file}
+																</p>
+															)}
 														</div>
-														{!microphone && (
+														<Button
+															type='submit'
+															disabled={uploading}
+															className='w-full text-xl py-6 bg-background text-foreground font-bold text-2xl'
+														>
+															{uploading && <span>Posting...</span>}
+															{!uploading && <span>Post</span>}
+														</Button>
+													</form>
+												</div>
+											</DialogDescription>
+										</DialogHeader>
+									</DialogContent>
+								</Dialog>
+								<Dialog>
+									<DialogTrigger asChild>
+										<button className='text-foreground p-4 w-full outline outline-1 outline-zinc-200 dark:outline-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-xl'>
+											<FaMicrophone />
+										</button>
+									</DialogTrigger>
+									<DialogContent className='sm:max-w-[30rem] sm:max-h-[50rem] bg-foreground border-0'>
+										<DialogHeader>
+											<DialogTitle className='text-2xl font-bold text-center text-background'>
+												Microphone
+											</DialogTitle>
+											<DialogDescription className='py-4'>
+												<div className='flex flex-col space-y-8 items-center justify-center'>
+													{browserSupportsSpeechRecognition && (
+														<>
 															<div>
-																<button
-																	className='rounded-full bg-background text-2xl p-6 outline'
-																	onClick={() => handleOpenMicrophone()}
-																></button>
+																<p className='text-[11rem] text-background'>
+																	<RiVoiceprintFill />
+																</p>
 															</div>
-														)}
-														{microphone && (
-															<div>
-																<button
-																	className='rounded-full bg-red-600 text-2xl p-6 outline'
-																	onClick={() =>
-																		handleCloseMicrophone(transcript)
-																	}
-																></button>
+															{!microphone && (
+																<div>
+																	<button
+																		className='rounded-full bg-background text-2xl p-6 outline'
+																		onClick={() => handleOpenMicrophone()}
+																	></button>
+																</div>
+															)}
+															{microphone && (
+																<div>
+																	<button
+																		className='rounded-full bg-red-600 text-2xl p-6 outline'
+																		onClick={() =>
+																			handleCloseMicrophone(transcript)
+																		}
+																	></button>
+																</div>
+															)}
+															<div className='flex flex-wrap w-96'>
+																<p className='text-lg text-white'>
+																	{transcript}
+																</p>
 															</div>
-														)}
-														<div className='flex flex-wrap w-96'>
-															<p className='text-lg text-white'>{transcript}</p>
-														</div>
-													</>
-												)}
-												{!browserSupportsSpeechRecognition && (
-													<span>
-														Browser does not support speech recognition.
-													</span>
-												)}
-											</div>
-										</DialogDescription>
-									</DialogHeader>
-								</DialogContent>
-							</Dialog>
-							{/* <Dialog>
+														</>
+													)}
+													{!browserSupportsSpeechRecognition && (
+														<span>
+															Browser does not support speech recognition.
+														</span>
+													)}
+												</div>
+											</DialogDescription>
+										</DialogHeader>
+									</DialogContent>
+								</Dialog>
+								{/* <Dialog>
 								<DialogTrigger asChild>
 									<button className='text-foreground text-2xl'>
 										<FaCamera />
@@ -619,14 +633,21 @@ export default function Page() {
 									</DialogHeader>
 								</DialogContent>
 							</Dialog> */}
-						</div>
+							</div>
+						)}
 						<div className='w-full'>
 							<Input
 								type='text'
 								value={message}
 								placeholder='Aa'
-								className='py-6 px-4 placeholder:font-bold placeholder:text-foreground/50 font-bold text-foreground text-2xl'
+								className='py-6 md:py-6 px-4 placeholder:font-bold placeholder:text-foreground/50 font-bold text-foreground text-lg sm:text-xl md:text-2xl'
 								onChange={(event) => {
+									if (event.target.value.length > 0) {
+										handleTyping(true);
+									} else {
+										handleTyping(false);
+									}
+
 									setMessage(event.target.value);
 								}}
 								onKeyPress={(event) => {
