@@ -6,6 +6,7 @@ import UserTextMessageCard from '@/components/blocks/Card/UserTextMessageCard';
 import { Button } from '@/components/ui/button';
 import {
 	Dialog,
+	DialogClose,
 	DialogContent,
 	DialogDescription,
 	DialogHeader,
@@ -58,6 +59,7 @@ import {
 	CarouselNext,
 	CarouselPrevious,
 } from '@/components/ui/carousel';
+import { ScrollArea } from '@/components/ui/scroll-area';
 import {
 	Tooltip,
 	TooltipContent,
@@ -292,20 +294,26 @@ export default function Page() {
 														Text Injuries
 													</DialogTitle>
 													<DialogDescription className='py-4'>
-														<div className='flex flex-wrap gap-2'>
-															{TEXT_INJURIES.map((injury) => (
-																<button
-																	key={injury.content}
-																	className='text-lg py-2 px-5 outline outline-1 outline-zinc-800 dark:outline-zinc-200 hover:bg-zinc-800 dark:hover:bg-zinc-200 rounded-3xl font-bold tracking-tight text-background'
-																	onClick={() => {
-																		handleAddMessage(injury.content);
-																		handleUpdateConversation(injury.content);
-																	}}
-																>
-																	{injury.content}
-																</button>
-															))}
-														</div>
+														<DialogClose asChild>
+															<ScrollArea className='h-[35rem] sm:h-full'>
+																<div className='flex flex-wrap gap-2 p-0.5'>
+																	{TEXT_INJURIES.map((injury) => (
+																		<button
+																			key={injury.content}
+																			className='text-lg py-2 px-5 outline outline-1 outline-zinc-800 dark:outline-zinc-200 hover:bg-zinc-800 dark:hover:bg-zinc-200 rounded-3xl font-bold tracking-tight text-background'
+																			onClick={() => {
+																				handleAddMessage(injury.content);
+																				handleUpdateConversation(
+																					injury.content
+																				);
+																			}}
+																		>
+																			{injury.content}
+																		</button>
+																	))}
+																</div>
+															</ScrollArea>
+														</DialogClose>
 													</DialogDescription>
 												</DialogHeader>
 											</DialogContent>
@@ -322,30 +330,34 @@ export default function Page() {
 														Image Injuries
 													</DialogTitle>
 													<DialogDescription className='py-4'>
-														<div className='flex flex-wrap justify-center gap-2'>
-															{IMAGE_INJURIES.map((injury) => (
-																<Tooltip key={injury.content}>
-																	<TooltipTrigger asChild>
-																		<Image
-																			width={130}
-																			height={130}
-																			src={`/images/${injury.source}`}
-																			className='w-56 object-cover rounded-3xl'
-																			alt={injury.content}
-																			onClick={() => {
-																				handleAddMessage(injury.content);
-																				handleUpdateConversation(
-																					injury.content
-																				);
-																			}}
-																		/>
-																	</TooltipTrigger>
-																	<TooltipContent className='border-1 border-zinc-200 dark:border-zinc-800'>
-																		<p>{injury.content}</p>
-																	</TooltipContent>
-																</Tooltip>
-															))}
-														</div>
+														<DialogClose asChild>
+															<ScrollArea className='h-[35rem] sm:h-full'>
+																<div className='flex flex-wrap justify-center gap-2 p-0.5'>
+																	{IMAGE_INJURIES.map((injury) => (
+																		<Tooltip key={injury.content}>
+																			<TooltipTrigger asChild>
+																				<Image
+																					width={130}
+																					height={130}
+																					src={`/images/${injury.source}`}
+																					className='w-32 md:w-40 lg:w-56 object-cover rounded-3xl'
+																					alt={injury.content}
+																					onClick={() => {
+																						handleAddMessage(injury.content);
+																						handleUpdateConversation(
+																							injury.content
+																						);
+																					}}
+																				/>
+																			</TooltipTrigger>
+																			<TooltipContent className='border-1 border-zinc-200 dark:border-zinc-800'>
+																				<p>{injury.content}</p>
+																			</TooltipContent>
+																		</Tooltip>
+																	))}
+																</div>
+															</ScrollArea>
+														</DialogClose>
 													</DialogDescription>
 												</DialogHeader>
 											</DialogContent>
