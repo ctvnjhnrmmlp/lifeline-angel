@@ -295,7 +295,7 @@ export default function Page() {
 													</DialogTitle>
 													<DialogDescription className='py-4'>
 														<DialogClose asChild>
-															<ScrollArea className='h-[35rem] sm:h-full'>
+															<ScrollArea className='h-[35rem] sm:h-full no-scrollbar'>
 																<div className='flex flex-wrap gap-2 p-0.5'>
 																	{TEXT_INJURIES.map((injury) => (
 																		<button
@@ -331,7 +331,7 @@ export default function Page() {
 													</DialogTitle>
 													<DialogDescription className='py-4'>
 														<DialogClose asChild>
-															<ScrollArea className='h-[35rem] sm:h-full'>
+															<ScrollArea className='h-[35rem] sm:h-full no-scrollbar'>
 																<div className='flex flex-wrap justify-center gap-2 p-0.5'>
 																	{IMAGE_INJURIES.map((injury) => (
 																		<Tooltip key={injury.content}>
@@ -427,64 +427,63 @@ export default function Page() {
 										))}
 									</div>
 								</div>
-								{/* <div className='space-y-4'>
+								<div className='space-y-4'>
 									<div>
 										<p className='text-lg sm:text-xl md:text-2xl font-bold text-foreground'>
 											Image Injuries
 										</p>
 									</div>
 									<div className='flex flex-wrap gap-2'>
-										<Carousel
-											opts={{
-												align: 'start',
-											}}
-										>
-											<CarouselContent>
-												{IMAGE_INJURIES.map((injury) => (
-													<CarouselItem
-														key={injury.content}
-														className='basis-3/9'
-													>
-														<Image
-															width={130}
-															height={130}
-															src={`/images/${injury.source}`}
-															className='w-full sm:w-36 md:w-56 object-cover rounded-3xl'
-															alt={injury.content}
-															onClick={() => {
-																handleAddMessage(injury.content);
-																handleUpdateConversation(injury.content);
-															}}
-														/>
-													</CarouselItem>
-												))}
-											</CarouselContent>
-											<CarouselPrevious />
-											<CarouselNext />
-										</Carousel>
+										{IMAGE_INJURIES.map((injury) => (
+											<Image
+												key={injury.content}
+												width={130}
+												height={130}
+												src={`/images/${injury.source}`}
+												className='w-40 md:w-56 object-cover rounded-3xl'
+												alt={injury.content}
+												onClick={() => {
+													handleAddMessage(injury.content);
+													handleUpdateConversation(injury.content);
+												}}
+											/>
+										))}
 									</div>
-								</div> */}
+								</div>
 							</div>
 						)}
-						{messagesLocal?.map((message) => {
-							// @ts-expect-error: must be corrected properly
-							if (checkTextValidURL(message.content)) {
-								return (
-									<UserImageMessageCard key={message.id} message={message} />
-								);
-							} else {
-								if (message.from === 'user') {
-									return (
-										<UserTextMessageCard key={message.id} message={message} />
-									);
-								}
-								return (
-									<>
-										<ModelTextMessageCard key={message.id} message={message} />
-									</>
-								);
-							}
-						})}
+						<ScrollArea className='h-[35rem] sm:h-full no-scrollbar'>
+							<div className='p-0.5'>
+								{messagesLocal?.map((message) => {
+									// @ts-expect-error: must be corrected properly
+									if (checkTextValidURL(message.content)) {
+										return (
+											<UserImageMessageCard
+												key={message.id}
+												message={message}
+											/>
+										);
+									} else {
+										if (message.from === 'user') {
+											return (
+												<UserTextMessageCard
+													key={message.id}
+													message={message}
+												/>
+											);
+										}
+										return (
+											<>
+												<ModelTextMessageCard
+													key={message.id}
+													message={message}
+												/>
+											</>
+										);
+									}
+								})}
+							</div>
+						</ScrollArea>
 					</div>
 					{/* Message */}
 					<div
