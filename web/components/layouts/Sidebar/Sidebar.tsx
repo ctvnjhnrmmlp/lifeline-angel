@@ -64,7 +64,6 @@ export default function Sidebar({
 	const {
 		conversations: conversationsLocal,
 		setConversations: setConversationsLocal,
-		searchConversations: searchConversationsLocal,
 		addConversation: addConversationLocal,
 	} = useMultipleConversationStore();
 
