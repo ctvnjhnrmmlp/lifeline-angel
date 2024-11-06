@@ -456,7 +456,7 @@ export default function Page() {
 							</div>
 						)}
 						<ScrollArea className='h-[35rem] sm:h-full no-scrollbar'>
-							<div className='p-0.5'>
+							<div className='space-y-6 p-0.5'>
 								{messagesLocal?.map((message) => {
 									// @ts-expect-error: must be corrected properly
 									if (checkTextValidURL(message.content)) {
