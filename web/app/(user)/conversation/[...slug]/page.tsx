@@ -263,9 +263,9 @@ export default function Page() {
 	}
 
 	return (
-		<main className='h-full'>
-			<section className='h-full'>
-				<div className='h-full outline outline-1 outline-zinc-200 dark:outline-zinc-800 rounded-3xl p-4 md:p-6'>
+		<main className='h-full no-scrollbar'>
+			<section className='h-full no-scrollbar'>
+				<div className='h-full outline outline-1 outline-zinc-200 dark:outline-zinc-800 rounded-3xl p-4 md:p-6 no-scrollbar'>
 					{/* Conversation Navbar */}
 					<div
 						key='conversation-navbar'
@@ -392,7 +392,10 @@ export default function Page() {
 						</div>
 					</div>
 					{/* Messages */}
-					<div key='messages-block' className='space-y-4 py-8 rounded-xl'>
+					<div
+						key='messages-block'
+						className='space-y-4 py-8 rounded-xl no-scrollbar'
+					>
 						{/* {messagesServer && messagesServer.length > 0 && (
 							<div className='bg-background outline outline-1 outline-zinc-200 dark:outline-zinc-800 rounded-3xl mx-auto'>
 								<div className='cursor-pointer px-6 py-4'>
@@ -405,7 +408,7 @@ export default function Page() {
 							</div>
 						)} */}
 						{messagesLocal && !messagesLocal.length && (
-							<div className='space-y-10'>
+							<div className='space-y-10 no-scrollbar'>
 								<div className='space-y-4'>
 									<div>
 										<p className='text-lg sm:text-xl md:text-2xl font-bold text-foreground'>
