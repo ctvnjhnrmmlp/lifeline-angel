@@ -400,7 +400,10 @@ export default function Page() {
 							</div>
 						)} */}
 						{messagesLocal && !messagesLocal.length && (
-							<div className='space-y-10 no-scrollbar'>
+							<div
+								key='starter-messages-block'
+								className='space-y-10 no-scrollbar'
+							>
 								<div className='space-y-4'>
 									<div>
 										<p className='text-lg sm:text-xl md:text-2xl font-bold text-foreground'>
@@ -448,7 +451,10 @@ export default function Page() {
 							</div>
 						)}
 						<ScrollArea className='h-[35rem] sm:h-full no-scrollbar'>
-							<div className='space-y-6 p-0.5'>
+							<div
+								key='user-and-model-messages-block'
+								className='space-y-6 p-0.5'
+							>
 								{messagesLocal?.map((message) => {
 									// @ts-expect-error: must be corrected properly
 									if (checkTextValidURL(message.content)) {
@@ -482,7 +488,7 @@ export default function Page() {
 					</div>
 					{/* Message */}
 					<div
-						key='message-block'
+						key='messaging-block'
 						className='flex justify-between items-center space-x-2 pt-6'
 					>
 						{!typing && (
