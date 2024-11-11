@@ -296,7 +296,9 @@ export default function Sidebar({
 			</SidebarUI>
 			<SidebarInset>
 				<header className='flex shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-4'></header>
-				<div className='flex flex-col gap-4 p-3 no-scrollbar'>{children}</div>
+				<div className='flex flex-col gap-4 p-3 no-scrollbar h-[100rem] sm:h-auto'>
+					{children}
+				</div>
 			</SidebarInset>
 		</SidebarProvider>
 	);
