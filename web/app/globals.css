@@ -83,6 +83,11 @@
 	}
 }
 
+::selection {
+	color: #09090b;
+	background: #e4e4e7;
+}
+
 h1,
 h2,
 h3,

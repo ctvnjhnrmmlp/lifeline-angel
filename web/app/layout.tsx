@@ -14,7 +14,11 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html suppressHydrationWarning lang='en' className='no-scrollbar'>
+		<html
+			suppressHydrationWarning
+			lang='en'
+			className='no-scrollbar select-zinc-200'
+		>
 			<body className={`${FONTS.alpha.className} antialiased no-scrollbar`}>
 				<Providers>
 					<Containers>{children}</Containers>
