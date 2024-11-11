@@ -155,7 +155,7 @@
 			],
 			"procedures": [
 				"Magpahinga at iwasan ang mabibigat na pagkain. Uminom ng malinaw na likido at maglagay ng mainit na compress sa tiyan. Ang mga over-the-counter na antacids o pain relievers ay maaaring makatulong. Kung ang sakit ay malubha o nagpapatuloy, humingi ng medikal na tulong.",
-
+				"",
 				"Magpahinga at manatiling hydrated. Gumamit ng mainit na compress at uminom ng gamot para sa sakit kung kinakailangan. Magpakonsulta sa healthcare provider kung ang sakit ay nagpapatuloy."
 			],
 			"relations": ["Tsaang Gubat", "Luya", "Tanglad"],
@@ -168,7 +168,7 @@
 		{
 			"tag": "Broken toe",
 			"type": "injury",
-			"meaning": "A broken toe occurs when one of the bones in your toe fractures, often due to injury or trauma. Symptoms include pain, swelling, bruising, and difficulty walking. In severe cases, the toe may appear deformed or out of place. It's important to seek medical attention to ensure proper healing and avoid complications. \"fil\": \"Ang nabaling daliri sa paa ay nangyayari kapag ang isa sa mga buto sa iyong daliri sa paa ay nabali, kadalasan dahil sa pinsala o trauma. Ang mga sintomas ay kinabibilangan ng sakit, pamamaga, pasa, at kahirapan sa paglakad. Sa malubhang mga kaso, ang daliri sa paa ay maaaring magmukhang deformed o wala sa lugar. Mahalaga ang paghingi ng medikal na tulong upang matiyak ang tamang paggaling at maiwasan ang mga komplikasyon.",
+			"meaning": "A broken toe occurs when one of the bones in your toe fractures, often due to injury or trauma. Symptoms include pain, swelling, bruising, and difficulty walking. In severe cases, the toe may appear deformed or out of place. It's important to seek medical attention to ensure proper healing and avoid complications.\", \"fil\": \"Ang nabaling daliri sa paa ay nangyayari kapag ang isa sa mga buto sa iyong daliri sa paa ay nabali, kadalasan dahil sa pinsala o trauma. Ang mga sintomas ay kinabibilangan ng sakit, pamamaga, pasa, at kahirapan sa paglakad. Sa malubhang mga kaso, ang daliri sa paa ay maaaring magmukhang deformed o wala sa lugar. Mahalaga ang paghingi ng medikal na tulong upang matiyak ang tamang paggaling at maiwasan ang mga komplikasyon.",
 			"patterns": [
 				"Broken toe",
 				"How to treat a broken toe?",
@@ -184,7 +184,7 @@
 			],
 			"procedures": [
 				"Rest and avoid putting weight on the toe. Apply ice to reduce swelling and elevate the foot. Use a splint or buddy tape the toe to the adjacent one. Seek medical attention if the pain is severe.",
-
+				"",
 				"Elevate the foot, apply ice, and tape the toe to the next one. Consult a healthcare provider if necessary.', 'fil': 'Itaas ang paa, maglagay ng yelo, at i-tape ang daliri sa katabing daliri."
 			],
 			"relations": ["Lagundi", "Sambong", "Forrest Tea"],
@@ -213,7 +213,7 @@
 			],
 			"procedures": [
 				"Magpahinga at iwasang maglagay ng bigat sa daliri sa paa. Maglagay ng yelo upang mabawasan ang pamamaga at itaas ang paa. Gumamit ng splint o i-tape ang daliri sa paa sa katabing daliri. Humingi ng medikal na tulong kung ang sakit ay malubha.",
-
+				"",
 				"Itaas ang paa, maglagay ng yelo, at i-tape ang daliri sa katabing daliri. Magpakonsulta sa healthcare provider kung kinakailangan."
 			],
 			"relations": ["Lagundi", "Sambong", "Tsaang Gubat"],
@@ -242,10 +242,10 @@
 			],
 			"procedures": [
 				"If someone is choking, ask if they can speak or cough. If they cannot, perform the Heimlich maneuver by standing behind them, wrapping your arms around their waist, and giving quick, upward thrusts below their ribcage.",
-
+				"",
 				"Perform the Heimlich maneuver or back blows to dislodge the object. Call emergency services if the person cannot breathe.', 'fil': 'Isagawa ang Heimlich maneuver o back blows upang alisin ang bagay."
 			],
-			"relations": ["nan"],
+			"relations": [],
 			"references": [
 				"https://www.redcross.org.uk/first-aid/learn-first-aid/choking-adult",
 				"https://www.mayoclinic.org/first-aid/first-aid-choking/basics/art-20056637"
@@ -271,14 +271,14 @@
 			],
 			"procedures": [
 				"Kung ang isang tao ay nasasakal, tanungin kung sila ay makapagsalita o makakaugong. Kung hindi nila magawa, isagawa ang Heimlich maneuver sa pamamagitan ng pagtayo sa likuran nila, pagyakap sa kanilang baywang, at pagbibigay ng mabilis at pataas na puwersa sa ilalim ng kanilang ribcage. Tumawag agad ng emergency services.",
-
+				"",
 				"Isagawa ang Heimlich maneuver o back blows upang alisin ang bagay. Tumawag ng emergency services kung ang tao ay hindi makakahinga.",
-
+				"",
 				"Kung ang tao ay hindi makapagsalita, makakaugong, o makahinga, isagawa ang Heimlich maneuver: Tumayo sa likuran ng tao, ilagay ang iyong mga braso sa kanilang baywang, gumawa ng kamao gamit ang isang kamay, ilagay ito sa itaas ng kanilang pusod, at bigyan ng mabilis, pataas na puwersa. Kung ang tao ay mawalan ng malay, simulan ang CPR at tumawag ng emergency services.",
-
+				"",
 				"Isagawa ang Heimlich maneuver sa pamamagitan ng pagtayo sa likuran ng tao at pagbibigay ng mabilis, pataas na abdominal thrusts. Tumawag ng emergency services kung kinakailangan."
 			],
-			"relations": ["nan"],
+			"relations": [],
 			"references": [
 				"https://www.redcross.org.uk/first-aid/learn-first-aid/choking-adult",
 				"https://www.mayoclinic.org/first-aid/first-aid-choking/basics/art-20056637"
@@ -304,7 +304,7 @@
 			],
 			"procedures": [
 				"Stay hydrated by drinking plenty of fluids like water or an oral rehydration solution. Avoid solid foods until the symptoms improve. Over-the-counter anti-diarrheal medications can be used, but consult a healthcare provider if symptoms persist.",
-
+				"",
 				"Drink fluids, avoid solid food, and consider over-the-counter medications. Seek medical help if symptoms persist."
 			],
 			"relations": ["Forrest Tea", "Buko Water", "Lagundi"],
@@ -333,7 +333,7 @@
 			],
 			"procedures": [
 				"Manatiling hydrated sa pamamagitan ng pag-inom ng maraming likido tulad ng tubig o oral rehydration solution. Iwasan ang solidong pagkain hanggang sa bumuti ang mga sintomas. Maaaring gumamit ng over-the-counter na anti-diarrheal medications, ngunit magpakonsulta sa healthcare provider kung ang mga sintomas ay nagpapatuloy.",
-
+				"",
 				"Uminom ng likido, iwasan ang solidong pagkain, at isaalang-alang ang paggamit ng over-the-counter na mga gamot. Humingi ng medikal na tulong kung ang mga sintomas ay nagpapatuloy."
 			],
 			"relations": ["Tsaang Gubat", "Lagundi", "Katas ng Buko"],
@@ -362,7 +362,7 @@
 			],
 			"procedures": [
 				"Move to a cool, shaded area and drink plenty of water. Loosen or remove clothing and apply cool, wet cloths to the skin. Rest until fully recovered. If symptoms worsen, seek medical help.",
-
+				"",
 				"Cool down, hydrate, and rest in a shaded area. Seek medical attention if symptoms do not improve."
 			],
 			"relations": ["Buko Water", "Lemongrass"],
@@ -391,7 +391,7 @@
 			],
 			"procedures": [
 				"Lumipat sa isang malamig at may anino na lugar at uminom ng maraming tubig. Alisin o luwagan ang damit at maglagay ng malamig, basang tela sa balat. Magpahinga hanggang sa ganap na mag-recover. Kung lumalala ang mga sintomas, humingi ng medikal na tulong.",
-
+				"",
 				"Palamigin ang katawan, manatiling hydrated, at magpahinga sa isang lugar na may anino. Humingi ng medikal na atensyon kung ang mga sintomas ay hindi bumubuti."
 			],
 			"relations": ["Katas ng Buko", "Tanglad"],
@@ -422,11 +422,11 @@
 			],
 			"procedures": [
 				"Move to a cooler place and lie down with your legs slightly elevated. Apply cool water to your skin and use a fan to help with cooling. Drink cool water or an electrolyte drink, but avoid sugary or alcoholic beverages. Seek emergency medical attention immediately.",
-
+				"",
 				"Get to a cool place, remove excess clothing, and apply cold packs or wet cloths. Drink cool water or sports drinks, and seek immediate medical help.",
-
+				"",
 				"Call emergency services immediately. Move the person to a cool area and remove excess clothing. Use cool water or ice packs to lower their body temperature. Keep monitoring their condition until help arrives.",
-
+				"",
 				"Seek emergency medical help. Cool the person down with water or ice packs and stay with them until help arrives."
 			],
 			"relations": ["Buko Water", "Tanglad"],
@@ -453,11 +453,11 @@
 			],
 			"procedures": [
 				"Lumipat sa isang mas malamig na lugar at humiga na may bahagyang itaas ang mga binti. Maglagay ng malamig na tubig sa iyong balat at gumamit ng pamaypay upang makatulong sa pagpapalamig. Uminom ng malamig na tubig o electrolyte drink, ngunit iwasan ang matatamis o alcoholic na inumin. Humingi ng agarang medikal na tulong.",
-
+				"",
 				"Pumunta sa isang malamig na lugar, alisin ang sobrang damit, at maglagay ng cold packs o basang tela. Uminom ng malamig na tubig o sports drinks, at humingi ng agarang medikal na tulong.",
-
+				"",
 				"Tumawag agad ng emergency services. Ilipat ang tao sa isang malamig na lugar at alisin ang sobrang damit. Gumamit ng malamig na tubig o ice packs upang ibaba ang kanilang temperatura ng katawan. Patuloy na bantayan ang kanilang kondisyon hanggang dumating ang tulong.",
-
+				"",
 				"Humingi ng agarang medikal na tulong. Palamigin ang tao gamit ang tubig o ice packs at manatili sa kanilang tabi hanggang dumating ang tulong.",
 				""
 			],
@@ -485,11 +485,11 @@
 			],
 			"procedures": [
 				"Sit up straight and lean slightly forward. Pinch the soft part of your nose and hold for 10-15 minutes. Apply a cold compress to the bridge of the nose. If the bleeding continues for more than 20 minutes, seek medical attention.",
-
+				"",
 				"Lean forward, pinch your nose, and hold until the bleeding stops. Use a cold compress and seek medical help if the bleeding doesn't stop.",
-
+				"",
 				"Sit up straight and lean forward slightly. Pinch the soft part of your nose with your thumb and index finger for 10-15 minutes. Breathe through your mouth and avoid lying down. Apply a cold compress to the bridge of your nose. Seek medical help if the bleeding doesn't stop after 20 minutes.",
-
+				"",
 				"Tilt your head forward and pinch your nose just below the bridge. Hold for 10-15 minutes and avoid blowing your nose afterward."
 			],
 			"relations": ["Guava Leaves", "Lagundi", "Sambong", "Forest Tea"],
@@ -520,11 +520,11 @@
 			],
 			"procedures": [
 				"Umupo ng tuwid at magyuko ng bahagya pasulong. Pisilin ang malambot na bahagi ng iyong ilong at hawakan ito ng 10-15 minuto. Maglagay ng malamig na compress sa tulay ng ilong. Kung ang pagdurugo ay magpapatuloy ng higit sa 20 minuto, humingi ng medikal na tulong.",
-
+				"",
 				"Yuko pasulong, pisilin ang iyong ilong, at hawakan hanggang sa tumigil ang pagdurugo. Gumamit ng malamig na compress at humingi ng medikal na tulong kung ang pagdurugo ay hindi tumitigil.",
-
+				"",
 				"Umupo ng tuwid at magyuko ng bahagya pasulong. Pisilin ang malambot na bahagi ng iyong ilong gamit ang iyong hinlalaki at hintuturo ng 10-15 minuto. Huminga sa pamamagitan ng iyong bibig at iwasang humiga. Maglagay ng malamig na compress sa tulay ng iyong ilong. Humingi ng medikal na tulong kung ang pagdurugo ay hindi tumitigil pagkatapos ng 20 minuto.",
-
+				"",
 				"Itilt ang iyong ulo pasulong at pisilin ang iyong ilong sa ilalim ng tulay. Hawakan ito ng 10-15 minuto at iwasang sabunin ang iyong ilong pagkatapos."
 			],
 			"relations": ["Dahon ng Bayabas", "Lagundi", "Sambong", "Tsaang Gubat"],
@@ -553,14 +553,13 @@
 			],
 			"procedures": [
 				"Stay calm and avoid straining during bowel movements. Increase fiber intake and drink plenty of water to ease bowel movements. Seek medical attention to determine the cause and receive appropriate treatment.",
-
+				"",
 				"Increase fiber and water intake. Avoid straining and consult a healthcare provider to determine the cause."
 			],
-			"relations": ["nan"],
+			"relations": [],
 			"references": [
 				"https://www.mayoclinic.org/symptoms/rectal-bleeding/basics/definition/sym-20050740",
-				"https://www.webmd.com/digestive-disorders/understanding-rectal-bleeding-basics",
-				""
+				"https://www.webmd.com/digestive-disorders/understanding-rectal-bleeding-basics"
 			],
 			"context_set": ""
 		},
@@ -583,10 +582,10 @@
 			],
 			"procedures": [
 				"Manatiling kalmado at iwasang mag-igting sa panahon ng pagdumi. Dagdagan ang iyong fiber intake at uminom ng maraming tubig upang mapadali ang pagdumi. Humingi ng medikal na tulong upang matukoy ang sanhi at makatanggap ng angkop na paggamot.",
-
+				"",
 				"Dagdagan ang fiber at water intake. Iwasan ang pag-igting at kumonsulta sa healthcare provider upang matukoy ang sanhi."
 			],
-			"relations": ["nan"],
+			"relations": [],
 			"references": [
 				"https://www.mayoclinic.org/symptoms/rectal-bleeding/basics/definition/sym-20050740",
 				"https://www.webmd.com/digestive-disorders/understanding-rectal-bleeding-basics",
@@ -597,7 +596,7 @@
 		{
 			"tag": "Testicle pain",
 			"type": "injury",
-			"meaning": "Testicle pain refers to discomfort or pain in one or both testicles. It can be caused by various factors such as injury, infection, or medical conditions like testicular torsion. Symptoms may include swelling, redness, and tenderness. Persistent or severe testicle pain should be evaluated by a healthcare provider.                                ",
+			"meaning": "Testicle pain refers to discomfort or pain in one or both testicles. It can be caused by various factors such as injury, infection, or medical conditions like testicular torsion. Symptoms may include swelling, redness, and tenderness. Persistent or severe testicle pain should be evaluated by a healthcare provider.\n                                ",
 			"patterns": [
 				"Testicle pain",
 				"What to do if I have testicle pain?",
@@ -613,10 +612,10 @@
 			],
 			"procedures": [
 				"Rest and avoid strenuous activity. Apply ice to the affected area and wear supportive underwear. If the pain persists or is severe, seek medical attention.",
-
+				"",
 				"Rest, use ice, and wear supportive clothing. Seek medical advice if the pain is severe or does not improve."
 			],
-			"relations": ["nan"],
+			"relations": [],
 			"references": [
 				"https://www.mayoclinic.org/symptoms/testicle-pain/basics/definition/sym-20050942",
 				"https://www.healthline.com/health/testicle-pain",
@@ -643,10 +642,10 @@
 			],
 			"procedures": [
 				"Magpahinga at iwasan ang mabibigat na aktibidad. Maglagay ng yelo sa apektadong lugar at magsuot ng supportive na underwear. Kung ang sakit ay nagpapatuloy o malubha, humingi ng medikal na tulong.",
-
+				"",
 				"Magpahinga, gumamit ng yelo, at magsuot ng supportive na damit. Humingi ng medikal na payo kung ang sakit ay malubha o hindi bumubuti."
 			],
-			"relations": ["nan"],
+			"relations": [],
 			"references": [
 				"https://www.mayoclinic.org/symptoms/testicle-pain/basics/definition/sym-20050942",
 				"https://www.healthline.com/health/testicle-pain",
@@ -657,7 +656,7 @@
 		{
 			"tag": "Vertigo",
 			"type": "injury",
-			"meaning": "Vertigo is a sensation of feeling off balance, often described as feeling like you or your surroundings are spinning. It can be caused by inner ear problems, infections, or other medical conditions. Symptoms include dizziness, nausea, and difficulty maintaining balance. Managing vertigo involves addressing the underlying cause and using techniques to reduce symptoms.",
+			"meaning": "Vertigo is a sensation of feeling off balance, often described as feeling like you or your surroundings are spinning. It can be caused by inner ear problems, infections, or other medical conditions. Symptoms include dizziness, nausea, and difficulty maintaining balance. Managing vertigo involves addressing the underlying cause and using techniques to reduce symptoms.\n\t\t\t\t",
 			"patterns": [
 				"Vertigo",
 				"What to do if I have vertigo?",
@@ -673,7 +672,7 @@
 			],
 			"procedures": [
 				"Sit or lie down immediately when feeling dizzy. Avoid sudden head movements and rest in a dark, quiet room. Stay hydrated and seek medical advice if symptoms persist.",
-
+				"",
 				"Rest and avoid sudden movements. Stay hydrated and consult a healthcare provider if the symptoms continue."
 			],
 			"relations": ["Ginger", "Ginkgo Biloba", "Lagundi", "Forest Tea"],
@@ -702,7 +701,7 @@
 			],
 			"procedures": [
 				"Umupo o humiga agad kapag nakakaramdam ng pagkahilo. Iwasan ang biglaang paggalaw ng ulo at magpahinga sa isang madilim at tahimik na kwarto. Manatiling hydrated at humingi ng medikal na payo kung ang mga sintomas ay nagpapatuloy.",
-
+				"",
 				"Magpahinga at iwasan ang biglaang paggalaw. Manatiling hydrated at kumonsulta sa healthcare provider kung ang mga sintomas ay nagpapatuloy."
 			],
 			"relations": ["Luya", "Ginkgo Biloba", "Lagundi", "Tsaang Gubat"],
@@ -715,7 +714,7 @@
 		{
 			"tag": "Eye injury",
 			"type": "injury",
-			"meaning": "An eye injury can occur due to various reasons such as trauma, foreign objects, or chemical exposure. Symptoms may include pain, redness, swelling, and vision changes. Immediate and appropriate first aid can help prevent further damage and complications.",
+			"meaning": "An eye injury can occur due to various reasons such as trauma, foreign objects, or chemical exposure. Symptoms may include pain, redness, swelling, and vision changes. Immediate and appropriate first aid can help prevent further damage and complications.\",\n\t\t\t\t",
 			"patterns": [
 				"Eye injury",
 				"What to do if I have an eye injury?",
@@ -731,10 +730,10 @@
 			],
 			"procedures": [
 				"Avoid rubbing the eye and rinse it with clean water. If there is a foreign object in the eye, do not attempt to remove it yourself. Cover the eye with a clean cloth or eye patch and seek medical attention immediately.",
-
+				"",
 				"Rinse the eye with clean water and avoid rubbing it. Seek emergency medical help, especially if there is a foreign object in the eye."
 			],
-			"relations": ["nan"],
+			"relations": [],
 			"references": [
 				"https://www.mayoclinic.org/first-aid/first-aid-eye-injury/basics/art-20056646",
 				"https://www.webmd.com/first-aid/eye-injuries-treatment"
@@ -760,10 +759,10 @@
 			],
 			"procedures": [
 				"Iwasan ang pagdila sa mata at banlawan ito ng malinis na tubig. Kung may banyagang bagay sa mata, huwag subukang alisin ito nang mag-isa. Takpan ang mata ng malinis na tela o eye patch at humingi ng agarang medikal na tulong.",
-
+				"",
 				"Banlawan ang mata ng malinis na tubig at iwasan ang pagdila dito. Humingi ng agarang medikal na tulong, lalo na kung may banyagang bagay sa mata."
 			],
-			"relations": ["nan"],
+			"relations": [],
 			"references": [
 				"https://www.mayoclinic.org/first-aid/first-aid-eye-injury/basics/art-20056646",
 				"https://www.webmd.com/first-aid/eye-injuries-treatment"
@@ -773,7 +772,7 @@
 		{
 			"tag": "Food poisoning",
 			"type": "injury",
-			"meaning": "Food poisoning is an illness caused by consuming contaminated food or drink. Symptoms include nausea, vomiting, diarrhea, and abdominal pain. It is important to stay hydrated and rest while recovering.",
+			"meaning": "Food poisoning is an illness caused by consuming contaminated food or drink. Symptoms include nausea, vomiting, diarrhea, and abdominal pain. It is important to stay hydrated and rest while recovering.\n\t\t\t\n\t\t\t",
 			"patterns": [
 				"Food poisoning",
 				"How to treat food poisoning?",
@@ -789,7 +788,7 @@
 			],
 			"procedures": [
 				"Stay hydrated by drinking clear fluids like water or oral rehydration solutions. Rest and avoid solid foods until symptoms subside. If symptoms are severe or persistent, seek medical attention.",
-
+				"",
 				"Drink clear fluids, rest, and avoid solid food until symptoms improve. Consult a healthcare provider if symptoms persist."
 			],
 			"relations": ["Ginger", "Guava Leaves", "Sambong", "Buko Water"],
@@ -818,7 +817,7 @@
 			],
 			"procedures": [
 				"Manatiling hydrated sa pamamagitan ng pag-inom ng malinaw na likido tulad ng tubig o oral rehydration solutions. Magpahinga at iwasan ang solidong pagkain hanggang sa humupa ang mga sintomas. Kung ang mga sintomas ay malubha o nagpapatuloy, humingi ng medikal na tulong.",
-
+				"",
 				"Uminom ng malinaw na likido, magpahinga, at iwasan ang solidong pagkain hanggang sa bumuti ang mga sintomas. Kumonsulta sa healthcare provider kung ang mga sintomas ay nagpapatuloy."
 			],
 			"relations": ["Luya", "Dahon ng Bayabas", "Sambong", "Katas ng Buko"],
@@ -831,7 +830,7 @@
 		{
 			"tag": "Convulsion",
 			"type": "injury",
-			"meaning": "Convulsions, also known as seizures, are sudden, uncontrolled electrical disturbances in the brain. They can cause changes in behavior, movements, feelings, and levels of consciousness. Immediate first aid is crucial to protect the person from injury and ensure they receive appropriate medical care.",
+			"meaning": "Convulsions, also known as seizures, are sudden, uncontrolled electrical disturbances in the brain. They can cause changes in behavior, movements, feelings, and levels of consciousness. Immediate first aid is crucial to protect the person from injury and ensure they receive appropriate medical care.\n\t\t\t\t",
 			"patterns": [
 				"Convulsion",
 				"What to do during convulsions?",
@@ -847,10 +846,10 @@
 			],
 			"procedures": [
 				"Protect the person from injury by removing nearby objects. Do not restrain them or put anything in their mouth. After the convulsions stop, place them in the recovery position and monitor their breathing. Seek emergency medical help.",
-
+				"",
 				"Stay with the person and protect them from harm. Do not restrain them or place anything in their mouth. Call emergency services."
 			],
-			"relations": ["nan"],
+			"relations": [],
 			"references": [
 				"https://www.mayoclinic.org/first-aid/first-aid-seizures/basics/art-20056678",
 				"https://www.webmd.com/epilepsy/guide/first-aid-seizures"
@@ -876,10 +875,10 @@
 			],
 			"procedures": [
 				"Protektahan ang tao mula sa pinsala sa pamamagitan ng pagtanggal ng mga nakapaligid na bagay. Huwag silang pigilan o maglagay ng anumang bagay sa kanilang bibig. Pagkatapos huminto ang mga convulsions, ilagay sila sa recovery position at bantayan ang kanilang paghinga. Humingi ng agarang medikal na tulong.",
-
+				"",
 				"Manatili sa tabi ng tao at protektahan sila mula sa pinsala. Huwag silang pigilan o maglagay ng anumang bagay sa kanilang bibig. Tumawag ng emergency services."
 			],
-			"relations": ["nan"],
+			"relations": [],
 			"references": [
 				"https://www.mayoclinic.org/first-aid/first-aid-seizures/basics/art-20056678",
 				"https://www.webmd.com/epilepsy/guide/first-aid-seizures"
@@ -889,7 +888,7 @@
 		{
 			"tag": "Head injury",
 			"type": "injury",
-			"meaning": "A head injury can result from various causes such as falls, accidents, or sports injuries. Symptoms may include headache, dizziness, confusion, and nausea. Immediate and appropriate first aid can help prevent further complications.",
+			"meaning": "A head injury can result from various causes such as falls, accidents, or sports injuries. Symptoms may include headache, dizziness, confusion, and nausea. Immediate and appropriate first aid can help prevent further complications.\n\t\t\t\n\t\t\t",
 			"patterns": [
 				"Head injury",
 				"What to do for a head injury?",
@@ -905,7 +904,7 @@
 			],
 			"procedures": [
 				"If the injury is minor, apply a cold compress to reduce swelling and rest. For more serious injuries, seek emergency medical help immediately. Keep the person awake and monitor their symptoms closely.",
-
+				"",
 				"Use a cold compress for minor injuries. For serious head injuries, seek immediate medical help and monitor the person's condition."
 			],
 			"relations": ["Sambong", "Lagundi", "Forest Tea", "Ginkgo Biloba"],
@@ -934,7 +933,7 @@
 			],
 			"procedures": [
 				"Kung ang pinsala ay maliit, maglagay ng malamig na compress upang mabawasan ang pamamaga at magpahinga. Para sa mas seryosong pinsala, humingi ng agarang medikal na tulong. Panatilihing gising ang tao at bantayan ang kanilang mga sintomas.",
-
+				"",
 				"Gumamit ng malamig na compress para sa maliit na pinsala. Para sa seryosong pinsala sa ulo, humingi ng agarang medikal na tulong at bantayan ang kondisyon ng tao."
 			],
 			"relations": ["Sambong", "Lagundi", "Tsaang Gubat", "Ginkgo Biloba"],
@@ -958,9 +957,9 @@
 			],
 			"procedures": [
 				"Help the person lie down and elevate their legs to improve blood flow to the brain. Loosen any tight clothing and keep them lying down until they recover. If they don't regain consciousness quickly, seek medical help immediately.",
-
+				"",
 				"Have the person lie down, elevate their legs, and loosen tight clothing. Seek medical attention if they don't regain consciousness.",
-
+				"",
 				""
 			],
 			"relations": ["Custard Apple"],
@@ -994,7 +993,7 @@
 			],
 			"procedures": [
 				"Tulungan ang tao na humiga at itaas ang kanilang mga binti upang mapabuti ang daloy ng dugo sa utak. Luwagan ang anumang masisikip na damit at panatilihing nakahiga sila hanggang sa sila ay makabawi. Kung hindi sila agad bumalik sa malay, humingi ng agarang medikal na tulong.",
-
+				"",
 				"Pahigain ang tao, itaas ang kanilang mga binti, at luwagan ang masisikip na damit. Humingi ng medikal na tulong kung hindi sila bumalik sa malay."
 			],
 			"relations": ["Atis"],
@@ -1007,7 +1006,7 @@
 		{
 			"tag": "Headache",
 			"type": "injury",
-			"meaning": "Headaches can be caused by various factors such as stress, dehydration, or tension. Symptoms may include a dull or sharp pain in the head, sensitivity to light or sound, and nausea. Proper management and treatment can help alleviate the discomfort.",
+			"meaning": "Headaches can be caused by various factors such as stress, dehydration, or tension. Symptoms may include a dull or sharp pain in the head, sensitivity to light or sound, and nausea. Proper management and treatment can help alleviate the discomfort.\n\t\t\t",
 			"patterns": [
 				"Headache",
 				"How to treat a headache?",
@@ -1022,10 +1021,10 @@
 				"How to care for a headache?"
 			],
 			"procedures": [
-				"Rest in a quiet, dark room and apply a cold or warm compress to your forehead. Over-the-counter pain relievers like ibuprofen or acetaminophen can help. Stay hydrated and avoid triggers like bright lights or loud noises.",
-
+				"Rest in a quiet, dark room and apply a cold or warm compress to your forehead. Over-the-counter pain relievers like ibuprofen or acetaminophen can help. Stay hydrated and avoid triggers like bright lights or loud noises.\",",
+				"",
 				"Rest, use pain relief medication, and apply a compress. Stay hydrated and avoid known triggers.",
-
+				"",
 				""
 			],
 			"relations": ["Lagundi", "Yerba Buena", "Ginger"],
@@ -1054,7 +1053,7 @@
 			],
 			"procedures": [
 				"Magpahinga sa isang tahimik at madilim na kwarto at maglagay ng malamig o mainit na compress sa iyong noo. Maaaring makatulong ang mga over-the-counter na pain relievers tulad ng ibuprofen o acetaminophen. Manatiling hydrated at iwasan ang mga trigger tulad ng maliwanag na ilaw o malalakas na tunog.",
-
+				"",
 				"Magpahinga, gumamit ng gamot para sa sakit, at maglagay ng compress. Manatiling hydrated at iwasan ang mga kilalang trigger."
 			],
 			"relations": ["Lagundi", "Yerba Buena", "Luya"],
@@ -1083,9 +1082,9 @@
 			],
 			"procedures": [
 				"Rest and stay hydrated by drinking plenty of fluids. Use over-the-counter medications to relieve symptoms like congestion and sore throat. Inhale steam or use a humidifier to ease breathing. If symptoms persist or worsen, consult a healthcare provider.",
-
+				"",
 				"Stay hydrated, rest, and use medications for symptom relief. Seek medical advice if the cold persists or worsens.",
-
+				"",
 				""
 			],
 			"relations": [
@@ -1119,7 +1118,7 @@
 			],
 			"procedures": [
 				"Magpahinga at manatiling hydrated sa pamamagitan ng pag-inom ng maraming likido. Gumamit ng mga over-the-counter na gamot para maibsan ang mga sintomas tulad ng congestion at sore throat. Huminga ng steam o gumamit ng humidifier upang mapadali ang paghinga. Kung ang mga sintomas ay nagpapatuloy o lumalala, kumonsulta sa healthcare provider.",
-
+				"",
 				"Manatiling hydrated, magpahinga, at gumamit ng mga gamot para sa pag-alis ng sintomas. Humingi ng medikal na payo kung ang sipon ay nagpapatuloy o lumalala."
 			],
 			"relations": [
@@ -1138,7 +1137,7 @@
 		{
 			"tag": "Drowning",
 			"type": "injury",
-			"meaning": "Drowning occurs when a person is submerged in water and unable to breathe. Symptoms may include difficulty breathing, coughing, and unconsciousness. Immediate and appropriate rescue and first aid can save lives and prevent further complications.",
+			"meaning": "Drowning occurs when a person is submerged in water and unable to breathe. Symptoms may include difficulty breathing, coughing, and unconsciousness. Immediate and appropriate rescue and first aid can save lives and prevent further complications.\n\t\t\t\t\n\t\t\t",
 			"patterns": [
 				"Drowning",
 				"What to do if someone is drowning?",
@@ -1154,12 +1153,12 @@
 			],
 			"procedures": [
 				"Call for emergency help immediately. If it's safe, try to reach the person with a pole or throw a flotation device. Do not enter the water unless you're trained in water rescue. Once the person is out of the water, check for breathing and start CPR if necessary.",
-
+				"",
 				"Call emergency services and try to help without putting yourself at risk. Use a pole or flotation device, and be ready to perform CPR.",
-
+				"",
 				""
 			],
-			"relations": ["nan"],
+			"relations": [],
 			"references": [
 				"https://www.mayoclinic.org/first-aid/first-aid-drowning/basics/art-20056649",
 				"https://www.mountsinai.org/health-library/condition/drowning"
@@ -1185,10 +1184,10 @@
 			],
 			"procedures": [
 				"Tumawag ng agarang tulong sa emergency. Kung ligtas, subukang abutin ang tao gamit ang isang poste o ihagis ang flotation device. Huwag pumasok sa tubig maliban kung ikaw ay may pagsasanay sa water rescue. Kapag ang tao ay nailabas na sa tubig, suriin ang kanilang paghinga at simulan ang CPR kung kinakailangan.",
-
+				"",
 				"Tumawag ng emergency services at subukang tumulong nang hindi inilalagay ang iyong sarili sa panganib. Gumamit ng poste o flotation device, at maging handa na magsagawa ng CPR."
 			],
-			"relations": ["nan"],
+			"relations": [],
 			"references": [
 				"https://www.mayoclinic.org/first-aid/first-aid-drowning/basics/art-20056649",
 				"https://www.mountsinai.org/health-library/condition/drowning"
@@ -1198,7 +1197,7 @@
 		{
 			"tag": "Chest pain",
 			"type": "injury",
-			"meaning": "Chest pain can be caused by various factors such as heart problems, lung issues, or digestive disorders. Symptoms may include a sharp, dull, or burning sensation in the chest, shortness of breath, and dizziness. Immediate and appropriate action can help prevent serious complications.",
+			"meaning": "Chest pain can be caused by various factors such as heart problems, lung issues, or digestive disorders. Symptoms may include a sharp, dull, or burning sensation in the chest, shortness of breath, and dizziness. Immediate and appropriate action can help prevent serious complications.\n\t\t\t\t\n\t\t\t",
 			"patterns": [
 				"Chest pain",
 				"What to do for chest pain?",
@@ -1214,7 +1213,7 @@
 			],
 			"procedures": [
 				"If you experience chest pain, stop any physical activity and rest. Take deep breaths and try to stay calm. If the pain persists, seek emergency medical help immediately, as it could be a sign of a heart attack.",
-
+				"",
 				"Rest and take slow, deep breaths. Seek emergency medical attention if the pain is severe or does not go away"
 			],
 			"relations": ["Garlic (Chest Pain)", "Ginger (Chest Pain)", "Almonds"],
@@ -1226,7 +1225,7 @@
 		},
 		{
 			"tag": "Pananakit ng dibdib",
-			"type": "injury",
+			"type": "Injury",
 			"meaning": "Ang pananakit ng dibdib ay maaaring sanhi ng iba't ibang salik tulad ng problema sa puso, isyu sa baga, o mga sakit sa pagtunaw. Ang mga sintomas ay maaaring kabilang ang matalim, mapurol, o nasusunog na pakiramdam sa dibdib, hirap sa paghinga, at pagkahilo. Ang agarang at angkop na aksyon ay makakatulong upang maiwasan ang seryosong komplikasyon.",
 			"patterns": [
 				"Pananakit ng dibdib",
@@ -1243,7 +1242,7 @@
 			],
 			"procedures": [
 				"Kung makaranas ka ng pananakit sa dibdib, itigil ang anumang pisikal na aktibidad at magpahinga. Huminga ng malalim at subukang manatiling kalmado. Kung magpapatuloy ang sakit, humingi ng agarang medikal na tulong, dahil maaari itong senyales ng atake sa puso.",
-
+				"",
 				"Magpahinga at huminga ng mabagal at malalim. Humingi ng agarang medikal na atensyon kung ang sakit ay malubha o hindi nawawala."
 			],
 			"relations": ["Garlic (Chest Pain)", "Ginger (Chest Pain)", "Almonds"],
@@ -1255,8 +1254,8 @@
 		},
 		{
 			"tag": "Dehydration",
-			"type": "injury",
-			"meaning": "Dehydration occurs when the body loses more fluids than it takes in, leading to an imbalance. Symptoms may include dry mouth, thirst, dark urine, dizziness, and fatigue. Proper hydration and timely treatment can help restore fluid balance and prevent complications.",
+			"type": "Injury",
+			"meaning": "Dehydration occurs when the body loses more fluids than it takes in, leading to an imbalance. Symptoms may include dry mouth, thirst, dark urine, dizziness, and fatigue. Proper hydration and timely treatment can help restore fluid balance and prevent complications.\n\t\t\t",
 			"patterns": [
 				"Dehydration",
 				"How to treat dehydration?",
@@ -1272,9 +1271,9 @@
 			],
 			"procedures": [
 				"Drink plenty of water or an oral rehydration solution (ORS). Rest in a cool environment and avoid physical activity until fully rehydrated. For severe dehydration, seek medical attention.",
-
+				"",
 				"Increase fluid intake, rest, and use an ORS if available. Seek medical help if dehydration is severe.",
-
+				"",
 				""
 			],
 			"relations": ["Buko Water", "Lemongrass"],
@@ -1286,7 +1285,7 @@
 		},
 		{
 			"tag": "Pagkauhaw",
-			"type": "injury",
+			"type": "Injury",
 			"meaning": "Ang pagkauhaw ay nangyayari kapag ang katawan ay nawawalan ng mas maraming likido kaysa sa tinatanggap, na nagdudulot ng kawalan ng balanse. Ang mga sintomas ay maaaring kabilang ang tuyong bibig, uhaw, madilim na ihi, pagkahilo, at pagkapagod. Ang tamang hydration at agarang paggamot ay makakatulong upang maibalik ang balanse ng likido at maiwasan ang komplikasyon.",
 			"patterns": [
 				"Pagkauhaw",
@@ -1303,7 +1302,7 @@
 			],
 			"procedures": [
 				"Uminom ng maraming tubig o oral rehydration solution (ORS). Magpahinga sa isang malamig na kapaligiran at iwasan ang pisikal na aktibidad hanggang sa ganap na ma-rehydrate. Para sa malubhang dehydration, humingi ng medikal na tulong.",
-
+				"",
 				"Dadagan ang pag-inom ng likido, magpahinga, at gumamit ng ORS kung available. Humingi ng tulong medikal kung ang dehydration ay malubha."
 			],
 			"relations": ["Katas ng Buko", "Tanglad"],
@@ -1315,7 +1314,7 @@
 		},
 		{
 			"tag": "Cut",
-			"type": "injury",
+			"type": "Injury",
 			"meaning": "Cuts are injuries caused by a sharp object that breaks the skin. They can range from minor to severe, depending on the depth and location of the cut. Common causes of cuts include: Accidents: Slips, falls, or other accidents can lead to cuts. Sharp objects: Knives, scissors, broken glass, and other sharp objects can cause cuts.",
 			"patterns": [
 				"Cut",
@@ -1327,7 +1326,12 @@
 				"How to stop bleeding from a cut?",
 				"First aid for cuts?",
 				"How to clean a cut wound?",
-				"How do I prevent infection in a cut?"
+				"How do I prevent infection in a cut?",
+				"Wound",
+				"i have wound",
+				"Wounds",
+				"i have wounds",
+				"how to treat wounds"
 			],
 			"procedures": [
 				"Clean the cut with soap and water to avoid infection. Apply pressure to stop the bleeding, and once stopped, apply an antibiotic ointment. Cover the wound with a bandage and change it daily. If the cut is deep, seek medical help."
@@ -1342,7 +1346,7 @@
 		},
 		{
 			"tag": "Hiwa",
-			"type": "injury",
+			"type": "Injury",
 			"meaning": "Hiwa ay mga pinsala na dulot ng isang matalim na bagay na pumuputol sa balat. Maaari silang mag-iba mula sa menor de edad hanggang malubha, depende sa lalim at lokasyon ng hiwa. Ang mga karaniwang sanhi ng hiwa ay kinabibilangan ng: Aksidente: Ang mga pagdulas, pagkahulog, o iba pang aksidente ay maaaring humantong sa mga hiwa. Matatalim na bagay: Ang mga kutsilyo, gunting, sirang baso, at iba pang matatalim na bagay ay maaaring magdulot ng mga hiwa.",
 			"patterns": [
 				"Hiwa",
@@ -1351,7 +1355,9 @@
 				"Anong gamot ang ilalagay sa hiwa?",
 				"Paano pigilan ang pagdurugo mula sa hiwa?",
 				"Ano ang dapat gawin upang maiwasan ang impeksyon sa hiwa?",
-				"Mga hakbang sa paggamot ng hiwa?"
+				"Mga hakbang sa paggamot ng hiwa?",
+				"sugat",
+				"paano gamotin ang sugat"
 			],
 			"procedures": [
 				"Linisin ang hiwa gamit ang sabon at tubig upang maiwasan ang impeksyon. Lagyan ng presyon upang ihinto ang pagdurugo, at sa sandaling tumigil, maglagay ng antibiotic ointment. Takpan ang sugat ng benda at palitan ito araw-araw. Kung malalim ang hiwa, humingi ng medikal na tulong."
@@ -1673,10 +1679,10 @@
 			],
 			"procedures": [
 				"Rest the affected muscle, apply ice to reduce swelling, use compression with an elastic bandage, and elevate the muscle. Take pain relievers if necessary and avoid strenuous activity.",
-
+				"",
 				"Apply the R.I.C.E. method: Rest, Ice, Compression, Elevation. Consult a healthcare provider for severe strains."
 			],
-			"relations": ["nan"],
+			"relations": [],
 			"references": [
 				"https://www.mayoclinic.org/diseases-conditions/muscle-strains/symptoms-causes/syc-20450507"
 			],
@@ -1699,9 +1705,10 @@
 			],
 			"procedures": [
 				"Pahingahin ang apektadong kalamnan, maglagay ng yelo, gumamit ng elastic na benda, at itaas ang kalamnan. Uminom ng pain relievers kung kinakailangan at iwasan ang mabigat na aktibidad.",
+				"",
 				"Gamitin ang R.I.C.E.: Rest, Ice, Compression, Elevation. Magpakonsulta sa healthcare provider para sa malubhang pilay."
 			],
-			"relations": ["nan"],
+			"relations": [],
 			"references": [
 				"https://www.mayoclinic.org/diseases-conditions/muscle-strains/symptoms-causes/syc-20450507"
 			],
@@ -1726,7 +1733,7 @@
 			],
 			"procedures": [
 				"Cool the skin with a damp cloth or a cool bath, apply aloe vera or a moisturizer, drink plenty of water, and avoid further sun exposure.",
-
+				"",
 				"Use cool compresses and aloe vera gel. Drink water and avoid the sun until healed."
 			],
 			"relations": ["Honey", "Aloe vera", "Cucumber"],
@@ -1756,6 +1763,7 @@
 			],
 			"procedures": [
 				"Palamigin ang balat gamit ang basang tela o maligamgam na paligo, maglagay ng aloe vera o moisturizer, uminom ng maraming tubig, at iwasan ang karagdagang pagkakalantad sa araw.",
+				"",
 				"Gumamit ng malamig na pomento at aloe vera gel. Uminom ng tubig at iwasan ang araw hanggang maghilom."
 			],
 			"relations": ["Honey", "Aloe vera", "Pipino"],
@@ -1836,14 +1844,14 @@
 			],
 			"procedures": [
 				"Immediately flush the affected area with water for at least 20 minutes. Remove any contaminated clothing, cover the burn with a sterile bandage, and avoid applying creams or ointments unless instructed by a healthcare provider. Seek immediate medical attention.",
-
+				"",
 				"Rinse the burn with water continuously for 20 minutes and remove contaminated clothing. Seek immediate medical help."
 			],
-			"relations": ["nan"],
+			"relations": [],
 			"references": [
 				"https://www.mayoclinic.org/first-aid/first-aid-chemical-burns/basics/art-20056667",
 				"https://my.clevelandclinic.org/health/diseases/22350-chemical-burns",
-				"https://www.nhs.uk/conditions/acid-and-chemical-burns/"
+				"https://www.nhs.uk/conditions/acid-and-chemical-burns"
 			],
 			"context_set": ""
 		},
@@ -1866,13 +1874,16 @@
 			],
 			"procedures": [
 				"Agad na banlawan ang apektadong bahagi ng tubig sa loob ng hindi bababa sa 20 minuto. Alisin ang maruming damit, takpan ang paso ng sterile na benda, at iwasang maglagay ng mga creams o ointments maliban kung inutos ng healthcare provider. Magpakonsulta agad sa doktor.",
-				"Banlawan ang paso ng tuluy-tuloy na tubig sa loob ng 20 minuto at alisin ang maruming damit. Humingi agad ng medikal na tulong."
+				"",
+				"Banlawan ang paso ng tuluy-tuloy na tubig sa loob ng 20 minuto at alisin ang maruming damit. Humingi agad ng medikal na tulong.",
+				"",
+				""
 			],
-			"relations": ["nan"],
+			"relations": [],
 			"references": [
 				"https://www.mayoclinic.org/first-aid/first-aid-chemical-burns/basics/art-20056667",
 				"https://my.clevelandclinic.org/health/diseases/22350-chemical-burns",
-				"https://www.nhs.uk/conditions/acid-and-chemical-burns/"
+				"https://www.nhs.uk/conditions/acid-and-chemical-burns"
 			],
 			"context_set": ""
 		},
@@ -1895,6 +1906,7 @@
 			],
 			"procedures": [
 				"Wash the affected area with mild soap and water. Apply an over-the-counter anti-itch cream or antihistamine. Avoid scratching to prevent infection. If the rash persists or is severe, consult a healthcare provider.",
+				"",
 				"Clean the area gently, apply an anti-itch cream, and avoid irritants. Seek medical advice if the rash spreads or doesn't improve."
 			],
 			"relations": ["Aloe Vera"],
@@ -1921,6 +1933,7 @@
 			],
 			"procedures": [
 				"Hugasan ang apektadong lugar gamit ang mild na sabon at tubig. Maglagay ng over-the-counter na anti-itch cream o antihistamine. Iwasang kamutin upang maiwasan ang impeksyon. Kung ang pantal ay nagpapatuloy o malubha, magpakonsulta sa isang healthcare provider.",
+				"",
 				"Linisin ang lugar ng maingat, maglagay ng anti-itch cream, at iwasan ang mga irritants. Humingi ng medikal na payo kung ang pantal ay kumakalat o hindi bumubuti."
 			],
 			"relations": ["Aloe Vera"],
@@ -1946,10 +1959,12 @@
 			],
 			"procedures": [
 				"Stay calm and immobilize the bitten limb. Seek emergency medical care as quickly as possible.",
+				"",
 				"Keep the bitten area still and below heart level to slow venom spread. Remove tight clothing or jewelry near the bite. Do not attempt to suck out the venom. Seek emergency medical help immediately.",
+				"",
 				"Call emergency services immediately. Keep the bite area still and lower than the heart. Do not apply ice or a tourniquet."
 			],
-			"relations": ["nan"],
+			"relations": [],
 			"references": [
 				"https://www.healthline.com/health/snake-bites",
 				"https://my.clevelandclinic.org/health/diseases/15647-snake-bites"
@@ -1975,10 +1990,12 @@
 			],
 			"procedures": [
 				"Tumawag agad ng emergency services. Panatilihing hindi gumagalaw ang lugar ng kagat at nasa ibaba ng puso. Huwag maglagay ng yelo o tourniquet.",
+				"",
 				"Manatiling kalmado at i-immobilize ang tinukso na bahagi. Humingi ng agarang medikal na pangangalaga.",
+				"",
 				"Ipahinga ang tinukso na lugar at panatilihing nasa ilalim ng antas ng puso upang mapabagal ang pagkalat ng lason. Alisin ang anumang masikip na damit o alahas malapit sa kagat. Huwag subukang sipsipin ang lason. Humingi agad ng tulong medikal."
 			],
-			"relations": ["nan"],
+			"relations": [],
 			"references": [
 				"https://www.healthline.com/health/snake-bites",
 				"https://my.clevelandclinic.org/health/diseases/15647-snake-bites"
@@ -2060,9 +2077,10 @@
 			],
 			"procedures": [
 				"Keep the injured area still and avoid moving it. Apply a splint to immobilize the fracture and use a cold pack to reduce swelling. Seek immediate medical attention.",
+				"",
 				"Do not move the injured area and use a splint to keep it immobile. Apply ice and seek emergency medical help."
 			],
-			"relations": ["nan"],
+			"relations": [],
 			"references": [
 				"https://my.clevelandclinic.org/health/diseases/15241-bone-fractures",
 				"https://www.healthline.com/health/broken-arm"
@@ -2089,9 +2107,10 @@
 			],
 			"procedures": [
 				"Ipahinga ang nasugatang lugar at iwasang galawin ito. Maglagay ng splint upang i-immobilize ang bali at gumamit ng cold pack upang mabawasan ang pamamaga. Humingi ng agarang medikal na atensyon.",
+				"",
 				"Huwag galawin ang nasugatang lugar at gamitin ang splint upang hindi ito gumalaw. Maglagay ng yelo at humingi ng agarang medikal na tulong."
 			],
-			"relations": ["nan"],
+			"relations": [],
 			"references": [
 				"https://my.clevelandclinic.org/health/diseases/15241-bone-fractures",
 				"https://www.healthline.com/health/broken-arm"
@@ -2117,12 +2136,14 @@
 			],
 			"procedures": [
 				"If you suspect someone is having a stroke, call emergency services immediately. Have the person lie down with their head slightly elevated. Monitor their breathing and be ready to perform CPR if necessary.",
-
+				"",
 				"Seek emergency medical help immediately. Keep the person calm and monitor their breathing.",
+				"",
 				"Act FAST: Face drooping, Arm weakness, Speech difficulty, Time to call emergency services. Call emergency services immediately and note the time the symptoms began. Keep the person comfortable and calm until help arrives.",
+				"",
 				"Call emergency services immediately if you notice face drooping, arm weakness, or speech difficulty. Act FAST and get medical help right away."
 			],
-			"relations": ["nan"],
+			"relations": [],
 			"references": [
 				"https://www.mayoclinic.org/diseases-conditions/stroke/multimedia/vid-20530787https://www.ninds.nih.gov/health-information/stroke/assess-and-treat/nih-stroke-scale"
 			],
@@ -2147,11 +2168,14 @@
 			],
 			"procedures": [
 				"Kung sa tingin mo ay may stroke ang isang tao, tumawag agad ng emergency services. Hayaang humiga ang tao na may bahagyang nakataas ang ulo. Bantayan ang kanilang paghinga at maging handa na magsagawa ng CPR kung kinakailangan.",
+				"",
 				"Humingi agad ng tulong medikal. Panatilihing kalmado ang tao at bantayan ang kanilang paghinga.",
+				"",
 				"Gumamit ng FAST: Face drooping, Arm weakness, Speech difficulty, Time to call emergency services. Tumawag agad ng emergency services at tandaan ang oras ng pagsisimula ng mga sintomas. Panatilihin ang tao na komportable at kalmado hanggang dumating ang tulong.",
+				"",
 				"Tumawag agad ng emergency services kung mapansin ang pag-dagilid ng mukha, kahinaan ng braso, o kahirapan sa pagsasalita. Kumilos ng FAST at kumuha ng medikal na tulong kaagad."
 			],
-			"relations": ["nan"],
+			"relations": [],
 			"references": [
 				"https://www.mayoclinic.org/diseases-conditions/stroke/multimedia/vid-20530787https://www.ninds.nih.gov/health-information/stroke/assess-and-treat/nih-stroke-scale"
 			],
@@ -2169,10 +2193,10 @@
 				"Bleeding treatment advice?",
 				"How to manage bleeding?",
 				"How to apply pressure to stop bleeding?",
-				"What should I do for a bleeding wound?",
+				"What should I do for a bleeding?",
 				"How long does it take for bleeding to stop?",
 				"First aid for bleeding?",
-				"How to prevent infection in a bleeding wound?",
+				"How to prevent infection in a bleeding?",
 				"When should I consult a doctor for bleeding?"
 			],
 			"procedures": [
@@ -2231,7 +2255,9 @@
 				"What should I avoid when I have a fever?",
 				"When to seek medical attention for a fever?",
 				"How to monitor a fever at home?",
-				"What remedies can be used for a fever?"
+				"What remedies can be used for a fever?",
+				"my temperature is high",
+				"temperature"
 			],
 			"procedures": [
 				"Cool the burn with running water for at least 10 minutes. Avoid using ice. Cover the burn with a sterile gauze bandage. Do not apply butter or ointments to the burn. For pain relief, consider over-the-counter pain relievers like ibuprofen or acetaminophen.",
@@ -2257,7 +2283,8 @@
 				"Ano ang dapat iwasan kapag may lagnat?",
 				"Kailan dapat humingi ng tulong medikal para sa lagnat?",
 				"Paano subaybayan ang lagnat sa bahay?",
-				"Anong mga remedyo ang maaaring gamitin para sa lagnat?"
+				"Anong mga remedyo ang maaaring gamitin para sa lagnat?",
+				"mataas nag temperatura ko"
 			],
 			"procedures": [
 				"Palamigin ang paso gamit ang umaagos na tubig nang hindi bababa sa 10 minuto. Iwasang gumamit ng yelo. Takpan ang paso ng sterile gauze bandage. Huwag maglagay ng mantikilya o mga pamahid sa paso. Para sa lunas sa pananakit, isaalang-alang ang mga over-the-counter na pain reliever tulad ng ibuprofen o acetaminophen.",
@@ -2305,8 +2332,8 @@
 			],
 			"relations": [
 				"Diarrhea",
-				"Heat Exhaustion",
-				"Heat Stroke",
+				"Heat exhaustion",
+				"Heat stroke",
 				"Dehydration"
 			],
 			"references": [
@@ -2353,8 +2380,8 @@
 			],
 			"relations": [
 				"Pagtatae",
-				"Pagkapagod sa Init",
-				"Heat Stroke",
+				"Pagkapagod sa init",
+				"Heat stroke",
 				"Dehydration"
 			],
 			"references": [
@@ -2381,7 +2408,7 @@
 				"Benefits of lemongrass for dehydration.",
 				"How to apply lemongrass for abdominal pain?",
 				"How to combine lemongrass with other remedies for heat exhaustion?",
-				"How to prepare lemongrass water for heat stroke?",
+				"How to prepare lemongrass for heat stroke?",
 				"How to apply lemongrass for symptoms of dehydration?",
 				"How to store lemongrass for medicinal use?",
 				"How to make a lemongrass for hydration?",
@@ -2399,9 +2426,9 @@
 				"Gather Ingredients: Fresh tanglad stalks, water, optional sweeteners (honey or sugar), and optional flavorings (ginger or lemon). Wash and Chop: Thoroughly wash the tanglad stalks and chop them into small pieces. Boil Water: Bring a pot of water to a boil. Add Tanglad: Add the chopped tanglad to the boiling water. Simmer: Reduce the heat and let it simmer for about 10-15 minutes. Strain: Strain the tea to remove the tanglad pieces. Serve: Consume your tanglad tea slowly hot or let it cool."
 			],
 			"relations": [
-				"Abdominal Pain",
-				"Heat Exhaustion",
-				"Heat Stroke",
+				"Abdominal pain",
+				"Heat exhaustion",
+				"Heat stroke",
 				"Dehydration"
 			],
 			"references": [
@@ -2428,7 +2455,7 @@
 				"Mga benepisyo ng tanglad sa dehydration.",
 				"Paano ilagay ang tanglad para sa abdominal pain?",
 				"Paano pagsamahin ang tanglad sa ibang remedyo para sa heat exhaustion?",
-				"Paano ihanda ang tanglad water para sa heat stroke?s",
+				"Paano ihanda ang tanglad para sa heat stroke?s",
 				"Paano maglagay ng tanglad sa mga sintomas ng dehydration?",
 				"Paano mag-imbak ng tanglad para sa panggagamot?",
 				"Paano gawing smoothie ang tanglad para sa hydration?",
@@ -2446,9 +2473,9 @@
 				"Magtipon ng Mga Sangkap: Mga sariwang tanglad, tubig, mga opsyonal na pampatamis (pulot o asukal), at mga opsyonal na pampalasa (luya o lemon). Hugasan at Tadtarin: Hugasan nang maigi ang tanglad at tadtarin ito ng maliliit. Pakuluan ang Tubig: Pakuluan ang isang palayok ng tubig. Magdagdag ng Tanglad: Idagdag ang tinadtad na tanglad sa kumukulong tubig. Kumulo: Bawasan ang apoy at hayaang kumulo ng mga 10-15 minuto. Salain: Salain ang tsaa para matanggal ang mga piraso ng tanglad. Ihain: Uminom ng iyong tanglad tea nang dahan-dahang mainit o hayaan itong lumamig."
 			],
 			"relations": [
-				"Abdominal Pain",
-				"Pagkapagod sa Init",
-				"Heat Stroke",
+				"Abdominal pain",
+				"Pagkapagod sa init",
+				"Heat stroke",
 				"Dehydration"
 			],
 			"references": [
@@ -2502,19 +2529,19 @@
 				"Gather Ingredients: Fresh or dried lagundi leaves, water. Wash and Chop: Thoroughly wash the lagundi leaves and chop them into small pieces. Boil Water: Bring 2 cups of water to a boil. Add Lagundi: Add half a cup of chopped fresh or dried lagundi leaves to the boiling water. Simmer: Reduce the heat and let it simmer for 10-15 minutes. Strain: Strain the mixture to remove the leaves. Drink: Drink half a cup of the decoction three times a day."
 			],
 			"relations": [
-				"Nasal Congestion",
+				"Nasal congestion",
 				"Cough",
-				"Broken Toe",
+				"Broken toe",
 				"Diarrhea",
-				"Nose Bleed",
+				"Nose bleed",
 				"Vertigo",
-				"Head Injury",
+				"Head injury",
 				"Headache",
 				"Cold"
 			],
 			"references": [
-				"https://drfarrahmd.com/2020/10/lagundi-natural-remedy-for-respiratory/",
-				"https://www.pchrd.dost.gov.ph/heartnovation/lagundi-anti-cough-and-anti-asthma-medicine/",
+				"https://drfarrahmd.com/2020/10/lagundi-natural-remedy-for-respiratory",
+				"https://www.pchrd.dost.gov.ph/heartnovation/lagundi-anti-cough-and-anti-asthma-medicine",
 				"https://www.pharexhealth.com/health-articles/6-benefits-of-lagundi-for-dry-cough"
 			],
 			"context_set": ""
@@ -2564,19 +2591,19 @@
 				"Magtipon ng Mga Sangkap: Sariwa o tuyo na dahon ng lagundi, tubig. Hugasan at Tadtarin: Hugasan nang maigi ang mga dahon ng lagundi at tadtarin ito ng maliliit. Pakuluan ang Tubig: Pakuluan ang 2 basong tubig. Magdagdag ng Lagundi: Magdagdag ng kalahating tasa ng tinadtad na sariwa o tuyo na dahon ng lagundi sa kumukulong tubig. Kumulo: Bawasan ang apoy at hayaang kumulo ng 10-15 minuto. Salain: Salain ang pinaghalong para maalis ang mga dahon. Inumin: Uminom ng kalahating tasa ng decoction tatlong beses sa isang araw."
 			],
 			"relations": [
-				"Baradong Ilong",
+				"Baradong ilong",
 				"Ubo",
-				"Daliri ng Paa na Nasira",
+				"Daliri ng paa na nasira",
 				"Pagtatae",
-				"Dumudugo sa Ilong",
+				"Dumudugo sa ilong",
 				"Vertigo",
-				"Pinsala sa Ulo",
-				"Sakit ng Ulo",
+				"Pinsala sa ulo",
+				"Sakit ng ulo",
 				"Sipon"
 			],
 			"references": [
-				"https://drfarrahmd.com/2020/10/lagundi-natural-remedy-for-respiratory/",
-				"https://www.pchrd.dost.gov.ph/heartnovation/lagundi-anti-cough-and-anti-asthma-medicine/",
+				"https://drfarrahmd.com/2020/10/lagundi-natural-remedy-for-respiratory",
+				"https://www.pchrd.dost.gov.ph/heartnovation/lagundi-anti-cough-and-anti-asthma-medicine",
 				"https://www.pharexhealth.com/health-articles/6-benefits-of-lagundi-for-dry-cough"
 			],
 			"context_set": ""
@@ -2596,7 +2623,7 @@
 			"procedures": [
 				"Gather Ingredients: Fresh oregano leaves, water. Wash and Chop: Thoroughly wash the oregano leaves and chop them into small pieces. Boil Water: Bring 2 cups of water to a boil. Add Oregano: Add half a cup of chopped oregano leaves to the boiling water. Simmer: Reduce the heat and let it simmer for 10-15 minutes. Strain: Strain the mixture to remove the leaves. Drink: Drink half a cup of the decoction three times a day."
 			],
-			"relations": ["Nasal Congestion", "Cough", ""],
+			"relations": ["Nasal congestion", "Cough"],
 			"references": [
 				"https://www.pchrd.dost.gov.ph/heartnovation/sambong-tablet-herbal-drug-formulation-for-kidney-stones",
 				"https://www.sinusandallergywellnesscenter.com/blog/natural-remedies-for-sinus-infection-relief-what-works-and-what-doesnt"
@@ -2618,7 +2645,7 @@
 			"procedures": [
 				"Kunin ang mga Sangkap: Sariwang dahon ng oregano, tubig. Hugasan at Tadtarin: Hugasan nang mabuti ang mga dahon ng oregano at tadtarin ito ng maliliit na piraso. Pakuluan ang Tubig: Pakuluan ang 2 tasa ng tubig. Idagdag ang Oregano: Idagdag ang kalahating tasa ng tinadtad na dahon ng oregano sa kumukulong tubig. Pakuluin: Bawasan ang init at hayaang kumulo ng 10-15 minuto. Salain: Salain ang pinagpakuluan upang alisin ang mga dahon. Inumin: Uminom ng kalahating tasa ng pinagpakuluan tatlong beses sa isang araw."
 			],
-			"relations": ["Baradong Ilong", "ubo", ""],
+			"relations": ["Baradong ilong", "Ubo"],
 			"references": [
 				"https://www.pchrd.dost.gov.ph/heartnovation/sambong-tablet-herbal-drug-formulation-for-kidney-stones",
 				"https://www.sinusandallergywellnesscenter.com/blog/natural-remedies-for-sinus-infection-relief-what-works-and-what-doesnt"
@@ -2682,13 +2709,12 @@
 				"Nose Bleed",
 				"Food Poison",
 				"Head Injury",
-				"Cold",
-				""
+				"Cold"
 			],
 			"references": [
 				"https://www.pchrd.dost.gov.ph/heartnovation/sambong-tablet-herbal-drug-formulation-for-kidney-stones",
-				"https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/sambong-benefits/",
-				"https://www.pchrd.dost.gov.ph/heartnovation/sambong-tablet-herbal-drug-formulation-for-kidney-stones/"
+				"https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/sambong-benefits",
+				"https://www.pchrd.dost.gov.ph/heartnovation/sambong-tablet-herbal-drug-formulation-for-kidney-stones"
 			],
 			"context_set": ""
 		},
@@ -2736,19 +2762,18 @@
 				"Hakbang 1: Pag-kuha: Pumili ng sariwang mga dahon ng sambong mula sa malinis at hindi maruming lugar. Hakbang 2: Paghuhugas: Hugasan nang mabuti ang mga dahon sa ilalim ng tubig na umaagos upang alisin ang dumi at mga impurities. Hakbang 3: Paghahanda: Tea: Pakuluan ang isang dakot ng mga dahon ng sambong sa isang tasa ng tubig sa loob ng 5-10 minuto. Salain at hayaang lumamig bago uminom. Poultice: Dudugin ang mga dahon hanggang maging paste at ilapat nang direkta sa apektadong lugar. Gargle: Para sa namamagang lalamunan, magmumog ng maligamgam na tsaang sambong. Hakbang 4: Mga Gamit: Kasikipan ng ilong at ubo: Uminom ng tsaang sambong upang makatulong na malinis ang kasikipan at mapawi ang ubo. Sakit ng buto: Ilapat ang sambong poultice sa nasugatan na lugar upang mabawasan ang sakit at pamamaga. Pagdurugo ng ilong: Ilapat ang malamig na compress na binabad sa tsaang sambong sa tulay ng ilong upang makatulong na ihinto ang pagdurugo. Pagkalason sa pagkain: Uminom ng tsaang sambong upang makatulong na mapawi ang sistema ng pagtunaw at maibsan ang mga sintomas tulad ng pagsusuka at pagtatae. Sakit sa ulo: Ilapat ang malamig na compress na binabad sa tsaang sambong sa apektadong lugar upang mabawasan ang pamamaga at sakit. Sipon: Uminom ng tsaang sambong upang makatulong na palakasin ang immune system at mapawi ang mga sintomas ng sipon."
 			],
 			"relations": [
-				"Baradong Ilong",
+				"Baradong ilong",
 				"Ubo",
-				"Daliri ng Paa na Nasira",
-				"Dumudugo sa Ilong",
-				"Pagkalason sa Pagkain",
-				"Pinsala sa Ulo",
-				"Sipon",
-				""
+				"Daliri ng paa na nasira",
+				"Dumudugo sa ilong",
+				"Pagkalason sa pagkain",
+				"Pinsala sa ulo",
+				"Sipon"
 			],
 			"references": [
 				"https://www.pchrd.dost.gov.ph/heartnovation/sambong-tablet-herbal-drug-formulation-for-kidney-stones",
-				"https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/sambong-benefits/",
-				"https://www.pchrd.dost.gov.ph/heartnovation/sambong-tablet-herbal-drug-formulation-for-kidney-stones/"
+				"https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/sambong-benefits",
+				"https://www.pchrd.dost.gov.ph/heartnovation/sambong-tablet-herbal-drug-formulation-for-kidney-stones"
 			],
 			"context_set": ""
 		},
@@ -2768,12 +2793,12 @@
 				"Gather Ingredients: Fresh Tsaang Gubat leaves, water. Wash and Chop: Thoroughly wash the Tsaang Gubat leaves and chop them into small pieces. Boil Water: Bring 2 cups of water to a boil. Add Tsaang Gubat: Add half a cup of chopped Tsaang Gubat leaves to the boiling water. Simmer: Reduce the heat and let it simmer for 10-15 minutes. Strain: Strain the mixture to remove the leaves. Drink: Drink half a cup of the decoction three times a day."
 			],
 			"relations": [
-				"Abdominal Pain",
-				"Broken Toe",
+				"Abdominal pain",
+				"Broken toe",
 				"Diarrhea",
-				"Nose Bleed",
+				"Nose bleed",
 				"Vertigo",
-				"Head Injury",
+				"Head injury",
 				"Cold"
 			],
 			"references": [
@@ -2799,12 +2824,12 @@
 				"Kunin ang mga Sangkap: Sariwang dahon ng Tsaang Gubat, tubig. Hugasan at Tadtarin: Hugasan nang mabuti ang mga dahon ng Tsaang Gubat at tadtarin ito ng maliliit na piraso. Pakuluan ang Tubig: Pakuluan ang 2 tasa ng tubig. Idagdag ang Tsaang Gubat: Idagdag ang kalahating tasa ng tinadtad na dahon ng Tsaang Gubat sa kumukulong tubig. Pakuluin: Bawasan ang init at hayaang kumulo ng 10-15 minuto. Salain: Salain ang pinagpakuluan upang alisin ang mga dahon. Inumin: Uminom ng kalahating tasa ng pinagpakuluan tatlong beses sa isang araw."
 			],
 			"relations": [
-				"Abdominal Pain",
-				"Daliri ng Paa na Nasira",
+				"Abdominal pain",
+				"Daliri ng paa na nasira",
 				"Pagtatae",
-				"Dumudugo sa Ilong",
+				"Dumudugo sa ilong",
 				"Vertigo",
-				"Pinsala sa Ulo",
+				"Pinsala sa ulo",
 				"SIpon"
 			],
 			"references": [
@@ -2856,18 +2881,18 @@
 			],
 			"relations": [
 				"Vertigo",
-				"Food Poison",
+				"Food poison",
 				"Headache",
 				"Fever",
-				"Abdominal Pain",
+				"Abdominal pain",
 				"Cold",
 				"Strain"
 			],
 			"references": [
-				"https://www.aigastro.net/blog/305938-can-ginger-actually-help-your-upset-stomach/%20(accessed%20Sep.%2005,%202024)https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/luya-benefits/",
-				"https://pinascuisine.com/luya/",
+				"https://www.aigastro.net/blog/305938-can-ginger-actually-help-your-upset-stomach/%20(accessed%20Sep.%2005,%202024)https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/luya-benefits",
+				"https://pinascuisine.com/luya",
 				"http://www.philippineherbalmedicine.org/ginger.htm",
-				"https://theherbalacademy.com/blog/8-herbal-home-remedies-for-colds-and-flu/"
+				"https://theherbalacademy.com/blog/8-herbal-home-remedies-for-colds-and-flu"
 			],
 			"context_set": ""
 		},
@@ -2913,18 +2938,18 @@
 			],
 			"relations": [
 				"Vertigo",
-				"Pagkalason sa Pagkain",
-				"Sakit ng Ulo",
+				"Pagkalason sa pagkain",
+				"Sakit ng ulo",
 				"Fever",
-				"Abdominal Pain",
+				"Abdominal pain",
 				"Sipon",
 				"Strain"
 			],
 			"references": [
-				"https://www.aigastro.net/blog/305938-can-ginger-actually-help-your-upset-stomach/%20(accessed%20Sep.%2005,%202024)https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/luya-benefits/",
-				"https://pinascuisine.com/luya/",
+				"https://www.aigastro.net/blog/305938-can-ginger-actually-help-your-upset-stomach/%20(accessed%20Sep.%2005,%202024)https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/luya-benefits",
+				"https://pinascuisine.com/luya",
 				"http://www.philippineherbalmedicine.org/ginger.htm",
-				"https://theherbalacademy.com/blog/8-herbal-home-remedies-for-colds-and-flu/"
+				"https://theherbalacademy.com/blog/8-herbal-home-remedies-for-colds-and-flu"
 			],
 			"context_set": ""
 		},
@@ -2948,7 +2973,7 @@
 			"procedures": [
 				"Take a handful of dried Ginkgo Biloba leaves. Boil 2 cups of water. Add the leaves to the boiling water. Let it simmer for 10-15 minutes. Strain the leaves and pour the tea into a cup. Drink 1-2 cups daily."
 			],
-			"relations": ["Head Injury"],
+			"relations": ["Head injury"],
 			"references": [
 				"https://medicaltrendsnow.com/ent/treatments-for-vertigo",
 				"https://www.webmd.com/vitamins/ai/ingredientmono-333/ginkgo",
@@ -2976,7 +3001,7 @@
 			"procedures": [
 				"Kumuha ng isang dakot ng pinatuyong dahon ng Ginkgo Biloba. Pakuluan ang 2 tasa ng tubig. Idagdag ang mga dahon sa kumukulong tubig. Hayaang kumulo ng 10-15 minuto. Salain ang mga dahon at ibuhos ang tsaa sa tasa. Uminom ng 1-2 tasa araw-araw."
 			],
-			"relations": ["Pinsala sa Ulo"],
+			"relations": ["Pinsala sa ulo"],
 			"references": [
 				"https://medicaltrendsnow.com/ent/treatments-for-vertigo",
 				"https://www.webmd.com/vitamins/ai/ingredientmono-333/ginkgo",
@@ -2999,9 +3024,9 @@
 			"procedures": [
 				"Wash the guava leaves thoroughly. Boil 1.5 liters of water in a pot. Add the guava leaves to the boiling water. Let it simmer for about 10-15 minutes. Remove from heat and let it cool slightly. Strain the leaves and pour the tea into a cup. Drink 2-3 times a day on an empty stomach until symptoms improve."
 			],
-			"relations": ["Cuts", "Burn", "Nose Bleed", "Bleeding", "Food Poison"],
+			"relations": ["Cuts", "Burn", "Nose bleed", "Bleeding", "Food poison"],
 			"references": [
-				"https://medicaltrendsnow.com/emergency-medicine/treatments-for-food-poisoning-in-the-philippines/",
+				"https://medicaltrendsnow.com/emergency-medicine/treatments-for-food-poisoning-in-the-philippines",
 				"https://www.healthline.com/nutrition/8-benefits-of-guavas",
 				"https://food.ndtv.com/health/15-amazing-guava-benefits-heart-healthy-weight-loss-friendly-and-more-1244242"
 			],
@@ -3030,17 +3055,17 @@
 			"relations": [
 				"Hiwa",
 				"Paso",
-				"Dumudugo sa Ilong",
+				"Dumudugo sa ilong",
 				"Pagdurugo",
-				"Pagkalason sa Pagkain"
+				"Pagkalason sa pagkain"
 			],
 			"references": [
 				"https://www.prutaslokal.com/blog/28-tips-at-benefits-sa-pagkain-ng-bayabas",
 				"https://www.healthline.com/nutrition/8-benefits-of-guavas",
-				"https://www.pchrd.dost.gov.ph/news_and_updates/dost-pchrd-supported-program-on-top-tier-plants-intended-for-treating-diseases-undergoes-formulation-stage/",
+				"https://www.pchrd.dost.gov.ph/news_and_updates/dost-pchrd-supported-program-on-top-tier-plants-intended-for-treating-diseases-undergoes-formulation-stage",
 				"https://www.herbalgoodnessco.com/en-ca/blogs/healthy-living/everything-you-ever-wanted-to-know-about-guava-leaves-herbal-goodness",
 				"https://www.healthline.com/nutrition/8-benefits-of-guavas",
-				"https://medicaltrendsnow.com/emergency-medicine/treatments-for-food-poisoning-in-the-philippines/",
+				"https://medicaltrendsnow.com/emergency-medicine/treatments-for-food-poisoning-in-the-philippines",
 				"https://www.healthline.com/nutrition/8-benefits-of-guavas",
 				"https://food.ndtv.com/health/15-amazing-guava-benefits-heart-healthy-weight-loss-friendly-and-more-1244242"
 			],
@@ -3064,7 +3089,7 @@
 			"relations": ["Fainting"],
 			"references": [
 				"https://www.philippineherbalmedicine.org/medicinal_plants.htm",
-				"https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/atis-benefits/"
+				"https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/atis-benefits"
 			],
 			"context_set": ""
 		},
@@ -3086,7 +3111,7 @@
 			"relations": ["Nanghihina"],
 			"references": [
 				"https://www.philippineherbalmedicine.org/medicinal_plants.htm",
-				"https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/atis-benefits/"
+				"https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/atis-benefits"
 			],
 			"context_set": ""
 		},
@@ -3107,10 +3132,10 @@
 			],
 			"relations": ["Headache"],
 			"references": [
-				"https://www.pchrd.dost.gov.ph/heartnovation/sambong-tablet-herbal-drug-formulation-for-kidney-stones/",
+				"https://www.pchrd.dost.gov.ph/heartnovation/sambong-tablet-herbal-drug-formulation-for-kidney-stones",
 				"https://www.philippineherbalmedicine.org/doh_herbs.htm",
 				"https://globalfoodbook.com/17-remarkable-benefits-of-yerba-buena",
-				"https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/yerba-buena-plant-benefits/"
+				"https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/yerba-buena-plant-benefits"
 			],
 			"context_set": ""
 		},
@@ -3131,10 +3156,10 @@
 			],
 			"relations": ["Sakit ng Ulo"],
 			"references": [
-				"https://www.pchrd.dost.gov.ph/heartnovation/sambong-tablet-herbal-drug-formulation-for-kidney-stones/",
+				"https://www.pchrd.dost.gov.ph/heartnovation/sambong-tablet-herbal-drug-formulation-for-kidney-stones",
 				"https://www.philippineherbalmedicine.org/doh_herbs.htm",
 				"https://globalfoodbook.com/17-remarkable-benefits-of-yerba-buena",
-				"https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/yerba-buena-plant-benefits/"
+				"https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/yerba-buena-plant-benefits"
 			],
 			"context_set": ""
 		},
@@ -3157,8 +3182,8 @@
 			"references": [
 				"https://mypharma.ph/articles/10-classic-home-remedies-trusted-by-filipino-moms",
 				"https://uscitrus.com/blogs/citrus-delight-blog/calamondin-magic-7-amazing-health-benefits-of-calamansi-juice",
-				"https://www.thelittleepicurean.com/calamansi-juice/",
-				"https://nawon.com.vn/calamansi-juice-8-benefits-of-this-tasty-citrus-fruit/"
+				"https://www.thelittleepicurean.com/calamansi-juice",
+				"https://nawon.com.vn/calamansi-juice-8-benefits-of-this-tasty-citrus-fruit"
 			],
 			"context_set": ""
 		},
@@ -3181,8 +3206,8 @@
 			"references": [
 				"https://mypharma.ph/articles/10-classic-home-remedies-trusted-by-filipino-moms",
 				"https://uscitrus.com/blogs/citrus-delight-blog/calamondin-magic-7-amazing-health-benefits-of-calamansi-juice",
-				"https://www.thelittleepicurean.com/calamansi-juice/",
-				"https://nawon.com.vn/calamansi-juice-8-benefits-of-this-tasty-citrus-fruit/"
+				"https://www.thelittleepicurean.com/calamansi-juice",
+				"https://nawon.com.vn/calamansi-juice-8-benefits-of-this-tasty-citrus-fruit"
 			],
 			"context_set": ""
 		},
@@ -3203,7 +3228,7 @@
 			"relations": ["Burn"],
 			"references": [
 				"https://www.band-aid.com/first-aid-info/first-aid-basics/bandaging-a-wound",
-				"https://gauzecare.com/7-different-types-of-gauze-for-wounds-when-to-use-them/",
+				"https://gauzecare.com/7-different-types-of-gauze-for-wounds-when-to-use-them",
 				"https://www.woundsource.com/blog/gauze-dressings-and-wounds-9-dos-and-don-ts"
 			],
 			"context_set": ""
@@ -3225,7 +3250,7 @@
 			"relations": ["Paso"],
 			"references": [
 				"https://www.band-aid.com/first-aid-info/first-aid-basics/bandaging-a-wound",
-				"https://gauzecare.com/7-different-types-of-gauze-for-wounds-when-to-use-them/",
+				"https://gauzecare.com/7-different-types-of-gauze-for-wounds-when-to-use-them",
 				"https://www.woundsource.com/blog/gauze-dressings-and-wounds-9-dos-and-don-ts"
 			],
 			"context_set": ""
@@ -3248,10 +3273,10 @@
 			],
 			"relations": ["Burn", "Sting", "Bruises", "SunBurn", "Rash"],
 			"references": [
-				"https://hellodoctor.com.ph/fil/mga-herbal-at-alternatives/halamang-gamot/benepisyo-ng-aloe-vera/",
+				"https://hellodoctor.com.ph/fil/mga-herbal-at-alternatives/halamang-gamot/benepisyo-ng-aloe-vera",
 				"https://www.almanac.com/aloe-vera-self-regenerating-first-aid-kit",
-				"https://naturallysavvy.com/care/7-fabulous-first-aid-uses-for-aloe-vera-you-should-know/",
-				"https://wellnessnova.com/herbal-first-aid-kit/"
+				"https://naturallysavvy.com/care/7-fabulous-first-aid-uses-for-aloe-vera-you-should-know",
+				"https://wellnessnova.com/herbal-first-aid-kit"
 			],
 			"context_set": ""
 		},
@@ -3273,10 +3298,10 @@
 			],
 			"relations": ["Paso", "Sting", "Pasa", "SunBurn", "Pantal"],
 			"references": [
-				"https://hellodoctor.com.ph/fil/mga-herbal-at-alternatives/halamang-gamot/benepisyo-ng-aloe-vera/",
+				"https://hellodoctor.com.ph/fil/mga-herbal-at-alternatives/halamang-gamot/benepisyo-ng-aloe-vera",
 				"https://www.almanac.com/aloe-vera-self-regenerating-first-aid-kit",
-				"https://naturallysavvy.com/care/7-fabulous-first-aid-uses-for-aloe-vera-you-should-know/",
-				"https://wellnessnova.com/herbal-first-aid-kit/"
+				"https://naturallysavvy.com/care/7-fabulous-first-aid-uses-for-aloe-vera-you-should-know",
+				"https://wellnessnova.com/herbal-first-aid-kit"
 			],
 			"context_set": ""
 		},
@@ -3298,8 +3323,7 @@
 			"relations": ["Burn", "Cut", "Bleeding"],
 			"references": [
 				"https://tl.wikibooks.org/wiki/Lunas_Gamit_ang_Halamang_Gamot_at_Haydroterapi/Lunas_sa_nagdurugong_sugat",
-				"https://www.slideshare.net/slideshow/3-final-first-aid-101ppt/264742676",
-				""
+				"https://www.slideshare.net/slideshow/3-final-first-aid-101ppt/264742676"
 			],
 			"context_set": ""
 		},
@@ -3321,8 +3345,7 @@
 			"relations": ["Paso", "Hiwa", "Pagdurugo"],
 			"references": [
 				"https://tl.wikibooks.org/wiki/Lunas_Gamit_ang_Halamang_Gamot_at_Haydroterapi/Lunas_sa_nagdurugong_sugat",
-				"https://www.slideshare.net/slideshow/3-final-first-aid-101ppt/264742676",
-				""
+				"https://www.slideshare.net/slideshow/3-final-first-aid-101ppt/264742676"
 			],
 			"context_set": ""
 		},
@@ -3345,7 +3368,7 @@
 			"references": [
 				"https://tl.wikibooks.org/wiki/Lunas_Gamit_ang_Halamang_Gamot_at_Haydroterapi/Lunas_sa_nagdurugong_sugat",
 				"https://www.herbanext.com/medicinal-herbs/painted-coleus-mayana",
-				"https://sonyasgarden.com/explore-the-garden/3-reasons-mayana-garden/",
+				"https://sonyasgarden.com/explore-the-garden/3-reasons-mayana-garden",
 				"http://www.ijfe.org/uploadfile/2017/0816/20170816112607904.pdf"
 			],
 			"context_set": ""
@@ -3369,7 +3392,7 @@
 			"references": [
 				"https://tl.wikibooks.org/wiki/Lunas_Gamit_ang_Halamang_Gamot_at_Haydroterapi/Lunas_sa_nagdurugong_sugat",
 				"https://www.herbanext.com/medicinal-herbs/painted-coleus-mayana",
-				"https://sonyasgarden.com/explore-the-garden/3-reasons-mayana-garden/",
+				"https://sonyasgarden.com/explore-the-garden/3-reasons-mayana-garden",
 				"http://www.ijfe.org/uploadfile/2017/0816/20170816112607904.pdf"
 			],
 			"context_set": ""
@@ -3393,10 +3416,10 @@
 			"references": [
 				"https://www.medicalnewstoday.com/articles/322907#medical-treatments",
 				"https://www.healthline.com/nutrition/benefits-of-honey",
-				"https://www.nutritionletter.tufts.edu/healthy-eating/honey-potential-benefits-and-risks/",
-				"https://newsnetwork.mayoclinic.org/discussion/mayo-clinic-minute-the-cautions-and-benefits-of-honey/",
-				"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5424551/",
-				"https://ahpanet.com/"
+				"https://www.nutritionletter.tufts.edu/healthy-eating/honey-potential-benefits-and-risks",
+				"https://newsnetwork.mayoclinic.org/discussion/mayo-clinic-minute-the-cautions-and-benefits-of-honey",
+				"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5424551",
+				"https://ahpanet.com"
 			],
 			"context_set": ""
 		},
@@ -3419,10 +3442,10 @@
 			"references": [
 				"https://www.medicalnewstoday.com/articles/322907#medical-treatments",
 				"https://www.healthline.com/nutrition/benefits-of-honey",
-				"https://www.nutritionletter.tufts.edu/healthy-eating/honey-potential-benefits-and-risks/",
-				"https://newsnetwork.mayoclinic.org/discussion/mayo-clinic-minute-the-cautions-and-benefits-of-honey/",
-				"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5424551/",
-				"https://ahpanet.com/"
+				"https://www.nutritionletter.tufts.edu/healthy-eating/honey-potential-benefits-and-risks",
+				"https://newsnetwork.mayoclinic.org/discussion/mayo-clinic-minute-the-cautions-and-benefits-of-honey",
+				"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5424551",
+				"https://ahpanet.com"
 			],
 			"context_set": ""
 		},
@@ -3443,8 +3466,8 @@
 			],
 			"relations": ["Sprains"],
 			"references": [
-				"https://www.algotech.ca/en/natural-remedies-for-an-ankle-sprain/",
-				"https://www.tasteofhome.com/collection/homemade-first-aid-remedies/",
+				"https://www.algotech.ca/en/natural-remedies-for-an-ankle-sprain",
+				"https://www.tasteofhome.com/collection/homemade-first-aid-remedies",
 				"https://health.clevelandclinic.org/6-surprising-ways-garlic-boosts-your-health"
 			],
 			"context_set": ""
@@ -3466,8 +3489,8 @@
 			],
 			"relations": ["Sprains"],
 			"references": [
-				"https://www.algotech.ca/en/natural-remedies-for-an-ankle-sprain/",
-				"https://www.tasteofhome.com/collection/homemade-first-aid-remedies/",
+				"https://www.algotech.ca/en/natural-remedies-for-an-ankle-sprain",
+				"https://www.tasteofhome.com/collection/homemade-first-aid-remedies",
 				"https://health.clevelandclinic.org/6-surprising-ways-garlic-boosts-your-health"
 			],
 			"context_set": ""
@@ -3489,10 +3512,9 @@
 			],
 			"relations": ["Sprains"],
 			"references": [
-				"https://wellnessmama.com/remedies/onion-benefits/",
-				"https://www.algotech.ca/en/natural-remedies-for-an-ankle-sprain/",
-				"https://txnaturalpediatrics.com/2019/08/06/natural-remedies-for-a-sprained-ankle/",
-				""
+				"https://wellnessmama.com/remedies/onion-benefits",
+				"https://www.algotech.ca/en/natural-remedies-for-an-ankle-sprain",
+				"https://txnaturalpediatrics.com/2019/08/06/natural-remedies-for-a-sprained-ankle"
 			],
 			"context_set": ""
 		},
@@ -3513,10 +3535,9 @@
 			],
 			"relations": ["Sprains"],
 			"references": [
-				"https://wellnessmama.com/remedies/onion-benefits/",
-				"https://www.algotech.ca/en/natural-remedies-for-an-ankle-sprain/",
-				"https://txnaturalpediatrics.com/2019/08/06/natural-remedies-for-a-sprained-ankle/",
-				""
+				"https://wellnessmama.com/remedies/onion-benefits",
+				"https://www.algotech.ca/en/natural-remedies-for-an-ankle-sprain",
+				"https://txnaturalpediatrics.com/2019/08/06/natural-remedies-for-a-sprained-ankle"
 			],
 			"context_set": ""
 		},
@@ -3539,14 +3560,14 @@
 				"How to store cabbage leaves for home remedies on sprains?"
 			],
 			"procedures": [
-				"Remove and rinse 2-3 large cabbage leaves. Pat them dry. Wrap in tin foil and warm in the oven (make sure they're warm, not hot). Place the warm leaves on the sprained area. Secure with a bandage or cloth wrap. Leave for 30 minutes. Repeat twice a day."
+				"Remove and rinse 2-3 large cabbage leaves. Pat them dry. Wrap in tin foil and warm in the oven (make sure they\u2019re warm, not hot). Place the warm leaves on the sprained area. Secure with a bandage or cloth wrap. Leave for 30 minutes. Repeat twice a day."
 			],
 			"relations": ["Sprains"],
 			"references": [
-				"https://www.algotech.ca/en/natural-remedies-for-an-ankle-sprain/",
-				"https://www.livestrong.com/article/205430-how-to-apply-raw-cabbage-leaves-for-the-relief-of-joint-pain/",
+				"https://www.algotech.ca/en/natural-remedies-for-an-ankle-sprain",
+				"https://www.livestrong.com/article/205430-how-to-apply-raw-cabbage-leaves-for-the-relief-of-joint-pain",
 				"https://www.womansworld.com/wellness/pain-management/cabbage-leaves-for-inflammation-170241",
-				"https://thelostherbs.com/how-to-make-cabbage-bandages-to-treat-inflammation-and-joint-pain/",
+				"https://thelostherbs.com/how-to-make-cabbage-bandages-to-treat-inflammation-and-joint-pain",
 				"https://www.healthline.com/nutrition/benefits-of-cabbage"
 			],
 			"context_set": ""
@@ -3574,10 +3595,10 @@
 			],
 			"relations": ["Sprains"],
 			"references": [
-				"https://www.algotech.ca/en/natural-remedies-for-an-ankle-sprain/",
-				"https://www.livestrong.com/article/205430-how-to-apply-raw-cabbage-leaves-for-the-relief-of-joint-pain/",
+				"https://www.algotech.ca/en/natural-remedies-for-an-ankle-sprain",
+				"https://www.livestrong.com/article/205430-how-to-apply-raw-cabbage-leaves-for-the-relief-of-joint-pain",
 				"https://www.womansworld.com/wellness/pain-management/cabbage-leaves-for-inflammation-170241",
-				"https://thelostherbs.com/how-to-make-cabbage-bandages-to-treat-inflammation-and-joint-pain/",
+				"https://thelostherbs.com/how-to-make-cabbage-bandages-to-treat-inflammation-and-joint-pain",
 				"https://www.healthline.com/nutrition/benefits-of-cabbage"
 			],
 			"context_set": ""
@@ -3607,9 +3628,9 @@
 			],
 			"relations": ["Bruises"],
 			"references": [
-				"https://www.greenchildmagazine.com/herbal-remedies-for-bruises/",
+				"https://www.greenchildmagazine.com/herbal-remedies-for-bruises",
 				"https://www.britannica.com/plant/pineapple",
-				"https://www.everydayhealth.com/diet-nutrition/pineapple-benefits-nutrition-facts-side-effects-more/",
+				"https://www.everydayhealth.com/diet-nutrition/pineapple-benefits-nutrition-facts-side-effects-more",
 				"https://www.healthline.com/nutrition/benefits-of-pineapple"
 			],
 			"context_set": ""
@@ -3639,9 +3660,9 @@
 			],
 			"relations": ["Pasa"],
 			"references": [
-				"https://www.greenchildmagazine.com/herbal-remedies-for-bruises/",
+				"https://www.greenchildmagazine.com/herbal-remedies-for-bruises",
 				"https://www.britannica.com/plant/pineapple",
-				"https://www.everydayhealth.com/diet-nutrition/pineapple-benefits-nutrition-facts-side-effects-more/",
+				"https://www.everydayhealth.com/diet-nutrition/pineapple-benefits-nutrition-facts-side-effects-more",
 				"https://www.healthline.com/nutrition/benefits-of-pineapple"
 			],
 			"context_set": ""
@@ -3671,7 +3692,7 @@
 			],
 			"relations": ["Bruises"],
 			"references": [
-				"https://www.greenchildmagazine.com/herbal-remedies-for-bruises/",
+				"https://www.greenchildmagazine.com/herbal-remedies-for-bruises",
 				"https://www.healthline.com/nutrition/oranges",
 				"https://newsroom.heart.org/file?fid=56006b325e8eef723f5df991"
 			],
@@ -3702,7 +3723,7 @@
 			],
 			"relations": ["Pasa"],
 			"references": [
-				"https://www.greenchildmagazine.com/herbal-remedies-for-bruises/",
+				"https://www.greenchildmagazine.com/herbal-remedies-for-bruises",
 				"https://www.healthline.com/nutrition/oranges",
 				"https://newsroom.heart.org/file?fid=56006b325e8eef723f5df991"
 			],
@@ -3736,7 +3757,7 @@
 			"relations": ["Bruises"],
 			"references": [
 				"https://www.healthline.com/health/spinach-benefits",
-				"https://www.greenchildmagazine.com/herbal-remedies-for-bruises/"
+				"https://www.greenchildmagazine.com/herbal-remedies-for-bruises"
 			],
 			"context_set": ""
 		},
@@ -3768,14 +3789,14 @@
 			"relations": ["Pasa"],
 			"references": [
 				"https://www.healthline.com/health/spinach-benefits",
-				"https://www.greenchildmagazine.com/herbal-remedies-for-bruises/"
+				"https://www.greenchildmagazine.com/herbal-remedies-for-bruises"
 			],
 			"context_set": ""
 		},
 		{
 			"tag": "Cucumber",
 			"type": "treatment",
-			"meaning": "Cucumber is a versatile vegetable that is often used in salads, sandwiches, and other dishes. It has a crisp, refreshing taste and a high water content. Cucumbers are a good source of vitamins and minerals, including vitamin C, potassium, and magnesium. They are also a low-calorie food that can help with hydration. Cucumbers contain a compound called cucurbitacin, which may have anti-inflammatory properties. Additionally, cucumbers are a good source of fiber, which can promote digestive health.",
+			"meaning": "Cucumber is a versatile vegetable that is often used in salads, sandwiches, and other dishes. It has a crisp, refreshing taste content. Cucumbers are a good source of vitamins and minerals, including vitamin C, potassium, and magnesium. They are also a low-calorie food that can help with hydration. Cucumbers contain a compound called cucurbitacin, which may have anti-inflammatory properties. Additionally, cucumbers are a good source of fiber, which can promote digestive health.",
 			"patterns": [
 				"Cucumber",
 				"How to use cucumber for skin irritation?",
@@ -3799,7 +3820,7 @@
 		{
 			"tag": "Pipino",
 			"type": "treatment",
-			"meaning": "Ang pipino ay isang maraming gamit na gulay na madalas ginagamit sa mga salad, sandwich, at iba pang pagkain. Mayroon itong malutong, nakakapreskong lasa at mataas na nilalaman ng tubig. Ang mga pipino ay isang mahusay na pinagmumulan ng mga bitamina at mineral, kabilang ang bitamina C, potasyum, at magnesium. Ang mga ito ay isang mababang-kaloryang pagkain din na maaaring makatulong sa hydration. Naglalaman ang mga pipino ng isang compound na tinatawag na cucurbitacin, na maaaring magkaroon ng mga anti-inflammatory properties. Bukod dito, ang mga pipino ay isang mahusay na pinagmumulan ng fiber, na maaaring makatulong na maitaguyod ang kalusugan ng pagtunaw.",
+			"meaning": "Ang pipino ay isang maraming gamit na gulay na madalas ginagamit sa mga salad, sandwich, at iba pang pagkain. Mayroon itong malutong, nakakapreskong lasa. Ang mga pipino ay isang mahusay na pinagmumulan ng mga bitamina at mineral, kabilang ang bitamina C, potasyum, at magnesium. Ang mga ito ay isang mababang-kaloryang pagkain din na maaaring makatulong sa hydration. Naglalaman ang mga pipino ng isang compound na tinatawag na cucurbitacin, na maaaring magkaroon ng mga anti-inflammatory properties. Bukod dito, ang mga pipino ay isang mahusay na pinagmumulan ng fiber, na maaaring makatulong na maitaguyod ang kalusugan ng pagtunaw.",
 			"patterns": [
 				"Pipino",
 				"Paano gamitin ang pipino para sa iritasyon ng balat?",
@@ -3842,7 +3863,7 @@
 			],
 			"relations": ["Fever"],
 			"references": [
-				"https://theherbalacademy.com/blog/8-herbal-home-remedies-for-colds-and-flu/",
+				"https://theherbalacademy.com/blog/8-herbal-home-remedies-for-colds-and-flu",
 				"https://health.clevelandclinic.org/6-surprising-ways-garlic-boosts-your-health"
 			],
 			"context_set": ""
@@ -3869,7 +3890,7 @@
 			],
 			"relations": ["Fever"],
 			"references": [
-				"https://theherbalacademy.com/blog/8-herbal-home-remedies-for-colds-and-flu/",
+				"https://theherbalacademy.com/blog/8-herbal-home-remedies-for-colds-and-flu",
 				"https://health.clevelandclinic.org/6-surprising-ways-garlic-boosts-your-health"
 			],
 			"context_set": ""
@@ -3896,7 +3917,7 @@
 			],
 			"relations": ["Fever"],
 			"references": [
-				"https://theherbalacademy.com/blog/8-herbal-home-remedies-for-colds-and-flu/",
+				"https://theherbalacademy.com/blog/8-herbal-home-remedies-for-colds-and-flu",
 				"https://www.healthline.com/health/video/benefits-of-lemon-water",
 				"https://www.healthline.com/nutrition/6-lemon-health-benefits"
 			],
@@ -3924,7 +3945,7 @@
 			],
 			"relations": ["Fever"],
 			"references": [
-				"https://theherbalacademy.com/blog/8-herbal-home-remedies-for-colds-and-flu/",
+				"https://theherbalacademy.com/blog/8-herbal-home-remedies-for-colds-and-flu",
 				"https://www.healthline.com/health/video/benefits-of-lemon-water",
 				"https://www.healthline.com/nutrition/6-lemon-health-benefits"
 			],
@@ -3950,7 +3971,7 @@
 			"procedures": [
 				"Crush or finely chop 2-3 garlic cloves. Heat 1/4 cup of olive oil. Add garlic to the heated oil and cook for a few minutes. Let the mixture cool. Strain out the garlic pieces. Massage the garlic-infused oil onto the chest"
 			],
-			"relations": ["Chest Pain"],
+			"relations": ["Chest pain"],
 			"references": [
 				"https://www.medicalnewstoday.com/articles/321133#home-remedies",
 				"https://health.clevelandclinic.org/6-surprising-ways-garlic-boosts-your-health"
@@ -4004,10 +4025,10 @@
 			"procedures": [
 				"Peel and slice a 1-2 inch piece of fresh ginger. Boil the ginger slices in water for 10 minutes. Let the ginger water cool slightly. Soak a cloth in the ginger water. Apply the warm, damp cloth to the chest for 10-15 minutes"
 			],
-			"relations": ["Chest Pain"],
+			"relations": ["Chest pain"],
 			"references": [
-				"https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/luya-benefits/",
-				"https://pinascuisine.com/luya/",
+				"https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/luya-benefits",
+				"https://pinascuisine.com/luya",
 				"http://www.philippineherbalmedicine.org/ginger.htm"
 			],
 			"context_set": ""
@@ -4034,8 +4055,8 @@
 			],
 			"relations": ["Pananakit ng dibdib"],
 			"references": [
-				"https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/luya-benefits/",
-				"https://pinascuisine.com/luya/",
+				"https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/luya-benefits",
+				"https://pinascuisine.com/luya",
 				"http://www.philippineherbalmedicine.org/ginger.htm"
 			],
 			"context_set": ""
@@ -4060,11 +4081,11 @@
 			"procedures": [
 				"Soak 10-12 almonds in water overnight. Peel the almonds and grind them into a fine paste. Mix the paste with a small amount of coconut oil or milk. Apply the almond paste to the chest. Cover with a cloth and leave on for 10-15 minutes. Rinse off with warm water."
 			],
-			"relations": ["Chest Pain"],
+			"relations": ["Chest pain"],
 			"references": [
 				"https://www.medicalnewstoday.com/articles/321133#home-remedies",
 				"https://www.healthline.com/nutrition/9-proven-benefits-of-almonds",
-				"https://www.nutritionadvance.com/almonds-nutrition-benefits/"
+				"https://www.nutritionadvance.com/almonds-nutrition-benefits"
 			],
 			"context_set": ""
 		},
@@ -4092,299 +4113,8 @@
 			"references": [
 				"https://www.medicalnewstoday.com/articles/321133#home-remedies",
 				"https://www.healthline.com/nutrition/9-proven-benefits-of-almonds",
-				"https://www.nutritionadvance.com/almonds-nutrition-benefits/"
+				"https://www.nutritionadvance.com/almonds-nutrition-benefits"
 			],
-			"context_set": ""
-		},
-		{
-			"tag": "Greetings",
-			"type": "message",
-			"meaning": [
-				"Hello! Thank you for visiting.",
-				"How are you? I'm here to help you.",
-				"Hi! How can I assist you today?",
-				"Good day! How can I support you?",
-				"Is anyone there? What help do you need?",
-				"Hey! What's up? If you have questions, I'm here.",
-				"Good morning! What are your needs?",
-				"How are you doing? I'm here if you need assistance.",
-				"Good afternoon! What information are you looking for?",
-				"How was your day? I'm here if you need anything.",
-				"Hope you're doing well. How can I help?",
-				"Thanks for coming! Feel free to ask any questions.",
-				"How's your family? If there's something to report, I'm here.",
-				"Where have you been? What questions do you have?",
-				"Come on, let's chat! What would you like to know?",
-				"I'm happy to see you! What's your question?",
-				"Long time no see! I'm here if you need help.",
-				"Say hi to me! What questions do you have?",
-				"Good morning, friend! How can I assist you?",
-				"Do you know the news? If there's new information, I'm here.",
-				"Always happy to see you! What concerns do you have?",
-				"Where are you headed? If you have questions, I'm here.",
-				"How's work going? If you need help, I'm here.",
-				"Glad you're back! I'm happy to see you.",
-				"Looking forward to seeing you again! If you need anything, just let me know.",
-				"What are you up to? If you need help, just ask.",
-				"I'm glad to talk to you! What information can I provide?",
-				"How's your health? If you have any symptoms, let me know.",
-				"Are you happy? Don't hesitate to ask if you have concerns.",
-				"Don't hesitate to reach out! What information do you need?",
-				"Got any news? If there's an update, just let me know.",
-				"How are your friends? If they have questions, I'm here.",
-				"Your smile looks great! If you need anything, I'm here.",
-				"Good evening to you! What would you like to discuss?",
-				"Welcome! What information can I provide you?",
-				"What time will you arrive? If you need anything, just let me know.",
-				"Good day to everyone! If you have questions, I'm here to help.",
-				"Happy you're here! What can I do for you?",
-				"Why didn't you text? If you have questions, I'm here.",
-				"I appreciate your presence! If you need anything, just let me know.",
-				"Happy to see you! How can I assist you?",
-				"What's new in your life? If you have any needs, I'm here.",
-				"Do you know what happened? If you have questions, just let me know.",
-				"I would love to hang out! If you need anything, I'm here.",
-				"Why don't we meet? If you have questions, I'm here.",
-				"How are your projects going? If you have questions, just let me know.",
-				"What's happy in your life right now? If you need help, I'm here.",
-				"Good day to all of you! If you have questions, I'm here to assist."
-			],
-			"patterns": [
-				"Hello",
-				"Hi there",
-				"Hey, how are you",
-				"Is anyone out there",
-				"What's up",
-				"Good morning",
-				"Good afternoon",
-				"Good evening",
-				"How are you doing today",
-				"How was your day",
-				"Come on, let's chat",
-				"Long time no see",
-				"Good day"
-			],
-			"procedures": [],
-			"relations": [],
-			"references": [],
-			"context_set": ""
-		},
-		{
-			"tag": "Kamusta",
-			"type": "message",
-			"meaning": [
-				"Hello! Salamat sa pag-bisita.",
-				"Kamusta! Nandito ako para tumulong.",
-				"Hi! Anong maitutulong ko sa iyo ngayon?",
-				"Magandang araw! Paano kita matutulungan?",
-				"Nandiyan ba ang sinuman? Anong tulong ang kailangan mo?",
-				"Hoy! Anong balita? Kung may katanungan ka, nandito ako.",
-				"Magandang umaga! Ano ang iyong mga pangangailangan?",
-				"Kumusta ka? Kung kailangan mo ng tulong, nandito ako.",
-				"Magandang hapon! Anong impormasyon ang hinahanap mo?",
-				"Kumusta ang iyong araw? Nandito ako kung may kailangan ka.",
-				"Sana'y nasa mabuti kang kalagayan. Ano ang maitutulong ko?",
-				"Salamat sa pagdating! Huwag mag-atubiling magtanong.",
-				"Kumusta ang pamilya mo? Kung may kailangang i-report, nandito lang ako.",
-				"Saan ka galing? Anong mga katanungan ang mayroon ka?",
-				"Tara, usap tayo! Ano ang nais mong malaman?",
-				"Masaya akong makita ka! Ano ang iyong katanungan?",
-				"Long time no see! Narito ako kung kailangan mo ng tulong.",
-				"Batiin mo ako! Anong mga katanungan ang mayroon ka?",
-				"Magandang umaga, kaibigan! Paano kita matutulungan?",
-				"Alam mo ba ang mga balita? Kung may bagong impormasyon, nandito ako.",
-				"Laging masaya na makita ka! Ano ang iyong mga alalahanin?",
-				"Saan ang lakad mo? Kung may katanungan ka, nandito lang ako.",
-				"Kumusta ang trabaho mo? Kung kailangan mo ng tulong, nandito ako.",
-				"Bumalik ka na! Masaya akong nandito ka.",
-				"Nakaasa akong makikita kita ulit! Kung may kailangan ka, nandito lang ako.",
-				"Anong ginagawa mo? Kung kailangan mo ng tulong, sabihin mo lang.",
-				"Natutuwa akong makausap ka! Anong impormasyon ang maibibigay ko?",
-				"Kumusta ang kalusugan mo? Kung may mga sintomas kang nararamdaman, ipaalam mo sa akin.",
-				"Ikaw ba'y masaya? Huwag mag-atubiling magtanong kung may alalahanin ka.",
-				"Huwag kang mag-atubiling makipag-usap! Anong impormasyon ang kailangan mo?",
-				"May balita ka ba? Kung may bagong kaganapan, sabihin mo lang.",
-				"Kamusta ang iyong mga kaibigan? Kung may katanungan sila, nandito ako.",
-				"Tila mabuti ang iyong ngiti! Kung may kailangan ka, nandito ako.",
-				"Magandang gabi sa iyo! Ano ang nais mong pag-usapan?",
-				"Mabuhay! Anong impormasyon ang maibibigay ko sa iyo?",
-				"Saan ka pupunta? Kung may katanungan ka, nandito lang ako.",
-				"Aling oras ka darating? Kung may kailangan ka, ipaalam mo lang.",
-				"Magandang araw sa lahat! Kung may mga tanong, nandito ako para tumulong.",
-				"Natutuwa akong narito ka! Ano ang maaari kong gawin para sa iyo?",
-				"Bakit hindi ka nag-text? Kung may mga katanungan ka, nandito ako.",
-				"Ipinagpapasalamat ko ang iyong presensya! Kung may kailangan ka, sabihin mo lang.",
-				"Magandang pagdating! Ano ang maitutulong ko sa iyo?",
-				"Anong mga balita sa iyong buhay? Kung may mga pangangailangan ka, nandito lang ako.",
-				"Alam mo ba kung ano ang nangyari? Kung may katanungan, sabihin mo lang.",
-				"Nais ko sanang makasama ka! Kung may kailangan ka, nandito ako.",
-				"Bakit hindi tayo magkita? Kung may katanungan ka, nandito lang ako.",
-				"Kumusta ang iyong mga proyekto? Kung may katanungan ka, ipaalam mo lang.",
-				"Anong masaya sa buhay mo ngayon? Kung may kailangan ka, nandito ako.",
-				"Magandang araw sa iyong lahat! Kung may tanong, nandito ako para tumulong."
-			],
-			"patterns": [
-				"Kamusta",
-				"Kumusta",
-				"Mayroon bang nandiyan",
-				"Anong balita",
-				"Magandang umaga",
-				"Magandang tanghali",
-				"Magandang hapon",
-				"Magandang gabi",
-				"Kamusta ka ngayon",
-				"Kamusta ng araw mo",
-				"Usap tayo",
-				"Matagal na tayong di nagkita",
-				"Magandang araw"
-			],
-			"procedures": [],
-			"relations": [],
-			"references": [],
-			"context_set": ""
-		},
-		{
-			"tag": "Paalam",
-			"type": "message",
-			"meaning": [
-				"Paalam! Ingat ka at alagaan mo ang iyong sarili!",
-				"Magandang araw! Tandaan, nandito ako kung kailangan mo ng payo sa first aid.",
-				"Paalam! Huwag mag-atubiling bumalik kung may mga tanong ka pa tungkol sa first aid.",
-				"Ingat! Nandito lang ako para tumulong tuwing kailangan mo ng tulong.",
-				"Kita tayo muli! Mahalaga ang iyong kalusugan, at masaya akong makatulong!"
-			],
-			"patterns": [
-				"Paalam",
-				"Paalam sa ngayon",
-				"Kitakits mamaya",
-				"Ingat, paalam",
-				"Hanggang sa susunod",
-				"Makikita tayo ulit",
-				"Paalam sa ngayon",
-				"Hanggang sa muling pagkikita",
-				"Kita tayo mamaya",
-				"Adios, kaibigan",
-				"Paalam na",
-				"Hanggang sa muli, alligator",
-				"Pagkatapos ng kaunting panahon, buaya",
-				"Ang saya, paalam",
-				"Paalam sa ngayon",
-				"Hanggang sa susunod, ingat",
-				"Ang saya ng usapan, kita tayo mamaya",
-				"Hanggang sa muli, paalam",
-				"Makikita kita mamaya",
-				"Huwag kang mawawala",
-				"Magandang araw, paalam!"
-			],
-			"procedures": [],
-			"relations": [],
-			"references": [],
-			"context_set": ""
-		},
-		{
-			"tag": "Goodbye",
-			"type": "message",
-			"meaning": [
-				"See you! Stay safe and take care of yourself!",
-				"Have a nice day! Remember, I'm here if you need any first aid advice.",
-				"Bye! Don't hesitate to return if you have more questions about first aid.",
-				"Take care! I'm always here to help whenever you need assistance.",
-				"See you soon! Your health is important, and I'm glad to help!"
-			],
-			"patterns": [
-				"Goodbye",
-				"Bye for now",
-				"Catch you later",
-				"Take care, bye",
-				"Until next time",
-				"Talk to you soon",
-				"Farewell for now",
-				"Until we meet again",
-				"See you soon",
-				"Adios, my friend",
-				"Peace out",
-				"Later, alligator",
-				"After a while, crocodile",
-				"It's been great, bye",
-				"So long for now",
-				"Until next time, take care",
-				"Good chatting with you, see you later",
-				"Until then, bye",
-				"I'll catch you later",
-				"Don't be a stranger",
-				"Have a great day, bye!"
-			],
-			"procedures": [],
-			"relations": [],
-			"references": [],
-			"context_set": ""
-		},
-		{
-			"tag": "Thanks",
-			"type": "message",
-			"meaning": [
-				"I'm glad to assist!",
-				"Always here to help!",
-				"It's my pleasure to support you!",
-				"Happy to provide assistance!",
-				"I'm here whenever you need me!",
-				"Always ready to help you!",
-				"It's a joy to help!",
-				"I'm here to make things easier for you!",
-				"Delighted to assist you!",
-				"Your well-being is my priority!"
-			],
-			"patterns": [
-				"Thanks",
-				"Thank you",
-				"Thank you so much",
-				"I really appreciate it",
-				"Thank you very much",
-				"That's incredibly helpful, thanks!",
-				"I can't thank you enough",
-				"Thank you for your support",
-				"I'm so grateful for your help",
-				"Thank you kindly",
-				"I truly appreciate your assistance",
-				"Thanks a ton for everything!"
-			],
-			"procedures": [],
-			"relations": [],
-			"references": [],
-			"context_set": ""
-		},
-		{
-			"tag": "Salamat",
-			"type": "message",
-			"meaning": [
-				"Masaya akong makatulong!",
-				"Nandito lang ako para tumulong!",
-				"Kasiyahan kong suportahan ka!",
-				"Masaya akong magbigay ng tulong!",
-				"Nandito ako tuwing kailangan mo!",
-				"Laging handang tumulong sa iyo!",
-				"Kaligayahan kong tumulong!",
-				"Nandito ako para pasimplehin ang mga bagay para sa iyo!",
-				"Natutuwa akong makasama ka!",
-				"Ang iyong kalusugan ang aking prayoridad!"
-			],
-			"patterns": [
-				"Salamat",
-				"Salamat nang marami",
-				"Maraming salamat",
-				"Talagang pinahahalagahan ko ito",
-				"Maraming salamat sa iyo",
-				"Napakalaking tulong nito, salamat",
-				"Hindi ko sapat na masabi ang aking pasasalamat",
-				"Salamat sa iyong suporta",
-				"Labis akong nagpapasalamat sa iyong tulong",
-				"Salamat ng may kabutihan",
-				"Totoong pinahahalagahan ko ang iyong tulong",
-				"Salamat ng napakalaki sa lahat!"
-			],
-			"procedures": [],
-			"relations": [],
-			"references": [],
 			"context_set": ""
 		}
 	]

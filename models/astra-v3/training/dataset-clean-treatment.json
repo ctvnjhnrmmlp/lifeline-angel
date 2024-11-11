@@ -38,8 +38,8 @@
             ],
             "relations": [
                 "Diarrhea",
-                "Heat Exhaustion",
-                "Heat Stroke",
+                "Heat exhaustion",
+                "Heat stroke",
                 "Dehydration"
             ],
             "references": [
@@ -86,8 +86,8 @@
             ],
             "relations": [
                 "Pagtatae",
-                "Pagkapagod sa Init",
-                "Heat Stroke",
+                "Pagkapagod sa init",
+                "Heat stroke",
                 "Dehydration"
             ],
             "references": [
@@ -114,7 +114,7 @@
                 "Benefits of lemongrass for dehydration.",
                 "How to apply lemongrass for abdominal pain?",
                 "How to combine lemongrass with other remedies for heat exhaustion?",
-                "How to prepare lemongrass water for heat stroke?",
+                "How to prepare lemongrass for heat stroke?",
                 "How to apply lemongrass for symptoms of dehydration?",
                 "How to store lemongrass for medicinal use?",
                 "How to make a lemongrass for hydration?",
@@ -132,9 +132,9 @@
                 "Gather Ingredients: Fresh tanglad stalks, water, optional sweeteners (honey or sugar), and optional flavorings (ginger or lemon). Wash and Chop: Thoroughly wash the tanglad stalks and chop them into small pieces. Boil Water: Bring a pot of water to a boil. Add Tanglad: Add the chopped tanglad to the boiling water. Simmer: Reduce the heat and let it simmer for about 10-15 minutes. Strain: Strain the tea to remove the tanglad pieces. Serve: Consume your tanglad tea slowly hot or let it cool."
             ],
             "relations": [
-                "Abdominal Pain",
-                "Heat Exhaustion",
-                "Heat Stroke",
+                "Abdominal pain",
+                "Heat exhaustion",
+                "Heat stroke",
                 "Dehydration"
             ],
             "references": [
@@ -161,7 +161,7 @@
                 "Mga benepisyo ng tanglad sa dehydration.",
                 "Paano ilagay ang tanglad para sa abdominal pain?",
                 "Paano pagsamahin ang tanglad sa ibang remedyo para sa heat exhaustion?",
-                "Paano ihanda ang tanglad water para sa heat stroke?s",
+                "Paano ihanda ang tanglad para sa heat stroke?s",
                 "Paano maglagay ng tanglad sa mga sintomas ng dehydration?",
                 "Paano mag-imbak ng tanglad para sa panggagamot?",
                 "Paano gawing smoothie ang tanglad para sa hydration?",
@@ -179,9 +179,9 @@
                 "Magtipon ng Mga Sangkap: Mga sariwang tanglad, tubig, mga opsyonal na pampatamis (pulot o asukal), at mga opsyonal na pampalasa (luya o lemon). Hugasan at Tadtarin: Hugasan nang maigi ang tanglad at tadtarin ito ng maliliit. Pakuluan ang Tubig: Pakuluan ang isang palayok ng tubig. Magdagdag ng Tanglad: Idagdag ang tinadtad na tanglad sa kumukulong tubig. Kumulo: Bawasan ang apoy at hayaang kumulo ng mga 10-15 minuto. Salain: Salain ang tsaa para matanggal ang mga piraso ng tanglad. Ihain: Uminom ng iyong tanglad tea nang dahan-dahang mainit o hayaan itong lumamig."
             ],
             "relations": [
-                "Abdominal Pain",
-                "Pagkapagod sa Init",
-                "Heat Stroke",
+                "Abdominal pain",
+                "Pagkapagod sa init",
+                "Heat stroke",
                 "Dehydration"
             ],
             "references": [
@@ -235,19 +235,19 @@
                 "Gather Ingredients: Fresh or dried lagundi leaves, water. Wash and Chop: Thoroughly wash the lagundi leaves and chop them into small pieces. Boil Water: Bring 2 cups of water to a boil. Add Lagundi: Add half a cup of chopped fresh or dried lagundi leaves to the boiling water. Simmer: Reduce the heat and let it simmer for 10-15 minutes. Strain: Strain the mixture to remove the leaves. Drink: Drink half a cup of the decoction three times a day."
             ],
             "relations": [
-                "Nasal Congestion",
+                "Nasal congestion",
                 "Cough",
-                "Broken Toe",
+                "Broken toe",
                 "Diarrhea",
-                "Nose Bleed",
+                "Nose bleed",
                 "Vertigo",
-                "Head Injury",
+                "Head injury",
                 "Headache",
                 "Cold"
             ],
             "references": [
-                "https://drfarrahmd.com/2020/10/lagundi-natural-remedy-for-respiratory/",
-                "https://www.pchrd.dost.gov.ph/heartnovation/lagundi-anti-cough-and-anti-asthma-medicine/",
+                "https://drfarrahmd.com/2020/10/lagundi-natural-remedy-for-respiratory",
+                "https://www.pchrd.dost.gov.ph/heartnovation/lagundi-anti-cough-and-anti-asthma-medicine",
                 "https://www.pharexhealth.com/health-articles/6-benefits-of-lagundi-for-dry-cough"
             ],
             "context_set": ""
@@ -297,19 +297,19 @@
                 "Magtipon ng Mga Sangkap: Sariwa o tuyo na dahon ng lagundi, tubig. Hugasan at Tadtarin: Hugasan nang maigi ang mga dahon ng lagundi at tadtarin ito ng maliliit. Pakuluan ang Tubig: Pakuluan ang 2 basong tubig. Magdagdag ng Lagundi: Magdagdag ng kalahating tasa ng tinadtad na sariwa o tuyo na dahon ng lagundi sa kumukulong tubig. Kumulo: Bawasan ang apoy at hayaang kumulo ng 10-15 minuto. Salain: Salain ang pinaghalong para maalis ang mga dahon. Inumin: Uminom ng kalahating tasa ng decoction tatlong beses sa isang araw."
             ],
             "relations": [
-                "Baradong Ilong",
+                "Baradong ilong",
                 "Ubo",
-                "Daliri ng Paa na Nasira",
+                "Daliri ng paa na nasira",
                 "Pagtatae",
-                "Dumudugo sa Ilong",
+                "Dumudugo sa ilong",
                 "Vertigo",
-                "Pinsala sa Ulo",
-                "Sakit ng Ulo",
+                "Pinsala sa ulo",
+                "Sakit ng ulo",
                 "Sipon"
             ],
             "references": [
-                "https://drfarrahmd.com/2020/10/lagundi-natural-remedy-for-respiratory/",
-                "https://www.pchrd.dost.gov.ph/heartnovation/lagundi-anti-cough-and-anti-asthma-medicine/",
+                "https://drfarrahmd.com/2020/10/lagundi-natural-remedy-for-respiratory",
+                "https://www.pchrd.dost.gov.ph/heartnovation/lagundi-anti-cough-and-anti-asthma-medicine",
                 "https://www.pharexhealth.com/health-articles/6-benefits-of-lagundi-for-dry-cough"
             ],
             "context_set": ""
@@ -330,9 +330,8 @@
                 "Gather Ingredients: Fresh oregano leaves, water. Wash and Chop: Thoroughly wash the oregano leaves and chop them into small pieces. Boil Water: Bring 2 cups of water to a boil. Add Oregano: Add half a cup of chopped oregano leaves to the boiling water. Simmer: Reduce the heat and let it simmer for 10-15 minutes. Strain: Strain the mixture to remove the leaves. Drink: Drink half a cup of the decoction three times a day."
             ],
             "relations": [
-                "Nasal Congestion",
-                "Cough",
-                ""
+                "Nasal congestion",
+                "Cough"
             ],
             "references": [
                 "https://www.pchrd.dost.gov.ph/heartnovation/sambong-tablet-herbal-drug-formulation-for-kidney-stones",
@@ -356,9 +355,8 @@
                 "Kunin ang mga Sangkap: Sariwang dahon ng oregano, tubig. Hugasan at Tadtarin: Hugasan nang mabuti ang mga dahon ng oregano at tadtarin ito ng maliliit na piraso. Pakuluan ang Tubig: Pakuluan ang 2 tasa ng tubig. Idagdag ang Oregano: Idagdag ang kalahating tasa ng tinadtad na dahon ng oregano sa kumukulong tubig. Pakuluin: Bawasan ang init at hayaang kumulo ng 10-15 minuto. Salain: Salain ang pinagpakuluan upang alisin ang mga dahon. Inumin: Uminom ng kalahating tasa ng pinagpakuluan tatlong beses sa isang araw."
             ],
             "relations": [
-                "Baradong Ilong",
-                "ubo",
-                ""
+                "Baradong ilong",
+                "Ubo"
             ],
             "references": [
                 "https://www.pchrd.dost.gov.ph/heartnovation/sambong-tablet-herbal-drug-formulation-for-kidney-stones",
@@ -423,13 +421,12 @@
                 "Nose Bleed",
                 "Food Poison",
                 "Head Injury",
-                "Cold",
-                ""
+                "Cold"
             ],
             "references": [
                 "https://www.pchrd.dost.gov.ph/heartnovation/sambong-tablet-herbal-drug-formulation-for-kidney-stones",
-                "https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/sambong-benefits/",
-                "https://www.pchrd.dost.gov.ph/heartnovation/sambong-tablet-herbal-drug-formulation-for-kidney-stones/"
+                "https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/sambong-benefits",
+                "https://www.pchrd.dost.gov.ph/heartnovation/sambong-tablet-herbal-drug-formulation-for-kidney-stones"
             ],
             "context_set": ""
         },
@@ -477,19 +474,18 @@
                 "Hakbang 1: Pag-kuha: Pumili ng sariwang mga dahon ng sambong mula sa malinis at hindi maruming lugar. Hakbang 2: Paghuhugas: Hugasan nang mabuti ang mga dahon sa ilalim ng tubig na umaagos upang alisin ang dumi at mga impurities. Hakbang 3: Paghahanda: Tea: Pakuluan ang isang dakot ng mga dahon ng sambong sa isang tasa ng tubig sa loob ng 5-10 minuto. Salain at hayaang lumamig bago uminom. Poultice: Dudugin ang mga dahon hanggang maging paste at ilapat nang direkta sa apektadong lugar. Gargle: Para sa namamagang lalamunan, magmumog ng maligamgam na tsaang sambong. Hakbang 4: Mga Gamit: Kasikipan ng ilong at ubo: Uminom ng tsaang sambong upang makatulong na malinis ang kasikipan at mapawi ang ubo. Sakit ng buto: Ilapat ang sambong poultice sa nasugatan na lugar upang mabawasan ang sakit at pamamaga. Pagdurugo ng ilong: Ilapat ang malamig na compress na binabad sa tsaang sambong sa tulay ng ilong upang makatulong na ihinto ang pagdurugo. Pagkalason sa pagkain: Uminom ng tsaang sambong upang makatulong na mapawi ang sistema ng pagtunaw at maibsan ang mga sintomas tulad ng pagsusuka at pagtatae. Sakit sa ulo: Ilapat ang malamig na compress na binabad sa tsaang sambong sa apektadong lugar upang mabawasan ang pamamaga at sakit. Sipon: Uminom ng tsaang sambong upang makatulong na palakasin ang immune system at mapawi ang mga sintomas ng sipon."
             ],
             "relations": [
-                "Baradong Ilong",
+                "Baradong ilong",
                 "Ubo",
-                "Daliri ng Paa na Nasira",
-                "Dumudugo sa Ilong",
-                "Pagkalason sa Pagkain",
-                "Pinsala sa Ulo",
-                "Sipon",
-                ""
+                "Daliri ng paa na nasira",
+                "Dumudugo sa ilong",
+                "Pagkalason sa pagkain",
+                "Pinsala sa ulo",
+                "Sipon"
             ],
             "references": [
                 "https://www.pchrd.dost.gov.ph/heartnovation/sambong-tablet-herbal-drug-formulation-for-kidney-stones",
-                "https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/sambong-benefits/",
-                "https://www.pchrd.dost.gov.ph/heartnovation/sambong-tablet-herbal-drug-formulation-for-kidney-stones/"
+                "https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/sambong-benefits",
+                "https://www.pchrd.dost.gov.ph/heartnovation/sambong-tablet-herbal-drug-formulation-for-kidney-stones"
             ],
             "context_set": ""
         },
@@ -509,12 +505,12 @@
                 "Gather Ingredients: Fresh Tsaang Gubat leaves, water. Wash and Chop: Thoroughly wash the Tsaang Gubat leaves and chop them into small pieces. Boil Water: Bring 2 cups of water to a boil. Add Tsaang Gubat: Add half a cup of chopped Tsaang Gubat leaves to the boiling water. Simmer: Reduce the heat and let it simmer for 10-15 minutes. Strain: Strain the mixture to remove the leaves. Drink: Drink half a cup of the decoction three times a day."
             ],
             "relations": [
-                "Abdominal Pain",
-                "Broken Toe",
+                "Abdominal pain",
+                "Broken toe",
                 "Diarrhea",
-                "Nose Bleed",
+                "Nose bleed",
                 "Vertigo",
-                "Head Injury",
+                "Head injury",
                 "Cold"
             ],
             "references": [
@@ -540,12 +536,12 @@
                 "Kunin ang mga Sangkap: Sariwang dahon ng Tsaang Gubat, tubig. Hugasan at Tadtarin: Hugasan nang mabuti ang mga dahon ng Tsaang Gubat at tadtarin ito ng maliliit na piraso. Pakuluan ang Tubig: Pakuluan ang 2 tasa ng tubig. Idagdag ang Tsaang Gubat: Idagdag ang kalahating tasa ng tinadtad na dahon ng Tsaang Gubat sa kumukulong tubig. Pakuluin: Bawasan ang init at hayaang kumulo ng 10-15 minuto. Salain: Salain ang pinagpakuluan upang alisin ang mga dahon. Inumin: Uminom ng kalahating tasa ng pinagpakuluan tatlong beses sa isang araw."
             ],
             "relations": [
-                "Abdominal Pain",
-                "Daliri ng Paa na Nasira",
+                "Abdominal pain",
+                "Daliri ng paa na nasira",
                 "Pagtatae",
-                "Dumudugo sa Ilong",
+                "Dumudugo sa ilong",
                 "Vertigo",
-                "Pinsala sa Ulo",
+                "Pinsala sa ulo",
                 "SIpon"
             ],
             "references": [
@@ -597,18 +593,18 @@
             ],
             "relations": [
                 "Vertigo",
-                "Food Poison",
+                "Food poison",
                 "Headache",
                 "Fever",
-                "Abdominal Pain",
+                "Abdominal pain",
                 "Cold",
                 "Strain"
             ],
             "references": [
-                "https://www.aigastro.net/blog/305938-can-ginger-actually-help-your-upset-stomach/%20(accessed%20Sep.%2005,%202024)https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/luya-benefits/",
-                "https://pinascuisine.com/luya/",
+                "https://www.aigastro.net/blog/305938-can-ginger-actually-help-your-upset-stomach/%20(accessed%20Sep.%2005,%202024)https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/luya-benefits",
+                "https://pinascuisine.com/luya",
                 "http://www.philippineherbalmedicine.org/ginger.htm",
-                "https://theherbalacademy.com/blog/8-herbal-home-remedies-for-colds-and-flu/"
+                "https://theherbalacademy.com/blog/8-herbal-home-remedies-for-colds-and-flu"
             ],
             "context_set": ""
         },
@@ -654,18 +650,18 @@
             ],
             "relations": [
                 "Vertigo",
-                "Pagkalason sa Pagkain",
-                "Sakit ng Ulo",
+                "Pagkalason sa pagkain",
+                "Sakit ng ulo",
                 "Fever",
-                "Abdominal Pain",
+                "Abdominal pain",
                 "Sipon",
                 "Strain"
             ],
             "references": [
-                "https://www.aigastro.net/blog/305938-can-ginger-actually-help-your-upset-stomach/%20(accessed%20Sep.%2005,%202024)https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/luya-benefits/",
-                "https://pinascuisine.com/luya/",
+                "https://www.aigastro.net/blog/305938-can-ginger-actually-help-your-upset-stomach/%20(accessed%20Sep.%2005,%202024)https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/luya-benefits",
+                "https://pinascuisine.com/luya",
                 "http://www.philippineherbalmedicine.org/ginger.htm",
-                "https://theherbalacademy.com/blog/8-herbal-home-remedies-for-colds-and-flu/"
+                "https://theherbalacademy.com/blog/8-herbal-home-remedies-for-colds-and-flu"
             ],
             "context_set": ""
         },
@@ -690,7 +686,7 @@
                 "Take a handful of dried Ginkgo Biloba leaves. Boil 2 cups of water. Add the leaves to the boiling water. Let it simmer for 10-15 minutes. Strain the leaves and pour the tea into a cup. Drink 1-2 cups daily."
             ],
             "relations": [
-                "Head Injury"
+                "Head injury"
             ],
             "references": [
                 "https://medicaltrendsnow.com/ent/treatments-for-vertigo",
@@ -720,7 +716,7 @@
                 "Kumuha ng isang dakot ng pinatuyong dahon ng Ginkgo Biloba. Pakuluan ang 2 tasa ng tubig. Idagdag ang mga dahon sa kumukulong tubig. Hayaang kumulo ng 10-15 minuto. Salain ang mga dahon at ibuhos ang tsaa sa tasa. Uminom ng 1-2 tasa araw-araw."
             ],
             "relations": [
-                "Pinsala sa Ulo"
+                "Pinsala sa ulo"
             ],
             "references": [
                 "https://medicaltrendsnow.com/ent/treatments-for-vertigo",
@@ -747,12 +743,12 @@
             "relations": [
                 "Cuts",
                 "Burn",
-                "Nose Bleed",
+                "Nose bleed",
                 "Bleeding",
-                "Food Poison"
+                "Food poison"
             ],
             "references": [
-                "https://medicaltrendsnow.com/emergency-medicine/treatments-for-food-poisoning-in-the-philippines/",
+                "https://medicaltrendsnow.com/emergency-medicine/treatments-for-food-poisoning-in-the-philippines",
                 "https://www.healthline.com/nutrition/8-benefits-of-guavas",
                 "https://food.ndtv.com/health/15-amazing-guava-benefits-heart-healthy-weight-loss-friendly-and-more-1244242"
             ],
@@ -781,17 +777,17 @@
             "relations": [
                 "Hiwa",
                 "Paso",
-                "Dumudugo sa Ilong",
+                "Dumudugo sa ilong",
                 "Pagdurugo",
-                "Pagkalason sa Pagkain"
+                "Pagkalason sa pagkain"
             ],
             "references": [
                 "https://www.prutaslokal.com/blog/28-tips-at-benefits-sa-pagkain-ng-bayabas",
                 "https://www.healthline.com/nutrition/8-benefits-of-guavas",
-                "https://www.pchrd.dost.gov.ph/news_and_updates/dost-pchrd-supported-program-on-top-tier-plants-intended-for-treating-diseases-undergoes-formulation-stage/",
+                "https://www.pchrd.dost.gov.ph/news_and_updates/dost-pchrd-supported-program-on-top-tier-plants-intended-for-treating-diseases-undergoes-formulation-stage",
                 "https://www.herbalgoodnessco.com/en-ca/blogs/healthy-living/everything-you-ever-wanted-to-know-about-guava-leaves-herbal-goodness",
                 "https://www.healthline.com/nutrition/8-benefits-of-guavas",
-                "https://medicaltrendsnow.com/emergency-medicine/treatments-for-food-poisoning-in-the-philippines/",
+                "https://medicaltrendsnow.com/emergency-medicine/treatments-for-food-poisoning-in-the-philippines",
                 "https://www.healthline.com/nutrition/8-benefits-of-guavas",
                 "https://food.ndtv.com/health/15-amazing-guava-benefits-heart-healthy-weight-loss-friendly-and-more-1244242"
             ],
@@ -817,7 +813,7 @@
             ],
             "references": [
                 "https://www.philippineherbalmedicine.org/medicinal_plants.htm",
-                "https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/atis-benefits/"
+                "https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/atis-benefits"
             ],
             "context_set": ""
         },
@@ -841,7 +837,7 @@
             ],
             "references": [
                 "https://www.philippineherbalmedicine.org/medicinal_plants.htm",
-                "https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/atis-benefits/"
+                "https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/atis-benefits"
             ],
             "context_set": ""
         },
@@ -864,10 +860,10 @@
                 "Headache"
             ],
             "references": [
-                "https://www.pchrd.dost.gov.ph/heartnovation/sambong-tablet-herbal-drug-formulation-for-kidney-stones/",
+                "https://www.pchrd.dost.gov.ph/heartnovation/sambong-tablet-herbal-drug-formulation-for-kidney-stones",
                 "https://www.philippineherbalmedicine.org/doh_herbs.htm",
                 "https://globalfoodbook.com/17-remarkable-benefits-of-yerba-buena",
-                "https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/yerba-buena-plant-benefits/"
+                "https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/yerba-buena-plant-benefits"
             ],
             "context_set": ""
         },
@@ -890,10 +886,10 @@
                 "Sakit ng Ulo"
             ],
             "references": [
-                "https://www.pchrd.dost.gov.ph/heartnovation/sambong-tablet-herbal-drug-formulation-for-kidney-stones/",
+                "https://www.pchrd.dost.gov.ph/heartnovation/sambong-tablet-herbal-drug-formulation-for-kidney-stones",
                 "https://www.philippineherbalmedicine.org/doh_herbs.htm",
                 "https://globalfoodbook.com/17-remarkable-benefits-of-yerba-buena",
-                "https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/yerba-buena-plant-benefits/"
+                "https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/yerba-buena-plant-benefits"
             ],
             "context_set": ""
         },
@@ -918,8 +914,8 @@
             "references": [
                 "https://mypharma.ph/articles/10-classic-home-remedies-trusted-by-filipino-moms",
                 "https://uscitrus.com/blogs/citrus-delight-blog/calamondin-magic-7-amazing-health-benefits-of-calamansi-juice",
-                "https://www.thelittleepicurean.com/calamansi-juice/",
-                "https://nawon.com.vn/calamansi-juice-8-benefits-of-this-tasty-citrus-fruit/"
+                "https://www.thelittleepicurean.com/calamansi-juice",
+                "https://nawon.com.vn/calamansi-juice-8-benefits-of-this-tasty-citrus-fruit"
             ],
             "context_set": ""
         },
@@ -944,8 +940,8 @@
             "references": [
                 "https://mypharma.ph/articles/10-classic-home-remedies-trusted-by-filipino-moms",
                 "https://uscitrus.com/blogs/citrus-delight-blog/calamondin-magic-7-amazing-health-benefits-of-calamansi-juice",
-                "https://www.thelittleepicurean.com/calamansi-juice/",
-                "https://nawon.com.vn/calamansi-juice-8-benefits-of-this-tasty-citrus-fruit/"
+                "https://www.thelittleepicurean.com/calamansi-juice",
+                "https://nawon.com.vn/calamansi-juice-8-benefits-of-this-tasty-citrus-fruit"
             ],
             "context_set": ""
         },
@@ -968,7 +964,7 @@
             ],
             "references": [
                 "https://www.band-aid.com/first-aid-info/first-aid-basics/bandaging-a-wound",
-                "https://gauzecare.com/7-different-types-of-gauze-for-wounds-when-to-use-them/",
+                "https://gauzecare.com/7-different-types-of-gauze-for-wounds-when-to-use-them",
                 "https://www.woundsource.com/blog/gauze-dressings-and-wounds-9-dos-and-don-ts"
             ],
             "context_set": ""
@@ -992,7 +988,7 @@
             ],
             "references": [
                 "https://www.band-aid.com/first-aid-info/first-aid-basics/bandaging-a-wound",
-                "https://gauzecare.com/7-different-types-of-gauze-for-wounds-when-to-use-them/",
+                "https://gauzecare.com/7-different-types-of-gauze-for-wounds-when-to-use-them",
                 "https://www.woundsource.com/blog/gauze-dressings-and-wounds-9-dos-and-don-ts"
             ],
             "context_set": ""
@@ -1021,10 +1017,10 @@
                 "Rash"
             ],
             "references": [
-                "https://hellodoctor.com.ph/fil/mga-herbal-at-alternatives/halamang-gamot/benepisyo-ng-aloe-vera/",
+                "https://hellodoctor.com.ph/fil/mga-herbal-at-alternatives/halamang-gamot/benepisyo-ng-aloe-vera",
                 "https://www.almanac.com/aloe-vera-self-regenerating-first-aid-kit",
-                "https://naturallysavvy.com/care/7-fabulous-first-aid-uses-for-aloe-vera-you-should-know/",
-                "https://wellnessnova.com/herbal-first-aid-kit/"
+                "https://naturallysavvy.com/care/7-fabulous-first-aid-uses-for-aloe-vera-you-should-know",
+                "https://wellnessnova.com/herbal-first-aid-kit"
             ],
             "context_set": ""
         },
@@ -1052,10 +1048,10 @@
                 "Pantal"
             ],
             "references": [
-                "https://hellodoctor.com.ph/fil/mga-herbal-at-alternatives/halamang-gamot/benepisyo-ng-aloe-vera/",
+                "https://hellodoctor.com.ph/fil/mga-herbal-at-alternatives/halamang-gamot/benepisyo-ng-aloe-vera",
                 "https://www.almanac.com/aloe-vera-self-regenerating-first-aid-kit",
-                "https://naturallysavvy.com/care/7-fabulous-first-aid-uses-for-aloe-vera-you-should-know/",
-                "https://wellnessnova.com/herbal-first-aid-kit/"
+                "https://naturallysavvy.com/care/7-fabulous-first-aid-uses-for-aloe-vera-you-should-know",
+                "https://wellnessnova.com/herbal-first-aid-kit"
             ],
             "context_set": ""
         },
@@ -1081,8 +1077,7 @@
             ],
             "references": [
                 "https://tl.wikibooks.org/wiki/Lunas_Gamit_ang_Halamang_Gamot_at_Haydroterapi/Lunas_sa_nagdurugong_sugat",
-                "https://www.slideshare.net/slideshow/3-final-first-aid-101ppt/264742676",
-                ""
+                "https://www.slideshare.net/slideshow/3-final-first-aid-101ppt/264742676"
             ],
             "context_set": ""
         },
@@ -1108,8 +1103,7 @@
             ],
             "references": [
                 "https://tl.wikibooks.org/wiki/Lunas_Gamit_ang_Halamang_Gamot_at_Haydroterapi/Lunas_sa_nagdurugong_sugat",
-                "https://www.slideshare.net/slideshow/3-final-first-aid-101ppt/264742676",
-                ""
+                "https://www.slideshare.net/slideshow/3-final-first-aid-101ppt/264742676"
             ],
             "context_set": ""
         },
@@ -1136,7 +1130,7 @@
             "references": [
                 "https://tl.wikibooks.org/wiki/Lunas_Gamit_ang_Halamang_Gamot_at_Haydroterapi/Lunas_sa_nagdurugong_sugat",
                 "https://www.herbanext.com/medicinal-herbs/painted-coleus-mayana",
-                "https://sonyasgarden.com/explore-the-garden/3-reasons-mayana-garden/",
+                "https://sonyasgarden.com/explore-the-garden/3-reasons-mayana-garden",
                 "http://www.ijfe.org/uploadfile/2017/0816/20170816112607904.pdf"
             ],
             "context_set": ""
@@ -1164,7 +1158,7 @@
             "references": [
                 "https://tl.wikibooks.org/wiki/Lunas_Gamit_ang_Halamang_Gamot_at_Haydroterapi/Lunas_sa_nagdurugong_sugat",
                 "https://www.herbanext.com/medicinal-herbs/painted-coleus-mayana",
-                "https://sonyasgarden.com/explore-the-garden/3-reasons-mayana-garden/",
+                "https://sonyasgarden.com/explore-the-garden/3-reasons-mayana-garden",
                 "http://www.ijfe.org/uploadfile/2017/0816/20170816112607904.pdf"
             ],
             "context_set": ""
@@ -1192,10 +1186,10 @@
             "references": [
                 "https://www.medicalnewstoday.com/articles/322907#medical-treatments",
                 "https://www.healthline.com/nutrition/benefits-of-honey",
-                "https://www.nutritionletter.tufts.edu/healthy-eating/honey-potential-benefits-and-risks/",
-                "https://newsnetwork.mayoclinic.org/discussion/mayo-clinic-minute-the-cautions-and-benefits-of-honey/",
-                "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5424551/",
-                "https://ahpanet.com/"
+                "https://www.nutritionletter.tufts.edu/healthy-eating/honey-potential-benefits-and-risks",
+                "https://newsnetwork.mayoclinic.org/discussion/mayo-clinic-minute-the-cautions-and-benefits-of-honey",
+                "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5424551",
+                "https://ahpanet.com"
             ],
             "context_set": ""
         },
@@ -1222,10 +1216,10 @@
             "references": [
                 "https://www.medicalnewstoday.com/articles/322907#medical-treatments",
                 "https://www.healthline.com/nutrition/benefits-of-honey",
-                "https://www.nutritionletter.tufts.edu/healthy-eating/honey-potential-benefits-and-risks/",
-                "https://newsnetwork.mayoclinic.org/discussion/mayo-clinic-minute-the-cautions-and-benefits-of-honey/",
-                "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5424551/",
-                "https://ahpanet.com/"
+                "https://www.nutritionletter.tufts.edu/healthy-eating/honey-potential-benefits-and-risks",
+                "https://newsnetwork.mayoclinic.org/discussion/mayo-clinic-minute-the-cautions-and-benefits-of-honey",
+                "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5424551",
+                "https://ahpanet.com"
             ],
             "context_set": ""
         },
@@ -1248,8 +1242,8 @@
                 "Sprains"
             ],
             "references": [
-                "https://www.algotech.ca/en/natural-remedies-for-an-ankle-sprain/",
-                "https://www.tasteofhome.com/collection/homemade-first-aid-remedies/",
+                "https://www.algotech.ca/en/natural-remedies-for-an-ankle-sprain",
+                "https://www.tasteofhome.com/collection/homemade-first-aid-remedies",
                 "https://health.clevelandclinic.org/6-surprising-ways-garlic-boosts-your-health"
             ],
             "context_set": ""
@@ -1273,8 +1267,8 @@
                 "Sprains"
             ],
             "references": [
-                "https://www.algotech.ca/en/natural-remedies-for-an-ankle-sprain/",
-                "https://www.tasteofhome.com/collection/homemade-first-aid-remedies/",
+                "https://www.algotech.ca/en/natural-remedies-for-an-ankle-sprain",
+                "https://www.tasteofhome.com/collection/homemade-first-aid-remedies",
                 "https://health.clevelandclinic.org/6-surprising-ways-garlic-boosts-your-health"
             ],
             "context_set": ""
@@ -1298,14 +1292,9 @@
                 "Sprains"
             ],
             "references": [
-                "https://wellnessmama.com/remedies/onion-benefits/",
-                "https://www.algotech.ca/en/natural-remedies-for-an-ankle-sprain/",
-                "https://txnaturalpediatrics.com/2019/08/06/natural-remedies-for-a-sprained-ankle/",
-                "",
-                "",
-                "",
-                "",
-                ""
+                "https://wellnessmama.com/remedies/onion-benefits",
+                "https://www.algotech.ca/en/natural-remedies-for-an-ankle-sprain",
+                "https://txnaturalpediatrics.com/2019/08/06/natural-remedies-for-a-sprained-ankle"
             ],
             "context_set": ""
         },
@@ -1328,15 +1317,9 @@
                 "Sprains"
             ],
             "references": [
-                "https://wellnessmama.com/remedies/onion-benefits/",
-                "https://www.algotech.ca/en/natural-remedies-for-an-ankle-sprain/",
-                "https://txnaturalpediatrics.com/2019/08/06/natural-remedies-for-a-sprained-ankle/",
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
+                "https://wellnessmama.com/remedies/onion-benefits",
+                "https://www.algotech.ca/en/natural-remedies-for-an-ankle-sprain",
+                "https://txnaturalpediatrics.com/2019/08/06/natural-remedies-for-a-sprained-ankle"
             ],
             "context_set": ""
         },
@@ -1365,10 +1348,10 @@
                 "Sprains"
             ],
             "references": [
-                "https://www.algotech.ca/en/natural-remedies-for-an-ankle-sprain/",
-                "https://www.livestrong.com/article/205430-how-to-apply-raw-cabbage-leaves-for-the-relief-of-joint-pain/",
+                "https://www.algotech.ca/en/natural-remedies-for-an-ankle-sprain",
+                "https://www.livestrong.com/article/205430-how-to-apply-raw-cabbage-leaves-for-the-relief-of-joint-pain",
                 "https://www.womansworld.com/wellness/pain-management/cabbage-leaves-for-inflammation-170241",
-                "https://thelostherbs.com/how-to-make-cabbage-bandages-to-treat-inflammation-and-joint-pain/",
+                "https://thelostherbs.com/how-to-make-cabbage-bandages-to-treat-inflammation-and-joint-pain",
                 "https://www.healthline.com/nutrition/benefits-of-cabbage"
             ],
             "context_set": ""
@@ -1398,10 +1381,10 @@
                 "Sprains"
             ],
             "references": [
-                "https://www.algotech.ca/en/natural-remedies-for-an-ankle-sprain/",
-                "https://www.livestrong.com/article/205430-how-to-apply-raw-cabbage-leaves-for-the-relief-of-joint-pain/",
+                "https://www.algotech.ca/en/natural-remedies-for-an-ankle-sprain",
+                "https://www.livestrong.com/article/205430-how-to-apply-raw-cabbage-leaves-for-the-relief-of-joint-pain",
                 "https://www.womansworld.com/wellness/pain-management/cabbage-leaves-for-inflammation-170241",
-                "https://thelostherbs.com/how-to-make-cabbage-bandages-to-treat-inflammation-and-joint-pain/",
+                "https://thelostherbs.com/how-to-make-cabbage-bandages-to-treat-inflammation-and-joint-pain",
                 "https://www.healthline.com/nutrition/benefits-of-cabbage"
             ],
             "context_set": ""
@@ -1433,9 +1416,9 @@
                 "Bruises"
             ],
             "references": [
-                "https://www.greenchildmagazine.com/herbal-remedies-for-bruises/",
+                "https://www.greenchildmagazine.com/herbal-remedies-for-bruises",
                 "https://www.britannica.com/plant/pineapple",
-                "https://www.everydayhealth.com/diet-nutrition/pineapple-benefits-nutrition-facts-side-effects-more/",
+                "https://www.everydayhealth.com/diet-nutrition/pineapple-benefits-nutrition-facts-side-effects-more",
                 "https://www.healthline.com/nutrition/benefits-of-pineapple"
             ],
             "context_set": ""
@@ -1467,9 +1450,9 @@
                 "Pasa"
             ],
             "references": [
-                "https://www.greenchildmagazine.com/herbal-remedies-for-bruises/",
+                "https://www.greenchildmagazine.com/herbal-remedies-for-bruises",
                 "https://www.britannica.com/plant/pineapple",
-                "https://www.everydayhealth.com/diet-nutrition/pineapple-benefits-nutrition-facts-side-effects-more/",
+                "https://www.everydayhealth.com/diet-nutrition/pineapple-benefits-nutrition-facts-side-effects-more",
                 "https://www.healthline.com/nutrition/benefits-of-pineapple"
             ],
             "context_set": ""
@@ -1501,7 +1484,7 @@
                 "Bruises"
             ],
             "references": [
-                "https://www.greenchildmagazine.com/herbal-remedies-for-bruises/",
+                "https://www.greenchildmagazine.com/herbal-remedies-for-bruises",
                 "https://www.healthline.com/nutrition/oranges",
                 "https://newsroom.heart.org/file?fid=56006b325e8eef723f5df991"
             ],
@@ -1534,7 +1517,7 @@
                 "Pasa"
             ],
             "references": [
-                "https://www.greenchildmagazine.com/herbal-remedies-for-bruises/",
+                "https://www.greenchildmagazine.com/herbal-remedies-for-bruises",
                 "https://www.healthline.com/nutrition/oranges",
                 "https://newsroom.heart.org/file?fid=56006b325e8eef723f5df991"
             ],
@@ -1570,7 +1553,7 @@
             ],
             "references": [
                 "https://www.healthline.com/health/spinach-benefits",
-                "https://www.greenchildmagazine.com/herbal-remedies-for-bruises/"
+                "https://www.greenchildmagazine.com/herbal-remedies-for-bruises"
             ],
             "context_set": ""
         },
@@ -1604,14 +1587,14 @@
             ],
             "references": [
                 "https://www.healthline.com/health/spinach-benefits",
-                "https://www.greenchildmagazine.com/herbal-remedies-for-bruises/"
+                "https://www.greenchildmagazine.com/herbal-remedies-for-bruises"
             ],
             "context_set": ""
         },
         {
             "tag": "Cucumber",
             "type": "treatment",
-            "meaning": "Cucumber is a versatile vegetable that is often used in salads, sandwiches, and other dishes. It has a crisp, refreshing taste and a high water content. Cucumbers are a good source of vitamins and minerals, including vitamin C, potassium, and magnesium. They are also a low-calorie food that can help with hydration. Cucumbers contain a compound called cucurbitacin, which may have anti-inflammatory properties. Additionally, cucumbers are a good source of fiber, which can promote digestive health.",
+            "meaning": "Cucumber is a versatile vegetable that is often used in salads, sandwiches, and other dishes. It has a crisp, refreshing taste content. Cucumbers are a good source of vitamins and minerals, including vitamin C, potassium, and magnesium. They are also a low-calorie food that can help with hydration. Cucumbers contain a compound called cucurbitacin, which may have anti-inflammatory properties. Additionally, cucumbers are a good source of fiber, which can promote digestive health.",
             "patterns": [
                 "Cucumber",
                 "How to use cucumber for skin irritation?",
@@ -1637,7 +1620,7 @@
         {
             "tag": "Pipino",
             "type": "treatment",
-            "meaning": "Ang pipino ay isang maraming gamit na gulay na madalas ginagamit sa mga salad, sandwich, at iba pang pagkain. Mayroon itong malutong, nakakapreskong lasa at mataas na nilalaman ng tubig. Ang mga pipino ay isang mahusay na pinagmumulan ng mga bitamina at mineral, kabilang ang bitamina C, potasyum, at magnesium. Ang mga ito ay isang mababang-kaloryang pagkain din na maaaring makatulong sa hydration. Naglalaman ang mga pipino ng isang compound na tinatawag na cucurbitacin, na maaaring magkaroon ng mga anti-inflammatory properties. Bukod dito, ang mga pipino ay isang mahusay na pinagmumulan ng fiber, na maaaring makatulong na maitaguyod ang kalusugan ng pagtunaw.",
+            "meaning": "Ang pipino ay isang maraming gamit na gulay na madalas ginagamit sa mga salad, sandwich, at iba pang pagkain. Mayroon itong malutong, nakakapreskong lasa. Ang mga pipino ay isang mahusay na pinagmumulan ng mga bitamina at mineral, kabilang ang bitamina C, potasyum, at magnesium. Ang mga ito ay isang mababang-kaloryang pagkain din na maaaring makatulong sa hydration. Naglalaman ang mga pipino ng isang compound na tinatawag na cucurbitacin, na maaaring magkaroon ng mga anti-inflammatory properties. Bukod dito, ang mga pipino ay isang mahusay na pinagmumulan ng fiber, na maaaring makatulong na maitaguyod ang kalusugan ng pagtunaw.",
             "patterns": [
                 "Pipino",
                 "Paano gamitin ang pipino para sa iritasyon ng balat?",
@@ -1684,7 +1667,7 @@
                 "Fever"
             ],
             "references": [
-                "https://theherbalacademy.com/blog/8-herbal-home-remedies-for-colds-and-flu/",
+                "https://theherbalacademy.com/blog/8-herbal-home-remedies-for-colds-and-flu",
                 "https://health.clevelandclinic.org/6-surprising-ways-garlic-boosts-your-health"
             ],
             "context_set": ""
@@ -1713,7 +1696,7 @@
                 "Fever"
             ],
             "references": [
-                "https://theherbalacademy.com/blog/8-herbal-home-remedies-for-colds-and-flu/",
+                "https://theherbalacademy.com/blog/8-herbal-home-remedies-for-colds-and-flu",
                 "https://health.clevelandclinic.org/6-surprising-ways-garlic-boosts-your-health"
             ],
             "context_set": ""
@@ -1742,7 +1725,7 @@
                 "Fever"
             ],
             "references": [
-                "https://theherbalacademy.com/blog/8-herbal-home-remedies-for-colds-and-flu/",
+                "https://theherbalacademy.com/blog/8-herbal-home-remedies-for-colds-and-flu",
                 "https://www.healthline.com/health/video/benefits-of-lemon-water",
                 "https://www.healthline.com/nutrition/6-lemon-health-benefits"
             ],
@@ -1772,7 +1755,7 @@
                 "Fever"
             ],
             "references": [
-                "https://theherbalacademy.com/blog/8-herbal-home-remedies-for-colds-and-flu/",
+                "https://theherbalacademy.com/blog/8-herbal-home-remedies-for-colds-and-flu",
                 "https://www.healthline.com/health/video/benefits-of-lemon-water",
                 "https://www.healthline.com/nutrition/6-lemon-health-benefits"
             ],
@@ -1799,7 +1782,7 @@
                 "Crush or finely chop 2-3 garlic cloves. Heat 1/4 cup of olive oil. Add garlic to the heated oil and cook for a few minutes. Let the mixture cool. Strain out the garlic pieces. Massage the garlic-infused oil onto the chest"
             ],
             "relations": [
-                "Chest Pain"
+                "Chest pain"
             ],
             "references": [
                 "https://www.medicalnewstoday.com/articles/321133#home-remedies",
@@ -1857,11 +1840,11 @@
                 "Peel and slice a 1-2 inch piece of fresh ginger. Boil the ginger slices in water for 10 minutes. Let the ginger water cool slightly. Soak a cloth in the ginger water. Apply the warm, damp cloth to the chest for 10-15 minutes"
             ],
             "relations": [
-                "Chest Pain"
+                "Chest pain"
             ],
             "references": [
-                "https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/luya-benefits/",
-                "https://pinascuisine.com/luya/",
+                "https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/luya-benefits",
+                "https://pinascuisine.com/luya",
                 "http://www.philippineherbalmedicine.org/ginger.htm"
             ],
             "context_set": ""
@@ -1890,8 +1873,8 @@
                 "Pananakit ng dibdib"
             ],
             "references": [
-                "https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/luya-benefits/",
-                "https://pinascuisine.com/luya/",
+                "https://hellodoctor.com.ph/herbals-and-alternatives/herbal-medicines/luya-benefits",
+                "https://pinascuisine.com/luya",
                 "http://www.philippineherbalmedicine.org/ginger.htm"
             ],
             "context_set": ""
@@ -1917,12 +1900,12 @@
                 "Soak 10-12 almonds in water overnight. Peel the almonds and grind them into a fine paste. Mix the paste with a small amount of coconut oil or milk. Apply the almond paste to the chest. Cover with a cloth and leave on for 10-15 minutes. Rinse off with warm water."
             ],
             "relations": [
-                "Chest Pain"
+                "Chest pain"
             ],
             "references": [
                 "https://www.medicalnewstoday.com/articles/321133#home-remedies",
                 "https://www.healthline.com/nutrition/9-proven-benefits-of-almonds",
-                "https://www.nutritionadvance.com/almonds-nutrition-benefits/"
+                "https://www.nutritionadvance.com/almonds-nutrition-benefits"
             ],
             "context_set": ""
         },
@@ -1952,7 +1935,7 @@
             "references": [
                 "https://www.medicalnewstoday.com/articles/321133#home-remedies",
                 "https://www.healthline.com/nutrition/9-proven-benefits-of-almonds",
-                "https://www.nutritionadvance.com/almonds-nutrition-benefits/"
+                "https://www.nutritionadvance.com/almonds-nutrition-benefits"
             ],
             "context_set": ""
         }
