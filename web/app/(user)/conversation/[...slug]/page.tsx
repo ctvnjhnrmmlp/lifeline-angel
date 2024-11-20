@@ -25,7 +25,7 @@ import {
 } from '@/services/lifeline-angel/message';
 import { IMAGE_INJURIES, TEXT_INJURIES } from '@/sources/injuries';
 import { useMultipleMessageStore } from '@/stores/lifeline-angel/message';
-import { checkTextValidURL } from '@/utilities/functions';
+import { checkTextValidURL, convertToDateFormat } from '@/utilities/functions';
 import { useMutation, useQuery } from '@tanstack/react-query';
 import { useSession } from 'next-auth/react';
 import Image from 'next/image';
@@ -388,7 +388,7 @@ export default function Page() {
 						key='messages-block'
 						className='space-y-4 py-8 rounded-xl no-scrollbar'
 					>
-						{/* {messagesServer && messagesServer.length > 0 && (
+						{messagesServer && messagesServer.length > 0 && (
 							<div className='bg-background outline outline-1 outline-zinc-200 dark:outline-zinc-800 rounded-3xl mx-auto'>
 								<div className='cursor-pointer px-6 py-4'>
 									<p className='text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance text-center'>
@@ -398,7 +398,7 @@ export default function Page() {
 									</p>
 								</div>
 							</div>
-						)} */}
+						)}
 						{messagesLocal && !messagesLocal.length && (
 							<div
 								key='starter-messages-block'
@@ -451,16 +451,13 @@ export default function Page() {
 							</div>
 						)}
 						<ScrollArea className='h-[35rem] sm:h-full no-scrollbar'>
-							<div
-								key='user-and-model-messages-block'
-								className='space-y-6 p-0.5'
-							>
+							<div className='space-y-6 p-0.5'>
 								{messagesLocal?.map((message) => {
 									// @ts-expect-error: must be corrected properly
 									if (checkTextValidURL(message.content)) {
 										return (
 											<UserImageMessageCard
-												key={message.id}
+												key={message.id} // Unique key per message
 												message={message}
 											/>
 										);
@@ -468,18 +465,16 @@ export default function Page() {
 										if (message.from === 'user') {
 											return (
 												<UserTextMessageCard
-													key={message.id}
+													key={message.id} // Unique key per message
 													message={message}
 												/>
 											);
 										}
 										return (
-											<>
-												<ModelTextMessageCard
-													key={message.id}
-													message={message}
-												/>
-											</>
+											<ModelTextMessageCard
+												key={message.id} // Unique key per message
+												message={message}
+											/>
 										);
 									}
 								})}
