@@ -107,7 +107,7 @@ export default function Page() {
 	}
 
 	return (
-		<main className='no-scrollbar outline'>
+		<main className='no-scrollbar'>
 			<section className='relative rounded-3xl h-screen'>
 				<SidebarTrigger
 					variant='outline'
