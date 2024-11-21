@@ -250,8 +250,8 @@ export default function Page() {
 		const message = response.prediction;
 
 		handleUpdateConversation(message);
-
-		window.location.reload();
+		// onCloseCapturedImage();
+		// onCloseCamera();
 	};
 
 	if (!session) {
@@ -611,7 +611,7 @@ export default function Page() {
 								</Dialog>
 								<Dialog>
 									<DialogTrigger asChild>
-										<button className='text-foreground p-4 w-full outline outline-1 outline-zinc-200 dark:outline-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-xl'>
+										<button className='text-foreground text-2xl'>
 											<FaCamera />
 										</button>
 									</DialogTrigger>
@@ -633,45 +633,30 @@ export default function Page() {
 															className='rounded-2xl'
 														/>
 													</div>
-													<Dialog>
-														<DialogTrigger>
+													{image && (
+														<>
+															<Image
+																src={image}
+																width={1000}
+																height={1000}
+																alt='User captured image'
+															/>
 															<div>
 																<button
-																	className='rounded-full bg-foreground text-2xl p-6 outline'
-																	onClick={() => handleCameraCapture()}
-																></button>
+																	className='rounded-full bg-foreground text-background text-2xl p-3'
+																	onClick={() => handleAddImageMessage(image)}
+																>
+																	<FaLocationArrow />
+																</button>
 															</div>
-														</DialogTrigger>
-														<DialogContent className='sm:max-w-[30rem] sm:max-h-[50rem] bg-foreground border-0'>
-															<DialogHeader>
-																<DialogTitle className='text-2xl font-bold text-center text-background'>
-																	Picture
-																</DialogTitle>
-																<DialogDescription className='py-4'>
-																	{image && (
-																		<div className='flex flex-col space-y-8 items-center justify-center'>
-																			<Image
-																				src={image}
-																				width={1000}
-																				height={1000}
-																				alt='User captured image'
-																			/>
-																			<div>
-																				<button
-																					className='rounded-full bg-background text-foreground text-2xl p-3'
-																					onClick={() =>
-																						handleAddImageMessage(image)
-																					}
-																				>
-																					<FaLocationArrow />
-																				</button>
-																			</div>
-																		</div>
-																	)}
-																</DialogDescription>
-															</DialogHeader>
-														</DialogContent>
-													</Dialog>
+														</>
+													)}
+													<div>
+														<button
+															className='rounded-full bg-foreground text-2xl p-6 outline'
+															onClick={() => handleCameraCapture()}
+														></button>
+													</div>
 												</div>
 											</DialogDescription>
 										</DialogHeader>
