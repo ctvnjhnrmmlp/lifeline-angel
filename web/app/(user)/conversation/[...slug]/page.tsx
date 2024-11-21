@@ -237,7 +237,8 @@ export default function Page() {
 	};
 
 	const handleCameraCapture = useCallback(() => {
-		setImage(() => cameraRef.current?.getScreenshot()!);
+		// @ts-expect-error: must be corrected properly
+		setImage(() => cameraRef.current?.getScreenshot());
 	}, [cameraRef]);
 
 	const handleAddImageMessage = async (image: string) => {
