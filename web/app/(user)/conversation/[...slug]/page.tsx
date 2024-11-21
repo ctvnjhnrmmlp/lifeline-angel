@@ -270,9 +270,7 @@ export default function Page() {
 						<div className='flex flex-col lg:flex-row items-center justify-between space-y-2 lg:space-y-0'>
 							<div>
 								<p className='font-bold text-xl md:text-2xl text-foreground'>
-									{conversationLocal?.title
-										? conversationLocal.title
-										: 'New conversation'}
+									{conversationLocal?.title || 'New conversation'}
 								</p>
 							</div>
 							<div className='flex items-center space-x-3'>
@@ -397,7 +395,7 @@ export default function Page() {
 								<div className='cursor-pointer px-6 py-4'>
 									<p className='text-lg text-foreground tracking-tight leading-none text-ellipsis text-balance text-center'>
 										{convertToDateFormat(
-											messagesServer[0].createdAt.toString()
+											messagesServer[0]?.createdAt?.toString() || ''
 										)}
 									</p>
 								</div>
@@ -456,32 +454,33 @@ export default function Page() {
 						)}
 						<ScrollArea className='h-[35rem] sm:h-full no-scrollbar'>
 							<div className='space-y-6 p-0.5'>
-								{messagesLocal?.map((message) => {
-									// @ts-expect-error: must be corrected properly
-									if (checkTextValidURL(message.content)) {
-										return (
-											<UserImageMessageCard
-												key={message.id} // Unique key per message
-												message={message}
-											/>
-										);
-									} else {
-										if (message.from === 'user') {
+								{messagesLocal &&
+									messagesLocal.map((message) => {
+										// @ts-expect-error: must be corrected properly
+										if (checkTextValidURL(message.content)) {
 											return (
-												<UserTextMessageCard
+												<UserImageMessageCard
+													key={message.id} // Unique key per message
+													message={message}
+												/>
+											);
+										} else {
+											if (message.from === 'user') {
+												return (
+													<UserTextMessageCard
+														key={message.id} // Unique key per message
+														message={message}
+													/>
+												);
+											}
+											return (
+												<ModelTextMessageCard
 													key={message.id} // Unique key per message
 													message={message}
 												/>
 											);
 										}
-										return (
-											<ModelTextMessageCard
-												key={message.id} // Unique key per message
-												message={message}
-											/>
-										);
-									}
-								})}
+									})}
 							</div>
 						</ScrollArea>
 					</div>
