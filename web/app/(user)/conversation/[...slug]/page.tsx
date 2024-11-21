@@ -634,7 +634,7 @@ export default function Page() {
 														/>
 													</div>
 													<Dialog>
-														<DialogTrigger as>
+														<DialogTrigger>
 															<div>
 																<button
 																	className='rounded-full bg-foreground text-2xl p-6 outline'
