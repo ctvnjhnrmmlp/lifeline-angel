@@ -25,18 +25,28 @@ import {
 } from '@/services/lifeline-angel/message';
 import { IMAGE_INJURIES, TEXT_INJURIES } from '@/sources/injuries';
 import { useMultipleMessageStore } from '@/stores/lifeline-angel/message';
-import { checkTextValidURL, convertToDateFormat } from '@/utilities/functions';
+import {
+	checkTextValidURL,
+	convertImageDataUrlToFile,
+	convertToDateFormat,
+} from '@/utilities/functions';
 import { useMutation, useQuery } from '@tanstack/react-query';
 import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 import { BsGrid1X2Fill } from 'react-icons/bs';
-import { FaPaperclip } from 'react-icons/fa';
+import { FaCamera, FaPaperclip } from 'react-icons/fa';
 import SpeechRecognition, {
 	useSpeechRecognition,
 } from 'react-speech-recognition';
 
 import { Input } from '@/components/ui/input';
+import { ScrollArea } from '@/components/ui/scroll-area';
 import { SidebarTrigger } from '@/components/ui/sidebar';
+import {
+	Tooltip,
+	TooltipContent,
+	TooltipTrigger,
+} from '@/components/ui/tooltip';
 import {
 	useMultipleConversationStore,
 	useSingleConversationStore,
@@ -44,19 +54,13 @@ import {
 } from '@/stores/lifeline-angel/conversation';
 import { useFormik } from 'formik';
 import { redirect, useParams, useRouter } from 'next/navigation';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { FaLocationArrow, FaMicrophone } from 'react-icons/fa';
 import { FaCloudArrowUp } from 'react-icons/fa6';
 import { GiRaggedWound } from 'react-icons/gi';
 import { MdPersonalInjury } from 'react-icons/md';
 import { RiVoiceprintFill } from 'react-icons/ri';
-// import Webcam from 'react-webcam';
-import { ScrollArea } from '@/components/ui/scroll-area';
-import {
-	Tooltip,
-	TooltipContent,
-	TooltipTrigger,
-} from '@/components/ui/tooltip';
+import Webcam from 'react-webcam';
 import { v4 as uuidv4 } from 'uuid';
 import * as Yup from 'yup';
 
@@ -68,8 +72,8 @@ export default function Page() {
 	const [uploading, setUploading] = useState(false);
 	const [microphone, setMicrophone] = useState(false);
 	const [typing, setTyping] = useState(false);
-	// const cameraRef = useRef<Webcam>(null);
-	// const [image, setImage] = useState('');
+	const cameraRef = useRef<Webcam>(null);
+	const [image, setImage] = useState('');
 	const { slug } = useParams() as {
 		slug: string[];
 	};
@@ -232,23 +236,23 @@ export default function Page() {
 		setTyping(typing);
 	};
 
-	// const handleCameraCapture = useCallback(() => {
-	// 	// setImage(() => cameraRef.current?.getScreenshot()!);
-	// }, [cameraRef]);
+	const handleCameraCapture = useCallback(() => {
+		setImage(() => cameraRef.current?.getScreenshot()!);
+	}, [cameraRef]);
 
-	// const handleAddImageMessage = async (image: string) => {
-	// 	const response = await addImageMessage(
-	// 		session?.user.email,
-	// 		slug[0],
-	// 		uuidv4(),
-	// 		convertImageDataUrlToFile(image, uuidv4())
-	// 	);
-	// 	const message = response.prediction;
+	const handleAddImageMessage = async (image: string) => {
+		const response = await addImageMessage(
+			session?.user.email,
+			slug[0],
+			uuidv4(),
+			convertImageDataUrlToFile(image, uuidv4())
+		);
+		const message = response.prediction;
 
-	// 	handleUpdateConversation(message);
-	// 	// onCloseCapturedImage();
-	// 	// onCloseCamera();
-	// };
+		handleUpdateConversation(message);
+
+		window.location.reload();
+	};
 
 	if (!session) {
 		return redirect('/signin');
@@ -605,41 +609,74 @@ export default function Page() {
 										</DialogHeader>
 									</DialogContent>
 								</Dialog>
-								{/* <Dialog>
-								<DialogTrigger asChild>
-									<button className='text-foreground text-2xl'>
-										<FaCamera />
-									</button>
-								</DialogTrigger>
-								<DialogContent className='sm:max-w-[30rem] sm:max-h-[50rem] bg-foreground border-0'>
-									<DialogHeader>
-										<DialogTitle className='text-2xl font-bold text-center text-background'>
-											Camera
-										</DialogTitle>
-										<DialogDescription className='py-4' asChild>
-											<div className='flex flex-col space-y-8 items-center justify-center'>
-												<div>
-													<Webcam
-														mirrored
-														ref={cameraRef}
-														height={1000}
-														width={1000}
-														screenshotFormat='image/jpeg'
-														screenshotQuality={1}
-														className='rounded-2xl'
-													/>
+								<Dialog>
+									<DialogTrigger asChild>
+										<button className='text-foreground p-4 w-full outline outline-1 outline-zinc-200 dark:outline-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-xl'>
+											<FaCamera />
+										</button>
+									</DialogTrigger>
+									<DialogContent className='sm:max-w-[30rem] sm:max-h-[50rem] bg-foreground border-0'>
+										<DialogHeader>
+											<DialogTitle className='text-2xl font-bold text-center text-background'>
+												Camera
+											</DialogTitle>
+											<DialogDescription className='py-4' asChild>
+												<div className='flex flex-col space-y-8 items-center justify-center'>
+													<div>
+														<Webcam
+															mirrored
+															ref={cameraRef}
+															height={1000}
+															width={1000}
+															screenshotFormat='image/jpeg'
+															screenshotQuality={1}
+															className='rounded-2xl'
+														/>
+													</div>
+													<Dialog>
+														<DialogTrigger as>
+															<div>
+																<button
+																	className='rounded-full bg-foreground text-2xl p-6 outline'
+																	onClick={() => handleCameraCapture()}
+																></button>
+															</div>
+														</DialogTrigger>
+														<DialogContent className='sm:max-w-[30rem] sm:max-h-[50rem] bg-foreground border-0'>
+															<DialogHeader>
+																<DialogTitle className='text-2xl font-bold text-center text-background'>
+																	Picture
+																</DialogTitle>
+																<DialogDescription className='py-4'>
+																	{image && (
+																		<div className='flex flex-col space-y-8 items-center justify-center'>
+																			<Image
+																				src={image}
+																				width={1000}
+																				height={1000}
+																				alt='User captured image'
+																			/>
+																			<div>
+																				<button
+																					className='rounded-full bg-background text-foreground text-2xl p-3'
+																					onClick={() =>
+																						handleAddImageMessage(image)
+																					}
+																				>
+																					<FaLocationArrow />
+																				</button>
+																			</div>
+																		</div>
+																	)}
+																</DialogDescription>
+															</DialogHeader>
+														</DialogContent>
+													</Dialog>
 												</div>
-												<div>
-													<button
-														className='rounded-full bg-foreground text-2xl p-6 outline'
-														onClick={() => handleCameraCapture()}
-													></button>
-												</div>
-											</div>
-										</DialogDescription>
-									</DialogHeader>
-								</DialogContent>
-							</Dialog> */}
+											</DialogDescription>
+										</DialogHeader>
+									</DialogContent>
+								</Dialog>
 							</div>
 						)}
 						<div className='w-full'>
