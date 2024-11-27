@@ -91,7 +91,7 @@ def get_response(intents_list, intents_json):
         if tag == "unknown":
             return {
                 "type": "out",
-                "meaning": "I'm sorry, but I didn't quite catch that. Could you please provide more details or rephrase your question? I'm here to help!",
+                "meaning": "I'm sorry, but I couldn't understand your input. Please provide queries or information related to first aid assistance, which is what Lifeline Angel is designed to support. Let me know how I can assist you!",
                 "procedures": None,
                 "relations": None,
                 "references": None,
