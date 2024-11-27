@@ -7,9 +7,24 @@ import ConversationCard from '@/components/blocks/Card/ConversationCard';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Home } from 'lucide-react';
+import { Home, Lightbulb } from 'lucide-react';
 import { BiSolidLeftArrow } from 'react-icons/bi';
 
+import {
+	Carousel,
+	CarouselContent,
+	CarouselItem,
+	CarouselNext,
+	CarouselPrevious,
+} from '@/components/ui/carousel';
+import {
+	Dialog,
+	DialogContent,
+	DialogDescription,
+	DialogHeader,
+	DialogTitle,
+	DialogTrigger,
+} from '@/components/ui/dialog';
 import {
 	DropdownMenu,
 	DropdownMenuContent,
@@ -117,17 +132,37 @@ export default function Sidebar({
 					<SidebarMenu>
 						<SidebarMenuItem className='space-y-2'>
 							<div className='flex justify-between'>
-								<Link href='/'>
-									<Avatar className='h-10 w-10 rounded-lg'>
-										<AvatarImage
-											src='/images/lifeline-angel.png'
-											alt={session?.user.name}
-										/>
-										<AvatarFallback className='rounded-lg'>
-											{session ? session?.user.name : 'G'}
-										</AvatarFallback>
-									</Avatar>
-								</Link>
+								<Dialog>
+									<DialogTrigger>
+										<Avatar className='h-10 w-10 rounded-lg'>
+											<AvatarImage
+												src='/images/lifeline-angel.png'
+												alt={session?.user.name}
+											/>
+											<AvatarFallback className='rounded-lg'>
+												{session ? session?.user.name : 'G'}
+											</AvatarFallback>
+										</Avatar>
+									</DialogTrigger>
+									<DialogContent>
+										<DialogHeader>
+											<DialogTitle className='text-md sm:text-2xl md:text-3xl font-bold text-center text-foreground'>
+												Certifications
+											</DialogTitle>
+											<DialogDescription asChild>
+												<Carousel>
+													<CarouselContent>
+														<CarouselItem>...</CarouselItem>
+														<CarouselItem>...</CarouselItem>
+														<CarouselItem>...</CarouselItem>
+													</CarouselContent>
+													<CarouselPrevious />
+													<CarouselNext />
+												</Carousel>
+											</DialogDescription>
+										</DialogHeader>
+									</DialogContent>
+								</Dialog>
 							</div>
 							<Tooltip>
 								<TooltipTrigger asChild>
@@ -196,6 +231,13 @@ export default function Sidebar({
 							<Link href='/'>
 								<Button variant='outline' size='icon' className='w-full'>
 									<Home />
+								</Button>
+							</Link>
+						</SidebarMenuItem>
+						<SidebarMenuItem>
+							<Link href='/wiki'>
+								<Button variant='outline' size='icon' className='w-full'>
+									<Lightbulb />
 								</Button>
 							</Link>
 						</SidebarMenuItem>
