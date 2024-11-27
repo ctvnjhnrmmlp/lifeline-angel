@@ -122,7 +122,9 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 					// @ts-expect-error: must be corrected properly
 					.map((point) => point.trim())
 					// @ts-expect-error: must be corrected properly
-					.filter((point) => point.length > 0);
+					.filter((point) => point.length > 0)
+					// @ts-expect-error: must be corrected properly
+					.map((point, index) => `${index + 1}. ${point}`);
 
 				// @ts-expect-error: must be corrected properly
 				setMeaning(message.content.meaning);
