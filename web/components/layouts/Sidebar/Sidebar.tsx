@@ -7,6 +7,7 @@ import ConversationCard from '@/components/blocks/Card/ConversationCard';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { Home } from 'lucide-react';
 import { BiSolidLeftArrow } from 'react-icons/bi';
 
 import {
@@ -99,13 +100,7 @@ export default function Sidebar({
 		setOpenSearch(search);
 	};
 
-	const {
-		data: conversationsServer,
-		// error: conversationsError,
-		// status: conversationsStatus,
-		// fetchStatus: conversationsFetchStatus,
-		// refetch: refetchConversations,
-	} = useQuery({
+	const { data: conversationsServer } = useQuery({
 		queryKey: ['getConversations'],
 		queryFn: async () => await getConversations(session?.user.email),
 	});
@@ -121,17 +116,19 @@ export default function Sidebar({
 				<SidebarHeader className='bg-background'>
 					<SidebarMenu>
 						<SidebarMenuItem className='space-y-2'>
-							<Link href='/'>
-								<Avatar className='h-10 w-10 rounded-lg'>
-									<AvatarImage
-										src='/images/lifeline-angel.png'
-										alt={session?.user.name}
-									/>
-									<AvatarFallback className='rounded-lg'>
-										{session ? session?.user.name : 'G'}
-									</AvatarFallback>
-								</Avatar>
-							</Link>
+							<div className='flex justify-between'>
+								<Link href='/'>
+									<Avatar className='h-10 w-10 rounded-lg'>
+										<AvatarImage
+											src='/images/lifeline-angel.png'
+											alt={session?.user.name}
+										/>
+										<AvatarFallback className='rounded-lg'>
+											{session ? session?.user.name : 'G'}
+										</AvatarFallback>
+									</Avatar>
+								</Link>
+							</div>
 							<Tooltip>
 								<TooltipTrigger asChild>
 									<Button
@@ -195,6 +192,13 @@ export default function Sidebar({
 				</SidebarContent>
 				<SidebarFooter className='bg-background'>
 					<SidebarMenu>
+						<SidebarMenuItem>
+							<Link href='/'>
+								<Button variant='outline' size='icon' className='w-full'>
+									<Home />
+								</Button>
+							</Link>
+						</SidebarMenuItem>
 						<SidebarMenuItem>
 							<DropdownMenu>
 								<DropdownMenuTrigger asChild>
