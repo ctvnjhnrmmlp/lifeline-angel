@@ -16,6 +16,7 @@ for index, row in df.iterrows():
         "meaning": row['Meaning'],
         "patterns": [pattern.strip() for pattern in str(row['Patterns']).split('\n')],
         "procedures": [procedure.strip() for procedure in str(row['Procedures']).split('\n')],
+        "recommendations": [recommendation.strip() for recommendation in str(row['Recommendations']).split('\n')],
         "relations": [relation.strip() for relation in str(row['Relations (Treatment or Procedures)']).split('\n')],
         "references": [reference.strip() for reference in str(row['References']).split('\n')],
         # Check if 'Context Set' is NaN, if so, set it to an empty string

@@ -17,7 +17,8 @@
 				"How to unblock a congested nose?",
 				"Tips for relieving nasal congestion?"
 			],
-			"procedures": [
+			"procedures": [""],
+			"recommendations": [
 				"Use a saline nasal spray or steam inhalation to clear the nasal passages. Stay hydrated and use a humidifier if needed. Over-the-counter decongestants can also help relieve symptoms."
 			],
 			"relations": ["Lagundi", "Oregano", "Sambong"],
@@ -44,8 +45,9 @@
 				"Paano maalis ang baradong ilong?",
 				"Mga tip para maibsan ang baradong ilong?"
 			],
-			"procedures": [
-				"Ang baradong ilong ay nangyayari kapag ang mga tisyu sa loob ng ilong ay namamaga dahil sa pamamaga ng mga daluyan ng dugo, na kadalasang dulot ng sipon, trangkaso, o alerhiya. Ang mga sintomas ay kinabibilangan ng hirap sa paghinga sa pamamagitan ng ilong, sipon, pagbahing, at minsan ay sakit ng ulo. Maaari itong magdulot ng sinusitis o impeksyon sa tainga kung hindi agad magagamot."
+			"procedures": [""],
+			"recommendations": [
+				"Gumamit ng saline nasal spray o steam inhalation para malinis ang mga daanan ng ilong. Manatiling hydrated at gumamit ng humidifier kung kinakailangan. Makakatulong din ang mga over-the-counter na decongestant na mapawi ang mga sintomas."
 			],
 			"relations": ["Lagundi", "Oregano", "Sambong"],
 			"references": [
@@ -71,9 +73,9 @@
 				"How to soothe a sore throat from coughing?",
 				"Tips for relieving a cough?"
 			],
-			"procedures": [
-				"Drink warm fluids like tea with honey. Use a humidifier to add moisture to the air. Over-the-counter cough syrups or lozenges can help soothe your throat. If the cough persists for more than a week, consult a healthcare provider.",
-				"Stay hydrated, use cough drops, and consider a humidifier. If the cough persists, seek medical advice."
+			"procedures": [""],
+			"recommendations": [
+				"Drink warm fluids like tea with honey. Use a humidifier to add moisture to the air. Over-the-counter cough syrups or lozenges can help soothe your throat. If the cough persists for more than a week, consult a healthcare provider."
 			],
 			"relations": ["Lagundi", "Oregano", "Sambong"],
 			"references": [
@@ -99,7 +101,8 @@
 				"Paano pakalmahin ang masakit na lalamunan dahil sa pag-ubo?",
 				"Mga tip para maibsan ang ubo?"
 			],
-			"procedures": [
+			"procedures": [""],
+			"recommendations": [
 				"Uminom ng mainit na likido tulad ng tsaa na may honey. Gumamit ng humidifier upang magdagdag ng moisture sa hangin. Ang mga over-the-counter na cough syrups o lozenges ay maaaring makatulong upang maibsan ang sore throat. Kung ang ubo ay nagpapatuloy ng higit sa isang linggo, magpakonsulta sa healthcare provider."
 			],
 			"relations": ["Lagundi", "Oregano", "Sambong"],
@@ -126,10 +129,11 @@
 				"How to soothe stomach pain?",
 				"Tips for relieving abdominal pain?"
 			],
-			"procedures": [
+			"procedures": [""],
+			"recommendations": [
 				"Rest and avoid heavy meals. Drink clear fluids and apply a warm compress to the abdomen. Over-the-counter antacids or pain relievers can help. If the pain is severe or persistent, seek medical attention."
 			],
-			"relations": ["Forest Tea", "GInger", "Lemongrass"],
+			"relations": ["Forest Tea", "Ginger", "Lemongrass"],
 			"references": [
 				"https://www.webmd.com/pain-management/abdominal-pain-causes-treatments",
 				"https://www.healthline.com/health/abdominal-pain"
@@ -153,10 +157,9 @@
 				"Paano pakalmahin ang pananakit ng tiyan?",
 				"Mga tip para maibsan ang pananakit ng tiyan?"
 			],
-			"procedures": [
-				"Magpahinga at iwasan ang mabibigat na pagkain. Uminom ng malinaw na likido at maglagay ng mainit na compress sa tiyan. Ang mga over-the-counter na antacids o pain relievers ay maaaring makatulong. Kung ang sakit ay malubha o nagpapatuloy, humingi ng medikal na tulong.",
-				"",
-				"Magpahinga at manatiling hydrated. Gumamit ng mainit na compress at uminom ng gamot para sa sakit kung kinakailangan. Magpakonsulta sa healthcare provider kung ang sakit ay nagpapatuloy."
+			"procedures": [""],
+			"recommendations": [
+				"Magpahinga at iwasan ang mabibigat na pagkain. Uminom ng malinaw na likido at maglagay ng mainit na compress sa tiyan. Ang mga over-the-counter na antacids o pain relievers ay maaaring makatulong. Kung ang sakit ay malubha o nagpapatuloy, humingi ng medikal na tulong."
 			],
 			"relations": ["Tsaang Gubat", "Luya", "Tanglad"],
 			"references": [
@@ -183,10 +186,9 @@
 				"Tips for managing a broken toe?"
 			],
 			"procedures": [
-				"Rest and avoid putting weight on the toe. Apply ice to reduce swelling and elevate the foot. Use a splint or buddy tape the toe to the adjacent one. Seek medical attention if the pain is severe.",
-				"",
-				"Elevate the foot, apply ice, and tape the toe to the next one. Consult a healthcare provider if necessary.', 'fil': 'Itaas ang paa, maglagay ng yelo, at i-tape ang daliri sa katabing daliri."
+				"Rest and avoid putting weight on the toe. Apply ice to reduce swelling and elevate the foot. Use a splint or buddy tape the toe to the adjacent one. Seek medical attention if the pain is severe."
 			],
+			"recommendations": [""],
 			"relations": ["Lagundi", "Sambong", "Forrest Tea"],
 			"references": [
 				"https://www.mayoclinic.org/diseases-conditions/broken-toe/diagnosis-treatment/drc-20370468",
@@ -212,10 +214,9 @@
 				"Mga tip para pamahalaan ang nabaling daliri sa paa?"
 			],
 			"procedures": [
-				"Magpahinga at iwasang maglagay ng bigat sa daliri sa paa. Maglagay ng yelo upang mabawasan ang pamamaga at itaas ang paa. Gumamit ng splint o i-tape ang daliri sa paa sa katabing daliri. Humingi ng medikal na tulong kung ang sakit ay malubha.",
-				"",
-				"Itaas ang paa, maglagay ng yelo, at i-tape ang daliri sa katabing daliri. Magpakonsulta sa healthcare provider kung kinakailangan."
+				"Magpahinga at iwasang maglagay ng bigat sa daliri sa paa. Maglagay ng yelo upang mabawasan ang pamamaga at itaas ang paa. Gumamit ng splint o i-tape ang daliri sa paa sa katabing daliri. Humingi ng medikal na tulong kung ang sakit ay malubha."
 			],
+			"recommendations": [""],
 			"relations": ["Lagundi", "Sambong", "Tsaang Gubat"],
 			"references": [
 				"https://www.mayoclinic.org/diseases-conditions/broken-toe/diagnosis-treatment/drc-20370468",
@@ -240,12 +241,11 @@
 				"Choking treatment advice?",
 				"How to help someone who is choking?"
 			],
-			"procedures": [
-				"If someone is choking, ask if they can speak or cough. If they cannot, perform the Heimlich maneuver by standing behind them, wrapping your arms around their waist, and giving quick, upward thrusts below their ribcage.",
-				"",
-				"Perform the Heimlich maneuver or back blows to dislodge the object. Call emergency services if the person cannot breathe.', 'fil': 'Isagawa ang Heimlich maneuver o back blows upang alisin ang bagay."
+			"procedures": [""],
+			"recommendations": [
+				"If someone is choking, ask if they can speak or cough. If they cannot, perform the Heimlich maneuver by standing behind them, wrapping your arms around their waist, and giving quick, upward thrusts below their ribcage. Call emergency services if the person cannot breathe."
 			],
-			"relations": [],
+			"relations": [""],
 			"references": [
 				"https://www.redcross.org.uk/first-aid/learn-first-aid/choking-adult",
 				"https://www.mayoclinic.org/first-aid/first-aid-choking/basics/art-20056637"
@@ -253,7 +253,7 @@
 			"context_set": ""
 		},
 		{
-			"tag": "Mabulunan",
+			"tag": "Nabulunan",
 			"type": "injury",
 			"meaning": "Ang pagsakal ay nangyayari kapag ang isang bagay ay humarang sa daanan ng hangin, na pumipigil sa pagpasok ng hangin sa mga baga. Ang mga sintomas ay kinabibilangan ng hindi makapagsalita, hirap sa paghinga, at pag-ubo. Kinakailangan ang agarang aksyon upang maalis ang bara at maibalik ang normal na paghinga. Ang Heimlich maneuver ay isang karaniwang teknik na ginagamit upang alisin ang bagay.",
 			"patterns": [
@@ -269,16 +269,11 @@
 				"Payo sa paggamot ng pagsakal?",
 				"Paano tulungan ang nasasakal?"
 			],
-			"procedures": [
-				"Kung ang isang tao ay nasasakal, tanungin kung sila ay makapagsalita o makakaugong. Kung hindi nila magawa, isagawa ang Heimlich maneuver sa pamamagitan ng pagtayo sa likuran nila, pagyakap sa kanilang baywang, at pagbibigay ng mabilis at pataas na puwersa sa ilalim ng kanilang ribcage. Tumawag agad ng emergency services.",
-				"",
-				"Isagawa ang Heimlich maneuver o back blows upang alisin ang bagay. Tumawag ng emergency services kung ang tao ay hindi makakahinga.",
-				"",
-				"Kung ang tao ay hindi makapagsalita, makakaugong, o makahinga, isagawa ang Heimlich maneuver: Tumayo sa likuran ng tao, ilagay ang iyong mga braso sa kanilang baywang, gumawa ng kamao gamit ang isang kamay, ilagay ito sa itaas ng kanilang pusod, at bigyan ng mabilis, pataas na puwersa. Kung ang tao ay mawalan ng malay, simulan ang CPR at tumawag ng emergency services.",
-				"",
-				"Isagawa ang Heimlich maneuver sa pamamagitan ng pagtayo sa likuran ng tao at pagbibigay ng mabilis, pataas na abdominal thrusts. Tumawag ng emergency services kung kinakailangan."
+			"procedures": [""],
+			"recommendations": [
+				"Kung may nasasakal, tanungin kung nakakapagsalita o umuubo. Kung hindi nila magawa, gawin ang Heimlich maneuver sa pamamagitan ng pagtayo sa likod nila, pagbalot ng iyong mga braso sa kanilang baywang, at pagbibigay ng mabilis, paitaas na mga tulak sa ibaba ng kanilang ribcage. Tumawag sa mga serbisyong pang-emerhensiya kung ang tao ay hindi makahinga."
 			],
-			"relations": [],
+			"relations": [""],
 			"references": [
 				"https://www.redcross.org.uk/first-aid/learn-first-aid/choking-adult",
 				"https://www.mayoclinic.org/first-aid/first-aid-choking/basics/art-20056637"
@@ -302,10 +297,9 @@
 				"How to soothe diarrhea?",
 				"Tips for relieving diarrhea?"
 			],
-			"procedures": [
-				"Stay hydrated by drinking plenty of fluids like water or an oral rehydration solution. Avoid solid foods until the symptoms improve. Over-the-counter anti-diarrheal medications can be used, but consult a healthcare provider if symptoms persist.",
-				"",
-				"Drink fluids, avoid solid food, and consider over-the-counter medications. Seek medical help if symptoms persist."
+			"procedures": [""],
+			"recommendations": [
+				"Stay hydrated by drinking plenty of fluids like water or an oral rehydration solution. Avoid solid foods until the symptoms improve. Over-the-counter anti-diarrheal medications can be used, but consult a healthcare provider if symptoms persist."
 			],
 			"relations": ["Forrest Tea", "Buko Water", "Lagundi"],
 			"references": [
@@ -331,10 +325,9 @@
 				"Paano pakalmahin ang pagtatae?",
 				"Mga tip para maibsan ang pagtatae?"
 			],
-			"procedures": [
-				"Manatiling hydrated sa pamamagitan ng pag-inom ng maraming likido tulad ng tubig o oral rehydration solution. Iwasan ang solidong pagkain hanggang sa bumuti ang mga sintomas. Maaaring gumamit ng over-the-counter na anti-diarrheal medications, ngunit magpakonsulta sa healthcare provider kung ang mga sintomas ay nagpapatuloy.",
-				"",
-				"Uminom ng likido, iwasan ang solidong pagkain, at isaalang-alang ang paggamit ng over-the-counter na mga gamot. Humingi ng medikal na tulong kung ang mga sintomas ay nagpapatuloy."
+			"procedures": [""],
+			"recommendations": [
+				"Manatiling hydrated sa pamamagitan ng pag-inom ng maraming likido tulad ng tubig o oral rehydration solution. Iwasan ang solidong pagkain hanggang sa bumuti ang mga sintomas. Maaaring gumamit ng over-the-counter na anti-diarrheal medications, ngunit magpakonsulta sa healthcare provider kung ang mga sintomas ay nagpapatuloy."
 			],
 			"relations": ["Tsaang Gubat", "Lagundi", "Katas ng Buko"],
 			"references": [
@@ -361,10 +354,9 @@
 				"Tips for managing heat exhaustion?"
 			],
 			"procedures": [
-				"Move to a cool, shaded area and drink plenty of water. Loosen or remove clothing and apply cool, wet cloths to the skin. Rest until fully recovered. If symptoms worsen, seek medical help.",
-				"",
-				"Cool down, hydrate, and rest in a shaded area. Seek medical attention if symptoms do not improve."
+				"Move to a cool, shaded area and drink plenty of water. Loosen or remove clothing and apply cool, wet cloths to the skin. Rest until fully recovered. If symptoms worsen, seek medical help."
 			],
+			"recommendations": [""],
 			"relations": ["Buko Water", "Lemongrass"],
 			"references": [
 				"https://www.mayoclinic.org/diseases-conditions/heat-exhaustion/diagnosis-treatment/drc-20373253",
@@ -390,10 +382,9 @@
 				"Mga tip para pamahalaan ang pagkapagod sa init?"
 			],
 			"procedures": [
-				"Lumipat sa isang malamig at may anino na lugar at uminom ng maraming tubig. Alisin o luwagan ang damit at maglagay ng malamig, basang tela sa balat. Magpahinga hanggang sa ganap na mag-recover. Kung lumalala ang mga sintomas, humingi ng medikal na tulong.",
-				"",
-				"Palamigin ang katawan, manatiling hydrated, at magpahinga sa isang lugar na may anino. Humingi ng medikal na atensyon kung ang mga sintomas ay hindi bumubuti."
+				"Lumipat sa isang malamig at may anino na lugar at uminom ng maraming tubig. Alisin o luwagan ang damit at maglagay ng malamig, basang tela sa balat. Magpahinga hanggang sa ganap na mag-recover. Kung lumalala ang mga sintomas, humingi ng medikal na tulong."
 			],
+			"recommendations": [""],
 			"relations": ["Katas ng Buko", "Tanglad"],
 			"references": [
 				"https://www.mayoclinic.org/diseases-conditions/heat-exhaustion/diagnosis-treatment/drc-20373253",
@@ -421,14 +412,9 @@
 				"Tips for managing heat stroke?"
 			],
 			"procedures": [
-				"Move to a cooler place and lie down with your legs slightly elevated. Apply cool water to your skin and use a fan to help with cooling. Drink cool water or an electrolyte drink, but avoid sugary or alcoholic beverages. Seek emergency medical attention immediately.",
-				"",
-				"Get to a cool place, remove excess clothing, and apply cold packs or wet cloths. Drink cool water or sports drinks, and seek immediate medical help.",
-				"",
-				"Call emergency services immediately. Move the person to a cool area and remove excess clothing. Use cool water or ice packs to lower their body temperature. Keep monitoring their condition until help arrives.",
-				"",
-				"Seek emergency medical help. Cool the person down with water or ice packs and stay with them until help arrives."
+				"Move the person to a cool area and remove excess clothing. Use cool water or ice packs to lower their body temperature. Keep monitoring their condition until help arrives. Seek emergency medical help. Cool the person down with water or ice packs and stay with them until help arrives."
 			],
+			"recommendations": [""],
 			"relations": ["Buko Water", "Tanglad"],
 			"references": [
 				"https://www.mayoclinic.org/diseases-conditions/heat-stroke/diagnosis-treatment/drc-20353586",
@@ -452,15 +438,9 @@
 				"Paano mabilis na makarekober mula sa heat stroke?"
 			],
 			"procedures": [
-				"Lumipat sa isang mas malamig na lugar at humiga na may bahagyang itaas ang mga binti. Maglagay ng malamig na tubig sa iyong balat at gumamit ng pamaypay upang makatulong sa pagpapalamig. Uminom ng malamig na tubig o electrolyte drink, ngunit iwasan ang matatamis o alcoholic na inumin. Humingi ng agarang medikal na tulong.",
-				"",
-				"Pumunta sa isang malamig na lugar, alisin ang sobrang damit, at maglagay ng cold packs o basang tela. Uminom ng malamig na tubig o sports drinks, at humingi ng agarang medikal na tulong.",
-				"",
-				"Tumawag agad ng emergency services. Ilipat ang tao sa isang malamig na lugar at alisin ang sobrang damit. Gumamit ng malamig na tubig o ice packs upang ibaba ang kanilang temperatura ng katawan. Patuloy na bantayan ang kanilang kondisyon hanggang dumating ang tulong.",
-				"",
-				"Humingi ng agarang medikal na tulong. Palamigin ang tao gamit ang tubig o ice packs at manatili sa kanilang tabi hanggang dumating ang tulong.",
-				""
+				"Ilipat ang tao sa isang malamig na lugar at alisin ang labis na damit. Gumamit ng malamig na tubig o mga ice pack upang mapababa ang temperatura ng kanilang katawan. Patuloy na subaybayan ang kanilang kalagayan hanggang sa dumating ang tulong. Humingi ng emerhensiyang tulong medikal. Palamigin ang tao gamit ang tubig o mga ice pack at manatili sa kanila hanggang sa dumating ang tulong."
 			],
+			"recommendations": [""],
 			"relations": ["Katas ng Buko", "Tanglad"],
 			"references": [
 				"https://www.mayoclinic.org/diseases-conditions/heat-stroke/diagnosis-treatment/drc-20353586",
@@ -484,14 +464,9 @@
 				"Best way to stop nosebleeds?"
 			],
 			"procedures": [
-				"Sit up straight and lean slightly forward. Pinch the soft part of your nose and hold for 10-15 minutes. Apply a cold compress to the bridge of the nose. If the bleeding continues for more than 20 minutes, seek medical attention.",
-				"",
-				"Lean forward, pinch your nose, and hold until the bleeding stops. Use a cold compress and seek medical help if the bleeding doesn't stop.",
-				"",
-				"Sit up straight and lean forward slightly. Pinch the soft part of your nose with your thumb and index finger for 10-15 minutes. Breathe through your mouth and avoid lying down. Apply a cold compress to the bridge of your nose. Seek medical help if the bleeding doesn't stop after 20 minutes.",
-				"",
-				"Tilt your head forward and pinch your nose just below the bridge. Hold for 10-15 minutes and avoid blowing your nose afterward."
+				"Sit up straight and lean slightly forward. Pinch the soft part of your nose and hold for 10-15 minutes. Apply a cold compress to the bridge of the nose. If the bleeding continues for more than 20 minutes, seek medical attention."
 			],
+			"recommendations": [""],
 			"relations": ["Guava Leaves", "Lagundi", "Sambong", "Forest Tea"],
 			"references": [
 				"https://www.mayoclinic.org/first-aid/first-aid-nosebleeds/basics/art-20056683",
@@ -519,14 +494,9 @@
 				"Paano pakalmahin ang pagdurugo ng ilong?"
 			],
 			"procedures": [
-				"Umupo ng tuwid at magyuko ng bahagya pasulong. Pisilin ang malambot na bahagi ng iyong ilong at hawakan ito ng 10-15 minuto. Maglagay ng malamig na compress sa tulay ng ilong. Kung ang pagdurugo ay magpapatuloy ng higit sa 20 minuto, humingi ng medikal na tulong.",
-				"",
-				"Yuko pasulong, pisilin ang iyong ilong, at hawakan hanggang sa tumigil ang pagdurugo. Gumamit ng malamig na compress at humingi ng medikal na tulong kung ang pagdurugo ay hindi tumitigil.",
-				"",
-				"Umupo ng tuwid at magyuko ng bahagya pasulong. Pisilin ang malambot na bahagi ng iyong ilong gamit ang iyong hinlalaki at hintuturo ng 10-15 minuto. Huminga sa pamamagitan ng iyong bibig at iwasang humiga. Maglagay ng malamig na compress sa tulay ng iyong ilong. Humingi ng medikal na tulong kung ang pagdurugo ay hindi tumitigil pagkatapos ng 20 minuto.",
-				"",
-				"Itilt ang iyong ulo pasulong at pisilin ang iyong ilong sa ilalim ng tulay. Hawakan ito ng 10-15 minuto at iwasang sabunin ang iyong ilong pagkatapos."
+				"Umupo nang tuwid at bahagyang sumandal pasulong. Kurutin ang malambot na bahagi ng iyong ilong at hawakan ng 10-15 minuto. Maglagay ng malamig na compress sa tulay ng ilong. Kung ang pagdurugo ay nagpapatuloy ng higit sa 20 minuto, humingi ng medikal na atensyon."
 			],
+			"recommendations": [""],
 			"relations": ["Dahon ng Bayabas", "Lagundi", "Sambong", "Tsaang Gubat"],
 			"references": [
 				"https://www.mayoclinic.org/first-aid/first-aid-nosebleeds/basics/art-20056683",
@@ -551,12 +521,11 @@
 				"How to soothe rectal bleeding?",
 				"Tips for managing rectal bleeding?"
 			],
-			"procedures": [
-				"Stay calm and avoid straining during bowel movements. Increase fiber intake and drink plenty of water to ease bowel movements. Seek medical attention to determine the cause and receive appropriate treatment.",
-				"",
-				"Increase fiber and water intake. Avoid straining and consult a healthcare provider to determine the cause."
+			"procedures": [""],
+			"recommendations": [
+				"Stay calm and avoid straining during bowel movements. Increase fiber intake and drink plenty of water to ease bowel movements. Seek medical attention to determine the cause and receive appropriate treatment."
 			],
-			"relations": [],
+			"relations": [""],
 			"references": [
 				"https://www.mayoclinic.org/symptoms/rectal-bleeding/basics/definition/sym-20050740",
 				"https://www.webmd.com/digestive-disorders/understanding-rectal-bleeding-basics"
@@ -580,12 +549,11 @@
 				"Paano pakalmahin ang pagdurugo sa puwit?",
 				"Mga tip para pamahalaan ang pagdurugo sa puwit?"
 			],
-			"procedures": [
-				"Manatiling kalmado at iwasang mag-igting sa panahon ng pagdumi. Dagdagan ang iyong fiber intake at uminom ng maraming tubig upang mapadali ang pagdumi. Humingi ng medikal na tulong upang matukoy ang sanhi at makatanggap ng angkop na paggamot.",
-				"",
-				"Dagdagan ang fiber at water intake. Iwasan ang pag-igting at kumonsulta sa healthcare provider upang matukoy ang sanhi."
+			"procedures": [""],
+			"recommendations": [
+				"Manatiling kalmado at iwasang mag-igting sa panahon ng pagdumi. Dagdagan ang iyong fiber intake at uminom ng maraming tubig upang mapadali ang pagdumi. Humingi ng medikal na tulong upang matukoy ang sanhi at makatanggap ng angkop na paggamot."
 			],
-			"relations": [],
+			"relations": [""],
 			"references": [
 				"https://www.mayoclinic.org/symptoms/rectal-bleeding/basics/definition/sym-20050740",
 				"https://www.webmd.com/digestive-disorders/understanding-rectal-bleeding-basics",
@@ -596,7 +564,7 @@
 		{
 			"tag": "Testicle pain",
 			"type": "injury",
-			"meaning": "Testicle pain refers to discomfort or pain in one or both testicles. It can be caused by various factors such as injury, infection, or medical conditions like testicular torsion. Symptoms may include swelling, redness, and tenderness. Persistent or severe testicle pain should be evaluated by a healthcare provider.\n                                ",
+			"meaning": "Testicle pain refers to discomfort or pain in one or both testicles. It can be caused by various factors such as injury, infection, or medical conditions like testicular torsion. Symptoms may include swelling, redness, and tenderness. Persistent or severe testicle pain should be evaluated by a healthcare provider.",
 			"patterns": [
 				"Testicle pain",
 				"What to do if I have testicle pain?",
@@ -611,11 +579,10 @@
 				"Tips for relieving testicle pain?"
 			],
 			"procedures": [
-				"Rest and avoid strenuous activity. Apply ice to the affected area and wear supportive underwear. If the pain persists or is severe, seek medical attention.",
-				"",
-				"Rest, use ice, and wear supportive clothing. Seek medical advice if the pain is severe or does not improve."
+				"Rest and avoid strenuous activity. Apply ice to the affected area and wear supportive underwear. If the pain persists or is severe, seek medical attention."
 			],
-			"relations": [],
+			"recommendations": [""],
+			"relations": [""],
 			"references": [
 				"https://www.mayoclinic.org/symptoms/testicle-pain/basics/definition/sym-20050942",
 				"https://www.healthline.com/health/testicle-pain",
@@ -641,11 +608,10 @@
 				"Mga tip para maibsan ang sakit sa bayag?"
 			],
 			"procedures": [
-				"Magpahinga at iwasan ang mabibigat na aktibidad. Maglagay ng yelo sa apektadong lugar at magsuot ng supportive na underwear. Kung ang sakit ay nagpapatuloy o malubha, humingi ng medikal na tulong.",
-				"",
-				"Magpahinga, gumamit ng yelo, at magsuot ng supportive na damit. Humingi ng medikal na payo kung ang sakit ay malubha o hindi bumubuti."
+				"Magpahinga at iwasan ang mabibigat na aktibidad. Maglagay ng yelo sa apektadong lugar at magsuot ng supportive na underwear. Kung ang sakit ay nagpapatuloy o malubha, humingi ng medikal na tulong."
 			],
-			"relations": [],
+			"recommendations": [""],
+			"relations": [""],
 			"references": [
 				"https://www.mayoclinic.org/symptoms/testicle-pain/basics/definition/sym-20050942",
 				"https://www.healthline.com/health/testicle-pain",
@@ -656,7 +622,7 @@
 		{
 			"tag": "Vertigo",
 			"type": "injury",
-			"meaning": "Vertigo is a sensation of feeling off balance, often described as feeling like you or your surroundings are spinning. It can be caused by inner ear problems, infections, or other medical conditions. Symptoms include dizziness, nausea, and difficulty maintaining balance. Managing vertigo involves addressing the underlying cause and using techniques to reduce symptoms.\n\t\t\t\t",
+			"meaning": "Vertigo is a sensation of feeling off balance, often described as feeling like you or your surroundings are spinning. It can be caused by inner ear problems, infections, or other medical conditions. Symptoms include dizziness, nausea, and difficulty maintaining balance. Managing vertigo involves addressing the underlying cause and using techniques to reduce symptoms.",
 			"patterns": [
 				"Vertigo",
 				"What to do if I have vertigo?",
@@ -670,10 +636,9 @@
 				"How to soothe vertigo?",
 				"Tips for managing vertigo?"
 			],
-			"procedures": [
-				"Sit or lie down immediately when feeling dizzy. Avoid sudden head movements and rest in a dark, quiet room. Stay hydrated and seek medical advice if symptoms persist.",
-				"",
-				"Rest and avoid sudden movements. Stay hydrated and consult a healthcare provider if the symptoms continue."
+			"procedures": [""],
+			"recommendations": [
+				"Sit or lie down immediately when feeling dizzy. Avoid sudden head movements and rest in a dark, quiet room. Stay hydrated and seek medical advice if symptoms persist."
 			],
 			"relations": ["Ginger", "Ginkgo Biloba", "Lagundi", "Forest Tea"],
 			"references": [
@@ -699,10 +664,9 @@
 				"Paano pakalmahin ang vertigo?",
 				"Mga tip para pamahalaan ang vertigo?"
 			],
-			"procedures": [
-				"Umupo o humiga agad kapag nakakaramdam ng pagkahilo. Iwasan ang biglaang paggalaw ng ulo at magpahinga sa isang madilim at tahimik na kwarto. Manatiling hydrated at humingi ng medikal na payo kung ang mga sintomas ay nagpapatuloy.",
-				"",
-				"Magpahinga at iwasan ang biglaang paggalaw. Manatiling hydrated at kumonsulta sa healthcare provider kung ang mga sintomas ay nagpapatuloy."
+			"procedures": [""],
+			"recommendations": [
+				"Umupo o humiga agad kapag nakakaramdam ng pagkahilo. Iwasan ang biglaang paggalaw ng ulo at magpahinga sa isang madilim at tahimik na kwarto. Manatiling hydrated at humingi ng medikal na payo kung ang mga sintomas ay nagpapatuloy."
 			],
 			"relations": ["Luya", "Ginkgo Biloba", "Lagundi", "Tsaang Gubat"],
 			"references": [
@@ -714,7 +678,7 @@
 		{
 			"tag": "Eye injury",
 			"type": "injury",
-			"meaning": "An eye injury can occur due to various reasons such as trauma, foreign objects, or chemical exposure. Symptoms may include pain, redness, swelling, and vision changes. Immediate and appropriate first aid can help prevent further damage and complications.\",\n\t\t\t\t",
+			"meaning": "An eye injury can occur due to various reasons such as trauma, foreign objects, or chemical exposure. Symptoms may include pain, redness, swelling, and vision changes. Immediate and appropriate first aid can help prevent further damage and complications.",
 			"patterns": [
 				"Eye injury",
 				"What to do if I have an eye injury?",
@@ -729,11 +693,10 @@
 				"Tips for managing an eye injury?"
 			],
 			"procedures": [
-				"Avoid rubbing the eye and rinse it with clean water. If there is a foreign object in the eye, do not attempt to remove it yourself. Cover the eye with a clean cloth or eye patch and seek medical attention immediately.",
-				"",
-				"Rinse the eye with clean water and avoid rubbing it. Seek emergency medical help, especially if there is a foreign object in the eye."
+				"Avoid rubbing the eye and rinse it with clean water. If there is a foreign object in the eye, do not attempt to remove it yourself. Cover the eye with a clean cloth or eye patch and seek medical attention immediately."
 			],
-			"relations": [],
+			"recommendations": [""],
+			"relations": [""],
 			"references": [
 				"https://www.mayoclinic.org/first-aid/first-aid-eye-injury/basics/art-20056646",
 				"https://www.webmd.com/first-aid/eye-injuries-treatment"
@@ -758,11 +721,10 @@
 				"Mga tip para pamahalaan ang pinsala sa mata?"
 			],
 			"procedures": [
-				"Iwasan ang pagdila sa mata at banlawan ito ng malinis na tubig. Kung may banyagang bagay sa mata, huwag subukang alisin ito nang mag-isa. Takpan ang mata ng malinis na tela o eye patch at humingi ng agarang medikal na tulong.",
-				"",
-				"Banlawan ang mata ng malinis na tubig at iwasan ang pagdila dito. Humingi ng agarang medikal na tulong, lalo na kung may banyagang bagay sa mata."
+				"Iwasan ang pagdila sa mata at banlawan ito ng malinis na tubig. Kung may banyagang bagay sa mata, huwag subukang alisin ito nang mag-isa. Takpan ang mata ng malinis na tela o eye patch at humingi ng agarang medikal na tulong."
 			],
-			"relations": [],
+			"recommendations": [""],
+			"relations": [""],
 			"references": [
 				"https://www.mayoclinic.org/first-aid/first-aid-eye-injury/basics/art-20056646",
 				"https://www.webmd.com/first-aid/eye-injuries-treatment"
@@ -772,7 +734,7 @@
 		{
 			"tag": "Food poisoning",
 			"type": "injury",
-			"meaning": "Food poisoning is an illness caused by consuming contaminated food or drink. Symptoms include nausea, vomiting, diarrhea, and abdominal pain. It is important to stay hydrated and rest while recovering.\n\t\t\t\n\t\t\t",
+			"meaning": "Food poisoning is an illness caused by consuming contaminated food or drink. Symptoms include nausea, vomiting, diarrhea, and abdominal pain. It is important to stay hydrated and rest while recovering.",
 			"patterns": [
 				"Food poisoning",
 				"How to treat food poisoning?",
@@ -786,10 +748,9 @@
 				"How to soothe food poisoning?",
 				"Tips for managing food poisoning?"
 			],
-			"procedures": [
-				"Stay hydrated by drinking clear fluids like water or oral rehydration solutions. Rest and avoid solid foods until symptoms subside. If symptoms are severe or persistent, seek medical attention.",
-				"",
-				"Drink clear fluids, rest, and avoid solid food until symptoms improve. Consult a healthcare provider if symptoms persist."
+			"procedures": [""],
+			"recommendations": [
+				"Stay hydrated by drinking clear fluids like water or oral rehydration solutions. Rest and avoid solid foods until symptoms subside. If symptoms are severe or persistent, seek medical attention."
 			],
 			"relations": ["Ginger", "Guava Leaves", "Sambong", "Buko Water"],
 			"references": [
@@ -815,10 +776,9 @@
 				"Paano pakalmahin ang pagkalason sa pagkain?",
 				"Mga tip para pamahalaan ang pagkalason sa pagkain?"
 			],
-			"procedures": [
-				"Manatiling hydrated sa pamamagitan ng pag-inom ng malinaw na likido tulad ng tubig o oral rehydration solutions. Magpahinga at iwasan ang solidong pagkain hanggang sa humupa ang mga sintomas. Kung ang mga sintomas ay malubha o nagpapatuloy, humingi ng medikal na tulong.",
-				"",
-				"Uminom ng malinaw na likido, magpahinga, at iwasan ang solidong pagkain hanggang sa bumuti ang mga sintomas. Kumonsulta sa healthcare provider kung ang mga sintomas ay nagpapatuloy."
+			"procedures": [""],
+			"recommendations": [
+				"Manatiling hydrated sa pamamagitan ng pag-inom ng malinaw na likido tulad ng tubig o oral rehydration solutions. Magpahinga at iwasan ang solidong pagkain hanggang sa humupa ang mga sintomas. Kung ang mga sintomas ay malubha o nagpapatuloy, humingi ng medikal na tulong."
 			],
 			"relations": ["Luya", "Dahon ng Bayabas", "Sambong", "Katas ng Buko"],
 			"references": [
@@ -830,7 +790,7 @@
 		{
 			"tag": "Convulsion",
 			"type": "injury",
-			"meaning": "Convulsions, also known as seizures, are sudden, uncontrolled electrical disturbances in the brain. They can cause changes in behavior, movements, feelings, and levels of consciousness. Immediate first aid is crucial to protect the person from injury and ensure they receive appropriate medical care.\n\t\t\t\t",
+			"meaning": "Convulsions, also known as seizures, are sudden, uncontrolled electrical disturbances in the brain. They can cause changes in behavior, movements, feelings, and levels of consciousness. Immediate first aid is crucial to protect the person from injury and ensure they receive appropriate medical care.",
 			"patterns": [
 				"Convulsion",
 				"What to do during convulsions?",
@@ -845,11 +805,10 @@
 				"Tips for managing convulsions?"
 			],
 			"procedures": [
-				"Protect the person from injury by removing nearby objects. Do not restrain them or put anything in their mouth. After the convulsions stop, place them in the recovery position and monitor their breathing. Seek emergency medical help.",
-				"",
-				"Stay with the person and protect them from harm. Do not restrain them or place anything in their mouth. Call emergency services."
+				"Protect the person from injury by removing nearby objects. Do not restrain them or put anything in their mouth. After the convulsions stop, place them in the recovery position and monitor their breathing. Seek emergency medical help."
 			],
-			"relations": [],
+			"recommendations": [""],
+			"relations": [""],
 			"references": [
 				"https://www.mayoclinic.org/first-aid/first-aid-seizures/basics/art-20056678",
 				"https://www.webmd.com/epilepsy/guide/first-aid-seizures"
@@ -874,11 +833,10 @@
 				"Mga tip para pamahalaan ang kombulsyon?"
 			],
 			"procedures": [
-				"Protektahan ang tao mula sa pinsala sa pamamagitan ng pagtanggal ng mga nakapaligid na bagay. Huwag silang pigilan o maglagay ng anumang bagay sa kanilang bibig. Pagkatapos huminto ang mga convulsions, ilagay sila sa recovery position at bantayan ang kanilang paghinga. Humingi ng agarang medikal na tulong.",
-				"",
-				"Manatili sa tabi ng tao at protektahan sila mula sa pinsala. Huwag silang pigilan o maglagay ng anumang bagay sa kanilang bibig. Tumawag ng emergency services."
+				"Protektahan ang tao mula sa pinsala sa pamamagitan ng pagtanggal ng mga nakapaligid na bagay. Huwag silang pigilan o maglagay ng anumang bagay sa kanilang bibig. Pagkatapos huminto ang mga convulsions, ilagay sila sa recovery position at bantayan ang kanilang paghinga. Humingi ng agarang medikal na tulong."
 			],
-			"relations": [],
+			"recommendations": [""],
+			"relations": [""],
 			"references": [
 				"https://www.mayoclinic.org/first-aid/first-aid-seizures/basics/art-20056678",
 				"https://www.webmd.com/epilepsy/guide/first-aid-seizures"
@@ -888,7 +846,7 @@
 		{
 			"tag": "Head injury",
 			"type": "injury",
-			"meaning": "A head injury can result from various causes such as falls, accidents, or sports injuries. Symptoms may include headache, dizziness, confusion, and nausea. Immediate and appropriate first aid can help prevent further complications.\n\t\t\t\n\t\t\t",
+			"meaning": "A head injury can result from various causes such as falls, accidents, or sports injuries. Symptoms may include headache, dizziness, confusion, and nausea. Immediate and appropriate first aid can help prevent further complications.",
 			"patterns": [
 				"Head injury",
 				"What to do for a head injury?",
@@ -902,10 +860,9 @@
 				"How to soothe a head injury?",
 				"Tips for managing a head injury?"
 			],
-			"procedures": [
-				"If the injury is minor, apply a cold compress to reduce swelling and rest. For more serious injuries, seek emergency medical help immediately. Keep the person awake and monitor their symptoms closely.",
-				"",
-				"Use a cold compress for minor injuries. For serious head injuries, seek immediate medical help and monitor the person's condition."
+			"procedures": [""],
+			"recommendations": [
+				"If the injury is minor, apply a cold compress to reduce swelling and rest. For more serious injuries, seek immediate medical help. Keep the person awake and monitor their symptoms."
 			],
 			"relations": ["Sambong", "Lagundi", "Forest Tea", "Ginkgo Biloba"],
 			"references": [
@@ -931,10 +888,9 @@
 				"Paano pakalmahin ang pinsala sa ulo?",
 				"Mga tip para pamahalaan ang pinsala sa ulo?"
 			],
-			"procedures": [
-				"Kung ang pinsala ay maliit, maglagay ng malamig na compress upang mabawasan ang pamamaga at magpahinga. Para sa mas seryosong pinsala, humingi ng agarang medikal na tulong. Panatilihing gising ang tao at bantayan ang kanilang mga sintomas.",
-				"",
-				"Gumamit ng malamig na compress para sa maliit na pinsala. Para sa seryosong pinsala sa ulo, humingi ng agarang medikal na tulong at bantayan ang kondisyon ng tao."
+			"procedures": [""],
+			"recommendations": [
+				"Kung ang pinsala ay maliit, maglagay ng malamig na compress upang mabawasan ang pamamaga at magpahinga. Para sa mas seryosong pinsala, humingi ng agarang medikal na tulong. Panatilihing gising ang tao at bantayan ang kanilang mga sintomas."
 			],
 			"relations": ["Sambong", "Lagundi", "Tsaang Gubat", "Ginkgo Biloba"],
 			"references": [
@@ -946,7 +902,7 @@
 		{
 			"tag": "Fainting",
 			"type": "injury",
-			"meaning": "Fainting, also known as syncope, can occur due to various reasons such as dehydration, low blood pressure, or sudden changes in posture. Symptoms may include dizziness, lightheadedness, and temporary loss of consciousness. Immediate first aid can help prevent further complications. ",
+			"meaning": "Fainting, also known as syncope, can occur due to various reasons such as dehydration, low blood pressure, or sudden changes in posture. Symptoms may include dizziness, lightheadedness, and temporary loss of consciousness. Immediate first aid can help prevent further complications.",
 			"patterns": [
 				"Fainting",
 				"What to do if someone faints?",
@@ -956,12 +912,9 @@
 				"What should I do for fainting?"
 			],
 			"procedures": [
-				"Help the person lie down and elevate their legs to improve blood flow to the brain. Loosen any tight clothing and keep them lying down until they recover. If they don't regain consciousness quickly, seek medical help immediately.",
-				"",
-				"Have the person lie down, elevate their legs, and loosen tight clothing. Seek medical attention if they don't regain consciousness.",
-				"",
-				""
+				"Help the person lie down and elevate their legs to improve blood flow to the brain. Loosen any tight clothing and keep them lying down until they recover. If they don't regain consciousness quickly, seek medical help immediately."
 			],
+			"recommendations": [""],
 			"relations": ["Custard Apple"],
 			"references": [
 				"https://www.mayoclinic.org/first-aid/first-aid-fainting/basics/art-20056606",
@@ -992,10 +945,9 @@
 				"Tips for managing fainting?"
 			],
 			"procedures": [
-				"Tulungan ang tao na humiga at itaas ang kanilang mga binti upang mapabuti ang daloy ng dugo sa utak. Luwagan ang anumang masisikip na damit at panatilihing nakahiga sila hanggang sa sila ay makabawi. Kung hindi sila agad bumalik sa malay, humingi ng agarang medikal na tulong.",
-				"",
-				"Pahigain ang tao, itaas ang kanilang mga binti, at luwagan ang masisikip na damit. Humingi ng medikal na tulong kung hindi sila bumalik sa malay."
+				"Tulungan ang tao na humiga at itaas ang kanilang mga binti upang mapabuti ang daloy ng dugo sa utak. Luwagan ang anumang masisikip na damit at panatilihing nakahiga sila hanggang sa sila ay makabawi. Kung hindi sila agad bumalik sa malay, humingi ng agarang medikal na tulong."
 			],
+			"recommendations": [""],
 			"relations": ["Atis"],
 			"references": [
 				"https://www.mayoclinic.org/first-aid/first-aid-fainting/basics/art-20056606",
@@ -1006,7 +958,7 @@
 		{
 			"tag": "Headache",
 			"type": "injury",
-			"meaning": "Headaches can be caused by various factors such as stress, dehydration, or tension. Symptoms may include a dull or sharp pain in the head, sensitivity to light or sound, and nausea. Proper management and treatment can help alleviate the discomfort.\n\t\t\t",
+			"meaning": "Headaches can be caused by various factors such as stress, dehydration, or tension. Symptoms may include a dull or sharp pain in the head, sensitivity to light or sound, and nausea. Proper management and treatment can help alleviate the discomfort.",
 			"patterns": [
 				"Headache",
 				"How to treat a headache?",
@@ -1020,12 +972,9 @@
 				"First aid for headache?",
 				"How to care for a headache?"
 			],
-			"procedures": [
-				"Rest in a quiet, dark room and apply a cold or warm compress to your forehead. Over-the-counter pain relievers like ibuprofen or acetaminophen can help. Stay hydrated and avoid triggers like bright lights or loud noises.\",",
-				"",
-				"Rest, use pain relief medication, and apply a compress. Stay hydrated and avoid known triggers.",
-				"",
-				""
+			"procedures": [""],
+			"recommendations": [
+				"Rest in a quiet, dark room and apply a cold or warm compress to your forehead. Over-the-counter pain relievers like ibuprofen or acetaminophen can help. Stay hydrated and avoid triggers like bright lights or loud noises."
 			],
 			"relations": ["Lagundi", "Yerba Buena", "Ginger"],
 			"references": [
@@ -1051,10 +1000,9 @@
 				"Paano alagaan ang sakit ng ulo?",
 				"Tips for managing headache?"
 			],
-			"procedures": [
-				"Magpahinga sa isang tahimik at madilim na kwarto at maglagay ng malamig o mainit na compress sa iyong noo. Maaaring makatulong ang mga over-the-counter na pain relievers tulad ng ibuprofen o acetaminophen. Manatiling hydrated at iwasan ang mga trigger tulad ng maliwanag na ilaw o malalakas na tunog.",
-				"",
-				"Magpahinga, gumamit ng gamot para sa sakit, at maglagay ng compress. Manatiling hydrated at iwasan ang mga kilalang trigger."
+			"procedures": [""],
+			"recommendations": [
+				"Magpahinga sa isang tahimik at madilim na kwarto at maglagay ng malamig o mainit na compress sa iyong noo. Maaaring makatulong ang mga over-the-counter na pain relievers tulad ng ibuprofen o acetaminophen. Manatiling hydrated at iwasan ang mga trigger tulad ng maliwanag na ilaw o malalakas na tunog."
 			],
 			"relations": ["Lagundi", "Yerba Buena", "Luya"],
 			"references": [
@@ -1066,7 +1014,7 @@
 		{
 			"tag": "Cold",
 			"type": "injury",
-			"meaning": "The common cold is a viral infection that affects the upper respiratory tract. Symptoms may include a runny or stuffy nose, sore throat, cough, congestion, and mild body aches. Proper care and treatment can help alleviate symptoms and speed up recovery.                                ",
+			"meaning": "The common cold is a viral infection that affects the upper respiratory tract. Symptoms may include a runny or stuffy nose, sore throat, cough, congestion, and mild body aches. Proper care and treatment can help alleviate symptoms and speed up recovery.",
 			"patterns": [
 				"Cold",
 				"How to treat a cold?",
@@ -1080,12 +1028,9 @@
 				"First aid for cold?",
 				"How to care for a cold?"
 			],
-			"procedures": [
-				"Rest and stay hydrated by drinking plenty of fluids. Use over-the-counter medications to relieve symptoms like congestion and sore throat. Inhale steam or use a humidifier to ease breathing. If symptoms persist or worsen, consult a healthcare provider.",
-				"",
-				"Stay hydrated, rest, and use medications for symptom relief. Seek medical advice if the cold persists or worsens.",
-				"",
-				""
+			"procedures": [""],
+			"recommendations": [
+				"Rest and stay hydrated by drinking plenty of fluids. Use over-the-counter medications to relieve symptoms like congestion and sore throat. Inhale steam or use a humidifier to ease breathing. If symptoms persist or worsen, consult a healthcare provider."
 			],
 			"relations": [
 				"Lagundi",
@@ -1116,10 +1061,9 @@
 				"First aid para sa sipon?",
 				"Paano alagaan ang sipon?"
 			],
-			"procedures": [
-				"Magpahinga at manatiling hydrated sa pamamagitan ng pag-inom ng maraming likido. Gumamit ng mga over-the-counter na gamot para maibsan ang mga sintomas tulad ng congestion at sore throat. Huminga ng steam o gumamit ng humidifier upang mapadali ang paghinga. Kung ang mga sintomas ay nagpapatuloy o lumalala, kumonsulta sa healthcare provider.",
-				"",
-				"Manatiling hydrated, magpahinga, at gumamit ng mga gamot para sa pag-alis ng sintomas. Humingi ng medikal na payo kung ang sipon ay nagpapatuloy o lumalala."
+			"procedures": [""],
+			"recommendations": [
+				"Magpahinga at manatiling hydrated sa pamamagitan ng pag-inom ng maraming likido. Gumamit ng mga over-the-counter na gamot para maibsan ang mga sintomas tulad ng congestion at sore throat. Huminga ng steam o gumamit ng humidifier upang mapadali ang paghinga. Kung ang mga sintomas ay nagpapatuloy o lumalala, kumonsulta sa healthcare provider."
 			],
 			"relations": [
 				"Lagundi",
@@ -1137,7 +1081,7 @@
 		{
 			"tag": "Drowning",
 			"type": "injury",
-			"meaning": "Drowning occurs when a person is submerged in water and unable to breathe. Symptoms may include difficulty breathing, coughing, and unconsciousness. Immediate and appropriate rescue and first aid can save lives and prevent further complications.\n\t\t\t\t\n\t\t\t",
+			"meaning": "Drowning occurs when a person is submerged in water and unable to breathe. Symptoms may include difficulty breathing, coughing, and unconsciousness. Immediate and appropriate rescue and first aid can save lives and prevent further complications.",
 			"patterns": [
 				"Drowning",
 				"What to do if someone is drowning?",
@@ -1151,14 +1095,11 @@
 				"First aid for drowning?",
 				"How to care for a drowning person?"
 			],
-			"procedures": [
-				"Call for emergency help immediately. If it's safe, try to reach the person with a pole or throw a flotation device. Do not enter the water unless you're trained in water rescue. Once the person is out of the water, check for breathing and start CPR if necessary.",
-				"",
-				"Call emergency services and try to help without putting yourself at risk. Use a pole or flotation device, and be ready to perform CPR.",
-				"",
-				""
+			"procedures": [""],
+			"recommendations": [
+				"Call for emergency help immediately. If it's safe, try to reach the person with a pole or throw a flotation device. Do not enter the water unless you're trained in water rescue. Once the person is out of the water, check for breathing and start CPR if necessary."
 			],
-			"relations": [],
+			"relations": [""],
 			"references": [
 				"https://www.mayoclinic.org/first-aid/first-aid-drowning/basics/art-20056649",
 				"https://www.mountsinai.org/health-library/condition/drowning"
@@ -1166,7 +1107,7 @@
 			"context_set": ""
 		},
 		{
-			"tag": "\nNalulunod",
+			"tag": "Nalulunod",
 			"type": "injury",
 			"meaning": "Ang pagkalunod ay nangyayari kapag ang isang tao ay nalulubog sa tubig at hindi makakahinga. Ang mga sintomas ay maaaring kabilang ang kahirapan sa paghinga, pag-ubo, at pagkawala ng malay. Ang agarang at angkop na pagligtas at first aid ay makakapagligtas ng buhay at makakaiwas sa karagdagang komplikasyon.",
 			"patterns": [
@@ -1182,12 +1123,11 @@
 				"Paano alagaan ang nalulunod?",
 				"Tips for managing drowning?"
 			],
-			"procedures": [
-				"Tumawag ng agarang tulong sa emergency. Kung ligtas, subukang abutin ang tao gamit ang isang poste o ihagis ang flotation device. Huwag pumasok sa tubig maliban kung ikaw ay may pagsasanay sa water rescue. Kapag ang tao ay nailabas na sa tubig, suriin ang kanilang paghinga at simulan ang CPR kung kinakailangan.",
-				"",
-				"Tumawag ng emergency services at subukang tumulong nang hindi inilalagay ang iyong sarili sa panganib. Gumamit ng poste o flotation device, at maging handa na magsagawa ng CPR."
+			"procedures": [""],
+			"recommendations": [
+				"Tumawag ng agarang tulong sa emergency. Kung ligtas, subukang abutin ang tao gamit ang isang poste o ihagis ang flotation device. Huwag pumasok sa tubig maliban kung ikaw ay may pagsasanay sa water rescue. Kapag ang tao ay nailabas na sa tubig, suriin ang kanilang paghinga at simulan ang CPR kung kinakailangan."
 			],
-			"relations": [],
+			"relations": [""],
 			"references": [
 				"https://www.mayoclinic.org/first-aid/first-aid-drowning/basics/art-20056649",
 				"https://www.mountsinai.org/health-library/condition/drowning"
@@ -1197,7 +1137,7 @@
 		{
 			"tag": "Chest pain",
 			"type": "injury",
-			"meaning": "Chest pain can be caused by various factors such as heart problems, lung issues, or digestive disorders. Symptoms may include a sharp, dull, or burning sensation in the chest, shortness of breath, and dizziness. Immediate and appropriate action can help prevent serious complications.\n\t\t\t\t\n\t\t\t",
+			"meaning": "Chest pain can be caused by various factors such as heart problems, lung issues, or digestive disorders. Symptoms may include a sharp, dull, or burning sensation in the chest, shortness of breath, and dizziness. Immediate and appropriate action can help prevent serious complications.",
 			"patterns": [
 				"Chest pain",
 				"What to do for chest pain?",
@@ -1212,10 +1152,9 @@
 				"How to care for chest pain?"
 			],
 			"procedures": [
-				"If you experience chest pain, stop any physical activity and rest. Take deep breaths and try to stay calm. If the pain persists, seek emergency medical help immediately, as it could be a sign of a heart attack.",
-				"",
-				"Rest and take slow, deep breaths. Seek emergency medical attention if the pain is severe or does not go away"
+				"If you experience chest pain, stop any physical activity and rest. Take deep breaths and try to stay calm. If the pain persists, seek emergency medical help immediately, as it could be a sign of a heart attack."
 			],
+			"recommendations": [""],
 			"relations": ["Garlic (Chest Pain)", "Ginger (Chest Pain)", "Almonds"],
 			"references": [
 				"https://www.mayoclinic.org/diseases-conditions/chest-pain/diagnosis-treatment/drc-20370842",
@@ -1241,10 +1180,9 @@
 				"Tips for managing chest pain?"
 			],
 			"procedures": [
-				"Kung makaranas ka ng pananakit sa dibdib, itigil ang anumang pisikal na aktibidad at magpahinga. Huminga ng malalim at subukang manatiling kalmado. Kung magpapatuloy ang sakit, humingi ng agarang medikal na tulong, dahil maaari itong senyales ng atake sa puso.",
-				"",
-				"Magpahinga at huminga ng mabagal at malalim. Humingi ng agarang medikal na atensyon kung ang sakit ay malubha o hindi nawawala."
+				"Kung makaranas ka ng pananakit sa dibdib, itigil ang anumang pisikal na aktibidad at magpahinga. Huminga ng malalim at subukang manatiling kalmado. Kung magpapatuloy ang sakit, humingi ng agarang medikal na tulong, dahil maaari itong senyales ng atake sa puso."
 			],
+			"recommendations": [""],
 			"relations": ["Garlic (Chest Pain)", "Ginger (Chest Pain)", "Almonds"],
 			"references": [
 				"https://www.mayoclinic.org/diseases-conditions/chest-pain/diagnosis-treatment/drc-20370842",
@@ -1255,7 +1193,7 @@
 		{
 			"tag": "Dehydration",
 			"type": "Injury",
-			"meaning": "Dehydration occurs when the body loses more fluids than it takes in, leading to an imbalance. Symptoms may include dry mouth, thirst, dark urine, dizziness, and fatigue. Proper hydration and timely treatment can help restore fluid balance and prevent complications.\n\t\t\t",
+			"meaning": "Dehydration occurs when the body loses more fluids than it takes in, leading to an imbalance. Symptoms may include dry mouth, thirst, dark urine, dizziness, and fatigue. Proper hydration and timely treatment can help restore fluid balance and prevent complications.",
 			"patterns": [
 				"Dehydration",
 				"How to treat dehydration?",
@@ -1270,12 +1208,9 @@
 				"How to care for dehydration?"
 			],
 			"procedures": [
-				"Drink plenty of water or an oral rehydration solution (ORS). Rest in a cool environment and avoid physical activity until fully rehydrated. For severe dehydration, seek medical attention.",
-				"",
-				"Increase fluid intake, rest, and use an ORS if available. Seek medical help if dehydration is severe.",
-				"",
-				""
+				"Drink plenty of water or an oral rehydration solution (ORS). Rest in a cool environment and avoid physical activity until fully rehydrated. For severe dehydration, seek medical attention."
 			],
+			"recommendations": [""],
 			"relations": ["Buko Water", "Lemongrass"],
 			"references": [
 				"https://www.mayoclinic.org/diseases-conditions/dehydration/diagnosis-treatment/drc-20354092",
@@ -1301,10 +1236,9 @@
 				"Tips for managing pagkauhaw?"
 			],
 			"procedures": [
-				"Uminom ng maraming tubig o oral rehydration solution (ORS). Magpahinga sa isang malamig na kapaligiran at iwasan ang pisikal na aktibidad hanggang sa ganap na ma-rehydrate. Para sa malubhang dehydration, humingi ng medikal na tulong.",
-				"",
-				"Dadagan ang pag-inom ng likido, magpahinga, at gumamit ng ORS kung available. Humingi ng tulong medikal kung ang dehydration ay malubha."
+				"Uminom ng maraming tubig o oral rehydration solution (ORS). Magpahinga sa isang malamig na kapaligiran at iwasan ang pisikal na aktibidad hanggang sa ganap na ma-rehydrate. Para sa malubhang dehydration, humingi ng medikal na tulong."
 			],
+			"recommendations": [""],
 			"relations": ["Katas ng Buko", "Tanglad"],
 			"references": [
 				"https://www.mayoclinic.org/diseases-conditions/dehydration/diagnosis-treatment/drc-20354092",
@@ -1336,6 +1270,7 @@
 			"procedures": [
 				"Clean the cut with soap and water to avoid infection. Apply pressure to stop the bleeding, and once stopped, apply an antibiotic ointment. Cover the wound with a bandage and change it daily. If the cut is deep, seek medical help."
 			],
+			"recommendations": [""],
 			"relations": ["Banana Leaves", "Mayana Leaves", "Guava Leaves"],
 			"references": [
 				"https://www.mayoclinic.org/first-aid/first-aid-cuts/basics/art-20056711",
@@ -1362,6 +1297,7 @@
 			"procedures": [
 				"Linisin ang hiwa gamit ang sabon at tubig upang maiwasan ang impeksyon. Lagyan ng presyon upang ihinto ang pagdurugo, at sa sandaling tumigil, maglagay ng antibiotic ointment. Takpan ang sugat ng benda at palitan ito araw-araw. Kung malalim ang hiwa, humingi ng medikal na tulong."
 			],
+			"recommendations": [""],
 			"relations": ["Dahon ng Saging", "Dahon ng Mayana", "Dahon ng Bayabas"],
 			"references": [
 				"https://www.mayoclinic.org/first-aid/first-aid-cuts/basics/art-20056711",
@@ -1389,6 +1325,7 @@
 			"procedures": [
 				"Cool the burn with running water for at least 10 minutes. Avoid using ice. Cover the burn with a sterile gauze bandage. Do not apply butter or ointments to the burn. For pain relief, consider over-the-counter pain relievers like ibuprofen or acetaminophen."
 			],
+			"recommendations": [""],
 			"relations": ["Aloe Vera", "Gauze Bandage", "Guava Leaves"],
 			"references": [
 				"https://www.youtube.com/watch?v=LIaqKI7B8EI",
@@ -1414,6 +1351,7 @@
 			"procedures": [
 				"Palamigin ang paso gamit ang umaagos na tubig nang hindi bababa sa 10 minuto. Iwasang gumamit ng yelo. Takpan ang paso ng sterile gauze bandage. Huwag maglagay ng mantikilya o mga pamahid sa paso. Para sa lunas sa pananakit, isaalang-alang ang mga over-the-counter na pain reliever tulad ng ibuprofen o acetaminophen."
 			],
+			"recommendations": [""],
 			"relations": ["Aloe Vera", "Gauze Bandage", "Dahon ng Bayabas"],
 			"references": [
 				"https://www.youtube.com/watch?v=LIaqKI7B8EI",
@@ -1441,9 +1379,9 @@
 				"What should I do for scraped skin?"
 			],
 			"procedures": [
-				"Gently wash the abrasion with soap and water. Apply an antibiotic ointment and cover with a clean, dry bandage. If the abrasion is large, seek medical advice.",
-				"Clean the abrasion with water and soap to remove any debris. Apply an antiseptic to prevent infection. Cover with a sterile bandage or gauze and change it daily. Keep the area dry and monitor for signs of infection."
+				"Clean the abrasion with water and soap to remove any debris. Apply an antiseptic to prevent infection. Cover with a sterile bandage or gauze and change it daily. Keep the area dry and monitor for signs of infection. If the abrasion is large, seek medical advice."
 			],
+			"recommendations": [""],
 			"relations": ["Banana Leaves", "Mayana Leaves", "Guava Leaves"],
 			"references": [
 				"https://www.mayoclinic.org/first-aid/first-aid-cuts/basics/art-20056711",
@@ -1471,9 +1409,9 @@
 				"Paano gamutin ang sugat mula sa gasgas?"
 			],
 			"procedures": [
-				"Linisin ang gasgas gamit ang tubig at sabon upang alisin ang anumang dumi. Maglagay ng antiseptiko upang maiwasan ang impeksyon. Takpan ng sterile na benda o gasa at palitan ito araw-araw. Panatilihing tuyo ang lugar at bantayan para sa mga senyales ng impeksyon.",
-				"Maingat na hugasan ang gasgas gamit ang sabon at tubig. Maglagay ng antibiotic ointment at takpan ng malinis at tuyong benda. Kung malaki ang gasgas, magpakonsulta sa doktor."
+				"Linisin ang abrasion gamit ang tubig at sabon upang maalis ang anumang mga labi. Maglagay ng antiseptiko upang maiwasan ang impeksiyon. Takpan ng sterile bandage o gauze at palitan ito araw-araw. Panatilihing tuyo ang lugar at subaybayan ang mga palatandaan ng impeksyon. Kung malaki ang abrasion, humingi ng medikal na payo."
 			],
+			"recommendations": [""],
 			"relations": ["Dahon ng Saging", "Dahon ng Mayana", "Dahon ng Bayabas"],
 			"references": [
 				"https://www.mayoclinic.org/first-aid/first-aid-cuts/basics/art-20056711",
@@ -1501,9 +1439,9 @@
 				"What is the best ointment for stings?"
 			],
 			"procedures": [
-				"Remove the stinger if present by scraping it off with a flat object. Wash the area with soap and water. Apply a cold compress to reduce swelling. Use an antihistamine cream or take oral antihistamines for itching. If you experience difficulty breathing, seek emergency medical help immediately.",
-				"Wash the sting site with soap and water. Apply ice wrapped in a cloth to reduce swelling. Take an antihistamine for itching or swelling."
+				"Remove the stinger if present by scraping it off with a flat object. Wash the area with soap and water. Apply a cold compress to reduce swelling. Use an antihistamine cream or take oral antihistamines for itching. If you experience difficulty breathing, seek emergency medical help immediately."
 			],
+			"recommendations": [""],
 			"relations": ["Aloe Vera", "Honey"],
 			"references": [
 				"https://www.healthline.com/health/bug-bites",
@@ -1530,9 +1468,9 @@
 				"Ano ang unang lunas sa kagat ng insekto?"
 			],
 			"procedures": [
-				"Alisin ang tibo kung mayroon, sa pamamagitan ng pag-scrape gamit ang patag na bagay. Hugasan ang lugar na natibo gamit ang sabon at tubig. Maglagay ng malamig na pomento upang mabawasan ang pamamaga. Gumamit ng antihistamine cream o uminom ng oral antihistamines para sa pangangati. Kung makaranas ng hirap sa paghinga, agad na humingi ng tulong medikal.",
-				"Hugasan ang lugar ng sting gamit ang sabon at tubig. Maglagay ng yelo na binalot sa tela upang mabawasan ang pamamaga. Uminom ng antihistamine para sa pangangati o pamamaga."
+				"Alisin ang tibo kung mayroon, sa pamamagitan ng pag-scrape gamit ang patag na bagay. Hugasan ang lugar na natibo gamit ang sabon at tubig. Maglagay ng malamig na pomento upang mabawasan ang pamamaga. Gumamit ng antihistamine cream o uminom ng oral antihistamines para sa pangangati. Kung makaranas ng hirap sa paghinga, agad na humingi ng tulong medikal."
 			],
+			"recommendations": [""],
 			"relations": ["Aloe Vera", "Honey"],
 			"references": [
 				"https://www.healthline.com/health/bug-bites",
@@ -1564,9 +1502,9 @@
 				"First aid for splinters?"
 			],
 			"procedures": [
-				"Clean the area with soap and water. Use sterilized tweezers to remove the splinter carefully. After removal, apply an antiseptic and cover with a bandage if necessary",
-				"Soak the affected area in warm water to soften the skin. Gently remove the splinter with sterilized tweezers. Clean the area with antiseptic and bandage if needed."
+				"Clean the area with soap and water. Use sterilized tweezers to remove the splinter carefully. After removal, apply an antiseptic and cover with a bandage if necessary."
 			],
+			"recommendations": [""],
 			"relations": ["Honey"],
 			"references": [
 				"https://www.mayoclinic.org/first-aid/first-aid/basics/art-20056604",
@@ -1592,9 +1530,9 @@
 				"Anong gamot ang dapat ilagay pagkatapos alisin ang tinik?"
 			],
 			"procedures": [
-				"Linisin ang lugar gamit ang sabon at tubig. Gumamit ng sterilized na pang-ipit upang maingat na alisin ang tinik. Pagkatapos alisin, maglagay ng antiseptiko at takpan ng benda kung kinakailangan",
-				"Ibabad ang apektadong lugar sa maligamgam na tubig upang lumambot ang balat. Maingat na alisin ang tinik gamit ang sterilized na pang-ipit. Linisin ang lugar gamit ang antiseptiko at takpan ng benda kung kinakailangan"
+				"Linisin ang lugar gamit ang sabon at tubig. Gumamit ng sterilized na pang-ipit upang maingat na alisin ang tinik. Pagkatapos alisin, maglagay ng antiseptiko at takpan ng benda kung kinakailangan."
 			],
+			"recommendations": [""],
 			"relations": ["Honey"],
 			"references": [
 				"https://www.mayoclinic.org/first-aid/first-aid/basics/art-20056604",
@@ -1619,9 +1557,9 @@
 				"First aid for sprains?",
 				"What is the RICE method for sprains?"
 			],
-			"procedures": [
-				"Rest the injured limb and avoid putting weight on it. Apply ice packs to reduce swelling and pain. Compress the area with an elastic bandage, and elevate it above heart level. Consider over-the-counter pain relievers for pain management",
-				"Use the R.I.C.E. method: Rest, Ice, Compression, and Elevation. If the pain persists or the swelling is severe, consult a healthcare provider."
+			"procedures": [""],
+			"recommendations": [
+				"Rest the injured limb and avoid putting weight on it. Apply ice packs to reduce swelling and pain. Compress the area with an elastic bandage, and elevate it above heart level. Consider over-the-counter pain relievers for pain management. Use the R.I.C.E. method: Rest, Ice, Compression, and Elevation. If the pain persists or the swelling is severe, consult a healthcare provider."
 			],
 			"relations": ["Garlic (Sprains)", "Onion", "Cabbage"],
 			"references": [
@@ -1648,9 +1586,9 @@
 				"Anong mga ehersisyo ang dapat gawin sa pilay?",
 				"Ano ang mga palatandaan ng malalang pilay?"
 			],
-			"procedures": [
-				"Pahingahin ang nasugatang bahagi at iwasan ang paglalagay ng bigat dito. Maglagay ng yelo upang mabawasan ang pamamaga at sakit. I-compress ang lugar gamit ang elastic na benda, at itaas ito sa taas ng puso. Isaalang-alang ang paggamit ng mga over-the-counter na gamot para sa sakit.",
-				"Gamitin ang R.I.C.E. na pamamaraan: Rest, Ice, Compression, at Elevation. Kung patuloy ang sakit o malubha ang pamamaga, magpakonsulta sa isang healthcare provider."
+			"procedures": [""],
+			"recommendations": [
+				"Pahingahin ang nasugatang bahagi at iwasan ang paglalagay ng bigat dito. Maglagay ng yelo upang mabawasan ang pamamaga at sakit. I-compress ang lugar gamit ang elastic na benda, at itaas ito sa taas ng puso. Isaalang-alang ang paggamit ng mga over-the-counter na gamot para sa sakit. Gamitin ang R.I.C.E. na pamamaraan: Rest, Ice, Compression, at Elevation. Kung patuloy ang sakit o malubha ang pamamaga, magpakonsulta sa isang healthcare provider."
 			],
 			"relations": ["bawang (Sprains)", "Sibuyas", "Repolyo"],
 			"references": [
@@ -1677,12 +1615,11 @@
 				"First aid for pulled muscles?",
 				"What is the RICE method for muscle pulls?"
 			],
-			"procedures": [
-				"Rest the affected muscle, apply ice to reduce swelling, use compression with an elastic bandage, and elevate the muscle. Take pain relievers if necessary and avoid strenuous activity.",
-				"",
-				"Apply the R.I.C.E. method: Rest, Ice, Compression, Elevation. Consult a healthcare provider for severe strains."
+			"procedures": [""],
+			"recommendations": [
+				"Rest the affected muscle, apply ice to reduce swelling, use compression with an elastic bandage, and elevate the muscle. Take pain relievers if necessary and avoid strenuous activity. Apply the R.I.C.E. method: Rest, Ice, Compression, Elevation. Consult a healthcare provider for severe strains."
 			],
-			"relations": [],
+			"relations": [""],
 			"references": [
 				"https://www.mayoclinic.org/diseases-conditions/muscle-strains/symptoms-causes/syc-20450507"
 			],
@@ -1703,12 +1640,11 @@
 				"Paano maiwasan ang karagdagang pinsala sa napunit na kalamnan?",
 				"Anong mga ehersisyo ang dapat gawin para sa napunit na kalamnan?"
 			],
-			"procedures": [
-				"Pahingahin ang apektadong kalamnan, maglagay ng yelo, gumamit ng elastic na benda, at itaas ang kalamnan. Uminom ng pain relievers kung kinakailangan at iwasan ang mabigat na aktibidad.",
-				"",
-				"Gamitin ang R.I.C.E.: Rest, Ice, Compression, Elevation. Magpakonsulta sa healthcare provider para sa malubhang pilay."
+			"procedures": [""],
+			"recommendations": [
+				"Pahingahin ang apektadong kalamnan, maglagay ng yelo, gumamit ng elastic na benda, at itaas ang kalamnan. Uminom ng pain relievers kung kinakailangan at iwasan ang mabigat na aktibidad. Gamitin ang R.I.C.E.: Rest, Ice, Compression, Elevation. Magpakonsulta sa healthcare provider para sa malubhang pilay."
 			],
-			"relations": [],
+			"relations": [""],
 			"references": [
 				"https://www.mayoclinic.org/diseases-conditions/muscle-strains/symptoms-causes/syc-20450507"
 			],
@@ -1731,10 +1667,9 @@
 				"First aid for sunburn?",
 				"How to prevent peeling from sunburn?"
 			],
-			"procedures": [
-				"Cool the skin with a damp cloth or a cool bath, apply aloe vera or a moisturizer, drink plenty of water, and avoid further sun exposure.",
-				"",
-				"Use cool compresses and aloe vera gel. Drink water and avoid the sun until healed."
+			"procedures": [""],
+			"recommendations": [
+				"Cool the skin with a damp cloth or a cool bath, apply aloe vera or a moisturizer, drink plenty of water, and avoid further sun exposure. Use cool compresses and aloe vera gel. Drink water and avoid the sun until healed."
 			],
 			"relations": ["Honey", "Aloe vera", "Cucumber"],
 			"references": [
@@ -1761,10 +1696,9 @@
 				"Paano maiiwasan ang sunburn sa hinaharap?",
 				"Anong mga natural na remedyo ang maaaring gamitin para sa sunburn?"
 			],
-			"procedures": [
-				"Palamigin ang balat gamit ang basang tela o maligamgam na paligo, maglagay ng aloe vera o moisturizer, uminom ng maraming tubig, at iwasan ang karagdagang pagkakalantad sa araw.",
-				"",
-				"Gumamit ng malamig na pomento at aloe vera gel. Uminom ng tubig at iwasan ang araw hanggang maghilom."
+			"procedures": [""],
+			"recommendations": [
+				"Palamigin ang balat gamit ang basang tela o maligamgam na paligo, maglagay ng aloe vera o moisturizer, uminom ng maraming tubig, at iwasan ang karagdagang pagkakalantad sa araw. Gumamit ng malamig na pomento at aloe vera gel. Uminom ng tubig at iwasan ang araw hanggang maghilom."
 			],
 			"relations": ["Honey", "Aloe vera", "Pipino"],
 			"references": [
@@ -1790,9 +1724,9 @@
 				"First aid for muscle strains?",
 				"What is the RICE method for muscle strain?"
 			],
-			"procedures": [
-				"Rest the strained muscle and avoid activities that cause pain. Apply ice to the area for 15-20 minutes several times a day. Use an elastic bandage to compress the area, and elevate it to reduce swelling. Over-the-counter painkillers can help manage pain.",
-				"Rest the affected muscle, apply ice, and compress with a bandage. Elevate the limb and take pain relievers as needed."
+			"procedures": [""],
+			"recommendations": [
+				"Rest the strained muscle and avoid activities that cause pain. Apply ice to the area for 15-20 minutes several times a day. Use an elastic bandage to compress the area, and elevate it to reduce swelling. Over-the-counter painkillers can help manage pain. Rest the affected muscle, apply ice, and compress with a bandage. Elevate the limb and take pain relievers as needed."
 			],
 			"relations": ["Ginger"],
 			"references": [
@@ -1814,9 +1748,9 @@
 				"Paano maalis ang sakit mula sa paghilab ng kalamnan?",
 				"Anong gamot ang maaaring inumin para sa paghilab ng kalamnan?"
 			],
-			"procedures": [
-				"Pahingahin ang na-pilay na kalamnan at iwasan ang mga aktibidad na nagdudulot ng sakit. Maglagay ng yelo sa apektadong lugar sa loob ng 15-20 minuto nang ilang beses sa isang araw. Gumamit ng elastic na benda upang i-compress ang lugar, at itaas ito upang mabawasan ang pamamaga. Ang mga over-the-counter na painkillers ay maaaring makatulong sa pamamahala ng sakit.",
-				"Pahingahin ang apektadong kalamnan, maglagay ng yelo, at i-compress gamit ang benda. Itaas ang bahagi at uminom ng pain relievers kung kinakailangan."
+			"procedures": [""],
+			"recommendations": [
+				"Pahingahin ang na-pilay na kalamnan at iwasan ang mga aktibidad na nagdudulot ng sakit. Maglagay ng yelo sa apektadong lugar sa loob ng 15-20 minuto nang ilang beses sa isang araw. Gumamit ng elastic na benda upang i-compress ang lugar, at itaas ito upang mabawasan ang pamamaga. Ang mga over-the-counter na painkillers ay maaaring makatulong sa pamamahala ng sakit. Pahingahin ang apektadong kalamnan, maglagay ng yelo, at i-compress gamit ang benda. Itaas ang bahagi at uminom ng pain relievers kung kinakailangan."
 			],
 			"relations": ["Luya"],
 			"references": [
@@ -1843,11 +1777,10 @@
 				"What to do if the chemical burn is severe?"
 			],
 			"procedures": [
-				"Immediately flush the affected area with water for at least 20 minutes. Remove any contaminated clothing, cover the burn with a sterile bandage, and avoid applying creams or ointments unless instructed by a healthcare provider. Seek immediate medical attention.",
-				"",
-				"Rinse the burn with water continuously for 20 minutes and remove contaminated clothing. Seek immediate medical help."
+				"Immediately flush the affected area with water for at least 20 minutes. Remove any contaminated clothing, cover the burn with a sterile bandage, and avoid applying creams or ointments unless instructed by a healthcare provider. Seek immediate medical attention."
 			],
-			"relations": [],
+			"recommendations": [""],
+			"relations": [""],
 			"references": [
 				"https://www.mayoclinic.org/first-aid/first-aid-chemical-burns/basics/art-20056667",
 				"https://my.clevelandclinic.org/health/diseases/22350-chemical-burns",
@@ -1873,13 +1806,10 @@
 				"Ano ang mga palatandaan ng malubhang sunog ng kemikal?"
 			],
 			"procedures": [
-				"Agad na banlawan ang apektadong bahagi ng tubig sa loob ng hindi bababa sa 20 minuto. Alisin ang maruming damit, takpan ang paso ng sterile na benda, at iwasang maglagay ng mga creams o ointments maliban kung inutos ng healthcare provider. Magpakonsulta agad sa doktor.",
-				"",
-				"Banlawan ang paso ng tuluy-tuloy na tubig sa loob ng 20 minuto at alisin ang maruming damit. Humingi agad ng medikal na tulong.",
-				"",
-				""
+				"Agad na banlawan ang apektadong bahagi ng tubig sa loob ng hindi bababa sa 20 minuto. Alisin ang maruming damit, takpan ang paso ng sterile na benda, at iwasang maglagay ng mga creams o ointments maliban kung inutos ng healthcare provider. Magpakonsulta agad sa doktor."
 			],
-			"relations": [],
+			"recommendations": [""],
+			"relations": [""],
 			"references": [
 				"https://www.mayoclinic.org/first-aid/first-aid-chemical-burns/basics/art-20056667",
 				"https://my.clevelandclinic.org/health/diseases/22350-chemical-burns",
@@ -1904,10 +1834,9 @@
 				"First aid for rashes?",
 				"What are the common remedies for rashes?"
 			],
-			"procedures": [
-				"Wash the affected area with mild soap and water. Apply an over-the-counter anti-itch cream or antihistamine. Avoid scratching to prevent infection. If the rash persists or is severe, consult a healthcare provider.",
-				"",
-				"Clean the area gently, apply an anti-itch cream, and avoid irritants. Seek medical advice if the rash spreads or doesn't improve."
+			"procedures": [""],
+			"recommendations": [
+				"Wash the affected area with mild soap and water. Apply an over-the-counter anti-itch cream or antihistamine. Avoid scratching to prevent infection. If the rash persists or is severe, consult a healthcare provider."
 			],
 			"relations": ["Aloe Vera"],
 			"references": ["https://www.healthline.com/health/rashes"],
@@ -1931,10 +1860,9 @@
 				"Ano ang mga karaniwang lunas para sa pantal?",
 				"Kailan dapat kumonsulta sa doktor para sa pantal?"
 			],
-			"procedures": [
-				"Hugasan ang apektadong lugar gamit ang mild na sabon at tubig. Maglagay ng over-the-counter na anti-itch cream o antihistamine. Iwasang kamutin upang maiwasan ang impeksyon. Kung ang pantal ay nagpapatuloy o malubha, magpakonsulta sa isang healthcare provider.",
-				"",
-				"Linisin ang lugar ng maingat, maglagay ng anti-itch cream, at iwasan ang mga irritants. Humingi ng medikal na payo kung ang pantal ay kumakalat o hindi bumubuti."
+			"procedures": [""],
+			"recommendations": [
+				"Hugasan ang apektadong lugar gamit ang mild na sabon at tubig. Maglagay ng over-the-counter na anti-itch cream o antihistamine. Iwasang kamutin upang maiwasan ang impeksyon. Kung ang pantal ay nagpapatuloy o malubha, magpakonsulta sa isang healthcare provider."
 			],
 			"relations": ["Aloe Vera"],
 			"references": ["https://www.healthline.com/health/rashes"],
@@ -1958,13 +1886,10 @@
 				"How long does it take to recover from a snake bite?"
 			],
 			"procedures": [
-				"Stay calm and immobilize the bitten limb. Seek emergency medical care as quickly as possible.",
-				"",
-				"Keep the bitten area still and below heart level to slow venom spread. Remove tight clothing or jewelry near the bite. Do not attempt to suck out the venom. Seek emergency medical help immediately.",
-				"",
-				"Call emergency services immediately. Keep the bite area still and lower than the heart. Do not apply ice or a tourniquet."
+				"Keep the bitten area still and below heart level to slow venom spread. Remove tight clothing or jewelry near the bite. Do not attempt to suck out the venom. Seek emergency medical help immediately."
 			],
-			"relations": [],
+			"recommendations": [""],
+			"relations": [""],
 			"references": [
 				"https://www.healthline.com/health/snake-bites",
 				"https://my.clevelandclinic.org/health/diseases/15647-snake-bites"
@@ -1989,13 +1914,10 @@
 				"Anong mga sintomas ang dapat bantayan pagkatapos ng kagat ng ahas?"
 			],
 			"procedures": [
-				"Tumawag agad ng emergency services. Panatilihing hindi gumagalaw ang lugar ng kagat at nasa ibaba ng puso. Huwag maglagay ng yelo o tourniquet.",
-				"",
-				"Manatiling kalmado at i-immobilize ang tinukso na bahagi. Humingi ng agarang medikal na pangangalaga.",
-				"",
 				"Ipahinga ang tinukso na lugar at panatilihing nasa ilalim ng antas ng puso upang mapabagal ang pagkalat ng lason. Alisin ang anumang masikip na damit o alahas malapit sa kagat. Huwag subukang sipsipin ang lason. Humingi agad ng tulong medikal."
 			],
-			"relations": [],
+			"recommendations": [""],
+			"relations": [""],
 			"references": [
 				"https://www.healthline.com/health/snake-bites",
 				"https://my.clevelandclinic.org/health/diseases/15647-snake-bites"
@@ -2019,9 +1941,9 @@
 				"First aid for bruises?",
 				"How to prevent bruising?"
 			],
-			"procedures": [
-				"Apply a cold compress to the bruise to reduce swelling. Elevate the affected area to minimize blood flow to the bruise. Rest and avoid further injury to the area. Over-the-counter pain relievers can help with discomfort.",
-				"Use ice packs on the bruise for 10-15 minutes at a time. Keep the bruised area elevated and take pain relief medication if needed."
+			"procedures": [""],
+			"recommendations": [
+				"Apply a cold compress to the bruise to reduce swelling. Elevate the affected area to minimize blood flow to the bruise. Rest and avoid further injury to the area. Over-the-counter pain relievers can help with discomfort."
 			],
 			"relations": ["Aloe Vera", "Pineapple", "orange", "Spinach"],
 			"references": [
@@ -2047,9 +1969,9 @@
 				"Paano maiwasan ang pagkakaroon ng pasa?",
 				"Ano ang mga palatandaan ng malubhang pasa?"
 			],
-			"procedures": [
-				"Maglagay ng malamig na pomento sa pasa upang mabawasan ang pamamaga. Itaas ang apektadong lugar upang mabawasan ang daloy ng dugo sa pasa. Magpahinga at iwasan ang karagdagang pinsala sa lugar. Ang mga over-the-counter na pain relievers ay maaaring makatulong sa pag-alis ng hindi komportableng pakiramdam.",
-				"Gumamit ng yelo sa pasa sa loob ng 10-15 minuto bawat sesyon. Panatilihing nakataas ang lugar na may pasa at uminom ng gamot para sa sakit kung kinakailangan."
+			"procedures": [""],
+			"recommendations": [
+				"Maglagay ng malamig na pomento sa pasa upang mabawasan ang pamamaga. Itaas ang apektadong lugar upang mabawasan ang daloy ng dugo sa pasa. Magpahinga at iwasan ang karagdagang pinsala sa lugar. Ang mga over-the-counter na pain relievers ay maaaring makatulong sa pag-alis ng hindi komportableng pakiramdam."
 			],
 			"relations": ["Aloe Vera", "Pinya", "orange", "Spinach"],
 			"references": [
@@ -2076,11 +1998,10 @@
 				"How to prevent complications from a fracture?"
 			],
 			"procedures": [
-				"Keep the injured area still and avoid moving it. Apply a splint to immobilize the fracture and use a cold pack to reduce swelling. Seek immediate medical attention.",
-				"",
-				"Do not move the injured area and use a splint to keep it immobile. Apply ice and seek emergency medical help."
+				"Keep the injured area still and avoid moving it. Apply a splint to immobilize the fracture and use a cold pack to reduce swelling. Seek immediate medical attention."
 			],
-			"relations": [],
+			"recommendations": [""],
+			"relations": [""],
 			"references": [
 				"https://my.clevelandclinic.org/health/diseases/15241-bone-fractures",
 				"https://www.healthline.com/health/broken-arm"
@@ -2106,11 +2027,10 @@
 				"Kailan dapat kumonsulta sa doktor para sa bali?"
 			],
 			"procedures": [
-				"Ipahinga ang nasugatang lugar at iwasang galawin ito. Maglagay ng splint upang i-immobilize ang bali at gumamit ng cold pack upang mabawasan ang pamamaga. Humingi ng agarang medikal na atensyon.",
-				"",
-				"Huwag galawin ang nasugatang lugar at gamitin ang splint upang hindi ito gumalaw. Maglagay ng yelo at humingi ng agarang medikal na tulong."
+				"Ipahinga ang nasugatang lugar at iwasang galawin ito. Maglagay ng splint upang i-immobilize ang bali at gumamit ng cold pack upang mabawasan ang pamamaga. Humingi ng agarang medikal na atensyon."
 			],
-			"relations": [],
+			"recommendations": [""],
+			"relations": [""],
 			"references": [
 				"https://my.clevelandclinic.org/health/diseases/15241-bone-fractures",
 				"https://www.healthline.com/health/broken-arm"
@@ -2135,15 +2055,10 @@
 				"How to respond if a stroke is suspected?"
 			],
 			"procedures": [
-				"If you suspect someone is having a stroke, call emergency services immediately. Have the person lie down with their head slightly elevated. Monitor their breathing and be ready to perform CPR if necessary.",
-				"",
-				"Seek emergency medical help immediately. Keep the person calm and monitor their breathing.",
-				"",
-				"Act FAST: Face drooping, Arm weakness, Speech difficulty, Time to call emergency services. Call emergency services immediately and note the time the symptoms began. Keep the person comfortable and calm until help arrives.",
-				"",
-				"Call emergency services immediately if you notice face drooping, arm weakness, or speech difficulty. Act FAST and get medical help right away."
+				"If you suspect someone is having a stroke, call emergency services immediately. Have the person lie down with their head slightly elevated. Monitor their breathing and be ready to perform CPR if necessary."
 			],
-			"relations": [],
+			"recommendations": [""],
+			"relations": [""],
 			"references": [
 				"https://www.mayoclinic.org/diseases-conditions/stroke/multimedia/vid-20530787https://www.ninds.nih.gov/health-information/stroke/assess-and-treat/nih-stroke-scale"
 			],
@@ -2167,15 +2082,10 @@
 				"Anong gamot ang maaaring ibigay sa pasyenteng may atake sa utak?"
 			],
 			"procedures": [
-				"Kung sa tingin mo ay may stroke ang isang tao, tumawag agad ng emergency services. Hayaang humiga ang tao na may bahagyang nakataas ang ulo. Bantayan ang kanilang paghinga at maging handa na magsagawa ng CPR kung kinakailangan.",
-				"",
-				"Humingi agad ng tulong medikal. Panatilihing kalmado ang tao at bantayan ang kanilang paghinga.",
-				"",
-				"Gumamit ng FAST: Face drooping, Arm weakness, Speech difficulty, Time to call emergency services. Tumawag agad ng emergency services at tandaan ang oras ng pagsisimula ng mga sintomas. Panatilihin ang tao na komportable at kalmado hanggang dumating ang tulong.",
-				"",
-				"Tumawag agad ng emergency services kung mapansin ang pag-dagilid ng mukha, kahinaan ng braso, o kahirapan sa pagsasalita. Kumilos ng FAST at kumuha ng medikal na tulong kaagad."
+				"Kung sa tingin mo ay may stroke ang isang tao, tumawag agad ng emergency services. Hayaang humiga ang tao na may bahagyang nakataas ang ulo. Bantayan ang kanilang paghinga at maging handa na magsagawa ng CPR kung kinakailangan."
 			],
-			"relations": [],
+			"recommendations": [""],
+			"relations": [""],
 			"references": [
 				"https://www.mayoclinic.org/diseases-conditions/stroke/multimedia/vid-20530787https://www.ninds.nih.gov/health-information/stroke/assess-and-treat/nih-stroke-scale"
 			],
@@ -2200,10 +2110,15 @@
 				"When should I consult a doctor for bleeding?"
 			],
 			"procedures": [
-				"Apply direct pressure to the wound with a clean cloth or bandage. If possible, elevate the injured area above heart level. Keep applying pressure until the bleeding stops. If the bleeding is severe, seek emergency medical help immediately.",
-				"Use a clean cloth to apply pressure to the wound. Elevate the area if possible and seek medical attention for severe bleeding."
+				"Apply direct pressure to the wound with a clean cloth or bandage. If possible, elevate the injured area above heart level. Keep applying pressure until the bleeding stops. If the bleeding is severe, seek emergency medical help immediately."
 			],
-			"relations": ["Banana Leaves", "Mayana Leaves", "Guava Leaves"],
+			"recommendations": [""],
+			"relations": [
+				"Banana Leaves",
+				"Mayana Leaves",
+				"Guava Leaves",
+				"Gauze bandage"
+			],
 			"references": [
 				"https://www.mayoclinic.org/first-aid/first-aid-cuts/basics/art-20056711",
 				"https://www.healthline.com/health/bleeding"
@@ -2229,10 +2144,15 @@
 				"Kailan dapat kumonsulta sa doktor para sa pagdurugo?"
 			],
 			"procedures": [
-				"Maglagay ng direktang pressure sa sugat gamit ang malinis na tela o benda. Kung maaari, itaas ang nasugatang lugar sa itaas ng antas ng puso. Patuloy na mag-aplay ng pressure hanggang sa tumigil ang pagdurugo. Kung malubha ang pagdurugo, humingi agad ng tulong medikal.",
-				"Gamitin ang malinis na tela upang mag-aplay ng pressure sa sugat. Itaas ang lugar kung maaari at humingi ng medikal na atensyon para sa malubhang pagdurugo."
+				"Maglagay ng direktang pressure sa sugat gamit ang malinis na tela o benda. Kung maaari, itaas ang nasugatang lugar sa itaas ng antas ng puso. Patuloy na mag-aplay ng pressure hanggang sa tumigil ang pagdurugo. Kung malubha ang pagdurugo, humingi agad ng tulong medikal."
 			],
-			"relations": ["Dahon ng Saging", "Dahon ng Mayana", "Dahon ng Bayabas"],
+			"recommendations": [""],
+			"relations": [
+				"Dahon ng Saging",
+				"Dahon ng Mayana",
+				"Dahon ng Bayabas",
+				"Bandang gasa"
+			],
 			"references": [
 				"https://www.mayoclinic.org/first-aid/first-aid-cuts/basics/art-20056711",
 				"https://www.healthline.com/health/bleeding"
@@ -2259,9 +2179,9 @@
 				"my temperature is high",
 				"temperature"
 			],
-			"procedures": [
-				"Cool the burn with running water for at least 10 minutes. Avoid using ice. Cover the burn with a sterile gauze bandage. Do not apply butter or ointments to the burn. For pain relief, consider over-the-counter pain relievers like ibuprofen or acetaminophen.",
-				"First, cool the burn under cool but not cold water for 10-20 minutes. Cover the burn with a clean, non-fluffy cloth or cling film. Take a painkiller such as paracetamol or ibuprofen."
+			"procedures": [""],
+			"recommendations": [
+				"Cool the burn with running water for at least 10 minutes. Avoid using ice. Cover the burn with a sterile gauze bandage. Do not apply butter or ointments to the burn. For pain relief, consider over-the-counter pain relievers like ibuprofen or acetaminophen."
 			],
 			"relations": ["Garlic (fever)", "Lemon"],
 			"references": ["https://www.healthline.com/health/fever"],
@@ -2286,12 +2206,63 @@
 				"Anong mga remedyo ang maaaring gamitin para sa lagnat?",
 				"mataas nag temperatura ko"
 			],
-			"procedures": [
-				"Palamigin ang paso gamit ang umaagos na tubig nang hindi bababa sa 10 minuto. Iwasang gumamit ng yelo. Takpan ang paso ng sterile gauze bandage. Huwag maglagay ng mantikilya o mga pamahid sa paso. Para sa lunas sa pananakit, isaalang-alang ang mga over-the-counter na pain reliever tulad ng ibuprofen o acetaminophen.",
-				"Una, palamigin ang paso sa ilalim ng malamig ngunit hindi malamig na tubig sa loob ng 10-20 minuto. Takpan ang paso ng malinis, hindi malambot na tela o cling film. Uminom ng painkiller tulad ng paracetamol o ibuprofen."
+			"procedures": [""],
+			"recommendations": [
+				"Palamigin ang paso gamit ang umaagos na tubig nang hindi bababa sa 10 minuto. Iwasang gumamit ng yelo. Takpan ang paso ng sterile gauze bandage. Huwag maglagay ng mantikilya o mga pamahid sa paso. Para sa lunas sa pananakit, isaalang-alang ang mga over-the-counter na pain reliever tulad ng ibuprofen o acetaminophen."
 			],
 			"relations": ["Bawang (fever)", "Lemon"],
 			"references": ["https://www.healthline.com/health/fever"],
+			"context_set": ""
+		},
+		{
+			"tag": "Laceration",
+			"type": "injury",
+			"meaning": "A laceration is a type of wound that occurs when skin or other soft tissue is torn or cut. It is often caused by blunt force trauma or a sharp object. Lacerations can vary in severity, from minor cuts to deep, jagged wounds that may require medical attention.",
+			"patterns": [
+				"Laceration",
+				"How to treat a laceration?",
+				"What should be done when there is a laceration?",
+				"What should be applied to a laceration?",
+				"How to stop a laceration?",
+				"What should be done to  in a laceration?",
+				"Steps in treating a laceration?"
+			],
+			"procedures": [
+				"Press the wound with a clean cloth. Rinse with water, gently clean with soap. Put on a bandage."
+			],
+			"recommendations": [""],
+			"relations": ["Gauze Bandage", "Banana Leaves"],
+			"references": [
+				"https://www.hopkinsmedicine.org/health/conditions-and-diseases/lacerations",
+				"https://medlineplus.gov/ency/imagepages/19616.htm",
+				"https://www.ncbi.nlm.nih.gov/books/NBK545166/"
+			],
+			"context_set": ""
+		},
+		{
+			"tag": "Malalim na sugat",
+			"type": "injury",
+			"meaning": "Ang laceration ay isang uri ng sugat na nangyayari kapag ang balat o iba pang malambot na tisyu ay napunit o naputol. Kadalasan itong dulot ng matinding epekto ng blunt force o ng matalim na bagay. Ang mga laceration ay maaaring mag-iba sa kalubhaan, mula sa maliliit na hiwa hanggang sa malalim at magaspang na sugat na maaaring mangailangan ng medikal na atensyon.",
+			"patterns": [
+				"Pagkapunit ng Balat",
+				"Malalim na sugat",
+				"Paano gamutin ang pagkapunit ng balat?",
+				"Ano ang dapat gawin kapag may pagkapunit ng balat?",
+				"Ano ang dapat ilagay sa pagkapunit ng balat?",
+				"Paano pigilan ang pagdurugo mula sa pagkapunit ng balat?",
+				"Ano ang dapat gawin upang maiwasan ang impeksyon sa pagkapunit ng balat?",
+				"Mga hakbang sa paggamot ng pagkapunit ng balat?"
+			],
+			"procedures": [
+				"Pindutin ang sugat gamit ang malinis na tela. Banlawan ng tubig, at dahan-dahang linisin gamit ang sabon. Takpan ang sugat gamit ang bandage."
+			],
+			"recommendations": [""],
+			"relations": ["Dahon ng Bayabas", "Gauze Bandage"],
+			"references": [
+				"https://www.hopkinsmedicine.org/health/conditions-and-diseases/lacerations",
+				"https://medlineplus.gov/ency/imagepages/19616.htm",
+				"https://www.ncbi.nlm.nih.gov/books/NBK545166/"
+			],
 			"context_set": ""
 		}
 	]

@@ -93,6 +93,7 @@ def get_response(intents_list, intents_json):
                 "type": "out",
                 "meaning": "I'm sorry, but I couldn't understand your input. Please provide queries or information related to first aid assistance, which is what Lifeline Angel is designed to support. Let me know how I can assist you!",
                 "procedures": None,
+                "recommendations": None,
                 "relations": None,
                 "references": None,
             }
@@ -102,6 +103,7 @@ def get_response(intents_list, intents_json):
                     "type": intent["type"],
                     "meaning": intent["meaning"],
                     "procedures": intent["procedures"],
+                    "recommendations": intent["recommendations"],
                     "relations": intent["relations"],
                     "references": intent["references"],
                 }
