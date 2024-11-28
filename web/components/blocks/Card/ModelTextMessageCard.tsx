@@ -27,6 +27,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 	const [type, setType] = useState('');
 	const [meaning, setMeaning] = useState('');
 	const [procedures, setProcedures] = useState<string[] | []>();
+	const [recommendations, setRecommendations] = useState<string[] | []>();
 	const [relations, setRelations] = useState<string[] | []>();
 	const [references, setReferences] = useState<string[] | []>();
 	// const [voiceMessageMode, setVoiceMessageMode] = useState('');
@@ -127,8 +128,19 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 					.map((point, index) => `${index + 1}. ${point}`);
 
 				// @ts-expect-error: must be corrected properly
+				const recommendationsArr = message.content.recommendations[0]
+					.split('. ')!
+					// @ts-expect-error: must be corrected properly
+					.map((point) => point.trim())
+					// @ts-expect-error: must be corrected properly
+					.filter((point) => point.length > 0)
+					// @ts-expect-error: must be corrected properly
+					.map((point, index) => `${index + 1}. ${point}`);
+
+				// @ts-expect-error: must be corrected properly
 				setMeaning(message.content.meaning);
 				setProcedures(proceduresArr);
+				setRecommendations(recommendationsArr);
 				// @ts-expect-error: must be corrected properly
 				setRelations(message.content.relations);
 				// @ts-expect-error: must be corrected properly
@@ -142,6 +154,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 				message.content.type === 'out'
 			) {
 				setProcedures([]);
+				setRecommendations([]);
 				setRelations([]);
 				setReferences([]);
 			}
@@ -198,6 +211,24 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 											className='text-sm sm:text-md md:text-lg text-foreground tracking-tight text-ellipsis'
 										>
 											{procedure}
+										</p>
+									))}
+								</div>
+							</div>
+						)}
+						{/* @ts-expect-error: must be corrected properly */}
+						{recommendations?.length > 0 && (
+							<div className='space-y-2'>
+								<p className='text-md sm:text-lg md:text-xl font-bold text-foreground tracking-tight text-ellipsis'>
+									Recommendations
+								</p>
+								<div className='flex flex-col space-y-1'>
+									{recommendations?.map((recommendation) => (
+										<p
+											key={recommendation}
+											className='text-sm sm:text-md md:text-lg text-foreground tracking-tight text-ellipsis'
+										>
+											{recommendation}
 										</p>
 									))}
 								</div>
@@ -277,6 +308,9 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 									}\nProcedures\n${
 										// @ts-expect-error: must be corrected properly
 										content.procedures[0]
+									}\nRecommendations\n${
+										// @ts-expect-error: must be corrected properly
+										content.recommendations[0]
 									} References\n${
 										// @ts-expect-error: must be corrected properly
 										content.references.map((reference) => reference)
