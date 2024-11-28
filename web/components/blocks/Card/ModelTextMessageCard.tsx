@@ -258,7 +258,14 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 						{relations?.length > 0 && (
 							<div className='space-y-2'>
 								<p className='text-md sm:text-lg md:text-xl font-bold text-foreground tracking-tight text-ellipsis'>
-									Relations
+									{
+										// @ts-expect-error: must be corrected properly
+										message.content.type === 'injury' ||
+										// @ts-expect-error: must be corrected properly
+										message.content.type === 'Injury'
+											? 'Alternatives'
+											: 'Injuries'
+									}
 								</p>
 								<div className='flex flex-wrap gap-2'>
 									{relations?.map((relation) => (
