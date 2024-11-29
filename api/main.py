@@ -100,6 +100,7 @@ def get_response(intents_list, intents_json):
         for intent in intents_json["intents"]:
             if intent["tag"] == tag:
                 return {
+                    "tag": intent["tag"],
                     "type": intent["type"],
                     "meaning": intent["meaning"],
                     "procedures": intent["procedures"],

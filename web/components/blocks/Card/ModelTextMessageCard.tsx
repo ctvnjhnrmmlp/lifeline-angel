@@ -24,6 +24,7 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 		slug: string[];
 	};
 	const [content, setContent] = useState<Message | string>();
+	const [tag, setTag] = useState('');
 	const [type, setType] = useState('');
 	const [meaning, setMeaning] = useState('');
 	const [procedures, setProcedures] = useState<string[] | []>();
@@ -105,6 +106,8 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 	useEffect(() => {
 		// @ts-expect-error: must be corrected properly
 		setContent(message.content);
+		// @ts-expect-error: must be corrected properly
+		setTag(message.content.tag);
 		// @ts-expect-error: must be corrected properly
 		setType(message.content.type);
 
@@ -189,8 +192,8 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 						{meaning && (
 							<div className='space-y-2'>
 								{type !== 'message' && type !== 'out' && (
-									<p className='text-md sm:text-lg md:text-xl font-bold text-foreground tracking-tight text-ellipsis'>
-										Meaning
+									<p className='text-lg sm:text-xl md:text-2xl font-bold text-foreground tracking-tight text-ellipsis'>
+										{tag}:
 									</p>
 								)}
 								<p className='text-sm sm:text-md md:text-lg text-foreground tracking-tight text-ellipsis'>
