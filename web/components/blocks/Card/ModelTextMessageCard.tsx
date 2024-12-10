@@ -181,10 +181,6 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 		}
 	}, []);
 
-	if (tag !== '') {
-		console.log(tag);
-	}
-
 	return (
 		<div className='flex flex-col space-y-2'>
 			{content && typeof content === 'object' && (
@@ -195,9 +191,9 @@ const ModelTextMessageCard = ({ message }: { message: Message }) => {
 					>
 						{meaning && (
 							<div className='space-y-2'>
-								{type !== 'message' && type !== 'out' && tag !== '' && (
+								{type !== 'message' && type !== 'out' && (
 									<p className='text-lg sm:text-xl md:text-2xl font-bold text-foreground tracking-tight text-ellipsis'>
-										{tag}
+										{tag}:
 									</p>
 								)}
 								<p className='text-sm sm:text-md md:text-lg text-foreground tracking-tight text-ellipsis'>
