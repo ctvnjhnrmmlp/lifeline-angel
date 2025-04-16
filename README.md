@@ -23,11 +23,11 @@ Our philosophy: **Empower everyone to provide or seek the right care, fast.**
 
 ## Features
 
-- 🧠 AI-powered symptom recognition (text & image inputs)
-- 🚑 Real-time first-aid recommendations
-- 📞 Integration with emergency services
-- 💻 Intuitive and responsive web interface
-- 🔒 Privacy-respecting and secure
+- AI-powered symptom recognition (text & image inputs)
+- Real-time first-aid recommendations
+- Integration with emergency services
+- Intuitive and responsive web interface
+- Privacy-respecting and secure
 
 ## Roadmap
 
